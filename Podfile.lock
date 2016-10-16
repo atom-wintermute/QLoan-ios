@@ -1,0 +1,77 @@
+PODS:
+  - AFNetworkActivityLogger (2.0.4):
+    - AFNetworking/NSURLConnection (~> 2.0)
+    - AFNetworking/NSURLSession (~> 2.0)
+  - AFNetworking (2.5.1):
+    - AFNetworking/NSURLConnection (= 2.5.1)
+    - AFNetworking/NSURLSession (= 2.5.1)
+    - AFNetworking/Reachability (= 2.5.1)
+    - AFNetworking/Security (= 2.5.1)
+    - AFNetworking/Serialization (= 2.5.1)
+    - AFNetworking/UIKit (= 2.5.1)
+  - AFNetworking/NSURLConnection (2.5.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.5.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.5.1)
+  - AFNetworking/Security (2.5.1)
+  - AFNetworking/Serialization (2.5.1)
+  - AFNetworking/UIKit (2.5.1):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - EasyMapping (0.6.3)
+  - Nimbus/Core (1.2.2)
+  - Nimbus/Models (1.2.2):
+    - Nimbus/Core
+  - OHHTTPStubs (3.1.10):
+    - OHHTTPStubs/Core (= 3.1.10)
+  - OHHTTPStubs/Core (3.1.10)
+  - PureLayout (3.0.0)
+  - SAMKeychain (1.5.2)
+  - SDWebImage (3.7.1):
+    - SDWebImage/Core (= 3.7.1)
+  - SDWebImage/Core (3.7.1)
+  - Typhoon (3.3.4):
+    - Typhoon/no-arc (= 3.3.4)
+  - Typhoon/no-arc (3.3.4)
+  - ViperMcFlurry (1.5.1)
+
+DEPENDENCIES:
+  - AFNetworkActivityLogger (= 2.0.4)
+  - AFNetworking (= 2.5.1)
+  - EasyMapping (= 0.6.3)
+  - Nimbus/Models (from `git@gitlab.rambler.ru:cocoapods/nimbus.git`, tag `1.2.2`)
+  - OHHTTPStubs (= 3.1.10)
+  - PureLayout (= 3.0.0)
+  - SAMKeychain (= 1.5.2)
+  - SDWebImage (= 3.7.1)
+  - Typhoon (= 3.3.4)
+  - ViperMcFlurry (= 1.5.1)
+
+EXTERNAL SOURCES:
+  Nimbus:
+    :git: git@gitlab.rambler.ru:cocoapods/nimbus.git
+    :tag: 1.2.2
+
+CHECKOUT OPTIONS:
+  Nimbus:
+    :git: git@gitlab.rambler.ru:cocoapods/nimbus.git
+    :tag: 1.2.2
+
+SPEC CHECKSUMS:
+  AFNetworkActivityLogger: 121486778117d53b3ab1c61d264b88081d0c3eee
+  AFNetworking: 10e85a00bb0f475124e4ff2677bf15693b2c1523
+  EasyMapping: 1e7bc1d450d4b19ef03229b92cde3ff9abea1e31
+  Nimbus: 355131d4656498bf072fecc142752a9f343eb59b
+  OHHTTPStubs: 00152a63400246fcbc4b772a2a547ea34c97cbd6
+  PureLayout: 270dfee2236f697ab1d5e2771c2e5c248495fa0d
+  SAMKeychain: 1865333198217411f35327e8da61b43de79b635b
+  SDWebImage: ed3095af2ff88b436426037444979b917f6c5575
+  Typhoon: 555e580d7edaaf61c5367c2a80c15a0ddb368406
+  ViperMcFlurry: 7bcae2f2734f9338d245fa7037fc5f983edb3da6
+
+COCOAPODS: 0.39.0
