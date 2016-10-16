@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "QLCoreComponentsAssembly.h"
+#import "QLServicesAssembly.h"
+#import "QLTestAssembly.h"
 
 @interface AppDelegate ()
 
@@ -20,6 +23,13 @@
     return YES;
 }
 
+- (NSArray *)initialAssemblies {
+	return @[
+			 [QLCoreComponentsAssembly class],
+			 [QLServicesAssembly class],
+			 [QLTestAssembly class]
+			 ];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

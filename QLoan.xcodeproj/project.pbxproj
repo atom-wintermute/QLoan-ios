@@ -24,6 +24,17 @@
 		9EFF73D11DB3D969004873A6 /* QLPaymentSchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73D01DB3D969004873A6 /* QLPaymentSchedule.m */; };
 		9EFF73D51DB3DB26004873A6 /* QLUserInteractionService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73D41DB3DB26004873A6 /* QLUserInteractionService.m */; };
 		9EFF73D81DB3DC4E004873A6 /* QLPaymentCompletedRequestConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73D71DB3DC4E004873A6 /* QLPaymentCompletedRequestConfiguration.m */; };
+		9EFF73DD1DB3F94C004873A6 /* QLRequestFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73DC1DB3F94C004873A6 /* QLRequestFactory.m */; };
+		9EFF73E11DB40363004873A6 /* QLKeychainStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73E01DB40363004873A6 /* QLKeychainStorage.m */; };
+		9EFF73E51DB40AE6004873A6 /* QLSortMethodParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73E41DB40AE6004873A6 /* QLSortMethodParser.m */; };
+		9EFF73E91DB40EC1004873A6 /* QLNetworkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73E81DB40EC1004873A6 /* QLNetworkClient.m */; };
+		9EFF73ED1DB41503004873A6 /* QLServerResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73EC1DB41503004873A6 /* QLServerResponse.m */; };
+		9EFF73F11DB416AE004873A6 /* QLJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73F01DB416AE004873A6 /* QLJSONSerializer.m */; };
+		9EFF73F51DB41A47004873A6 /* QLMappingProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73F41DB41A47004873A6 /* QLMappingProvider.m */; };
+		9EFF73F81DB41B59004873A6 /* QLMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73F71DB41B59004873A6 /* QLMapper.m */; };
+		9EFF73FD1DB4206F004873A6 /* QLCoreComponentsAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73FC1DB4206F004873A6 /* QLCoreComponentsAssembly.m */; };
+		9EFF74011DB425FB004873A6 /* QLServicesAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF74001DB425FB004873A6 /* QLServicesAssembly.m */; };
+		9EFF74061DB42925004873A6 /* QLTestAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF74051DB42925004873A6 /* QLTestAssembly.m */; };
 		B052863E11C552DF193FDF47 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1BE5B8284ED646854EA9B23 /* libPods.a */; };
 		D8F9D7AF1DAFD2FC000371CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F9D7AE1DAFD2FC000371CA /* main.m */; };
 		D8F9D7B21DAFD2FC000371CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F9D7B11DAFD2FC000371CA /* AppDelegate.m */; };
@@ -90,6 +101,28 @@
 		9EFF73D41DB3DB26004873A6 /* QLUserInteractionService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLUserInteractionService.m; path = Classes/BusinessLogic/Services/UserInteractionService/QLUserInteractionService.m; sourceTree = "<group>"; };
 		9EFF73D61DB3DC4E004873A6 /* QLPaymentCompletedRequestConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLPaymentCompletedRequestConfiguration.h; path = Classes/BusinessLogic/Services/UserInteractionService/QLPaymentCompletedRequestConfiguration.h; sourceTree = "<group>"; };
 		9EFF73D71DB3DC4E004873A6 /* QLPaymentCompletedRequestConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLPaymentCompletedRequestConfiguration.m; path = Classes/BusinessLogic/Services/UserInteractionService/QLPaymentCompletedRequestConfiguration.m; sourceTree = "<group>"; };
+		9EFF73DB1DB3F94C004873A6 /* QLRequestFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLRequestFactory.h; path = Classes/BusinessLogic/CoreCompnents/RequestFactory/QLRequestFactory.h; sourceTree = "<group>"; };
+		9EFF73DC1DB3F94C004873A6 /* QLRequestFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLRequestFactory.m; path = Classes/BusinessLogic/CoreCompnents/RequestFactory/QLRequestFactory.m; sourceTree = "<group>"; };
+		9EFF73DF1DB40363004873A6 /* QLKeychainStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLKeychainStorage.h; path = Classes/BusinessLogic/CoreCompnents/KeychainStorage/QLKeychainStorage.h; sourceTree = "<group>"; };
+		9EFF73E01DB40363004873A6 /* QLKeychainStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLKeychainStorage.m; path = Classes/BusinessLogic/CoreCompnents/KeychainStorage/QLKeychainStorage.m; sourceTree = "<group>"; };
+		9EFF73E31DB40AE6004873A6 /* QLSortMethodParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLSortMethodParser.h; path = Classes/BusinessLogic/Helpers/SortMethodParser/QLSortMethodParser.h; sourceTree = "<group>"; };
+		9EFF73E41DB40AE6004873A6 /* QLSortMethodParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLSortMethodParser.m; path = Classes/BusinessLogic/Helpers/SortMethodParser/QLSortMethodParser.m; sourceTree = "<group>"; };
+		9EFF73E71DB40EC1004873A6 /* QLNetworkClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLNetworkClient.h; path = Classes/BusinessLogic/CoreCompnents/NetworkClient/QLNetworkClient.h; sourceTree = "<group>"; };
+		9EFF73E81DB40EC1004873A6 /* QLNetworkClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLNetworkClient.m; path = Classes/BusinessLogic/CoreCompnents/NetworkClient/QLNetworkClient.m; sourceTree = "<group>"; };
+		9EFF73EB1DB41503004873A6 /* QLServerResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLServerResponse.h; path = Classes/BusinessLogic/CoreCompnents/NetworkClient/ServerResponse/QLServerResponse.h; sourceTree = "<group>"; };
+		9EFF73EC1DB41503004873A6 /* QLServerResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLServerResponse.m; path = Classes/BusinessLogic/CoreCompnents/NetworkClient/ServerResponse/QLServerResponse.m; sourceTree = "<group>"; };
+		9EFF73EF1DB416AE004873A6 /* QLJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLJSONSerializer.h; path = Classes/BusinessLogic/CoreCompnents/JSONSerializer/QLJSONSerializer.h; sourceTree = "<group>"; };
+		9EFF73F01DB416AE004873A6 /* QLJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLJSONSerializer.m; path = Classes/BusinessLogic/CoreCompnents/JSONSerializer/QLJSONSerializer.m; sourceTree = "<group>"; };
+		9EFF73F31DB41A47004873A6 /* QLMappingProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLMappingProvider.h; path = Classes/BusinessLogic/CoreCompnents/MappingProvider/QLMappingProvider.h; sourceTree = "<group>"; };
+		9EFF73F41DB41A47004873A6 /* QLMappingProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLMappingProvider.m; path = Classes/BusinessLogic/CoreCompnents/MappingProvider/QLMappingProvider.m; sourceTree = "<group>"; };
+		9EFF73F61DB41B59004873A6 /* QLMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLMapper.h; path = Classes/BusinessLogic/CoreCompnents/Mapper/QLMapper.h; sourceTree = "<group>"; };
+		9EFF73F71DB41B59004873A6 /* QLMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLMapper.m; path = Classes/BusinessLogic/CoreCompnents/Mapper/QLMapper.m; sourceTree = "<group>"; };
+		9EFF73FB1DB4206F004873A6 /* QLCoreComponentsAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLCoreComponentsAssembly.h; path = Classes/BusinessLogic/CoreCompnents/Assembly/QLCoreComponentsAssembly.h; sourceTree = "<group>"; };
+		9EFF73FC1DB4206F004873A6 /* QLCoreComponentsAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLCoreComponentsAssembly.m; path = Classes/BusinessLogic/CoreCompnents/Assembly/QLCoreComponentsAssembly.m; sourceTree = "<group>"; };
+		9EFF73FF1DB425FB004873A6 /* QLServicesAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLServicesAssembly.h; path = Classes/BusinessLogic/Services/Assembly/QLServicesAssembly.h; sourceTree = "<group>"; };
+		9EFF74001DB425FB004873A6 /* QLServicesAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLServicesAssembly.m; path = Classes/BusinessLogic/Services/Assembly/QLServicesAssembly.m; sourceTree = "<group>"; };
+		9EFF74041DB42925004873A6 /* QLTestAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLTestAssembly.h; path = Classes/UserInterface/TestAssembly/QLTestAssembly.h; sourceTree = "<group>"; };
+		9EFF74051DB42925004873A6 /* QLTestAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLTestAssembly.m; path = Classes/UserInterface/TestAssembly/QLTestAssembly.m; sourceTree = "<group>"; };
 		D1BE5B8284ED646854EA9B23 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8F9D7AA1DAFD2FC000371CA /* QLoan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QLoan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8F9D7AE1DAFD2FC000371CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -157,6 +190,7 @@
 		9EFF738B1DB3B59C004873A6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				9EFF74021DB428F1004873A6 /* UserInterface */,
 				9EFF738C1DB3B5A1004873A6 /* BusinessLogic */,
 			);
 			name = Classes;
@@ -165,6 +199,7 @@
 		9EFF738C1DB3B5A1004873A6 /* BusinessLogic */ = {
 			isa = PBXGroup;
 			children = (
+				9EFF73D91DB3F832004873A6 /* CoreComponents */,
 				9EFF73A91DB3C85F004873A6 /* Entity */,
 				9EFF73A71DB3C823004873A6 /* Helpers */,
 				9EFF738D1DB3B5A8004873A6 /* Services */,
@@ -175,6 +210,7 @@
 		9EFF738D1DB3B5A8004873A6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				9EFF73FE1DB425E1004873A6 /* Assembly */,
 				9EFF73D21DB3DAFA004873A6 /* UserInteractionService */,
 				9EFF73C21DB3D06E004873A6 /* PersonalCabinetService */,
 				9EFF73BE1DB3CE06004873A6 /* LenderOrderService */,
@@ -220,6 +256,7 @@
 		9EFF73A71DB3C823004873A6 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				9EFF73E21DB40AB7004873A6 /* SortMethodParser */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -337,6 +374,128 @@
 				9EFF73D71DB3DC4E004873A6 /* QLPaymentCompletedRequestConfiguration.m */,
 			);
 			name = UserInteractionService;
+			sourceTree = "<group>";
+		};
+		9EFF73D91DB3F832004873A6 /* CoreComponents */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF73FA1DB42055004873A6 /* Assembly */,
+				9EFF73F91DB41C7B004873A6 /* Mapper */,
+				9EFF73F21DB41A21004873A6 /* MappingProvider */,
+				9EFF73EE1DB41686004873A6 /* JSONSerializer */,
+				9EFF73E61DB40E9A004873A6 /* NetworkClient */,
+				9EFF73DE1DB4033A004873A6 /* KeychainStorage */,
+				9EFF73DA1DB3F83F004873A6 /* RequestFactory */,
+			);
+			name = CoreComponents;
+			sourceTree = "<group>";
+		};
+		9EFF73DA1DB3F83F004873A6 /* RequestFactory */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF73DB1DB3F94C004873A6 /* QLRequestFactory.h */,
+				9EFF73DC1DB3F94C004873A6 /* QLRequestFactory.m */,
+			);
+			name = RequestFactory;
+			sourceTree = "<group>";
+		};
+		9EFF73DE1DB4033A004873A6 /* KeychainStorage */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF73DF1DB40363004873A6 /* QLKeychainStorage.h */,
+				9EFF73E01DB40363004873A6 /* QLKeychainStorage.m */,
+			);
+			name = KeychainStorage;
+			sourceTree = "<group>";
+		};
+		9EFF73E21DB40AB7004873A6 /* SortMethodParser */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF73E31DB40AE6004873A6 /* QLSortMethodParser.h */,
+				9EFF73E41DB40AE6004873A6 /* QLSortMethodParser.m */,
+			);
+			name = SortMethodParser;
+			sourceTree = "<group>";
+		};
+		9EFF73E61DB40E9A004873A6 /* NetworkClient */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF73EA1DB412FB004873A6 /* ServerResponse */,
+				9EFF73E71DB40EC1004873A6 /* QLNetworkClient.h */,
+				9EFF73E81DB40EC1004873A6 /* QLNetworkClient.m */,
+			);
+			name = NetworkClient;
+			sourceTree = "<group>";
+		};
+		9EFF73EA1DB412FB004873A6 /* ServerResponse */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF73EB1DB41503004873A6 /* QLServerResponse.h */,
+				9EFF73EC1DB41503004873A6 /* QLServerResponse.m */,
+			);
+			name = ServerResponse;
+			sourceTree = "<group>";
+		};
+		9EFF73EE1DB41686004873A6 /* JSONSerializer */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF73EF1DB416AE004873A6 /* QLJSONSerializer.h */,
+				9EFF73F01DB416AE004873A6 /* QLJSONSerializer.m */,
+			);
+			name = JSONSerializer;
+			sourceTree = "<group>";
+		};
+		9EFF73F21DB41A21004873A6 /* MappingProvider */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF73F31DB41A47004873A6 /* QLMappingProvider.h */,
+				9EFF73F41DB41A47004873A6 /* QLMappingProvider.m */,
+			);
+			name = MappingProvider;
+			sourceTree = "<group>";
+		};
+		9EFF73F91DB41C7B004873A6 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF73F71DB41B59004873A6 /* QLMapper.m */,
+				9EFF73F61DB41B59004873A6 /* QLMapper.h */,
+			);
+			name = Mapper;
+			sourceTree = "<group>";
+		};
+		9EFF73FA1DB42055004873A6 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF73FB1DB4206F004873A6 /* QLCoreComponentsAssembly.h */,
+				9EFF73FC1DB4206F004873A6 /* QLCoreComponentsAssembly.m */,
+			);
+			name = Assembly;
+			sourceTree = "<group>";
+		};
+		9EFF73FE1DB425E1004873A6 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF73FF1DB425FB004873A6 /* QLServicesAssembly.h */,
+				9EFF74001DB425FB004873A6 /* QLServicesAssembly.m */,
+			);
+			name = Assembly;
+			sourceTree = "<group>";
+		};
+		9EFF74021DB428F1004873A6 /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF74031DB428FB004873A6 /* TestAssembly */,
+			);
+			name = UserInterface;
+			sourceTree = "<group>";
+		};
+		9EFF74031DB428FB004873A6 /* TestAssembly */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF74041DB42925004873A6 /* QLTestAssembly.h */,
+				9EFF74051DB42925004873A6 /* QLTestAssembly.m */,
+			);
+			name = TestAssembly;
 			sourceTree = "<group>";
 		};
 		D8F9D7A11DAFD2FC000371CA = {
@@ -591,26 +750,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EFF73971DB3B870004873A6 /* QLAuthorizationRequestConfiguration.m in Sources */,
+				9EFF73FD1DB4206F004873A6 /* QLCoreComponentsAssembly.m in Sources */,
 				9EFF73D11DB3D969004873A6 /* QLPaymentSchedule.m in Sources */,
+				9EFF73E51DB40AE6004873A6 /* QLSortMethodParser.m in Sources */,
 				9EFF73911DB3B64C004873A6 /* QLAuthorizationService.m in Sources */,
 				D8F9D7B81DAFD2FC000371CA /* SecondViewController.m in Sources */,
+				9EFF73F11DB416AE004873A6 /* QLJSONSerializer.m in Sources */,
 				9EFF73B51DB3C9C5004873A6 /* ServicesConstants.m in Sources */,
+				9EFF74061DB42925004873A6 /* QLTestAssembly.m in Sources */,
+				9EFF73E91DB40EC1004873A6 /* QLNetworkClient.m in Sources */,
+				9EFF73DD1DB3F94C004873A6 /* QLRequestFactory.m in Sources */,
 				D8F9D7B21DAFD2FC000371CA /* AppDelegate.m in Sources */,
 				D8F9D7B51DAFD2FC000371CA /* FirstViewController.m in Sources */,
 				9EFF73B11DB3C918004873A6 /* QLUserInfo.m in Sources */,
 				9EFF73D81DB3DC4E004873A6 /* QLPaymentCompletedRequestConfiguration.m in Sources */,
+				9EFF73ED1DB41503004873A6 /* QLServerResponse.m in Sources */,
+				9EFF73E11DB40363004873A6 /* QLKeychainStorage.m in Sources */,
 				9EFF73AE1DB3C90F004873A6 /* QLBorrowerOrder.m in Sources */,
 				9EFF73C11DB3CE42004873A6 /* QLLenderOrderService.m in Sources */,
 				9EFF73D51DB3DB26004873A6 /* QLUserInteractionService.m in Sources */,
 				9EFF73941DB3B672004873A6 /* QLRegistrationRequestConfiguration.m in Sources */,
 				9EFF73BD1DB3CD83004873A6 /* QLLenderOrder.m in Sources */,
 				D8F9D7AF1DAFD2FC000371CA /* main.m in Sources */,
+				9EFF74011DB425FB004873A6 /* QLServicesAssembly.m in Sources */,
 				9EFF739B1DB3BDF8004873A6 /* QLUserInfoService.m in Sources */,
+				9EFF73F51DB41A47004873A6 /* QLMappingProvider.m in Sources */,
 				9EFF73C51DB3D091004873A6 /* QLPersonalCabinetService.m in Sources */,
 				9EFF73C91DB3D1C4004873A6 /* QLNotification.m in Sources */,
 				9EFF73CD1DB3D82B004873A6 /* QLPayment.m in Sources */,
 				9EFF73B91DB3CA09004873A6 /* EntityConstants.m in Sources */,
 				9EFF73A21DB3C1D3004873A6 /* QLBorrowerOrderService.m in Sources */,
+				9EFF73F81DB41B59004873A6 /* QLMapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

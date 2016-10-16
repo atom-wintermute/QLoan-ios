@@ -12,6 +12,7 @@
 @class QLBorrowerOrder;
 @class QLNotification;
 @class QLPaymentSchedule;
+@class QLServerResponse;
 
 typedef NS_ENUM(NSUInteger, QLSortMethod){
 	QLSortNone = 0,
@@ -21,6 +22,8 @@ typedef NS_ENUM(NSUInteger, QLSortMethod){
 	QLSortByPercentage,
 	QLSortByAmount
 };
+
+typedef void(^QLNetworkCompletion)(QLServerResponse *response, NSError *error);
 
 typedef void(^QLLenderOrderCompletion)(QLLenderOrder *order, NSError *error);
 typedef void(^QLLendersOrderCompletion)(NSArray<QLLenderOrder *> *orders, NSError *error);
@@ -36,3 +39,11 @@ typedef void(^QLPaymentScheduleCompletion)(QLPaymentSchedule *schedule, NSError 
 typedef void(^QLRatingIncreaseCompletion)(NSInteger increase, NSError *error);
 
 typedef void(^QLBooleanCompletion)(BOOL success, NSError *error);
+
+extern NSString * const QLGetRequestMethodKey;
+extern NSString * const QLPostRequestMethodKey;
+extern NSString * const QLPutRequestMethodKey;
+
+extern NSString * const QLLocalServerBasePath;
+
+extern NSString * const QLHeaderTokenKey;

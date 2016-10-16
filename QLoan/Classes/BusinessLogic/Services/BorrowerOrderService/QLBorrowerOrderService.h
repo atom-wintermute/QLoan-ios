@@ -11,8 +11,17 @@
 #import <Foundation/Foundation.h>
 
 @class QLBorrowerOrder;
+@class QLRequestFactory;
+@class QLNetworkClient;
+@class QLJSONSerializer;
+@class QLMapper;
 
 @interface QLBorrowerOrderService : NSObject
+
+@property (nonatomic, strong) QLNetworkClient *networkClient;
+@property (nonatomic, strong) QLJSONSerializer *serializer;
+@property (nonatomic, strong) QLMapper *mapper;
+@property (nonatomic, strong) QLRequestFactory *requestFactory;
 
 /**
  Метод getBorrowersOrders

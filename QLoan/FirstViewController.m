@@ -7,10 +7,7 @@
 //
 
 #import "FirstViewController.h"
-
-@interface FirstViewController ()
-
-@end
+#import "QLServicesAssembly.h"
 
 @implementation FirstViewController
 
