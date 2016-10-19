@@ -20,7 +20,8 @@
     UIStoryboard *authStoryboard = [UIStoryboard storyboardWithName:@"Auth"
                                                             bundle:[NSBundle mainBundle]];
     UIViewController *authViewController = [authStoryboard instantiateViewControllerWithIdentifier:NSStringFromClass([QLAuthViewController class])];
-    [self presentViewController:authViewController
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:authViewController];
+    [self presentViewController:navigationController
                         animated:NO
                       completion:nil];
 }

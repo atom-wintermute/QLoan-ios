@@ -45,6 +45,7 @@
 		D89655521DB8260C00DE4C66 /* SF-UI-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D896554E1DB8260C00DE4C66 /* SF-UI-Display-Regular.otf */; };
 		D89655531DB8260C00DE4C66 /* SF-UI-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D896554F1DB8260C00DE4C66 /* SF-UI-Display-Medium.otf */; };
 		D89655541DB8260C00DE4C66 /* SF-UI-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D89655501DB8260C00DE4C66 /* SF-UI-Display-Bold.otf */; };
+		D89655581DB8319900DE4C66 /* QLRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89655571DB8319900DE4C66 /* QLRegisterViewController.m */; };
 		D8F9D7AF1DAFD2FC000371CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F9D7AE1DAFD2FC000371CA /* main.m */; };
 		D8F9D7B21DAFD2FC000371CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F9D7B11DAFD2FC000371CA /* AppDelegate.m */; };
 		D8F9D7B51DAFD2FC000371CA /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F9D7B41DAFD2FC000371CA /* FirstViewController.m */; };
@@ -142,6 +143,8 @@
 		D896554E1DB8260C00DE4C66 /* SF-UI-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Display-Regular.otf"; path = "Resources/Fonts/SF-UI-Display-Regular.otf"; sourceTree = "<group>"; };
 		D896554F1DB8260C00DE4C66 /* SF-UI-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Display-Medium.otf"; path = "Resources/Fonts/SF-UI-Display-Medium.otf"; sourceTree = "<group>"; };
 		D89655501DB8260C00DE4C66 /* SF-UI-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Display-Bold.otf"; path = "Resources/Fonts/SF-UI-Display-Bold.otf"; sourceTree = "<group>"; };
+		D89655561DB8319900DE4C66 /* QLRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLRegisterViewController.h; path = Classes/UserInterface/Controllers/Register/QLRegisterViewController.h; sourceTree = "<group>"; };
+		D89655571DB8319900DE4C66 /* QLRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLRegisterViewController.m; path = Classes/UserInterface/Controllers/Register/QLRegisterViewController.m; sourceTree = "<group>"; };
 		D8F9D7AA1DAFD2FC000371CA /* QLoan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QLoan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8F9D7AE1DAFD2FC000371CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D8F9D7B01DAFD2FC000371CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -206,8 +209,8 @@
 		9EFF738B1DB3B59C004873A6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				9EFF74021DB428F1004873A6 /* UserInterface */,
 				9EFF738C1DB3B5A1004873A6 /* BusinessLogic */,
+				9EFF74021DB428F1004873A6 /* UserInterface */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -546,6 +549,7 @@
 			isa = PBXGroup;
 			children = (
 				D89655471DB8238300DE4C66 /* Auth */,
+				D89655551DB8317800DE4C66 /* Register */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -569,6 +573,15 @@
 				D89655501DB8260C00DE4C66 /* SF-UI-Display-Bold.otf */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		D89655551DB8317800DE4C66 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				D89655561DB8319900DE4C66 /* QLRegisterViewController.h */,
+				D89655571DB8319900DE4C66 /* QLRegisterViewController.m */,
+			);
+			name = Register;
 			sourceTree = "<group>";
 		};
 		D8F9D7A11DAFD2FC000371CA = {
@@ -849,6 +862,7 @@
 				9EFF73AE1DB3C90F004873A6 /* QLBorrowerOrder.m in Sources */,
 				9EFF73C11DB3CE42004873A6 /* QLLenderOrderService.m in Sources */,
 				9EFF73D51DB3DB26004873A6 /* QLUserInteractionService.m in Sources */,
+				D89655581DB8319900DE4C66 /* QLRegisterViewController.m in Sources */,
 				9EFF73941DB3B672004873A6 /* QLRegistrationRequestConfiguration.m in Sources */,
 				9EFF73BD1DB3CD83004873A6 /* QLLenderOrder.m in Sources */,
 				D8F9D7AF1DAFD2FC000371CA /* main.m in Sources */,

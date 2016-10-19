@@ -8,9 +8,7 @@
 
 #import "QLAuthViewController.h"
 
-@interface QLAuthViewController ()
-
-@end
+static NSString * const QLAuthRegisterSegue = @"registerSegue";
 
 @implementation QLAuthViewController
 
@@ -28,7 +26,8 @@
 }
 
 - (void)registerButtonWasPressed:(id)sender {
-    
+    [self performSegueWithIdentifier:QLAuthRegisterSegue
+                              sender:self];
 }
 
 @end
