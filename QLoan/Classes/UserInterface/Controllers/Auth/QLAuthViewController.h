@@ -8,6 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ Экран авторизации/регистрации пользователя
+ */
 @interface QLAuthViewController : UIViewController
+
+@property (nonatomic, weak) IBOutlet UITextField *loginTextField;
+@property (nonatomic, weak) IBOutlet UITextField *passwordTextField;
+@property (nonatomic, weak) IBOutlet UIButton *loginButton;
+
+- (IBAction)forgetPasswordButtonWasPressed:(id)sender;
+
+- (IBAction)loginButtonWasPressed:(id)sender;
+
+- (IBAction)registerButtonWasPressed:(id)sender;
 
 @end

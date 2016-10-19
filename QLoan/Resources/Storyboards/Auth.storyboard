@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="U8e-nV-q2t">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-UI-Display-Medium.otf">
+            <string>SFUIDisplay-Medium</string>
+        </array>
+        <array key="SF-UI-Display-Regular.otf">
+            <string>SFUIDisplay-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="bzx-sg-OYm">
             <objects>
                 <navigationController id="U8e-nV-q2t" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1E2-69-ZUO">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="1E2-69-ZUO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -44,12 +51,124 @@
                                             <constraint firstAttribute="height" constant="95" id="nFL-cM-1oI"/>
                                         </constraints>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JF0-5M-Au2">
+                                        <string key="text">Получайте деньги
+и зарабатывайте, давая взаймы </string>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="18"/>
+                                        <color key="textColor" red="0.2196078431372549" green="0.2196078431372549" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Логин или номер телефона" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g4Q-fr-eK8">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="215" id="3TW-UR-XCF"/>
+                                            <constraint firstAttribute="height" constant="24" id="buf-99-2jr"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ynF-w9-YTF" userLabel="loginSeparatorView">
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="Vae-eY-XYq"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mxg-Wn-TTr" userLabel="passwordContainerView">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJl-mX-C6r" userLabel="forgetPasswordButton">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="65" id="hdg-Dm-uD1"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
+                                                <state key="normal" title="Забыли?">
+                                                    <color key="titleColor" red="0.0078431372549019607" green="0.71372549019607845" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="forgetPasswordButtonWasPressed:" destination="jdl-Es-imy" eventType="touchUpInside" id="5I3-Hc-WKm"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="edk-0C-1GS" userLabel="passwordSeparatorView">
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="15b-CL-79C"/>
+                                                </constraints>
+                                            </view>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пароль" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z29-Gw-Ixf" userLabel="passwordTextField">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="KGL-ox-VvJ"/>
+                                                </constraints>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="edk-0C-1GS" secondAttribute="trailing" id="8Du-4Q-abL"/>
+                                            <constraint firstItem="edk-0C-1GS" firstAttribute="leading" secondItem="mxg-Wn-TTr" secondAttribute="leading" id="HS1-SJ-fiK"/>
+                                            <constraint firstAttribute="trailing" secondItem="CJl-mX-C6r" secondAttribute="trailing" id="Ioy-b1-MZf"/>
+                                            <constraint firstItem="CJl-mX-C6r" firstAttribute="leading" secondItem="Z29-Gw-Ixf" secondAttribute="trailing" id="J53-4d-9He"/>
+                                            <constraint firstItem="CJl-mX-C6r" firstAttribute="top" secondItem="mxg-Wn-TTr" secondAttribute="top" id="Ljz-qK-isi"/>
+                                            <constraint firstItem="Z29-Gw-Ixf" firstAttribute="top" secondItem="mxg-Wn-TTr" secondAttribute="top" constant="8" id="dG3-nZ-o71"/>
+                                            <constraint firstItem="edk-0C-1GS" firstAttribute="top" secondItem="Z29-Gw-Ixf" secondAttribute="bottom" constant="8" id="edg-Ng-LFQ"/>
+                                            <constraint firstAttribute="bottom" secondItem="edk-0C-1GS" secondAttribute="bottom" id="egq-Oi-YYc"/>
+                                            <constraint firstItem="edk-0C-1GS" firstAttribute="top" secondItem="CJl-mX-C6r" secondAttribute="bottom" id="jLU-d0-W0Z"/>
+                                            <constraint firstItem="Z29-Gw-Ixf" firstAttribute="leading" secondItem="mxg-Wn-TTr" secondAttribute="leading" id="vuI-NU-HG1"/>
+                                        </constraints>
+                                    </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="miA-Mw-H2r">
+                                        <frame key="frameInset" minX="247" minY="416" width="15" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.70196078431372544" blue="0.8901960784313725" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcf-7i-qZT" userLabel="loginButton">
+                                        <color key="backgroundColor" red="0.0" green="0.70196078431372544" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="4Rz-hg-pWN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                        <state key="normal" title="Войти">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="loginButtonWasPressed:" destination="jdl-Es-imy" eventType="touchUpInside" id="yIk-cn-cDY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IhA-fY-97V" userLabel="registerButton">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="As1-hz-bac"/>
+                                            <constraint firstAttribute="height" constant="48" id="hW3-Xr-nuy"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
+                                        <state key="normal" title="Зарегистрироваться">
+                                            <color key="titleColor" red="0.0078431372549019607" green="0.71372549019607845" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="registerButtonWasPressed:" destination="jdl-Es-imy" eventType="touchUpInside" id="vpE-5x-jZa"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="BKd-5M-sl4" firstAttribute="centerX" secondItem="GmZ-8y-ZP4" secondAttribute="centerX" id="0xW-jM-R3M"/>
+                                    <constraint firstItem="rcf-7i-qZT" firstAttribute="top" secondItem="mxg-Wn-TTr" secondAttribute="bottom" constant="24" id="5jS-xn-ULr"/>
+                                    <constraint firstItem="ynF-w9-YTF" firstAttribute="top" secondItem="g4Q-fr-eK8" secondAttribute="bottom" constant="8" id="6rX-9l-bfg"/>
+                                    <constraint firstItem="mxg-Wn-TTr" firstAttribute="leading" secondItem="GmZ-8y-ZP4" secondAttribute="leading" constant="7" id="8DA-YH-UTW"/>
+                                    <constraint firstAttribute="trailing" secondItem="mxg-Wn-TTr" secondAttribute="trailing" constant="7" id="AJf-vn-1Vd"/>
+                                    <constraint firstItem="g4Q-fr-eK8" firstAttribute="top" secondItem="JF0-5M-Au2" secondAttribute="bottom" constant="64" id="Arh-LH-XLe"/>
+                                    <constraint firstItem="mxg-Wn-TTr" firstAttribute="top" secondItem="g4Q-fr-eK8" secondAttribute="bottom" constant="8" id="PED-Fa-WGZ"/>
+                                    <constraint firstItem="IhA-fY-97V" firstAttribute="centerX" secondItem="GmZ-8y-ZP4" secondAttribute="centerX" id="Ph9-0w-TLZ"/>
+                                    <constraint firstItem="JF0-5M-Au2" firstAttribute="top" secondItem="BKd-5M-sl4" secondAttribute="bottom" constant="32" id="WsC-N9-IgE"/>
+                                    <constraint firstItem="g4Q-fr-eK8" firstAttribute="leading" secondItem="GmZ-8y-ZP4" secondAttribute="leading" constant="7" id="axa-3S-ckC"/>
+                                    <constraint firstItem="JF0-5M-Au2" firstAttribute="leading" secondItem="GmZ-8y-ZP4" secondAttribute="leading" id="blg-2g-LZv"/>
                                     <constraint firstItem="BKd-5M-sl4" firstAttribute="top" secondItem="GmZ-8y-ZP4" secondAttribute="top" constant="182" id="h3c-81-WZB"/>
                                     <constraint firstAttribute="width" constant="270" id="ifr-hd-9Wq"/>
+                                    <constraint firstAttribute="trailing" secondItem="ynF-w9-YTF" secondAttribute="trailing" constant="7" id="mHT-1Y-7Zb"/>
+                                    <constraint firstAttribute="trailing" secondItem="rcf-7i-qZT" secondAttribute="trailing" constant="7" id="qho-2b-z1J"/>
+                                    <constraint firstItem="ynF-w9-YTF" firstAttribute="leading" secondItem="GmZ-8y-ZP4" secondAttribute="leading" constant="7" id="rqa-p8-9GO"/>
+                                    <constraint firstItem="IhA-fY-97V" firstAttribute="top" secondItem="rcf-7i-qZT" secondAttribute="bottom" constant="24" id="t3j-ec-que"/>
+                                    <constraint firstAttribute="trailing" secondItem="JF0-5M-Au2" secondAttribute="trailing" id="xqd-RT-IhO"/>
+                                    <constraint firstItem="rcf-7i-qZT" firstAttribute="leading" secondItem="GmZ-8y-ZP4" secondAttribute="leading" constant="7" id="yc4-b1-ejD"/>
                                 </constraints>
                             </view>
                         </subviews>
