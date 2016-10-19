@@ -37,13 +37,15 @@
 		9EFF74061DB42925004873A6 /* QLTestAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF74051DB42925004873A6 /* QLTestAssembly.m */; };
 		9EFF74361DB4C376004873A6 /* borrowerOrderStub.json in Resources */ = {isa = PBXBuildFile; fileRef = 9EFF74351DB4C376004873A6 /* borrowerOrderStub.json */; };
 		B052863E11C552DF193FDF47 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1BE5B8284ED646854EA9B23 /* libPods.a */; };
+		D896553F1DB8227400DE4C66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D896553D1DB8227400DE4C66 /* Main.storyboard */; };
+		D89655401DB8227400DE4C66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D896553E1DB8227400DE4C66 /* LaunchScreen.storyboard */; };
+		D89655421DB822AD00DE4C66 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D89655411DB822AD00DE4C66 /* Auth.storyboard */; };
+		D896554A1DB823A100DE4C66 /* QLAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89655491DB823A100DE4C66 /* QLAuthViewController.m */; };
 		D8F9D7AF1DAFD2FC000371CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F9D7AE1DAFD2FC000371CA /* main.m */; };
 		D8F9D7B21DAFD2FC000371CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F9D7B11DAFD2FC000371CA /* AppDelegate.m */; };
 		D8F9D7B51DAFD2FC000371CA /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F9D7B41DAFD2FC000371CA /* FirstViewController.m */; };
 		D8F9D7B81DAFD2FC000371CA /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F9D7B71DAFD2FC000371CA /* SecondViewController.m */; };
-		D8F9D7BB1DAFD2FC000371CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8F9D7B91DAFD2FC000371CA /* Main.storyboard */; };
 		D8F9D7BD1DAFD2FC000371CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8F9D7BC1DAFD2FC000371CA /* Assets.xcassets */; };
-		D8F9D7C01DAFD2FC000371CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8F9D7BE1DAFD2FC000371CA /* LaunchScreen.storyboard */; };
 		D8F9D7CB1DAFD2FC000371CA /* QLoanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F9D7CA1DAFD2FC000371CA /* QLoanTests.m */; };
 		D8F9D7D61DAFD2FC000371CA /* QLoanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F9D7D51DAFD2FC000371CA /* QLoanUITests.m */; };
 /* End PBXBuildFile section */
@@ -126,6 +128,11 @@
 		9EFF74051DB42925004873A6 /* QLTestAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLTestAssembly.m; path = Classes/UserInterface/TestAssembly/QLTestAssembly.m; sourceTree = "<group>"; };
 		9EFF74351DB4C376004873A6 /* borrowerOrderStub.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = borrowerOrderStub.json; path = Stubs/borrowerOrderStub.json; sourceTree = "<group>"; };
 		D1BE5B8284ED646854EA9B23 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D896553D1DB8227400DE4C66 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Resources/Storyboards/Main.storyboard; sourceTree = "<group>"; };
+		D896553E1DB8227400DE4C66 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Resources/Storyboards/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D89655411DB822AD00DE4C66 /* Auth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Auth.storyboard; path = Resources/Storyboards/Auth.storyboard; sourceTree = "<group>"; };
+		D89655481DB823A100DE4C66 /* QLAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLAuthViewController.h; path = Classes/UserInterface/Controllers/Auth/QLAuthViewController.h; sourceTree = "<group>"; };
+		D89655491DB823A100DE4C66 /* QLAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLAuthViewController.m; path = Classes/UserInterface/Controllers/Auth/QLAuthViewController.m; sourceTree = "<group>"; };
 		D8F9D7AA1DAFD2FC000371CA /* QLoan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QLoan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8F9D7AE1DAFD2FC000371CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D8F9D7B01DAFD2FC000371CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -134,9 +141,7 @@
 		D8F9D7B41DAFD2FC000371CA /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		D8F9D7B61DAFD2FC000371CA /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		D8F9D7B71DAFD2FC000371CA /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		D8F9D7BA1DAFD2FC000371CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D8F9D7BC1DAFD2FC000371CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D8F9D7BF1DAFD2FC000371CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8F9D7C11DAFD2FC000371CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8F9D7C61DAFD2FC000371CA /* QLoanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QLoanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8F9D7CA1DAFD2FC000371CA /* QLoanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QLoanTests.m; sourceTree = "<group>"; };
@@ -486,6 +491,7 @@
 		9EFF74021DB428F1004873A6 /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
+				D89655431DB8234E00DE4C66 /* Controllers */,
 				9EFF74031DB428FB004873A6 /* TestAssembly */,
 			);
 			name = UserInterface;
@@ -506,6 +512,41 @@
 				9EFF74351DB4C376004873A6 /* borrowerOrderStub.json */,
 			);
 			name = Stubs;
+			sourceTree = "<group>";
+		};
+		D896553B1DB8203200DE4C66 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D896553C1DB821F600DE4C66 /* Storyboards */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D896553C1DB821F600DE4C66 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D89655411DB822AD00DE4C66 /* Auth.storyboard */,
+				D896553D1DB8227400DE4C66 /* Main.storyboard */,
+				D896553E1DB8227400DE4C66 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		D89655431DB8234E00DE4C66 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D89655471DB8238300DE4C66 /* Auth */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D89655471DB8238300DE4C66 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				D89655481DB823A100DE4C66 /* QLAuthViewController.h */,
+				D89655491DB823A100DE4C66 /* QLAuthViewController.m */,
+			);
+			name = Auth;
 			sourceTree = "<group>";
 		};
 		D8F9D7A11DAFD2FC000371CA = {
@@ -533,17 +574,16 @@
 		D8F9D7AC1DAFD2FC000371CA /* QLoan */ = {
 			isa = PBXGroup;
 			children = (
-				9EFF74341DB4C351004873A6 /* Stubs */,
 				9EFF738B1DB3B59C004873A6 /* Classes */,
+				D896553B1DB8203200DE4C66 /* Resources */,
+				9EFF74341DB4C351004873A6 /* Stubs */,
 				D8F9D7B01DAFD2FC000371CA /* AppDelegate.h */,
 				D8F9D7B11DAFD2FC000371CA /* AppDelegate.m */,
 				D8F9D7B31DAFD2FC000371CA /* FirstViewController.h */,
 				D8F9D7B41DAFD2FC000371CA /* FirstViewController.m */,
 				D8F9D7B61DAFD2FC000371CA /* SecondViewController.h */,
 				D8F9D7B71DAFD2FC000371CA /* SecondViewController.m */,
-				D8F9D7B91DAFD2FC000371CA /* Main.storyboard */,
 				D8F9D7BC1DAFD2FC000371CA /* Assets.xcassets */,
-				D8F9D7BE1DAFD2FC000371CA /* LaunchScreen.storyboard */,
 				D8F9D7C11DAFD2FC000371CA /* Info.plist */,
 				D8F9D7AD1DAFD2FC000371CA /* Supporting Files */,
 			);
@@ -685,10 +725,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8F9D7C01DAFD2FC000371CA /* LaunchScreen.storyboard in Resources */,
+				D896553F1DB8227400DE4C66 /* Main.storyboard in Resources */,
+				D89655401DB8227400DE4C66 /* LaunchScreen.storyboard in Resources */,
+				D89655421DB822AD00DE4C66 /* Auth.storyboard in Resources */,
 				D8F9D7BD1DAFD2FC000371CA /* Assets.xcassets in Resources */,
 				9EFF74361DB4C376004873A6 /* borrowerOrderStub.json in Resources */,
-				D8F9D7BB1DAFD2FC000371CA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -784,6 +825,7 @@
 				9EFF73941DB3B672004873A6 /* QLRegistrationRequestConfiguration.m in Sources */,
 				9EFF73BD1DB3CD83004873A6 /* QLLenderOrder.m in Sources */,
 				D8F9D7AF1DAFD2FC000371CA /* main.m in Sources */,
+				D896554A1DB823A100DE4C66 /* QLAuthViewController.m in Sources */,
 				9EFF74011DB425FB004873A6 /* QLServicesAssembly.m in Sources */,
 				9EFF739B1DB3BDF8004873A6 /* QLUserInfoService.m in Sources */,
 				9EFF73F51DB41A47004873A6 /* QLMappingProvider.m in Sources */,
@@ -826,25 +868,6 @@
 			targetProxy = D8F9D7D21DAFD2FC000371CA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		D8F9D7B91DAFD2FC000371CA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D8F9D7BA1DAFD2FC000371CA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D8F9D7BE1DAFD2FC000371CA /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D8F9D7BF1DAFD2FC000371CA /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D8F9D7D81DAFD2FC000371CA /* Debug */ = {

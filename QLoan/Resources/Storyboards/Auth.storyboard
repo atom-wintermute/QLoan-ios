@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="U8e-nV-q2t">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="bzx-sg-OYm">
+            <objects>
+                <navigationController id="U8e-nV-q2t" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1E2-69-ZUO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="jdl-Es-imy" kind="relationship" relationship="rootViewController" id="GMe-z8-bdx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bQ3-1s-hcM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-474" y="119"/>
+        </scene>
+        <!--Auth View Controller-->
+        <scene sceneID="7Fn-9K-gLS">
+            <objects>
+                <viewController storyboardIdentifier="QLAuthViewController" id="jdl-Es-imy" customClass="QLAuthViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OKv-8Y-dWS"/>
+                        <viewControllerLayoutGuide type="bottom" id="YPE-1v-DdI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Kt-kQ-thm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GmZ-8y-ZP4" userLabel="contentViewContainer">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BKd-5M-sl4" userLabel="logoImageView">
+                                        <color key="backgroundColor" red="0.0" green="0.70196078431372544" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="85" id="Kym-YN-u7V"/>
+                                            <constraint firstAttribute="height" constant="95" id="nFL-cM-1oI"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="BKd-5M-sl4" firstAttribute="centerX" secondItem="GmZ-8y-ZP4" secondAttribute="centerX" id="0xW-jM-R3M"/>
+                                    <constraint firstItem="BKd-5M-sl4" firstAttribute="top" secondItem="GmZ-8y-ZP4" secondAttribute="top" constant="182" id="h3c-81-WZB"/>
+                                    <constraint firstAttribute="width" constant="270" id="ifr-hd-9Wq"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GmZ-8y-ZP4" firstAttribute="centerX" secondItem="8Kt-kQ-thm" secondAttribute="centerX" id="BpI-mF-PXJ"/>
+                            <constraint firstItem="YPE-1v-DdI" firstAttribute="top" secondItem="GmZ-8y-ZP4" secondAttribute="bottom" id="FoM-ie-ozP"/>
+                            <constraint firstItem="GmZ-8y-ZP4" firstAttribute="top" secondItem="OKv-8Y-dWS" secondAttribute="bottom" id="Jid-OW-wcA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ldo-dO-MLu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uO2-gx-XPg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="463" y="120"/>
+        </scene>
+    </scenes>
+</document>
