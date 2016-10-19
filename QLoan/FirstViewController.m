@@ -14,6 +14,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+	[self.service borrowerOrderWithId:10 completion:^(QLBorrowerOrder *order, NSError *error) {
+		
+	}];
 }
 
 

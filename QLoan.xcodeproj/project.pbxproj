@@ -35,6 +35,7 @@
 		9EFF73FD1DB4206F004873A6 /* QLCoreComponentsAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73FC1DB4206F004873A6 /* QLCoreComponentsAssembly.m */; };
 		9EFF74011DB425FB004873A6 /* QLServicesAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF74001DB425FB004873A6 /* QLServicesAssembly.m */; };
 		9EFF74061DB42925004873A6 /* QLTestAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF74051DB42925004873A6 /* QLTestAssembly.m */; };
+		9EFF74361DB4C376004873A6 /* borrowerOrderStub.json in Resources */ = {isa = PBXBuildFile; fileRef = 9EFF74351DB4C376004873A6 /* borrowerOrderStub.json */; };
 		B052863E11C552DF193FDF47 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1BE5B8284ED646854EA9B23 /* libPods.a */; };
 		D8F9D7AF1DAFD2FC000371CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F9D7AE1DAFD2FC000371CA /* main.m */; };
 		D8F9D7B21DAFD2FC000371CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F9D7B11DAFD2FC000371CA /* AppDelegate.m */; };
@@ -123,6 +124,7 @@
 		9EFF74001DB425FB004873A6 /* QLServicesAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLServicesAssembly.m; path = Classes/BusinessLogic/Services/Assembly/QLServicesAssembly.m; sourceTree = "<group>"; };
 		9EFF74041DB42925004873A6 /* QLTestAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLTestAssembly.h; path = Classes/UserInterface/TestAssembly/QLTestAssembly.h; sourceTree = "<group>"; };
 		9EFF74051DB42925004873A6 /* QLTestAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLTestAssembly.m; path = Classes/UserInterface/TestAssembly/QLTestAssembly.m; sourceTree = "<group>"; };
+		9EFF74351DB4C376004873A6 /* borrowerOrderStub.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = borrowerOrderStub.json; path = Stubs/borrowerOrderStub.json; sourceTree = "<group>"; };
 		D1BE5B8284ED646854EA9B23 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8F9D7AA1DAFD2FC000371CA /* QLoan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QLoan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8F9D7AE1DAFD2FC000371CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -498,6 +500,14 @@
 			name = TestAssembly;
 			sourceTree = "<group>";
 		};
+		9EFF74341DB4C351004873A6 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF74351DB4C376004873A6 /* borrowerOrderStub.json */,
+			);
+			name = Stubs;
+			sourceTree = "<group>";
+		};
 		D8F9D7A11DAFD2FC000371CA = {
 			isa = PBXGroup;
 			children = (
@@ -523,6 +533,7 @@
 		D8F9D7AC1DAFD2FC000371CA /* QLoan */ = {
 			isa = PBXGroup;
 			children = (
+				9EFF74341DB4C351004873A6 /* Stubs */,
 				9EFF738B1DB3B59C004873A6 /* Classes */,
 				D8F9D7B01DAFD2FC000371CA /* AppDelegate.h */,
 				D8F9D7B11DAFD2FC000371CA /* AppDelegate.m */,
@@ -676,6 +687,7 @@
 			files = (
 				D8F9D7C01DAFD2FC000371CA /* LaunchScreen.storyboard in Resources */,
 				D8F9D7BD1DAFD2FC000371CA /* Assets.xcassets in Resources */,
+				9EFF74361DB4C376004873A6 /* borrowerOrderStub.json in Resources */,
 				D8F9D7BB1DAFD2FC000371CA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

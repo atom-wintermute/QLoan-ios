@@ -12,6 +12,15 @@
 
 - (EKObjectMapping *)borrowerOrderMapping {
 	return [EKObjectMapping mappingForClass:[QLBorrowerOrder class] withBlock:^(EKObjectMapping *mapping) {
+		
+		[mapping mapFieldsFromDictionary:@{
+										   @"borrowerId": @"borrowerId",
+										   @"lenderId" : @"lenderId",
+										   @"loanMaturityPeriod" : @"loanMaturityPeriod",
+										   @"loanAmount" : @"loanAmount",
+										   @"perecentage" : @"perecentage",
+										   @"penalty" : @"penalty"
+										   }];
 	}];
 }
 
