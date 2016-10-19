@@ -686,6 +686,7 @@
 				TargetAttributes = {
 					D8F9D7A91DAFD2FC000371CA = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 7SMPM83ZV6;
 						ProvisioningStyle = Automatic;
 					};
 					D8F9D7C51DAFD2FC000371CA = {
@@ -965,10 +966,13 @@
 			baseConfigurationReference = 231F0EC6722C13ED096D9EB6 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7SMPM83ZV6;
 				INFOPLIST_FILE = QLoan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.ramblerco.rambler.QLoan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -977,10 +981,13 @@
 			baseConfigurationReference = 41A2D4330A792AAE9B65A346 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7SMPM83ZV6;
 				INFOPLIST_FILE = QLoan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.ramblerco.rambler.QLoan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
