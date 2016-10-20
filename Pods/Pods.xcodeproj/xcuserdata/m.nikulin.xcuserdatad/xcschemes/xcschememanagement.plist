@@ -39,6 +39,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>RamblerTyphoonUtils.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SAMKeychain.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -62,17 +67,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>05C08F084C8D074EF8DC924768A11FBF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>0A4AD807C9A8481FA265F747FBB8CF12</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>31EC4A16BA65C6FEDD897FBD2475CC65</key>
+		<key>3104FF5EE998CD6EDC83247008827AC0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4B9D7F7EFA6F50F761C2E027E85CD646</key>
+		<key>401D136B30D9FD7A55E0A7EA3ABCAD56</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,12 +92,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6AB0EE6652077B40F8591ED93D8450D6</key>
+		<key>6C19D5A28C88BB580B68DA148BB22654</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>904A3D8EE375730591288817BA9F4A52</key>
+		<key>6D56081BB3A2715DA16AFE6D3BE0BB27</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>736292BCE551136F4E2D36C7C88C1868</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>861A287C4757BD40D4CF4D91FBA7C40A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,17 +117,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EC07CB9C9D9E17C01703AFB97C13C6EC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>EC0D1D30F031352A2DB09856D4D19BD0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F5F3D3025A5175AB5130FC33E7C6C9ED</key>
 		<dict>
 			<key>primary</key>
 			<true/>

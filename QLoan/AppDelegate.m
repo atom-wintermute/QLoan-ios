@@ -10,12 +10,15 @@
 #import "QLCoreComponentsAssembly.h"
 #import "QLServicesAssembly.h"
 #import "QLTestAssembly.h"
+#import "QLAuthAssembly.h"
+
+#import <RamblerTyphoonUtils/AssemblyCollector.h>
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self configureAppearance];
+//    [self activateAssemblies];
     
     return YES;
 }
@@ -24,7 +27,8 @@
 	return @[
 			 [QLCoreComponentsAssembly class],
 			 [QLServicesAssembly class],
-			 [QLTestAssembly class]
+			 [QLTestAssembly class],
+             [QLAuthAssembly class]
 			 ];
 }
 
@@ -45,6 +49,24 @@
     [[UINavigationBar appearance] setTranslucent:YES];
     [[UINavigationBar appearance] setBackIndicatorImage:[UIImage new]];
     [[UINavigationBar appearance] setBackIndicatorTransitionMaskImage:[UIImage new]];
+}
+
+- (void)activateAssemblies {
+    RamblerInitialAssemblyCollector *collector = [RamblerInitialAssemblyCollector new];
+    NSMutableArray *classes = [[collector collectInitialAssemblyClasses] mutableCopy];
+    NSMutableArray *assemblies = [NSMutableArray arrayWithCapacity:classes.count];
+    TyphoonAssembly *assembly = [classes.firstObject new];
+    [classes removeObjectAtIndex:0];
+    
+    for (Class assemblyClass in classes) {
+        id assembly = [assemblyClass new];
+        [assemblies addObject:assembly];
+    }
+    
+    //В текущей реализации глобальные TyphoonConfig не работают
+    TyphoonComponentFactory *factory = (TyphoonComponentFactory *)[assembly activateWithCollaboratingAssemblies:assemblies];
+    [TyphoonComponentFactory setFactoryForResolvingUI:factory];
+    [factory inject:self];
 }
 
 @end
