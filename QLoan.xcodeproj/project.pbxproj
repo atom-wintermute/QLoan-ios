@@ -38,15 +38,16 @@
 		9EFF74361DB4C376004873A6 /* borrowerOrderStub.json in Resources */ = {isa = PBXBuildFile; fileRef = 9EFF74351DB4C376004873A6 /* borrowerOrderStub.json */; };
 		B052863E11C552DF193FDF47 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1BE5B8284ED646854EA9B23 /* libPods.a */; };
 		D835BCB51DB96EF400F2FF0F /* SF-UI-Display-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = D835BCB41DB96EF400F2FF0F /* SF-UI-Display-Light.otf */; };
-		D835BCB91DB96F9900F2FF0F /* QLProfileAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BCB81DB96F9900F2FF0F /* QLProfileAssembly.m */; };
-		D835BCC51DB9714D00F2FF0F /* QLProfileDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BCC31DB9714D00F2FF0F /* QLProfileDataCell.m */; };
-		D835BCC61DB9714D00F2FF0F /* QLProfileDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D835BCC41DB9714D00F2FF0F /* QLProfileDataCell.xib */; };
-		D835BCC91DB9716B00F2FF0F /* QLProfileDataCellObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BCC81DB9716B00F2FF0F /* QLProfileDataCellObject.m */; };
 		D835BCCE1DB9741100F2FF0F /* RDSDataDisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BCCC1DB9741100F2FF0F /* RDSDataDisplayManager.m */; };
 		D835BCD31DB9747500F2FF0F /* NSMutableArray+RDSNilFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BCD21DB9747500F2FF0F /* NSMutableArray+RDSNilFilter.m */; };
 		D835BCD71DB974C100F2FF0F /* RDSAutoHeightCellFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BCD61DB974C100F2FF0F /* RDSAutoHeightCellFactory.m */; };
-		D835BCDB1DB9752500F2FF0F /* QLProfileDataDisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BCDA1DB9752500F2FF0F /* QLProfileDataDisplayManager.m */; };
-		D835BCDE1DB976E500F2FF0F /* QLProfileCellFactoryImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BCDD1DB976E500F2FF0F /* QLProfileCellFactoryImplementation.m */; };
+		D835BD0F1DB97B0700F2FF0F /* QLProfileCellFactoryImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BCFF1DB97B0700F2FF0F /* QLProfileCellFactoryImplementation.m */; };
+		D835BD101DB97B0700F2FF0F /* QLProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BD001DB97B0700F2FF0F /* QLProfileViewController.m */; };
+		D835BD111DB97B0700F2FF0F /* QLProfileAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BD031DB97B0700F2FF0F /* QLProfileAssembly.m */; };
+		D835BD121DB97B0700F2FF0F /* QLProfileDataDisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BD071DB97B0700F2FF0F /* QLProfileDataDisplayManager.m */; };
+		D835BD131DB97B0700F2FF0F /* QLProfileDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BD0B1DB97B0700F2FF0F /* QLProfileDataCell.m */; };
+		D835BD141DB97B0700F2FF0F /* QLProfileDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D835BD0C1DB97B0700F2FF0F /* QLProfileDataCell.xib */; };
+		D835BD151DB97B0700F2FF0F /* QLProfileDataCellObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BD0E1DB97B0700F2FF0F /* QLProfileDataCellObject.m */; };
 		D84F78381DB8CBC500394F1D /* QLBankAuthServiceImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = D84F78371DB8CBC500394F1D /* QLBankAuthServiceImplementation.m */; };
 		D84F783D1DB8DA7A00394F1D /* QLBankAuthRequestFactoryImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = D84F783C1DB8DA7A00394F1D /* QLBankAuthRequestFactoryImplementation.m */; };
 		D84F78411DB8E0EB00394F1D /* QLBankServiceConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D84F78401DB8E0EB00394F1D /* QLBankServiceConstants.m */; };
@@ -62,7 +63,6 @@
 		D89655581DB8319900DE4C66 /* QLRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89655571DB8319900DE4C66 /* QLRegisterViewController.m */; };
 		D89655601DB8C39900DE4C66 /* QLAuthAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = D896555F1DB8C39900DE4C66 /* QLAuthAssembly.m */; };
 		D8D98BB41DB9085300F3FB01 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8D98BB31DB9085300F3FB01 /* Profile.storyboard */; };
-		D8D98BB81DB908A200F3FB01 /* QLProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D98BB71DB908A200F3FB01 /* QLProfileViewController.m */; };
 		D8F9D7AF1DAFD2FC000371CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F9D7AE1DAFD2FC000371CA /* main.m */; };
 		D8F9D7B21DAFD2FC000371CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F9D7B11DAFD2FC000371CA /* AppDelegate.m */; };
 		D8F9D7B51DAFD2FC000371CA /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F9D7B41DAFD2FC000371CA /* FirstViewController.m */; };
@@ -152,13 +152,6 @@
 		D1BE5B8284ED646854EA9B23 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D835BCB31DB94E1500F2FF0F /* QLStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = QLStorage.h; path = Classes/BusinessLogic/CoreCompnents/KeychainStorage/QLStorage.h; sourceTree = "<group>"; };
 		D835BCB41DB96EF400F2FF0F /* SF-UI-Display-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Display-Light.otf"; path = "Resources/Fonts/SF-UI-Display-Light.otf"; sourceTree = "<group>"; };
-		D835BCB71DB96F9900F2FF0F /* QLProfileAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLProfileAssembly.h; path = Classes/UserInterface/Controllers/Profile/Assembly/QLProfileAssembly.h; sourceTree = "<group>"; };
-		D835BCB81DB96F9900F2FF0F /* QLProfileAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLProfileAssembly.m; path = Classes/UserInterface/Controllers/Profile/Assembly/QLProfileAssembly.m; sourceTree = "<group>"; };
-		D835BCC21DB9714D00F2FF0F /* QLProfileDataCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLProfileDataCell.h; path = Classes/UserInterface/Controllers/Profile/Cells/DataCell/QLProfileDataCell.h; sourceTree = "<group>"; };
-		D835BCC31DB9714D00F2FF0F /* QLProfileDataCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLProfileDataCell.m; path = Classes/UserInterface/Controllers/Profile/Cells/DataCell/QLProfileDataCell.m; sourceTree = "<group>"; };
-		D835BCC41DB9714D00F2FF0F /* QLProfileDataCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QLProfileDataCell.xib; path = Classes/UserInterface/Controllers/Profile/Cells/DataCell/QLProfileDataCell.xib; sourceTree = "<group>"; };
-		D835BCC71DB9716B00F2FF0F /* QLProfileDataCellObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLProfileDataCellObject.h; path = Classes/UserInterface/Controllers/Profile/Cells/DataCell/QLProfileDataCellObject.h; sourceTree = "<group>"; };
-		D835BCC81DB9716B00F2FF0F /* QLProfileDataCellObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLProfileDataCellObject.m; path = Classes/UserInterface/Controllers/Profile/Cells/DataCell/QLProfileDataCellObject.m; sourceTree = "<group>"; };
 		D835BCCB1DB9741100F2FF0F /* RDSDataDisplayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RDSDataDisplayManager.h; path = Classes/Helpers/DataDisplayManager/RDSDataDisplayManager.h; sourceTree = "<group>"; };
 		D835BCCC1DB9741100F2FF0F /* RDSDataDisplayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RDSDataDisplayManager.m; path = Classes/Helpers/DataDisplayManager/RDSDataDisplayManager.m; sourceTree = "<group>"; };
 		D835BCCD1DB9741100F2FF0F /* RDSDataDisplayManagerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RDSDataDisplayManagerProtocol.h; path = Classes/Helpers/DataDisplayManager/RDSDataDisplayManagerProtocol.h; sourceTree = "<group>"; };
@@ -166,11 +159,20 @@
 		D835BCD21DB9747500F2FF0F /* NSMutableArray+RDSNilFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+RDSNilFilter.m"; path = "Extensions/NSArray/NSMutableArray+RDSNilFilter.m"; sourceTree = "<group>"; };
 		D835BCD51DB974C100F2FF0F /* RDSAutoHeightCellFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RDSAutoHeightCellFactory.h; path = Classes/Helpers/Nimbus/RDSAutoHeightCellFactory.h; sourceTree = "<group>"; };
 		D835BCD61DB974C100F2FF0F /* RDSAutoHeightCellFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RDSAutoHeightCellFactory.m; path = Classes/Helpers/Nimbus/RDSAutoHeightCellFactory.m; sourceTree = "<group>"; };
-		D835BCD91DB9752500F2FF0F /* QLProfileDataDisplayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLProfileDataDisplayManager.h; path = Classes/UserInterface/Controllers/Profile/DDM/QLProfileDataDisplayManager.h; sourceTree = "<group>"; };
-		D835BCDA1DB9752500F2FF0F /* QLProfileDataDisplayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLProfileDataDisplayManager.m; path = Classes/UserInterface/Controllers/Profile/DDM/QLProfileDataDisplayManager.m; sourceTree = "<group>"; };
-		D835BCDC1DB976E500F2FF0F /* QLProfileCellFactoryImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLProfileCellFactoryImplementation.h; path = Classes/UserInterface/Controllers/Profile/Factory/QLProfileCellFactoryImplementation.h; sourceTree = "<group>"; };
-		D835BCDD1DB976E500F2FF0F /* QLProfileCellFactoryImplementation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLProfileCellFactoryImplementation.m; path = Classes/UserInterface/Controllers/Profile/Factory/QLProfileCellFactoryImplementation.m; sourceTree = "<group>"; };
-		D835BCE01DB9771A00F2FF0F /* QLProfileCellFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = QLProfileCellFactory.h; path = Classes/UserInterface/Controllers/Profile/Factory/QLProfileCellFactory.h; sourceTree = "<group>"; };
+		D835BCFD1DB97B0700F2FF0F /* QLProfileCellFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLProfileCellFactory.h; sourceTree = "<group>"; };
+		D835BCFE1DB97B0700F2FF0F /* QLProfileCellFactoryImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLProfileCellFactoryImplementation.h; sourceTree = "<group>"; };
+		D835BCFF1DB97B0700F2FF0F /* QLProfileCellFactoryImplementation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLProfileCellFactoryImplementation.m; sourceTree = "<group>"; };
+		D835BD001DB97B0700F2FF0F /* QLProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLProfileViewController.m; path = Classes/UserInterface/Controllers/UserProfile/QLProfileViewController.m; sourceTree = "<group>"; };
+		D835BD021DB97B0700F2FF0F /* QLProfileAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLProfileAssembly.h; sourceTree = "<group>"; };
+		D835BD031DB97B0700F2FF0F /* QLProfileAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLProfileAssembly.m; sourceTree = "<group>"; };
+		D835BD041DB97B0700F2FF0F /* QLProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLProfileViewController.h; path = Classes/UserInterface/Controllers/UserProfile/QLProfileViewController.h; sourceTree = "<group>"; };
+		D835BD061DB97B0700F2FF0F /* QLProfileDataDisplayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLProfileDataDisplayManager.h; sourceTree = "<group>"; };
+		D835BD071DB97B0700F2FF0F /* QLProfileDataDisplayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLProfileDataDisplayManager.m; sourceTree = "<group>"; };
+		D835BD0A1DB97B0700F2FF0F /* QLProfileDataCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLProfileDataCell.h; sourceTree = "<group>"; };
+		D835BD0B1DB97B0700F2FF0F /* QLProfileDataCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLProfileDataCell.m; sourceTree = "<group>"; };
+		D835BD0C1DB97B0700F2FF0F /* QLProfileDataCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QLProfileDataCell.xib; sourceTree = "<group>"; };
+		D835BD0D1DB97B0700F2FF0F /* QLProfileDataCellObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLProfileDataCellObject.h; sourceTree = "<group>"; };
+		D835BD0E1DB97B0700F2FF0F /* QLProfileDataCellObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLProfileDataCellObject.m; sourceTree = "<group>"; };
 		D84F78351DB8C9CA00394F1D /* QLBankAuthService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = QLBankAuthService.h; path = Classes/BusinessLogic/Services/BankServices/AuthService/QLBankAuthService.h; sourceTree = "<group>"; };
 		D84F78361DB8CBC500394F1D /* QLBankAuthServiceImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLBankAuthServiceImplementation.h; path = Classes/BusinessLogic/Services/BankServices/AuthService/QLBankAuthServiceImplementation.h; sourceTree = "<group>"; };
 		D84F78371DB8CBC500394F1D /* QLBankAuthServiceImplementation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLBankAuthServiceImplementation.m; path = Classes/BusinessLogic/Services/BankServices/AuthService/QLBankAuthServiceImplementation.m; sourceTree = "<group>"; };
@@ -199,8 +201,6 @@
 		D896555E1DB8C39900DE4C66 /* QLAuthAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLAuthAssembly.h; path = Classes/UserInterface/Controllers/Auth/Assembly/QLAuthAssembly.h; sourceTree = "<group>"; };
 		D896555F1DB8C39900DE4C66 /* QLAuthAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLAuthAssembly.m; path = Classes/UserInterface/Controllers/Auth/Assembly/QLAuthAssembly.m; sourceTree = "<group>"; };
 		D8D98BB31DB9085300F3FB01 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = Resources/Storyboards/Profile.storyboard; sourceTree = "<group>"; };
-		D8D98BB61DB908A200F3FB01 /* QLProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLProfileViewController.h; path = Classes/UserInterface/Controllers/Profile/QLProfileViewController.h; sourceTree = "<group>"; };
-		D8D98BB71DB908A200F3FB01 /* QLProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLProfileViewController.m; path = Classes/UserInterface/Controllers/Profile/QLProfileViewController.m; sourceTree = "<group>"; };
 		D8F9D7AA1DAFD2FC000371CA /* QLoan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QLoan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8F9D7AE1DAFD2FC000371CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D8F9D7B01DAFD2FC000371CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -586,45 +586,6 @@
 			name = Stubs;
 			sourceTree = "<group>";
 		};
-		D835BCB61DB96F6700F2FF0F /* Assembly */ = {
-			isa = PBXGroup;
-			children = (
-				D835BCB71DB96F9900F2FF0F /* QLProfileAssembly.h */,
-				D835BCB81DB96F9900F2FF0F /* QLProfileAssembly.m */,
-			);
-			name = Assembly;
-			sourceTree = "<group>";
-		};
-		D835BCBA1DB970F000F2FF0F /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				D835BCC11DB9713300F2FF0F /* DataCell */,
-			);
-			name = Cells;
-			sourceTree = "<group>";
-		};
-		D835BCBB1DB970FA00F2FF0F /* Factory */ = {
-			isa = PBXGroup;
-			children = (
-				D835BCE01DB9771A00F2FF0F /* QLProfileCellFactory.h */,
-				D835BCDC1DB976E500F2FF0F /* QLProfileCellFactoryImplementation.h */,
-				D835BCDD1DB976E500F2FF0F /* QLProfileCellFactoryImplementation.m */,
-			);
-			name = Factory;
-			sourceTree = "<group>";
-		};
-		D835BCC11DB9713300F2FF0F /* DataCell */ = {
-			isa = PBXGroup;
-			children = (
-				D835BCC21DB9714D00F2FF0F /* QLProfileDataCell.h */,
-				D835BCC31DB9714D00F2FF0F /* QLProfileDataCell.m */,
-				D835BCC41DB9714D00F2FF0F /* QLProfileDataCell.xib */,
-				D835BCC71DB9716B00F2FF0F /* QLProfileDataCellObject.h */,
-				D835BCC81DB9716B00F2FF0F /* QLProfileDataCellObject.m */,
-			);
-			name = DataCell;
-			sourceTree = "<group>";
-		};
 		D835BCCA1DB973DE00F2FF0F /* DataDisplayManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -661,13 +622,56 @@
 			name = Nimbus;
 			sourceTree = "<group>";
 		};
-		D835BCD81DB974FA00F2FF0F /* DDM */ = {
+		D835BCFC1DB97B0700F2FF0F /* Factory */ = {
 			isa = PBXGroup;
 			children = (
-				D835BCD91DB9752500F2FF0F /* QLProfileDataDisplayManager.h */,
-				D835BCDA1DB9752500F2FF0F /* QLProfileDataDisplayManager.m */,
+				D835BCFD1DB97B0700F2FF0F /* QLProfileCellFactory.h */,
+				D835BCFE1DB97B0700F2FF0F /* QLProfileCellFactoryImplementation.h */,
+				D835BCFF1DB97B0700F2FF0F /* QLProfileCellFactoryImplementation.m */,
+			);
+			name = Factory;
+			path = Classes/UserInterface/Controllers/UserProfile/Factory;
+			sourceTree = "<group>";
+		};
+		D835BD011DB97B0700F2FF0F /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				D835BD021DB97B0700F2FF0F /* QLProfileAssembly.h */,
+				D835BD031DB97B0700F2FF0F /* QLProfileAssembly.m */,
+			);
+			name = Assembly;
+			path = Classes/UserInterface/Controllers/UserProfile/Assembly;
+			sourceTree = "<group>";
+		};
+		D835BD051DB97B0700F2FF0F /* DDM */ = {
+			isa = PBXGroup;
+			children = (
+				D835BD061DB97B0700F2FF0F /* QLProfileDataDisplayManager.h */,
+				D835BD071DB97B0700F2FF0F /* QLProfileDataDisplayManager.m */,
 			);
 			name = DDM;
+			path = Classes/UserInterface/Controllers/UserProfile/DDM;
+			sourceTree = "<group>";
+		};
+		D835BD081DB97B0700F2FF0F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D835BD091DB97B0700F2FF0F /* DataCell */,
+			);
+			name = Cells;
+			path = Classes/UserInterface/Controllers/UserProfile/Cells;
+			sourceTree = "<group>";
+		};
+		D835BD091DB97B0700F2FF0F /* DataCell */ = {
+			isa = PBXGroup;
+			children = (
+				D835BD0A1DB97B0700F2FF0F /* QLProfileDataCell.h */,
+				D835BD0B1DB97B0700F2FF0F /* QLProfileDataCell.m */,
+				D835BD0C1DB97B0700F2FF0F /* QLProfileDataCell.xib */,
+				D835BD0D1DB97B0700F2FF0F /* QLProfileDataCellObject.h */,
+				D835BD0E1DB97B0700F2FF0F /* QLProfileDataCellObject.m */,
+			);
+			path = DataCell;
 			sourceTree = "<group>";
 		};
 		D84F78331DB8C4CC00394F1D /* BankServices */ = {
@@ -744,7 +748,7 @@
 			isa = PBXGroup;
 			children = (
 				D89655471DB8238300DE4C66 /* Auth */,
-				D8D98BB51DB9087900F3FB01 /* Profile */,
+				D8D98BB51DB9087900F3FB01 /* UserProfile */,
 				D89655551DB8317800DE4C66 /* Register */,
 			);
 			name = Controllers;
@@ -791,17 +795,17 @@
 			name = Assembly;
 			sourceTree = "<group>";
 		};
-		D8D98BB51DB9087900F3FB01 /* Profile */ = {
+		D8D98BB51DB9087900F3FB01 /* UserProfile */ = {
 			isa = PBXGroup;
 			children = (
-				D835BCB61DB96F6700F2FF0F /* Assembly */,
-				D835BCBA1DB970F000F2FF0F /* Cells */,
-				D835BCD81DB974FA00F2FF0F /* DDM */,
-				D835BCBB1DB970FA00F2FF0F /* Factory */,
-				D8D98BB61DB908A200F3FB01 /* QLProfileViewController.h */,
-				D8D98BB71DB908A200F3FB01 /* QLProfileViewController.m */,
+				D835BD011DB97B0700F2FF0F /* Assembly */,
+				D835BD081DB97B0700F2FF0F /* Cells */,
+				D835BD051DB97B0700F2FF0F /* DDM */,
+				D835BCFC1DB97B0700F2FF0F /* Factory */,
+				D835BD041DB97B0700F2FF0F /* QLProfileViewController.h */,
+				D835BD001DB97B0700F2FF0F /* QLProfileViewController.m */,
 			);
-			name = Profile;
+			name = UserProfile;
 			sourceTree = "<group>";
 		};
 		D8F9D7A11DAFD2FC000371CA = {
@@ -986,7 +990,6 @@
 			files = (
 				D89655521DB8260C00DE4C66 /* SF-UI-Display-Regular.otf in Resources */,
 				D896553F1DB8227400DE4C66 /* Main.storyboard in Resources */,
-				D835BCC61DB9714D00F2FF0F /* QLProfileDataCell.xib in Resources */,
 				D8D98BB41DB9085300F3FB01 /* Profile.storyboard in Resources */,
 				D89655401DB8227400DE4C66 /* LaunchScreen.storyboard in Resources */,
 				D89655511DB8260C00DE4C66 /* SF-UI-Display-Semibold.otf in Resources */,
@@ -996,6 +999,7 @@
 				D8F9D7BD1DAFD2FC000371CA /* Assets.xcassets in Resources */,
 				D89655541DB8260C00DE4C66 /* SF-UI-Display-Bold.otf in Resources */,
 				9EFF74361DB4C376004873A6 /* borrowerOrderStub.json in Resources */,
+				D835BD141DB97B0700F2FF0F /* QLProfileDataCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1069,8 +1073,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D835BCD71DB974C100F2FF0F /* RDSAutoHeightCellFactory.m in Sources */,
+				D835BD0F1DB97B0700F2FF0F /* QLProfileCellFactoryImplementation.m in Sources */,
 				9EFF73971DB3B870004873A6 /* QLAuthorizationRequestConfiguration.m in Sources */,
-				D8D98BB81DB908A200F3FB01 /* QLProfileViewController.m in Sources */,
 				9EFF73FD1DB4206F004873A6 /* QLCoreComponentsAssembly.m in Sources */,
 				9EFF73D11DB3D969004873A6 /* QLPaymentSchedule.m in Sources */,
 				9EFF73E51DB40AE6004873A6 /* QLSortMethodParser.m in Sources */,
@@ -1078,22 +1082,23 @@
 				D8F9D7B81DAFD2FC000371CA /* SecondViewController.m in Sources */,
 				9EFF73F11DB416AE004873A6 /* QLJSONSerializer.m in Sources */,
 				9EFF73B51DB3C9C5004873A6 /* ServicesConstants.m in Sources */,
+				D835BD101DB97B0700F2FF0F /* QLProfileViewController.m in Sources */,
 				9EFF74061DB42925004873A6 /* QLTestAssembly.m in Sources */,
-				D835BCDE1DB976E500F2FF0F /* QLProfileCellFactoryImplementation.m in Sources */,
-				D835BCC51DB9714D00F2FF0F /* QLProfileDataCell.m in Sources */,
 				9EFF73E91DB40EC1004873A6 /* QLNetworkClient.m in Sources */,
 				9EFF73DD1DB3F94C004873A6 /* QLRequestFactory.m in Sources */,
 				D8F9D7B21DAFD2FC000371CA /* AppDelegate.m in Sources */,
 				D8F9D7B51DAFD2FC000371CA /* FirstViewController.m in Sources */,
+				D835BD151DB97B0700F2FF0F /* QLProfileDataCellObject.m in Sources */,
 				9EFF73B11DB3C918004873A6 /* QLUserInfo.m in Sources */,
+				D835BD111DB97B0700F2FF0F /* QLProfileAssembly.m in Sources */,
 				9EFF73D81DB3DC4E004873A6 /* QLPaymentCompletedRequestConfiguration.m in Sources */,
 				9EFF73ED1DB41503004873A6 /* QLServerResponse.m in Sources */,
-				D835BCC91DB9716B00F2FF0F /* QLProfileDataCellObject.m in Sources */,
 				9EFF73E11DB40363004873A6 /* QLKeychainStorage.m in Sources */,
 				9EFF73AE1DB3C90F004873A6 /* QLBorrowerOrder.m in Sources */,
-				D835BCB91DB96F9900F2FF0F /* QLProfileAssembly.m in Sources */,
 				9EFF73C11DB3CE42004873A6 /* QLLenderOrderService.m in Sources */,
 				9EFF73D51DB3DB26004873A6 /* QLUserInteractionService.m in Sources */,
+				D835BD121DB97B0700F2FF0F /* QLProfileDataDisplayManager.m in Sources */,
+				D835BD131DB97B0700F2FF0F /* QLProfileDataCell.m in Sources */,
 				D89655601DB8C39900DE4C66 /* QLAuthAssembly.m in Sources */,
 				D89655581DB8319900DE4C66 /* QLRegisterViewController.m in Sources */,
 				9EFF73941DB3B672004873A6 /* QLRegistrationRequestConfiguration.m in Sources */,
@@ -1110,7 +1115,6 @@
 				9EFF73C91DB3D1C4004873A6 /* QLNotification.m in Sources */,
 				D835BCD31DB9747500F2FF0F /* NSMutableArray+RDSNilFilter.m in Sources */,
 				D84F78461DB8F08400394F1D /* EXTScope.m in Sources */,
-				D835BCDB1DB9752500F2FF0F /* QLProfileDataDisplayManager.m in Sources */,
 				9EFF73CD1DB3D82B004873A6 /* QLPayment.m in Sources */,
 				D84F78411DB8E0EB00394F1D /* QLBankServiceConstants.m in Sources */,
 				9EFF73B91DB3CA09004873A6 /* EntityConstants.m in Sources */,
