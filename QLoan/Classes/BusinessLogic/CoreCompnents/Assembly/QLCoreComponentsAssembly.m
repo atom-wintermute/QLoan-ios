@@ -11,6 +11,7 @@
 
 #import "QLBankAuthRequestFactoryImplementation.h"
 #import "QLInMemoryStorage.h"
+#import "QLBankAuthMapperImplementation.h"
 
 @implementation QLCoreComponentsAssembly
 
@@ -23,6 +24,10 @@
 				[definition injectProperty:@selector(mappingProvider)
 									  with:[self mappingProvider]];
 			}];
+}
+
+- (id<QLBankAuthMapper>)bankAuthMapper {
+    return [TyphoonDefinition withClass:[QLBankAuthMapperImplementation class]];
 }
 
 - (QLMappingProvider *)mappingProvider {

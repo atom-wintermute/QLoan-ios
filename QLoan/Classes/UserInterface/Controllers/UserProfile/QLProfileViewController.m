@@ -24,6 +24,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    QLBankUserInfo *bankUserInfo = [self.bankAuthService obtainCurrentUserData];
+    
     NSArray *cellObjects = [self.cellFactory cellObjects];
     self.dataDisplayManager =  [[QLProfileDataDisplayManager alloc] initWithInputData:cellObjects
                                                       andConversionToCellObjectsBlock:^id(id dataObject) {

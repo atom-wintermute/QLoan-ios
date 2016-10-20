@@ -43,6 +43,8 @@
                                                     with:[self.coreAssembly bankAuthRequestFactory]];
                               [definition injectProperty:@selector(storage)
                                                     with:[self.coreAssembly inMemoryStorage]];
+                              [definition injectProperty:@selector(mapper)
+                                                    with:[self.coreAssembly bankAuthMapper]];
                           }];
 }
 

@@ -26,3 +26,4 @@ NSString * const QLBankUserId = @"userId";
 #pragma mark - Ключи данных в хранилищах
 
 NSString * const QLBankSessionIdKey = @"bankSessionIdKey";
+NSString * const QLBankUserInfoKey = @"bankUserInfoKey";

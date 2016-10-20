@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <Typhoon.h>
 
+@protocol QLBankAuthMapper;
+
 #import "QLMapper.h"
 #import "QLMappingProvider.h"
 #import "QLJSONSerializer.h"
@@ -25,6 +27,8 @@
 - (QLMapper *)mapper;
 
 - (QLMappingProvider *)mappingProvider;
+
+- (id<QLBankAuthMapper>)bankAuthMapper;
 
 #pragma mark - Сериализаторы
 

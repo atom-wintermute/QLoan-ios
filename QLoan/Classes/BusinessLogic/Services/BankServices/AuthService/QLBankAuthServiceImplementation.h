@@ -12,6 +12,7 @@
 
 @protocol QLBankAuthRequestFactory;
 @protocol QLStorage;
+@protocol QLBankAuthMapper;
 
 @class QLNetworkClient;
 @class QLJSONSerializer;
@@ -21,5 +22,6 @@
 @property (nonatomic, strong) QLNetworkClient *networkClient;
 @property (nonatomic, strong) id<QLBankAuthRequestFactory> requestFactory;
 @property (nonatomic, strong) id<QLStorage> storage;
+@property (nonatomic, strong) id<QLBankAuthMapper> mapper;
 
 @end

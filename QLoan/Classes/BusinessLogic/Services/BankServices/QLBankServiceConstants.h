@@ -24,3 +24,4 @@ extern NSString * const QLBankUserId;
 #pragma mark - Ключи данных в хранилищах
 
 extern NSString * const QLBankSessionIdKey;
+extern NSString * const QLBankUserInfoKey;

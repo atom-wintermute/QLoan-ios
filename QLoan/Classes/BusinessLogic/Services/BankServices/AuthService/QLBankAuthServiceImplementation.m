@@ -10,11 +10,13 @@
 
 #import "QLBankAuthRequestFactory.h"
 #import "QLStorage.h"
+#import "QLBankAuthMapper.h"
 
 #import "QLNetworkClient.h"
 #import "QLJSONSerializer.h"
 
 #import "QLServerResponse.h"
+#import "QLBankUserInfo.h"
 
 @implementation QLBankAuthServiceImplementation
 
@@ -58,12 +60,16 @@
                                  id responseData = [NSJSONSerialization JSONObjectWithData:response.data
                                                                                    options:kNilOptions
                                                                                      error:nil];
+                                 QLBankUserInfo *bankUserInfo = [self.mapper mapBankUserInfoFromResponseObject:responseData];
+                                 [self.storage storeObject:bankUserInfo
+                                                    forKey:QLBankUserInfoKey];
+                                 run_block_on_main(completion, bankUserInfo, nil);
                              }];
     }
 }
 
 - (QLBankUserInfo *)obtainCurrentUserData {
-    return nil;
+    return [self.storage loadObjectForKey:QLBankUserInfoKey];
 }
 
 @end

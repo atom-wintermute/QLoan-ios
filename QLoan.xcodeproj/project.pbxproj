@@ -50,6 +50,8 @@
 		D835BD151DB97B0700F2FF0F /* QLProfileDataCellObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BD0E1DB97B0700F2FF0F /* QLProfileDataCellObject.m */; };
 		D835BD1A1DB97DCA00F2FF0F /* QLBankUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BD191DB97DCA00F2FF0F /* QLBankUserInfo.m */; };
 		D835BD1E1DB9830C00F2FF0F /* QLInMemoryStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BD1D1DB9830C00F2FF0F /* QLInMemoryStorage.m */; };
+		D835BD231DB9877200F2FF0F /* QLBankAuthMapperImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BD221DB9877200F2FF0F /* QLBankAuthMapperImplementation.m */; };
+		D835BD271DB9882D00F2FF0F /* QLBankMappingProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BD261DB9882D00F2FF0F /* QLBankMappingProvider.m */; };
 		D84F78381DB8CBC500394F1D /* QLBankAuthServiceImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = D84F78371DB8CBC500394F1D /* QLBankAuthServiceImplementation.m */; };
 		D84F783D1DB8DA7A00394F1D /* QLBankAuthRequestFactoryImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = D84F783C1DB8DA7A00394F1D /* QLBankAuthRequestFactoryImplementation.m */; };
 		D84F78411DB8E0EB00394F1D /* QLBankServiceConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D84F78401DB8E0EB00394F1D /* QLBankServiceConstants.m */; };
@@ -179,6 +181,11 @@
 		D835BD191DB97DCA00F2FF0F /* QLBankUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLBankUserInfo.m; path = Classes/BusinessLogic/Entity/BankEntities/UserInfo/QLBankUserInfo.m; sourceTree = "<group>"; };
 		D835BD1C1DB9830C00F2FF0F /* QLInMemoryStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLInMemoryStorage.h; path = Classes/BusinessLogic/CoreCompnents/InMemoryStorage/QLInMemoryStorage.h; sourceTree = "<group>"; };
 		D835BD1D1DB9830C00F2FF0F /* QLInMemoryStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLInMemoryStorage.m; path = Classes/BusinessLogic/CoreCompnents/InMemoryStorage/QLInMemoryStorage.m; sourceTree = "<group>"; };
+		D835BD201DB9870200F2FF0F /* QLBankAuthMapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = QLBankAuthMapper.h; path = Classes/BusinessLogic/CoreCompnents/Mapper/BankMappers/QLBankAuthMapper.h; sourceTree = "<group>"; };
+		D835BD211DB9877200F2FF0F /* QLBankAuthMapperImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLBankAuthMapperImplementation.h; path = Classes/BusinessLogic/CoreCompnents/Mapper/BankMappers/QLBankAuthMapperImplementation.h; sourceTree = "<group>"; };
+		D835BD221DB9877200F2FF0F /* QLBankAuthMapperImplementation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLBankAuthMapperImplementation.m; path = Classes/BusinessLogic/CoreCompnents/Mapper/BankMappers/QLBankAuthMapperImplementation.m; sourceTree = "<group>"; };
+		D835BD251DB9882D00F2FF0F /* QLBankMappingProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLBankMappingProvider.h; path = BankMappingProvider/QLBankMappingProvider.h; sourceTree = "<group>"; };
+		D835BD261DB9882D00F2FF0F /* QLBankMappingProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLBankMappingProvider.m; path = BankMappingProvider/QLBankMappingProvider.m; sourceTree = "<group>"; };
 		D84F78351DB8C9CA00394F1D /* QLBankAuthService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = QLBankAuthService.h; path = Classes/BusinessLogic/Services/BankServices/AuthService/QLBankAuthService.h; sourceTree = "<group>"; };
 		D84F78361DB8CBC500394F1D /* QLBankAuthServiceImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLBankAuthServiceImplementation.h; path = Classes/BusinessLogic/Services/BankServices/AuthService/QLBankAuthServiceImplementation.h; sourceTree = "<group>"; };
 		D84F78371DB8CBC500394F1D /* QLBankAuthServiceImplementation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLBankAuthServiceImplementation.m; path = Classes/BusinessLogic/Services/BankServices/AuthService/QLBankAuthServiceImplementation.m; sourceTree = "<group>"; };
@@ -292,8 +299,8 @@
 		9EFF738D1DB3B5A8004873A6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				D84F78331DB8C4CC00394F1D /* BankServices */,
 				9EFF73FE1DB425E1004873A6 /* Assembly */,
+				D84F78331DB8C4CC00394F1D /* BankServices */,
 				9EFF73D21DB3DAFA004873A6 /* UserInteractionService */,
 				9EFF73C21DB3D06E004873A6 /* PersonalCabinetService */,
 				9EFF73BE1DB3CE06004873A6 /* LenderOrderService */,
@@ -535,6 +542,7 @@
 		9EFF73F21DB41A21004873A6 /* MappingProvider */ = {
 			isa = PBXGroup;
 			children = (
+				D835BD241DB9880000F2FF0F /* BankMappingProviders */,
 				9EFF73F31DB41A47004873A6 /* QLMappingProvider.h */,
 				9EFF73F41DB41A47004873A6 /* QLMappingProvider.m */,
 			);
@@ -544,6 +552,7 @@
 		9EFF73F91DB41C7B004873A6 /* Mapper */ = {
 			isa = PBXGroup;
 			children = (
+				D835BD1F1DB986C900F2FF0F /* BankMappers */,
 				9EFF73F71DB41B59004873A6 /* QLMapper.m */,
 				9EFF73F61DB41B59004873A6 /* QLMapper.h */,
 			);
@@ -706,6 +715,25 @@
 				D835BD1D1DB9830C00F2FF0F /* QLInMemoryStorage.m */,
 			);
 			name = InMemoryStorage;
+			sourceTree = "<group>";
+		};
+		D835BD1F1DB986C900F2FF0F /* BankMappers */ = {
+			isa = PBXGroup;
+			children = (
+				D835BD201DB9870200F2FF0F /* QLBankAuthMapper.h */,
+				D835BD211DB9877200F2FF0F /* QLBankAuthMapperImplementation.h */,
+				D835BD221DB9877200F2FF0F /* QLBankAuthMapperImplementation.m */,
+			);
+			name = BankMappers;
+			sourceTree = "<group>";
+		};
+		D835BD241DB9880000F2FF0F /* BankMappingProviders */ = {
+			isa = PBXGroup;
+			children = (
+				D835BD251DB9882D00F2FF0F /* QLBankMappingProvider.h */,
+				D835BD261DB9882D00F2FF0F /* QLBankMappingProvider.m */,
+			);
+			name = BankMappingProviders;
 			sourceTree = "<group>";
 		};
 		D84F78331DB8C4CC00394F1D /* BankServices */ = {
@@ -1134,6 +1162,7 @@
 				9EFF73D51DB3DB26004873A6 /* QLUserInteractionService.m in Sources */,
 				D835BD121DB97B0700F2FF0F /* QLProfileDataDisplayManager.m in Sources */,
 				D835BD131DB97B0700F2FF0F /* QLProfileDataCell.m in Sources */,
+				D835BD231DB9877200F2FF0F /* QLBankAuthMapperImplementation.m in Sources */,
 				D89655601DB8C39900DE4C66 /* QLAuthAssembly.m in Sources */,
 				D89655581DB8319900DE4C66 /* QLRegisterViewController.m in Sources */,
 				9EFF73941DB3B672004873A6 /* QLRegistrationRequestConfiguration.m in Sources */,
@@ -1155,6 +1184,7 @@
 				D84F78411DB8E0EB00394F1D /* QLBankServiceConstants.m in Sources */,
 				9EFF73B91DB3CA09004873A6 /* EntityConstants.m in Sources */,
 				9EFF73A21DB3C1D3004873A6 /* QLBorrowerOrderService.m in Sources */,
+				D835BD271DB9882D00F2FF0F /* QLBankMappingProvider.m in Sources */,
 				9EFF73F81DB41B59004873A6 /* QLMapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
