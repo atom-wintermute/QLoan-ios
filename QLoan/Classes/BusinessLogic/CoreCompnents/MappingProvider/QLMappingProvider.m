@@ -31,7 +31,7 @@
 		[mapping mapFieldsFromDictionary:@{
 										   @"client": @"client",
 										   @"uid" : @"uid",
-										   @"access_token" : @"accessToken"
+										   @"access-token" : @"accessToken"
 										   }];
 	}];
 }

@@ -10,6 +10,7 @@
 #import "QLCoreComponentsAssembly.h"
 
 #import "QLBankAuthRequestFactoryImplementation.h"
+#import "QLChallengedNetworkClient.h"
 
 @implementation QLCoreComponentsAssembly
 
@@ -71,6 +72,12 @@
                                       with:[self session]];
             }];
 }
+
+
+- (QLChallengedNetworkClient *)challengedNetworkClient {
+	return [TyphoonDefinition withClass:[QLChallengedNetworkClient class]];
+}
+
 
 #pragma mark - Хранилище данных
 

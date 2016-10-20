@@ -17,6 +17,7 @@
 #import "QLJSONSerializer.h"
 #import "QLKeychainStorage.h"
 #import "QLNetworkClient.h"
+#import "QLChallengedNetworkClient.h"
 
 @interface QLCoreComponentsAssembly : TyphoonAssembly
 
@@ -39,6 +40,8 @@
 #pragma mark - Сетевой клиент
 
 - (QLNetworkClient *)networkClient;
+
+- (QLChallengedNetworkClient *)challengedNetworkClient;
 
 #pragma mark - Хранилище данных
 

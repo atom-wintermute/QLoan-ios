@@ -23,6 +23,8 @@
 						  configuration:^(TyphoonDefinition *definition) {
 		[definition injectProperty:@selector(service)
 							  with:[self.servicesAssembly borrowerOrderService]];
+		[definition injectProperty:@selector(authorizationService)
+							  with:[self.servicesAssembly authorizationService]];
 	}];
 }
 

@@ -12,6 +12,7 @@
 @protocol QLBankAuthService;
 
 @class QLBorrowerOrderService;
+@class QLAuthorizationService;
 
 /**
  Фабрика сервисов
@@ -19,6 +20,8 @@
 @interface QLServicesAssembly : TyphoonAssembly
 
 - (QLBorrowerOrderService *)borrowerOrderService;
+
+- (QLAuthorizationService *)authorizationService;
 
 - (id<QLBankAuthService>)bankAuthService;
 

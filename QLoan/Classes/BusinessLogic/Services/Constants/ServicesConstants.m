@@ -9,11 +9,11 @@
 #import "ServicesConstants.h"
 
 NSString * const QLGetRequestMethodKey = @"GET";
-NSString * const QLPostRequestMethodKey = @"PUT";
-NSString * const QLPutRequestMethodKey = @"POST";
+NSString * const QLPostRequestMethodKey = @"POST";
+NSString * const QLPutRequestMethodKey = @"PUT";
 
 NSString * const QLBankServerBasePath = @"https://openfightsgate.open.ru/boplatform-deploy/3.4/QLoan/";
-NSString * const QLLocalServerBasePath = @"https://qloan.westeurope.cloudapp.azure.com";
+NSString * const QLLocalServerBasePath = @"https://qloan.westeurope.cloudapp.azure.com/";
 
 NSString * const QLHeaderTokenKey = @"access_token";
 NSString * const QLHeaderClientKey = @"client";

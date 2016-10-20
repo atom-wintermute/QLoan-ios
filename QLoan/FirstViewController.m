@@ -11,6 +11,7 @@
 #import "QLServicesAssembly.h"
 
 #import "QLAuthViewController.h"
+#import "QLRegistrationRequestConfiguration.h"
 
 @interface FirstViewController ()
 
@@ -22,18 +23,29 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
-    if (!self.isUserAuthorized) {
-        UIStoryboard *authStoryboard = [UIStoryboard storyboardWithName:@"Auth"
-                                                                bundle:[NSBundle mainBundle]];
-        UIViewController *authViewController = [authStoryboard instantiateViewControllerWithIdentifier:NSStringFromClass([QLAuthViewController class])];
-        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:authViewController];
-        [self presentViewController:navigationController
-                            animated:NO
-                          completion:^{
-                              self.isUserAuthorized = YES;
-                          }];
-    }
+	
+	QLRegistrationRequestConfiguration *requestConfiguration = [QLRegistrationRequestConfiguration new];
+	requestConfiguration.password = @"password123";
+	requestConfiguration.login = @"login123";
+	requestConfiguration.firstName = @"FirstName1";
+	requestConfiguration.lastName = @"FirstName2";
+	requestConfiguration.parentName = @"FirstName3";
+	
+	[self.authorizationService registerWithConfiguration:requestConfiguration
+											  completion:^(BOOL success, NSError *error) {
+												  
+											  }];
+//    if (!self.isUserAuthorized) {
+//        UIStoryboard *authStoryboard = [UIStoryboard storyboardWithName:@"Auth"
+//                                                                bundle:[NSBundle mainBundle]];
+//        UIViewController *authViewController = [authStoryboard instantiateViewControllerWithIdentifier:NSStringFromClass([QLAuthViewController class])];
+//        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:authViewController];
+//        [self presentViewController:navigationController
+//                            animated:NO
+//                          completion:^{
+//                              self.isUserAuthorized = YES;
+//                          }];
+//    }
 }
 
 - (void)viewDidLoad {

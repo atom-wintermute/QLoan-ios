@@ -27,7 +27,7 @@
 				[definition injectProperty:@selector(serializer)
 									  with:[self.coreAssembly jsonSerializer]];
 				[definition injectProperty:@selector(networkClient)
-									  with:[self.coreAssembly networkClient]];
+									  with:[self.coreAssembly challengedNetworkClient]];
 				[definition injectProperty:@selector(mapper)
 									  with:[self.coreAssembly mapper]];
 				[definition injectProperty:@selector(requestFactory)
@@ -42,11 +42,13 @@
 				[definition injectProperty:@selector(storage)
 									  with:[self.coreAssembly keychainStorage]];
 				[definition injectProperty:@selector(networkClient)
-									  with:[self.coreAssembly networkClient]];
+									  with:[self.coreAssembly challengedNetworkClient]];
 				[definition injectProperty:@selector(mapper)
 									  with:[self.coreAssembly mapper]];
 				[definition injectProperty:@selector(requestFactory)
 									  with:[self.coreAssembly requestFactory]];
+				[definition injectProperty:@selector(serializer)
+									  with:[self.coreAssembly jsonSerializer]];
 			}];
 }
 

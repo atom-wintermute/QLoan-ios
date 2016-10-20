@@ -27,7 +27,6 @@
 		if (error == nil) {
 			if ([response.response respondsToSelector:@selector(allHeaderFields)]) {
 				NSDictionary *dictionary = [response.response allHeaderFields];
-				
 				QLSessionCredentials *credentials = [strongSelf.mapper mapSessionCredentialsFromResponseObject:dictionary];
 				[self.storage setCredentialsForCurrentUser:credentials];
 				
