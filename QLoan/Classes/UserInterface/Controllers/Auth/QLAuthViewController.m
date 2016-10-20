@@ -8,6 +8,8 @@
 
 #import "QLAuthViewController.h"
 
+#import "QLBankAuthService.h"
+
 static NSString * const QLAuthRegisterSegue = @"registerSegue";
 
 @implementation QLAuthViewController

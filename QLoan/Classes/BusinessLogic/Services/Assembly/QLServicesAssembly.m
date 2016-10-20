@@ -9,6 +9,7 @@
 #import "QLServicesAssembly.h"
 #import "QLCoreComponentsAssembly.h"
 #import "QLBorrowerOrderService.h"
+#import "QLBankAuthServiceImplementation.h"
 
 @interface QLServicesAssembly()
 
@@ -31,6 +32,10 @@
 				[definition injectProperty:@selector(requestFactory)
 									  with:[self.coreAssembly requestFactory]];
 			}];
+}
+
+- (id<QLBankAuthService>)bankAuthService {
+    return [TyphoonDefinition withClass:[QLBankAuthServiceImplementation class]];
 }
 
 @end

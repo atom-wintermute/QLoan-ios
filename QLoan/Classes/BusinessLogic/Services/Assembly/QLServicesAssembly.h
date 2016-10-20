@@ -9,10 +9,17 @@
 #import <Foundation/Foundation.h>
 #import <Typhoon.h>
 
+@protocol QLBankAuthService;
+
 @class QLBorrowerOrderService;
 
+/**
+ Фабрика сервисов
+ */
 @interface QLServicesAssembly : TyphoonAssembly
 
 - (QLBorrowerOrderService *)borrowerOrderService;
+
+- (id<QLBankAuthService>)bankAuthService;
 
 @end
