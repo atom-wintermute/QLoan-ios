@@ -14,6 +14,8 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 
+    #import "EXTScope.h"
+    #import "QLBlocksHelper.h"
     #import "ServicesConstants.h"
     #import "QLBankServiceConstants.h"
 
