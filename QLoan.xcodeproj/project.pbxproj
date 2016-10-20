@@ -1,1224 +1,1236 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>231F0EC6722C13ED096D9EB6</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods/Pods.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>272ECB87B984123DCDF2D3F3</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>2840B12511CD4986F74AAE39</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D1BE5B8284ED646854EA9B23</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>41A2D4330A792AAE9B65A346</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods/Pods.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8B1C09F09C78E69F8F44E968</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>231F0EC6722C13ED096D9EB6</string>
-				<string>41A2D4330A792AAE9B65A346</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>93F9A8981CA808239479E4DE</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>B052863E11C552DF193FDF47</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D1BE5B8284ED646854EA9B23</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C638E65D34464ADA6228DA32</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>D1BE5B8284ED646854EA9B23</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>D8F9D7A11DAFD2FC000371CA</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D8F9D7AC1DAFD2FC000371CA</string>
-				<string>D8F9D7C91DAFD2FC000371CA</string>
-				<string>D8F9D7D41DAFD2FC000371CA</string>
-				<string>D8F9D7AB1DAFD2FC000371CA</string>
-				<string>8B1C09F09C78E69F8F44E968</string>
-				<string>2840B12511CD4986F74AAE39</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D8F9D7A21DAFD2FC000371CA</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastUpgradeCheck</key>
-				<string>0800</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>Rambler&amp;Co</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>D8F9D7A91DAFD2FC000371CA</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>8.0</string>
-						<key>ProvisioningStyle</key>
-						<string>Automatic</string>
-					</dict>
-					<key>D8F9D7C51DAFD2FC000371CA</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>8.0</string>
-						<key>ProvisioningStyle</key>
-						<string>Automatic</string>
-						<key>TestTargetID</key>
-						<string>D8F9D7A91DAFD2FC000371CA</string>
-					</dict>
-					<key>D8F9D7D01DAFD2FC000371CA</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>8.0</string>
-						<key>ProvisioningStyle</key>
-						<string>Automatic</string>
-						<key>TestTargetID</key>
-						<string>D8F9D7A91DAFD2FC000371CA</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>D8F9D7A51DAFD2FC000371CA</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-				<string>Base</string>
-			</array>
-			<key>mainGroup</key>
-			<string>D8F9D7A11DAFD2FC000371CA</string>
-			<key>productRefGroup</key>
-			<string>D8F9D7AB1DAFD2FC000371CA</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>D8F9D7A91DAFD2FC000371CA</string>
-				<string>D8F9D7C51DAFD2FC000371CA</string>
-				<string>D8F9D7D01DAFD2FC000371CA</string>
-			</array>
-		</dict>
-		<key>D8F9D7A51DAFD2FC000371CA</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>D8F9D7D81DAFD2FC000371CA</string>
-				<string>D8F9D7D91DAFD2FC000371CA</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>D8F9D7A61DAFD2FC000371CA</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>D8F9D7B81DAFD2FC000371CA</string>
-				<string>D8F9D7B21DAFD2FC000371CA</string>
-				<string>D8F9D7B51DAFD2FC000371CA</string>
-				<string>D8F9D7AF1DAFD2FC000371CA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>D8F9D7A71DAFD2FC000371CA</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>B052863E11C552DF193FDF47</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>D8F9D7A81DAFD2FC000371CA</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>D8F9D7C01DAFD2FC000371CA</string>
-				<string>D8F9D7BD1DAFD2FC000371CA</string>
-				<string>D8F9D7BB1DAFD2FC000371CA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>D8F9D7A91DAFD2FC000371CA</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>D8F9D7DA1DAFD2FC000371CA</string>
-			<key>buildPhases</key>
-			<array>
-				<string>C638E65D34464ADA6228DA32</string>
-				<string>D8F9D7A61DAFD2FC000371CA</string>
-				<string>D8F9D7A71DAFD2FC000371CA</string>
-				<string>D8F9D7A81DAFD2FC000371CA</string>
-				<string>93F9A8981CA808239479E4DE</string>
-				<string>272ECB87B984123DCDF2D3F3</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>QLoan</string>
-			<key>productName</key>
-			<string>QLoan</string>
-			<key>productReference</key>
-			<string>D8F9D7AA1DAFD2FC000371CA</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>D8F9D7AA1DAFD2FC000371CA</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>QLoan.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>D8F9D7AB1DAFD2FC000371CA</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D8F9D7AA1DAFD2FC000371CA</string>
-				<string>D8F9D7C61DAFD2FC000371CA</string>
-				<string>D8F9D7D11DAFD2FC000371CA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D8F9D7AC1DAFD2FC000371CA</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D8F9D7B01DAFD2FC000371CA</string>
-				<string>D8F9D7B11DAFD2FC000371CA</string>
-				<string>D8F9D7B31DAFD2FC000371CA</string>
-				<string>D8F9D7B41DAFD2FC000371CA</string>
-				<string>D8F9D7B61DAFD2FC000371CA</string>
-				<string>D8F9D7B71DAFD2FC000371CA</string>
-				<string>D8F9D7B91DAFD2FC000371CA</string>
-				<string>D8F9D7BC1DAFD2FC000371CA</string>
-				<string>D8F9D7BE1DAFD2FC000371CA</string>
-				<string>D8F9D7C11DAFD2FC000371CA</string>
-				<string>D8F9D7AD1DAFD2FC000371CA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>QLoan</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D8F9D7AD1DAFD2FC000371CA</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D8F9D7AE1DAFD2FC000371CA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D8F9D7AE1DAFD2FC000371CA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>main.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D8F9D7AF1DAFD2FC000371CA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D8F9D7AE1DAFD2FC000371CA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D8F9D7B01DAFD2FC000371CA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>AppDelegate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D8F9D7B11DAFD2FC000371CA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>AppDelegate.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D8F9D7B21DAFD2FC000371CA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D8F9D7B11DAFD2FC000371CA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D8F9D7B31DAFD2FC000371CA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>FirstViewController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D8F9D7B41DAFD2FC000371CA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>FirstViewController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D8F9D7B51DAFD2FC000371CA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D8F9D7B41DAFD2FC000371CA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D8F9D7B61DAFD2FC000371CA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SecondViewController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D8F9D7B71DAFD2FC000371CA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>SecondViewController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D8F9D7B81DAFD2FC000371CA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D8F9D7B71DAFD2FC000371CA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D8F9D7B91DAFD2FC000371CA</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D8F9D7BA1DAFD2FC000371CA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D8F9D7BA1DAFD2FC000371CA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D8F9D7BB1DAFD2FC000371CA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D8F9D7B91DAFD2FC000371CA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D8F9D7BC1DAFD2FC000371CA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Assets.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D8F9D7BD1DAFD2FC000371CA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D8F9D7BC1DAFD2FC000371CA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D8F9D7BE1DAFD2FC000371CA</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D8F9D7BF1DAFD2FC000371CA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D8F9D7BF1DAFD2FC000371CA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D8F9D7C01DAFD2FC000371CA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D8F9D7BE1DAFD2FC000371CA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D8F9D7C11DAFD2FC000371CA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D8F9D7C21DAFD2FC000371CA</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>D8F9D7CB1DAFD2FC000371CA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>D8F9D7C31DAFD2FC000371CA</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>D8F9D7C41DAFD2FC000371CA</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>D8F9D7C51DAFD2FC000371CA</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>D8F9D7DD1DAFD2FC000371CA</string>
-			<key>buildPhases</key>
-			<array>
-				<string>D8F9D7C21DAFD2FC000371CA</string>
-				<string>D8F9D7C31DAFD2FC000371CA</string>
-				<string>D8F9D7C41DAFD2FC000371CA</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>D8F9D7C81DAFD2FC000371CA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>QLoanTests</string>
-			<key>productName</key>
-			<string>QLoanTests</string>
-			<key>productReference</key>
-			<string>D8F9D7C61DAFD2FC000371CA</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>D8F9D7C61DAFD2FC000371CA</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>QLoanTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>D8F9D7C71DAFD2FC000371CA</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D8F9D7A21DAFD2FC000371CA</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>D8F9D7A91DAFD2FC000371CA</string>
-			<key>remoteInfo</key>
-			<string>QLoan</string>
-		</dict>
-		<key>D8F9D7C81DAFD2FC000371CA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>D8F9D7A91DAFD2FC000371CA</string>
-			<key>targetProxy</key>
-			<string>D8F9D7C71DAFD2FC000371CA</string>
-		</dict>
-		<key>D8F9D7C91DAFD2FC000371CA</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D8F9D7CA1DAFD2FC000371CA</string>
-				<string>D8F9D7CC1DAFD2FC000371CA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>QLoanTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D8F9D7CA1DAFD2FC000371CA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>QLoanTests.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D8F9D7CB1DAFD2FC000371CA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D8F9D7CA1DAFD2FC000371CA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D8F9D7CC1DAFD2FC000371CA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D8F9D7CD1DAFD2FC000371CA</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>D8F9D7D61DAFD2FC000371CA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>D8F9D7CE1DAFD2FC000371CA</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>D8F9D7CF1DAFD2FC000371CA</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>D8F9D7D01DAFD2FC000371CA</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>D8F9D7E01DAFD2FC000371CA</string>
-			<key>buildPhases</key>
-			<array>
-				<string>D8F9D7CD1DAFD2FC000371CA</string>
-				<string>D8F9D7CE1DAFD2FC000371CA</string>
-				<string>D8F9D7CF1DAFD2FC000371CA</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>D8F9D7D31DAFD2FC000371CA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>QLoanUITests</string>
-			<key>productName</key>
-			<string>QLoanUITests</string>
-			<key>productReference</key>
-			<string>D8F9D7D11DAFD2FC000371CA</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.ui-testing</string>
-		</dict>
-		<key>D8F9D7D11DAFD2FC000371CA</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>QLoanUITests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>D8F9D7D21DAFD2FC000371CA</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D8F9D7A21DAFD2FC000371CA</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>D8F9D7A91DAFD2FC000371CA</string>
-			<key>remoteInfo</key>
-			<string>QLoan</string>
-		</dict>
-		<key>D8F9D7D31DAFD2FC000371CA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>D8F9D7A91DAFD2FC000371CA</string>
-			<key>targetProxy</key>
-			<string>D8F9D7D21DAFD2FC000371CA</string>
-		</dict>
-		<key>D8F9D7D41DAFD2FC000371CA</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D8F9D7D51DAFD2FC000371CA</string>
-				<string>D8F9D7D71DAFD2FC000371CA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>QLoanUITests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D8F9D7D51DAFD2FC000371CA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>QLoanUITests.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D8F9D7D61DAFD2FC000371CA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D8F9D7D51DAFD2FC000371CA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D8F9D7D71DAFD2FC000371CA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D8F9D7D81DAFD2FC000371CA</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_DOCUMENTATION_COMMENTS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INFINITE_RECURSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_SUSPICIOUS_MOVES</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>ENABLE_TESTABILITY</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>10.0</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>D8F9D7D91DAFD2FC000371CA</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_DOCUMENTATION_COMMENTS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INFINITE_RECURSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_SUSPICIOUS_MOVES</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>10.0</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>D8F9D7DA1DAFD2FC000371CA</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>D8F9D7DB1DAFD2FC000371CA</string>
-				<string>D8F9D7DC1DAFD2FC000371CA</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>D8F9D7DB1DAFD2FC000371CA</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>231F0EC6722C13ED096D9EB6</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>INFOPLIST_FILE</key>
-				<string>QLoan/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>ru.ramblerco.rambler.QLoan</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>D8F9D7DC1DAFD2FC000371CA</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>41A2D4330A792AAE9B65A346</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>INFOPLIST_FILE</key>
-				<string>QLoan/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>ru.ramblerco.rambler.QLoan</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>D8F9D7DD1DAFD2FC000371CA</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>D8F9D7DE1DAFD2FC000371CA</string>
-				<string>D8F9D7DF1DAFD2FC000371CA</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>D8F9D7DE1DAFD2FC000371CA</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>INFOPLIST_FILE</key>
-				<string>QLoanTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>ru.ramblerco.rambler.QLoanTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/QLoan.app/QLoan</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>D8F9D7DF1DAFD2FC000371CA</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>INFOPLIST_FILE</key>
-				<string>QLoanTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>ru.ramblerco.rambler.QLoanTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/QLoan.app/QLoan</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>D8F9D7E01DAFD2FC000371CA</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>D8F9D7E11DAFD2FC000371CA</string>
-				<string>D8F9D7E21DAFD2FC000371CA</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>D8F9D7E11DAFD2FC000371CA</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>INFOPLIST_FILE</key>
-				<string>QLoanUITests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>ru.ramblerco.rambler.QLoanUITests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_TARGET_NAME</key>
-				<string>QLoan</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>D8F9D7E21DAFD2FC000371CA</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>INFOPLIST_FILE</key>
-				<string>QLoanUITests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>ru.ramblerco.rambler.QLoanUITests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_TARGET_NAME</key>
-				<string>QLoan</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>D8F9D7A21DAFD2FC000371CA</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9EFF73911DB3B64C004873A6 /* QLAuthorizationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73901DB3B64C004873A6 /* QLAuthorizationService.m */; };
+		9EFF73941DB3B672004873A6 /* QLRegistrationRequestConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73931DB3B672004873A6 /* QLRegistrationRequestConfiguration.m */; };
+		9EFF73971DB3B870004873A6 /* QLAuthorizationRequestConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73961DB3B870004873A6 /* QLAuthorizationRequestConfiguration.m */; };
+		9EFF739B1DB3BDF8004873A6 /* QLUserInfoService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF739A1DB3BDF8004873A6 /* QLUserInfoService.m */; };
+		9EFF73A21DB3C1D3004873A6 /* QLBorrowerOrderService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73A11DB3C1D3004873A6 /* QLBorrowerOrderService.m */; };
+		9EFF73AE1DB3C90F004873A6 /* QLBorrowerOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73AD1DB3C90F004873A6 /* QLBorrowerOrder.m */; };
+		9EFF73B11DB3C918004873A6 /* QLUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73B01DB3C918004873A6 /* QLUserInfo.m */; };
+		9EFF73B51DB3C9C5004873A6 /* ServicesConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73B41DB3C9C5004873A6 /* ServicesConstants.m */; };
+		9EFF73B91DB3CA09004873A6 /* EntityConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73B81DB3CA09004873A6 /* EntityConstants.m */; };
+		9EFF73BD1DB3CD83004873A6 /* QLLenderOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73BC1DB3CD83004873A6 /* QLLenderOrder.m */; };
+		9EFF73C11DB3CE42004873A6 /* QLLenderOrderService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73C01DB3CE42004873A6 /* QLLenderOrderService.m */; };
+		9EFF73C51DB3D091004873A6 /* QLPersonalCabinetService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73C41DB3D091004873A6 /* QLPersonalCabinetService.m */; };
+		9EFF73C91DB3D1C4004873A6 /* QLNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73C81DB3D1C4004873A6 /* QLNotification.m */; };
+		9EFF73CD1DB3D82B004873A6 /* QLPayment.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73CC1DB3D82B004873A6 /* QLPayment.m */; };
+		9EFF73D11DB3D969004873A6 /* QLPaymentSchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73D01DB3D969004873A6 /* QLPaymentSchedule.m */; };
+		9EFF73D51DB3DB26004873A6 /* QLUserInteractionService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73D41DB3DB26004873A6 /* QLUserInteractionService.m */; };
+		9EFF73D81DB3DC4E004873A6 /* QLPaymentCompletedRequestConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73D71DB3DC4E004873A6 /* QLPaymentCompletedRequestConfiguration.m */; };
+		9EFF73DD1DB3F94C004873A6 /* QLRequestFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73DC1DB3F94C004873A6 /* QLRequestFactory.m */; };
+		9EFF73E11DB40363004873A6 /* QLKeychainStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73E01DB40363004873A6 /* QLKeychainStorage.m */; };
+		9EFF73E51DB40AE6004873A6 /* QLSortMethodParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73E41DB40AE6004873A6 /* QLSortMethodParser.m */; };
+		9EFF73E91DB40EC1004873A6 /* QLNetworkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73E81DB40EC1004873A6 /* QLNetworkClient.m */; };
+		9EFF73ED1DB41503004873A6 /* QLServerResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73EC1DB41503004873A6 /* QLServerResponse.m */; };
+		9EFF73F11DB416AE004873A6 /* QLJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73F01DB416AE004873A6 /* QLJSONSerializer.m */; };
+		9EFF73F51DB41A47004873A6 /* QLMappingProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73F41DB41A47004873A6 /* QLMappingProvider.m */; };
+		9EFF73F81DB41B59004873A6 /* QLMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73F71DB41B59004873A6 /* QLMapper.m */; };
+		9EFF73FD1DB4206F004873A6 /* QLCoreComponentsAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73FC1DB4206F004873A6 /* QLCoreComponentsAssembly.m */; };
+		9EFF74011DB425FB004873A6 /* QLServicesAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF74001DB425FB004873A6 /* QLServicesAssembly.m */; };
+		9EFF74061DB42925004873A6 /* QLTestAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF74051DB42925004873A6 /* QLTestAssembly.m */; };
+		9EFF74361DB4C376004873A6 /* borrowerOrderStub.json in Resources */ = {isa = PBXBuildFile; fileRef = 9EFF74351DB4C376004873A6 /* borrowerOrderStub.json */; };
+		B052863E11C552DF193FDF47 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1BE5B8284ED646854EA9B23 /* libPods.a */; };
+		D84F78381DB8CBC500394F1D /* QLBankAuthServiceImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = D84F78371DB8CBC500394F1D /* QLBankAuthServiceImplementation.m */; };
+		D84F783D1DB8DA7A00394F1D /* QLBankAuthRequestFactoryImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = D84F783C1DB8DA7A00394F1D /* QLBankAuthRequestFactoryImplementation.m */; };
+		D84F78411DB8E0EB00394F1D /* QLBankServiceConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D84F78401DB8E0EB00394F1D /* QLBankServiceConstants.m */; };
+		D84F78461DB8F08400394F1D /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = D84F78441DB8F08400394F1D /* EXTScope.m */; };
+		D896553F1DB8227400DE4C66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D896553D1DB8227400DE4C66 /* Main.storyboard */; };
+		D89655401DB8227400DE4C66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D896553E1DB8227400DE4C66 /* LaunchScreen.storyboard */; };
+		D89655421DB822AD00DE4C66 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D89655411DB822AD00DE4C66 /* Auth.storyboard */; };
+		D896554A1DB823A100DE4C66 /* QLAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89655491DB823A100DE4C66 /* QLAuthViewController.m */; };
+		D89655511DB8260C00DE4C66 /* SF-UI-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D896554D1DB8260C00DE4C66 /* SF-UI-Display-Semibold.otf */; };
+		D89655521DB8260C00DE4C66 /* SF-UI-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D896554E1DB8260C00DE4C66 /* SF-UI-Display-Regular.otf */; };
+		D89655531DB8260C00DE4C66 /* SF-UI-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D896554F1DB8260C00DE4C66 /* SF-UI-Display-Medium.otf */; };
+		D89655541DB8260C00DE4C66 /* SF-UI-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D89655501DB8260C00DE4C66 /* SF-UI-Display-Bold.otf */; };
+		D89655581DB8319900DE4C66 /* QLRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89655571DB8319900DE4C66 /* QLRegisterViewController.m */; };
+		D89655601DB8C39900DE4C66 /* QLAuthAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = D896555F1DB8C39900DE4C66 /* QLAuthAssembly.m */; };
+		D8D98BB41DB9085300F3FB01 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8D98BB31DB9085300F3FB01 /* Profile.storyboard */; };
+		D8D98BB81DB908A200F3FB01 /* QLProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D98BB71DB908A200F3FB01 /* QLProfileViewController.m */; };
+		D8F9D7AF1DAFD2FC000371CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F9D7AE1DAFD2FC000371CA /* main.m */; };
+		D8F9D7B21DAFD2FC000371CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F9D7B11DAFD2FC000371CA /* AppDelegate.m */; };
+		D8F9D7B51DAFD2FC000371CA /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F9D7B41DAFD2FC000371CA /* FirstViewController.m */; };
+		D8F9D7B81DAFD2FC000371CA /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F9D7B71DAFD2FC000371CA /* SecondViewController.m */; };
+		D8F9D7BD1DAFD2FC000371CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8F9D7BC1DAFD2FC000371CA /* Assets.xcassets */; };
+		D8F9D7CB1DAFD2FC000371CA /* QLoanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F9D7CA1DAFD2FC000371CA /* QLoanTests.m */; };
+		D8F9D7D61DAFD2FC000371CA /* QLoanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F9D7D51DAFD2FC000371CA /* QLoanUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D8F9D7C71DAFD2FC000371CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8F9D7A21DAFD2FC000371CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D8F9D7A91DAFD2FC000371CA;
+			remoteInfo = QLoan;
+		};
+		D8F9D7D21DAFD2FC000371CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8F9D7A21DAFD2FC000371CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D8F9D7A91DAFD2FC000371CA;
+			remoteInfo = QLoan;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		231F0EC6722C13ED096D9EB6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		41A2D4330A792AAE9B65A346 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		9EFF738F1DB3B64C004873A6 /* QLAuthorizationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLAuthorizationService.h; path = Classes/BusinessLogic/Services/AuthorizationService/QLAuthorizationService.h; sourceTree = "<group>"; };
+		9EFF73901DB3B64C004873A6 /* QLAuthorizationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLAuthorizationService.m; path = Classes/BusinessLogic/Services/AuthorizationService/QLAuthorizationService.m; sourceTree = "<group>"; };
+		9EFF73921DB3B672004873A6 /* QLRegistrationRequestConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLRegistrationRequestConfiguration.h; path = Classes/BusinessLogic/Services/AuthorizationService/QLRegistrationRequestConfiguration.h; sourceTree = "<group>"; };
+		9EFF73931DB3B672004873A6 /* QLRegistrationRequestConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLRegistrationRequestConfiguration.m; path = Classes/BusinessLogic/Services/AuthorizationService/QLRegistrationRequestConfiguration.m; sourceTree = "<group>"; };
+		9EFF73951DB3B870004873A6 /* QLAuthorizationRequestConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLAuthorizationRequestConfiguration.h; path = Classes/BusinessLogic/Services/AuthorizationService/QLAuthorizationRequestConfiguration.h; sourceTree = "<group>"; };
+		9EFF73961DB3B870004873A6 /* QLAuthorizationRequestConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLAuthorizationRequestConfiguration.m; path = Classes/BusinessLogic/Services/AuthorizationService/QLAuthorizationRequestConfiguration.m; sourceTree = "<group>"; };
+		9EFF73991DB3BDF8004873A6 /* QLUserInfoService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLUserInfoService.h; path = Classes/BusinessLogic/Services/UserInfoService/QLUserInfoService.h; sourceTree = "<group>"; };
+		9EFF739A1DB3BDF8004873A6 /* QLUserInfoService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLUserInfoService.m; path = Classes/BusinessLogic/Services/UserInfoService/QLUserInfoService.m; sourceTree = "<group>"; };
+		9EFF73A01DB3C1D3004873A6 /* QLBorrowerOrderService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLBorrowerOrderService.h; path = Classes/BusinessLogic/Services/BorrowerOrderService/QLBorrowerOrderService.h; sourceTree = "<group>"; };
+		9EFF73A11DB3C1D3004873A6 /* QLBorrowerOrderService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLBorrowerOrderService.m; path = Classes/BusinessLogic/Services/BorrowerOrderService/QLBorrowerOrderService.m; sourceTree = "<group>"; };
+		9EFF73AC1DB3C90F004873A6 /* QLBorrowerOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLBorrowerOrder.h; path = Classes/BusinessLogic/Entity/BorrowerOrder/QLBorrowerOrder.h; sourceTree = "<group>"; };
+		9EFF73AD1DB3C90F004873A6 /* QLBorrowerOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLBorrowerOrder.m; path = Classes/BusinessLogic/Entity/BorrowerOrder/QLBorrowerOrder.m; sourceTree = "<group>"; };
+		9EFF73AF1DB3C918004873A6 /* QLUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLUserInfo.h; path = Classes/BusinessLogic/Entity/UserInfo/QLUserInfo.h; sourceTree = "<group>"; };
+		9EFF73B01DB3C918004873A6 /* QLUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLUserInfo.m; path = Classes/BusinessLogic/Entity/UserInfo/QLUserInfo.m; sourceTree = "<group>"; };
+		9EFF73B31DB3C9C5004873A6 /* ServicesConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServicesConstants.h; path = Classes/BusinessLogic/Services/Constants/ServicesConstants.h; sourceTree = "<group>"; };
+		9EFF73B41DB3C9C5004873A6 /* ServicesConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServicesConstants.m; path = Classes/BusinessLogic/Services/Constants/ServicesConstants.m; sourceTree = "<group>"; };
+		9EFF73B71DB3CA09004873A6 /* EntityConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EntityConstants.h; path = Classes/BusinessLogic/Entity/Constants/EntityConstants.h; sourceTree = "<group>"; };
+		9EFF73B81DB3CA09004873A6 /* EntityConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EntityConstants.m; path = Classes/BusinessLogic/Entity/Constants/EntityConstants.m; sourceTree = "<group>"; };
+		9EFF73BB1DB3CD83004873A6 /* QLLenderOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLLenderOrder.h; path = Classes/BusinessLogic/Entity/LenderOrder/QLLenderOrder.h; sourceTree = "<group>"; };
+		9EFF73BC1DB3CD83004873A6 /* QLLenderOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLLenderOrder.m; path = Classes/BusinessLogic/Entity/LenderOrder/QLLenderOrder.m; sourceTree = "<group>"; };
+		9EFF73BF1DB3CE42004873A6 /* QLLenderOrderService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLLenderOrderService.h; path = Classes/BusinessLogic/Services/LenderOrderService/QLLenderOrderService.h; sourceTree = "<group>"; };
+		9EFF73C01DB3CE42004873A6 /* QLLenderOrderService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLLenderOrderService.m; path = Classes/BusinessLogic/Services/LenderOrderService/QLLenderOrderService.m; sourceTree = "<group>"; };
+		9EFF73C31DB3D091004873A6 /* QLPersonalCabinetService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLPersonalCabinetService.h; path = Classes/BusinessLogic/Services/PersonalCabinetService/QLPersonalCabinetService.h; sourceTree = "<group>"; };
+		9EFF73C41DB3D091004873A6 /* QLPersonalCabinetService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLPersonalCabinetService.m; path = Classes/BusinessLogic/Services/PersonalCabinetService/QLPersonalCabinetService.m; sourceTree = "<group>"; };
+		9EFF73C71DB3D1C4004873A6 /* QLNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLNotification.h; path = Classes/BusinessLogic/Entity/Notification/QLNotification.h; sourceTree = "<group>"; };
+		9EFF73C81DB3D1C4004873A6 /* QLNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLNotification.m; path = Classes/BusinessLogic/Entity/Notification/QLNotification.m; sourceTree = "<group>"; };
+		9EFF73CB1DB3D82B004873A6 /* QLPayment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLPayment.h; path = Classes/BusinessLogic/Entity/Payment/QLPayment.h; sourceTree = "<group>"; };
+		9EFF73CC1DB3D82B004873A6 /* QLPayment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLPayment.m; path = Classes/BusinessLogic/Entity/Payment/QLPayment.m; sourceTree = "<group>"; };
+		9EFF73CF1DB3D969004873A6 /* QLPaymentSchedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLPaymentSchedule.h; path = Classes/BusinessLogic/Entity/PaymentSchedule/QLPaymentSchedule.h; sourceTree = "<group>"; };
+		9EFF73D01DB3D969004873A6 /* QLPaymentSchedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLPaymentSchedule.m; path = Classes/BusinessLogic/Entity/PaymentSchedule/QLPaymentSchedule.m; sourceTree = "<group>"; };
+		9EFF73D31DB3DB26004873A6 /* QLUserInteractionService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLUserInteractionService.h; path = Classes/BusinessLogic/Services/UserInteractionService/QLUserInteractionService.h; sourceTree = "<group>"; };
+		9EFF73D41DB3DB26004873A6 /* QLUserInteractionService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLUserInteractionService.m; path = Classes/BusinessLogic/Services/UserInteractionService/QLUserInteractionService.m; sourceTree = "<group>"; };
+		9EFF73D61DB3DC4E004873A6 /* QLPaymentCompletedRequestConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLPaymentCompletedRequestConfiguration.h; path = Classes/BusinessLogic/Services/UserInteractionService/QLPaymentCompletedRequestConfiguration.h; sourceTree = "<group>"; };
+		9EFF73D71DB3DC4E004873A6 /* QLPaymentCompletedRequestConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLPaymentCompletedRequestConfiguration.m; path = Classes/BusinessLogic/Services/UserInteractionService/QLPaymentCompletedRequestConfiguration.m; sourceTree = "<group>"; };
+		9EFF73DB1DB3F94C004873A6 /* QLRequestFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLRequestFactory.h; path = Classes/BusinessLogic/CoreCompnents/RequestFactory/QLRequestFactory.h; sourceTree = "<group>"; };
+		9EFF73DC1DB3F94C004873A6 /* QLRequestFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLRequestFactory.m; path = Classes/BusinessLogic/CoreCompnents/RequestFactory/QLRequestFactory.m; sourceTree = "<group>"; };
+		9EFF73DF1DB40363004873A6 /* QLKeychainStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLKeychainStorage.h; path = Classes/BusinessLogic/CoreCompnents/KeychainStorage/QLKeychainStorage.h; sourceTree = "<group>"; };
+		9EFF73E01DB40363004873A6 /* QLKeychainStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLKeychainStorage.m; path = Classes/BusinessLogic/CoreCompnents/KeychainStorage/QLKeychainStorage.m; sourceTree = "<group>"; };
+		9EFF73E31DB40AE6004873A6 /* QLSortMethodParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLSortMethodParser.h; path = Classes/BusinessLogic/Helpers/SortMethodParser/QLSortMethodParser.h; sourceTree = "<group>"; };
+		9EFF73E41DB40AE6004873A6 /* QLSortMethodParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLSortMethodParser.m; path = Classes/BusinessLogic/Helpers/SortMethodParser/QLSortMethodParser.m; sourceTree = "<group>"; };
+		9EFF73E71DB40EC1004873A6 /* QLNetworkClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLNetworkClient.h; path = Classes/BusinessLogic/CoreCompnents/NetworkClient/QLNetworkClient.h; sourceTree = "<group>"; };
+		9EFF73E81DB40EC1004873A6 /* QLNetworkClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLNetworkClient.m; path = Classes/BusinessLogic/CoreCompnents/NetworkClient/QLNetworkClient.m; sourceTree = "<group>"; };
+		9EFF73EB1DB41503004873A6 /* QLServerResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLServerResponse.h; path = Classes/BusinessLogic/CoreCompnents/NetworkClient/ServerResponse/QLServerResponse.h; sourceTree = "<group>"; };
+		9EFF73EC1DB41503004873A6 /* QLServerResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLServerResponse.m; path = Classes/BusinessLogic/CoreCompnents/NetworkClient/ServerResponse/QLServerResponse.m; sourceTree = "<group>"; };
+		9EFF73EF1DB416AE004873A6 /* QLJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLJSONSerializer.h; path = Classes/BusinessLogic/CoreCompnents/JSONSerializer/QLJSONSerializer.h; sourceTree = "<group>"; };
+		9EFF73F01DB416AE004873A6 /* QLJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLJSONSerializer.m; path = Classes/BusinessLogic/CoreCompnents/JSONSerializer/QLJSONSerializer.m; sourceTree = "<group>"; };
+		9EFF73F31DB41A47004873A6 /* QLMappingProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLMappingProvider.h; path = Classes/BusinessLogic/CoreCompnents/MappingProvider/QLMappingProvider.h; sourceTree = "<group>"; };
+		9EFF73F41DB41A47004873A6 /* QLMappingProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLMappingProvider.m; path = Classes/BusinessLogic/CoreCompnents/MappingProvider/QLMappingProvider.m; sourceTree = "<group>"; };
+		9EFF73F61DB41B59004873A6 /* QLMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLMapper.h; path = Classes/BusinessLogic/CoreCompnents/Mapper/QLMapper.h; sourceTree = "<group>"; };
+		9EFF73F71DB41B59004873A6 /* QLMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLMapper.m; path = Classes/BusinessLogic/CoreCompnents/Mapper/QLMapper.m; sourceTree = "<group>"; };
+		9EFF73FB1DB4206F004873A6 /* QLCoreComponentsAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLCoreComponentsAssembly.h; path = Classes/BusinessLogic/CoreCompnents/Assembly/QLCoreComponentsAssembly.h; sourceTree = "<group>"; };
+		9EFF73FC1DB4206F004873A6 /* QLCoreComponentsAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLCoreComponentsAssembly.m; path = Classes/BusinessLogic/CoreCompnents/Assembly/QLCoreComponentsAssembly.m; sourceTree = "<group>"; };
+		9EFF73FF1DB425FB004873A6 /* QLServicesAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLServicesAssembly.h; path = Classes/BusinessLogic/Services/Assembly/QLServicesAssembly.h; sourceTree = "<group>"; };
+		9EFF74001DB425FB004873A6 /* QLServicesAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLServicesAssembly.m; path = Classes/BusinessLogic/Services/Assembly/QLServicesAssembly.m; sourceTree = "<group>"; };
+		9EFF74041DB42925004873A6 /* QLTestAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLTestAssembly.h; path = Classes/UserInterface/TestAssembly/QLTestAssembly.h; sourceTree = "<group>"; };
+		9EFF74051DB42925004873A6 /* QLTestAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLTestAssembly.m; path = Classes/UserInterface/TestAssembly/QLTestAssembly.m; sourceTree = "<group>"; };
+		9EFF74351DB4C376004873A6 /* borrowerOrderStub.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = borrowerOrderStub.json; path = Stubs/borrowerOrderStub.json; sourceTree = "<group>"; };
+		D1BE5B8284ED646854EA9B23 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D835BCB31DB94E1500F2FF0F /* QLStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = QLStorage.h; path = Classes/BusinessLogic/CoreCompnents/KeychainStorage/QLStorage.h; sourceTree = "<group>"; };
+		D84F78351DB8C9CA00394F1D /* QLBankAuthService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = QLBankAuthService.h; path = Classes/BusinessLogic/Services/BankServices/AuthService/QLBankAuthService.h; sourceTree = "<group>"; };
+		D84F78361DB8CBC500394F1D /* QLBankAuthServiceImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLBankAuthServiceImplementation.h; path = Classes/BusinessLogic/Services/BankServices/AuthService/QLBankAuthServiceImplementation.h; sourceTree = "<group>"; };
+		D84F78371DB8CBC500394F1D /* QLBankAuthServiceImplementation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLBankAuthServiceImplementation.m; path = Classes/BusinessLogic/Services/BankServices/AuthService/QLBankAuthServiceImplementation.m; sourceTree = "<group>"; };
+		D84F783A1DB8D9DB00394F1D /* QLBankAuthRequestFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = QLBankAuthRequestFactory.h; path = Classes/BusinessLogic/CoreCompnents/RequestFactory/BankRequestFactories/QLBankAuthRequestFactory.h; sourceTree = "<group>"; };
+		D84F783B1DB8DA7A00394F1D /* QLBankAuthRequestFactoryImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLBankAuthRequestFactoryImplementation.h; path = Classes/BusinessLogic/CoreCompnents/RequestFactory/BankRequestFactories/QLBankAuthRequestFactoryImplementation.h; sourceTree = "<group>"; };
+		D84F783C1DB8DA7A00394F1D /* QLBankAuthRequestFactoryImplementation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLBankAuthRequestFactoryImplementation.m; path = Classes/BusinessLogic/CoreCompnents/RequestFactory/BankRequestFactories/QLBankAuthRequestFactoryImplementation.m; sourceTree = "<group>"; };
+		D84F783E1DB8DB7E00394F1D /* QLoan-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "QLoan-Prefix.pch"; path = "Supporting Files/QLoan-Prefix.pch"; sourceTree = "<group>"; };
+		D84F783F1DB8E0EB00394F1D /* QLBankServiceConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLBankServiceConstants.h; path = Classes/BusinessLogic/Services/BankServices/QLBankServiceConstants.h; sourceTree = "<group>"; };
+		D84F78401DB8E0EB00394F1D /* QLBankServiceConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLBankServiceConstants.m; path = Classes/BusinessLogic/Services/BankServices/QLBankServiceConstants.m; sourceTree = "<group>"; };
+		D84F78431DB8F08400394F1D /* EXTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXTScope.h; path = ThirdParty/EXTScope.h; sourceTree = "<group>"; };
+		D84F78441DB8F08400394F1D /* EXTScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EXTScope.m; path = ThirdParty/EXTScope.m; sourceTree = "<group>"; };
+		D84F78451DB8F08400394F1D /* metamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = metamacros.h; path = ThirdParty/metamacros.h; sourceTree = "<group>"; };
+		D84F78481DB8F8E400394F1D /* QLBlocksHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = QLBlocksHelper.h; path = Classes/Helpers/QLBlocksHelper.h; sourceTree = "<group>"; };
+		D896553D1DB8227400DE4C66 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Resources/Storyboards/Main.storyboard; sourceTree = "<group>"; };
+		D896553E1DB8227400DE4C66 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Resources/Storyboards/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D89655411DB822AD00DE4C66 /* Auth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Auth.storyboard; path = Resources/Storyboards/Auth.storyboard; sourceTree = "<group>"; };
+		D89655481DB823A100DE4C66 /* QLAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLAuthViewController.h; path = Classes/UserInterface/Controllers/Auth/QLAuthViewController.h; sourceTree = "<group>"; };
+		D89655491DB823A100DE4C66 /* QLAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLAuthViewController.m; path = Classes/UserInterface/Controllers/Auth/QLAuthViewController.m; sourceTree = "<group>"; };
+		D896554C1DB8260000DE4C66 /* QLFonts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = QLFonts.h; path = Resources/Fonts/QLFonts.h; sourceTree = "<group>"; };
+		D896554D1DB8260C00DE4C66 /* SF-UI-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Display-Semibold.otf"; path = "Resources/Fonts/SF-UI-Display-Semibold.otf"; sourceTree = "<group>"; };
+		D896554E1DB8260C00DE4C66 /* SF-UI-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Display-Regular.otf"; path = "Resources/Fonts/SF-UI-Display-Regular.otf"; sourceTree = "<group>"; };
+		D896554F1DB8260C00DE4C66 /* SF-UI-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Display-Medium.otf"; path = "Resources/Fonts/SF-UI-Display-Medium.otf"; sourceTree = "<group>"; };
+		D89655501DB8260C00DE4C66 /* SF-UI-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Display-Bold.otf"; path = "Resources/Fonts/SF-UI-Display-Bold.otf"; sourceTree = "<group>"; };
+		D89655561DB8319900DE4C66 /* QLRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLRegisterViewController.h; path = Classes/UserInterface/Controllers/Register/QLRegisterViewController.h; sourceTree = "<group>"; };
+		D89655571DB8319900DE4C66 /* QLRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLRegisterViewController.m; path = Classes/UserInterface/Controllers/Register/QLRegisterViewController.m; sourceTree = "<group>"; };
+		D896555E1DB8C39900DE4C66 /* QLAuthAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLAuthAssembly.h; path = Classes/UserInterface/Controllers/Auth/Assembly/QLAuthAssembly.h; sourceTree = "<group>"; };
+		D896555F1DB8C39900DE4C66 /* QLAuthAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLAuthAssembly.m; path = Classes/UserInterface/Controllers/Auth/Assembly/QLAuthAssembly.m; sourceTree = "<group>"; };
+		D8D98BB31DB9085300F3FB01 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = Resources/Storyboards/Profile.storyboard; sourceTree = "<group>"; };
+		D8D98BB61DB908A200F3FB01 /* QLProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLProfileViewController.h; path = Classes/UserInterface/Controllers/Profile/QLProfileViewController.h; sourceTree = "<group>"; };
+		D8D98BB71DB908A200F3FB01 /* QLProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLProfileViewController.m; path = Classes/UserInterface/Controllers/Profile/QLProfileViewController.m; sourceTree = "<group>"; };
+		D8F9D7AA1DAFD2FC000371CA /* QLoan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QLoan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8F9D7AE1DAFD2FC000371CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D8F9D7B01DAFD2FC000371CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D8F9D7B11DAFD2FC000371CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D8F9D7B31DAFD2FC000371CA /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		D8F9D7B41DAFD2FC000371CA /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		D8F9D7B61DAFD2FC000371CA /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		D8F9D7B71DAFD2FC000371CA /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		D8F9D7BC1DAFD2FC000371CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D8F9D7C11DAFD2FC000371CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8F9D7C61DAFD2FC000371CA /* QLoanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QLoanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8F9D7CA1DAFD2FC000371CA /* QLoanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QLoanTests.m; sourceTree = "<group>"; };
+		D8F9D7CC1DAFD2FC000371CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8F9D7D11DAFD2FC000371CA /* QLoanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QLoanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8F9D7D51DAFD2FC000371CA /* QLoanUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QLoanUITests.m; sourceTree = "<group>"; };
+		D8F9D7D71DAFD2FC000371CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D8F9D7A71DAFD2FC000371CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B052863E11C552DF193FDF47 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8F9D7C31DAFD2FC000371CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8F9D7CE1DAFD2FC000371CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2840B12511CD4986F74AAE39 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1BE5B8284ED646854EA9B23 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8B1C09F09C78E69F8F44E968 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				231F0EC6722C13ED096D9EB6 /* Pods.debug.xcconfig */,
+				41A2D4330A792AAE9B65A346 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9EFF738B1DB3B59C004873A6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF738C1DB3B5A1004873A6 /* BusinessLogic */,
+				D84F78471DB8F8B100394F1D /* Helpers */,
+				9EFF74021DB428F1004873A6 /* UserInterface */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		9EFF738C1DB3B5A1004873A6 /* BusinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF73D91DB3F832004873A6 /* CoreComponents */,
+				9EFF73A91DB3C85F004873A6 /* Entity */,
+				9EFF73A71DB3C823004873A6 /* Helpers */,
+				9EFF738D1DB3B5A8004873A6 /* Services */,
+			);
+			name = BusinessLogic;
+			sourceTree = "<group>";
+		};
+		9EFF738D1DB3B5A8004873A6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D84F78331DB8C4CC00394F1D /* BankServices */,
+				9EFF73FE1DB425E1004873A6 /* Assembly */,
+				9EFF73D21DB3DAFA004873A6 /* UserInteractionService */,
+				9EFF73C21DB3D06E004873A6 /* PersonalCabinetService */,
+				9EFF73BE1DB3CE06004873A6 /* LenderOrderService */,
+				9EFF73B21DB3C9A9004873A6 /* Constants */,
+				9EFF739F1DB3C08D004873A6 /* BorrowerOrderService */,
+				9EFF73981DB3BD7A004873A6 /* UserInfoService */,
+				9EFF738E1DB3B5AD004873A6 /* AuthorizationService */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		9EFF738E1DB3B5AD004873A6 /* AuthorizationService */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF73951DB3B870004873A6 /* QLAuthorizationRequestConfiguration.h */,
+				9EFF73961DB3B870004873A6 /* QLAuthorizationRequestConfiguration.m */,
+				9EFF73921DB3B672004873A6 /* QLRegistrationRequestConfiguration.h */,
+				9EFF73931DB3B672004873A6 /* QLRegistrationRequestConfiguration.m */,
+				9EFF738F1DB3B64C004873A6 /* QLAuthorizationService.h */,
+				9EFF73901DB3B64C004873A6 /* QLAuthorizationService.m */,
+			);
+			name = AuthorizationService;
+			sourceTree = "<group>";
+		};
+		9EFF73981DB3BD7A004873A6 /* UserInfoService */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF73991DB3BDF8004873A6 /* QLUserInfoService.h */,
+				9EFF739A1DB3BDF8004873A6 /* QLUserInfoService.m */,
+			);
+			name = UserInfoService;
+			sourceTree = "<group>";
+		};
+		9EFF739F1DB3C08D004873A6 /* BorrowerOrderService */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF73A01DB3C1D3004873A6 /* QLBorrowerOrderService.h */,
+				9EFF73A11DB3C1D3004873A6 /* QLBorrowerOrderService.m */,
+			);
+			name = BorrowerOrderService;
+			sourceTree = "<group>";
+		};
+		9EFF73A71DB3C823004873A6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF73E21DB40AB7004873A6 /* SortMethodParser */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		9EFF73A91DB3C85F004873A6 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF73CE1DB3D948004873A6 /* PaymentSchedule */,
+				9EFF73CA1DB3D816004873A6 /* Payment */,
+				9EFF73C61DB3D198004873A6 /* Notification */,
+				9EFF73BA1DB3CD67004873A6 /* LenderOrder */,
+				9EFF73B61DB3C9E1004873A6 /* Constants */,
+				9EFF73AB1DB3C8DC004873A6 /* BorrowerOrder */,
+				9EFF73AA1DB3C86C004873A6 /* UserInfo */,
+			);
+			name = Entity;
+			sourceTree = "<group>";
+		};
+		9EFF73AA1DB3C86C004873A6 /* UserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF73AF1DB3C918004873A6 /* QLUserInfo.h */,
+				9EFF73B01DB3C918004873A6 /* QLUserInfo.m */,
+			);
+			name = UserInfo;
+			sourceTree = "<group>";
+		};
+		9EFF73AB1DB3C8DC004873A6 /* BorrowerOrder */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF73AC1DB3C90F004873A6 /* QLBorrowerOrder.h */,
+				9EFF73AD1DB3C90F004873A6 /* QLBorrowerOrder.m */,
+			);
+			name = BorrowerOrder;
+			sourceTree = "<group>";
+		};
+		9EFF73B21DB3C9A9004873A6 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF73B31DB3C9C5004873A6 /* ServicesConstants.h */,
+				9EFF73B41DB3C9C5004873A6 /* ServicesConstants.m */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
+		9EFF73B61DB3C9E1004873A6 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF73B71DB3CA09004873A6 /* EntityConstants.h */,
+				9EFF73B81DB3CA09004873A6 /* EntityConstants.m */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
+		9EFF73BA1DB3CD67004873A6 /* LenderOrder */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF73BB1DB3CD83004873A6 /* QLLenderOrder.h */,
+				9EFF73BC1DB3CD83004873A6 /* QLLenderOrder.m */,
+			);
+			name = LenderOrder;
+			sourceTree = "<group>";
+		};
+		9EFF73BE1DB3CE06004873A6 /* LenderOrderService */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF73BF1DB3CE42004873A6 /* QLLenderOrderService.h */,
+				9EFF73C01DB3CE42004873A6 /* QLLenderOrderService.m */,
+			);
+			name = LenderOrderService;
+			sourceTree = "<group>";
+		};
+		9EFF73C21DB3D06E004873A6 /* PersonalCabinetService */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF73C31DB3D091004873A6 /* QLPersonalCabinetService.h */,
+				9EFF73C41DB3D091004873A6 /* QLPersonalCabinetService.m */,
+			);
+			name = PersonalCabinetService;
+			sourceTree = "<group>";
+		};
+		9EFF73C61DB3D198004873A6 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF73C71DB3D1C4004873A6 /* QLNotification.h */,
+				9EFF73C81DB3D1C4004873A6 /* QLNotification.m */,
+			);
+			name = Notification;
+			sourceTree = "<group>";
+		};
+		9EFF73CA1DB3D816004873A6 /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF73CB1DB3D82B004873A6 /* QLPayment.h */,
+				9EFF73CC1DB3D82B004873A6 /* QLPayment.m */,
+			);
+			name = Payment;
+			sourceTree = "<group>";
+		};
+		9EFF73CE1DB3D948004873A6 /* PaymentSchedule */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF73CF1DB3D969004873A6 /* QLPaymentSchedule.h */,
+				9EFF73D01DB3D969004873A6 /* QLPaymentSchedule.m */,
+			);
+			name = PaymentSchedule;
+			sourceTree = "<group>";
+		};
+		9EFF73D21DB3DAFA004873A6 /* UserInteractionService */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF73D31DB3DB26004873A6 /* QLUserInteractionService.h */,
+				9EFF73D41DB3DB26004873A6 /* QLUserInteractionService.m */,
+				9EFF73D61DB3DC4E004873A6 /* QLPaymentCompletedRequestConfiguration.h */,
+				9EFF73D71DB3DC4E004873A6 /* QLPaymentCompletedRequestConfiguration.m */,
+			);
+			name = UserInteractionService;
+			sourceTree = "<group>";
+		};
+		9EFF73D91DB3F832004873A6 /* CoreComponents */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF73FA1DB42055004873A6 /* Assembly */,
+				9EFF73F91DB41C7B004873A6 /* Mapper */,
+				9EFF73F21DB41A21004873A6 /* MappingProvider */,
+				9EFF73EE1DB41686004873A6 /* JSONSerializer */,
+				9EFF73E61DB40E9A004873A6 /* NetworkClient */,
+				9EFF73DE1DB4033A004873A6 /* KeychainStorage */,
+				9EFF73DA1DB3F83F004873A6 /* RequestFactory */,
+			);
+			name = CoreComponents;
+			sourceTree = "<group>";
+		};
+		9EFF73DA1DB3F83F004873A6 /* RequestFactory */ = {
+			isa = PBXGroup;
+			children = (
+				D84F78391DB8D9A800394F1D /* BankRequestFactories */,
+				9EFF73DB1DB3F94C004873A6 /* QLRequestFactory.h */,
+				9EFF73DC1DB3F94C004873A6 /* QLRequestFactory.m */,
+			);
+			name = RequestFactory;
+			sourceTree = "<group>";
+		};
+		9EFF73DE1DB4033A004873A6 /* KeychainStorage */ = {
+			isa = PBXGroup;
+			children = (
+				D835BCB31DB94E1500F2FF0F /* QLStorage.h */,
+				9EFF73DF1DB40363004873A6 /* QLKeychainStorage.h */,
+				9EFF73E01DB40363004873A6 /* QLKeychainStorage.m */,
+			);
+			name = KeychainStorage;
+			sourceTree = "<group>";
+		};
+		9EFF73E21DB40AB7004873A6 /* SortMethodParser */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF73E31DB40AE6004873A6 /* QLSortMethodParser.h */,
+				9EFF73E41DB40AE6004873A6 /* QLSortMethodParser.m */,
+			);
+			name = SortMethodParser;
+			sourceTree = "<group>";
+		};
+		9EFF73E61DB40E9A004873A6 /* NetworkClient */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF73EA1DB412FB004873A6 /* ServerResponse */,
+				9EFF73E71DB40EC1004873A6 /* QLNetworkClient.h */,
+				9EFF73E81DB40EC1004873A6 /* QLNetworkClient.m */,
+			);
+			name = NetworkClient;
+			sourceTree = "<group>";
+		};
+		9EFF73EA1DB412FB004873A6 /* ServerResponse */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF73EB1DB41503004873A6 /* QLServerResponse.h */,
+				9EFF73EC1DB41503004873A6 /* QLServerResponse.m */,
+			);
+			name = ServerResponse;
+			sourceTree = "<group>";
+		};
+		9EFF73EE1DB41686004873A6 /* JSONSerializer */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF73EF1DB416AE004873A6 /* QLJSONSerializer.h */,
+				9EFF73F01DB416AE004873A6 /* QLJSONSerializer.m */,
+			);
+			name = JSONSerializer;
+			sourceTree = "<group>";
+		};
+		9EFF73F21DB41A21004873A6 /* MappingProvider */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF73F31DB41A47004873A6 /* QLMappingProvider.h */,
+				9EFF73F41DB41A47004873A6 /* QLMappingProvider.m */,
+			);
+			name = MappingProvider;
+			sourceTree = "<group>";
+		};
+		9EFF73F91DB41C7B004873A6 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF73F71DB41B59004873A6 /* QLMapper.m */,
+				9EFF73F61DB41B59004873A6 /* QLMapper.h */,
+			);
+			name = Mapper;
+			sourceTree = "<group>";
+		};
+		9EFF73FA1DB42055004873A6 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF73FB1DB4206F004873A6 /* QLCoreComponentsAssembly.h */,
+				9EFF73FC1DB4206F004873A6 /* QLCoreComponentsAssembly.m */,
+			);
+			name = Assembly;
+			sourceTree = "<group>";
+		};
+		9EFF73FE1DB425E1004873A6 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF73FF1DB425FB004873A6 /* QLServicesAssembly.h */,
+				9EFF74001DB425FB004873A6 /* QLServicesAssembly.m */,
+			);
+			name = Assembly;
+			sourceTree = "<group>";
+		};
+		9EFF74021DB428F1004873A6 /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				D89655431DB8234E00DE4C66 /* Controllers */,
+				9EFF74031DB428FB004873A6 /* TestAssembly */,
+			);
+			name = UserInterface;
+			sourceTree = "<group>";
+		};
+		9EFF74031DB428FB004873A6 /* TestAssembly */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF74041DB42925004873A6 /* QLTestAssembly.h */,
+				9EFF74051DB42925004873A6 /* QLTestAssembly.m */,
+			);
+			name = TestAssembly;
+			sourceTree = "<group>";
+		};
+		9EFF74341DB4C351004873A6 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF74351DB4C376004873A6 /* borrowerOrderStub.json */,
+			);
+			name = Stubs;
+			sourceTree = "<group>";
+		};
+		D84F78331DB8C4CC00394F1D /* BankServices */ = {
+			isa = PBXGroup;
+			children = (
+				D84F783F1DB8E0EB00394F1D /* QLBankServiceConstants.h */,
+				D84F78401DB8E0EB00394F1D /* QLBankServiceConstants.m */,
+				D84F78341DB8C4DA00394F1D /* AuthService */,
+			);
+			name = BankServices;
+			sourceTree = "<group>";
+		};
+		D84F78341DB8C4DA00394F1D /* AuthService */ = {
+			isa = PBXGroup;
+			children = (
+				D84F78351DB8C9CA00394F1D /* QLBankAuthService.h */,
+				D84F78361DB8CBC500394F1D /* QLBankAuthServiceImplementation.h */,
+				D84F78371DB8CBC500394F1D /* QLBankAuthServiceImplementation.m */,
+			);
+			name = AuthService;
+			sourceTree = "<group>";
+		};
+		D84F78391DB8D9A800394F1D /* BankRequestFactories */ = {
+			isa = PBXGroup;
+			children = (
+				D84F783A1DB8D9DB00394F1D /* QLBankAuthRequestFactory.h */,
+				D84F783B1DB8DA7A00394F1D /* QLBankAuthRequestFactoryImplementation.h */,
+				D84F783C1DB8DA7A00394F1D /* QLBankAuthRequestFactoryImplementation.m */,
+			);
+			name = BankRequestFactories;
+			sourceTree = "<group>";
+		};
+		D84F78421DB8F05200394F1D /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				D84F78431DB8F08400394F1D /* EXTScope.h */,
+				D84F78441DB8F08400394F1D /* EXTScope.m */,
+				D84F78451DB8F08400394F1D /* metamacros.h */,
+			);
+			name = ThirdParty;
+			sourceTree = "<group>";
+		};
+		D84F78471DB8F8B100394F1D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D84F78481DB8F8E400394F1D /* QLBlocksHelper.h */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		D896553B1DB8203200DE4C66 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D896554B1DB825D200DE4C66 /* Fonts */,
+				D896553C1DB821F600DE4C66 /* Storyboards */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D896553C1DB821F600DE4C66 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D89655411DB822AD00DE4C66 /* Auth.storyboard */,
+				D896553D1DB8227400DE4C66 /* Main.storyboard */,
+				D896553E1DB8227400DE4C66 /* LaunchScreen.storyboard */,
+				D8D98BB31DB9085300F3FB01 /* Profile.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		D89655431DB8234E00DE4C66 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D89655471DB8238300DE4C66 /* Auth */,
+				D8D98BB51DB9087900F3FB01 /* Profile */,
+				D89655551DB8317800DE4C66 /* Register */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D89655471DB8238300DE4C66 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				D896555D1DB8BFBF00DE4C66 /* Assembly */,
+				D89655481DB823A100DE4C66 /* QLAuthViewController.h */,
+				D89655491DB823A100DE4C66 /* QLAuthViewController.m */,
+			);
+			name = Auth;
+			sourceTree = "<group>";
+		};
+		D896554B1DB825D200DE4C66 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D896554C1DB8260000DE4C66 /* QLFonts.h */,
+				D896554D1DB8260C00DE4C66 /* SF-UI-Display-Semibold.otf */,
+				D896554E1DB8260C00DE4C66 /* SF-UI-Display-Regular.otf */,
+				D896554F1DB8260C00DE4C66 /* SF-UI-Display-Medium.otf */,
+				D89655501DB8260C00DE4C66 /* SF-UI-Display-Bold.otf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		D89655551DB8317800DE4C66 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				D89655561DB8319900DE4C66 /* QLRegisterViewController.h */,
+				D89655571DB8319900DE4C66 /* QLRegisterViewController.m */,
+			);
+			name = Register;
+			sourceTree = "<group>";
+		};
+		D896555D1DB8BFBF00DE4C66 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				D896555E1DB8C39900DE4C66 /* QLAuthAssembly.h */,
+				D896555F1DB8C39900DE4C66 /* QLAuthAssembly.m */,
+			);
+			name = Assembly;
+			sourceTree = "<group>";
+		};
+		D8D98BB51DB9087900F3FB01 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D8D98BB61DB908A200F3FB01 /* QLProfileViewController.h */,
+				D8D98BB71DB908A200F3FB01 /* QLProfileViewController.m */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		D8F9D7A11DAFD2FC000371CA = {
+			isa = PBXGroup;
+			children = (
+				D8F9D7AC1DAFD2FC000371CA /* QLoan */,
+				D8F9D7C91DAFD2FC000371CA /* QLoanTests */,
+				D8F9D7D41DAFD2FC000371CA /* QLoanUITests */,
+				D8F9D7AB1DAFD2FC000371CA /* Products */,
+				8B1C09F09C78E69F8F44E968 /* Pods */,
+				2840B12511CD4986F74AAE39 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D8F9D7AB1DAFD2FC000371CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D8F9D7AA1DAFD2FC000371CA /* QLoan.app */,
+				D8F9D7C61DAFD2FC000371CA /* QLoanTests.xctest */,
+				D8F9D7D11DAFD2FC000371CA /* QLoanUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D8F9D7AC1DAFD2FC000371CA /* QLoan */ = {
+			isa = PBXGroup;
+			children = (
+				9EFF738B1DB3B59C004873A6 /* Classes */,
+				D896553B1DB8203200DE4C66 /* Resources */,
+				9EFF74341DB4C351004873A6 /* Stubs */,
+				D84F78421DB8F05200394F1D /* ThirdParty */,
+				D8F9D7B01DAFD2FC000371CA /* AppDelegate.h */,
+				D8F9D7B11DAFD2FC000371CA /* AppDelegate.m */,
+				D8F9D7B31DAFD2FC000371CA /* FirstViewController.h */,
+				D8F9D7B41DAFD2FC000371CA /* FirstViewController.m */,
+				D8F9D7B61DAFD2FC000371CA /* SecondViewController.h */,
+				D8F9D7B71DAFD2FC000371CA /* SecondViewController.m */,
+				D8F9D7BC1DAFD2FC000371CA /* Assets.xcassets */,
+				D8F9D7C11DAFD2FC000371CA /* Info.plist */,
+				D8F9D7AD1DAFD2FC000371CA /* Supporting Files */,
+			);
+			path = QLoan;
+			sourceTree = "<group>";
+		};
+		D8F9D7AD1DAFD2FC000371CA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D8F9D7AE1DAFD2FC000371CA /* main.m */,
+				D84F783E1DB8DB7E00394F1D /* QLoan-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D8F9D7C91DAFD2FC000371CA /* QLoanTests */ = {
+			isa = PBXGroup;
+			children = (
+				D8F9D7CA1DAFD2FC000371CA /* QLoanTests.m */,
+				D8F9D7CC1DAFD2FC000371CA /* Info.plist */,
+			);
+			path = QLoanTests;
+			sourceTree = "<group>";
+		};
+		D8F9D7D41DAFD2FC000371CA /* QLoanUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D8F9D7D51DAFD2FC000371CA /* QLoanUITests.m */,
+				D8F9D7D71DAFD2FC000371CA /* Info.plist */,
+			);
+			path = QLoanUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D8F9D7A91DAFD2FC000371CA /* QLoan */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8F9D7DA1DAFD2FC000371CA /* Build configuration list for PBXNativeTarget "QLoan" */;
+			buildPhases = (
+				C638E65D34464ADA6228DA32 /* Check Pods Manifest.lock */,
+				D8F9D7A61DAFD2FC000371CA /* Sources */,
+				D8F9D7A71DAFD2FC000371CA /* Frameworks */,
+				D8F9D7A81DAFD2FC000371CA /* Resources */,
+				93F9A8981CA808239479E4DE /* Embed Pods Frameworks */,
+				272ECB87B984123DCDF2D3F3 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QLoan;
+			productName = QLoan;
+			productReference = D8F9D7AA1DAFD2FC000371CA /* QLoan.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D8F9D7C51DAFD2FC000371CA /* QLoanTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8F9D7DD1DAFD2FC000371CA /* Build configuration list for PBXNativeTarget "QLoanTests" */;
+			buildPhases = (
+				D8F9D7C21DAFD2FC000371CA /* Sources */,
+				D8F9D7C31DAFD2FC000371CA /* Frameworks */,
+				D8F9D7C41DAFD2FC000371CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D8F9D7C81DAFD2FC000371CA /* PBXTargetDependency */,
+			);
+			name = QLoanTests;
+			productName = QLoanTests;
+			productReference = D8F9D7C61DAFD2FC000371CA /* QLoanTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D8F9D7D01DAFD2FC000371CA /* QLoanUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8F9D7E01DAFD2FC000371CA /* Build configuration list for PBXNativeTarget "QLoanUITests" */;
+			buildPhases = (
+				D8F9D7CD1DAFD2FC000371CA /* Sources */,
+				D8F9D7CE1DAFD2FC000371CA /* Frameworks */,
+				D8F9D7CF1DAFD2FC000371CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D8F9D7D31DAFD2FC000371CA /* PBXTargetDependency */,
+			);
+			name = QLoanUITests;
+			productName = QLoanUITests;
+			productReference = D8F9D7D11DAFD2FC000371CA /* QLoanUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D8F9D7A21DAFD2FC000371CA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Rambler&Co";
+				TargetAttributes = {
+					D8F9D7A91DAFD2FC000371CA = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 7SMPM83ZV6;
+						ProvisioningStyle = Automatic;
+					};
+					D8F9D7C51DAFD2FC000371CA = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D8F9D7A91DAFD2FC000371CA;
+					};
+					D8F9D7D01DAFD2FC000371CA = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D8F9D7A91DAFD2FC000371CA;
+					};
+				};
+			};
+			buildConfigurationList = D8F9D7A51DAFD2FC000371CA /* Build configuration list for PBXProject "QLoan" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D8F9D7A11DAFD2FC000371CA;
+			productRefGroup = D8F9D7AB1DAFD2FC000371CA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D8F9D7A91DAFD2FC000371CA /* QLoan */,
+				D8F9D7C51DAFD2FC000371CA /* QLoanTests */,
+				D8F9D7D01DAFD2FC000371CA /* QLoanUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D8F9D7A81DAFD2FC000371CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D89655521DB8260C00DE4C66 /* SF-UI-Display-Regular.otf in Resources */,
+				D896553F1DB8227400DE4C66 /* Main.storyboard in Resources */,
+				D8D98BB41DB9085300F3FB01 /* Profile.storyboard in Resources */,
+				D89655401DB8227400DE4C66 /* LaunchScreen.storyboard in Resources */,
+				D89655511DB8260C00DE4C66 /* SF-UI-Display-Semibold.otf in Resources */,
+				D89655531DB8260C00DE4C66 /* SF-UI-Display-Medium.otf in Resources */,
+				D89655421DB822AD00DE4C66 /* Auth.storyboard in Resources */,
+				D8F9D7BD1DAFD2FC000371CA /* Assets.xcassets in Resources */,
+				D89655541DB8260C00DE4C66 /* SF-UI-Display-Bold.otf in Resources */,
+				9EFF74361DB4C376004873A6 /* borrowerOrderStub.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8F9D7C41DAFD2FC000371CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8F9D7CF1DAFD2FC000371CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		272ECB87B984123DCDF2D3F3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93F9A8981CA808239479E4DE /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C638E65D34464ADA6228DA32 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D8F9D7A61DAFD2FC000371CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EFF73971DB3B870004873A6 /* QLAuthorizationRequestConfiguration.m in Sources */,
+				D8D98BB81DB908A200F3FB01 /* QLProfileViewController.m in Sources */,
+				9EFF73FD1DB4206F004873A6 /* QLCoreComponentsAssembly.m in Sources */,
+				9EFF73D11DB3D969004873A6 /* QLPaymentSchedule.m in Sources */,
+				9EFF73E51DB40AE6004873A6 /* QLSortMethodParser.m in Sources */,
+				9EFF73911DB3B64C004873A6 /* QLAuthorizationService.m in Sources */,
+				D8F9D7B81DAFD2FC000371CA /* SecondViewController.m in Sources */,
+				9EFF73F11DB416AE004873A6 /* QLJSONSerializer.m in Sources */,
+				9EFF73B51DB3C9C5004873A6 /* ServicesConstants.m in Sources */,
+				9EFF74061DB42925004873A6 /* QLTestAssembly.m in Sources */,
+				9EFF73E91DB40EC1004873A6 /* QLNetworkClient.m in Sources */,
+				9EFF73DD1DB3F94C004873A6 /* QLRequestFactory.m in Sources */,
+				D8F9D7B21DAFD2FC000371CA /* AppDelegate.m in Sources */,
+				D8F9D7B51DAFD2FC000371CA /* FirstViewController.m in Sources */,
+				9EFF73B11DB3C918004873A6 /* QLUserInfo.m in Sources */,
+				9EFF73D81DB3DC4E004873A6 /* QLPaymentCompletedRequestConfiguration.m in Sources */,
+				9EFF73ED1DB41503004873A6 /* QLServerResponse.m in Sources */,
+				9EFF73E11DB40363004873A6 /* QLKeychainStorage.m in Sources */,
+				9EFF73AE1DB3C90F004873A6 /* QLBorrowerOrder.m in Sources */,
+				9EFF73C11DB3CE42004873A6 /* QLLenderOrderService.m in Sources */,
+				9EFF73D51DB3DB26004873A6 /* QLUserInteractionService.m in Sources */,
+				D89655601DB8C39900DE4C66 /* QLAuthAssembly.m in Sources */,
+				D89655581DB8319900DE4C66 /* QLRegisterViewController.m in Sources */,
+				9EFF73941DB3B672004873A6 /* QLRegistrationRequestConfiguration.m in Sources */,
+				9EFF73BD1DB3CD83004873A6 /* QLLenderOrder.m in Sources */,
+				D8F9D7AF1DAFD2FC000371CA /* main.m in Sources */,
+				D84F783D1DB8DA7A00394F1D /* QLBankAuthRequestFactoryImplementation.m in Sources */,
+				D896554A1DB823A100DE4C66 /* QLAuthViewController.m in Sources */,
+				9EFF74011DB425FB004873A6 /* QLServicesAssembly.m in Sources */,
+				9EFF739B1DB3BDF8004873A6 /* QLUserInfoService.m in Sources */,
+				9EFF73F51DB41A47004873A6 /* QLMappingProvider.m in Sources */,
+				9EFF73C51DB3D091004873A6 /* QLPersonalCabinetService.m in Sources */,
+				D84F78381DB8CBC500394F1D /* QLBankAuthServiceImplementation.m in Sources */,
+				9EFF73C91DB3D1C4004873A6 /* QLNotification.m in Sources */,
+				D84F78461DB8F08400394F1D /* EXTScope.m in Sources */,
+				9EFF73CD1DB3D82B004873A6 /* QLPayment.m in Sources */,
+				D84F78411DB8E0EB00394F1D /* QLBankServiceConstants.m in Sources */,
+				9EFF73B91DB3CA09004873A6 /* EntityConstants.m in Sources */,
+				9EFF73A21DB3C1D3004873A6 /* QLBorrowerOrderService.m in Sources */,
+				9EFF73F81DB41B59004873A6 /* QLMapper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8F9D7C21DAFD2FC000371CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8F9D7CB1DAFD2FC000371CA /* QLoanTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8F9D7CD1DAFD2FC000371CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8F9D7D61DAFD2FC000371CA /* QLoanUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D8F9D7C81DAFD2FC000371CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D8F9D7A91DAFD2FC000371CA /* QLoan */;
+			targetProxy = D8F9D7C71DAFD2FC000371CA /* PBXContainerItemProxy */;
+		};
+		D8F9D7D31DAFD2FC000371CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D8F9D7A91DAFD2FC000371CA /* QLoan */;
+			targetProxy = D8F9D7D21DAFD2FC000371CA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D8F9D7D81DAFD2FC000371CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D8F9D7D91DAFD2FC000371CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D8F9D7DB1DAFD2FC000371CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 231F0EC6722C13ED096D9EB6 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7SMPM83ZV6;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QLoan/Supporting Files/QLoan-Prefix.pch";
+				INFOPLIST_FILE = QLoan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ru.ramblerco.rambler.QLoan;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		D8F9D7DC1DAFD2FC000371CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41A2D4330A792AAE9B65A346 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7SMPM83ZV6;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QLoan/Supporting Files/QLoan-Prefix.pch";
+				INFOPLIST_FILE = QLoan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ru.ramblerco.rambler.QLoan;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		D8F9D7DE1DAFD2FC000371CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = QLoanTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ru.ramblerco.rambler.QLoanTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QLoan.app/QLoan";
+			};
+			name = Debug;
+		};
+		D8F9D7DF1DAFD2FC000371CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = QLoanTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ru.ramblerco.rambler.QLoanTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QLoan.app/QLoan";
+			};
+			name = Release;
+		};
+		D8F9D7E11DAFD2FC000371CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = QLoanUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ru.ramblerco.rambler.QLoanUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = QLoan;
+			};
+			name = Debug;
+		};
+		D8F9D7E21DAFD2FC000371CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = QLoanUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ru.ramblerco.rambler.QLoanUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = QLoan;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D8F9D7A51DAFD2FC000371CA /* Build configuration list for PBXProject "QLoan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8F9D7D81DAFD2FC000371CA /* Debug */,
+				D8F9D7D91DAFD2FC000371CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8F9D7DA1DAFD2FC000371CA /* Build configuration list for PBXNativeTarget "QLoan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8F9D7DB1DAFD2FC000371CA /* Debug */,
+				D8F9D7DC1DAFD2FC000371CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8F9D7DD1DAFD2FC000371CA /* Build configuration list for PBXNativeTarget "QLoanTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8F9D7DE1DAFD2FC000371CA /* Debug */,
+				D8F9D7DF1DAFD2FC000371CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8F9D7E01DAFD2FC000371CA /* Build configuration list for PBXNativeTarget "QLoanUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8F9D7E11DAFD2FC000371CA /* Debug */,
+				D8F9D7E21DAFD2FC000371CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D8F9D7A21DAFD2FC000371CA /* Project object */;
+}

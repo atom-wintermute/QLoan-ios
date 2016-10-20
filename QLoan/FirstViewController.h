@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "QLBorrowerOrderService.h"
 
 @interface FirstViewController : UIViewController
 
+@property (nonatomic, strong) QLBorrowerOrderService *service;
 
 @end
 

@@ -1,6 +1,6 @@
 platform :ios, '8.0'
 
-source 'git@gitlab.rambler.ru:cocoapods/cocoapods.git'
+source 'https://gitlab.rambler.ru/cocoapods/cocoapods.git'
 source 'https://github.com/CocoaPods/Specs.git'
 
 # Model & Network
@@ -15,6 +15,7 @@ pod 'SDWebImage', '3.7.1'
 pod 'PureLayout', '3.0.0'
 
 # Helpers
+pod 'RamblerTyphoonUtils/AssemblyCollector', '1.3.1'
 pod 'ViperMcFlurry', '1.5.1'
 pod 'Typhoon', '3.3.4'
 pod 'SAMKeychain', '1.5.2'
