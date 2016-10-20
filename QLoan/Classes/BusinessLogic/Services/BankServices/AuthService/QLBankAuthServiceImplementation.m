@@ -8,9 +8,12 @@
 
 #import "QLBankAuthServiceImplementation.h"
 
+#import "QLBankAuthRequestFactory.h"
+#import "QLStorage.h"
+
 #import "QLNetworkClient.h"
 #import "QLJSONSerializer.h"
-#import "QLBankAuthRequestFactory.h"
+
 #import "QLServerResponse.h"
 
 @implementation QLBankAuthServiceImplementation
@@ -29,11 +32,38 @@
                                                                                options:kNilOptions
                                                                                  error:nil];
                              if (![responseData[QLBankErrorCode] integerValue]) {
+                                 NSString *sessionId = responseData[QLBankSessionId];
+                                 if (sessionId.length) {
+                                     [self.storage storeObject:sessionId
+                                                        forKey:QLBankSessionIdKey];
+                                 }
                                  run_block_on_main(completion, YES, nil);
                              } else {
                                  run_block_on_main(completion, NO, nil);
                              }
                          }];
+}
+
+- (void)updateCurrentUserDataWithCompletion:(QLBankAuthUserDataCompletion)completion {
+    NSString *sessionId = [self.storage loadObjectForKey:QLBankSessionIdKey];
+    if (!sessionId.length) {
+        run_block_on_main(completion, nil, [NSError new]);
+    } else {
+        NSURLRequest *URLRequest = [self.requestFactory requestForCurrentUserDataWithSessionId:sessionId];
+        [self.networkClient sendRequest:URLRequest
+                             completion:^(QLServerResponse *response, NSError *error) {
+                                 if (!response.data) {
+                                     run_block_on_main(completion, nil, [NSError new]);
+                                 }
+                                 id responseData = [NSJSONSerialization JSONObjectWithData:response.data
+                                                                                   options:kNilOptions
+                                                                                     error:nil];
+                             }];
+    }
+}
+
+- (QLBankUserInfo *)obtainCurrentUserData {
+    return nil;
 }
 
 @end

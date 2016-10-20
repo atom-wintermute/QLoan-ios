@@ -11,6 +11,7 @@
 #pragma mark - End-point-ы
 
 NSString * const QLBankAuthenticate = @"authenticate.do";
+NSString * const QLBankGetUser = @"getUser.do";
 
 #pragma mark - Параметры запросов
 
@@ -21,3 +22,7 @@ NSString * const QLBankAuthenticate = @"authenticate.do";
 NSString * const QLBankErrorCode = @"errorCode";
 NSString * const QLBankSessionId = @"sessionId";
 NSString * const QLBankUserId = @"userId";
+
+#pragma mark - Ключи данных в хранилищах
+
+NSString * const QLBankSessionIdKey = @"bankSessionIdKey";

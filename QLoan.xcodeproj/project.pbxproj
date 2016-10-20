@@ -48,6 +48,8 @@
 		D835BD131DB97B0700F2FF0F /* QLProfileDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BD0B1DB97B0700F2FF0F /* QLProfileDataCell.m */; };
 		D835BD141DB97B0700F2FF0F /* QLProfileDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D835BD0C1DB97B0700F2FF0F /* QLProfileDataCell.xib */; };
 		D835BD151DB97B0700F2FF0F /* QLProfileDataCellObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BD0E1DB97B0700F2FF0F /* QLProfileDataCellObject.m */; };
+		D835BD1A1DB97DCA00F2FF0F /* QLBankUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BD191DB97DCA00F2FF0F /* QLBankUserInfo.m */; };
+		D835BD1E1DB9830C00F2FF0F /* QLInMemoryStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BD1D1DB9830C00F2FF0F /* QLInMemoryStorage.m */; };
 		D84F78381DB8CBC500394F1D /* QLBankAuthServiceImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = D84F78371DB8CBC500394F1D /* QLBankAuthServiceImplementation.m */; };
 		D84F783D1DB8DA7A00394F1D /* QLBankAuthRequestFactoryImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = D84F783C1DB8DA7A00394F1D /* QLBankAuthRequestFactoryImplementation.m */; };
 		D84F78411DB8E0EB00394F1D /* QLBankServiceConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D84F78401DB8E0EB00394F1D /* QLBankServiceConstants.m */; };
@@ -173,6 +175,10 @@
 		D835BD0C1DB97B0700F2FF0F /* QLProfileDataCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QLProfileDataCell.xib; sourceTree = "<group>"; };
 		D835BD0D1DB97B0700F2FF0F /* QLProfileDataCellObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLProfileDataCellObject.h; sourceTree = "<group>"; };
 		D835BD0E1DB97B0700F2FF0F /* QLProfileDataCellObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLProfileDataCellObject.m; sourceTree = "<group>"; };
+		D835BD181DB97DCA00F2FF0F /* QLBankUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLBankUserInfo.h; path = Classes/BusinessLogic/Entity/BankEntities/UserInfo/QLBankUserInfo.h; sourceTree = "<group>"; };
+		D835BD191DB97DCA00F2FF0F /* QLBankUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLBankUserInfo.m; path = Classes/BusinessLogic/Entity/BankEntities/UserInfo/QLBankUserInfo.m; sourceTree = "<group>"; };
+		D835BD1C1DB9830C00F2FF0F /* QLInMemoryStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLInMemoryStorage.h; path = Classes/BusinessLogic/CoreCompnents/InMemoryStorage/QLInMemoryStorage.h; sourceTree = "<group>"; };
+		D835BD1D1DB9830C00F2FF0F /* QLInMemoryStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLInMemoryStorage.m; path = Classes/BusinessLogic/CoreCompnents/InMemoryStorage/QLInMemoryStorage.m; sourceTree = "<group>"; };
 		D84F78351DB8C9CA00394F1D /* QLBankAuthService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = QLBankAuthService.h; path = Classes/BusinessLogic/Services/BankServices/AuthService/QLBankAuthService.h; sourceTree = "<group>"; };
 		D84F78361DB8CBC500394F1D /* QLBankAuthServiceImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLBankAuthServiceImplementation.h; path = Classes/BusinessLogic/Services/BankServices/AuthService/QLBankAuthServiceImplementation.h; sourceTree = "<group>"; };
 		D84F78371DB8CBC500394F1D /* QLBankAuthServiceImplementation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLBankAuthServiceImplementation.m; path = Classes/BusinessLogic/Services/BankServices/AuthService/QLBankAuthServiceImplementation.m; sourceTree = "<group>"; };
@@ -341,6 +347,7 @@
 		9EFF73A91DB3C85F004873A6 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				D835BD161DB97D9100F2FF0F /* BankEntities */,
 				9EFF73CE1DB3D948004873A6 /* PaymentSchedule */,
 				9EFF73CA1DB3D816004873A6 /* Payment */,
 				9EFF73C61DB3D198004873A6 /* Notification */,
@@ -461,6 +468,7 @@
 				9EFF73F21DB41A21004873A6 /* MappingProvider */,
 				9EFF73EE1DB41686004873A6 /* JSONSerializer */,
 				9EFF73E61DB40E9A004873A6 /* NetworkClient */,
+				D835BD1B1DB982E000F2FF0F /* InMemoryStorage */,
 				9EFF73DE1DB4033A004873A6 /* KeychainStorage */,
 				9EFF73DA1DB3F83F004873A6 /* RequestFactory */,
 			);
@@ -672,6 +680,32 @@
 				D835BD0E1DB97B0700F2FF0F /* QLProfileDataCellObject.m */,
 			);
 			path = DataCell;
+			sourceTree = "<group>";
+		};
+		D835BD161DB97D9100F2FF0F /* BankEntities */ = {
+			isa = PBXGroup;
+			children = (
+				D835BD171DB97DA900F2FF0F /* UserInfo */,
+			);
+			name = BankEntities;
+			sourceTree = "<group>";
+		};
+		D835BD171DB97DA900F2FF0F /* UserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				D835BD181DB97DCA00F2FF0F /* QLBankUserInfo.h */,
+				D835BD191DB97DCA00F2FF0F /* QLBankUserInfo.m */,
+			);
+			name = UserInfo;
+			sourceTree = "<group>";
+		};
+		D835BD1B1DB982E000F2FF0F /* InMemoryStorage */ = {
+			isa = PBXGroup;
+			children = (
+				D835BD1C1DB9830C00F2FF0F /* QLInMemoryStorage.h */,
+				D835BD1D1DB9830C00F2FF0F /* QLInMemoryStorage.m */,
+			);
+			name = InMemoryStorage;
 			sourceTree = "<group>";
 		};
 		D84F78331DB8C4CC00394F1D /* BankServices */ = {
@@ -1082,6 +1116,7 @@
 				D8F9D7B81DAFD2FC000371CA /* SecondViewController.m in Sources */,
 				9EFF73F11DB416AE004873A6 /* QLJSONSerializer.m in Sources */,
 				9EFF73B51DB3C9C5004873A6 /* ServicesConstants.m in Sources */,
+				D835BD1E1DB9830C00F2FF0F /* QLInMemoryStorage.m in Sources */,
 				D835BD101DB97B0700F2FF0F /* QLProfileViewController.m in Sources */,
 				9EFF74061DB42925004873A6 /* QLTestAssembly.m in Sources */,
 				9EFF73E91DB40EC1004873A6 /* QLNetworkClient.m in Sources */,
@@ -1113,6 +1148,7 @@
 				9EFF73C51DB3D091004873A6 /* QLPersonalCabinetService.m in Sources */,
 				D84F78381DB8CBC500394F1D /* QLBankAuthServiceImplementation.m in Sources */,
 				9EFF73C91DB3D1C4004873A6 /* QLNotification.m in Sources */,
+				D835BD1A1DB97DCA00F2FF0F /* QLBankUserInfo.m in Sources */,
 				D835BCD31DB9747500F2FF0F /* NSMutableArray+RDSNilFilter.m in Sources */,
 				D84F78461DB8F08400394F1D /* EXTScope.m in Sources */,
 				9EFF73CD1DB3D82B004873A6 /* QLPayment.m in Sources */,

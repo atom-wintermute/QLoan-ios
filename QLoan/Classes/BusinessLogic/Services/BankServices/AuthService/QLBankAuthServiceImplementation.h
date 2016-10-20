@@ -11,6 +11,7 @@
 #import "QLBankAuthService.h"
 
 @protocol QLBankAuthRequestFactory;
+@protocol QLStorage;
 
 @class QLNetworkClient;
 @class QLJSONSerializer;
@@ -19,5 +20,6 @@
 
 @property (nonatomic, strong) QLNetworkClient *networkClient;
 @property (nonatomic, strong) id<QLBankAuthRequestFactory> requestFactory;
+@property (nonatomic, strong) id<QLStorage> storage;
 
 @end

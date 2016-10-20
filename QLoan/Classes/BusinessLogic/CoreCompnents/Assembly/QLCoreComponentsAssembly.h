@@ -36,6 +36,12 @@
 
 - (id<QLBankAuthRequestFactory>)bankAuthRequestFactory;
 
+#pragma mark - Хранилище данных
+
+- (id<QLStorage>)keychainStorage;
+
+- (id<QLStorage>)inMemoryStorage;
+
 #pragma mark - Сетевой клиент
 
 - (QLNetworkClient *)networkClient;

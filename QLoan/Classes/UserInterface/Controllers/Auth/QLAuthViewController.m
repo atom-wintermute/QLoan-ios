@@ -31,6 +31,8 @@ static NSString * const QLAuthRegisterSegue = @"registerSegue";
                                 password:passwordString
                               completion:^(BOOL success, NSError *error) {
                                   if (success) {
+                                      // сразу обновляем данные для пользователя
+                                      [self.bankAuthService updateCurrentUserDataWithCompletion:nil];
                                       [self.presentingViewController dismissViewControllerAnimated:YES
                                                                                         completion:nil];
                                   } else {

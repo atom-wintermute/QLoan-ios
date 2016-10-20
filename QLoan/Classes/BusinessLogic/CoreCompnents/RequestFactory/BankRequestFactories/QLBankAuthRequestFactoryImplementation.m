@@ -30,6 +30,19 @@
                                                error:NULL];
 }
 
+- (NSURLRequest *)requestForCurrentUserDataWithSessionId:(NSString *)sessionId; {
+    NSString *path = QLBankGetUser;
+    NSDictionary *parameters = @{
+                                 @"sessionId": sessionId,
+                                 @"isMobile": @YES
+                                 };
+    
+    return [self.requestSerializer requestWithMethod:QLPostRequestMethodKey
+                                           URLString:[self urlStringWithPath:path]
+                                          parameters:parameters
+                                               error:NULL];
+}
+
 #pragma mark - Приватные методы
 
 - (NSString *)urlStringWithPath:(NSString *)path {
