@@ -18,7 +18,7 @@
             <objects>
                 <navigationController navigationBarHidden="YES" id="vFx-7T-Uqk" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KkW-ib-Rqr">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="KkW-ib-Rqr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -131,7 +131,9 @@
                     <navigationItem key="navigationItem" id="aQv-c1-s4T"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
+                        <outlet property="headerView" destination="v5g-u8-s4w" id="33z-zM-Fvj"/>
                         <outlet property="tableView" destination="Sbm-ds-4zh" id="QbR-Wz-Tcu"/>
+                        <outlet property="usernameLabel" destination="h9Z-Yt-Joo" id="w74-Ja-4uo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bKX-uf-6aO" userLabel="First Responder" sceneMemberID="firstResponder"/>

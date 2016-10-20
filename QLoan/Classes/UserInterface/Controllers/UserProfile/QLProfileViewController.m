@@ -12,6 +12,7 @@
 #import "QLProfileCellFactory.h"
 
 #import "QLProfileDataDisplayManager.h"
+#import "QLGradient.h"
 
 #import "QLBankUserInfo.h"
 
@@ -32,10 +33,15 @@
 #pragma mark - Приватные методы
 
 - (void)configureView {
+    [self.view layoutIfNeeded];
+    [QLGradient addGradientForView:self.headerView];
+    
     QLBankUserInfo *bankUserInfo = [self.bankAuthService obtainCurrentUserData];
+    if (!bankUserInfo) {
+        return;
+    }
     
-    self.usernameLabel.text = [NSString stringWithFormat:@"%@ %@", bankUserInfo.firstName, bankUserInfo.secondName];
-    
+    self.usernameLabel.text = [NSString stringWithFormat:@"%@ %@", bankUserInfo.firstName, bankUserInfo.lastName];
     
     NSArray *cellObjects = [self.cellFactory cellObjectsFrom:bankUserInfo];
     self.dataDisplayManager =  [[QLProfileDataDisplayManager alloc] initWithInputData:cellObjects
