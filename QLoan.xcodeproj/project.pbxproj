@@ -40,6 +40,7 @@
 		D84F78381DB8CBC500394F1D /* QLBankAuthServiceImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = D84F78371DB8CBC500394F1D /* QLBankAuthServiceImplementation.m */; };
 		D84F783D1DB8DA7A00394F1D /* QLBankAuthRequestFactoryImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = D84F783C1DB8DA7A00394F1D /* QLBankAuthRequestFactoryImplementation.m */; };
 		D84F78411DB8E0EB00394F1D /* QLBankServiceConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D84F78401DB8E0EB00394F1D /* QLBankServiceConstants.m */; };
+		D84F78461DB8F08400394F1D /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = D84F78441DB8F08400394F1D /* EXTScope.m */; };
 		D896553F1DB8227400DE4C66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D896553D1DB8227400DE4C66 /* Main.storyboard */; };
 		D89655401DB8227400DE4C66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D896553E1DB8227400DE4C66 /* LaunchScreen.storyboard */; };
 		D89655421DB822AD00DE4C66 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D89655411DB822AD00DE4C66 /* Auth.storyboard */; };
@@ -146,6 +147,10 @@
 		D84F783E1DB8DB7E00394F1D /* QLoan-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "QLoan-Prefix.pch"; path = "Supporting Files/QLoan-Prefix.pch"; sourceTree = "<group>"; };
 		D84F783F1DB8E0EB00394F1D /* QLBankServiceConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLBankServiceConstants.h; path = Classes/BusinessLogic/Services/BankServices/QLBankServiceConstants.h; sourceTree = "<group>"; };
 		D84F78401DB8E0EB00394F1D /* QLBankServiceConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLBankServiceConstants.m; path = Classes/BusinessLogic/Services/BankServices/QLBankServiceConstants.m; sourceTree = "<group>"; };
+		D84F78431DB8F08400394F1D /* EXTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXTScope.h; path = ThirdParty/EXTScope.h; sourceTree = "<group>"; };
+		D84F78441DB8F08400394F1D /* EXTScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EXTScope.m; path = ThirdParty/EXTScope.m; sourceTree = "<group>"; };
+		D84F78451DB8F08400394F1D /* metamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = metamacros.h; path = ThirdParty/metamacros.h; sourceTree = "<group>"; };
+		D84F78481DB8F8E400394F1D /* QLBlocksHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = QLBlocksHelper.h; path = Classes/Helpers/QLBlocksHelper.h; sourceTree = "<group>"; };
 		D896553D1DB8227400DE4C66 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Resources/Storyboards/Main.storyboard; sourceTree = "<group>"; };
 		D896553E1DB8227400DE4C66 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Resources/Storyboards/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D89655411DB822AD00DE4C66 /* Auth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Auth.storyboard; path = Resources/Storyboards/Auth.storyboard; sourceTree = "<group>"; };
@@ -225,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				9EFF738C1DB3B5A1004873A6 /* BusinessLogic */,
+				D84F78471DB8F8B100394F1D /* Helpers */,
 				9EFF74021DB428F1004873A6 /* UserInterface */,
 			);
 			name = Classes;
@@ -573,6 +579,24 @@
 			name = BankRequestFactories;
 			sourceTree = "<group>";
 		};
+		D84F78421DB8F05200394F1D /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				D84F78431DB8F08400394F1D /* EXTScope.h */,
+				D84F78441DB8F08400394F1D /* EXTScope.m */,
+				D84F78451DB8F08400394F1D /* metamacros.h */,
+			);
+			name = ThirdParty;
+			sourceTree = "<group>";
+		};
+		D84F78471DB8F8B100394F1D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D84F78481DB8F8E400394F1D /* QLBlocksHelper.h */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		D896553B1DB8203200DE4C66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -669,6 +693,7 @@
 				9EFF738B1DB3B59C004873A6 /* Classes */,
 				D896553B1DB8203200DE4C66 /* Resources */,
 				9EFF74341DB4C351004873A6 /* Stubs */,
+				D84F78421DB8F05200394F1D /* ThirdParty */,
 				D8F9D7B01DAFD2FC000371CA /* AppDelegate.h */,
 				D8F9D7B11DAFD2FC000371CA /* AppDelegate.m */,
 				D8F9D7B31DAFD2FC000371CA /* FirstViewController.h */,
@@ -933,6 +958,7 @@
 				9EFF73C51DB3D091004873A6 /* QLPersonalCabinetService.m in Sources */,
 				D84F78381DB8CBC500394F1D /* QLBankAuthServiceImplementation.m in Sources */,
 				9EFF73C91DB3D1C4004873A6 /* QLNotification.m in Sources */,
+				D84F78461DB8F08400394F1D /* EXTScope.m in Sources */,
 				9EFF73CD1DB3D82B004873A6 /* QLPayment.m in Sources */,
 				D84F78411DB8E0EB00394F1D /* QLBankServiceConstants.m in Sources */,
 				9EFF73B91DB3CA09004873A6 /* EntityConstants.m in Sources */,

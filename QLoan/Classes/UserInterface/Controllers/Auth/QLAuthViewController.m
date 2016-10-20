@@ -30,13 +30,33 @@ static NSString * const QLAuthRegisterSegue = @"registerSegue";
     [self.bankAuthService loginWithLogin:loginString
                                 password:passwordString
                               completion:^(BOOL success, NSError *error) {
-                                  
+                                  if (success) {
+                                      [self.presentingViewController dismissViewControllerAnimated:YES
+                                                                                        completion:nil];
+                                  } else {
+                                      [self showErrorAlert];
+                                  }
                               }];
 }
 
 - (void)registerButtonWasPressed:(id)sender {
     [self performSegueWithIdentifier:QLAuthRegisterSegue
                               sender:self];
+}
+
+#pragma mark - Приватные методы
+
+- (void)showErrorAlert {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Не удалось авторизоваться"
+                                                                             message:@"Неверная пара логин/пароль"
+                                                                      preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"OK"
+                                                           style:UIAlertActionStyleDefault
+                                                         handler:nil];
+    [alertController addAction:cancelAction];
+    [self presentViewController:alertController
+                       animated:YES
+                     completion:nil];
 }
 
 @end

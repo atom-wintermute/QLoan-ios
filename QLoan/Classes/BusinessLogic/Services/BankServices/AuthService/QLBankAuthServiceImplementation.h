@@ -13,6 +13,7 @@
 @protocol QLBankAuthRequestFactory;
 
 @class QLNetworkClient;
+@class QLJSONSerializer;
 
 @interface QLBankAuthServiceImplementation : NSObject <QLBankAuthService>
 

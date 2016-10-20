@@ -10,4 +10,14 @@
 
 #pragma mark - End-point-ы
 
-NSString * const QLBankAuthenticate = @"Authenticate";
+NSString * const QLBankAuthenticate = @"authenticate.do";
+
+#pragma mark - Параметры запросов
+
+
+
+#pragma mark - Ключи ответов
+
+NSString * const QLBankErrorCode = @"errorCode";
+NSString * const QLBankSessionId = @"sessionId";
+NSString * const QLBankUserId = @"userId";

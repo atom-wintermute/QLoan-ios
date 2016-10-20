@@ -9,6 +9,7 @@
 #import "QLBankAuthServiceImplementation.h"
 
 #import "QLNetworkClient.h"
+#import "QLJSONSerializer.h"
 #import "QLBankAuthRequestFactory.h"
 #import "QLServerResponse.h"
 
@@ -21,7 +22,17 @@
                                                                     password:password];
     [self.networkClient sendRequest:URLRequest
                          completion:^(QLServerResponse *response, NSError *error) {
-                             
+                             if (!response.data) {
+                                 run_block_on_main(completion, NO, nil);
+                             }
+                             id responseData = [NSJSONSerialization JSONObjectWithData:response.data
+                                                                               options:kNilOptions
+                                                                                 error:nil];
+                             if (![responseData[QLBankErrorCode] integerValue]) {
+                                 run_block_on_main(completion, YES, nil);
+                             } else {
+                                 run_block_on_main(completion, NO, nil);
+                             }
                          }];
 }
 

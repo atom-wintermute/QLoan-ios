@@ -12,18 +12,28 @@
 
 #import "QLAuthViewController.h"
 
+@interface FirstViewController ()
+
+@property (nonatomic) BOOL isUserAuthorized;
+
+@end
+
 @implementation FirstViewController
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    UIStoryboard *authStoryboard = [UIStoryboard storyboardWithName:@"Auth"
-                                                            bundle:[NSBundle mainBundle]];
-    UIViewController *authViewController = [authStoryboard instantiateViewControllerWithIdentifier:NSStringFromClass([QLAuthViewController class])];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:authViewController];
-    [self presentViewController:navigationController
-                        animated:NO
-                      completion:nil];
+    if (!self.isUserAuthorized) {
+        UIStoryboard *authStoryboard = [UIStoryboard storyboardWithName:@"Auth"
+                                                                bundle:[NSBundle mainBundle]];
+        UIViewController *authViewController = [authStoryboard instantiateViewControllerWithIdentifier:NSStringFromClass([QLAuthViewController class])];
+        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:authViewController];
+        [self presentViewController:navigationController
+                            animated:NO
+                          completion:^{
+                              self.isUserAuthorized = YES;
+                          }];
+    }
 }
 
 - (void)viewDidLoad {
