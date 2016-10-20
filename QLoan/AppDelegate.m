@@ -45,7 +45,7 @@
     [[UINavigationBar appearance] setBackgroundImage:[UIImage new]
                                        forBarMetrics:UIBarMetricsDefault];
     [[UINavigationBar appearance] setShadowImage:[UIImage new]];
-    [[UINavigationBar appearance] setBackgroundColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setBackgroundColor:[UIColor clearColor]];
     [[UINavigationBar appearance] setTranslucent:YES];
     [[UINavigationBar appearance] setBackIndicatorImage:[UIImage new]];
     [[UINavigationBar appearance] setBackIndicatorTransitionMaskImage:[UIImage new]];

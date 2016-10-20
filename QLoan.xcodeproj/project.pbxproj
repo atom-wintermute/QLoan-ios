@@ -51,6 +51,8 @@
 		D89655541DB8260C00DE4C66 /* SF-UI-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D89655501DB8260C00DE4C66 /* SF-UI-Display-Bold.otf */; };
 		D89655581DB8319900DE4C66 /* QLRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89655571DB8319900DE4C66 /* QLRegisterViewController.m */; };
 		D89655601DB8C39900DE4C66 /* QLAuthAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = D896555F1DB8C39900DE4C66 /* QLAuthAssembly.m */; };
+		D8D98BB41DB9085300F3FB01 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8D98BB31DB9085300F3FB01 /* Profile.storyboard */; };
+		D8D98BB81DB908A200F3FB01 /* QLProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D98BB71DB908A200F3FB01 /* QLProfileViewController.m */; };
 		D8F9D7AF1DAFD2FC000371CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F9D7AE1DAFD2FC000371CA /* main.m */; };
 		D8F9D7B21DAFD2FC000371CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F9D7B11DAFD2FC000371CA /* AppDelegate.m */; };
 		D8F9D7B51DAFD2FC000371CA /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F9D7B41DAFD2FC000371CA /* FirstViewController.m */; };
@@ -165,6 +167,9 @@
 		D89655571DB8319900DE4C66 /* QLRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLRegisterViewController.m; path = Classes/UserInterface/Controllers/Register/QLRegisterViewController.m; sourceTree = "<group>"; };
 		D896555E1DB8C39900DE4C66 /* QLAuthAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLAuthAssembly.h; path = Classes/UserInterface/Controllers/Auth/Assembly/QLAuthAssembly.h; sourceTree = "<group>"; };
 		D896555F1DB8C39900DE4C66 /* QLAuthAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLAuthAssembly.m; path = Classes/UserInterface/Controllers/Auth/Assembly/QLAuthAssembly.m; sourceTree = "<group>"; };
+		D8D98BB31DB9085300F3FB01 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = Resources/Storyboards/Profile.storyboard; sourceTree = "<group>"; };
+		D8D98BB61DB908A200F3FB01 /* QLProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLProfileViewController.h; path = Classes/UserInterface/Controllers/Profile/QLProfileViewController.h; sourceTree = "<group>"; };
+		D8D98BB71DB908A200F3FB01 /* QLProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLProfileViewController.m; path = Classes/UserInterface/Controllers/Profile/QLProfileViewController.m; sourceTree = "<group>"; };
 		D8F9D7AA1DAFD2FC000371CA /* QLoan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QLoan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8F9D7AE1DAFD2FC000371CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D8F9D7B01DAFD2FC000371CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -612,6 +617,7 @@
 				D89655411DB822AD00DE4C66 /* Auth.storyboard */,
 				D896553D1DB8227400DE4C66 /* Main.storyboard */,
 				D896553E1DB8227400DE4C66 /* LaunchScreen.storyboard */,
+				D8D98BB31DB9085300F3FB01 /* Profile.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -620,6 +626,7 @@
 			isa = PBXGroup;
 			children = (
 				D89655471DB8238300DE4C66 /* Auth */,
+				D8D98BB51DB9087900F3FB01 /* Profile */,
 				D89655551DB8317800DE4C66 /* Register */,
 			);
 			name = Controllers;
@@ -663,6 +670,15 @@
 				D896555F1DB8C39900DE4C66 /* QLAuthAssembly.m */,
 			);
 			name = Assembly;
+			sourceTree = "<group>";
+		};
+		D8D98BB51DB9087900F3FB01 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D8D98BB61DB908A200F3FB01 /* QLProfileViewController.h */,
+				D8D98BB71DB908A200F3FB01 /* QLProfileViewController.m */,
+			);
+			name = Profile;
 			sourceTree = "<group>";
 		};
 		D8F9D7A11DAFD2FC000371CA = {
@@ -846,6 +862,7 @@
 			files = (
 				D89655521DB8260C00DE4C66 /* SF-UI-Display-Regular.otf in Resources */,
 				D896553F1DB8227400DE4C66 /* Main.storyboard in Resources */,
+				D8D98BB41DB9085300F3FB01 /* Profile.storyboard in Resources */,
 				D89655401DB8227400DE4C66 /* LaunchScreen.storyboard in Resources */,
 				D89655511DB8260C00DE4C66 /* SF-UI-Display-Semibold.otf in Resources */,
 				D89655531DB8260C00DE4C66 /* SF-UI-Display-Medium.otf in Resources */,
@@ -926,6 +943,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EFF73971DB3B870004873A6 /* QLAuthorizationRequestConfiguration.m in Sources */,
+				D8D98BB81DB908A200F3FB01 /* QLProfileViewController.m in Sources */,
 				9EFF73FD1DB4206F004873A6 /* QLCoreComponentsAssembly.m in Sources */,
 				9EFF73D11DB3D969004873A6 /* QLPaymentSchedule.m in Sources */,
 				9EFF73E51DB40AE6004873A6 /* QLSortMethodParser.m in Sources */,
