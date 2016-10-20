@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface QLKeychainStorage : NSObject
+#import "QLStorage.h"
+
+@interface QLKeychainStorage : NSObject <QLStorage>
 
 - (NSString *)tokenForCurrentUser;
 

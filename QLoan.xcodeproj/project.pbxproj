@@ -140,6 +140,7 @@
 		9EFF74051DB42925004873A6 /* QLTestAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLTestAssembly.m; path = Classes/UserInterface/TestAssembly/QLTestAssembly.m; sourceTree = "<group>"; };
 		9EFF74351DB4C376004873A6 /* borrowerOrderStub.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = borrowerOrderStub.json; path = Stubs/borrowerOrderStub.json; sourceTree = "<group>"; };
 		D1BE5B8284ED646854EA9B23 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D835BCB31DB94E1500F2FF0F /* QLStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = QLStorage.h; path = Classes/BusinessLogic/CoreCompnents/KeychainStorage/QLStorage.h; sourceTree = "<group>"; };
 		D84F78351DB8C9CA00394F1D /* QLBankAuthService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = QLBankAuthService.h; path = Classes/BusinessLogic/Services/BankServices/AuthService/QLBankAuthService.h; sourceTree = "<group>"; };
 		D84F78361DB8CBC500394F1D /* QLBankAuthServiceImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLBankAuthServiceImplementation.h; path = Classes/BusinessLogic/Services/BankServices/AuthService/QLBankAuthServiceImplementation.h; sourceTree = "<group>"; };
 		D84F78371DB8CBC500394F1D /* QLBankAuthServiceImplementation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLBankAuthServiceImplementation.m; path = Classes/BusinessLogic/Services/BankServices/AuthService/QLBankAuthServiceImplementation.m; sourceTree = "<group>"; };
@@ -449,6 +450,7 @@
 		9EFF73DE1DB4033A004873A6 /* KeychainStorage */ = {
 			isa = PBXGroup;
 			children = (
+				D835BCB31DB94E1500F2FF0F /* QLStorage.h */,
 				9EFF73DF1DB40363004873A6 /* QLKeychainStorage.h */,
 				9EFF73E01DB40363004873A6 /* QLKeychainStorage.m */,
 			);

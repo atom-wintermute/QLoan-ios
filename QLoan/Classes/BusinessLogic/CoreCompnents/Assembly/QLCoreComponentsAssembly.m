@@ -74,7 +74,7 @@
 
 #pragma mark - Приватные методы
 
-- (QLKeychainStorage *)keychainStorage {
+- (id<QLStorage>)keychainStorage {
     return [TyphoonDefinition withClass:[QLKeychainStorage class]];
 }
 

@@ -32,6 +32,26 @@ static NSString *const QLSessionString = @"session";
 					 account:sessionString];
 }
 
+#pragma mark - QLStorage
+
+- (void)storeObject:(id)object
+             forKey:(NSString *)key {
+    [SAMKeychain setPassword:object
+                  forService:[self sessionServiceName]
+                     account:key];
+}
+
+- (id)loadObjectForKey:(NSString *)key {
+    return [SAMKeychain passwordForService:[self sessionServiceName]
+                                   account:key];
+}
+
+- (void)removeObjectForKey:(NSString *)key {
+    [SAMKeychain deletePasswordForService:[self sessionServiceName]
+                                  account:key];
+}
+
+
 #pragma mark - Вспомогательные методы
 
 - (NSString *)sessionServiceName {

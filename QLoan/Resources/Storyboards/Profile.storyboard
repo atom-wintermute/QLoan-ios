@@ -48,41 +48,54 @@
                                     <constraint firstAttribute="height" constant="140" id="Ueb-on-G0f"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uvI-I3-pUK" userLabel="profileImage">
-                                <color key="backgroundColor" red="0.80784313730000001" green="0.12941176469999999" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="125" id="F83-A6-Hf0"/>
-                                    <constraint firstAttribute="width" constant="125" id="HqM-2o-ycm"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="62"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max Nikulin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9Z-Yt-Joo">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Max Nikulin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9Z-Yt-Joo">
+                                <frame key="frameInset" minY="223" width="375" height="24"/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Sbm-ds-4zh">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Sbm-ds-4zh">
+                                <frame key="frameInset" minY="267" width="375" height="400"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4eD-uz-bU4" userLabel="profileContainerView">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uvI-I3-pUK" userLabel="profileImage">
+                                        <color key="backgroundColor" red="0.80784313730000001" green="0.12941176469999999" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="62"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OA8-Tr-7of">
+                                        <frame key="frameInset" minX="45" minY="45" width="34" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="uvI-I3-pUK" secondAttribute="trailing" id="43a-Lb-ziU"/>
+                                    <constraint firstItem="uvI-I3-pUK" firstAttribute="top" secondItem="4eD-uz-bU4" secondAttribute="top" id="F2I-mi-tYR"/>
+                                    <constraint firstAttribute="width" constant="124" id="JZc-I2-jNu"/>
+                                    <constraint firstItem="uvI-I3-pUK" firstAttribute="leading" secondItem="4eD-uz-bU4" secondAttribute="leading" id="Pt7-Ov-pdA"/>
+                                    <constraint firstAttribute="bottom" secondItem="uvI-I3-pUK" secondAttribute="bottom" id="dUN-zO-4c0"/>
+                                    <constraint firstAttribute="height" constant="124" id="xLe-rL-fp2"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="eXX-s6-gsp" firstAttribute="top" secondItem="Sbm-ds-4zh" secondAttribute="bottom" id="0LX-7Z-etK"/>
                             <constraint firstAttribute="trailing" secondItem="v5g-u8-s4w" secondAttribute="trailing" id="9Eu-Fx-kzx"/>
                             <constraint firstAttribute="trailing" secondItem="Sbm-ds-4zh" secondAttribute="trailing" id="9MF-dw-A8d"/>
+                            <constraint firstItem="4eD-uz-bU4" firstAttribute="centerX" secondItem="ati-P4-HIR" secondAttribute="centerX" id="C7n-tR-tP9"/>
+                            <constraint firstItem="4eD-uz-bU4" firstAttribute="top" secondItem="v5g-u8-s4w" secondAttribute="bottom" constant="-62" id="FCD-3Z-ZKD"/>
                             <constraint firstAttribute="trailing" secondItem="h9Z-Yt-Joo" secondAttribute="trailing" id="FpG-mK-fCW"/>
                             <constraint firstItem="v5g-u8-s4w" firstAttribute="top" secondItem="ati-P4-HIR" secondAttribute="top" id="Idg-sX-lH1"/>
                             <constraint firstItem="v5g-u8-s4w" firstAttribute="leading" secondItem="ati-P4-HIR" secondAttribute="leading" id="KWP-mK-NaN"/>
                             <constraint firstItem="h9Z-Yt-Joo" firstAttribute="leading" secondItem="ati-P4-HIR" secondAttribute="leading" id="bvY-zx-DIX"/>
-                            <constraint firstItem="uvI-I3-pUK" firstAttribute="top" secondItem="v5g-u8-s4w" secondAttribute="bottom" constant="-62" id="cmY-iH-XNU"/>
                             <constraint firstItem="Sbm-ds-4zh" firstAttribute="leading" secondItem="ati-P4-HIR" secondAttribute="leading" id="deO-KL-gse"/>
                             <constraint firstItem="Sbm-ds-4zh" firstAttribute="top" secondItem="h9Z-Yt-Joo" secondAttribute="bottom" constant="20" id="eMM-KB-dDu"/>
-                            <constraint firstItem="h9Z-Yt-Joo" firstAttribute="top" secondItem="uvI-I3-pUK" secondAttribute="bottom" constant="20" id="sE3-UE-NYH"/>
-                            <constraint firstItem="uvI-I3-pUK" firstAttribute="centerX" secondItem="ati-P4-HIR" secondAttribute="centerX" id="wRl-Ez-0C0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aQv-c1-s4T"/>
