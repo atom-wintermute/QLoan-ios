@@ -60,6 +60,7 @@
                                  id responseData = [NSJSONSerialization JSONObjectWithData:response.data
                                                                                    options:kNilOptions
                                                                                      error:nil];
+                                 NSLog(@"responseData = %@", responseData);
                                  QLBankUserInfo *bankUserInfo = [self.mapper mapBankUserInfoFromResponseObject:responseData];
                                  [self.storage storeObject:bankUserInfo
                                                     forKey:QLBankUserInfoKey];

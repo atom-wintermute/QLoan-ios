@@ -10,19 +10,21 @@
 
 #import "QLProfileDataCellObject.h"
 
+#import "QLBankUserInfo.h"
+
 @implementation QLProfileCellFactoryImplementation
 
-- (NSArray *)cellObjects {
+- (NSArray *)cellObjectsFrom:(QLBankUserInfo *)bankUserInfo {
     NSMutableArray *cellObjects = [NSMutableArray new];
     
     QLProfileDataCellObject *phoneCellObject = [QLProfileDataCellObject new];
     phoneCellObject.nameString = @"Телефон";
-    phoneCellObject.valueString = @"+7 (964) 999-99-99";
+    phoneCellObject.valueString = [NSString stringWithFormat:@"+ 7 %@", bankUserInfo.phoneNumber];
     [cellObjects addObject:phoneCellObject];
     
     QLProfileDataCellObject *emailCellObject = [QLProfileDataCellObject new];
     emailCellObject.nameString = @"Почта";
-    emailCellObject.valueString = @"victor@yandex.ru";
+    emailCellObject.valueString = bankUserInfo.email;
     [cellObjects addObject:emailCellObject];
     
     QLProfileDataCellObject *loanTakenCellObject = [QLProfileDataCellObject new];

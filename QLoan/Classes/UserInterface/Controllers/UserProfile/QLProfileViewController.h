@@ -16,6 +16,7 @@
  */
 @interface QLProfileViewController : UIViewController
 
+@property (nonatomic, weak) IBOutlet UILabel *usernameLabel;
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 
 @property (nonatomic, strong) id<QLBankAuthService> bankAuthService;

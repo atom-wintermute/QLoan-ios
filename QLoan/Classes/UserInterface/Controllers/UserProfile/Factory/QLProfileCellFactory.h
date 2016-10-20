@@ -6,11 +6,13 @@
 //  Copyright © 2016 Rambler&Co. All rights reserved.
 //
 
+@class QLBankUserInfo;
+
 /**
  Протокол фабрики ячеек экрана профиля
  */
 @protocol QLProfileCellFactory <NSObject>
 
-- (NSArray *)cellObjects;
+- (NSArray *)cellObjectsFrom:(QLBankUserInfo *)bankUserInfo;
 
 @end

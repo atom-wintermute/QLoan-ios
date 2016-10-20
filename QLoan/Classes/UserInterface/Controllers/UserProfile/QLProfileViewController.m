@@ -13,6 +13,8 @@
 
 #import "QLProfileDataDisplayManager.h"
 
+#import "QLBankUserInfo.h"
+
 @interface QLProfileViewController () <UITableViewDelegate>
 
 @property (nonatomic, strong) QLProfileDataDisplayManager *dataDisplayManager;
@@ -24,9 +26,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self configureView];
+}
+
+#pragma mark - Приватные методы
+
+- (void)configureView {
     QLBankUserInfo *bankUserInfo = [self.bankAuthService obtainCurrentUserData];
     
-    NSArray *cellObjects = [self.cellFactory cellObjects];
+    self.usernameLabel.text = [NSString stringWithFormat:@"%@ %@", bankUserInfo.firstName, bankUserInfo.secondName];
+    
+    
+    NSArray *cellObjects = [self.cellFactory cellObjectsFrom:bankUserInfo];
     self.dataDisplayManager =  [[QLProfileDataDisplayManager alloc] initWithInputData:cellObjects
                                                       andConversionToCellObjectsBlock:^id(id dataObject) {
                                                           return dataObject;
