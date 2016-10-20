@@ -23,7 +23,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    if (!self.isUserAuthorized) {
+    if (!self.isUserAuthorized && NO) {
         UIStoryboard *authStoryboard = [UIStoryboard storyboardWithName:@"Auth"
                                                                 bundle:[NSBundle mainBundle]];
         UIViewController *authViewController = [authStoryboard instantiateViewControllerWithIdentifier:NSStringFromClass([QLAuthViewController class])];
