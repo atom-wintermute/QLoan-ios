@@ -37,6 +37,7 @@
 		9EFF74061DB42925004873A6 /* QLTestAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF74051DB42925004873A6 /* QLTestAssembly.m */; };
 		9EFF74361DB4C376004873A6 /* borrowerOrderStub.json in Resources */ = {isa = PBXBuildFile; fileRef = 9EFF74351DB4C376004873A6 /* borrowerOrderStub.json */; };
 		B052863E11C552DF193FDF47 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1BE5B8284ED646854EA9B23 /* libPods.a */; };
+		D835BCB51DB96EF400F2FF0F /* SF-UI-Display-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = D835BCB41DB96EF400F2FF0F /* SF-UI-Display-Light.otf */; };
 		D84F78381DB8CBC500394F1D /* QLBankAuthServiceImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = D84F78371DB8CBC500394F1D /* QLBankAuthServiceImplementation.m */; };
 		D84F783D1DB8DA7A00394F1D /* QLBankAuthRequestFactoryImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = D84F783C1DB8DA7A00394F1D /* QLBankAuthRequestFactoryImplementation.m */; };
 		D84F78411DB8E0EB00394F1D /* QLBankServiceConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D84F78401DB8E0EB00394F1D /* QLBankServiceConstants.m */; };
@@ -141,6 +142,7 @@
 		9EFF74351DB4C376004873A6 /* borrowerOrderStub.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = borrowerOrderStub.json; path = Stubs/borrowerOrderStub.json; sourceTree = "<group>"; };
 		D1BE5B8284ED646854EA9B23 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D835BCB31DB94E1500F2FF0F /* QLStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = QLStorage.h; path = Classes/BusinessLogic/CoreCompnents/KeychainStorage/QLStorage.h; sourceTree = "<group>"; };
+		D835BCB41DB96EF400F2FF0F /* SF-UI-Display-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Display-Light.otf"; path = "Resources/Fonts/SF-UI-Display-Light.otf"; sourceTree = "<group>"; };
 		D84F78351DB8C9CA00394F1D /* QLBankAuthService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = QLBankAuthService.h; path = Classes/BusinessLogic/Services/BankServices/AuthService/QLBankAuthService.h; sourceTree = "<group>"; };
 		D84F78361DB8CBC500394F1D /* QLBankAuthServiceImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLBankAuthServiceImplementation.h; path = Classes/BusinessLogic/Services/BankServices/AuthService/QLBankAuthServiceImplementation.h; sourceTree = "<group>"; };
 		D84F78371DB8CBC500394F1D /* QLBankAuthServiceImplementation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLBankAuthServiceImplementation.m; path = Classes/BusinessLogic/Services/BankServices/AuthService/QLBankAuthServiceImplementation.m; sourceTree = "<group>"; };
@@ -648,6 +650,7 @@
 			isa = PBXGroup;
 			children = (
 				D896554C1DB8260000DE4C66 /* QLFonts.h */,
+				D835BCB41DB96EF400F2FF0F /* SF-UI-Display-Light.otf */,
 				D896554D1DB8260C00DE4C66 /* SF-UI-Display-Semibold.otf */,
 				D896554E1DB8260C00DE4C66 /* SF-UI-Display-Regular.otf */,
 				D896554F1DB8260C00DE4C66 /* SF-UI-Display-Medium.otf */,
@@ -867,6 +870,7 @@
 				D8D98BB41DB9085300F3FB01 /* Profile.storyboard in Resources */,
 				D89655401DB8227400DE4C66 /* LaunchScreen.storyboard in Resources */,
 				D89655511DB8260C00DE4C66 /* SF-UI-Display-Semibold.otf in Resources */,
+				D835BCB51DB96EF400F2FF0F /* SF-UI-Display-Light.otf in Resources */,
 				D89655531DB8260C00DE4C66 /* SF-UI-Display-Medium.otf in Resources */,
 				D89655421DB822AD00DE4C66 /* Auth.storyboard in Resources */,
 				D8F9D7BD1DAFD2FC000371CA /* Assets.xcassets in Resources */,
