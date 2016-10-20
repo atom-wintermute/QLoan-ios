@@ -72,11 +72,13 @@
             }];
 }
 
-#pragma mark - Приватные методы
+#pragma mark - Хранилище данных
 
 - (id<QLStorage>)keychainStorage {
     return [TyphoonDefinition withClass:[QLKeychainStorage class]];
 }
+
+#pragma mark - Приватные методы
 
 - (NSURLSession *)session {
 	return [NSURLSession sharedSession];

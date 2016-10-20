@@ -13,11 +13,17 @@
 #import "EntityConstants.h"
 
 @class QLKeychainStorage;
+@class QLRegistrationRequestConfiguration;
+@class QLAuthorizationRequestConfiguration;
 
 @interface QLRequestFactory : NSObject
 
 @property (nonatomic, strong) AFHTTPRequestSerializer *requestSerializer;
 @property (nonatomic, strong) QLKeychainStorage *keychainStorage;
+
+- (NSURLRequest *)requestForRegistrationWithConfiguration:(QLRegistrationRequestConfiguration *)configuration;
+
+- (NSURLRequest *)requestForAuthorizationWithConfiguration:(QLAuthorizationRequestConfiguration *)configuration;
 
 - (NSURLRequest *)requestForBorrowerOrdersWithPage:(NSUInteger)page
 										sortMethod:(QLSortMethod)sortMethod

@@ -11,12 +11,19 @@
 @implementation QLMapper
 
 - (QLBorrowerOrder *)mapBorrowerOrderFromResponseObject:(id)responseObject {
-	
 	EKObjectMapping *mapping = [self.mappingProvider borrowerOrderMapping];
 	QLBorrowerOrder *order = [EKMapper objectFromExternalRepresentation:responseObject
 															withMapping:mapping];
 	
 	return order;
+}
+
+- (QLSessionCredentials *)mapSessionCredentialsFromResponseObject:(id)responseObject {
+	EKObjectMapping *mapping = [self.mappingProvider authorizationHeaderMapping];
+	QLSessionCredentials *credentials = [EKMapper objectFromExternalRepresentation:responseObject
+																	   withMapping:mapping];
+	
+	return credentials;
 }
 
 @end

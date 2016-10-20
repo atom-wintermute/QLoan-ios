@@ -9,27 +9,47 @@
 #import "QLKeychainStorage.h"
 #import <SAMKeychain.h>
 
+static NSString *const QLLocalAuthorizationLoginKey = @"local.authorization.login";
+static NSString *const QLLocalAuthorizationPasswordKey = @"local.authorization.password";
+static NSString *const QLLocalAuthorizationUidKey = @"local.authorization.uid";
+static NSString *const QLLocalAuthorizationAccessTokenKey = @"local.authorization.accessToken";
+static NSString *const QLLocalAuthorizationClientKey = @"local.authorization.client";
 static NSString *const QLSessionServiceName = @"keychainservice.session";
 static NSString *const QLSessionString = @"session";
 
 @implementation QLKeychainStorage
 
-- (NSString *)tokenForCurrentUser {
-	NSString *sessionServiceName = [self sessionServiceName];
-	NSString *sessionString = [self sessionString];
+- (QLAuthorizationRequestConfiguration *)authorizationConfigurationForCurrentUser {
+	QLAuthorizationRequestConfiguration *configuration = [QLAuthorizationRequestConfiguration new];
+	configuration.login = [self loadObjectForKey:QLLocalAuthorizationLoginKey];
+	configuration.password = [self loadObjectForKey:QLLocalAuthorizationPasswordKey];
 	
-	NSString *token = [SAMKeychain passwordForService:sessionServiceName
-											  account:sessionString];
-	return token;
+	return configuration;
 }
 
-- (void)setTokenForCurrentUser:(NSString *)token {
-	NSString *sessionServiceName = [self sessionServiceName];
-	NSString *sessionString = [self sessionString];
+- (void)setAuthorizationConfiguration:(QLAuthorizationRequestConfiguration *)configuration {
+	[self storeObject:configuration.login
+			   forKey:QLLocalAuthorizationLoginKey];
+	[self storeObject:configuration.password
+			   forKey:QLLocalAuthorizationPasswordKey];
+}
+
+- (QLSessionCredentials *)credentialsForCurrentUser {
+	QLSessionCredentials *credentials = [QLSessionCredentials new];
+	credentials.accessToken = [self loadObjectForKey:QLLocalAuthorizationAccessTokenKey];
+	credentials.uid = [self loadObjectForKey:QLLocalAuthorizationUidKey];
+	credentials.client = [self loadObjectForKey:QLLocalAuthorizationClientKey];
 	
-	[SAMKeychain setPassword:token
-				  forService:sessionServiceName
-					 account:sessionString];
+	return credentials;
+}
+
+- (void)setCredentialsForCurrentUser:(QLSessionCredentials *)credentials {
+	[self storeObject:credentials.accessToken
+			   forKey:QLLocalAuthorizationAccessTokenKey];
+	[self storeObject:credentials.uid
+			   forKey:QLLocalAuthorizationUidKey];
+	[self storeObject:credentials.client
+			   forKey:QLLocalAuthorizationClientKey];
 }
 
 #pragma mark - QLStorage

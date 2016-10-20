@@ -7,6 +7,7 @@
 //
 
 #import "QLMappingProvider.h"
+#import "QLSessionCredentials.h"
 
 @implementation QLMappingProvider
 
@@ -20,6 +21,17 @@
 										   @"loanAmount" : @"loanAmount",
 										   @"perecentage" : @"perecentage",
 										   @"penalty" : @"penalty"
+										   }];
+	}];
+}
+
+- (EKObjectMapping *)authorizationHeaderMapping {
+	return [EKObjectMapping mappingForClass:[QLSessionCredentials class] withBlock:^(EKObjectMapping *mapping) {
+		
+		[mapping mapFieldsFromDictionary:@{
+										   @"client": @"client",
+										   @"uid" : @"uid",
+										   @"access_token" : @"accessToken"
 										   }];
 	}];
 }

@@ -9,11 +9,17 @@
 #import <Foundation/Foundation.h>
 
 #import "QLStorage.h"
+#import "QLSessionCredentials.h"
+#import "QLAuthorizationRequestConfiguration.h"
 
 @interface QLKeychainStorage : NSObject <QLStorage>
 
-- (NSString *)tokenForCurrentUser;
+- (QLSessionCredentials *)credentialsForCurrentUser;
 
-- (void)setTokenForCurrentUser:(NSString *)token;
+- (void)setCredentialsForCurrentUser:(QLSessionCredentials *)credentials;
+
+- (QLAuthorizationRequestConfiguration *)authorizationConfigurationForCurrentUser;
+
+- (void)setAuthorizationConfiguration:(QLAuthorizationRequestConfiguration *)configuration;
 
 @end

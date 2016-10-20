@@ -8,11 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "QLMappingProvider.h"
+#import "QLSessionCredentials.h"
 
 @interface QLMapper : NSObject
 
 @property (nonatomic, strong) QLMappingProvider *mappingProvider;
 
 - (QLBorrowerOrder *)mapBorrowerOrderFromResponseObject:(id)responseObject;
+
+- (QLSessionCredentials *)mapSessionCredentialsFromResponseObject:(id)responseObject;
 
 @end

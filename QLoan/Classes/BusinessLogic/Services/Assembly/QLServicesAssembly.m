@@ -10,6 +10,7 @@
 #import "QLCoreComponentsAssembly.h"
 #import "QLBorrowerOrderService.h"
 #import "QLBankAuthServiceImplementation.h"
+#import "QLAuthorizationService.h"
 
 @interface QLServicesAssembly()
 
@@ -25,6 +26,21 @@
 			{
 				[definition injectProperty:@selector(serializer)
 									  with:[self.coreAssembly jsonSerializer]];
+				[definition injectProperty:@selector(networkClient)
+									  with:[self.coreAssembly networkClient]];
+				[definition injectProperty:@selector(mapper)
+									  with:[self.coreAssembly mapper]];
+				[definition injectProperty:@selector(requestFactory)
+									  with:[self.coreAssembly requestFactory]];
+			}];
+}
+
+- (QLAuthorizationService *)authorizationService {
+	return [TyphoonDefinition withClass:[QLAuthorizationService class]
+						  configuration:^(TyphoonDefinition *definition)
+			{
+				[definition injectProperty:@selector(storage)
+									  with:[self.coreAssembly keychainStorage]];
 				[definition injectProperty:@selector(networkClient)
 									  with:[self.coreAssembly networkClient]];
 				[definition injectProperty:@selector(mapper)

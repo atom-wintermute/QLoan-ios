@@ -15,4 +15,6 @@
 
 - (EKObjectMapping *)borrowerOrderMapping;
 
+- (EKObjectMapping *)authorizationHeaderMapping;
+
 @end

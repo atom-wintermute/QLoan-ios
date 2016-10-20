@@ -9,8 +9,32 @@
 #import "QLRequestFactory.h"
 #import "QLKeychainStorage.h"
 #import "QLSortMethodParser.h"
+#import "QLRegistrationRequestConfiguration.h"
+#import "QLAuthorizationRequestConfiguration.h"
 
 @implementation QLRequestFactory
+
+- (NSURLRequest *)requestForRegistrationWithConfiguration:(QLRegistrationRequestConfiguration *)configuration {
+	NSDictionary *dictionary = @{
+								 @"login" : configuration.login,
+								 @"password" : configuration.password,
+								 @"password_confirmation" : configuration.password,
+								 @"first_name" : configuration.firstName,
+								 @"last_name" : configuration.lastName,
+								 @"parent_name" : configuration.parentName
+								 };
+	return [self postRequestWithPath:@"auth/"
+						  parameters:dictionary];
+}
+
+- (NSURLRequest *)requestForAuthorizationWithConfiguration:(QLAuthorizationRequestConfiguration *)configuration {
+	NSDictionary *dictionary = @{
+								 @"login" : configuration.login,
+								 @"password" : configuration.password
+								 };
+	return [self postRequestWithPath:@"auth/sign_in/"
+						  parameters:dictionary];
+}
 
 - (NSURLRequest *)requestForBorrowerOrdersWithPage:(NSUInteger)page
 										sortMethod:(QLSortMethod)sortMethod
@@ -38,7 +62,7 @@
 - (NSURLRequest *)getRequestWithPath:(NSString *)path
 						  parameters:(NSDictionary *)parameters
 {
-	[self configureHeadersWithToken];
+	[self configureHeadersWithCredentials];
 	return [self.requestSerializer requestWithMethod:QLGetRequestMethodKey
 										   URLString:[self urlStringWithPath:path]
 										  parameters:parameters
@@ -48,7 +72,7 @@
 - (NSURLRequest *)postRequestWithPath:(NSString *)path
 						   parameters:(NSDictionary *)parameters
 {
-	[self configureHeadersWithToken];
+	[self configureHeadersWithCredentials];
 	return [self.requestSerializer requestWithMethod:QLPostRequestMethodKey
 										   URLString:[self urlStringWithPath:path]
 										  parameters:parameters
@@ -58,7 +82,7 @@
 - (NSURLRequest *)putRequestWithPath:(NSString *)path
 						  parameters:(NSDictionary *)parameters
 {
-	[self configureHeadersWithToken];
+	[self configureHeadersWithCredentials];
 	return [self.requestSerializer requestWithMethod:QLPutRequestMethodKey
 										   URLString:[self urlStringWithPath:path]
 										  parameters:parameters
@@ -71,15 +95,12 @@
 	return [[NSURL URLWithString:path relativeToURL:baseUrl] absoluteString];
 }
 
-- (BOOL)configureHeadersWithToken {
-	NSString *token = [self.keychainStorage tokenForCurrentUser];
+- (void)configureHeadersWithCredentials {
+	QLSessionCredentials *credentials = [self.keychainStorage credentialsForCurrentUser];
 	
-	if (!token) {
-		return NO;
-	}
-	
-	[self.requestSerializer setValue:token forHTTPHeaderField:QLHeaderTokenKey];
-	return YES;
+	[self.requestSerializer setValue:credentials.accessToken forHTTPHeaderField:QLHeaderTokenKey];
+	[self.requestSerializer setValue:credentials.uid forHTTPHeaderField:QLHeaderUidKey];
+	[self.requestSerializer setValue:credentials.client forHTTPHeaderField:QLHeaderClientKey];
 }
 
 @end

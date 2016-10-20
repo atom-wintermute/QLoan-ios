@@ -29,9 +29,9 @@
 		if (error == nil) {
 			id responseObject = [strongSelf.serializer jsonObjectFromResponse:response];
 			QLBorrowerOrder *order = [strongSelf.mapper mapBorrowerOrderFromResponseObject:responseObject];
-			completion(order, nil);
+			run_block_on_main(completion, order, nil);
 		} else {
-			completion(nil, error);
+			run_block_on_main(completion, nil, error);
 		}
 	};
 	
