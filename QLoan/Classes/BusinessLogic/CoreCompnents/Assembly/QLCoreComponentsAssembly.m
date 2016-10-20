@@ -78,7 +78,6 @@
 	return [TyphoonDefinition withClass:[QLChallengedNetworkClient class]];
 }
 
-
 #pragma mark - Хранилище данных
 
 - (id<QLStorage>)keychainStorage {

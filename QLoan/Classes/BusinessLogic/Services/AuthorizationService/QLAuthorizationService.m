@@ -54,6 +54,7 @@
 	QLNetworkCompletion networkCompletion = ^(QLServerResponse *response, NSError *error) {
 		__strong typeof (self) strongSelf = weakSelf;
 		if (error == nil) {
+			
 			if ([response.response respondsToSelector:@selector(allHeaderFields)]) {
 				NSDictionary *dictionary = [response.response allHeaderFields];
 				
