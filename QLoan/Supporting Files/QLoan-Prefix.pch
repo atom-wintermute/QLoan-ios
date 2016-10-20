@@ -1,0 +1,22 @@
+//
+//  QLoan-Prefix.pch
+//  QLoan
+//
+//  Created by Nikulin Maksim on 20/10/16.
+//  Copyright © 2016 Rambler&Co. All rights reserved.
+//
+
+#ifndef QLoan_Prefix_pch
+#define QLoan_Prefix_pch
+
+#ifdef __OBJC__
+
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+
+    #import "ServicesConstants.h"
+    #import "QLBankServiceConstants.h"
+
+#endif
+
+#endif /* QLoan_Prefix_pch */

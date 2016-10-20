@@ -21,7 +21,7 @@
             <objects>
                 <navigationController id="U8e-nV-q2t" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="1E2-69-ZUO">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1E2-69-ZUO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -186,6 +186,8 @@
                         <barButtonItem key="backBarButtonItem" title="Назад" id="vR7-Kh-IzT"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="loginTextField" destination="g4Q-fr-eK8" id="OJa-KL-07F"/>
+                        <outlet property="passwordTextField" destination="Z29-Gw-Ixf" id="lwV-Fk-SDf"/>
                         <segue destination="E90-cf-Cju" kind="show" identifier="registerSegue" id="BIH-wM-I05"/>
                     </connections>
                 </viewController>

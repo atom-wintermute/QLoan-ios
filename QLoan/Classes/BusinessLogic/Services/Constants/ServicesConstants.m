@@ -12,6 +12,7 @@ NSString * const QLGetRequestMethodKey = @"GET";
 NSString * const QLPostRequestMethodKey = @"PUT";
 NSString * const QLPutRequestMethodKey = @"POST";
 
+NSString * const QLBankServerBasePath = @"https://openfightsgate.open.ru/boplatform-deploy/3.4/QLoan/";
 NSString * const QLLocalServerBasePath = @"http://www.baseserver.path";
 
 NSString * const QLHeaderTokenKey = @"token";

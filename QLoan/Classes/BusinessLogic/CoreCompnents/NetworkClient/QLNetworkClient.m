@@ -13,7 +13,7 @@
 
 - (void)sendRequest:(NSURLRequest *)request
 		 completion:(QLNetworkCompletion)completion {
-	
+    NSAssert(request != nil, @"NSURLRequest не должен быть пустым");
 	NSURLSessionDataTask *dataTask = [self.session dataTaskWithRequest:request
 													 completionHandler:^(NSData *data,
 																		 NSURLResponse *response,

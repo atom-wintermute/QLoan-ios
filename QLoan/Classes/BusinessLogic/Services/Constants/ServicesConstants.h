@@ -44,6 +44,7 @@ extern NSString * const QLGetRequestMethodKey;
 extern NSString * const QLPostRequestMethodKey;
 extern NSString * const QLPutRequestMethodKey;
 
+extern NSString * const QLBankServerBasePath;
 extern NSString * const QLLocalServerBasePath;
 
 extern NSString * const QLHeaderTokenKey;

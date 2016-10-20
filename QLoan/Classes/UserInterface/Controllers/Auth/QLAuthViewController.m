@@ -24,7 +24,14 @@ static NSString * const QLAuthRegisterSegue = @"registerSegue";
 }
 
 - (void)loginButtonWasPressed:(id)sender {
+    NSString *loginString = self.loginTextField.text;
+    NSString *passwordString = self.passwordTextField.text;
     
+    [self.bankAuthService loginWithLogin:loginString
+                                password:passwordString
+                              completion:^(BOOL success, NSError *error) {
+                                  
+                              }];
 }
 
 - (void)registerButtonWasPressed:(id)sender {

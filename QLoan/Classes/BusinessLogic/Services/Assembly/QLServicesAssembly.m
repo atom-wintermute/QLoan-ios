@@ -35,7 +35,13 @@
 }
 
 - (id<QLBankAuthService>)bankAuthService {
-    return [TyphoonDefinition withClass:[QLBankAuthServiceImplementation class]];
+    return [TyphoonDefinition withClass:[QLBankAuthServiceImplementation class]
+                          configuration:^(TyphoonDefinition *definition) {
+                              [definition injectProperty:@selector(networkClient)
+                                                    with:[self.coreAssembly networkClient]];
+                              [definition injectProperty:@selector(requestFactory)
+                                                    with:[self.coreAssembly bankAuthRequestFactory]];
+                          }];
 }
 
 @end

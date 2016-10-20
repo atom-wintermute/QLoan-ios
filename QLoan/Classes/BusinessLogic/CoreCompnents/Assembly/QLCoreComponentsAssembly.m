@@ -9,7 +9,11 @@
 #import <AFNetworking/AFURLResponseSerialization.h>
 #import "QLCoreComponentsAssembly.h"
 
+#import "QLBankAuthRequestFactoryImplementation.h"
+
 @implementation QLCoreComponentsAssembly
+
+#pragma mark - Маппинг
 
 - (QLMapper *)mapper {
 	return [TyphoonDefinition withClass:[QLMapper class]
@@ -24,6 +28,8 @@
 	return [TyphoonDefinition withClass:[QLMappingProvider class]];
 }
 
+#pragma mark - Сериализаторы
+
 - (QLJSONSerializer *)jsonSerializer {
 	return [TyphoonDefinition withClass:[QLJSONSerializer class]
 						  configuration:^(TyphoonDefinition *definition)
@@ -34,14 +40,7 @@
 	
 }
 
-- (QLNetworkClient *)networkClient {
-	return [TyphoonDefinition withClass:[QLNetworkClient class]
-						  configuration:^(TyphoonDefinition *definition)
-			{
-				[definition injectProperty:@selector(session)
-									  with:[self session]];
-			}];
-}
+#pragma mark - Фабрики запросов
 
 - (QLRequestFactory *)requestFactory {
 	return [TyphoonDefinition withClass:[QLRequestFactory class]
@@ -54,12 +53,33 @@
 			}];
 }
 
+- (id<QLBankAuthRequestFactory>)bankAuthRequestFactory {
+    return [TyphoonDefinition withClass:[QLBankAuthRequestFactoryImplementation class]
+                          configuration:^(TyphoonDefinition *definition) {
+                              [definition injectProperty:@selector(requestSerializer)
+                                                    with:[AFHTTPRequestSerializer new]];
+                          }];
+}
+
+#pragma mark - Сетевой клиент
+
+- (QLNetworkClient *)networkClient {
+    return [TyphoonDefinition withClass:[QLNetworkClient class]
+                          configuration:^(TyphoonDefinition *definition)
+            {
+                [definition injectProperty:@selector(session)
+                                      with:[self session]];
+            }];
+}
+
+#pragma mark - Приватные методы
+
 - (QLKeychainStorage *)keychainStorage {
-	return [TyphoonDefinition withClass:[QLKeychainStorage class]];
+    return [TyphoonDefinition withClass:[QLKeychainStorage class]];
 }
 
 - (NSURLSession *)session {
-	return [NSURLSession new];
+	return [NSURLSession sharedSession];
 }
 
 @end

@@ -10,6 +10,13 @@
 
 #import "QLBankAuthService.h"
 
+@protocol QLBankAuthRequestFactory;
+
+@class QLNetworkClient;
+
 @interface QLBankAuthServiceImplementation : NSObject <QLBankAuthService>
+
+@property (nonatomic, strong) QLNetworkClient *networkClient;
+@property (nonatomic, strong) id<QLBankAuthRequestFactory> requestFactory;
 
 @end
