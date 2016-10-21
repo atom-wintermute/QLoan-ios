@@ -10,6 +10,8 @@
 
 #import "ServicesConstants.h"
 
+@protocol QLStorage;
+
 @class QLRegistrationRequestConfiguration;
 @class QLAuthorizationRequestConfiguration;
 @class QLBorrowerOrder;
@@ -24,7 +26,7 @@
 @property (nonatomic, strong) QLNetworkClient *networkClient;
 @property (nonatomic, strong) QLMapper *mapper;
 @property (nonatomic, strong) QLRequestFactory *requestFactory;
-@property (nonatomic, strong) QLKeychainStorage *storage;
+@property (nonatomic, strong) id<QLStorage> storage;
 @property (nonatomic, strong) QLJSONSerializer *serializer;
 
 /**

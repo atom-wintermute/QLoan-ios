@@ -14,12 +14,4 @@
 
 @interface QLKeychainStorage : NSObject <QLStorage>
 
-- (QLSessionCredentials *)credentialsForCurrentUser;
-
-- (void)setCredentialsForCurrentUser:(QLSessionCredentials *)credentials;
-
-- (QLAuthorizationRequestConfiguration *)authorizationConfigurationForCurrentUser;
-
-- (void)setAuthorizationConfiguration:(QLAuthorizationRequestConfiguration *)configuration;
-
 @end
