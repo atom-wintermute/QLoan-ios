@@ -9,6 +9,7 @@
 #import "QLAuthViewController.h"
 
 #import "QLBankAuthService.h"
+#import "QLBankCardService.h"
 
 static NSString * const QLAuthRegisterSegue = @"registerSegue";
 
@@ -35,6 +36,7 @@ static NSString * const QLAuthRegisterSegue = @"registerSegue";
                                   if (success) {
                                       // сразу обновляем данные для пользователя
                                       [self.bankAuthService updateCurrentUserDataWithCompletion:nil];
+                                      [self.bankCardService updateBankCardsWithCompletion:nil];
                                       [self.presentingViewController dismissViewControllerAnimated:YES
                                                                                         completion:nil];
                                   } else {

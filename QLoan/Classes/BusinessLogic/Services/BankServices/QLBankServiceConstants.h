@@ -10,6 +10,7 @@
 
 extern NSString * const QLBankAuthenticate;
 extern NSString * const QLBankGetUser;
+extern NSString * const QLBankGetBindings;
 
 #pragma mark - Параметры запросов
 

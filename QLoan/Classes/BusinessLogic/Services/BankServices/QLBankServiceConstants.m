@@ -12,6 +12,7 @@
 
 NSString * const QLBankAuthenticate = @"authenticate.do";
 NSString * const QLBankGetUser = @"getUser.do";
+NSString * const QLBankGetBindings = @"getBindings.do";
 
 #pragma mark - Параметры запросов
 

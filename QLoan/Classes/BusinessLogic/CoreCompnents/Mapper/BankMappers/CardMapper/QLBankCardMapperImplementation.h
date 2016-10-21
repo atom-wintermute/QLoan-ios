@@ -1,5 +1,5 @@
 //
-//  QLBankMappingProvider.h
+//  QLBankCardMapperImplementation.h
 //  QLoan
 //
 //  Created by Nikulin Maksim on 21/10/16.
@@ -8,10 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@class EKObjectMapping;
+#import "QLBankCardMapper.h"
 
-@interface QLBankMappingProvider : NSObject
-
-+ (EKObjectMapping *)bankUserInfo;
+@interface QLBankCardMapperImplementation : NSObject <QLBankCardMapper>
 
 @end

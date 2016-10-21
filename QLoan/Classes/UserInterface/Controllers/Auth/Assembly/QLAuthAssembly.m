@@ -19,6 +19,8 @@
                           configuration:^(TyphoonDefinition *definition) {
                               [definition injectProperty:@selector(bankAuthService)
                                                     with:[self.serviceAssembly bankAuthService]];
+                              [definition injectProperty:@selector(bankCardService)
+                                                    with:[self.serviceAssembly bankCardService]];
                           }];
 }
 

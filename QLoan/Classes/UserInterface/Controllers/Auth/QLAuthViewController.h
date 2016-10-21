@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @protocol QLBankAuthService;
+@protocol QLBankCardService;
 
 /**
  Экран авторизации/регистрации пользователя
@@ -20,6 +21,7 @@
 @property (nonatomic, weak) IBOutlet UIButton *loginButton;
 
 @property (nonatomic, strong) id<QLBankAuthService> bankAuthService;
+@property (nonatomic, strong) id<QLBankCardService> bankCardService;
 
 - (IBAction)forgetPasswordButtonWasPressed:(id)sender;
 
