@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol QLLendCellFactory;
+
 @interface QLLendViewController : UIViewController
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
+
+@property (nonatomic, strong) id<QLLendCellFactory> cellFactory;
 
 @end

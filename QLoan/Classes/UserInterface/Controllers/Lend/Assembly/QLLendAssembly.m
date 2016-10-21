@@ -10,24 +10,22 @@
 
 #import "QLLendViewController.h"
 
+#import "QLLendCellFactoryImplementation.h"
+
 @implementation QLLendAssembly
 
 - (QLLendViewController *)lendViewController {
     return [TyphoonDefinition withClass:[QLLendViewController class]
                           configuration:^(TyphoonDefinition *definition) {
-//                              [definition injectProperty:@selector(bankAuthService)
-//                                                    with:[self.serviceAssembly bankAuthService]];
-//                              [definition injectProperty:@selector(bankCardService)
-//                                                    with:[self.serviceAssembly bankCardService]];
-//                              [definition injectProperty:@selector(cellFactory)
-//                                                    with:[self profileCellFactory]];
+                              [definition injectProperty:@selector(cellFactory)
+                                                    with:[self lendCellFactory]];
                           }];
 }
 
 #pragma mark - Вспомогательные методы
 
-//- (id<QLProfileCellFactory>)profileCellFactory {
-//    return [TyphoonDefinition withClass:[QLProfileCellFactoryImplementation class]];
-//}
+- (id<QLLendCellFactory>)lendCellFactory {
+    return [TyphoonDefinition withClass:[QLLendCellFactoryImplementation class]];
+}
 
 @end

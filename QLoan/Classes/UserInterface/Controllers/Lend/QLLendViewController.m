@@ -8,6 +8,8 @@
 
 #import "QLLendViewController.h"
 
+#import "QLLendCellFactory.h"
+
 #import "QLLendDataDisplayManager.h"
 
 @interface QLLendViewController () <UITableViewDelegate>
@@ -27,7 +29,7 @@
 - (void)configureView {
     [self.view layoutIfNeeded];
     
-    NSArray *cellObjects = @[];
+    NSArray *cellObjects = [self.cellFactory cellObjects];
     self.dataDisplayManager =  [[QLLendDataDisplayManager alloc] initWithInputData:cellObjects
                                                    andConversionToCellObjectsBlock:^id(id dataObject) {
                                                        return dataObject;

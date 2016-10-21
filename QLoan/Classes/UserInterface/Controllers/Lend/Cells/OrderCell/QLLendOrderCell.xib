@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-UI-Display-Light.otf">
+            <string>SFUIDisplay-Light</string>
+        </array>
+        <array key="SF-UI-Display-Regular.otf">
+            <string>SFUIDisplay-Regular</string>
+        </array>
+        <array key="SF-UI-Display-Semibold.otf">
+            <string>SFUIDisplay-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="64" id="KGk-i7-Jjw" customClass="QLLendOrderCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="63"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RaL-Qw-UEw">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="46" id="DhD-qO-6b1"/>
+                            <constraint firstAttribute="width" constant="46" id="mDq-ZF-hAh"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QIO-mA-ChS" userLabel="ratingViewContainer">
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C0y-Dz-REQ" userLabel="fakeImageView">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="17"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9.5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGP-R4-eB2" userLabel="ratingLabel">
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.70196078429999997" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="C0y-Dz-REQ" secondAttribute="bottom" id="G6x-vH-txY"/>
+                            <constraint firstItem="C0y-Dz-REQ" firstAttribute="leading" secondItem="QIO-mA-ChS" secondAttribute="leading" id="K0x-kO-9fn"/>
+                            <constraint firstAttribute="trailing" secondItem="C0y-Dz-REQ" secondAttribute="trailing" id="S1a-k4-xyD"/>
+                            <constraint firstItem="C0y-Dz-REQ" firstAttribute="top" secondItem="QIO-mA-ChS" secondAttribute="top" id="ZeD-d9-JbR"/>
+                            <constraint firstItem="NGP-R4-eB2" firstAttribute="leading" secondItem="QIO-mA-ChS" secondAttribute="leading" id="cwb-lF-E4j"/>
+                            <constraint firstItem="NGP-R4-eB2" firstAttribute="centerY" secondItem="QIO-mA-ChS" secondAttribute="centerY" id="k31-6W-wgt"/>
+                            <constraint firstAttribute="width" constant="34" id="q2O-Oz-ZRo"/>
+                            <constraint firstAttribute="trailing" secondItem="NGP-R4-eB2" secondAttribute="trailing" id="qgo-19-VMk"/>
+                            <constraint firstAttribute="height" constant="34" id="xO2-3c-gUu"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Htw-jb-yms" userLabel="dataViewContainer">
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 000 ₽ /" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHP-1P-h2h">
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
+                                <color key="textColor" red="0.2196078431372549" green="0.2196078431372549" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,5% в месяц " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q6Y-BH-37D">
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="14"/>
+                                <color key="textColor" red="0.2196078431372549" green="0.2196078431372549" blue="0.2196078431372549" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Надежда Владимировна Ю. " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pS-Pw-1hR">
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Light" family="SF UI Display" pointSize="12"/>
+                                <color key="textColor" red="0.2196078431372549" green="0.2196078431372549" blue="0.2196078431372549" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Q6Y-BH-37D" firstAttribute="leading" secondItem="fHP-1P-h2h" secondAttribute="trailing" constant="4" id="B2f-MK-c7o"/>
+                            <constraint firstItem="Q6Y-BH-37D" firstAttribute="centerY" secondItem="fHP-1P-h2h" secondAttribute="centerY" id="CPF-yD-mC7"/>
+                            <constraint firstItem="4pS-Pw-1hR" firstAttribute="leading" secondItem="Htw-jb-yms" secondAttribute="leading" id="Lxf-fi-eCR"/>
+                            <constraint firstItem="fHP-1P-h2h" firstAttribute="leading" secondItem="Htw-jb-yms" secondAttribute="leading" id="rct-xZ-Tpl"/>
+                            <constraint firstItem="fHP-1P-h2h" firstAttribute="top" secondItem="Htw-jb-yms" secondAttribute="top" id="tbn-41-Fjh"/>
+                            <constraint firstAttribute="bottom" secondItem="4pS-Pw-1hR" secondAttribute="bottom" id="y2u-NK-drf"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="CjL-X3-C5O" userLabel="arrowImageView">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="4wi-Lv-rc5"/>
+                            <constraint firstAttribute="width" constant="8" id="myU-ND-W0d"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="separator" translatesAutoresizingMaskIntoConstraints="NO" id="5o8-1m-FrV" userLabel="separatorImageView">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="crB-l3-cvV"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="5o8-1m-FrV" secondAttribute="bottom" id="1Ls-tE-CmG"/>
+                    <constraint firstAttribute="bottom" secondItem="Htw-jb-yms" secondAttribute="bottom" constant="13" id="2kM-49-eOW"/>
+                    <constraint firstItem="Htw-jb-yms" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="4fJ-hc-YNm"/>
+                    <constraint firstAttribute="trailing" secondItem="5o8-1m-FrV" secondAttribute="trailing" id="85N-MQ-TE0"/>
+                    <constraint firstItem="CjL-X3-C5O" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="BW1-m3-sec"/>
+                    <constraint firstAttribute="bottom" secondItem="RaL-Qw-UEw" secondAttribute="bottom" constant="8" id="G7s-Pr-qKb"/>
+                    <constraint firstItem="5o8-1m-FrV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="SKV-Wo-QZj"/>
+                    <constraint firstAttribute="trailing" secondItem="Htw-jb-yms" secondAttribute="trailing" constant="40" id="Y2S-nI-poH"/>
+                    <constraint firstItem="RaL-Qw-UEw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="Y94-08-22g"/>
+                    <constraint firstItem="Htw-jb-yms" firstAttribute="leading" secondItem="RaL-Qw-UEw" secondAttribute="trailing" constant="16" id="c6G-Ob-gNc"/>
+                    <constraint firstItem="QIO-mA-ChS" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="hwO-9D-PJM"/>
+                    <constraint firstAttribute="trailing" secondItem="CjL-X3-C5O" secondAttribute="trailing" constant="16" id="pGG-Lh-IMF"/>
+                    <constraint firstItem="RaL-Qw-UEw" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="sBz-Ds-Imc"/>
+                    <constraint firstItem="RaL-Qw-UEw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="26" id="upi-dK-s50"/>
+                    <constraint firstItem="QIO-mA-ChS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="w8B-W4-Fw0"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="nameLabel" destination="4pS-Pw-1hR" id="09n-kt-9E8"/>
+                <outlet property="percentLabel" destination="Q6Y-BH-37D" id="apu-bX-jdM"/>
+                <outlet property="photoImageView" destination="RaL-Qw-UEw" id="n01-Hd-xOb"/>
+                <outlet property="ratingLabel" destination="NGP-R4-eB2" id="AN0-VT-k2V"/>
+                <outlet property="sumLabel" destination="fHP-1P-h2h" id="wyr-dc-wfZ"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="65"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="arrow" width="8" height="14"/>
+        <image name="separator" width="1" height="1"/>
+    </resources>
+</document>
