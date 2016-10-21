@@ -173,6 +173,7 @@
 		D89655541DB8260C00DE4C66 /* SF-UI-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D89655501DB8260C00DE4C66 /* SF-UI-Display-Bold.otf */; };
 		D89655581DB8319900DE4C66 /* QLRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89655571DB8319900DE4C66 /* QLRegisterViewController.m */; };
 		D89655601DB8C39900DE4C66 /* QLAuthAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = D896555F1DB8C39900DE4C66 /* QLAuthAssembly.m */; };
+		D8D626CC1DBADC9C007FFB3F /* QLVerifyPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D626CB1DBADC9C007FFB3F /* QLVerifyPhoneViewController.m */; };
 		D8D98BB41DB9085300F3FB01 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8D98BB31DB9085300F3FB01 /* Profile.storyboard */; };
 		D8F9D7AF1DAFD2FC000371CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F9D7AE1DAFD2FC000371CA /* main.m */; };
 		D8F9D7B21DAFD2FC000371CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F9D7B11DAFD2FC000371CA /* AppDelegate.m */; };
@@ -463,6 +464,8 @@
 		D89655571DB8319900DE4C66 /* QLRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLRegisterViewController.m; path = Classes/UserInterface/Controllers/Register/QLRegisterViewController.m; sourceTree = "<group>"; };
 		D896555E1DB8C39900DE4C66 /* QLAuthAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLAuthAssembly.h; path = Classes/UserInterface/Controllers/Auth/Assembly/QLAuthAssembly.h; sourceTree = "<group>"; };
 		D896555F1DB8C39900DE4C66 /* QLAuthAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLAuthAssembly.m; path = Classes/UserInterface/Controllers/Auth/Assembly/QLAuthAssembly.m; sourceTree = "<group>"; };
+		D8D626CA1DBADC9C007FFB3F /* QLVerifyPhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLVerifyPhoneViewController.h; path = Classes/UserInterface/Controllers/VerifyPhone/QLVerifyPhoneViewController.h; sourceTree = "<group>"; };
+		D8D626CB1DBADC9C007FFB3F /* QLVerifyPhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLVerifyPhoneViewController.m; path = Classes/UserInterface/Controllers/VerifyPhone/QLVerifyPhoneViewController.m; sourceTree = "<group>"; };
 		D8D98BB31DB9085300F3FB01 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = Resources/Storyboards/Profile.storyboard; sourceTree = "<group>"; };
 		D8F9D7AA1DAFD2FC000371CA /* QLoan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QLoan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8F9D7AE1DAFD2FC000371CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -1466,6 +1469,7 @@
 				D82077451DBAAE8E00253637 /* RegisterPhone */,
 				D89655551DB8317800DE4C66 /* Register */,
 				D86147AA1DBAA4900018D19C /* TabBar */,
+				D8D626C91DBADC75007FFB3F /* VerifyPhone */,
 				D8D98BB51DB9087900F3FB01 /* UserProfile */,
 			);
 			name = Controllers;
@@ -1510,6 +1514,15 @@
 				D896555F1DB8C39900DE4C66 /* QLAuthAssembly.m */,
 			);
 			name = Assembly;
+			sourceTree = "<group>";
+		};
+		D8D626C91DBADC75007FFB3F /* VerifyPhone */ = {
+			isa = PBXGroup;
+			children = (
+				D8D626CA1DBADC9C007FFB3F /* QLVerifyPhoneViewController.h */,
+				D8D626CB1DBADC9C007FFB3F /* QLVerifyPhoneViewController.m */,
+			);
+			name = VerifyPhone;
 			sourceTree = "<group>";
 		};
 		D8D98BB51DB9087900F3FB01 /* UserProfile */ = {
@@ -1875,6 +1888,7 @@
 				9EFF73F11DB416AE004873A6 /* QLJSONSerializer.m in Sources */,
 				9EFF73B51DB3C9C5004873A6 /* ServicesConstants.m in Sources */,
 				D861479D1DBA9FA00018D19C /* QLGetAssembly.m in Sources */,
+				D8D626CC1DBADC9C007FFB3F /* QLVerifyPhoneViewController.m in Sources */,
 				D835BD1E1DB9830C00F2FF0F /* QLInMemoryStorage.m in Sources */,
 				D835BD101DB97B0700F2FF0F /* QLProfileViewController.m in Sources */,
 				D86147B71DBAA6D90018D19C /* QLMyOrdersAssembly.m in Sources */,

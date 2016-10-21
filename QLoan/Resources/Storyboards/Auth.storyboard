@@ -100,15 +100,100 @@
                             <constraint firstItem="D4M-UK-juc" firstAttribute="top" secondItem="Vbl-jv-RxD" secondAttribute="bottom" constant="16" id="wB2-rG-ypn"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ZRZ-4D-teL"/>
+                    <navigationItem key="navigationItem" id="ZRZ-4D-teL">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="rzR-XY-WKs"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="getCodeButton" destination="luf-yi-Txu" id="NWc-vn-10g"/>
                         <outlet property="phoneTextField" destination="Dkk-7Y-MaY" id="cEf-j9-2Q3"/>
+                        <segue destination="Xmf-9L-L2d" kind="show" identifier="verifyCodeSegue" id="t0A-ey-ynW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sB5-jY-bwO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1305" y="-640"/>
+        </scene>
+        <!--Verify Phone View Controller-->
+        <scene sceneID="rEd-Hn-Na1">
+            <objects>
+                <viewController id="Xmf-9L-L2d" customClass="QLVerifyPhoneViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iC1-WR-d6z"/>
+                        <viewControllerLayoutGuide type="bottom" id="ah0-dn-Rwn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I1F-Oe-fGi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Проверочный код в SMS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNn-Pc-dnM">
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Мы отправили код, который требуется ввести в поле ниже, для успешной регистрации вас, как нового клиента Q-Loan." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nxh-VP-pEZ">
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="14"/>
+                                <color key="textColor" red="0.21960784310000001" green="0.21960784310000001" blue="0.21960784310000001" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ia9-Zg-ABd">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="GQf-Z0-Kg8"/>
+                                </constraints>
+                                <color key="textColor" red="0.21960784310000001" green="0.21960784310000001" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oUU-jd-a0t" userLabel="separator">
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="7Ml-YR-QgC"/>
+                                    <constraint firstAttribute="width" constant="160" id="fLa-7B-Yb1"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8OW-AB-dQl">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="VgB-on-SPT"/>
+                                </constraints>
+                                <state key="normal" title="SMS не пришло? Отправить еще раз">
+                                    <color key="titleColor" red="0.0078431372550000003" green="0.71372549019999998" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BwI-FQ-KTo">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="ihK-jm-0BC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                <state key="normal" title="Зарегистрироваться">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Nxh-VP-pEZ" firstAttribute="top" secondItem="aNn-Pc-dnM" secondAttribute="bottom" constant="16" id="8Px-i3-1nA"/>
+                            <constraint firstItem="aNn-Pc-dnM" firstAttribute="centerX" secondItem="I1F-Oe-fGi" secondAttribute="centerX" id="A43-Ch-8iH"/>
+                            <constraint firstItem="Ia9-Zg-ABd" firstAttribute="centerX" secondItem="I1F-Oe-fGi" secondAttribute="centerX" id="ADW-2i-fXW"/>
+                            <constraint firstItem="oUU-jd-a0t" firstAttribute="top" secondItem="Ia9-Zg-ABd" secondAttribute="bottom" constant="8" id="Aji-Di-ge3"/>
+                            <constraint firstItem="aNn-Pc-dnM" firstAttribute="top" secondItem="iC1-WR-d6z" secondAttribute="bottom" constant="22" id="E25-tN-p27"/>
+                            <constraint firstItem="BwI-FQ-KTo" firstAttribute="top" secondItem="8OW-AB-dQl" secondAttribute="bottom" constant="54.5" id="MQ5-Bf-WVo"/>
+                            <constraint firstItem="8OW-AB-dQl" firstAttribute="top" secondItem="oUU-jd-a0t" secondAttribute="bottom" constant="18" id="NKi-Ue-VX8"/>
+                            <constraint firstItem="Ia9-Zg-ABd" firstAttribute="top" secondItem="Nxh-VP-pEZ" secondAttribute="bottom" constant="72" id="Qrx-7t-oIC"/>
+                            <constraint firstAttribute="trailing" secondItem="BwI-FQ-KTo" secondAttribute="trailing" id="aoJ-oJ-OfO"/>
+                            <constraint firstItem="oUU-jd-a0t" firstAttribute="centerX" secondItem="I1F-Oe-fGi" secondAttribute="centerX" id="e0Y-aj-mNs"/>
+                            <constraint firstAttribute="trailing" secondItem="Nxh-VP-pEZ" secondAttribute="trailing" constant="21" id="jFu-QQ-gd8"/>
+                            <constraint firstItem="BwI-FQ-KTo" firstAttribute="leading" secondItem="I1F-Oe-fGi" secondAttribute="leading" id="mEP-8t-1e1"/>
+                            <constraint firstItem="8OW-AB-dQl" firstAttribute="centerX" secondItem="I1F-Oe-fGi" secondAttribute="centerX" id="nUH-nC-aBG"/>
+                            <constraint firstItem="Nxh-VP-pEZ" firstAttribute="leading" secondItem="I1F-Oe-fGi" secondAttribute="leading" constant="21" id="rWh-6G-txf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="codeTextField" destination="Ia9-Zg-ABd" id="FW3-Kx-BSi"/>
+                        <outlet property="registerButton" destination="BwI-FQ-KTo" id="hBe-co-CSg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3q2-nZ-hoX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2081" y="-640"/>
         </scene>
         <!--Auth View Controller-->
         <scene sceneID="7Fn-9K-gLS">

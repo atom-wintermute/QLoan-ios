@@ -26,7 +26,8 @@
 #pragma mark - IBActions
 
 - (void)getCodeButtonPressed:(id)sender {
-    
+    [self performSegueWithIdentifier:@"verifyCodeSegue"
+                              sender:self];
 }
 
 #pragma mark - Приватные методы
