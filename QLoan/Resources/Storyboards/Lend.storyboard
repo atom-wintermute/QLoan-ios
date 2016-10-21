@@ -44,6 +44,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
                                 <state key="normal" title="Запросить займ"/>
+                                <connections>
+                                    <segue destination="Ied-7X-s2y" kind="show" id="u3U-Sl-APq"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9yD-Of-Fqz">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -68,6 +71,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h3Q-bs-vRX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="570" y="115"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Xe6-7D-zFT">
+            <objects>
+                <viewController id="Ied-7X-s2y" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tTf-Hf-HTS"/>
+                        <viewControllerLayoutGuide type="bottom" id="GfA-XS-cet"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sNo-WE-Vla">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Ee-3f-hXp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1286" y="115"/>
         </scene>
     </scenes>
 </document>
