@@ -9,6 +9,7 @@
 #pragma mark - End-point-ы
 
 extern NSString * const QLBankAuthenticate;
+extern NSString * const QLBankGetUser;
 
 #pragma mark - Параметры запросов
 
@@ -19,3 +20,8 @@ extern NSString * const QLBankAuthenticate;
 extern NSString * const QLBankErrorCode;
 extern NSString * const QLBankSessionId;
 extern NSString * const QLBankUserId;
+
+#pragma mark - Ключи данных в хранилищах
+
+extern NSString * const QLBankSessionIdKey;
+extern NSString * const QLBankUserInfoKey;

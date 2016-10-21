@@ -5,8 +5,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="SF-UI-Display-Regular.otf">
-            <string>SFUIDisplay-Regular</string>
+        <array key="SF-UI-Display-Light.otf">
+            <string>SFUIDisplay-Light</string>
+        </array>
+        <array key="SF-UI-Display-Semibold.otf">
+            <string>SFUIDisplay-Semibold</string>
         </array>
     </customFonts>
     <scenes>
@@ -14,6 +17,7 @@
         <scene sceneID="1OQ-Th-kf5">
             <objects>
                 <navigationController navigationBarHidden="YES" id="vFx-7T-Uqk" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="KkW-ib-Rqr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -42,22 +46,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v5g-u8-s4w">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v5g-u8-s4w" userLabel="headerView">
                                 <color key="backgroundColor" red="0.0" green="0.70196078431372544" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="140" id="Ueb-on-G0f"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Max Nikulin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9Z-Yt-Joo">
-                                <frame key="frameInset" minY="223" width="375" height="24"/>
-                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Sbm-ds-4zh">
-                                <frame key="frameInset" minY="267" width="375" height="400"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4eD-uz-bU4" userLabel="profileContainerView">
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uvI-I3-pUK" userLabel="profileImage">
@@ -68,26 +62,62 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OA8-Tr-7of">
-                                        <frame key="frameInset" minX="45" minY="45" width="34" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iRC-Cz-OdZ" userLabel="ratingViewContainer">
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OA8-Tr-7of">
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="17"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sng-LX-Cgs" userLabel="ratingLabel">
+                                                <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="15"/>
+                                                <color key="textColor" red="0.0" green="0.70196078431372544" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="OA8-Tr-7of" secondAttribute="trailing" id="3YW-Xg-Ben"/>
+                                            <constraint firstAttribute="width" constant="34" id="7KT-Yz-FLL"/>
+                                            <constraint firstAttribute="bottom" secondItem="OA8-Tr-7of" secondAttribute="bottom" id="D4O-rN-N5w"/>
+                                            <constraint firstItem="OA8-Tr-7of" firstAttribute="top" secondItem="iRC-Cz-OdZ" secondAttribute="top" id="DeY-vL-dNy"/>
+                                            <constraint firstItem="OA8-Tr-7of" firstAttribute="leading" secondItem="iRC-Cz-OdZ" secondAttribute="leading" id="IZG-mK-Pum"/>
+                                            <constraint firstAttribute="height" constant="34" id="PwF-sQ-ajp"/>
+                                            <constraint firstAttribute="trailing" secondItem="sng-LX-Cgs" secondAttribute="trailing" id="Uf6-Uu-Fe8"/>
+                                            <constraint firstItem="sng-LX-Cgs" firstAttribute="leading" secondItem="iRC-Cz-OdZ" secondAttribute="leading" id="XeP-NQ-QZu"/>
+                                            <constraint firstItem="sng-LX-Cgs" firstAttribute="centerY" secondItem="iRC-Cz-OdZ" secondAttribute="centerY" id="a7Q-5A-vqe"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="iRC-Cz-OdZ" firstAttribute="top" secondItem="4eD-uz-bU4" secondAttribute="top" constant="3" id="1cI-XV-twi"/>
                                     <constraint firstAttribute="trailing" secondItem="uvI-I3-pUK" secondAttribute="trailing" id="43a-Lb-ziU"/>
                                     <constraint firstItem="uvI-I3-pUK" firstAttribute="top" secondItem="4eD-uz-bU4" secondAttribute="top" id="F2I-mi-tYR"/>
                                     <constraint firstAttribute="width" constant="124" id="JZc-I2-jNu"/>
                                     <constraint firstItem="uvI-I3-pUK" firstAttribute="leading" secondItem="4eD-uz-bU4" secondAttribute="leading" id="Pt7-Ov-pdA"/>
+                                    <constraint firstAttribute="trailing" secondItem="iRC-Cz-OdZ" secondAttribute="trailing" id="Yee-D3-TXA"/>
                                     <constraint firstAttribute="bottom" secondItem="uvI-I3-pUK" secondAttribute="bottom" id="dUN-zO-4c0"/>
                                     <constraint firstAttribute="height" constant="124" id="xLe-rL-fp2"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max Nikulin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9Z-Yt-Joo">
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Light" family="SF UI Display" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Sbm-ds-4zh">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="eXX-s6-gsp" firstAttribute="top" secondItem="Sbm-ds-4zh" secondAttribute="bottom" id="0LX-7Z-etK"/>
                             <constraint firstAttribute="trailing" secondItem="v5g-u8-s4w" secondAttribute="trailing" id="9Eu-Fx-kzx"/>
                             <constraint firstAttribute="trailing" secondItem="Sbm-ds-4zh" secondAttribute="trailing" id="9MF-dw-A8d"/>
+                            <constraint firstItem="h9Z-Yt-Joo" firstAttribute="top" secondItem="4eD-uz-bU4" secondAttribute="bottom" constant="20" id="9Za-Bc-h9l"/>
                             <constraint firstItem="4eD-uz-bU4" firstAttribute="centerX" secondItem="ati-P4-HIR" secondAttribute="centerX" id="C7n-tR-tP9"/>
                             <constraint firstItem="4eD-uz-bU4" firstAttribute="top" secondItem="v5g-u8-s4w" secondAttribute="bottom" constant="-62" id="FCD-3Z-ZKD"/>
                             <constraint firstAttribute="trailing" secondItem="h9Z-Yt-Joo" secondAttribute="trailing" id="FpG-mK-fCW"/>
@@ -100,6 +130,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="aQv-c1-s4T"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="headerView" destination="v5g-u8-s4w" id="33z-zM-Fvj"/>
+                        <outlet property="tableView" destination="Sbm-ds-4zh" id="QbR-Wz-Tcu"/>
+                        <outlet property="usernameLabel" destination="h9Z-Yt-Joo" id="w74-Ja-4uo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bKX-uf-6aO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

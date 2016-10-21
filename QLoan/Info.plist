@@ -55,6 +55,7 @@
 	</array>
 	<key>UIAppFonts</key>
 	<array>
+		<string>SF-UI-Display-Light.otf</string>
 		<string>SF-UI-Display-Regular.otf</string>
 		<string>SF-UI-Display-Medium.otf</string>
 		<string>SF-UI-Display-Semibold.otf</string>

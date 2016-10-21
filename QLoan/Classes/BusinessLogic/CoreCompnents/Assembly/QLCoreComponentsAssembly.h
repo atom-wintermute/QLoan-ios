@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <Typhoon.h>
 
+@protocol QLBankAuthMapper;
+
 #import "QLMapper.h"
 #import "QLMappingProvider.h"
 #import "QLJSONSerializer.h"
@@ -26,6 +28,8 @@
 
 - (QLMappingProvider *)mappingProvider;
 
+- (id<QLBankAuthMapper>)bankAuthMapper;
+
 #pragma mark - Сериализаторы
 
 - (QLJSONSerializer *)jsonSerializer;
@@ -35,6 +39,12 @@
 - (QLRequestFactory *)requestFactory;
 
 - (id<QLBankAuthRequestFactory>)bankAuthRequestFactory;
+
+#pragma mark - Хранилище данных
+
+- (id<QLStorage>)keychainStorage;
+
+- (id<QLStorage>)inMemoryStorage;
 
 #pragma mark - Сетевой клиент
 

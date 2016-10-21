@@ -16,8 +16,10 @@ static NSString * const QLAuthRegisterSegue = @"registerSegue";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self configureAppearance];
 }
+
+#pragma mark - IBActions
 
 - (void)forgetPasswordButtonWasPressed:(id)sender {
     
@@ -31,6 +33,8 @@ static NSString * const QLAuthRegisterSegue = @"registerSegue";
                                 password:passwordString
                               completion:^(BOOL success, NSError *error) {
                                   if (success) {
+                                      // сразу обновляем данные для пользователя
+                                      [self.bankAuthService updateCurrentUserDataWithCompletion:nil];
                                       [self.presentingViewController dismissViewControllerAnimated:YES
                                                                                         completion:nil];
                                   } else {
@@ -57,6 +61,12 @@ static NSString * const QLAuthRegisterSegue = @"registerSegue";
     [self presentViewController:alertController
                        animated:YES
                      completion:nil];
+}
+
+- (void)configureAppearance {
+    [self.view layoutIfNeeded];
+    
+    [self.loginButton addGradient];
 }
 
 @end

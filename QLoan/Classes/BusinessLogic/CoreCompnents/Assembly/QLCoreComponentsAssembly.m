@@ -10,6 +10,8 @@
 #import "QLCoreComponentsAssembly.h"
 
 #import "QLBankAuthRequestFactoryImplementation.h"
+#import "QLInMemoryStorage.h"
+#import "QLBankAuthMapperImplementation.h"
 
 @implementation QLCoreComponentsAssembly
 
@@ -22,6 +24,10 @@
 				[definition injectProperty:@selector(mappingProvider)
 									  with:[self mappingProvider]];
 			}];
+}
+
+- (id<QLBankAuthMapper>)bankAuthMapper {
+    return [TyphoonDefinition withClass:[QLBankAuthMapperImplementation class]];
 }
 
 - (QLMappingProvider *)mappingProvider {
@@ -72,11 +78,20 @@
             }];
 }
 
-#pragma mark - Приватные методы
+#pragma mark - Хранилище данных
 
 - (id<QLStorage>)keychainStorage {
     return [TyphoonDefinition withClass:[QLKeychainStorage class]];
 }
+
+- (id<QLStorage>)inMemoryStorage {
+    return [TyphoonDefinition withClass:[QLInMemoryStorage class]
+                          configuration:^(TyphoonDefinition *definition) {
+                              definition.scope = TyphoonScopeSingleton;
+                          }];
+}
+
+#pragma mark - Приватные методы
 
 - (NSURLSession *)session {
 	return [NSURLSession sharedSession];

@@ -186,6 +186,7 @@
                         <barButtonItem key="backBarButtonItem" title="Назад" id="vR7-Kh-IzT"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="loginButton" destination="rcf-7i-qZT" id="1oC-FF-r3P"/>
                         <outlet property="loginTextField" destination="g4Q-fr-eK8" id="OJa-KL-07F"/>
                         <outlet property="passwordTextField" destination="Z29-Gw-Ixf" id="lwV-Fk-SDf"/>
                         <segue destination="E90-cf-Cju" kind="show" identifier="registerSegue" id="BIH-wM-I05"/>

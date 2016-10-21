@@ -22,4 +22,13 @@
 - (NSURLRequest *)requestForLoginWithLogin:(NSString *)login
                                   password:(NSString *)password;
 
+/**
+ Запрос на получение данных текущего пользователя
+ 
+ @param sessionId текущая сессия
+
+ @return запрос
+ */
+- (NSURLRequest *)requestForCurrentUserDataWithSessionId:(NSString *)sessionId;
+
 @end

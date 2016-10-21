@@ -37,6 +37,23 @@
 		9EFF74061DB42925004873A6 /* QLTestAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF74051DB42925004873A6 /* QLTestAssembly.m */; };
 		9EFF74361DB4C376004873A6 /* borrowerOrderStub.json in Resources */ = {isa = PBXBuildFile; fileRef = 9EFF74351DB4C376004873A6 /* borrowerOrderStub.json */; };
 		B052863E11C552DF193FDF47 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1BE5B8284ED646854EA9B23 /* libPods.a */; };
+		D835BCB51DB96EF400F2FF0F /* SF-UI-Display-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = D835BCB41DB96EF400F2FF0F /* SF-UI-Display-Light.otf */; };
+		D835BCCE1DB9741100F2FF0F /* RDSDataDisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BCCC1DB9741100F2FF0F /* RDSDataDisplayManager.m */; };
+		D835BCD31DB9747500F2FF0F /* NSMutableArray+RDSNilFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BCD21DB9747500F2FF0F /* NSMutableArray+RDSNilFilter.m */; };
+		D835BCD71DB974C100F2FF0F /* RDSAutoHeightCellFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BCD61DB974C100F2FF0F /* RDSAutoHeightCellFactory.m */; };
+		D835BD0F1DB97B0700F2FF0F /* QLProfileCellFactoryImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BCFF1DB97B0700F2FF0F /* QLProfileCellFactoryImplementation.m */; };
+		D835BD101DB97B0700F2FF0F /* QLProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BD001DB97B0700F2FF0F /* QLProfileViewController.m */; };
+		D835BD111DB97B0700F2FF0F /* QLProfileAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BD031DB97B0700F2FF0F /* QLProfileAssembly.m */; };
+		D835BD121DB97B0700F2FF0F /* QLProfileDataDisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BD071DB97B0700F2FF0F /* QLProfileDataDisplayManager.m */; };
+		D835BD131DB97B0700F2FF0F /* QLProfileDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BD0B1DB97B0700F2FF0F /* QLProfileDataCell.m */; };
+		D835BD141DB97B0700F2FF0F /* QLProfileDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D835BD0C1DB97B0700F2FF0F /* QLProfileDataCell.xib */; };
+		D835BD151DB97B0700F2FF0F /* QLProfileDataCellObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BD0E1DB97B0700F2FF0F /* QLProfileDataCellObject.m */; };
+		D835BD1A1DB97DCA00F2FF0F /* QLBankUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BD191DB97DCA00F2FF0F /* QLBankUserInfo.m */; };
+		D835BD1E1DB9830C00F2FF0F /* QLInMemoryStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BD1D1DB9830C00F2FF0F /* QLInMemoryStorage.m */; };
+		D835BD231DB9877200F2FF0F /* QLBankAuthMapperImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BD221DB9877200F2FF0F /* QLBankAuthMapperImplementation.m */; };
+		D835BD271DB9882D00F2FF0F /* QLBankMappingProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BD261DB9882D00F2FF0F /* QLBankMappingProvider.m */; };
+		D835BD2B1DB98F7000F2FF0F /* UIColor+QLColor.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BD2A1DB98F7000F2FF0F /* UIColor+QLColor.m */; };
+		D835BD331DB993B400F2FF0F /* UIView+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BD321DB993B400F2FF0F /* UIView+Gradient.m */; };
 		D84F78381DB8CBC500394F1D /* QLBankAuthServiceImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = D84F78371DB8CBC500394F1D /* QLBankAuthServiceImplementation.m */; };
 		D84F783D1DB8DA7A00394F1D /* QLBankAuthRequestFactoryImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = D84F783C1DB8DA7A00394F1D /* QLBankAuthRequestFactoryImplementation.m */; };
 		D84F78411DB8E0EB00394F1D /* QLBankServiceConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D84F78401DB8E0EB00394F1D /* QLBankServiceConstants.m */; };
@@ -52,7 +69,6 @@
 		D89655581DB8319900DE4C66 /* QLRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89655571DB8319900DE4C66 /* QLRegisterViewController.m */; };
 		D89655601DB8C39900DE4C66 /* QLAuthAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = D896555F1DB8C39900DE4C66 /* QLAuthAssembly.m */; };
 		D8D98BB41DB9085300F3FB01 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8D98BB31DB9085300F3FB01 /* Profile.storyboard */; };
-		D8D98BB81DB908A200F3FB01 /* QLProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D98BB71DB908A200F3FB01 /* QLProfileViewController.m */; };
 		D8F9D7AF1DAFD2FC000371CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F9D7AE1DAFD2FC000371CA /* main.m */; };
 		D8F9D7B21DAFD2FC000371CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F9D7B11DAFD2FC000371CA /* AppDelegate.m */; };
 		D8F9D7B51DAFD2FC000371CA /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F9D7B41DAFD2FC000371CA /* FirstViewController.m */; };
@@ -141,6 +157,41 @@
 		9EFF74351DB4C376004873A6 /* borrowerOrderStub.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = borrowerOrderStub.json; path = Stubs/borrowerOrderStub.json; sourceTree = "<group>"; };
 		D1BE5B8284ED646854EA9B23 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D835BCB31DB94E1500F2FF0F /* QLStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = QLStorage.h; path = Classes/BusinessLogic/CoreCompnents/KeychainStorage/QLStorage.h; sourceTree = "<group>"; };
+		D835BCB41DB96EF400F2FF0F /* SF-UI-Display-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Display-Light.otf"; path = "Resources/Fonts/SF-UI-Display-Light.otf"; sourceTree = "<group>"; };
+		D835BCCB1DB9741100F2FF0F /* RDSDataDisplayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RDSDataDisplayManager.h; path = Classes/Helpers/DataDisplayManager/RDSDataDisplayManager.h; sourceTree = "<group>"; };
+		D835BCCC1DB9741100F2FF0F /* RDSDataDisplayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RDSDataDisplayManager.m; path = Classes/Helpers/DataDisplayManager/RDSDataDisplayManager.m; sourceTree = "<group>"; };
+		D835BCCD1DB9741100F2FF0F /* RDSDataDisplayManagerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RDSDataDisplayManagerProtocol.h; path = Classes/Helpers/DataDisplayManager/RDSDataDisplayManagerProtocol.h; sourceTree = "<group>"; };
+		D835BCD11DB9747500F2FF0F /* NSMutableArray+RDSNilFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+RDSNilFilter.h"; path = "Extensions/NSArray/NSMutableArray+RDSNilFilter.h"; sourceTree = "<group>"; };
+		D835BCD21DB9747500F2FF0F /* NSMutableArray+RDSNilFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+RDSNilFilter.m"; path = "Extensions/NSArray/NSMutableArray+RDSNilFilter.m"; sourceTree = "<group>"; };
+		D835BCD51DB974C100F2FF0F /* RDSAutoHeightCellFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RDSAutoHeightCellFactory.h; path = Classes/Helpers/Nimbus/RDSAutoHeightCellFactory.h; sourceTree = "<group>"; };
+		D835BCD61DB974C100F2FF0F /* RDSAutoHeightCellFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RDSAutoHeightCellFactory.m; path = Classes/Helpers/Nimbus/RDSAutoHeightCellFactory.m; sourceTree = "<group>"; };
+		D835BCFD1DB97B0700F2FF0F /* QLProfileCellFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLProfileCellFactory.h; sourceTree = "<group>"; };
+		D835BCFE1DB97B0700F2FF0F /* QLProfileCellFactoryImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLProfileCellFactoryImplementation.h; sourceTree = "<group>"; };
+		D835BCFF1DB97B0700F2FF0F /* QLProfileCellFactoryImplementation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLProfileCellFactoryImplementation.m; sourceTree = "<group>"; };
+		D835BD001DB97B0700F2FF0F /* QLProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLProfileViewController.m; path = Classes/UserInterface/Controllers/UserProfile/QLProfileViewController.m; sourceTree = "<group>"; };
+		D835BD021DB97B0700F2FF0F /* QLProfileAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLProfileAssembly.h; sourceTree = "<group>"; };
+		D835BD031DB97B0700F2FF0F /* QLProfileAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLProfileAssembly.m; sourceTree = "<group>"; };
+		D835BD041DB97B0700F2FF0F /* QLProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLProfileViewController.h; path = Classes/UserInterface/Controllers/UserProfile/QLProfileViewController.h; sourceTree = "<group>"; };
+		D835BD061DB97B0700F2FF0F /* QLProfileDataDisplayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLProfileDataDisplayManager.h; sourceTree = "<group>"; };
+		D835BD071DB97B0700F2FF0F /* QLProfileDataDisplayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLProfileDataDisplayManager.m; sourceTree = "<group>"; };
+		D835BD0A1DB97B0700F2FF0F /* QLProfileDataCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLProfileDataCell.h; sourceTree = "<group>"; };
+		D835BD0B1DB97B0700F2FF0F /* QLProfileDataCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLProfileDataCell.m; sourceTree = "<group>"; };
+		D835BD0C1DB97B0700F2FF0F /* QLProfileDataCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QLProfileDataCell.xib; sourceTree = "<group>"; };
+		D835BD0D1DB97B0700F2FF0F /* QLProfileDataCellObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLProfileDataCellObject.h; sourceTree = "<group>"; };
+		D835BD0E1DB97B0700F2FF0F /* QLProfileDataCellObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLProfileDataCellObject.m; sourceTree = "<group>"; };
+		D835BD181DB97DCA00F2FF0F /* QLBankUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLBankUserInfo.h; path = Classes/BusinessLogic/Entity/BankEntities/UserInfo/QLBankUserInfo.h; sourceTree = "<group>"; };
+		D835BD191DB97DCA00F2FF0F /* QLBankUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLBankUserInfo.m; path = Classes/BusinessLogic/Entity/BankEntities/UserInfo/QLBankUserInfo.m; sourceTree = "<group>"; };
+		D835BD1C1DB9830C00F2FF0F /* QLInMemoryStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLInMemoryStorage.h; path = Classes/BusinessLogic/CoreCompnents/InMemoryStorage/QLInMemoryStorage.h; sourceTree = "<group>"; };
+		D835BD1D1DB9830C00F2FF0F /* QLInMemoryStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLInMemoryStorage.m; path = Classes/BusinessLogic/CoreCompnents/InMemoryStorage/QLInMemoryStorage.m; sourceTree = "<group>"; };
+		D835BD201DB9870200F2FF0F /* QLBankAuthMapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = QLBankAuthMapper.h; path = Classes/BusinessLogic/CoreCompnents/Mapper/BankMappers/QLBankAuthMapper.h; sourceTree = "<group>"; };
+		D835BD211DB9877200F2FF0F /* QLBankAuthMapperImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLBankAuthMapperImplementation.h; path = Classes/BusinessLogic/CoreCompnents/Mapper/BankMappers/QLBankAuthMapperImplementation.h; sourceTree = "<group>"; };
+		D835BD221DB9877200F2FF0F /* QLBankAuthMapperImplementation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLBankAuthMapperImplementation.m; path = Classes/BusinessLogic/CoreCompnents/Mapper/BankMappers/QLBankAuthMapperImplementation.m; sourceTree = "<group>"; };
+		D835BD251DB9882D00F2FF0F /* QLBankMappingProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLBankMappingProvider.h; path = BankMappingProvider/QLBankMappingProvider.h; sourceTree = "<group>"; };
+		D835BD261DB9882D00F2FF0F /* QLBankMappingProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLBankMappingProvider.m; path = BankMappingProvider/QLBankMappingProvider.m; sourceTree = "<group>"; };
+		D835BD291DB98F7000F2FF0F /* UIColor+QLColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+QLColor.h"; path = "Extensions/UIColor/UIColor+QLColor.h"; sourceTree = "<group>"; };
+		D835BD2A1DB98F7000F2FF0F /* UIColor+QLColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+QLColor.m"; path = "Extensions/UIColor/UIColor+QLColor.m"; sourceTree = "<group>"; };
+		D835BD311DB993B400F2FF0F /* UIView+Gradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Gradient.h"; path = "Extensions/UIView/UIView+Gradient.h"; sourceTree = "<group>"; };
+		D835BD321DB993B400F2FF0F /* UIView+Gradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Gradient.m"; path = "Extensions/UIView/UIView+Gradient.m"; sourceTree = "<group>"; };
 		D84F78351DB8C9CA00394F1D /* QLBankAuthService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = QLBankAuthService.h; path = Classes/BusinessLogic/Services/BankServices/AuthService/QLBankAuthService.h; sourceTree = "<group>"; };
 		D84F78361DB8CBC500394F1D /* QLBankAuthServiceImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLBankAuthServiceImplementation.h; path = Classes/BusinessLogic/Services/BankServices/AuthService/QLBankAuthServiceImplementation.h; sourceTree = "<group>"; };
 		D84F78371DB8CBC500394F1D /* QLBankAuthServiceImplementation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLBankAuthServiceImplementation.m; path = Classes/BusinessLogic/Services/BankServices/AuthService/QLBankAuthServiceImplementation.m; sourceTree = "<group>"; };
@@ -169,8 +220,6 @@
 		D896555E1DB8C39900DE4C66 /* QLAuthAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLAuthAssembly.h; path = Classes/UserInterface/Controllers/Auth/Assembly/QLAuthAssembly.h; sourceTree = "<group>"; };
 		D896555F1DB8C39900DE4C66 /* QLAuthAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLAuthAssembly.m; path = Classes/UserInterface/Controllers/Auth/Assembly/QLAuthAssembly.m; sourceTree = "<group>"; };
 		D8D98BB31DB9085300F3FB01 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = Resources/Storyboards/Profile.storyboard; sourceTree = "<group>"; };
-		D8D98BB61DB908A200F3FB01 /* QLProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLProfileViewController.h; path = Classes/UserInterface/Controllers/Profile/QLProfileViewController.h; sourceTree = "<group>"; };
-		D8D98BB71DB908A200F3FB01 /* QLProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLProfileViewController.m; path = Classes/UserInterface/Controllers/Profile/QLProfileViewController.m; sourceTree = "<group>"; };
 		D8F9D7AA1DAFD2FC000371CA /* QLoan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QLoan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8F9D7AE1DAFD2FC000371CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D8F9D7B01DAFD2FC000371CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -256,8 +305,8 @@
 		9EFF738D1DB3B5A8004873A6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				D84F78331DB8C4CC00394F1D /* BankServices */,
 				9EFF73FE1DB425E1004873A6 /* Assembly */,
+				D84F78331DB8C4CC00394F1D /* BankServices */,
 				9EFF73D21DB3DAFA004873A6 /* UserInteractionService */,
 				9EFF73C21DB3D06E004873A6 /* PersonalCabinetService */,
 				9EFF73BE1DB3CE06004873A6 /* LenderOrderService */,
@@ -311,6 +360,7 @@
 		9EFF73A91DB3C85F004873A6 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				D835BD161DB97D9100F2FF0F /* BankEntities */,
 				9EFF73CE1DB3D948004873A6 /* PaymentSchedule */,
 				9EFF73CA1DB3D816004873A6 /* Payment */,
 				9EFF73C61DB3D198004873A6 /* Notification */,
@@ -431,6 +481,7 @@
 				9EFF73F21DB41A21004873A6 /* MappingProvider */,
 				9EFF73EE1DB41686004873A6 /* JSONSerializer */,
 				9EFF73E61DB40E9A004873A6 /* NetworkClient */,
+				D835BD1B1DB982E000F2FF0F /* InMemoryStorage */,
 				9EFF73DE1DB4033A004873A6 /* KeychainStorage */,
 				9EFF73DA1DB3F83F004873A6 /* RequestFactory */,
 			);
@@ -497,6 +548,7 @@
 		9EFF73F21DB41A21004873A6 /* MappingProvider */ = {
 			isa = PBXGroup;
 			children = (
+				D835BD241DB9880000F2FF0F /* BankMappingProviders */,
 				9EFF73F31DB41A47004873A6 /* QLMappingProvider.h */,
 				9EFF73F41DB41A47004873A6 /* QLMappingProvider.m */,
 			);
@@ -506,6 +558,7 @@
 		9EFF73F91DB41C7B004873A6 /* Mapper */ = {
 			isa = PBXGroup;
 			children = (
+				D835BD1F1DB986C900F2FF0F /* BankMappers */,
 				9EFF73F71DB41B59004873A6 /* QLMapper.m */,
 				9EFF73F61DB41B59004873A6 /* QLMapper.h */,
 			);
@@ -556,6 +609,159 @@
 			name = Stubs;
 			sourceTree = "<group>";
 		};
+		D835BCCA1DB973DE00F2FF0F /* DataDisplayManager */ = {
+			isa = PBXGroup;
+			children = (
+				D835BCCD1DB9741100F2FF0F /* RDSDataDisplayManagerProtocol.h */,
+				D835BCCB1DB9741100F2FF0F /* RDSDataDisplayManager.h */,
+				D835BCCC1DB9741100F2FF0F /* RDSDataDisplayManager.m */,
+			);
+			name = DataDisplayManager;
+			sourceTree = "<group>";
+		};
+		D835BCCF1DB9743400F2FF0F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D835BCD01DB9746900F2FF0F /* NSArray */,
+				D835BD281DB98F3F00F2FF0F /* UIColor */,
+				D835BD301DB9938E00F2FF0F /* UIView */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		D835BCD01DB9746900F2FF0F /* NSArray */ = {
+			isa = PBXGroup;
+			children = (
+				D835BCD11DB9747500F2FF0F /* NSMutableArray+RDSNilFilter.h */,
+				D835BCD21DB9747500F2FF0F /* NSMutableArray+RDSNilFilter.m */,
+			);
+			name = NSArray;
+			sourceTree = "<group>";
+		};
+		D835BCD41DB9749000F2FF0F /* Nimbus */ = {
+			isa = PBXGroup;
+			children = (
+				D835BCD51DB974C100F2FF0F /* RDSAutoHeightCellFactory.h */,
+				D835BCD61DB974C100F2FF0F /* RDSAutoHeightCellFactory.m */,
+			);
+			name = Nimbus;
+			sourceTree = "<group>";
+		};
+		D835BCFC1DB97B0700F2FF0F /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				D835BCFD1DB97B0700F2FF0F /* QLProfileCellFactory.h */,
+				D835BCFE1DB97B0700F2FF0F /* QLProfileCellFactoryImplementation.h */,
+				D835BCFF1DB97B0700F2FF0F /* QLProfileCellFactoryImplementation.m */,
+			);
+			name = Factory;
+			path = Classes/UserInterface/Controllers/UserProfile/Factory;
+			sourceTree = "<group>";
+		};
+		D835BD011DB97B0700F2FF0F /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				D835BD021DB97B0700F2FF0F /* QLProfileAssembly.h */,
+				D835BD031DB97B0700F2FF0F /* QLProfileAssembly.m */,
+			);
+			name = Assembly;
+			path = Classes/UserInterface/Controllers/UserProfile/Assembly;
+			sourceTree = "<group>";
+		};
+		D835BD051DB97B0700F2FF0F /* DDM */ = {
+			isa = PBXGroup;
+			children = (
+				D835BD061DB97B0700F2FF0F /* QLProfileDataDisplayManager.h */,
+				D835BD071DB97B0700F2FF0F /* QLProfileDataDisplayManager.m */,
+			);
+			name = DDM;
+			path = Classes/UserInterface/Controllers/UserProfile/DDM;
+			sourceTree = "<group>";
+		};
+		D835BD081DB97B0700F2FF0F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D835BD091DB97B0700F2FF0F /* DataCell */,
+			);
+			name = Cells;
+			path = Classes/UserInterface/Controllers/UserProfile/Cells;
+			sourceTree = "<group>";
+		};
+		D835BD091DB97B0700F2FF0F /* DataCell */ = {
+			isa = PBXGroup;
+			children = (
+				D835BD0A1DB97B0700F2FF0F /* QLProfileDataCell.h */,
+				D835BD0B1DB97B0700F2FF0F /* QLProfileDataCell.m */,
+				D835BD0C1DB97B0700F2FF0F /* QLProfileDataCell.xib */,
+				D835BD0D1DB97B0700F2FF0F /* QLProfileDataCellObject.h */,
+				D835BD0E1DB97B0700F2FF0F /* QLProfileDataCellObject.m */,
+			);
+			path = DataCell;
+			sourceTree = "<group>";
+		};
+		D835BD161DB97D9100F2FF0F /* BankEntities */ = {
+			isa = PBXGroup;
+			children = (
+				D835BD171DB97DA900F2FF0F /* UserInfo */,
+			);
+			name = BankEntities;
+			sourceTree = "<group>";
+		};
+		D835BD171DB97DA900F2FF0F /* UserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				D835BD181DB97DCA00F2FF0F /* QLBankUserInfo.h */,
+				D835BD191DB97DCA00F2FF0F /* QLBankUserInfo.m */,
+			);
+			name = UserInfo;
+			sourceTree = "<group>";
+		};
+		D835BD1B1DB982E000F2FF0F /* InMemoryStorage */ = {
+			isa = PBXGroup;
+			children = (
+				D835BD1C1DB9830C00F2FF0F /* QLInMemoryStorage.h */,
+				D835BD1D1DB9830C00F2FF0F /* QLInMemoryStorage.m */,
+			);
+			name = InMemoryStorage;
+			sourceTree = "<group>";
+		};
+		D835BD1F1DB986C900F2FF0F /* BankMappers */ = {
+			isa = PBXGroup;
+			children = (
+				D835BD201DB9870200F2FF0F /* QLBankAuthMapper.h */,
+				D835BD211DB9877200F2FF0F /* QLBankAuthMapperImplementation.h */,
+				D835BD221DB9877200F2FF0F /* QLBankAuthMapperImplementation.m */,
+			);
+			name = BankMappers;
+			sourceTree = "<group>";
+		};
+		D835BD241DB9880000F2FF0F /* BankMappingProviders */ = {
+			isa = PBXGroup;
+			children = (
+				D835BD251DB9882D00F2FF0F /* QLBankMappingProvider.h */,
+				D835BD261DB9882D00F2FF0F /* QLBankMappingProvider.m */,
+			);
+			name = BankMappingProviders;
+			sourceTree = "<group>";
+		};
+		D835BD281DB98F3F00F2FF0F /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				D835BD291DB98F7000F2FF0F /* UIColor+QLColor.h */,
+				D835BD2A1DB98F7000F2FF0F /* UIColor+QLColor.m */,
+			);
+			name = UIColor;
+			sourceTree = "<group>";
+		};
+		D835BD301DB9938E00F2FF0F /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				D835BD311DB993B400F2FF0F /* UIView+Gradient.h */,
+				D835BD321DB993B400F2FF0F /* UIView+Gradient.m */,
+			);
+			name = UIView;
+			sourceTree = "<group>";
+		};
 		D84F78331DB8C4CC00394F1D /* BankServices */ = {
 			isa = PBXGroup;
 			children = (
@@ -599,6 +805,8 @@
 		D84F78471DB8F8B100394F1D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				D835BCCA1DB973DE00F2FF0F /* DataDisplayManager */,
+				D835BCD41DB9749000F2FF0F /* Nimbus */,
 				D84F78481DB8F8E400394F1D /* QLBlocksHelper.h */,
 			);
 			name = Helpers;
@@ -628,7 +836,7 @@
 			isa = PBXGroup;
 			children = (
 				D89655471DB8238300DE4C66 /* Auth */,
-				D8D98BB51DB9087900F3FB01 /* Profile */,
+				D8D98BB51DB9087900F3FB01 /* UserProfile */,
 				D89655551DB8317800DE4C66 /* Register */,
 			);
 			name = Controllers;
@@ -648,6 +856,7 @@
 			isa = PBXGroup;
 			children = (
 				D896554C1DB8260000DE4C66 /* QLFonts.h */,
+				D835BCB41DB96EF400F2FF0F /* SF-UI-Display-Light.otf */,
 				D896554D1DB8260C00DE4C66 /* SF-UI-Display-Semibold.otf */,
 				D896554E1DB8260C00DE4C66 /* SF-UI-Display-Regular.otf */,
 				D896554F1DB8260C00DE4C66 /* SF-UI-Display-Medium.otf */,
@@ -674,13 +883,17 @@
 			name = Assembly;
 			sourceTree = "<group>";
 		};
-		D8D98BB51DB9087900F3FB01 /* Profile */ = {
+		D8D98BB51DB9087900F3FB01 /* UserProfile */ = {
 			isa = PBXGroup;
 			children = (
-				D8D98BB61DB908A200F3FB01 /* QLProfileViewController.h */,
-				D8D98BB71DB908A200F3FB01 /* QLProfileViewController.m */,
+				D835BD011DB97B0700F2FF0F /* Assembly */,
+				D835BD081DB97B0700F2FF0F /* Cells */,
+				D835BD051DB97B0700F2FF0F /* DDM */,
+				D835BCFC1DB97B0700F2FF0F /* Factory */,
+				D835BD041DB97B0700F2FF0F /* QLProfileViewController.h */,
+				D835BD001DB97B0700F2FF0F /* QLProfileViewController.m */,
 			);
-			name = Profile;
+			name = UserProfile;
 			sourceTree = "<group>";
 		};
 		D8F9D7A11DAFD2FC000371CA = {
@@ -709,8 +922,10 @@
 			isa = PBXGroup;
 			children = (
 				9EFF738B1DB3B59C004873A6 /* Classes */,
+				D835BCCF1DB9743400F2FF0F /* Extensions */,
 				D896553B1DB8203200DE4C66 /* Resources */,
 				9EFF74341DB4C351004873A6 /* Stubs */,
+				D8F9D7AD1DAFD2FC000371CA /* Supporting Files */,
 				D84F78421DB8F05200394F1D /* ThirdParty */,
 				D8F9D7B01DAFD2FC000371CA /* AppDelegate.h */,
 				D8F9D7B11DAFD2FC000371CA /* AppDelegate.m */,
@@ -720,7 +935,6 @@
 				D8F9D7B71DAFD2FC000371CA /* SecondViewController.m */,
 				D8F9D7BC1DAFD2FC000371CA /* Assets.xcassets */,
 				D8F9D7C11DAFD2FC000371CA /* Info.plist */,
-				D8F9D7AD1DAFD2FC000371CA /* Supporting Files */,
 			);
 			path = QLoan;
 			sourceTree = "<group>";
@@ -867,11 +1081,13 @@
 				D8D98BB41DB9085300F3FB01 /* Profile.storyboard in Resources */,
 				D89655401DB8227400DE4C66 /* LaunchScreen.storyboard in Resources */,
 				D89655511DB8260C00DE4C66 /* SF-UI-Display-Semibold.otf in Resources */,
+				D835BCB51DB96EF400F2FF0F /* SF-UI-Display-Light.otf in Resources */,
 				D89655531DB8260C00DE4C66 /* SF-UI-Display-Medium.otf in Resources */,
 				D89655421DB822AD00DE4C66 /* Auth.storyboard in Resources */,
 				D8F9D7BD1DAFD2FC000371CA /* Assets.xcassets in Resources */,
 				D89655541DB8260C00DE4C66 /* SF-UI-Display-Bold.otf in Resources */,
 				9EFF74361DB4C376004873A6 /* borrowerOrderStub.json in Resources */,
+				D835BD141DB97B0700F2FF0F /* QLProfileDataCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -944,8 +1160,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D835BCD71DB974C100F2FF0F /* RDSAutoHeightCellFactory.m in Sources */,
+				D835BD0F1DB97B0700F2FF0F /* QLProfileCellFactoryImplementation.m in Sources */,
 				9EFF73971DB3B870004873A6 /* QLAuthorizationRequestConfiguration.m in Sources */,
-				D8D98BB81DB908A200F3FB01 /* QLProfileViewController.m in Sources */,
 				9EFF73FD1DB4206F004873A6 /* QLCoreComponentsAssembly.m in Sources */,
 				9EFF73D11DB3D969004873A6 /* QLPaymentSchedule.m in Sources */,
 				9EFF73E51DB40AE6004873A6 /* QLSortMethodParser.m in Sources */,
@@ -953,24 +1170,34 @@
 				D8F9D7B81DAFD2FC000371CA /* SecondViewController.m in Sources */,
 				9EFF73F11DB416AE004873A6 /* QLJSONSerializer.m in Sources */,
 				9EFF73B51DB3C9C5004873A6 /* ServicesConstants.m in Sources */,
+				D835BD1E1DB9830C00F2FF0F /* QLInMemoryStorage.m in Sources */,
+				D835BD101DB97B0700F2FF0F /* QLProfileViewController.m in Sources */,
 				9EFF74061DB42925004873A6 /* QLTestAssembly.m in Sources */,
 				9EFF73E91DB40EC1004873A6 /* QLNetworkClient.m in Sources */,
 				9EFF73DD1DB3F94C004873A6 /* QLRequestFactory.m in Sources */,
 				D8F9D7B21DAFD2FC000371CA /* AppDelegate.m in Sources */,
+				D835BD331DB993B400F2FF0F /* UIView+Gradient.m in Sources */,
 				D8F9D7B51DAFD2FC000371CA /* FirstViewController.m in Sources */,
+				D835BD151DB97B0700F2FF0F /* QLProfileDataCellObject.m in Sources */,
+				D835BD2B1DB98F7000F2FF0F /* UIColor+QLColor.m in Sources */,
 				9EFF73B11DB3C918004873A6 /* QLUserInfo.m in Sources */,
+				D835BD111DB97B0700F2FF0F /* QLProfileAssembly.m in Sources */,
 				9EFF73D81DB3DC4E004873A6 /* QLPaymentCompletedRequestConfiguration.m in Sources */,
 				9EFF73ED1DB41503004873A6 /* QLServerResponse.m in Sources */,
 				9EFF73E11DB40363004873A6 /* QLKeychainStorage.m in Sources */,
 				9EFF73AE1DB3C90F004873A6 /* QLBorrowerOrder.m in Sources */,
 				9EFF73C11DB3CE42004873A6 /* QLLenderOrderService.m in Sources */,
 				9EFF73D51DB3DB26004873A6 /* QLUserInteractionService.m in Sources */,
+				D835BD121DB97B0700F2FF0F /* QLProfileDataDisplayManager.m in Sources */,
+				D835BD131DB97B0700F2FF0F /* QLProfileDataCell.m in Sources */,
+				D835BD231DB9877200F2FF0F /* QLBankAuthMapperImplementation.m in Sources */,
 				D89655601DB8C39900DE4C66 /* QLAuthAssembly.m in Sources */,
 				D89655581DB8319900DE4C66 /* QLRegisterViewController.m in Sources */,
 				9EFF73941DB3B672004873A6 /* QLRegistrationRequestConfiguration.m in Sources */,
 				9EFF73BD1DB3CD83004873A6 /* QLLenderOrder.m in Sources */,
 				D8F9D7AF1DAFD2FC000371CA /* main.m in Sources */,
 				D84F783D1DB8DA7A00394F1D /* QLBankAuthRequestFactoryImplementation.m in Sources */,
+				D835BCCE1DB9741100F2FF0F /* RDSDataDisplayManager.m in Sources */,
 				D896554A1DB823A100DE4C66 /* QLAuthViewController.m in Sources */,
 				9EFF74011DB425FB004873A6 /* QLServicesAssembly.m in Sources */,
 				9EFF739B1DB3BDF8004873A6 /* QLUserInfoService.m in Sources */,
@@ -978,11 +1205,14 @@
 				9EFF73C51DB3D091004873A6 /* QLPersonalCabinetService.m in Sources */,
 				D84F78381DB8CBC500394F1D /* QLBankAuthServiceImplementation.m in Sources */,
 				9EFF73C91DB3D1C4004873A6 /* QLNotification.m in Sources */,
+				D835BD1A1DB97DCA00F2FF0F /* QLBankUserInfo.m in Sources */,
+				D835BCD31DB9747500F2FF0F /* NSMutableArray+RDSNilFilter.m in Sources */,
 				D84F78461DB8F08400394F1D /* EXTScope.m in Sources */,
 				9EFF73CD1DB3D82B004873A6 /* QLPayment.m in Sources */,
 				D84F78411DB8E0EB00394F1D /* QLBankServiceConstants.m in Sources */,
 				9EFF73B91DB3CA09004873A6 /* EntityConstants.m in Sources */,
 				9EFF73A21DB3C1D3004873A6 /* QLBorrowerOrderService.m in Sources */,
+				D835BD271DB9882D00F2FF0F /* QLBankMappingProvider.m in Sources */,
 				9EFF73F81DB41B59004873A6 /* QLMapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
