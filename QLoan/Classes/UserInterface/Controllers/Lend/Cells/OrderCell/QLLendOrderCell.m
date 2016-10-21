@@ -16,12 +16,13 @@ static CGFloat const QLLendOrderCellHeight = 64.0;
 
 #pragma mark - Жизненный цикл
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    
-    UIView *view = [UIView new];
-    view.backgroundColor = [UIColor ql_selectedCellColor];
-    self.selectedBackgroundView = view;
+- (void)setHighlighted:(BOOL)highlighted
+              animated:(BOOL)animated {
+    if (highlighted) {
+        self.contentView.backgroundColor = [UIColor ql_selectedCellColor];
+    } else {
+        self.contentView.backgroundColor = [UIColor whiteColor];
+    }
 }
 
 #pragma mark - NICell
