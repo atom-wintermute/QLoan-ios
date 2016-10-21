@@ -12,8 +12,19 @@
 #import "QLLenderOrderService.h"
 
 @class QLLenderOrder;
+@class QLRequestFactory;
+@class QLNetworkClient;
+@class QLJSONSerializer;
+@class QLMapper;
+@class QLSerializer;
 
 @interface QLLenderOrderService : NSObject
+
+@property (nonatomic, strong) QLNetworkClient *networkClient;
+@property (nonatomic, strong) QLJSONSerializer *jsonSerializer;
+@property (nonatomic, strong) QLSerializer *serializer;
+@property (nonatomic, strong) QLMapper *mapper;
+@property (nonatomic, strong) QLRequestFactory *requestFactory;
 
 /**
  Метод getLendersOrders

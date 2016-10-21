@@ -14,6 +14,7 @@
 #import "QLBankAuthRequestFactoryImplementation.h"
 #import "QLBankCardRequestFactoryImplementation.h"
 #import "QLInMemoryStorage.h"
+#import "QLChallengedNetworkClient.h"
 
 @implementation QLCoreComponentsAssembly
 
@@ -37,7 +38,12 @@
 }
 
 - (QLMappingProvider *)mappingProvider {
-	return [TyphoonDefinition withClass:[QLMappingProvider class]];
+	return [TyphoonDefinition withClass:[QLMappingProvider class]
+						  configuration:^(TyphoonDefinition *definition)
+			{
+				[definition injectProperty:@selector(formatter)
+									  with:[self dateFormatter]];
+			}];
 }
 
 #pragma mark - Сериализаторы
@@ -50,6 +56,15 @@
 									  with:[AFJSONResponseSerializer new]];
 			}];
 	
+}
+
+- (QLSerializer *)serializer {
+	return [TyphoonDefinition withClass:[QLSerializer class]
+						  configuration:^(TyphoonDefinition *definition)
+			{
+				[definition injectProperty:@selector(mappingProvider)
+									  with:[self mappingProvider]];
+			}];
 }
 
 #pragma mark - Фабрики запросов
@@ -90,6 +105,16 @@
                 [definition injectProperty:@selector(session)
                                       with:[self session]];
             }];
+}
+
+- (QLChallengedNetworkClient *)challengedNetworkClient {
+	return [TyphoonDefinition withClass:[QLChallengedNetworkClient class]];
+}
+
+#pragma mark - Форматтер дат
+
+- (QLDateFormatter *)dateFormatter {
+	return [TyphoonDefinition withClass:[QLDateFormatter class]];
 }
 
 #pragma mark - Хранилище данных

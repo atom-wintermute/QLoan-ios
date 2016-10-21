@@ -13,13 +13,28 @@
 @protocol QLBankCardService;
 
 @class QLBorrowerOrderService;
+@class QLAuthorizationService;
+@class QLLenderOrderService;
+@class QLUserInteractionService;
+@class QLPersonalCabinetService;
+@class QLUserInfoService;
 
 /**
  Фабрика сервисов
  */
 @interface QLServicesAssembly : TyphoonAssembly
 
+- (QLPersonalCabinetService *)personalCabinetService;
+
 - (QLBorrowerOrderService *)borrowerOrderService;
+
+- (QLLenderOrderService *)lenderOrderService;
+
+- (QLUserInteractionService *)interactionService;
+
+- (QLAuthorizationService *)authorizationService;
+
+- (QLUserInfoService *)userInfoService;
 
 - (id<QLBankAuthService>)bankAuthService;
 

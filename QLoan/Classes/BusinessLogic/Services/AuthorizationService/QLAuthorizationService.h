@@ -12,8 +12,20 @@
 
 @class QLRegistrationRequestConfiguration;
 @class QLAuthorizationRequestConfiguration;
+@class QLBorrowerOrder;
+@class QLRequestFactory;
+@class QLNetworkClient;
+@class QLJSONSerializer;
+@class QLMapper;
+@class QLKeychainStorage;
 
-@interface QLAuthorizationService : NSObject
+@interface QLAuthorizationService : NSObject <NSURLSessionDelegate>
+
+@property (nonatomic, strong) QLNetworkClient *networkClient;
+@property (nonatomic, strong) QLMapper *mapper;
+@property (nonatomic, strong) QLRequestFactory *requestFactory;
+@property (nonatomic, strong) QLKeychainStorage *storage;
+@property (nonatomic, strong) QLJSONSerializer *serializer;
 
 /**
  Метод signUp
@@ -24,7 +36,6 @@
 /**
  Метод signIn
  */
-- (void)authorizeWithConfiguration:(QLAuthorizationRequestConfiguration *)configuration
-						completion:(QLBooleanCompletion)completion;
+- (void)authorizeWithCompletion:(QLBooleanCompletion)completion;
 
 @end

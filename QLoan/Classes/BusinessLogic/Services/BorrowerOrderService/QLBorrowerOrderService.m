@@ -12,6 +12,7 @@
 #import "QLMapper.h"
 #import "QLJSONSerializer.h"
 #import "QLServerResponse.h"
+#import "QLSerializer.h"
 
 #import <objc/runtime.h>
 #import <OHHTTPStubs.h>
@@ -27,11 +28,53 @@
 	QLNetworkCompletion networkCompletion = ^(QLServerResponse *response, NSError *error) {
 		__strong typeof (self) strongSelf = weakSelf;
 		if (error == nil) {
-			id responseObject = [strongSelf.serializer jsonObjectFromResponse:response];
+			id responseObject = [strongSelf.jsonSerializer jsonObjectFromResponse:response];
 			QLBorrowerOrder *order = [strongSelf.mapper mapBorrowerOrderFromResponseObject:responseObject];
-			completion(order, nil);
+			run_block_on_main(completion, order, nil);
 		} else {
-			completion(nil, error);
+			run_block_on_main(completion, nil, error);
+		}
+	};
+	
+	[self.networkClient sendRequest:request
+						 completion:networkCompletion];
+}
+
+- (void)borrowerOrdersWithPage:(NSInteger)page
+					sortMethod:(QLSortMethod)sortMethod
+					 ascending:(BOOL)ascending
+					completion:(QLBorrowersOrderCompletion)completion {
+	[self createServiceStubs];
+	NSURLRequest *request = [self.requestFactory requestForBorrowerOrdersWithPage:page
+																	   sortMethod:sortMethod
+																		ascending:ascending];
+	__weak typeof (self) weakSelf = self;
+	
+	QLNetworkCompletion networkCompletion = ^(QLServerResponse *response, NSError *error) {
+		__strong typeof (self) strongSelf = weakSelf;
+		if (error == nil) {
+			id responseObject = [strongSelf.jsonSerializer jsonObjectFromResponse:response];
+			NSArray *orders = [strongSelf.mapper mapBorrowerOrdersFromResponseObject:responseObject];
+			run_block_on_main(completion, orders, nil);
+		} else {
+			run_block_on_main(completion, nil, error);
+		}
+	};
+	
+	[self.networkClient sendRequest:request
+						 completion:networkCompletion];
+}
+
+- (void)addBorrowerOrder:(QLBorrowerOrder *)order
+			  completion:(QLBooleanCompletion)completion {
+	NSDictionary *parameters = [self.serializer dictionaryFromBorrowerOrder:order];
+	NSURLRequest *request = [self.requestFactory requestForAddingBorrowerOrder:parameters];
+	
+	QLNetworkCompletion networkCompletion = ^(QLServerResponse *response, NSError *error) {
+		if (error == nil) {
+			run_block_on_main(completion, YES, nil);
+		} else {
+			run_block_on_main(completion, NO, error);
 		}
 	};
 	

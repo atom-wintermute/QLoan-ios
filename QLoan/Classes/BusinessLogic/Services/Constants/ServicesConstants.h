@@ -48,3 +48,5 @@ extern NSString * const QLBankServerBasePath;
 extern NSString * const QLLocalServerBasePath;
 
 extern NSString * const QLHeaderTokenKey;
+extern NSString * const QLHeaderClientKey;
+extern NSString * const QLHeaderUidKey;

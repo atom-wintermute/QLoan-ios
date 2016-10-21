@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9ECC12BE1DB977DB00E33288 /* QLChallengedNetworkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECC12BD1DB977DB00E33288 /* QLChallengedNetworkClient.m */; };
+		9ECC12C61DB9932900E33288 /* QLSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECC12C51DB9932900E33288 /* QLSerializer.m */; };
+		9ECC12CA1DBA284300E33288 /* QLDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECC12C91DBA284300E33288 /* QLDateFormatter.m */; };
+		9ECC12CB1DBA871000E33288 /* QLSessionCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECC12B31DB95F4100E33288 /* QLSessionCredentials.m */; };
+		9ECC12CC1DBA871000E33288 /* QLSessionCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECC12B31DB95F4100E33288 /* QLSessionCredentials.m */; };
 		9EFF73911DB3B64C004873A6 /* QLAuthorizationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73901DB3B64C004873A6 /* QLAuthorizationService.m */; };
 		9EFF73941DB3B672004873A6 /* QLRegistrationRequestConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73931DB3B672004873A6 /* QLRegistrationRequestConfiguration.m */; };
 		9EFF73971DB3B870004873A6 /* QLAuthorizationRequestConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73961DB3B870004873A6 /* QLAuthorizationRequestConfiguration.m */; };
@@ -111,6 +116,17 @@
 /* Begin PBXFileReference section */
 		231F0EC6722C13ED096D9EB6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		41A2D4330A792AAE9B65A346 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		9ECC12B21DB95F4100E33288 /* QLSessionCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLSessionCredentials.h; path = Classes/BusinessLogic/Services/AuthorizationService/SessionCredentials/QLSessionCredentials.h; sourceTree = "<group>"; };
+		9ECC12B31DB95F4100E33288 /* QLSessionCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLSessionCredentials.m; path = Classes/BusinessLogic/Services/AuthorizationService/SessionCredentials/QLSessionCredentials.m; sourceTree = "<group>"; };
+		9ECC12B91DB966D500E33288 /* ErrorCodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorCodes.h; path = Classes/BusinessLogic/Services/Constants/ErrorCodes.h; sourceTree = "<group>"; };
+		9ECC12BC1DB977DB00E33288 /* QLChallengedNetworkClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLChallengedNetworkClient.h; path = Classes/BusinessLogic/CoreCompnents/NetworkClient/QLChallengedNetworkClient.h; sourceTree = "<group>"; };
+		9ECC12BD1DB977DB00E33288 /* QLChallengedNetworkClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLChallengedNetworkClient.m; path = Classes/BusinessLogic/CoreCompnents/NetworkClient/QLChallengedNetworkClient.m; sourceTree = "<group>"; };
+		9ECC12C01DB9897300E33288 /* NSString+Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Random.h"; path = "Classes/BusinessLogic/Helpers/Categories/NSString+Random/NSString+Random.h"; sourceTree = "<group>"; };
+		9ECC12C11DB9897300E33288 /* NSString+Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Random.m"; path = "Classes/BusinessLogic/Helpers/Categories/NSString+Random/NSString+Random.m"; sourceTree = "<group>"; };
+		9ECC12C41DB9932900E33288 /* QLSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLSerializer.h; path = Classes/BusinessLogic/CoreCompnents/Serializer/QLSerializer.h; sourceTree = "<group>"; };
+		9ECC12C51DB9932900E33288 /* QLSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLSerializer.m; path = Classes/BusinessLogic/CoreCompnents/Serializer/QLSerializer.m; sourceTree = "<group>"; };
+		9ECC12C81DBA284300E33288 /* QLDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLDateFormatter.h; path = Classes/BusinessLogic/CoreCompnents/DateFormatter/QLDateFormatter.h; sourceTree = "<group>"; };
+		9ECC12C91DBA284300E33288 /* QLDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLDateFormatter.m; path = Classes/BusinessLogic/CoreCompnents/DateFormatter/QLDateFormatter.m; sourceTree = "<group>"; };
 		9EFF738F1DB3B64C004873A6 /* QLAuthorizationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLAuthorizationService.h; path = Classes/BusinessLogic/Services/AuthorizationService/QLAuthorizationService.h; sourceTree = "<group>"; };
 		9EFF73901DB3B64C004873A6 /* QLAuthorizationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLAuthorizationService.m; path = Classes/BusinessLogic/Services/AuthorizationService/QLAuthorizationService.m; sourceTree = "<group>"; };
 		9EFF73921DB3B672004873A6 /* QLRegistrationRequestConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLRegistrationRequestConfiguration.h; path = Classes/BusinessLogic/Services/AuthorizationService/QLRegistrationRequestConfiguration.h; sourceTree = "<group>"; };
@@ -320,6 +336,42 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		9ECC12B11DB95F1600E33288 /* SessionCredentials */ = {
+			isa = PBXGroup;
+			children = (
+				9ECC12B21DB95F4100E33288 /* QLSessionCredentials.h */,
+				9ECC12B31DB95F4100E33288 /* QLSessionCredentials.m */,
+			);
+			name = SessionCredentials;
+			sourceTree = "<group>";
+		};
+		9ECC12BF1DB9885900E33288 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				9ECC12C01DB9897300E33288 /* NSString+Random.h */,
+				9ECC12C11DB9897300E33288 /* NSString+Random.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		9ECC12C31DB9930500E33288 /* Serializer */ = {
+			isa = PBXGroup;
+			children = (
+				9ECC12C41DB9932900E33288 /* QLSerializer.h */,
+				9ECC12C51DB9932900E33288 /* QLSerializer.m */,
+			);
+			name = Serializer;
+			sourceTree = "<group>";
+		};
+		9ECC12C71DBA281900E33288 /* DateFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				9ECC12C81DBA284300E33288 /* QLDateFormatter.h */,
+				9ECC12C91DBA284300E33288 /* QLDateFormatter.m */,
+			);
+			name = DateFormatter;
+			sourceTree = "<group>";
+		};
 		9EFF738B1DB3B59C004873A6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -360,6 +412,7 @@
 		9EFF738E1DB3B5AD004873A6 /* AuthorizationService */ = {
 			isa = PBXGroup;
 			children = (
+				9ECC12B11DB95F1600E33288 /* SessionCredentials */,
 				9EFF73951DB3B870004873A6 /* QLAuthorizationRequestConfiguration.h */,
 				9EFF73961DB3B870004873A6 /* QLAuthorizationRequestConfiguration.m */,
 				9EFF73921DB3B672004873A6 /* QLRegistrationRequestConfiguration.h */,
@@ -391,6 +444,7 @@
 		9EFF73A71DB3C823004873A6 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				9ECC12BF1DB9885900E33288 /* Categories */,
 				9EFF73E21DB40AB7004873A6 /* SortMethodParser */,
 			);
 			name = Helpers;
@@ -432,6 +486,7 @@
 		9EFF73B21DB3C9A9004873A6 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				9ECC12B91DB966D500E33288 /* ErrorCodes.h */,
 				9EFF73B31DB3C9C5004873A6 /* ServicesConstants.h */,
 				9EFF73B41DB3C9C5004873A6 /* ServicesConstants.m */,
 			);
@@ -515,6 +570,8 @@
 		9EFF73D91DB3F832004873A6 /* CoreComponents */ = {
 			isa = PBXGroup;
 			children = (
+				9ECC12C71DBA281900E33288 /* DateFormatter */,
+				9ECC12C31DB9930500E33288 /* Serializer */,
 				9EFF73FA1DB42055004873A6 /* Assembly */,
 				9EFF73F91DB41C7B004873A6 /* Mapper */,
 				9EFF73F21DB41A21004873A6 /* MappingProvider */,
@@ -562,6 +619,8 @@
 				9EFF73EA1DB412FB004873A6 /* ServerResponse */,
 				9EFF73E71DB40EC1004873A6 /* QLNetworkClient.h */,
 				9EFF73E81DB40EC1004873A6 /* QLNetworkClient.m */,
+				9ECC12BC1DB977DB00E33288 /* QLChallengedNetworkClient.h */,
+				9ECC12BD1DB977DB00E33288 /* QLChallengedNetworkClient.m */,
 			);
 			name = NetworkClient;
 			sourceTree = "<group>";
@@ -1320,6 +1379,7 @@
 				9EFF73E91DB40EC1004873A6 /* QLNetworkClient.m in Sources */,
 				D8328F461DBA2B9300438D4A /* QLBankAuthRequestFactoryImplementation.m in Sources */,
 				9EFF73DD1DB3F94C004873A6 /* QLRequestFactory.m in Sources */,
+				9ECC12CA1DBA284300E33288 /* QLDateFormatter.m in Sources */,
 				D8F9D7B21DAFD2FC000371CA /* AppDelegate.m in Sources */,
 				D835BD331DB993B400F2FF0F /* UIView+Gradient.m in Sources */,
 				D8F9D7B51DAFD2FC000371CA /* FirstViewController.m in Sources */,
@@ -1347,7 +1407,9 @@
 				D8F9D7AF1DAFD2FC000371CA /* main.m in Sources */,
 				D835BCCE1DB9741100F2FF0F /* RDSDataDisplayManager.m in Sources */,
 				D896554A1DB823A100DE4C66 /* QLAuthViewController.m in Sources */,
+				9ECC12BE1DB977DB00E33288 /* QLChallengedNetworkClient.m in Sources */,
 				9EFF74011DB425FB004873A6 /* QLServicesAssembly.m in Sources */,
+				9ECC12C61DB9932900E33288 /* QLSerializer.m in Sources */,
 				9EFF739B1DB3BDF8004873A6 /* QLUserInfoService.m in Sources */,
 				9EFF73F51DB41A47004873A6 /* QLMappingProvider.m in Sources */,
 				9EFF73C51DB3D091004873A6 /* QLPersonalCabinetService.m in Sources */,
@@ -1361,6 +1423,7 @@
 				D84F78461DB8F08400394F1D /* EXTScope.m in Sources */,
 				9EFF73CD1DB3D82B004873A6 /* QLPayment.m in Sources */,
 				D84F78411DB8E0EB00394F1D /* QLBankServiceConstants.m in Sources */,
+				9ECC12CB1DBA871000E33288 /* QLSessionCredentials.m in Sources */,
 				9EFF73B91DB3CA09004873A6 /* EntityConstants.m in Sources */,
 				9EFF73A21DB3C1D3004873A6 /* QLBorrowerOrderService.m in Sources */,
 				9EFF73F81DB41B59004873A6 /* QLMapper.m in Sources */,
@@ -1371,6 +1434,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ECC12CC1DBA871000E33288 /* QLSessionCredentials.m in Sources */,
 				D8F9D7CB1DAFD2FC000371CA /* QLoanTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
