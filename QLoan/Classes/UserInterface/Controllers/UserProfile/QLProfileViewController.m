@@ -9,6 +9,7 @@
 #import "QLProfileViewController.h"
 
 #import "QLBankAuthService.h"
+#import "QLBankCardService.h"
 #import "QLProfileCellFactory.h"
 
 #import "QLProfileDataDisplayManager.h"
@@ -42,7 +43,9 @@
     
     self.usernameLabel.text = [NSString stringWithFormat:@"%@ %@", bankUserInfo.firstName, bankUserInfo.lastName];
     
-    NSArray *cellObjects = [self.cellFactory cellObjectsFrom:bankUserInfo];
+    NSArray <QLBankCard *> *cardList = [self.bankCardService obtainBankCards];
+    NSArray *cellObjects = [self.cellFactory cellObjectsFrom:bankUserInfo
+                                                    cardList:cardList];
     self.dataDisplayManager =  [[QLProfileDataDisplayManager alloc] initWithInputData:cellObjects
                                                       andConversionToCellObjectsBlock:^id(id dataObject) {
                                                           return dataObject;

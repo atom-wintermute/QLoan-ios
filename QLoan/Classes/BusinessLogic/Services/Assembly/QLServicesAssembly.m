@@ -10,6 +10,7 @@
 #import "QLCoreComponentsAssembly.h"
 #import "QLBorrowerOrderService.h"
 #import "QLBankAuthServiceImplementation.h"
+#import "QLBankCardServiceImplementation.h"
 
 @interface QLServicesAssembly()
 
@@ -45,6 +46,20 @@
                                                     with:[self.coreAssembly inMemoryStorage]];
                               [definition injectProperty:@selector(mapper)
                                                     with:[self.coreAssembly bankAuthMapper]];
+                          }];
+}
+
+- (id<QLBankCardService>)bankCardService {
+    return [TyphoonDefinition withClass:[QLBankCardServiceImplementation class]
+                          configuration:^(TyphoonDefinition *definition) {
+                              [definition injectProperty:@selector(networkClient)
+                                                    with:[self.coreAssembly networkClient]];
+                              [definition injectProperty:@selector(requestFactory)
+                                                    with:[self.coreAssembly bankCardRequestFactory]];
+                              [definition injectProperty:@selector(storage)
+                                                    with:[self.coreAssembly inMemoryStorage]];
+                              [definition injectProperty:@selector(mapper)
+                                                    with:[self.coreAssembly bankCardMapper]];
                           }];
 }
 

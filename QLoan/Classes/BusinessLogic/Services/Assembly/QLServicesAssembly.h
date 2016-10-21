@@ -10,6 +10,7 @@
 #import <Typhoon.h>
 
 @protocol QLBankAuthService;
+@protocol QLBankCardService;
 
 @class QLBorrowerOrderService;
 
@@ -21,5 +22,7 @@
 - (QLBorrowerOrderService *)borrowerOrderService;
 
 - (id<QLBankAuthService>)bankAuthService;
+
+- (id<QLBankCardService>)bankCardService;
 
 @end

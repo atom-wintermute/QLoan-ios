@@ -1,5 +1,5 @@
 //
-//  QLBankMappingProvider.h
+//  QLProfileAddCardCellObject.h
 //  QLoan
 //
 //  Created by Nikulin Maksim on 21/10/16.
@@ -8,10 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@class EKObjectMapping;
+#import <Nimbus/NimbusModels.h>
 
-@interface QLBankMappingProvider : NSObject
-
-+ (EKObjectMapping *)bankUserInfo;
+@interface QLProfileAddCardCellObject : NSObject <NICellObject, NINibCellObject>
 
 @end

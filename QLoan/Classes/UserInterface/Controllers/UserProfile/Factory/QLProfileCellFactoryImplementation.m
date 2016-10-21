@@ -9,12 +9,17 @@
 #import "QLProfileCellFactoryImplementation.h"
 
 #import "QLProfileDataCellObject.h"
+#import "QLProfileCardCellObject.h"
+#import "QLProfileAddCardCellObject.h"
+#import "QLOffsetCellObject.h"
 
 #import "QLBankUserInfo.h"
+#import "QLBankCard.h"
 
 @implementation QLProfileCellFactoryImplementation
 
-- (NSArray *)cellObjectsFrom:(QLBankUserInfo *)bankUserInfo {
+- (NSArray *)cellObjectsFrom:(QLBankUserInfo *)bankUserInfo
+                    cardList:(NSArray<QLBankCard *> *)cardList {
     NSMutableArray *cellObjects = [NSMutableArray new];
     
     QLProfileDataCellObject *phoneCellObject = [QLProfileDataCellObject new];
@@ -26,6 +31,34 @@
     emailCellObject.nameString = @"Почта";
     emailCellObject.valueString = bankUserInfo.email;
     [cellObjects addObject:emailCellObject];
+    
+    QLOffsetCellObject *cardOffsetCellObject = [QLOffsetCellObject new];
+    cardOffsetCellObject.cellHeight = 8.0;
+    [cellObjects addObject:cardOffsetCellObject];
+    
+    QLProfileAddCardCellObject *addCardCellObject = [QLProfileAddCardCellObject new];
+    [cellObjects addObject:addCardCellObject];
+    
+    if (cardList.count) {
+        for (QLBankCard *card in cardList) {
+            QLProfileCardCellObject *cardCellObject = [QLProfileCardCellObject new];
+            if (card.maskedPan) {
+                cardCellObject.cardNameString = [NSString stringWithFormat:@"%@ %@", card.mnemonicName, card. maskedPan];
+            } else {
+                cardCellObject.cardNameString = [NSString stringWithFormat:@"%@", card.mnemonicName];
+            }
+            if (card.balance > 0.0) {
+                cardCellObject.balanceString = [NSString stringWithFormat:@"%f ₽", card.balance];
+            } else {
+                cardCellObject.balanceString = @"";
+            }
+            [cellObjects addObject:cardCellObject];
+        }
+    }
+    
+    QLOffsetCellObject *loanOffsetCellObject = [QLOffsetCellObject new];
+    loanOffsetCellObject.cellHeight = 8.0;
+    [cellObjects addObject:loanOffsetCellObject];
     
     QLProfileDataCellObject *loanTakenCellObject = [QLProfileDataCellObject new];
     loanTakenCellObject.nameString = @"Выдано займов";

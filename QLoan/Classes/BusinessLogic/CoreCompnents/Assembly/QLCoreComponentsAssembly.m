@@ -9,9 +9,11 @@
 #import <AFNetworking/AFURLResponseSerialization.h>
 #import "QLCoreComponentsAssembly.h"
 
-#import "QLBankAuthRequestFactoryImplementation.h"
-#import "QLInMemoryStorage.h"
 #import "QLBankAuthMapperImplementation.h"
+#import "QLBankCardMapperImplementation.h"
+#import "QLBankAuthRequestFactoryImplementation.h"
+#import "QLBankCardRequestFactoryImplementation.h"
+#import "QLInMemoryStorage.h"
 
 @implementation QLCoreComponentsAssembly
 
@@ -28,6 +30,10 @@
 
 - (id<QLBankAuthMapper>)bankAuthMapper {
     return [TyphoonDefinition withClass:[QLBankAuthMapperImplementation class]];
+}
+
+- (id<QLBankCardMapper>)bankCardMapper {
+    return [TyphoonDefinition withClass:[QLBankCardMapperImplementation class]];
 }
 
 - (QLMappingProvider *)mappingProvider {
@@ -61,6 +67,14 @@
 
 - (id<QLBankAuthRequestFactory>)bankAuthRequestFactory {
     return [TyphoonDefinition withClass:[QLBankAuthRequestFactoryImplementation class]
+                          configuration:^(TyphoonDefinition *definition) {
+                              [definition injectProperty:@selector(requestSerializer)
+                                                    with:[AFHTTPRequestSerializer new]];
+                          }];
+}
+
+- (id<QLBankCardRequestFactory>)bankCardRequestFactory {
+    return [TyphoonDefinition withClass:[QLBankCardRequestFactoryImplementation class]
                           configuration:^(TyphoonDefinition *definition) {
                               [definition injectProperty:@selector(requestSerializer)
                                                     with:[AFHTTPRequestSerializer new]];

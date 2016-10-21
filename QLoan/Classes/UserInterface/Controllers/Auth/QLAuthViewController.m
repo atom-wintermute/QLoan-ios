@@ -9,6 +9,7 @@
 #import "QLAuthViewController.h"
 
 #import "QLBankAuthService.h"
+#import "QLBankCardService.h"
 
 static NSString * const QLAuthRegisterSegue = @"registerSegue";
 
@@ -20,6 +21,12 @@ static NSString * const QLAuthRegisterSegue = @"registerSegue";
 }
 
 #pragma mark - IBActions
+
+- (void)fastLoginButtonWasPressed:(id)sender {
+    self.loginTextField.text = @"9139381557";
+    self.passwordTextField.text = @"29111990m";
+    [self loginButtonWasPressed:nil];
+}
 
 - (void)forgetPasswordButtonWasPressed:(id)sender {
     
@@ -35,6 +42,7 @@ static NSString * const QLAuthRegisterSegue = @"registerSegue";
                                   if (success) {
                                       // сразу обновляем данные для пользователя
                                       [self.bankAuthService updateCurrentUserDataWithCompletion:nil];
+                                      [self.bankCardService updateBankCardsWithCompletion:nil];
                                       [self.presentingViewController dismissViewControllerAnimated:YES
                                                                                         completion:nil];
                                   } else {

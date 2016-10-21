@@ -11,6 +11,7 @@
 #import <EasyMapping/EasyMapping.h>
 
 #import "QLBankUserInfo.h"
+#import "QLBankCard.h"
 
 @implementation QLBankMappingProvider
 
@@ -23,6 +24,18 @@
                                                                          @"firstName": @"firstName",
                                                                          @"secondName": @"secondName",
                                                                          @"lastName": @"lastName"
+                                                                         }];
+                                  }];
+}
+
++ (EKObjectMapping *)bankCard {
+    return [EKObjectMapping mappingForClass:[QLBankCard class]
+                                  withBlock:^(EKObjectMapping *mapping) {
+                                      [mapping mapFieldsFromDictionary:@{
+                                                                         @"bindingId": @"cardId",
+                                                                         @"mnemonic": @"mnemonicName",
+                                                                         @"maskenPan": @"maskenPan",
+                                                                         @"balance": @"balance"
                                                                          }];
                                   }];
 }
