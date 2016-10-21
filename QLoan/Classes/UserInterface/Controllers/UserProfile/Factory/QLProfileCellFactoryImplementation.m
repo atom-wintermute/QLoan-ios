@@ -10,6 +10,8 @@
 
 #import "QLProfileDataCellObject.h"
 #import "QLProfileCardCellObject.h"
+#import "QLProfileAddCardCellObject.h"
+#import "QLOffsetCellObject.h"
 
 #import "QLBankUserInfo.h"
 #import "QLBankCard.h"
@@ -30,6 +32,13 @@
     emailCellObject.valueString = bankUserInfo.email;
     [cellObjects addObject:emailCellObject];
     
+    QLOffsetCellObject *cardOffsetCellObject = [QLOffsetCellObject new];
+    cardOffsetCellObject.cellHeight = 8.0;
+    [cellObjects addObject:cardOffsetCellObject];
+    
+    QLProfileAddCardCellObject *addCardCellObject = [QLProfileAddCardCellObject new];
+    [cellObjects addObject:addCardCellObject];
+    
     if (cardList.count) {
         for (QLBankCard *card in cardList) {
             QLProfileCardCellObject *cardCellObject = [QLProfileCardCellObject new];
@@ -46,6 +55,10 @@
             [cellObjects addObject:cardCellObject];
         }
     }
+    
+    QLOffsetCellObject *loanOffsetCellObject = [QLOffsetCellObject new];
+    loanOffsetCellObject.cellHeight = 8.0;
+    [cellObjects addObject:loanOffsetCellObject];
     
     QLProfileDataCellObject *loanTakenCellObject = [QLProfileDataCellObject new];
     loanTakenCellObject.nameString = @"Выдано займов";

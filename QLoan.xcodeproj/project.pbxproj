@@ -43,6 +43,12 @@
 		D8328F4F1DBA6D8A00438D4A /* QLProfileCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8328F4D1DBA6D8A00438D4A /* QLProfileCardCell.m */; };
 		D8328F501DBA6D8A00438D4A /* QLProfileCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8328F4E1DBA6D8A00438D4A /* QLProfileCardCell.xib */; };
 		D8328F531DBA6DA200438D4A /* QLProfileCardCellObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D8328F521DBA6DA200438D4A /* QLProfileCardCellObject.m */; };
+		D8328F581DBA771C00438D4A /* QLProfileAddCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8328F561DBA771C00438D4A /* QLProfileAddCardCell.m */; };
+		D8328F591DBA771C00438D4A /* QLProfileAddCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8328F571DBA771C00438D4A /* QLProfileAddCardCell.xib */; };
+		D8328F5C1DBA773400438D4A /* QLProfileAddCardCellObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D8328F5B1DBA773400438D4A /* QLProfileAddCardCellObject.m */; };
+		D8328F611DBA78B400438D4A /* QLOffsetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8328F5F1DBA78B400438D4A /* QLOffsetCell.m */; };
+		D8328F621DBA78B400438D4A /* QLOffsetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8328F601DBA78B400438D4A /* QLOffsetCell.xib */; };
+		D8328F651DBA78C800438D4A /* QLOffsetCellObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D8328F641DBA78C800438D4A /* QLOffsetCellObject.m */; };
 		D835BCB51DB96EF400F2FF0F /* SF-UI-Display-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = D835BCB41DB96EF400F2FF0F /* SF-UI-Display-Light.otf */; };
 		D835BCCE1DB9741100F2FF0F /* RDSDataDisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BCCC1DB9741100F2FF0F /* RDSDataDisplayManager.m */; };
 		D835BCD31DB9747500F2FF0F /* NSMutableArray+RDSNilFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BCD21DB9747500F2FF0F /* NSMutableArray+RDSNilFilter.m */; };
@@ -176,6 +182,16 @@
 		D8328F4E1DBA6D8A00438D4A /* QLProfileCardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QLProfileCardCell.xib; path = CardCell/QLProfileCardCell.xib; sourceTree = "<group>"; };
 		D8328F511DBA6DA200438D4A /* QLProfileCardCellObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLProfileCardCellObject.h; path = CardCell/QLProfileCardCellObject.h; sourceTree = "<group>"; };
 		D8328F521DBA6DA200438D4A /* QLProfileCardCellObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLProfileCardCellObject.m; path = CardCell/QLProfileCardCellObject.m; sourceTree = "<group>"; };
+		D8328F551DBA771C00438D4A /* QLProfileAddCardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLProfileAddCardCell.h; path = AddCardCell/QLProfileAddCardCell.h; sourceTree = "<group>"; };
+		D8328F561DBA771C00438D4A /* QLProfileAddCardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLProfileAddCardCell.m; path = AddCardCell/QLProfileAddCardCell.m; sourceTree = "<group>"; };
+		D8328F571DBA771C00438D4A /* QLProfileAddCardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QLProfileAddCardCell.xib; path = AddCardCell/QLProfileAddCardCell.xib; sourceTree = "<group>"; };
+		D8328F5A1DBA773400438D4A /* QLProfileAddCardCellObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLProfileAddCardCellObject.h; path = AddCardCell/QLProfileAddCardCellObject.h; sourceTree = "<group>"; };
+		D8328F5B1DBA773400438D4A /* QLProfileAddCardCellObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLProfileAddCardCellObject.m; path = AddCardCell/QLProfileAddCardCellObject.m; sourceTree = "<group>"; };
+		D8328F5E1DBA78B400438D4A /* QLOffsetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLOffsetCell.h; path = OffsetCell/QLOffsetCell.h; sourceTree = "<group>"; };
+		D8328F5F1DBA78B400438D4A /* QLOffsetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLOffsetCell.m; path = OffsetCell/QLOffsetCell.m; sourceTree = "<group>"; };
+		D8328F601DBA78B400438D4A /* QLOffsetCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QLOffsetCell.xib; path = OffsetCell/QLOffsetCell.xib; sourceTree = "<group>"; };
+		D8328F631DBA78C800438D4A /* QLOffsetCellObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLOffsetCellObject.h; path = OffsetCell/QLOffsetCellObject.h; sourceTree = "<group>"; };
+		D8328F641DBA78C800438D4A /* QLOffsetCellObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLOffsetCellObject.m; path = OffsetCell/QLOffsetCellObject.m; sourceTree = "<group>"; };
 		D835BCB31DB94E1500F2FF0F /* QLStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = QLStorage.h; path = Classes/BusinessLogic/CoreCompnents/KeychainStorage/QLStorage.h; sourceTree = "<group>"; };
 		D835BCB41DB96EF400F2FF0F /* SF-UI-Display-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Display-Light.otf"; path = "Resources/Fonts/SF-UI-Display-Light.otf"; sourceTree = "<group>"; };
 		D835BCCB1DB9741100F2FF0F /* RDSDataDisplayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RDSDataDisplayManager.h; path = Classes/Helpers/DataDisplayManager/RDSDataDisplayManager.h; sourceTree = "<group>"; };
@@ -664,6 +680,30 @@
 			name = CardCell;
 			sourceTree = "<group>";
 		};
+		D8328F541DBA76F900438D4A /* AddCardCell */ = {
+			isa = PBXGroup;
+			children = (
+				D8328F551DBA771C00438D4A /* QLProfileAddCardCell.h */,
+				D8328F561DBA771C00438D4A /* QLProfileAddCardCell.m */,
+				D8328F571DBA771C00438D4A /* QLProfileAddCardCell.xib */,
+				D8328F5A1DBA773400438D4A /* QLProfileAddCardCellObject.h */,
+				D8328F5B1DBA773400438D4A /* QLProfileAddCardCellObject.m */,
+			);
+			name = AddCardCell;
+			sourceTree = "<group>";
+		};
+		D8328F5D1DBA788900438D4A /* OffsetCell */ = {
+			isa = PBXGroup;
+			children = (
+				D8328F5E1DBA78B400438D4A /* QLOffsetCell.h */,
+				D8328F5F1DBA78B400438D4A /* QLOffsetCell.m */,
+				D8328F601DBA78B400438D4A /* QLOffsetCell.xib */,
+				D8328F631DBA78C800438D4A /* QLOffsetCellObject.h */,
+				D8328F641DBA78C800438D4A /* QLOffsetCellObject.m */,
+			);
+			name = OffsetCell;
+			sourceTree = "<group>";
+		};
 		D835BCCA1DB973DE00F2FF0F /* DataDisplayManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -736,8 +776,10 @@
 		D835BD081DB97B0700F2FF0F /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				D8328F541DBA76F900438D4A /* AddCardCell */,
 				D8328F4B1DBA6D6700438D4A /* CardCell */,
 				D835BD091DB97B0700F2FF0F /* DataCell */,
+				D8328F5D1DBA788900438D4A /* OffsetCell */,
 			);
 			name = Cells;
 			path = Classes/UserInterface/Controllers/UserProfile/Cells;
@@ -1180,9 +1222,11 @@
 				D89655531DB8260C00DE4C66 /* SF-UI-Display-Medium.otf in Resources */,
 				D89655421DB822AD00DE4C66 /* Auth.storyboard in Resources */,
 				D8F9D7BD1DAFD2FC000371CA /* Assets.xcassets in Resources */,
+				D8328F621DBA78B400438D4A /* QLOffsetCell.xib in Resources */,
 				D8328F501DBA6D8A00438D4A /* QLProfileCardCell.xib in Resources */,
 				D89655541DB8260C00DE4C66 /* SF-UI-Display-Bold.otf in Resources */,
 				9EFF74361DB4C376004873A6 /* borrowerOrderStub.json in Resources */,
+				D8328F591DBA771C00438D4A /* QLProfileAddCardCell.xib in Resources */,
 				D835BD141DB97B0700F2FF0F /* QLProfileDataCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1259,12 +1303,14 @@
 				D835BCD71DB974C100F2FF0F /* RDSAutoHeightCellFactory.m in Sources */,
 				D835BD0F1DB97B0700F2FF0F /* QLProfileCellFactoryImplementation.m in Sources */,
 				9EFF73971DB3B870004873A6 /* QLAuthorizationRequestConfiguration.m in Sources */,
+				D8328F611DBA78B400438D4A /* QLOffsetCell.m in Sources */,
 				9EFF73FD1DB4206F004873A6 /* QLCoreComponentsAssembly.m in Sources */,
 				D835BD391DBA25C400F2FF0F /* QLBankCard.m in Sources */,
 				9EFF73D11DB3D969004873A6 /* QLPaymentSchedule.m in Sources */,
 				9EFF73E51DB40AE6004873A6 /* QLSortMethodParser.m in Sources */,
 				9EFF73911DB3B64C004873A6 /* QLAuthorizationService.m in Sources */,
 				D8F9D7B81DAFD2FC000371CA /* SecondViewController.m in Sources */,
+				D8328F651DBA78C800438D4A /* QLOffsetCellObject.m in Sources */,
 				D8328F4A1DBA2D4300438D4A /* QLBankCardRequestFactoryImplementation.m in Sources */,
 				9EFF73F11DB416AE004873A6 /* QLJSONSerializer.m in Sources */,
 				9EFF73B51DB3C9C5004873A6 /* ServicesConstants.m in Sources */,
@@ -1291,6 +1337,7 @@
 				9EFF73AE1DB3C90F004873A6 /* QLBorrowerOrder.m in Sources */,
 				9EFF73C11DB3CE42004873A6 /* QLLenderOrderService.m in Sources */,
 				9EFF73D51DB3DB26004873A6 /* QLUserInteractionService.m in Sources */,
+				D8328F5C1DBA773400438D4A /* QLProfileAddCardCellObject.m in Sources */,
 				D835BD121DB97B0700F2FF0F /* QLProfileDataDisplayManager.m in Sources */,
 				D835BD131DB97B0700F2FF0F /* QLProfileDataCell.m in Sources */,
 				D89655601DB8C39900DE4C66 /* QLAuthAssembly.m in Sources */,
@@ -1304,6 +1351,7 @@
 				9EFF739B1DB3BDF8004873A6 /* QLUserInfoService.m in Sources */,
 				9EFF73F51DB41A47004873A6 /* QLMappingProvider.m in Sources */,
 				9EFF73C51DB3D091004873A6 /* QLPersonalCabinetService.m in Sources */,
+				D8328F581DBA771C00438D4A /* QLProfileAddCardCell.m in Sources */,
 				D835BD471DBA28C200F2FF0F /* QLBankMappingProvider.m in Sources */,
 				D84F78381DB8CBC500394F1D /* QLBankAuthServiceImplementation.m in Sources */,
 				9EFF73C91DB3D1C4004873A6 /* QLNotification.m in Sources */,
