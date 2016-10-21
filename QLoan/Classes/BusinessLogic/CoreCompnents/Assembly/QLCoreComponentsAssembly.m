@@ -12,6 +12,8 @@
 #import "QLBankAuthRequestFactoryImplementation.h"
 #import "QLChallengedNetworkClient.h"
 
+#import "QLSerializer.h"
+
 @implementation QLCoreComponentsAssembly
 
 #pragma mark - Маппинг
@@ -39,6 +41,15 @@
 									  with:[AFJSONResponseSerializer new]];
 			}];
 	
+}
+
+- (QLSerializer *)serializer {
+	return [TyphoonDefinition withClass:[QLSerializer class]
+						  configuration:^(TyphoonDefinition *definition)
+			{
+				[definition injectProperty:@selector(mappingProvider)
+									  with:[self mappingProvider]];
+			}];
 }
 
 #pragma mark - Фабрики запросов

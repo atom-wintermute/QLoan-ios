@@ -11,6 +11,7 @@
 #import "QLSortMethodParser.h"
 #import "QLRegistrationRequestConfiguration.h"
 #import "QLAuthorizationRequestConfiguration.h"
+#import "QLBorrowerOrder.h"
 
 @implementation QLRequestFactory
 
@@ -55,6 +56,11 @@
 	NSDictionary *dictionary = @{ @"id" : @(orderId) };
 	return [self getRequestWithPath:@"getBorrowersOrder"
 						 parameters:dictionary];
+}
+
+- (NSURLRequest *)requestForAddingBorrowerOrder:(NSDictionary *)orderParameters {
+	return [self postRequestWithPath:@"addBorrowersOrder"
+						  parameters:orderParameters];
 }
 
 #pragma mark - Вспомогательные методы

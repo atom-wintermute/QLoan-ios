@@ -31,4 +31,6 @@
 
 - (NSURLRequest *)requestForBorrowerOrderWithId:(NSInteger)orderId;
 
+- (NSURLRequest *)requestForAddingBorrowerOrder:(NSDictionary *)orderParameters;
+
 @end

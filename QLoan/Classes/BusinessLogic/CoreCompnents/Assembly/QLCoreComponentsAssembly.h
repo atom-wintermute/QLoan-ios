@@ -18,6 +18,7 @@
 #import "QLKeychainStorage.h"
 #import "QLNetworkClient.h"
 #import "QLChallengedNetworkClient.h"
+#import "QLSerializer.h"
 
 @interface QLCoreComponentsAssembly : TyphoonAssembly
 
@@ -30,6 +31,8 @@
 #pragma mark - Сериализаторы
 
 - (QLJSONSerializer *)jsonSerializer;
+
+- (QLSerializer *)serializer;
 
 #pragma mark - Фабрики запросов
 

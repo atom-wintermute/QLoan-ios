@@ -16,6 +16,8 @@
 
 - (QLBorrowerOrder *)mapBorrowerOrderFromResponseObject:(id)responseObject;
 
+- (NSArray<QLBorrowerOrder *> *)mapBorrowerOrdersFromResponseObject:(id)responseObject;
+
 - (QLSessionCredentials *)mapSessionCredentialsFromResponseObject:(id)responseObject;
 
 @end
