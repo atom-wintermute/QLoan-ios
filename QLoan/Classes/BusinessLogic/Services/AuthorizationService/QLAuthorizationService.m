@@ -60,6 +60,7 @@
 				
 				QLSessionCredentials *credentials = [strongSelf.mapper mapSessionCredentialsFromResponseObject:dictionary];
 				[self.storage setCredentialsForCurrentUser:credentials];
+				
 				run_block_on_main(completion, YES, nil);
 			} else {
 				NSError *error = [NSError errorWithDomain:NSURLErrorDomain

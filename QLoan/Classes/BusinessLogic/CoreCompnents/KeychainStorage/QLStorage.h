@@ -6,6 +6,9 @@
 //  Copyright © 2016 Rambler&Co. All rights reserved.
 //
 
+#import "QLSessionCredentials.h"
+#import "QLAuthorizationRequestConfiguration.h"
+
 /**
  Протокол хранилища
  */
@@ -35,5 +38,13 @@
  @param key ключ
  */
 - (void)removeObjectForKey:(NSString *)key;
+
+- (QLSessionCredentials *)credentialsForCurrentUser;
+
+- (void)setCredentialsForCurrentUser:(QLSessionCredentials *)credentials;
+
+- (QLAuthorizationRequestConfiguration *)authorizationConfigurationForCurrentUser;
+
+- (void)setAuthorizationConfiguration:(QLAuthorizationRequestConfiguration *)configuration;
 
 @end

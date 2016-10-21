@@ -10,6 +10,7 @@
 
 #import "QLBankAuthService.h"
 #import "QLBankCardService.h"
+#import "QLAuthorizationService.h"
 
 static NSString * const QLAuthRegisterSegue = @"registerSegue";
 
@@ -25,7 +26,7 @@ static NSString * const QLAuthRegisterSegue = @"registerSegue";
 - (void)fastLoginButtonWasPressed:(id)sender {
     self.loginTextField.text = @"9139381557";
     self.passwordTextField.text = @"29111990m";
-    [self loginButtonWasPressed:nil];
+	[self loginButtonWasPressed:nil];
 }
 
 - (void)forgetPasswordButtonWasPressed:(id)sender {
@@ -35,25 +36,40 @@ static NSString * const QLAuthRegisterSegue = @"registerSegue";
 - (void)loginButtonWasPressed:(id)sender {
     NSString *loginString = self.loginTextField.text;
     NSString *passwordString = self.passwordTextField.text;
-    
+	
+	QLBooleanCompletion localAuthCompletion = ^(BOOL success, NSError *error) {
+		if (success) {
+			[self loginCompleted];
+		} else {
+			[self showErrorAlert];
+		}
+	};
+	
+	QLBankAuthLoginCompletion bankAuthLoginCompletion = ^(BOOL success, NSError *error) {
+		if (success) {
+			[self.authorizationService authorizeWithCompletion:localAuthCompletion];
+		} else {
+			[self showErrorAlert];
+		}
+	};
+	
     [self.bankAuthService loginWithLogin:loginString
                                 password:passwordString
-                              completion:^(BOOL success, NSError *error) {
-                                  if (success) {
-                                      // сразу обновляем данные для пользователя
-                                      [self.bankAuthService updateCurrentUserDataWithCompletion:nil];
-                                      [self.bankCardService updateBankCardsWithCompletion:nil];
-                                      [self.presentingViewController dismissViewControllerAnimated:YES
-                                                                                        completion:nil];
-                                  } else {
-                                      [self showErrorAlert];
-                                  }
-                              }];
+                              completion:bankAuthLoginCompletion];
 }
 
 - (void)registerButtonWasPressed:(id)sender {
     [self performSegueWithIdentifier:QLAuthRegisterSegue
                               sender:self];
+}
+
+#pragma mark - Авторизация в локальном бекэнде
+
+- (void)loginCompleted {
+	[self.bankAuthService updateCurrentUserDataWithCompletion:nil];
+	[self.bankCardService updateBankCardsWithCompletion:nil];
+	[self.presentingViewController dismissViewControllerAnimated:YES
+													  completion:nil];
 }
 
 #pragma mark - Приватные методы

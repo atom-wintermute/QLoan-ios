@@ -76,7 +76,7 @@
 				[definition injectProperty:@selector(requestSerializer)
 									  with:[AFHTTPRequestSerializer new]];
 				[definition injectProperty:@selector(keychainStorage)
-									  with:[self keychainStorage]];
+									  with:[self inMemoryStorage]];
 			}];
 }
 

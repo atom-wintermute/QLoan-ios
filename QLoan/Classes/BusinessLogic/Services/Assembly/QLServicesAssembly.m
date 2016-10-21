@@ -115,7 +115,7 @@
 						  configuration:^(TyphoonDefinition *definition)
 			{
 				[definition injectProperty:@selector(storage)
-									  with:[self.coreAssembly keychainStorage]];
+									  with:[self.coreAssembly inMemoryStorage]];
 				[definition injectProperty:@selector(networkClient)
 									  with:[self.coreAssembly challengedNetworkClient]];
 				[definition injectProperty:@selector(mapper)

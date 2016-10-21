@@ -19,10 +19,12 @@ static NSString *const QLSessionString = @"session";
 
 @implementation QLKeychainStorage
 
+#pragma mark - QLStorage
+
 - (QLAuthorizationRequestConfiguration *)authorizationConfigurationForCurrentUser {
 	QLAuthorizationRequestConfiguration *configuration = [QLAuthorizationRequestConfiguration new];
-	configuration.login = [self loadObjectForKey:QLLocalAuthorizationLoginKey];
-	configuration.password = [self loadObjectForKey:QLLocalAuthorizationPasswordKey];
+	configuration.login = @"myLogin";//[self loadObjectForKey:QLLocalAuthorizationLoginKey];
+	configuration.password = @"myPassword";//[self loadObjectForKey:QLLocalAuthorizationPasswordKey];
 	
 	return configuration;
 }
@@ -52,8 +54,6 @@ static NSString *const QLSessionString = @"session";
 			   forKey:QLLocalAuthorizationClientKey];
 }
 
-#pragma mark - QLStorage
-
 - (void)storeObject:(id)object
              forKey:(NSString *)key {
     [SAMKeychain setPassword:object
@@ -70,7 +70,6 @@ static NSString *const QLSessionString = @"session";
     [SAMKeychain deletePasswordForService:[self sessionServiceName]
                                   account:key];
 }
-
 
 #pragma mark - Вспомогательные методы
 
