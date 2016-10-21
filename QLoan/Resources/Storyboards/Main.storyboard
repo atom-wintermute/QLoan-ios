@@ -37,37 +37,18 @@
                             <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Мои заявки" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Мои заявки" image="myOrderActive" selectedImage="myOrderActive" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="788" y="-882"/>
         </scene>
-        <!--Выдать займ-->
-        <scene sceneID="diT-nQ-7Yz">
-            <objects>
-                <viewController id="eMV-aJ-WPd" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="1x7-JT-ssp"/>
-                        <viewControllerLayoutGuide type="bottom" id="oxr-Uf-Yh4"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kw7-dH-Jc9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Выдать займ" id="4be-Ks-Oai"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nc-Ym-j3l" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="788" y="450"/>
-        </scene>
         <!--Профиль-->
         <scene sceneID="nlJ-XL-37g">
             <objects>
                 <navigationController id="zPk-ke-Nes" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Профиль" id="pOS-GF-el9"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wN7-4t-p8r">
+                    <tabBarItem key="tabBarItem" title="Профиль" image="profileActive" id="pOS-GF-el9"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="wN7-4t-p8r">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -78,6 +59,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FSC-4c-9Fi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="788" y="1127"/>
+        </scene>
+        <!--Выдать займ-->
+        <scene sceneID="iec-aM-8wg">
+            <objects>
+                <navigationController id="Ad9-3W-72I" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Выдать займ" image="lendLoanActive" id="8Bf-Lb-8vB"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="1fH-b6-jEE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="I42-L3-vkq" kind="relationship" relationship="rootViewController" id="n6q-wA-Oql"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RPJ-Xo-YDj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="788" y="448"/>
+        </scene>
+        <!--QLLendViewController-->
+        <scene sceneID="jTs-qf-jUK">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Lend" referencedIdentifier="QLLendViewController" id="I42-L3-vkq" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="qAl-2v-bUv"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SGd-59-kOx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1537" y="447"/>
         </scene>
         <!--QLProfileViewController-->
         <scene sceneID="xYv-RT-Ws8">
@@ -121,7 +129,7 @@
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Получить займ" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Получить займ" image="getLoanActive" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -136,12 +144,14 @@
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.0039215686274509803" green="0.80000000000000004" blue="0.87058823529411766" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="0.0039215686269999999" green="0.80000000000000004" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="eMV-aJ-WPd" kind="relationship" relationship="viewControllers" id="yXL-A9-Vxn"/>
-                        <segue destination="zPk-ke-Nes" kind="relationship" relationship="viewControllers" id="TKB-BB-OJt"/>
+                        <segue destination="Ad9-3W-72I" kind="relationship" relationship="viewControllers" id="7ug-SU-H4G"/>
+                        <segue destination="zPk-ke-Nes" kind="relationship" relationship="viewControllers" id="ibn-t0-4Tx"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -150,7 +160,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="getLoanActive" width="20" height="15"/>
+        <image name="lendLoanActive" width="21" height="15"/>
+        <image name="myOrderActive" width="16" height="20"/>
+        <image name="profileActive" width="18" height="18"/>
     </resources>
 </document>
