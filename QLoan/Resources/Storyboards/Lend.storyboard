@@ -20,7 +20,7 @@
         <scene sceneID="F7G-JQ-Feg">
             <objects>
                 <navigationController navigationBarHidden="YES" id="TQP-Hx-Vch" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="W5A-xb-VEC">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="W5A-xb-VEC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -78,10 +78,10 @@
             </objects>
             <point key="canvasLocation" x="423" y="115"/>
         </scene>
-        <!--Create Order View Controller-->
+        <!--Create Borrower Order View Controller-->
         <scene sceneID="Xe6-7D-zFT">
             <objects>
-                <viewController autoresizesArchivedViewToFullSize="NO" id="Ied-7X-s2y" customClass="QLCreateOrderViewController" sceneMemberID="viewController">
+                <viewController autoresizesArchivedViewToFullSize="NO" id="Ied-7X-s2y" customClass="QLCreateBorrowerOrderViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tTf-Hf-HTS"/>
                         <viewControllerLayoutGuide type="bottom" id="GfA-XS-cet"/>
@@ -95,24 +95,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0oZ-qo-RDa" customClass="QLUnderlinedTextfield">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Сумма займа" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0oZ-qo-RDa" customClass="QLUnderlinedTextfield">
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bLD-GN-25S" customClass="QLUnderlinedTextfield">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Процент" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bLD-GN-25S" customClass="QLUnderlinedTextfield">
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MTP-Xg-BHi" customClass="QLUnderlinedTextfield">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Срок займа" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MTP-Xg-BHi" customClass="QLUnderlinedTextfield">
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e31-1j-23N" customClass="QLUnderlinedTextfield">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Неустойка" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="e31-1j-23N" customClass="QLUnderlinedTextfield">
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Порядок погашения" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhK-dN-EjX">
@@ -125,12 +125,18 @@
                                 <state key="normal" title="Ежемесячно в равных долях">
                                     <color key="titleColor" red="0.0039215686274509803" green="0.0039215686274509803" blue="0.0039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="monthlyTapped:" destination="Ied-7X-s2y" eventType="touchUpInside" id="soQ-lC-7Dy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BLl-e1-X7J">
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
                                 <state key="normal" title="По окончании срока займа">
                                     <color key="titleColor" red="0.0039215686274509803" green="0.0039215686274509803" blue="0.0039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onceTapped:" destination="Ied-7X-s2y" eventType="touchUpInside" id="zg1-yr-9ZF"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Check" translatesAutoresizingMaskIntoConstraints="NO" id="4Tx-Da-TbI">
                                 <constraints>
@@ -189,6 +195,12 @@
                     </view>
                     <connections>
                         <outlet property="createOrderButton" destination="ed8-5i-dvA" id="C7U-W9-bGv"/>
+                        <outlet property="loanAmountTextfield" destination="0oZ-qo-RDa" id="rMl-bI-MXh"/>
+                        <outlet property="loanPenaltyTextfield" destination="e31-1j-23N" id="jlE-rG-49T"/>
+                        <outlet property="loanPeriodTextfield" destination="MTP-Xg-BHi" id="Lvm-eJ-b42"/>
+                        <outlet property="monthlyCheckbox" destination="UJK-sj-iXa" id="yxD-pB-Z8A"/>
+                        <outlet property="onceCheckbox" destination="4Tx-Da-TbI" id="Nqd-0S-ZzK"/>
+                        <outlet property="percentageTextfield" destination="bLD-GN-25S" id="7un-Yo-TeQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ee-3f-hXp" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -27,24 +27,14 @@
 	[self layoutIfNeeded];
 	
 	self.layer.sublayers[0].opacity = 0.0;
-	CALayer *underlinedLayer = [self createUnderlinedLayer];
-	[self.layer addSublayer:underlinedLayer];
 	
-	self.layer.masksToBounds = YES;
-}
-
-- (CALayer *)createUnderlinedLayer {
+	CALayer *border = [CALayer layer];
 	CGFloat borderWidth = 0.5;
-	CALayer *newLayer = [CALayer new];
-	
-	newLayer.borderColor = [[UIColor lightGrayColor] CGColor];
-	newLayer.frame = CGRectMake(0,
-								CGRectGetHeight(self.frame) - borderWidth,
-								CGRectGetWidth(self.frame),
-								borderWidth);
-	newLayer.borderWidth = borderWidth;
-	
-	return newLayer;
+	border.borderColor = [UIColor darkGrayColor].CGColor;
+	border.frame = CGRectMake(0, self.frame.size.height - borderWidth, self.frame.size.width, self.frame.size.height);
+	border.borderWidth = borderWidth;
+	[self.layer addSublayer:border];
+	self.layer.masksToBounds = YES;
 }
 
 @end
