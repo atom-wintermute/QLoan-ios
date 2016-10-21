@@ -20,7 +20,9 @@
 										   @"loanMaturityPeriod" : @"loanMaturityPeriod",
 										   @"loanAmount" : @"loanAmount",
 										   @"perecentage" : @"perecentage",
-										   @"penalty" : @"penalty"
+										   @"penalty" : @"penalty",
+										   @"repaymentType" : @"repaymentType",
+										   @"status": @"status"
 										   }];
 	}];
 }

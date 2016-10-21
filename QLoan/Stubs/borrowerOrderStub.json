@@ -1,4 +1,22 @@
 {
-	"borrowerId": 20,
-	"lenderId": 30
+	"orders": [
+			   {
+			   "borrowerId": 20,
+			   "lenderId": 30
+			   },
+			   {
+			   "borrowerId": 20,
+			   "lenderId": 30
+			   },
+			   {
+			   "borrowerId": 20,
+			   "lenderId": 30
+			   },
+			   {
+			   "borrowerId": 20,
+			   "lenderId": 30
+			   }]
+
 }
+
+
