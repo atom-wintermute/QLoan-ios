@@ -18,4 +18,8 @@
     return [UIColor colorWithRed:23.0/255.0 green:210.0/255.0 blue:221.0/255.0 alpha:1.0];
 }
 
++ (UIColor *)ql_selectedCellColor {
+    return [UIColor colorWithRed:238.0/255.0 green:250.0/255.0 blue:253.0/255.0 alpha:1.0];
+}
+
 @end

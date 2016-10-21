@@ -14,6 +14,14 @@ static CGFloat const QLLendOrderCellHeight = 64.0;
 
 @implementation QLLendOrderCell
 
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    
+    UIView *view = [UIView new];
+    view.backgroundColor = [UIColor ql_selectedCellColor];
+    self.selectedBackgroundView = view;
+}
+
 - (BOOL)shouldUpdateCellWithObject:(QLLendOrderCellObject *)object {
     
     

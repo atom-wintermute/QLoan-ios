@@ -9,7 +9,7 @@
         <scene sceneID="F7G-JQ-Feg">
             <objects>
                 <navigationController navigationBarHidden="YES" id="TQP-Hx-Vch" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="W5A-xb-VEC">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="W5A-xb-VEC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
