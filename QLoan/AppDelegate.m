@@ -15,6 +15,7 @@
 #import "QLLendAssembly.h"
 #import "QLGetAssembly.h"
 #import "QLMyOrdersAssembly.h"
+#import "QLCreateBorrowerOrderAssembly.h"
 
 #import "UIColor+QLColor.h"
 
@@ -38,7 +39,8 @@
              [QLProfileAssembly class],
              [QLLendAssembly class],
              [QLGetAssembly class],
-             [QLMyOrdersAssembly class]
+             [QLMyOrdersAssembly class],
+			 [QLCreateBorrowerOrderAssembly class]
 			 ];
 }
 

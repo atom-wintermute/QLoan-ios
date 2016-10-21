@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E09BBCE1DBACB4600B1CF0E /* QLCreateBorrowerOrderAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E09BBCD1DBACB4600B1CF0E /* QLCreateBorrowerOrderAssembly.m */; };
 		9ECC12BE1DB977DB00E33288 /* QLChallengedNetworkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECC12BD1DB977DB00E33288 /* QLChallengedNetworkClient.m */; };
 		9ECC12C61DB9932900E33288 /* QLSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECC12C51DB9932900E33288 /* QLSerializer.m */; };
 		9ECC12CA1DBA284300E33288 /* QLDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECC12C91DBA284300E33288 /* QLDateFormatter.m */; };
@@ -14,7 +15,7 @@
 		9ECC12CC1DBA871000E33288 /* QLSessionCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECC12B31DB95F4100E33288 /* QLSessionCredentials.m */; };
 		9ECC12D81DBA906300E33288 /* QLBlueGradientButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECC12D71DBA906300E33288 /* QLBlueGradientButton.m */; };
 		9ECC12DC1DBA9DDF00E33288 /* QLUnderlinedTextfield.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECC12DB1DBA9DDF00E33288 /* QLUnderlinedTextfield.m */; };
-		9ECC12E01DBAA0AC00E33288 /* QLCreateOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECC12DF1DBAA0AC00E33288 /* QLCreateOrderViewController.m */; };
+		9ECC12E01DBAA0AC00E33288 /* QLCreateBorrowerOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECC12DF1DBAA0AC00E33288 /* QLCreateBorrowerOrderViewController.m */; };
 		9EFF73911DB3B64C004873A6 /* QLAuthorizationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73901DB3B64C004873A6 /* QLAuthorizationService.m */; };
 		9EFF73941DB3B672004873A6 /* QLRegistrationRequestConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73931DB3B672004873A6 /* QLRegistrationRequestConfiguration.m */; };
 		9EFF73971DB3B870004873A6 /* QLAuthorizationRequestConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73961DB3B870004873A6 /* QLAuthorizationRequestConfiguration.m */; };
@@ -202,6 +203,8 @@
 /* Begin PBXFileReference section */
 		231F0EC6722C13ED096D9EB6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		41A2D4330A792AAE9B65A346 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		9E09BBCC1DBACB4600B1CF0E /* QLCreateBorrowerOrderAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLCreateBorrowerOrderAssembly.h; path = Classes/UserInterface/Controllers/CreateOrder/Assembly/QLCreateBorrowerOrderAssembly.h; sourceTree = "<group>"; };
+		9E09BBCD1DBACB4600B1CF0E /* QLCreateBorrowerOrderAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLCreateBorrowerOrderAssembly.m; path = Classes/UserInterface/Controllers/CreateOrder/Assembly/QLCreateBorrowerOrderAssembly.m; sourceTree = "<group>"; };
 		9ECC12B21DB95F4100E33288 /* QLSessionCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLSessionCredentials.h; path = Classes/BusinessLogic/Services/AuthorizationService/SessionCredentials/QLSessionCredentials.h; sourceTree = "<group>"; };
 		9ECC12B31DB95F4100E33288 /* QLSessionCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLSessionCredentials.m; path = Classes/BusinessLogic/Services/AuthorizationService/SessionCredentials/QLSessionCredentials.m; sourceTree = "<group>"; };
 		9ECC12B91DB966D500E33288 /* ErrorCodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorCodes.h; path = Classes/BusinessLogic/Services/Constants/ErrorCodes.h; sourceTree = "<group>"; };
@@ -217,8 +220,8 @@
 		9ECC12D71DBA906300E33288 /* QLBlueGradientButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLBlueGradientButton.m; path = Classes/CommonComponents/GradientButton/QLBlueGradientButton.m; sourceTree = "<group>"; };
 		9ECC12DA1DBA9DDF00E33288 /* QLUnderlinedTextfield.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLUnderlinedTextfield.h; path = Classes/CommonComponents/UnderlinedTextfield/QLUnderlinedTextfield.h; sourceTree = "<group>"; };
 		9ECC12DB1DBA9DDF00E33288 /* QLUnderlinedTextfield.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLUnderlinedTextfield.m; path = Classes/CommonComponents/UnderlinedTextfield/QLUnderlinedTextfield.m; sourceTree = "<group>"; };
-		9ECC12DE1DBAA0AC00E33288 /* QLCreateOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLCreateOrderViewController.h; path = Classes/UserInterface/Controllers/CreateOrder/QLCreateOrderViewController.h; sourceTree = "<group>"; };
-		9ECC12DF1DBAA0AC00E33288 /* QLCreateOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLCreateOrderViewController.m; path = Classes/UserInterface/Controllers/CreateOrder/QLCreateOrderViewController.m; sourceTree = "<group>"; };
+		9ECC12DE1DBAA0AC00E33288 /* QLCreateBorrowerOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLCreateBorrowerOrderViewController.h; path = Classes/UserInterface/Controllers/CreateOrder/QLCreateBorrowerOrderViewController.h; sourceTree = "<group>"; };
+		9ECC12DF1DBAA0AC00E33288 /* QLCreateBorrowerOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLCreateBorrowerOrderViewController.m; path = Classes/UserInterface/Controllers/CreateOrder/QLCreateBorrowerOrderViewController.m; sourceTree = "<group>"; };
 		9EFF738F1DB3B64C004873A6 /* QLAuthorizationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLAuthorizationService.h; path = Classes/BusinessLogic/Services/AuthorizationService/QLAuthorizationService.h; sourceTree = "<group>"; };
 		9EFF73901DB3B64C004873A6 /* QLAuthorizationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLAuthorizationService.m; path = Classes/BusinessLogic/Services/AuthorizationService/QLAuthorizationService.m; sourceTree = "<group>"; };
 		9EFF73921DB3B672004873A6 /* QLRegistrationRequestConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLRegistrationRequestConfiguration.h; path = Classes/BusinessLogic/Services/AuthorizationService/QLRegistrationRequestConfiguration.h; sourceTree = "<group>"; };
@@ -524,6 +527,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		9E09BBCB1DBACB2600B1CF0E /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				9E09BBCC1DBACB4600B1CF0E /* QLCreateBorrowerOrderAssembly.h */,
+				9E09BBCD1DBACB4600B1CF0E /* QLCreateBorrowerOrderAssembly.m */,
+			);
+			name = Assembly;
+			sourceTree = "<group>";
+		};
 		9ECC12B11DB95F1600E33288 /* SessionCredentials */ = {
 			isa = PBXGroup;
 			children = (
@@ -590,8 +602,9 @@
 		9ECC12DD1DBAA08500E33288 /* CreateOrder */ = {
 			isa = PBXGroup;
 			children = (
-				9ECC12DE1DBAA0AC00E33288 /* QLCreateOrderViewController.h */,
-				9ECC12DF1DBAA0AC00E33288 /* QLCreateOrderViewController.m */,
+				9E09BBCB1DBACB2600B1CF0E /* Assembly */,
+				9ECC12DE1DBAA0AC00E33288 /* QLCreateBorrowerOrderViewController.h */,
+				9ECC12DF1DBAA0AC00E33288 /* QLCreateBorrowerOrderViewController.m */,
 			);
 			name = CreateOrder;
 			sourceTree = "<group>";
@@ -1897,6 +1910,7 @@
 				9EFF73F11DB416AE004873A6 /* QLJSONSerializer.m in Sources */,
 				9EFF73B51DB3C9C5004873A6 /* ServicesConstants.m in Sources */,
 				D861479D1DBA9FA00018D19C /* QLGetAssembly.m in Sources */,
+				9E09BBCE1DBACB4600B1CF0E /* QLCreateBorrowerOrderAssembly.m in Sources */,
 				D835BD1E1DB9830C00F2FF0F /* QLInMemoryStorage.m in Sources */,
 				D835BD101DB97B0700F2FF0F /* QLProfileViewController.m in Sources */,
 				D86147B71DBAA6D90018D19C /* QLMyOrdersAssembly.m in Sources */,
@@ -1961,7 +1975,7 @@
 				9ECC12CB1DBA871000E33288 /* QLSessionCredentials.m in Sources */,
 				9EFF73B91DB3CA09004873A6 /* EntityConstants.m in Sources */,
 				9EFF73A21DB3C1D3004873A6 /* QLBorrowerOrderService.m in Sources */,
-				9ECC12E01DBAA0AC00E33288 /* QLCreateOrderViewController.m in Sources */,
+				9ECC12E01DBAA0AC00E33288 /* QLCreateBorrowerOrderViewController.m in Sources */,
 				9EFF73F81DB41B59004873A6 /* QLMapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

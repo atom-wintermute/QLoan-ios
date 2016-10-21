@@ -128,7 +128,7 @@
 }
 
 - (NSURLRequest *)requestForAddingBorrowerOrder:(NSDictionary *)orderParameters {
-	return [self postRequestWithPath:@"addBorrowersOrder/"
+	return [self postRequestWithPath:@"borrower_orders"
 						  parameters:orderParameters];
 }
 

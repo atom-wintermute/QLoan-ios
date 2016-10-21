@@ -25,7 +25,9 @@
 
 - (void)configureAppearance {
 	[self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+	[self layoutIfNeeded];
 	[self addGradient];
+	[self layoutIfNeeded];
 }
 
 @end
