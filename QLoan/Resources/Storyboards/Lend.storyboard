@@ -20,7 +20,7 @@
         <scene sceneID="F7G-JQ-Feg">
             <objects>
                 <navigationController navigationBarHidden="YES" id="TQP-Hx-Vch" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="W5A-xb-VEC">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="W5A-xb-VEC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -144,7 +144,7 @@
                                     <constraint firstAttribute="height" constant="10" id="nRN-iT-v9p"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ed8-5i-dvA">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ed8-5i-dvA" customClass="QLBlueGradientButton">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="Ivo-Tl-dVN"/>
                                     <constraint firstAttribute="width" constant="312" id="ROj-Qo-Th3"/>

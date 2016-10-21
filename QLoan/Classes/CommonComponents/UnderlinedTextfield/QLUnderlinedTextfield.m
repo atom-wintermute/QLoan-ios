@@ -24,19 +24,20 @@
 }
 
 - (void)configureAppearance {
-	//self.layer.sublayers[0].opacity = 0.0;
+	[self layoutIfNeeded];
+	
+	self.layer.sublayers[0].opacity = 0.0;
 	CALayer *underlinedLayer = [self createUnderlinedLayer];
 	[self.layer addSublayer:underlinedLayer];
 	
-//	self.layer.masksToBounds = YES;
-//	self.clearsOnBeginEditing = YES;
+	self.layer.masksToBounds = YES;
 }
 
 - (CALayer *)createUnderlinedLayer {
-	CGFloat borderWidth = 1.0;
+	CGFloat borderWidth = 0.5;
 	CALayer *newLayer = [CALayer new];
 	
-	newLayer.borderColor = [[UIColor grayColor] CGColor];
+	newLayer.borderColor = [[UIColor lightGrayColor] CGColor];
 	newLayer.frame = CGRectMake(0,
 								CGRectGetHeight(self.frame) - borderWidth,
 								CGRectGetWidth(self.frame),
