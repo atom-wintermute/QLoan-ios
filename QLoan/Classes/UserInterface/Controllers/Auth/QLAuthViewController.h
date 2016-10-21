@@ -11,6 +11,8 @@
 @protocol QLBankAuthService;
 @protocol QLBankCardService;
 
+@class QLAuthorizationService;
+
 /**
  Экран авторизации/регистрации пользователя
  */
@@ -22,6 +24,8 @@
 
 @property (nonatomic, strong) id<QLBankAuthService> bankAuthService;
 @property (nonatomic, strong) id<QLBankCardService> bankCardService;
+
+@property (nonatomic, strong) QLAuthorizationService *authorizationService;
 
 - (IBAction)fastLoginButtonWasPressed:(id)sender;
 

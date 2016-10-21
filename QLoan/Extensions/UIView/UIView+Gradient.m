@@ -12,7 +12,7 @@
 
 - (void)addGradient {
     CAGradientLayer *gradient = [CAGradientLayer layer];
-    gradient.frame = self.bounds;
+    gradient.frame = self.frame;
     
     gradient.colors = @[(id)[UIColor ql_turquoiseColor].CGColor,
                         (id)[UIColor ql_blueColor].CGColor];

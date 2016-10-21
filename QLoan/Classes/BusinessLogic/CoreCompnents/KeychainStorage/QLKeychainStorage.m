@@ -21,8 +21,8 @@ static NSString *const QLSessionString = @"session";
 
 - (QLAuthorizationRequestConfiguration *)authorizationConfigurationForCurrentUser {
 	QLAuthorizationRequestConfiguration *configuration = [QLAuthorizationRequestConfiguration new];
-	configuration.login = [self loadObjectForKey:QLLocalAuthorizationLoginKey];
-	configuration.password = [self loadObjectForKey:QLLocalAuthorizationPasswordKey];
+	configuration.login = @"myLogin";//[self loadObjectForKey:QLLocalAuthorizationLoginKey];
+	configuration.password = @"myPassword";//[self loadObjectForKey:QLLocalAuthorizationPasswordKey];
 	
 	return configuration;
 }
