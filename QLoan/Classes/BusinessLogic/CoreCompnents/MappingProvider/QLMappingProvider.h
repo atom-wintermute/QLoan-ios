@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <EasyMapping/EasyMapping.h>
 
-#import "QLBorrowerOrder.h"
-
 @interface QLMappingProvider : NSObject
 
 - (EKObjectMapping *)borrowerOrderMapping;
+
+- (EKObjectMapping *)lenderOrderMapping;
 
 - (EKObjectMapping *)authorizationHeaderMapping;
 

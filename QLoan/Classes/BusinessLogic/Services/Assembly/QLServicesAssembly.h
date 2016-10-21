@@ -13,6 +13,7 @@
 
 @class QLBorrowerOrderService;
 @class QLAuthorizationService;
+@class QLLenderOrderService;
 
 /**
  Фабрика сервисов
@@ -20,6 +21,8 @@
 @interface QLServicesAssembly : TyphoonAssembly
 
 - (QLBorrowerOrderService *)borrowerOrderService;
+
+- (QLLenderOrderService *)lenderOrderService;
 
 - (QLAuthorizationService *)authorizationService;
 

@@ -17,4 +17,6 @@
 
 - (NSDictionary *)dictionaryFromBorrowerOrder:(QLBorrowerOrder *)borrowerOrder;
 
+- (NSDictionary *)dictionaryFromLenderOrder:(QLLenderOrder *)lenderOrder;
+
 @end

@@ -25,6 +25,8 @@
 
 - (NSURLRequest *)requestForAuthorizationWithConfiguration:(QLAuthorizationRequestConfiguration *)configuration;
 
+#pragma mark - Заявки заемщика
+
 - (NSURLRequest *)requestForBorrowerOrdersWithPage:(NSUInteger)page
 										sortMethod:(QLSortMethod)sortMethod
 										 ascending:(BOOL)ascending;
@@ -32,5 +34,15 @@
 - (NSURLRequest *)requestForBorrowerOrderWithId:(NSInteger)orderId;
 
 - (NSURLRequest *)requestForAddingBorrowerOrder:(NSDictionary *)orderParameters;
+
+#pragma mark - Заявки займодавца
+
+- (NSURLRequest *)requestForLenderOrdersWithPage:(NSUInteger)page
+									  sortMethod:(QLSortMethod)sortMethod
+									   ascending:(BOOL)ascending;
+
+- (NSURLRequest *)requestForLenderOrderWithId:(NSInteger)orderId;
+
+- (NSURLRequest *)requestForAddingLenderOrder:(NSDictionary *)orderParameters;
 
 @end

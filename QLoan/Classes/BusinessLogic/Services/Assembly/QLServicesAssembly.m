@@ -11,6 +11,7 @@
 #import "QLBorrowerOrderService.h"
 #import "QLBankAuthServiceImplementation.h"
 #import "QLAuthorizationService.h"
+#import "QLLenderOrderService.h"
 
 @interface QLServicesAssembly()
 
@@ -22,6 +23,23 @@
 
 - (QLBorrowerOrderService *)borrowerOrderService {
 	return [TyphoonDefinition withClass:[QLBorrowerOrderService class]
+						  configuration:^(TyphoonDefinition *definition)
+			{
+				[definition injectProperty:@selector(jsonSerializer)
+									  with:[self.coreAssembly jsonSerializer]];
+				[definition injectProperty:@selector(serializer)
+									  with:[self.coreAssembly serializer]];
+				[definition injectProperty:@selector(networkClient)
+									  with:[self.coreAssembly challengedNetworkClient]];
+				[definition injectProperty:@selector(mapper)
+									  with:[self.coreAssembly mapper]];
+				[definition injectProperty:@selector(requestFactory)
+									  with:[self.coreAssembly requestFactory]];
+			}];
+}
+
+- (QLLenderOrderService *)lenderOrderService {
+	return [TyphoonDefinition withClass:[QLLenderOrderService class]
 						  configuration:^(TyphoonDefinition *definition)
 			{
 				[definition injectProperty:@selector(jsonSerializer)

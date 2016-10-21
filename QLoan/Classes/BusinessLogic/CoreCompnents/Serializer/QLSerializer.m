@@ -16,4 +16,9 @@
 							 withMapping:[self.mappingProvider borrowerOrderMapping]];
 }
 
+- (NSDictionary *)dictionaryFromLenderOrder:(QLLenderOrder *)lenderOrder {
+	return [EKSerializer serializeObject:lenderOrder
+							 withMapping:[self.mappingProvider lenderOrderMapping]];
+}
+
 @end

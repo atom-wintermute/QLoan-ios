@@ -37,6 +37,8 @@
 						  parameters:dictionary];
 }
 
+#pragma mark - Заявки Заемщика
+
 - (NSURLRequest *)requestForBorrowerOrdersWithPage:(NSUInteger)page
 										sortMethod:(QLSortMethod)sortMethod
 										 ascending:(BOOL)ascending {
@@ -54,12 +56,40 @@
 
 - (NSURLRequest *)requestForBorrowerOrderWithId:(NSInteger)orderId {
 	NSDictionary *dictionary = @{ @"id" : @(orderId) };
-	return [self getRequestWithPath:@"getBorrowersOrder"
+	return [self getRequestWithPath:@"getBorrowersOrder/"
 						 parameters:dictionary];
 }
 
 - (NSURLRequest *)requestForAddingBorrowerOrder:(NSDictionary *)orderParameters {
-	return [self postRequestWithPath:@"addBorrowersOrder"
+	return [self postRequestWithPath:@"addBorrowersOrder/"
+						  parameters:orderParameters];
+}
+
+#pragma mark - Заявки Займодавца
+
+- (NSURLRequest *)requestForLenderOrdersWithPage:(NSUInteger)page
+									  sortMethod:(QLSortMethod)sortMethod
+									   ascending:(BOOL)ascending {
+	NSMutableDictionary *dictionary = [@{ @"pageNumber": @(page) } mutableCopy];
+	NSString *sortMethodDescription = [QLSortMethodParser descriptionFromSortMethod:sortMethod];
+	
+	if (sortMethodDescription != nil) {
+		NSString *sortOrdering = [QLSortMethodParser descriptionFromSortOrdering:ascending];
+		[dictionary setValue:sortOrdering forKey:sortMethodDescription];
+	}
+	
+	return [self getRequestWithPath:@"getLendersOrders/"
+						 parameters:[dictionary copy]];
+}
+
+- (NSURLRequest *)requestForLenderOrderWithId:(NSInteger)orderId {
+	NSDictionary *dictionary = @{ @"id" : @(orderId) };
+	return [self getRequestWithPath:@"getBorrowersOrder/"
+						 parameters:dictionary];
+}
+
+- (NSURLRequest *)requestForAddingLenderOrder:(NSDictionary *)orderParameters {
+	return [self postRequestWithPath:@"addLendersOrder/"
 						  parameters:orderParameters];
 }
 

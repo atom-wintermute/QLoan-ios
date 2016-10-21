@@ -14,9 +14,19 @@
 
 @property (nonatomic, strong) QLMappingProvider *mappingProvider;
 
+#pragma mark - Заявки Заемщика
+
 - (QLBorrowerOrder *)mapBorrowerOrderFromResponseObject:(id)responseObject;
 
 - (NSArray<QLBorrowerOrder *> *)mapBorrowerOrdersFromResponseObject:(id)responseObject;
+
+#pragma mark - Заявки Займодавца
+
+- (QLLenderOrder *)mapLenderOrderFromResponseObject:(id)responseObject;
+
+- (NSArray<QLLenderOrder *> *)mapLenderOrdersFromResponseObject:(id)responseObject;
+
+#pragma mark - Данные сессии
 
 - (QLSessionCredentials *)mapSessionCredentialsFromResponseObject:(id)responseObject;
 
