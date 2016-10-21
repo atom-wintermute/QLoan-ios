@@ -124,6 +124,11 @@
 		D86147911DBA9CD00018D19C /* img_19@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D86147691DBA9CCF0018D19C /* img_19@3x.png */; };
 		D86147921DBA9CD00018D19C /* img_20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D861476A1DBA9CCF0018D19C /* img_20@2x.png */; };
 		D86147931DBA9CD00018D19C /* img_20@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D861476B1DBA9CCF0018D19C /* img_20@3x.png */; };
+		D86147951DBA9E5D0018D19C /* Get.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D86147941DBA9E5D0018D19C /* Get.storyboard */; };
+		D861479D1DBA9FA00018D19C /* QLGetAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = D861479C1DBA9FA00018D19C /* QLGetAssembly.m */; };
+		D86147A01DBA9FC30018D19C /* QLGetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D861479F1DBA9FC30018D19C /* QLGetViewController.m */; };
+		D86147A51DBAA0B30018D19C /* QLGetCellFactoryImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = D86147A41DBAA0B30018D19C /* QLGetCellFactoryImplementation.m */; };
+		D86147A91DBAA3C00018D19C /* QLGetDataDisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D86147A81DBAA3C00018D19C /* QLGetDataDisplayManager.m */; };
 		D881020D1DBA8EBB0066C442 /* img1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D88101F11DBA8EBB0066C442 /* img1@2x.png */; };
 		D881020E1DBA8EBB0066C442 /* img1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D88101F21DBA8EBB0066C442 /* img1@3x.png */; };
 		D881020F1DBA8EBB0066C442 /* img2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D88101F31DBA8EBB0066C442 /* img2@2x.png */; };
@@ -391,6 +396,16 @@
 		D86147691DBA9CCF0018D19C /* img_19@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img_19@3x.png"; path = "Resources/Photos/Get/img_19@3x.png"; sourceTree = "<group>"; };
 		D861476A1DBA9CCF0018D19C /* img_20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img_20@2x.png"; path = "Resources/Photos/Get/img_20@2x.png"; sourceTree = "<group>"; };
 		D861476B1DBA9CCF0018D19C /* img_20@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img_20@3x.png"; path = "Resources/Photos/Get/img_20@3x.png"; sourceTree = "<group>"; };
+		D86147941DBA9E5D0018D19C /* Get.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Get.storyboard; path = Resources/Storyboards/Get.storyboard; sourceTree = "<group>"; };
+		D861479B1DBA9FA00018D19C /* QLGetAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLGetAssembly.h; path = Classes/UserInterface/Controllers/Get/Assembly/QLGetAssembly.h; sourceTree = "<group>"; };
+		D861479C1DBA9FA00018D19C /* QLGetAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLGetAssembly.m; path = Classes/UserInterface/Controllers/Get/Assembly/QLGetAssembly.m; sourceTree = "<group>"; };
+		D861479E1DBA9FC30018D19C /* QLGetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLGetViewController.h; path = Classes/UserInterface/Controllers/Get/QLGetViewController.h; sourceTree = "<group>"; };
+		D861479F1DBA9FC30018D19C /* QLGetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLGetViewController.m; path = Classes/UserInterface/Controllers/Get/QLGetViewController.m; sourceTree = "<group>"; };
+		D86147A21DBAA0860018D19C /* QLGetCellFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = QLGetCellFactory.h; path = Classes/UserInterface/Controllers/Get/Factory/QLGetCellFactory.h; sourceTree = "<group>"; };
+		D86147A31DBAA0B30018D19C /* QLGetCellFactoryImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLGetCellFactoryImplementation.h; path = Classes/UserInterface/Controllers/Get/Factory/QLGetCellFactoryImplementation.h; sourceTree = "<group>"; };
+		D86147A41DBAA0B30018D19C /* QLGetCellFactoryImplementation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLGetCellFactoryImplementation.m; path = Classes/UserInterface/Controllers/Get/Factory/QLGetCellFactoryImplementation.m; sourceTree = "<group>"; };
+		D86147A71DBAA3C00018D19C /* QLGetDataDisplayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLGetDataDisplayManager.h; path = Classes/UserInterface/Controllers/Get/DDM/QLGetDataDisplayManager.h; sourceTree = "<group>"; };
+		D86147A81DBAA3C00018D19C /* QLGetDataDisplayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLGetDataDisplayManager.m; path = Classes/UserInterface/Controllers/Get/DDM/QLGetDataDisplayManager.m; sourceTree = "<group>"; };
 		D88101F11DBA8EBB0066C442 /* img1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img1@2x.png"; path = "Resources/Photos/Lend/img1@2x.png"; sourceTree = "<group>"; };
 		D88101F21DBA8EBB0066C442 /* img1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img1@3x.png"; path = "Resources/Photos/Lend/img1@3x.png"; sourceTree = "<group>"; };
 		D88101F31DBA8EBB0066C442 /* img2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img2@2x.png"; path = "Resources/Photos/Lend/img2@2x.png"; sourceTree = "<group>"; };
@@ -1228,6 +1243,46 @@
 			name = Helpers;
 			sourceTree = "<group>";
 		};
+		D86147961DBA9E800018D19C /* Get */ = {
+			isa = PBXGroup;
+			children = (
+				D861479A1DBA9F740018D19C /* Assembly */,
+				D86147A11DBAA06C0018D19C /* Factory */,
+				D86147A61DBAA3720018D19C /* DDM */,
+				D861479E1DBA9FC30018D19C /* QLGetViewController.h */,
+				D861479F1DBA9FC30018D19C /* QLGetViewController.m */,
+			);
+			name = Get;
+			sourceTree = "<group>";
+		};
+		D861479A1DBA9F740018D19C /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				D861479B1DBA9FA00018D19C /* QLGetAssembly.h */,
+				D861479C1DBA9FA00018D19C /* QLGetAssembly.m */,
+			);
+			name = Assembly;
+			sourceTree = "<group>";
+		};
+		D86147A11DBAA06C0018D19C /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				D86147A21DBAA0860018D19C /* QLGetCellFactory.h */,
+				D86147A31DBAA0B30018D19C /* QLGetCellFactoryImplementation.h */,
+				D86147A41DBAA0B30018D19C /* QLGetCellFactoryImplementation.m */,
+			);
+			name = Factory;
+			sourceTree = "<group>";
+		};
+		D86147A61DBAA3720018D19C /* DDM */ = {
+			isa = PBXGroup;
+			children = (
+				D86147A71DBAA3C00018D19C /* QLGetDataDisplayManager.h */,
+				D86147A81DBAA3C00018D19C /* QLGetDataDisplayManager.m */,
+			);
+			name = DDM;
+			sourceTree = "<group>";
+		};
 		D88101EE1DBA8E6E0066C442 /* Photos */ = {
 			isa = PBXGroup;
 			children = (
@@ -1333,6 +1388,7 @@
 			isa = PBXGroup;
 			children = (
 				D89655411DB822AD00DE4C66 /* Auth.storyboard */,
+				D86147941DBA9E5D0018D19C /* Get.storyboard */,
 				D896553D1DB8227400DE4C66 /* Main.storyboard */,
 				D896553E1DB8227400DE4C66 /* LaunchScreen.storyboard */,
 				D8328F661DBA7B5900438D4A /* Lend.storyboard */,
@@ -1345,6 +1401,7 @@
 			isa = PBXGroup;
 			children = (
 				D89655471DB8238300DE4C66 /* Auth */,
+				D86147961DBA9E800018D19C /* Get */,
 				D8328F681DBA7C8A00438D4A /* Lend */,
 				D89655551DB8317800DE4C66 /* Register */,
 				D8D98BB51DB9087900F3FB01 /* UserProfile */,
@@ -1645,6 +1702,7 @@
 				D88102181DBA8EBB0066C442 /* img6@3x.png in Resources */,
 				9EFF74361DB4C376004873A6 /* borrowerOrderStub.json in Resources */,
 				D86147831DBA9CD00018D19C /* img_12@3x.png in Resources */,
+				D86147951DBA9E5D0018D19C /* Get.storyboard in Resources */,
 				D86147861DBA9CD00018D19C /* img_14@2x.png in Resources */,
 				D88102221DBA8EBB0066C442 /* img11@3x.png in Resources */,
 				D881021E1DBA8EBB0066C442 /* img9@3x.png in Resources */,
@@ -1758,6 +1816,7 @@
 				D8328F4A1DBA2D4300438D4A /* QLBankCardRequestFactoryImplementation.m in Sources */,
 				9EFF73F11DB416AE004873A6 /* QLJSONSerializer.m in Sources */,
 				9EFF73B51DB3C9C5004873A6 /* ServicesConstants.m in Sources */,
+				D861479D1DBA9FA00018D19C /* QLGetAssembly.m in Sources */,
 				D835BD1E1DB9830C00F2FF0F /* QLInMemoryStorage.m in Sources */,
 				D835BD101DB97B0700F2FF0F /* QLProfileViewController.m in Sources */,
 				D8328F6B1DBA7CAB00438D4A /* QLLendViewController.m in Sources */,
@@ -1770,9 +1829,11 @@
 				D835BD331DB993B400F2FF0F /* UIView+Gradient.m in Sources */,
 				D8F9D7B51DAFD2FC000371CA /* FirstViewController.m in Sources */,
 				D835BD151DB97B0700F2FF0F /* QLProfileDataCellObject.m in Sources */,
+				D86147A91DBAA3C00018D19C /* QLGetDataDisplayManager.m in Sources */,
 				D835BD2B1DB98F7000F2FF0F /* UIColor+QLColor.m in Sources */,
 				D8328F401DBA299300438D4A /* QLBankCardMapperImplementation.m in Sources */,
 				9EFF73B11DB3C918004873A6 /* QLUserInfo.m in Sources */,
+				D86147A51DBAA0B30018D19C /* QLGetCellFactoryImplementation.m in Sources */,
 				D8328F7E1DBA850000438D4A /* QLLendOrderCell.m in Sources */,
 				D835BD111DB97B0700F2FF0F /* QLProfileAssembly.m in Sources */,
 				9EFF73D81DB3DC4E004873A6 /* QLPaymentCompletedRequestConfiguration.m in Sources */,
@@ -1784,6 +1845,7 @@
 				9EFF73AE1DB3C90F004873A6 /* QLBorrowerOrder.m in Sources */,
 				9EFF73C11DB3CE42004873A6 /* QLLenderOrderService.m in Sources */,
 				9EFF73D51DB3DB26004873A6 /* QLUserInteractionService.m in Sources */,
+				D86147A01DBA9FC30018D19C /* QLGetViewController.m in Sources */,
 				D8328F5C1DBA773400438D4A /* QLProfileAddCardCellObject.m in Sources */,
 				D835BD121DB97B0700F2FF0F /* QLProfileDataDisplayManager.m in Sources */,
 				D835BD131DB97B0700F2FF0F /* QLProfileDataCell.m in Sources */,
