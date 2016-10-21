@@ -22,6 +22,9 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	[self configureTextfieldDelegate];
+	
+	self.title = @"Получить займ";
+	
 	self.monthlyCheckbox.hidden = NO;
 	self.onceCheckbox.hidden = YES;
 	
