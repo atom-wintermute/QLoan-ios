@@ -47,11 +47,10 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GmZ-8y-ZP4" userLabel="contentViewContainer">
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BKd-5M-sl4" userLabel="logoImageView">
-                                        <color key="backgroundColor" red="0.0" green="0.70196078431372544" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="BKd-5M-sl4" userLabel="logoImageView">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="85" id="Kym-YN-u7V"/>
-                                            <constraint firstAttribute="height" constant="95" id="nFL-cM-1oI"/>
+                                            <constraint firstAttribute="height" constant="96" id="nFL-cM-1oI"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JF0-5M-Au2">
@@ -61,23 +60,53 @@
                                         <color key="textColor" red="0.2196078431372549" green="0.2196078431372549" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Логин или номер телефона" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g4Q-fr-eK8">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="siV-mS-BZQ" userLabel="loginContainerView">
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Номер телефона" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g4Q-fr-eK8">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="215" id="3TW-UR-XCF"/>
+                                                    <constraint firstAttribute="height" constant="24" id="buf-99-2jr"/>
+                                                </constraints>
+                                                <color key="textColor" red="0.2196078431372549" green="0.2196078431372549" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fingerprint" translatesAutoresizingMaskIntoConstraints="NO" id="miA-Mw-H2r">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="22" id="BMJ-vx-XbG"/>
+                                                    <constraint firstAttribute="height" constant="24" id="weK-so-EPv"/>
+                                                </constraints>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="soH-NS-kLT" userLabel="loginSeparatorView">
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="Iaq-Ef-beX"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="215" id="3TW-UR-XCF"/>
-                                            <constraint firstAttribute="height" constant="24" id="buf-99-2jr"/>
-                                        </constraints>
-                                        <color key="textColor" red="0.2196078431372549" green="0.2196078431372549" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ynF-w9-YTF" userLabel="loginSeparatorView">
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="Vae-eY-XYq"/>
+                                            <constraint firstItem="miA-Mw-H2r" firstAttribute="centerY" secondItem="g4Q-fr-eK8" secondAttribute="centerY" id="82S-jA-3oc"/>
+                                            <constraint firstAttribute="bottom" secondItem="soH-NS-kLT" secondAttribute="bottom" id="CU8-89-fY5"/>
+                                            <constraint firstAttribute="bottom" secondItem="g4Q-fr-eK8" secondAttribute="bottom" constant="8" id="HVU-cE-elj"/>
+                                            <constraint firstItem="soH-NS-kLT" firstAttribute="leading" secondItem="siV-mS-BZQ" secondAttribute="leading" id="J6w-ft-P9e"/>
+                                            <constraint firstAttribute="trailing" secondItem="soH-NS-kLT" secondAttribute="trailing" id="RRO-9W-CHa"/>
+                                            <constraint firstItem="g4Q-fr-eK8" firstAttribute="leading" secondItem="siV-mS-BZQ" secondAttribute="leading" id="Xg6-hS-eiU"/>
+                                            <constraint firstAttribute="trailing" secondItem="miA-Mw-H2r" secondAttribute="trailing" id="daY-cI-ziC"/>
+                                            <constraint firstItem="g4Q-fr-eK8" firstAttribute="top" secondItem="siV-mS-BZQ" secondAttribute="top" constant="8" id="ps8-oe-MEt"/>
+                                            <constraint firstItem="g4Q-fr-eK8" firstAttribute="leading" secondItem="siV-mS-BZQ" secondAttribute="leading" id="tD1-Rz-ePa"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mxg-Wn-TTr" userLabel="passwordContainerView">
                                         <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пароль" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z29-Gw-Ixf" userLabel="passwordTextField">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="KGL-ox-VvJ"/>
+                                                </constraints>
+                                                <color key="textColor" red="0.2196078431372549" green="0.2196078431372549" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                            </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJl-mX-C6r" userLabel="forgetPasswordButton">
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="65" id="hdg-Dm-uD1"/>
@@ -96,14 +125,6 @@
                                                     <constraint firstAttribute="height" constant="1" id="15b-CL-79C"/>
                                                 </constraints>
                                             </view>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пароль" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z29-Gw-Ixf" userLabel="passwordTextField">
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="24" id="KGL-ox-VvJ"/>
-                                                </constraints>
-                                                <color key="textColor" red="0.2196078431372549" green="0.2196078431372549" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                            </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -119,11 +140,6 @@
                                             <constraint firstItem="Z29-Gw-Ixf" firstAttribute="leading" secondItem="mxg-Wn-TTr" secondAttribute="leading" id="vuI-NU-HG1"/>
                                         </constraints>
                                     </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="miA-Mw-H2r">
-                                        <frame key="frameInset" minX="247" minY="352" width="15" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.0" green="0.70196078431372544" blue="0.8901960784313725" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
-                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcf-7i-qZT" userLabel="loginButton">
                                         <color key="backgroundColor" red="0.0" green="0.70196078431372544" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -153,7 +169,6 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gA7-He-ciJ">
                                         <frame key="frameInset" minX="92" minY="118" width="86" height="95"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="fastLoginButtonWasPressed:" destination="jdl-Es-imy" eventType="touchUpInside" id="qf4-e8-9sY"/>
                                         </connections>
@@ -163,23 +178,21 @@
                                 <constraints>
                                     <constraint firstItem="BKd-5M-sl4" firstAttribute="centerX" secondItem="GmZ-8y-ZP4" secondAttribute="centerX" id="0xW-jM-R3M"/>
                                     <constraint firstItem="rcf-7i-qZT" firstAttribute="top" secondItem="mxg-Wn-TTr" secondAttribute="bottom" constant="24" id="5jS-xn-ULr"/>
-                                    <constraint firstItem="ynF-w9-YTF" firstAttribute="top" secondItem="g4Q-fr-eK8" secondAttribute="bottom" constant="8" id="6rX-9l-bfg"/>
+                                    <constraint firstAttribute="trailing" secondItem="siV-mS-BZQ" secondAttribute="trailing" constant="8" id="6bA-gg-f8z"/>
                                     <constraint firstItem="mxg-Wn-TTr" firstAttribute="leading" secondItem="GmZ-8y-ZP4" secondAttribute="leading" constant="7" id="8DA-YH-UTW"/>
                                     <constraint firstAttribute="trailing" secondItem="mxg-Wn-TTr" secondAttribute="trailing" constant="7" id="AJf-vn-1Vd"/>
-                                    <constraint firstItem="g4Q-fr-eK8" firstAttribute="top" secondItem="JF0-5M-Au2" secondAttribute="bottom" constant="64" id="Arh-LH-XLe"/>
-                                    <constraint firstItem="mxg-Wn-TTr" firstAttribute="top" secondItem="g4Q-fr-eK8" secondAttribute="bottom" constant="8" id="PED-Fa-WGZ"/>
+                                    <constraint firstItem="mxg-Wn-TTr" firstAttribute="top" secondItem="siV-mS-BZQ" secondAttribute="bottom" constant="12" id="GgK-xM-oGQ"/>
                                     <constraint firstItem="IhA-fY-97V" firstAttribute="centerX" secondItem="GmZ-8y-ZP4" secondAttribute="centerX" id="Ph9-0w-TLZ"/>
                                     <constraint firstItem="JF0-5M-Au2" firstAttribute="top" secondItem="BKd-5M-sl4" secondAttribute="bottom" constant="32" id="WsC-N9-IgE"/>
-                                    <constraint firstItem="g4Q-fr-eK8" firstAttribute="leading" secondItem="GmZ-8y-ZP4" secondAttribute="leading" constant="7" id="axa-3S-ckC"/>
                                     <constraint firstItem="JF0-5M-Au2" firstAttribute="leading" secondItem="GmZ-8y-ZP4" secondAttribute="leading" id="blg-2g-LZv"/>
                                     <constraint firstItem="BKd-5M-sl4" firstAttribute="top" secondItem="GmZ-8y-ZP4" secondAttribute="top" constant="118" id="h3c-81-WZB"/>
                                     <constraint firstAttribute="width" constant="270" id="ifr-hd-9Wq"/>
-                                    <constraint firstAttribute="trailing" secondItem="ynF-w9-YTF" secondAttribute="trailing" constant="7" id="mHT-1Y-7Zb"/>
                                     <constraint firstAttribute="trailing" secondItem="rcf-7i-qZT" secondAttribute="trailing" constant="7" id="qho-2b-z1J"/>
-                                    <constraint firstItem="ynF-w9-YTF" firstAttribute="leading" secondItem="GmZ-8y-ZP4" secondAttribute="leading" constant="7" id="rqa-p8-9GO"/>
                                     <constraint firstItem="IhA-fY-97V" firstAttribute="top" secondItem="rcf-7i-qZT" secondAttribute="bottom" constant="24" id="t3j-ec-que"/>
                                     <constraint firstAttribute="trailing" secondItem="JF0-5M-Au2" secondAttribute="trailing" id="xqd-RT-IhO"/>
                                     <constraint firstItem="rcf-7i-qZT" firstAttribute="leading" secondItem="GmZ-8y-ZP4" secondAttribute="leading" constant="7" id="yc4-b1-ejD"/>
+                                    <constraint firstItem="siV-mS-BZQ" firstAttribute="leading" secondItem="GmZ-8y-ZP4" secondAttribute="leading" constant="8" id="zBO-3i-OXa"/>
+                                    <constraint firstItem="siV-mS-BZQ" firstAttribute="top" secondItem="JF0-5M-Au2" secondAttribute="bottom" constant="56" id="zG3-JS-KJE"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -409,4 +422,8 @@
             <point key="canvasLocation" x="1304.8" y="119.1904047976012"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="fingerprint" width="22" height="24"/>
+        <image name="logo" width="85" height="96"/>
+    </resources>
 </document>

@@ -7,7 +7,6 @@
 //
 
 #import "QLTestAssembly.h"
-#import "FirstViewController.h"
 #import "QLServicesAssembly.h"
 
 @interface QLTestAssembly ()
@@ -17,15 +16,5 @@
 @end
 
 @implementation QLTestAssembly
-
-- (FirstViewController *)firstViewController {
-	return [TyphoonDefinition withClass:[FirstViewController class]
-						  configuration:^(TyphoonDefinition *definition) {
-		[definition injectProperty:@selector(service)
-							  with:[self.servicesAssembly borrowerOrderService]];
-		[definition injectProperty:@selector(authorizationService)
-							  with:[self.servicesAssembly authorizationService]];
-	}];
-}
 
 @end

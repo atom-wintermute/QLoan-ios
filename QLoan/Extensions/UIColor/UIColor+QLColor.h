@@ -19,4 +19,6 @@
 
 + (UIColor *)ql_selectedCellColor;
 
++ (UIColor *)ql_shadowColor;
+
 @end

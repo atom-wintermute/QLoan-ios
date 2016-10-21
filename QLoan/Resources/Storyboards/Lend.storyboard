@@ -9,7 +9,7 @@
         <scene sceneID="F7G-JQ-Feg">
             <objects>
                 <navigationController navigationBarHidden="YES" id="TQP-Hx-Vch" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="W5A-xb-VEC">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="W5A-xb-VEC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -21,10 +21,10 @@
             </objects>
             <point key="canvasLocation" x="-367" y="115"/>
         </scene>
-        <!--Lend View Controller-->
+        <!--Выдать займ-->
         <scene sceneID="d41-b3-zLz">
             <objects>
-                <viewController storyboardIdentifier="QLLendViewController" id="dux-rV-5sC" customClass="QLLendViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QLLendViewController" title="Выдать займ" extendedLayoutIncludesOpaqueBars="YES" id="dux-rV-5sC" customClass="QLLendViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DEc-hb-clg"/>
                         <viewControllerLayoutGuide type="bottom" id="8QM-NL-uiY"/>

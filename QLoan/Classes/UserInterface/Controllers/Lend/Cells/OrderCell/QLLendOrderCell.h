@@ -16,6 +16,7 @@
 @interface QLLendOrderCell : UITableViewCell <NICell>
 
 @property (nonatomic, weak) IBOutlet UIImageView *photoImageView;
+@property (nonatomic, weak) IBOutlet UIImageView *fakeImageView;
 @property (nonatomic, weak) IBOutlet UILabel *ratingLabel;
 @property (nonatomic, weak) IBOutlet UILabel *sumLabel;
 @property (nonatomic, weak) IBOutlet UILabel *percentLabel;
