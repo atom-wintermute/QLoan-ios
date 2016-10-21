@@ -21,7 +21,7 @@
             <objects>
                 <navigationController id="U8e-nV-q2t" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1E2-69-ZUO">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="1E2-69-ZUO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -32,6 +32,83 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bQ3-1s-hcM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-474" y="119"/>
+        </scene>
+        <!--Register Phone View Contoller-->
+        <scene sceneID="RJA-gT-ghL">
+            <objects>
+                <viewController storyboardIdentifier="QLRegisterPhoneViewContoller" id="PdM-yB-nyz" customClass="QLRegisterPhoneViewContoller" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cGT-Hd-UvT"/>
+                        <viewControllerLayoutGuide type="bottom" id="AUx-dG-CbR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="B2Q-Du-b8B">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Регистрация нового участника" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vbl-jv-RxD">
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="18"/>
+                                <color key="textColor" red="0.2196078431372549" green="0.2196078431372549" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D4M-UK-juc">
+                                <string key="text">Укажите ваш номер телефона на который мы вышлем проверочный код. В дальнейшем ваш телефон будет использоваться для отправки уведомлений.</string>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="+ 7 (123) 123 12 12" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dkk-7Y-MaY">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="136" id="CMD-cw-e4Y"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4iE-Pz-UHB" userLabel="separator">
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="tMj-OW-xpO"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="luf-yi-Txu">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="nAk-dI-9FC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                <state key="normal" title="Получить код">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="getCodeButtonPressed:" destination="PdM-yB-nyz" eventType="touchUpInside" id="JKE-ZP-nhs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vbl-jv-RxD" firstAttribute="top" secondItem="cGT-Hd-UvT" secondAttribute="bottom" constant="22" id="1Yl-7Y-hLX"/>
+                            <constraint firstItem="D4M-UK-juc" firstAttribute="leading" secondItem="B2Q-Du-b8B" secondAttribute="leading" constant="22" id="5YC-8c-BTq"/>
+                            <constraint firstItem="Vbl-jv-RxD" firstAttribute="centerX" secondItem="B2Q-Du-b8B" secondAttribute="centerX" id="5q7-VG-rA7"/>
+                            <constraint firstItem="4iE-Pz-UHB" firstAttribute="top" secondItem="Dkk-7Y-MaY" secondAttribute="bottom" constant="8" id="6Jh-uF-DmI"/>
+                            <constraint firstItem="luf-yi-Txu" firstAttribute="leading" secondItem="B2Q-Du-b8B" secondAttribute="leading" id="DQd-Zz-KjD"/>
+                            <constraint firstAttribute="trailing" secondItem="D4M-UK-juc" secondAttribute="trailing" constant="22" id="Djj-V1-seP"/>
+                            <constraint firstItem="4iE-Pz-UHB" firstAttribute="leading" secondItem="B2Q-Du-b8B" secondAttribute="leading" constant="60" id="Dob-1r-4aX"/>
+                            <constraint firstItem="Dkk-7Y-MaY" firstAttribute="top" secondItem="D4M-UK-juc" secondAttribute="bottom" constant="56" id="JXw-g5-8QX"/>
+                            <constraint firstItem="Dkk-7Y-MaY" firstAttribute="centerX" secondItem="B2Q-Du-b8B" secondAttribute="centerX" id="LHq-AC-S5x"/>
+                            <constraint firstItem="luf-yi-Txu" firstAttribute="top" secondItem="4iE-Pz-UHB" secondAttribute="bottom" constant="120" id="Tey-rk-hOc"/>
+                            <constraint firstAttribute="trailing" secondItem="4iE-Pz-UHB" secondAttribute="trailing" constant="60" id="gsm-WM-9Y2"/>
+                            <constraint firstAttribute="trailing" secondItem="luf-yi-Txu" secondAttribute="trailing" id="sCK-jE-zeu"/>
+                            <constraint firstItem="D4M-UK-juc" firstAttribute="top" secondItem="Vbl-jv-RxD" secondAttribute="bottom" constant="16" id="wB2-rG-ypn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZRZ-4D-teL"/>
+                    <connections>
+                        <outlet property="getCodeButton" destination="luf-yi-Txu" id="NWc-vn-10g"/>
+                        <outlet property="phoneTextField" destination="Dkk-7Y-MaY" id="cEf-j9-2Q3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sB5-jY-bwO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1305" y="-640"/>
         </scene>
         <!--Auth View Controller-->
         <scene sceneID="7Fn-9K-gLS">
@@ -204,13 +281,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ldo-dO-MLu">
-                        <barButtonItem key="backBarButtonItem" title="Назад" id="vR7-Kh-IzT"/>
+                        <barButtonItem key="backBarButtonItem" title="Отмена" id="vR7-Kh-IzT"/>
                     </navigationItem>
                     <connections>
                         <outlet property="loginButton" destination="rcf-7i-qZT" id="1oC-FF-r3P"/>
                         <outlet property="loginTextField" destination="g4Q-fr-eK8" id="OJa-KL-07F"/>
                         <outlet property="passwordTextField" destination="Z29-Gw-Ixf" id="lwV-Fk-SDf"/>
-                        <segue destination="E90-cf-Cju" kind="show" identifier="registerSegue" id="BIH-wM-I05"/>
+                        <segue destination="E90-cf-Cju" kind="show" identifier="" id="BIH-wM-I05"/>
+                        <segue destination="PdM-yB-nyz" kind="show" identifier="registerSegue" id="Yon-2G-gRn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uO2-gx-XPg" userLabel="First Responder" sceneMemberID="firstResponder"/>
