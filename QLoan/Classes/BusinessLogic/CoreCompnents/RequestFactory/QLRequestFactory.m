@@ -42,7 +42,7 @@
 - (NSURLRequest *)requestForMyBorrowerOrdersWithPage:(NSUInteger)page
 										  sortMethod:(QLSortMethod)sortMethod
 										   ascending:(BOOL)ascending {
-	NSMutableDictionary *dictionary = [@{ @"pageNumber": @(page) } mutableCopy];
+	NSMutableDictionary *dictionary = [@{ @"page_number": @(page) } mutableCopy];
 	NSString *sortMethodDescription = [QLSortMethodParser descriptionFromSortMethod:sortMethod];
 	
 	if (sortMethodDescription != nil) {
@@ -57,7 +57,7 @@
 - (NSURLRequest *)requestForMyLenderOrdersWithPage:(NSUInteger)page
 										sortMethod:(QLSortMethod)sortMethod
 										 ascending:(BOOL)ascending {
-	NSMutableDictionary *dictionary = [@{ @"pageNumber": @(page) } mutableCopy];
+	NSMutableDictionary *dictionary = [@{ @"page_number": @(page) } mutableCopy];
 	NSString *sortMethodDescription = [QLSortMethodParser descriptionFromSortMethod:sortMethod];
 	
 	if (sortMethodDescription != nil) {
@@ -69,12 +69,34 @@
 						 parameters:[dictionary copy]];
 }
 
+#pragma mark - Нотификации
+
+- (NSURLRequest *)requestForMyNotificationsWithPage:(NSUInteger)page {
+	NSDictionary *dictionary = @{ @"page_number": @(page) };
+	return [self getRequestWithPath:@"get_my_notifications/"
+						 parameters:dictionary];
+}
+
+- (NSURLRequest *)requestForMyNotificationWithId:(NSUInteger)notificationId {
+	NSDictionary *dictionary = @{ @"id": @(notificationId) };
+	return [self getRequestWithPath:@"get_my_notification/"
+						 parameters:dictionary];
+}
+
+#pragma mark - Платежи
+
+- (NSURLRequest *)requestForMyPaymentsWithOrderId:(NSUInteger)orderId {
+	NSDictionary *dictionary = @{ @"id": @(orderId) };
+	return [self getRequestWithPath:@"get_my_payments/"
+						 parameters:dictionary];
+}
+
 #pragma mark - Заявки Заемщика
 
 - (NSURLRequest *)requestForBorrowerOrdersWithPage:(NSUInteger)page
 										sortMethod:(QLSortMethod)sortMethod
 										 ascending:(BOOL)ascending {
-	NSMutableDictionary *dictionary = [@{ @"pageNumber": @(page) } mutableCopy];
+	NSMutableDictionary *dictionary = [@{ @"page_number": @(page) } mutableCopy];
 	NSString *sortMethodDescription = [QLSortMethodParser descriptionFromSortMethod:sortMethod];
 	
 	if (sortMethodDescription != nil) {
@@ -102,7 +124,7 @@
 - (NSURLRequest *)requestForLenderOrdersWithPage:(NSUInteger)page
 									  sortMethod:(QLSortMethod)sortMethod
 									   ascending:(BOOL)ascending {
-	NSMutableDictionary *dictionary = [@{ @"pageNumber": @(page) } mutableCopy];
+	NSMutableDictionary *dictionary = [@{ @"page_number": @(page) } mutableCopy];
 	NSString *sortMethodDescription = [QLSortMethodParser descriptionFromSortMethod:sortMethod];
 	
 	if (sortMethodDescription != nil) {

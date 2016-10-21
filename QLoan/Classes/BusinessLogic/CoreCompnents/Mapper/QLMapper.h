@@ -26,6 +26,16 @@
 
 - (NSArray<QLLenderOrder *> *)mapLenderOrdersFromResponseObject:(id)responseObject;
 
+#pragma mark - Нотификации
+
+- (QLNotification *)mapNotificationFromResponseObject:(id)responseObject;
+
+- (NSArray<QLNotification *> *)mapNotificationsFromResponseObject:(id)responseObject;
+
+#pragma mark - Платежи
+
+- (QLPaymentSchedule *)mapPaymentScheduleFromResponseObject:(id)responseObject;
+
 #pragma mark - Данные сессии
 
 - (QLSessionCredentials *)mapSessionCredentialsFromResponseObject:(id)responseObject;

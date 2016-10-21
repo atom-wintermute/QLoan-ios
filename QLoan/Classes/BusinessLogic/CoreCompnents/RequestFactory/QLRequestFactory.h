@@ -35,6 +35,16 @@
 										sortMethod:(QLSortMethod)sortMethod
 										 ascending:(BOOL)ascending;
 
+#pragma mark - Нотификации
+
+- (NSURLRequest *)requestForMyNotificationsWithPage:(NSUInteger)page;
+
+- (NSURLRequest *)requestForMyNotificationWithId:(NSUInteger)notificationId;
+
+#pragma mark - Платежи
+
+- (NSURLRequest *)requestForMyPaymentsWithOrderId:(NSUInteger)orderId;
+
 #pragma mark - Заявки заемщика
 
 - (NSURLRequest *)requestForBorrowerOrdersWithPage:(NSUInteger)page

@@ -9,12 +9,22 @@
 #import <Foundation/Foundation.h>
 #import <EasyMapping/EasyMapping.h>
 
+@class QLDateFormatter;
+
 @interface QLMappingProvider : NSObject
+
+@property (nonatomic, strong) QLDateFormatter *formatter;
 
 - (EKObjectMapping *)borrowerOrderMapping;
 
 - (EKObjectMapping *)lenderOrderMapping;
 
 - (EKObjectMapping *)authorizationHeaderMapping;
+
+- (EKObjectMapping *)notificationMapping;
+
+- (EKObjectMapping *)paymentMapping;
+
+- (EKObjectMapping *)paymentScheduleMapping;
 
 @end

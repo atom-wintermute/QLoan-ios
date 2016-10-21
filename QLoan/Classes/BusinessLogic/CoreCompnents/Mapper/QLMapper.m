@@ -74,6 +74,46 @@
 	return nil;
 }
 
+#pragma mark - Нотификации
+
+- (QLNotification *)mapNotificationFromResponseObject:(id)responseObject {
+	EKObjectMapping *mapping = [self.mappingProvider notificationMapping];
+	QLNotification *notification = [EKMapper objectFromExternalRepresentation:responseObject
+																  withMapping:mapping];
+	
+	return notification;
+}
+
+- (NSArray<QLNotification *> *)mapNotificationsFromResponseObject:(id)responseObject {
+	
+	if ([responseObject isKindOfClass:[NSDictionary class]]) {
+		NSDictionary *responseDictionary = responseObject;
+		
+		if ([responseDictionary[@"notifications"] isKindOfClass:[NSArray class]]) {
+			NSArray *notifications = responseDictionary[@"notifications"];
+			NSMutableArray *mappedArray = [NSMutableArray array];
+			
+			[notifications enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
+				QLNotification *notification = [self mapNotificationFromResponseObject:object];
+				if (notification != nil) {
+					[mappedArray addObject:notification];
+				}
+			}];
+			
+			return [mappedArray copy];
+		}
+	}
+	return nil;
+}
+
+- (QLPaymentSchedule *)mapPaymentScheduleFromResponseObject:(id)responseObject {
+	EKObjectMapping *mapping = [self.mappingProvider paymentScheduleMapping];
+	QLPaymentSchedule *schedule = [EKMapper objectFromExternalRepresentation:responseObject
+																 withMapping:mapping];
+	
+	return schedule;
+}
+
 #pragma mark - Данные сессии
 
 - (QLSessionCredentials *)mapSessionCredentialsFromResponseObject:(id)responseObject {

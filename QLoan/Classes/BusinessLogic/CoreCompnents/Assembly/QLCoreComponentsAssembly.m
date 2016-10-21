@@ -28,7 +28,12 @@
 }
 
 - (QLMappingProvider *)mappingProvider {
-	return [TyphoonDefinition withClass:[QLMappingProvider class]];
+	return [TyphoonDefinition withClass:[QLMappingProvider class]
+						  configuration:^(TyphoonDefinition *definition)
+			{
+				[definition injectProperty:@selector(dateFormatter)
+									  with:[self dateFormatter]];
+			}];
 }
 
 #pragma mark - Сериализаторы
