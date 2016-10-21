@@ -1,5 +1,5 @@
 //
-//  QLGradient.h
+//  UIView+Gradient.h
 //  QLoan
 //
 //  Created by Nikulin Maksim on 21/10/16.
@@ -8,11 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-/**
- Helper для наложения градиента
- */
-@interface QLGradient : NSObject
+@interface UIView (Gradient)
 
-+ (void)addGradientForView:(UIView *)view;
+- (void)addGradient;
 
 @end

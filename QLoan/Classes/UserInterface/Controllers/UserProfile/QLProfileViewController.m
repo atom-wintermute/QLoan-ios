@@ -12,7 +12,6 @@
 #import "QLProfileCellFactory.h"
 
 #import "QLProfileDataDisplayManager.h"
-#import "QLGradient.h"
 
 #import "QLBankUserInfo.h"
 
@@ -34,7 +33,7 @@
 
 - (void)configureView {
     [self.view layoutIfNeeded];
-    [QLGradient addGradientForView:self.headerView];
+    [self.headerView addGradient];
     
     QLBankUserInfo *bankUserInfo = [self.bankAuthService obtainCurrentUserData];
     if (!bankUserInfo) {

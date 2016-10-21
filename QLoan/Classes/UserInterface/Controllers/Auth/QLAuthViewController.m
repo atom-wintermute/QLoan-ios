@@ -16,8 +16,10 @@ static NSString * const QLAuthRegisterSegue = @"registerSegue";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self configureAppearance];
 }
+
+#pragma mark - IBActions
 
 - (void)forgetPasswordButtonWasPressed:(id)sender {
     
@@ -59,6 +61,12 @@ static NSString * const QLAuthRegisterSegue = @"registerSegue";
     [self presentViewController:alertController
                        animated:YES
                      completion:nil];
+}
+
+- (void)configureAppearance {
+    [self.view layoutIfNeeded];
+    
+    [self.loginButton addGradient];
 }
 
 @end

@@ -53,7 +53,7 @@
 		D835BD231DB9877200F2FF0F /* QLBankAuthMapperImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BD221DB9877200F2FF0F /* QLBankAuthMapperImplementation.m */; };
 		D835BD271DB9882D00F2FF0F /* QLBankMappingProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BD261DB9882D00F2FF0F /* QLBankMappingProvider.m */; };
 		D835BD2B1DB98F7000F2FF0F /* UIColor+QLColor.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BD2A1DB98F7000F2FF0F /* UIColor+QLColor.m */; };
-		D835BD2F1DB9917400F2FF0F /* QLGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BD2E1DB9917400F2FF0F /* QLGradient.m */; };
+		D835BD331DB993B400F2FF0F /* UIView+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BD321DB993B400F2FF0F /* UIView+Gradient.m */; };
 		D84F78381DB8CBC500394F1D /* QLBankAuthServiceImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = D84F78371DB8CBC500394F1D /* QLBankAuthServiceImplementation.m */; };
 		D84F783D1DB8DA7A00394F1D /* QLBankAuthRequestFactoryImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = D84F783C1DB8DA7A00394F1D /* QLBankAuthRequestFactoryImplementation.m */; };
 		D84F78411DB8E0EB00394F1D /* QLBankServiceConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D84F78401DB8E0EB00394F1D /* QLBankServiceConstants.m */; };
@@ -190,8 +190,8 @@
 		D835BD261DB9882D00F2FF0F /* QLBankMappingProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLBankMappingProvider.m; path = BankMappingProvider/QLBankMappingProvider.m; sourceTree = "<group>"; };
 		D835BD291DB98F7000F2FF0F /* UIColor+QLColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+QLColor.h"; path = "Extensions/UIColor/UIColor+QLColor.h"; sourceTree = "<group>"; };
 		D835BD2A1DB98F7000F2FF0F /* UIColor+QLColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+QLColor.m"; path = "Extensions/UIColor/UIColor+QLColor.m"; sourceTree = "<group>"; };
-		D835BD2D1DB9917400F2FF0F /* QLGradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLGradient.h; path = Classes/Helpers/GradientHelper/QLGradient.h; sourceTree = "<group>"; };
-		D835BD2E1DB9917400F2FF0F /* QLGradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLGradient.m; path = Classes/Helpers/GradientHelper/QLGradient.m; sourceTree = "<group>"; };
+		D835BD311DB993B400F2FF0F /* UIView+Gradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Gradient.h"; path = "Extensions/UIView/UIView+Gradient.h"; sourceTree = "<group>"; };
+		D835BD321DB993B400F2FF0F /* UIView+Gradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Gradient.m"; path = "Extensions/UIView/UIView+Gradient.m"; sourceTree = "<group>"; };
 		D84F78351DB8C9CA00394F1D /* QLBankAuthService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = QLBankAuthService.h; path = Classes/BusinessLogic/Services/BankServices/AuthService/QLBankAuthService.h; sourceTree = "<group>"; };
 		D84F78361DB8CBC500394F1D /* QLBankAuthServiceImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLBankAuthServiceImplementation.h; path = Classes/BusinessLogic/Services/BankServices/AuthService/QLBankAuthServiceImplementation.h; sourceTree = "<group>"; };
 		D84F78371DB8CBC500394F1D /* QLBankAuthServiceImplementation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLBankAuthServiceImplementation.m; path = Classes/BusinessLogic/Services/BankServices/AuthService/QLBankAuthServiceImplementation.m; sourceTree = "<group>"; };
@@ -624,6 +624,7 @@
 			children = (
 				D835BCD01DB9746900F2FF0F /* NSArray */,
 				D835BD281DB98F3F00F2FF0F /* UIColor */,
+				D835BD301DB9938E00F2FF0F /* UIView */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -752,13 +753,13 @@
 			name = UIColor;
 			sourceTree = "<group>";
 		};
-		D835BD2C1DB9915600F2FF0F /* GradientHelper */ = {
+		D835BD301DB9938E00F2FF0F /* UIView */ = {
 			isa = PBXGroup;
 			children = (
-				D835BD2D1DB9917400F2FF0F /* QLGradient.h */,
-				D835BD2E1DB9917400F2FF0F /* QLGradient.m */,
+				D835BD311DB993B400F2FF0F /* UIView+Gradient.h */,
+				D835BD321DB993B400F2FF0F /* UIView+Gradient.m */,
 			);
-			name = GradientHelper;
+			name = UIView;
 			sourceTree = "<group>";
 		};
 		D84F78331DB8C4CC00394F1D /* BankServices */ = {
@@ -804,7 +805,6 @@
 		D84F78471DB8F8B100394F1D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				D835BD2C1DB9915600F2FF0F /* GradientHelper */,
 				D835BCCA1DB973DE00F2FF0F /* DataDisplayManager */,
 				D835BCD41DB9749000F2FF0F /* Nimbus */,
 				D84F78481DB8F8E400394F1D /* QLBlocksHelper.h */,
@@ -1176,7 +1176,7 @@
 				9EFF73E91DB40EC1004873A6 /* QLNetworkClient.m in Sources */,
 				9EFF73DD1DB3F94C004873A6 /* QLRequestFactory.m in Sources */,
 				D8F9D7B21DAFD2FC000371CA /* AppDelegate.m in Sources */,
-				D835BD2F1DB9917400F2FF0F /* QLGradient.m in Sources */,
+				D835BD331DB993B400F2FF0F /* UIView+Gradient.m in Sources */,
 				D8F9D7B51DAFD2FC000371CA /* FirstViewController.m in Sources */,
 				D835BD151DB97B0700F2FF0F /* QLProfileDataCellObject.m in Sources */,
 				D835BD2B1DB98F7000F2FF0F /* UIColor+QLColor.m in Sources */,
