@@ -14,6 +14,14 @@ static CGFloat const QLProfileAddCardCellHeight = 44.0;
 
 @implementation QLProfileAddCardCell
 
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    
+    UIView *view = [UIView new];
+    view.backgroundColor = [UIColor ql_selectedCellColor];
+    self.selectedBackgroundView = view;
+}
+
 - (BOOL)shouldUpdateCellWithObject:(QLProfileAddCardCellObject *)object {
     return YES;
 }

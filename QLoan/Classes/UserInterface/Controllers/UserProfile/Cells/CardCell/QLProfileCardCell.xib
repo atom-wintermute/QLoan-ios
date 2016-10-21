@@ -19,6 +19,7 @@
                 <frame key="frameInset" width="320" height="55"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card" translatesAutoresizingMaskIntoConstraints="NO" id="Gte-d5-bkS" userLabel="iconCardImageView"/>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXz-cy-bpN">
                         <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
                         <nil key="textColor"/>
@@ -29,8 +30,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y62-Aw-vzb">
-                        <color key="backgroundColor" red="0.0" green="0.70196078429999997" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="y62-Aw-vzb">
                         <constraints>
                             <constraint firstAttribute="width" constant="8" id="42k-OX-Aaw"/>
                             <constraint firstAttribute="height" constant="14" id="Qj7-by-HPK"/>
@@ -46,7 +46,9 @@
                     <constraint firstItem="xXz-cy-bpN" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="3wE-Tx-lDj"/>
                     <constraint firstAttribute="trailing" secondItem="y62-Aw-vzb" secondAttribute="trailing" constant="16" id="6Dn-Mj-5rg"/>
                     <constraint firstItem="y62-Aw-vzb" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="9Nk-kT-U2r"/>
+                    <constraint firstItem="Gte-d5-bkS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="EKH-eP-q7n"/>
                     <constraint firstAttribute="bottom" secondItem="PQ8-og-07m" secondAttribute="bottom" id="GVu-eY-Zlo"/>
+                    <constraint firstItem="Gte-d5-bkS" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="HrY-fL-Bae"/>
                     <constraint firstItem="PQ8-og-07m" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="P7Q-zc-4pW"/>
                     <constraint firstItem="y62-Aw-vzb" firstAttribute="leading" secondItem="ndl-Mi-utC" secondAttribute="trailing" constant="16" id="Peq-wj-w1I"/>
                     <constraint firstItem="ndl-Mi-utC" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="T1d-l8-v3q"/>
@@ -61,6 +63,8 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="arrow" width="8" height="14"/>
+        <image name="card" width="49" height="34"/>
         <image name="separator" width="1" height="1"/>
     </resources>
 </document>
