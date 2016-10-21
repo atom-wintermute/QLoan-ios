@@ -38,6 +38,11 @@
     self.tableView.dataSource = [self.dataDisplayManager dataSourceForTableView:self.tableView];
     self.tableView.delegate = [self.dataDisplayManager delegateForTableView:self.tableView
                                                            withBaseDelegate:self];
+	
+	self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Назад"
+																			 style:self.navigationItem.backBarButtonItem.style
+																			target:nil
+																			action:nil];
     [self.tableView reloadData];
 }
 

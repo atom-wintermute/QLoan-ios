@@ -14,6 +14,8 @@
 #import "QLProfileAssembly.h"
 #import "QLLendAssembly.h"
 
+#import "UIColor+QLColor.h"
+
 #import <RamblerTyphoonUtils/AssemblyCollector.h>
 
 @implementation AppDelegate
@@ -49,6 +51,7 @@
     [[UINavigationBar appearance] setBackgroundImage:[UIImage new]
                                        forBarMetrics:UIBarMetricsDefault];
     [[UINavigationBar appearance] setShadowImage:[UIImage new]];
+	[[UINavigationBar appearance] setTintColor:[UIColor ql_turquoiseColor]];
     [[UINavigationBar appearance] setBackgroundColor:[UIColor clearColor]];
     [[UINavigationBar appearance] setTranslucent:YES];
     [[UINavigationBar appearance] setBackIndicatorImage:[UIImage new]];
