@@ -17,4 +17,6 @@
 
 + (UIColor *)ql_turquoiseColor;
 
++ (UIColor *)ql_selectedCellColor;
+
 @end

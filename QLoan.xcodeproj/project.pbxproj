@@ -54,6 +54,14 @@
 		D8328F611DBA78B400438D4A /* QLOffsetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8328F5F1DBA78B400438D4A /* QLOffsetCell.m */; };
 		D8328F621DBA78B400438D4A /* QLOffsetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8328F601DBA78B400438D4A /* QLOffsetCell.xib */; };
 		D8328F651DBA78C800438D4A /* QLOffsetCellObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D8328F641DBA78C800438D4A /* QLOffsetCellObject.m */; };
+		D8328F671DBA7B5900438D4A /* Lend.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8328F661DBA7B5900438D4A /* Lend.storyboard */; };
+		D8328F6B1DBA7CAB00438D4A /* QLLendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8328F6A1DBA7CAB00438D4A /* QLLendViewController.m */; };
+		D8328F6F1DBA7D1F00438D4A /* QLLendAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = D8328F6E1DBA7D1F00438D4A /* QLLendAssembly.m */; };
+		D8328F731DBA7F4F00438D4A /* QLLendDataDisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D8328F721DBA7F4F00438D4A /* QLLendDataDisplayManager.m */; };
+		D8328F781DBA844F00438D4A /* QLLendCellFactoryImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = D8328F771DBA844F00438D4A /* QLLendCellFactoryImplementation.m */; };
+		D8328F7E1DBA850000438D4A /* QLLendOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8328F7C1DBA850000438D4A /* QLLendOrderCell.m */; };
+		D8328F7F1DBA850000438D4A /* QLLendOrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8328F7D1DBA850000438D4A /* QLLendOrderCell.xib */; };
+		D8328F821DBA852000438D4A /* QLLendOrderCellObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D8328F811DBA852000438D4A /* QLLendOrderCellObject.m */; };
 		D835BCB51DB96EF400F2FF0F /* SF-UI-Display-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = D835BCB41DB96EF400F2FF0F /* SF-UI-Display-Light.otf */; };
 		D835BCCE1DB9741100F2FF0F /* RDSDataDisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BCCC1DB9741100F2FF0F /* RDSDataDisplayManager.m */; };
 		D835BCD31DB9747500F2FF0F /* NSMutableArray+RDSNilFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BCD21DB9747500F2FF0F /* NSMutableArray+RDSNilFilter.m */; };
@@ -208,6 +216,21 @@
 		D8328F601DBA78B400438D4A /* QLOffsetCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QLOffsetCell.xib; path = OffsetCell/QLOffsetCell.xib; sourceTree = "<group>"; };
 		D8328F631DBA78C800438D4A /* QLOffsetCellObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLOffsetCellObject.h; path = OffsetCell/QLOffsetCellObject.h; sourceTree = "<group>"; };
 		D8328F641DBA78C800438D4A /* QLOffsetCellObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLOffsetCellObject.m; path = OffsetCell/QLOffsetCellObject.m; sourceTree = "<group>"; };
+		D8328F661DBA7B5900438D4A /* Lend.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Lend.storyboard; path = Resources/Storyboards/Lend.storyboard; sourceTree = "<group>"; };
+		D8328F691DBA7CAB00438D4A /* QLLendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLLendViewController.h; path = Classes/UserInterface/Controllers/Lend/QLLendViewController.h; sourceTree = "<group>"; };
+		D8328F6A1DBA7CAB00438D4A /* QLLendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLLendViewController.m; path = Classes/UserInterface/Controllers/Lend/QLLendViewController.m; sourceTree = "<group>"; };
+		D8328F6D1DBA7D1F00438D4A /* QLLendAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLLendAssembly.h; path = Classes/UserInterface/Controllers/Lend/Assembly/QLLendAssembly.h; sourceTree = "<group>"; };
+		D8328F6E1DBA7D1F00438D4A /* QLLendAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLLendAssembly.m; path = Classes/UserInterface/Controllers/Lend/Assembly/QLLendAssembly.m; sourceTree = "<group>"; };
+		D8328F711DBA7F4F00438D4A /* QLLendDataDisplayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLLendDataDisplayManager.h; path = Classes/UserInterface/Controllers/Lend/DDM/QLLendDataDisplayManager.h; sourceTree = "<group>"; };
+		D8328F721DBA7F4F00438D4A /* QLLendDataDisplayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLLendDataDisplayManager.m; path = Classes/UserInterface/Controllers/Lend/DDM/QLLendDataDisplayManager.m; sourceTree = "<group>"; };
+		D8328F751DBA841200438D4A /* QLLendCellFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = QLLendCellFactory.h; path = Classes/UserInterface/Controllers/Lend/Factory/QLLendCellFactory.h; sourceTree = "<group>"; };
+		D8328F761DBA844F00438D4A /* QLLendCellFactoryImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLLendCellFactoryImplementation.h; path = Classes/UserInterface/Controllers/Lend/Factory/QLLendCellFactoryImplementation.h; sourceTree = "<group>"; };
+		D8328F771DBA844F00438D4A /* QLLendCellFactoryImplementation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLLendCellFactoryImplementation.m; path = Classes/UserInterface/Controllers/Lend/Factory/QLLendCellFactoryImplementation.m; sourceTree = "<group>"; };
+		D8328F7B1DBA850000438D4A /* QLLendOrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLLendOrderCell.h; path = Classes/UserInterface/Controllers/Lend/Cells/OrderCell/QLLendOrderCell.h; sourceTree = "<group>"; };
+		D8328F7C1DBA850000438D4A /* QLLendOrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLLendOrderCell.m; path = Classes/UserInterface/Controllers/Lend/Cells/OrderCell/QLLendOrderCell.m; sourceTree = "<group>"; };
+		D8328F7D1DBA850000438D4A /* QLLendOrderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QLLendOrderCell.xib; path = Classes/UserInterface/Controllers/Lend/Cells/OrderCell/QLLendOrderCell.xib; sourceTree = "<group>"; };
+		D8328F801DBA852000438D4A /* QLLendOrderCellObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLLendOrderCellObject.h; path = Classes/UserInterface/Controllers/Lend/Cells/OrderCell/QLLendOrderCellObject.h; sourceTree = "<group>"; };
+		D8328F811DBA852000438D4A /* QLLendOrderCellObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLLendOrderCellObject.m; path = Classes/UserInterface/Controllers/Lend/Cells/OrderCell/QLLendOrderCellObject.m; sourceTree = "<group>"; };
 		D835BCB31DB94E1500F2FF0F /* QLStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = QLStorage.h; path = Classes/BusinessLogic/CoreCompnents/KeychainStorage/QLStorage.h; sourceTree = "<group>"; };
 		D835BCB41DB96EF400F2FF0F /* SF-UI-Display-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Display-Light.otf"; path = "Resources/Fonts/SF-UI-Display-Light.otf"; sourceTree = "<group>"; };
 		D835BCCB1DB9741100F2FF0F /* RDSDataDisplayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RDSDataDisplayManager.h; path = Classes/Helpers/DataDisplayManager/RDSDataDisplayManager.h; sourceTree = "<group>"; };
@@ -763,6 +786,67 @@
 			name = OffsetCell;
 			sourceTree = "<group>";
 		};
+		D8328F681DBA7C8A00438D4A /* Lend */ = {
+			isa = PBXGroup;
+			children = (
+				D8328F6C1DBA7CED00438D4A /* Assembly */,
+				D8328F791DBA84C700438D4A /* Cells */,
+				D8328F701DBA7F2600438D4A /* DDM */,
+				D8328F741DBA83F500438D4A /* Factory */,
+				D8328F691DBA7CAB00438D4A /* QLLendViewController.h */,
+				D8328F6A1DBA7CAB00438D4A /* QLLendViewController.m */,
+			);
+			name = Lend;
+			sourceTree = "<group>";
+		};
+		D8328F6C1DBA7CED00438D4A /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				D8328F6D1DBA7D1F00438D4A /* QLLendAssembly.h */,
+				D8328F6E1DBA7D1F00438D4A /* QLLendAssembly.m */,
+			);
+			name = Assembly;
+			sourceTree = "<group>";
+		};
+		D8328F701DBA7F2600438D4A /* DDM */ = {
+			isa = PBXGroup;
+			children = (
+				D8328F711DBA7F4F00438D4A /* QLLendDataDisplayManager.h */,
+				D8328F721DBA7F4F00438D4A /* QLLendDataDisplayManager.m */,
+			);
+			name = DDM;
+			sourceTree = "<group>";
+		};
+		D8328F741DBA83F500438D4A /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				D8328F751DBA841200438D4A /* QLLendCellFactory.h */,
+				D8328F761DBA844F00438D4A /* QLLendCellFactoryImplementation.h */,
+				D8328F771DBA844F00438D4A /* QLLendCellFactoryImplementation.m */,
+			);
+			name = Factory;
+			sourceTree = "<group>";
+		};
+		D8328F791DBA84C700438D4A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D8328F7A1DBA84DC00438D4A /* OrderCell */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		D8328F7A1DBA84DC00438D4A /* OrderCell */ = {
+			isa = PBXGroup;
+			children = (
+				D8328F7B1DBA850000438D4A /* QLLendOrderCell.h */,
+				D8328F7C1DBA850000438D4A /* QLLendOrderCell.m */,
+				D8328F7D1DBA850000438D4A /* QLLendOrderCell.xib */,
+				D8328F801DBA852000438D4A /* QLLendOrderCellObject.h */,
+				D8328F811DBA852000438D4A /* QLLendOrderCellObject.m */,
+			);
+			name = OrderCell;
+			sourceTree = "<group>";
+		};
 		D835BCCA1DB973DE00F2FF0F /* DataDisplayManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -1023,6 +1107,7 @@
 				D89655411DB822AD00DE4C66 /* Auth.storyboard */,
 				D896553D1DB8227400DE4C66 /* Main.storyboard */,
 				D896553E1DB8227400DE4C66 /* LaunchScreen.storyboard */,
+				D8328F661DBA7B5900438D4A /* Lend.storyboard */,
 				D8D98BB31DB9085300F3FB01 /* Profile.storyboard */,
 			);
 			name = Storyboards;
@@ -1032,8 +1117,9 @@
 			isa = PBXGroup;
 			children = (
 				D89655471DB8238300DE4C66 /* Auth */,
-				D8D98BB51DB9087900F3FB01 /* UserProfile */,
+				D8328F681DBA7C8A00438D4A /* Lend */,
 				D89655551DB8317800DE4C66 /* Register */,
+				D8D98BB51DB9087900F3FB01 /* UserProfile */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1273,6 +1359,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D89655521DB8260C00DE4C66 /* SF-UI-Display-Regular.otf in Resources */,
+				D8328F7F1DBA850000438D4A /* QLLendOrderCell.xib in Resources */,
 				D896553F1DB8227400DE4C66 /* Main.storyboard in Resources */,
 				D8D98BB41DB9085300F3FB01 /* Profile.storyboard in Resources */,
 				D89655401DB8227400DE4C66 /* LaunchScreen.storyboard in Resources */,
@@ -1281,6 +1368,7 @@
 				D89655531DB8260C00DE4C66 /* SF-UI-Display-Medium.otf in Resources */,
 				D89655421DB822AD00DE4C66 /* Auth.storyboard in Resources */,
 				D8F9D7BD1DAFD2FC000371CA /* Assets.xcassets in Resources */,
+				D8328F671DBA7B5900438D4A /* Lend.storyboard in Resources */,
 				D8328F621DBA78B400438D4A /* QLOffsetCell.xib in Resources */,
 				D8328F501DBA6D8A00438D4A /* QLProfileCardCell.xib in Resources */,
 				D89655541DB8260C00DE4C66 /* SF-UI-Display-Bold.otf in Resources */,
@@ -1365,6 +1453,7 @@
 				D8328F611DBA78B400438D4A /* QLOffsetCell.m in Sources */,
 				9EFF73FD1DB4206F004873A6 /* QLCoreComponentsAssembly.m in Sources */,
 				D835BD391DBA25C400F2FF0F /* QLBankCard.m in Sources */,
+				D8328F781DBA844F00438D4A /* QLLendCellFactoryImplementation.m in Sources */,
 				9EFF73D11DB3D969004873A6 /* QLPaymentSchedule.m in Sources */,
 				9EFF73E51DB40AE6004873A6 /* QLSortMethodParser.m in Sources */,
 				9EFF73911DB3B64C004873A6 /* QLAuthorizationService.m in Sources */,
@@ -1375,6 +1464,7 @@
 				9EFF73B51DB3C9C5004873A6 /* ServicesConstants.m in Sources */,
 				D835BD1E1DB9830C00F2FF0F /* QLInMemoryStorage.m in Sources */,
 				D835BD101DB97B0700F2FF0F /* QLProfileViewController.m in Sources */,
+				D8328F6B1DBA7CAB00438D4A /* QLLendViewController.m in Sources */,
 				9EFF74061DB42925004873A6 /* QLTestAssembly.m in Sources */,
 				9EFF73E91DB40EC1004873A6 /* QLNetworkClient.m in Sources */,
 				D8328F461DBA2B9300438D4A /* QLBankAuthRequestFactoryImplementation.m in Sources */,
@@ -1387,6 +1477,7 @@
 				D835BD2B1DB98F7000F2FF0F /* UIColor+QLColor.m in Sources */,
 				D8328F401DBA299300438D4A /* QLBankCardMapperImplementation.m in Sources */,
 				9EFF73B11DB3C918004873A6 /* QLUserInfo.m in Sources */,
+				D8328F7E1DBA850000438D4A /* QLLendOrderCell.m in Sources */,
 				D835BD111DB97B0700F2FF0F /* QLProfileAssembly.m in Sources */,
 				9EFF73D81DB3DC4E004873A6 /* QLPaymentCompletedRequestConfiguration.m in Sources */,
 				9EFF73ED1DB41503004873A6 /* QLServerResponse.m in Sources */,
@@ -1412,6 +1503,7 @@
 				9ECC12C61DB9932900E33288 /* QLSerializer.m in Sources */,
 				9EFF739B1DB3BDF8004873A6 /* QLUserInfoService.m in Sources */,
 				9EFF73F51DB41A47004873A6 /* QLMappingProvider.m in Sources */,
+				D8328F821DBA852000438D4A /* QLLendOrderCellObject.m in Sources */,
 				9EFF73C51DB3D091004873A6 /* QLPersonalCabinetService.m in Sources */,
 				D8328F581DBA771C00438D4A /* QLProfileAddCardCell.m in Sources */,
 				D835BD471DBA28C200F2FF0F /* QLBankMappingProvider.m in Sources */,
@@ -1420,6 +1512,8 @@
 				D8328F4F1DBA6D8A00438D4A /* QLProfileCardCell.m in Sources */,
 				D835BD1A1DB97DCA00F2FF0F /* QLBankUserInfo.m in Sources */,
 				D835BCD31DB9747500F2FF0F /* NSMutableArray+RDSNilFilter.m in Sources */,
+				D8328F731DBA7F4F00438D4A /* QLLendDataDisplayManager.m in Sources */,
+				D8328F6F1DBA7D1F00438D4A /* QLLendAssembly.m in Sources */,
 				D84F78461DB8F08400394F1D /* EXTScope.m in Sources */,
 				9EFF73CD1DB3D82B004873A6 /* QLPayment.m in Sources */,
 				D84F78411DB8E0EB00394F1D /* QLBankServiceConstants.m in Sources */,
