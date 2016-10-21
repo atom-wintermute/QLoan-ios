@@ -11,6 +11,12 @@
 
 #import "QLBorrowerOrder.h"
 
+@interface QLCreateBorrowerOrderViewController ()
+
+@property (nonatomic, assign) BOOL requestIsBeingCreated;
+
+@end
+
 @implementation QLCreateBorrowerOrderViewController
 
 - (void)viewDidLoad {
@@ -18,10 +24,17 @@
 	[self configureTextfieldDelegate];
 	self.monthlyCheckbox.hidden = NO;
 	self.onceCheckbox.hidden = YES;
+	
+	self.requestIsBeingCreated = NO;
 }
 
 - (IBAction)createLoan:(UIButton *)sender {
+	if (self.requestIsBeingCreated) {
+		return;
+	}
 	
+	[self createOrder];
+	self.requestIsBeingCreated = YES;
 }
 
 - (IBAction)monthlyTapped:(UIButton *)sender {
@@ -56,7 +69,7 @@
 	}
 	
 	QLBooleanCompletion completion = ^(BOOL success, NSError *error) {
-		
+		self.requestIsBeingCreated = NO;
 	};
 	
 	[self.borrowerOrderService addBorrowerOrder:order
