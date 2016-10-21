@@ -15,7 +15,8 @@
 
 @class QLBorrowerOrderService;
 
-@interface QLCreateBorrowerOrderViewController : UIViewController
+@interface QLCreateBorrowerOrderViewController : UIViewController<UITextFieldDelegate>
+
 @property (weak, nonatomic) IBOutlet QLUnderlinedTextfield *loanAmountTextfield;
 @property (weak, nonatomic) IBOutlet QLUnderlinedTextfield *percentageTextfield;
 @property (weak, nonatomic) IBOutlet QLUnderlinedTextfield *loanPeriodTextfield;

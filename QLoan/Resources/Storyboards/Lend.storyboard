@@ -151,12 +151,15 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ed8-5i-dvA" customClass="QLBlueGradientButton">
+                                <color key="backgroundColor" red="0.0" green="0.70196078431372544" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="Ivo-Tl-dVN"/>
                                     <constraint firstAttribute="width" constant="312" id="ROj-Qo-Th3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
-                                <state key="normal" title="Запросить займ"/>
+                                <state key="normal" title="Запросить займ">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="createLoan:" destination="Ied-7X-s2y" eventType="touchUpInside" id="aFX-eU-W71"/>
                                 </connections>
