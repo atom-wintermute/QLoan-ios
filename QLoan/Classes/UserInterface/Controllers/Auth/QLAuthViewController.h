@@ -23,6 +23,8 @@
 @property (nonatomic, strong) id<QLBankAuthService> bankAuthService;
 @property (nonatomic, strong) id<QLBankCardService> bankCardService;
 
+- (IBAction)fastLoginButtonWasPressed:(id)sender;
+
 - (IBAction)forgetPasswordButtonWasPressed:(id)sender;
 
 - (IBAction)loginButtonWasPressed:(id)sender;

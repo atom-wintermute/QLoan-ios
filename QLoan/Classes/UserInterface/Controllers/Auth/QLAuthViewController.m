@@ -22,6 +22,12 @@ static NSString * const QLAuthRegisterSegue = @"registerSegue";
 
 #pragma mark - IBActions
 
+- (void)fastLoginButtonWasPressed:(id)sender {
+    self.loginTextField.text = @"9139381557";
+    self.passwordTextField.text = @"29111990m";
+    [self loginButtonWasPressed:nil];
+}
+
 - (void)forgetPasswordButtonWasPressed:(id)sender {
     
 }

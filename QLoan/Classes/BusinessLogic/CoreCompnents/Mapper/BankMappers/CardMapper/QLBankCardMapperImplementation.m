@@ -19,9 +19,9 @@
         return nil;
     }
     
-    EKObjectMapping *userMapping = [QLBankMappingProvider bankCard];
-    return [EKMapper objectFromExternalRepresentation:responseObject
-                                          withMapping:userMapping];
+    EKObjectMapping *bankCardMapping = [QLBankMappingProvider bankCard];
+    return [EKMapper arrayOfObjectsFromExternalRepresentation:responseObject
+                                                  withMapping:bankCardMapping];
 }
 
 @end

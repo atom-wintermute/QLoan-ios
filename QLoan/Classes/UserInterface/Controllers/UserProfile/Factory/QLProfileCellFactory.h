@@ -7,12 +7,14 @@
 //
 
 @class QLBankUserInfo;
+@class QLBankCard;
 
 /**
  Протокол фабрики ячеек экрана профиля
  */
 @protocol QLProfileCellFactory <NSObject>
 
-- (NSArray *)cellObjectsFrom:(QLBankUserInfo *)bankUserInfo;
+- (NSArray *)cellObjectsFrom:(QLBankUserInfo *)bankUserInfo
+                    cardList:(NSArray <QLBankCard *> *)cardList;
 
 @end

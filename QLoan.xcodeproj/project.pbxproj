@@ -40,6 +40,9 @@
 		D8328F401DBA299300438D4A /* QLBankCardMapperImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = D8328F3F1DBA299300438D4A /* QLBankCardMapperImplementation.m */; };
 		D8328F461DBA2B9300438D4A /* QLBankAuthRequestFactoryImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = D8328F441DBA2B9300438D4A /* QLBankAuthRequestFactoryImplementation.m */; };
 		D8328F4A1DBA2D4300438D4A /* QLBankCardRequestFactoryImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = D8328F491DBA2D4300438D4A /* QLBankCardRequestFactoryImplementation.m */; };
+		D8328F4F1DBA6D8A00438D4A /* QLProfileCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8328F4D1DBA6D8A00438D4A /* QLProfileCardCell.m */; };
+		D8328F501DBA6D8A00438D4A /* QLProfileCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8328F4E1DBA6D8A00438D4A /* QLProfileCardCell.xib */; };
+		D8328F531DBA6DA200438D4A /* QLProfileCardCellObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D8328F521DBA6DA200438D4A /* QLProfileCardCellObject.m */; };
 		D835BCB51DB96EF400F2FF0F /* SF-UI-Display-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = D835BCB41DB96EF400F2FF0F /* SF-UI-Display-Light.otf */; };
 		D835BCCE1DB9741100F2FF0F /* RDSDataDisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BCCC1DB9741100F2FF0F /* RDSDataDisplayManager.m */; };
 		D835BCD31DB9747500F2FF0F /* NSMutableArray+RDSNilFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = D835BCD21DB9747500F2FF0F /* NSMutableArray+RDSNilFilter.m */; };
@@ -168,6 +171,11 @@
 		D8328F471DBA2BC800438D4A /* QLBankCardRequestFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = QLBankCardRequestFactory.h; path = Classes/BusinessLogic/CoreCompnents/RequestFactory/BankRequestFactories/CardRequestFactory/QLBankCardRequestFactory.h; sourceTree = "<group>"; };
 		D8328F481DBA2D4300438D4A /* QLBankCardRequestFactoryImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLBankCardRequestFactoryImplementation.h; path = Classes/BusinessLogic/CoreCompnents/RequestFactory/BankRequestFactories/CardRequestFactory/QLBankCardRequestFactoryImplementation.h; sourceTree = "<group>"; };
 		D8328F491DBA2D4300438D4A /* QLBankCardRequestFactoryImplementation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLBankCardRequestFactoryImplementation.m; path = Classes/BusinessLogic/CoreCompnents/RequestFactory/BankRequestFactories/CardRequestFactory/QLBankCardRequestFactoryImplementation.m; sourceTree = "<group>"; };
+		D8328F4C1DBA6D8A00438D4A /* QLProfileCardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLProfileCardCell.h; path = CardCell/QLProfileCardCell.h; sourceTree = "<group>"; };
+		D8328F4D1DBA6D8A00438D4A /* QLProfileCardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLProfileCardCell.m; path = CardCell/QLProfileCardCell.m; sourceTree = "<group>"; };
+		D8328F4E1DBA6D8A00438D4A /* QLProfileCardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QLProfileCardCell.xib; path = CardCell/QLProfileCardCell.xib; sourceTree = "<group>"; };
+		D8328F511DBA6DA200438D4A /* QLProfileCardCellObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLProfileCardCellObject.h; path = CardCell/QLProfileCardCellObject.h; sourceTree = "<group>"; };
+		D8328F521DBA6DA200438D4A /* QLProfileCardCellObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLProfileCardCellObject.m; path = CardCell/QLProfileCardCellObject.m; sourceTree = "<group>"; };
 		D835BCB31DB94E1500F2FF0F /* QLStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = QLStorage.h; path = Classes/BusinessLogic/CoreCompnents/KeychainStorage/QLStorage.h; sourceTree = "<group>"; };
 		D835BCB41DB96EF400F2FF0F /* SF-UI-Display-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Display-Light.otf"; path = "Resources/Fonts/SF-UI-Display-Light.otf"; sourceTree = "<group>"; };
 		D835BCCB1DB9741100F2FF0F /* RDSDataDisplayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RDSDataDisplayManager.h; path = Classes/Helpers/DataDisplayManager/RDSDataDisplayManager.h; sourceTree = "<group>"; };
@@ -644,6 +652,18 @@
 			name = AuthRequestFactory;
 			sourceTree = "<group>";
 		};
+		D8328F4B1DBA6D6700438D4A /* CardCell */ = {
+			isa = PBXGroup;
+			children = (
+				D8328F4C1DBA6D8A00438D4A /* QLProfileCardCell.h */,
+				D8328F4D1DBA6D8A00438D4A /* QLProfileCardCell.m */,
+				D8328F4E1DBA6D8A00438D4A /* QLProfileCardCell.xib */,
+				D8328F511DBA6DA200438D4A /* QLProfileCardCellObject.h */,
+				D8328F521DBA6DA200438D4A /* QLProfileCardCellObject.m */,
+			);
+			name = CardCell;
+			sourceTree = "<group>";
+		};
 		D835BCCA1DB973DE00F2FF0F /* DataDisplayManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -716,6 +736,7 @@
 		D835BD081DB97B0700F2FF0F /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				D8328F4B1DBA6D6700438D4A /* CardCell */,
 				D835BD091DB97B0700F2FF0F /* DataCell */,
 			);
 			name = Cells;
@@ -1159,6 +1180,7 @@
 				D89655531DB8260C00DE4C66 /* SF-UI-Display-Medium.otf in Resources */,
 				D89655421DB822AD00DE4C66 /* Auth.storyboard in Resources */,
 				D8F9D7BD1DAFD2FC000371CA /* Assets.xcassets in Resources */,
+				D8328F501DBA6D8A00438D4A /* QLProfileCardCell.xib in Resources */,
 				D89655541DB8260C00DE4C66 /* SF-UI-Display-Bold.otf in Resources */,
 				9EFF74361DB4C376004873A6 /* borrowerOrderStub.json in Resources */,
 				D835BD141DB97B0700F2FF0F /* QLProfileDataCell.xib in Resources */,
@@ -1265,6 +1287,7 @@
 				D835BD3C1DBA26F400F2FF0F /* QLBankCardServiceImplementation.m in Sources */,
 				D835BD431DBA284E00F2FF0F /* QLBankAuthMapperImplementation.m in Sources */,
 				9EFF73E11DB40363004873A6 /* QLKeychainStorage.m in Sources */,
+				D8328F531DBA6DA200438D4A /* QLProfileCardCellObject.m in Sources */,
 				9EFF73AE1DB3C90F004873A6 /* QLBorrowerOrder.m in Sources */,
 				9EFF73C11DB3CE42004873A6 /* QLLenderOrderService.m in Sources */,
 				9EFF73D51DB3DB26004873A6 /* QLUserInteractionService.m in Sources */,
@@ -1284,6 +1307,7 @@
 				D835BD471DBA28C200F2FF0F /* QLBankMappingProvider.m in Sources */,
 				D84F78381DB8CBC500394F1D /* QLBankAuthServiceImplementation.m in Sources */,
 				9EFF73C91DB3D1C4004873A6 /* QLNotification.m in Sources */,
+				D8328F4F1DBA6D8A00438D4A /* QLProfileCardCell.m in Sources */,
 				D835BD1A1DB97DCA00F2FF0F /* QLBankUserInfo.m in Sources */,
 				D835BCD31DB9747500F2FF0F /* NSMutableArray+RDSNilFilter.m in Sources */,
 				D84F78461DB8F08400394F1D /* EXTScope.m in Sources */,

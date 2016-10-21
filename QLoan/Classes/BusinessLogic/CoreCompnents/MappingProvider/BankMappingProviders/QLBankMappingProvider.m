@@ -29,7 +29,7 @@
 }
 
 + (EKObjectMapping *)bankCard {
-    return [EKObjectMapping mappingForClass:[QLBankUserInfo class]
+    return [EKObjectMapping mappingForClass:[QLBankCard class]
                                   withBlock:^(EKObjectMapping *mapping) {
                                       [mapping mapFieldsFromDictionary:@{
                                                                          @"bindingId": @"cardId",

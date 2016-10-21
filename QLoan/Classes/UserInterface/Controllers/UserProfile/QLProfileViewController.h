@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @protocol QLBankAuthService;
+@protocol QLBankCardService;
 @protocol QLProfileCellFactory;
 
 /**
@@ -21,6 +22,7 @@
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 
 @property (nonatomic, strong) id<QLBankAuthService> bankAuthService;
+@property (nonatomic, strong) id<QLBankCardService> bankCardService;
 @property (nonatomic, strong) id<QLProfileCellFactory> cellFactory;
 
 @end

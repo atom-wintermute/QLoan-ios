@@ -150,6 +150,14 @@
                                             <action selector="registerButtonWasPressed:" destination="jdl-Es-imy" eventType="touchUpInside" id="vpE-5x-jZa"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gA7-He-ciJ">
+                                        <frame key="frameInset" minX="92" minY="118" width="86" height="95"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="fastLoginButtonWasPressed:" destination="jdl-Es-imy" eventType="touchUpInside" id="qf4-e8-9sY"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -194,7 +202,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uO2-gx-XPg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="463" y="120"/>
+            <point key="canvasLocation" x="461.60000000000002" y="119.1904047976012"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="Ycn-Id-Q54">
