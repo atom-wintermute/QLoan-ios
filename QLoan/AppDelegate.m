@@ -50,6 +50,8 @@
 #pragma mark - Приватные методы
 
 - (void)configureAppearance {
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:ARFontLight size:16.0]}];
+    
     [[UINavigationBar appearance] setBackgroundImage:[UIImage new]
                                        forBarMetrics:UIBarMetricsDefault];
     [[UINavigationBar appearance] setShadowImage:[UIImage new]];

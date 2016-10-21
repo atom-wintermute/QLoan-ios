@@ -8,10 +8,10 @@
 
 #import <Typhoon/Typhoon.h>
 
-@class QLMyOrderViewController;
+@class QLMyOrdersViewController;
 
 @interface QLMyOrdersAssembly : TyphoonAssembly
 
-- (QLMyOrderViewController *)myOrdersController;
+- (QLMyOrdersViewController *)myOrdersController;
 
 @end

@@ -16,6 +16,7 @@
 
     #import "EXTScope.h"
     #import "QLBlocksHelper.h"
+    #import "QLFonts.h"
     #import "UIColor+QLColor.h"
     #import "UIView+Gradient.h"
     #import "ServicesConstants.h"

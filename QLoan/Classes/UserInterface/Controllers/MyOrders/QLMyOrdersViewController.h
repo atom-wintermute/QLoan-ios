@@ -1,5 +1,5 @@
 //
-//  QLMyOrderViewController.h
+//  QLMyOrdersViewController.h
 //  QLoan
 //
 //  Created by Nikulin Maksim on 21/10/16.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface QLMyOrderViewController : UIViewController
+@interface QLMyOrdersViewController : UIViewController
 
 @end

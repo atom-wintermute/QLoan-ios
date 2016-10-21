@@ -133,7 +133,7 @@
 		D86147A91DBAA3C00018D19C /* QLGetDataDisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D86147A81DBAA3C00018D19C /* QLGetDataDisplayManager.m */; };
 		D86147AD1DBAA4BB0018D19C /* QLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86147AC1DBAA4BB0018D19C /* QLTabBarController.m */; };
 		D86147AF1DBAA6620018D19C /* MyOrders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D86147AE1DBAA6620018D19C /* MyOrders.storyboard */; };
-		D86147B31DBAA6A30018D19C /* QLMyOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86147B21DBAA6A30018D19C /* QLMyOrderViewController.m */; };
+		D86147B31DBAA6A30018D19C /* QLMyOrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86147B21DBAA6A30018D19C /* QLMyOrdersViewController.m */; };
 		D86147B71DBAA6D90018D19C /* QLMyOrdersAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = D86147B61DBAA6D90018D19C /* QLMyOrdersAssembly.m */; };
 		D881020D1DBA8EBB0066C442 /* img1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D88101F11DBA8EBB0066C442 /* img1@2x.png */; };
 		D881020E1DBA8EBB0066C442 /* img1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D88101F21DBA8EBB0066C442 /* img1@3x.png */; };
@@ -417,8 +417,8 @@
 		D86147AB1DBAA4BB0018D19C /* QLTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLTabBarController.h; path = Classes/UserInterface/Controllers/TabBar/QLTabBarController.h; sourceTree = "<group>"; };
 		D86147AC1DBAA4BB0018D19C /* QLTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLTabBarController.m; path = Classes/UserInterface/Controllers/TabBar/QLTabBarController.m; sourceTree = "<group>"; };
 		D86147AE1DBAA6620018D19C /* MyOrders.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MyOrders.storyboard; path = Resources/Storyboards/MyOrders.storyboard; sourceTree = "<group>"; };
-		D86147B11DBAA6A30018D19C /* QLMyOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLMyOrderViewController.h; path = Classes/UserInterface/Controllers/MyOrders/QLMyOrderViewController.h; sourceTree = "<group>"; };
-		D86147B21DBAA6A30018D19C /* QLMyOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLMyOrderViewController.m; path = Classes/UserInterface/Controllers/MyOrders/QLMyOrderViewController.m; sourceTree = "<group>"; };
+		D86147B11DBAA6A30018D19C /* QLMyOrdersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLMyOrdersViewController.h; path = Classes/UserInterface/Controllers/MyOrders/QLMyOrdersViewController.h; sourceTree = "<group>"; };
+		D86147B21DBAA6A30018D19C /* QLMyOrdersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLMyOrdersViewController.m; path = Classes/UserInterface/Controllers/MyOrders/QLMyOrdersViewController.m; sourceTree = "<group>"; };
 		D86147B51DBAA6D90018D19C /* QLMyOrdersAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLMyOrdersAssembly.h; path = Classes/UserInterface/Controllers/MyOrders/Assembly/QLMyOrdersAssembly.h; sourceTree = "<group>"; };
 		D86147B61DBAA6D90018D19C /* QLMyOrdersAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLMyOrdersAssembly.m; path = Classes/UserInterface/Controllers/MyOrders/Assembly/QLMyOrdersAssembly.m; sourceTree = "<group>"; };
 		D88101F11DBA8EBB0066C442 /* img1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img1@2x.png"; path = "Resources/Photos/Lend/img1@2x.png"; sourceTree = "<group>"; };
@@ -1326,8 +1326,8 @@
 			isa = PBXGroup;
 			children = (
 				D86147B41DBAA6B30018D19C /* Assembly */,
-				D86147B11DBAA6A30018D19C /* QLMyOrderViewController.h */,
-				D86147B21DBAA6A30018D19C /* QLMyOrderViewController.m */,
+				D86147B11DBAA6A30018D19C /* QLMyOrdersViewController.h */,
+				D86147B21DBAA6A30018D19C /* QLMyOrdersViewController.m */,
 			);
 			name = MyOrders;
 			sourceTree = "<group>";
@@ -1902,7 +1902,7 @@
 				9EFF73E11DB40363004873A6 /* QLKeychainStorage.m in Sources */,
 				D8328F531DBA6DA200438D4A /* QLProfileCardCellObject.m in Sources */,
 				9EFF73AE1DB3C90F004873A6 /* QLBorrowerOrder.m in Sources */,
-				D86147B31DBAA6A30018D19C /* QLMyOrderViewController.m in Sources */,
+				D86147B31DBAA6A30018D19C /* QLMyOrdersViewController.m in Sources */,
 				9EFF73C11DB3CE42004873A6 /* QLLenderOrderService.m in Sources */,
 				9EFF73D51DB3DB26004873A6 /* QLUserInteractionService.m in Sources */,
 				D86147A01DBA9FC30018D19C /* QLGetViewController.m in Sources */,

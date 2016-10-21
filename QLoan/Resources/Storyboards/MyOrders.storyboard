@@ -5,10 +5,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Мои заявки-->
         <scene sceneID="cSE-4B-3PK">
             <objects>
-                <navigationController id="kmM-aL-gHR" sceneMemberID="viewController">
+                <navigationController title="Мои заявки" id="kmM-aL-gHR" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7au-MT-Fo6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -21,10 +21,10 @@
             </objects>
             <point key="canvasLocation" x="-553" y="152"/>
         </scene>
-        <!--My Orders View Controller-->
+        <!--Мои заявки-->
         <scene sceneID="qmW-0t-wbK">
             <objects>
-                <viewController storyboardIdentifier="QLMyOrdersViewController" id="yJy-Jv-wcy" customClass="QLMyOrdersViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QLMyOrdersViewController" title="Мои заявки" id="yJy-Jv-wcy" customClass="QLMyOrdersViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Duh-sE-QAH"/>
                         <viewControllerLayoutGuide type="bottom" id="eVM-y0-KVS"/>
@@ -32,7 +32,24 @@
                     <view key="view" contentMode="scaleToFill" id="4CI-IG-C7V">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QDc-gD-g3i">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Zs0-9E-2k5"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Все"/>
+                                    <segment title="Полученные"/>
+                                    <segment title="Выданные"/>
+                                </segments>
+                                <color key="tintColor" red="0.0" green="0.70196078429999997" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QDc-gD-g3i" firstAttribute="top" secondItem="Duh-sE-QAH" secondAttribute="bottom" constant="5" id="9sN-ar-odm"/>
+                            <constraint firstItem="QDc-gD-g3i" firstAttribute="centerX" secondItem="4CI-IG-C7V" secondAttribute="centerX" id="tvw-s9-lhp"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="iqK-9o-Unn"/>
                 </viewController>

@@ -59,7 +59,7 @@
         <!--Мои заявки-->
         <scene sceneID="90i-nZ-Dxa">
             <objects>
-                <navigationController id="3Z2-jg-ViC" sceneMemberID="viewController">
+                <navigationController title="Мои заявки" id="3Z2-jg-ViC" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Мои заявки" image="myOrderActive" selectedImage="myOrderActive" id="dff-LO-wEH"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1pI-6T-eQg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

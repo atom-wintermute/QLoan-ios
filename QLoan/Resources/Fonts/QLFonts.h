@@ -9,10 +9,10 @@
 #ifndef QLFonts_h
 #define QLFonts_h
 
-static NSString * const ARFontLight = @"SF-UI-Display-Light";
-static NSString * const ARFontRegular = @"SF-UI-Display-Regular";
-static NSString * const ARFontMedium = @"SF-UI-Display-Medium";
-static NSString * const ARFontSemibold = @"SF-UI-Display-Semibold";
-static NSString * const ARFontBold = @"SF-UI-Display-Bold";
+static NSString * const ARFontLight = @"SFUIDisplay-Light";
+static NSString * const ARFontRegular = @"SFUIDisplay-Regular";
+static NSString * const ARFontMedium = @"SFUIDisplay-Medium";
+static NSString * const ARFontSemibold = @"SFUIDisplay-Semibold";
+static NSString * const ARFontBold = @"SFUIDisplay-Bold";
 
 #endif /* QLFonts_h */
