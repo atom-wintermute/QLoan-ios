@@ -91,6 +91,19 @@
 						 parameters:dictionary];
 }
 
+#pragma mark - Информация о пользователе
+
+- (NSURLRequest *)requestForCurrentUser {
+	return [self getRequestWithPath:@"current_user/"
+						 parameters:nil];
+}
+
+- (NSURLRequest *)requestForUserWithId:(NSUInteger)userId {
+	NSDictionary *dictionary = @{ @"id": @(userId) };
+	return [self getRequestWithPath:@"get_user_by_id/"
+						 parameters:dictionary];
+}
+
 #pragma mark - Заявки Заемщика
 
 - (NSURLRequest *)requestForBorrowerOrdersWithPage:(NSUInteger)page

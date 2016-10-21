@@ -27,4 +27,6 @@
 
 - (EKObjectMapping *)paymentScheduleMapping;
 
+- (EKObjectMapping *)userInfoMapping;
+
 @end

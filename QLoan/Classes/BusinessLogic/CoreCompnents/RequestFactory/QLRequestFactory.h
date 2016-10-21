@@ -65,6 +65,12 @@
 
 - (NSURLRequest *)requestForAddingLenderOrder:(NSDictionary *)orderParameters;
 
+#pragma mark - Информация о пользователе
+
+- (NSURLRequest *)requestForCurrentUser;
+
+- (NSURLRequest *)requestForUserWithId:(NSUInteger)userId;
+
 #pragma mark - Направление запросов
 
 - (NSURLRequest *)requestForLoanProvision:(NSInteger)orderId;

@@ -17,6 +17,7 @@
 #import "QLDateFormatter.h"
 #import "QLPayment.h"
 #import "QLPaymentSchedule.h"
+#import "QLUserInfo.h"
 
 @implementation QLMappingProvider
 
@@ -75,8 +76,8 @@
 										   }];
 		[mapping mapKey:@"date"
 				toField:@"date"
-		 withValueBlock:^id(NSString *key, NSArray *value) {
-			 if ([value isKindOfClass:[NSString class]]) {
+		 withValueBlock:^id(NSString *key, id value) {
+			 if (![value isKindOfClass:[NSString class]]) {
 				 return nil;
 			 }
 			 NSDate *date = [self.formatter dateFromString:(NSString *)value];
@@ -93,8 +94,8 @@
 										   }];
 		[mapping mapKey:@"date"
 				toField:@"date"
-		 withValueBlock:^id(NSString *key, NSArray *value) {
-			 if ([value isKindOfClass:[NSString class]]) {
+		 withValueBlock:^id(NSString *key, id value) {
+			 if (![value isKindOfClass:[NSString class]]) {
 				 return nil;
 			 }
 			 NSDate *date = [self.formatter dateFromString:(NSString *)value];
@@ -111,14 +112,38 @@
 										   }];
 		[mapping mapKey:@"payments"
 				toField:@"payments"
-		 withValueBlock:^id(NSString *key, NSArray *value) {
-			 if ([value isKindOfClass:[NSArray class]]) {
+		 withValueBlock:^id(NSString *key, id value) {
+			 if (![value isKindOfClass:[NSArray class]]) {
 				 return nil;
 			 }
 			 NSArray *payments =
 			 [EKMapper arrayOfObjectsFromExternalRepresentation:(NSArray *)value
 													withMapping:[self paymentMapping]];
 			 return payments;
+		 }];
+	}];
+}
+
+- (EKObjectMapping *)userInfoMapping {
+	return [EKObjectMapping mappingForClass:[QLUserInfo class] withBlock:^(EKObjectMapping *mapping) {
+		[mapping mapFieldsFromDictionary:@{
+										   @"user_id": @"userId",
+										   @"rating" : @"rating",
+										   @"loans_taken_amount" : @"loansTakenAmount",
+										   @"loans_given_amount" : @"loansGivenAmount",
+										   @"first_name" : @"firstName",
+										   @"last_name" : @"lastName",
+										   @"parent_name" : @"parentName",
+										   }];
+		[mapping mapKey:@"avatar_url"
+				toField:@"avatarUrl"
+		 withValueBlock:^id(NSString *key, id value) {
+			 if (![value isKindOfClass:[NSString class]]) {
+				 return nil;
+			 }
+			 NSURL *url = [NSURL URLWithString:(NSString *)value];
+			 
+			 return url;
 		 }];
 	}];
 }

@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "QLMappingProvider.h"
 #import "QLSessionCredentials.h"
+#import "QLUserInfo.h"
 
 @interface QLMapper : NSObject
 
@@ -35,6 +36,10 @@
 #pragma mark - Платежи
 
 - (QLPaymentSchedule *)mapPaymentScheduleFromResponseObject:(id)responseObject;
+
+#pragma mark - Информация о пользователе
+
+- (QLUserInfo *)mapUserInfoFromResponseObject:(id)responseObject;
 
 #pragma mark - Данные сессии
 

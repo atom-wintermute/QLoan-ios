@@ -16,6 +16,7 @@
 @class QLLenderOrderService;
 @class QLUserInteractionService;
 @class QLPersonalCabinetService;
+@class QLUserInfoService;
 
 /**
  Фабрика сервисов
@@ -31,6 +32,8 @@
 - (QLUserInteractionService *)interactionService;
 
 - (QLAuthorizationService *)authorizationService;
+
+- (QLUserInfoService *)userInfoService;
 
 - (id<QLBankAuthService>)bankAuthService;
 

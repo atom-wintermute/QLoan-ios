@@ -106,12 +106,24 @@
 	return nil;
 }
 
+#pragma mark - Платежи
+
 - (QLPaymentSchedule *)mapPaymentScheduleFromResponseObject:(id)responseObject {
 	EKObjectMapping *mapping = [self.mappingProvider paymentScheduleMapping];
 	QLPaymentSchedule *schedule = [EKMapper objectFromExternalRepresentation:responseObject
 																 withMapping:mapping];
 	
 	return schedule;
+}
+
+#pragma mark - Информация о пользователе
+
+- (QLUserInfo *)mapUserInfoFromResponseObject:(id)responseObject {
+	EKObjectMapping *mapping = [self.mappingProvider userInfoMapping];
+	QLUserInfo *info = [EKMapper objectFromExternalRepresentation:responseObject
+													  withMapping:mapping];
+	
+	return info;
 }
 
 #pragma mark - Данные сессии
