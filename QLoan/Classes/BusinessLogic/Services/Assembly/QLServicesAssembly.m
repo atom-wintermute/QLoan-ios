@@ -13,6 +13,7 @@
 #import "QLAuthorizationService.h"
 #import "QLLenderOrderService.h"
 #import "QLUserInteractionService.h"
+#import "QLPersonalCabinetService.h"
 
 @interface QLServicesAssembly()
 
@@ -21,6 +22,23 @@
 @end
 
 @implementation QLServicesAssembly
+
+- (QLPersonalCabinetService *)personalCabinetService {
+	return [TyphoonDefinition withClass:[QLPersonalCabinetService class]
+						  configuration:^(TyphoonDefinition *definition)
+			{
+				[definition injectProperty:@selector(jsonSerializer)
+									  with:[self.coreAssembly jsonSerializer]];
+				[definition injectProperty:@selector(serializer)
+									  with:[self.coreAssembly serializer]];
+				[definition injectProperty:@selector(networkClient)
+									  with:[self.coreAssembly challengedNetworkClient]];
+				[definition injectProperty:@selector(mapper)
+									  with:[self.coreAssembly mapper]];
+				[definition injectProperty:@selector(requestFactory)
+									  with:[self.coreAssembly requestFactory]];
+			}];
+}
 
 - (QLUserInteractionService *)interactionService {
 	return [TyphoonDefinition withClass:[QLUserInteractionService class]

@@ -25,6 +25,16 @@
 
 - (NSURLRequest *)requestForAuthorizationWithConfiguration:(QLAuthorizationRequestConfiguration *)configuration;
 
+#pragma mark - Мои заявки
+
+- (NSURLRequest *)requestForMyBorrowerOrdersWithPage:(NSUInteger)page
+										  sortMethod:(QLSortMethod)sortMethod
+										   ascending:(BOOL)ascending;
+
+- (NSURLRequest *)requestForMyLenderOrdersWithPage:(NSUInteger)page
+										sortMethod:(QLSortMethod)sortMethod
+										 ascending:(BOOL)ascending;
+
 #pragma mark - Заявки заемщика
 
 - (NSURLRequest *)requestForBorrowerOrdersWithPage:(NSUInteger)page

@@ -15,11 +15,14 @@
 @class QLAuthorizationService;
 @class QLLenderOrderService;
 @class QLUserInteractionService;
+@class QLPersonalCabinetService;
 
 /**
  Фабрика сервисов
  */
 @interface QLServicesAssembly : TyphoonAssembly
+
+- (QLPersonalCabinetService *)personalCabinetService;
 
 - (QLBorrowerOrderService *)borrowerOrderService;
 

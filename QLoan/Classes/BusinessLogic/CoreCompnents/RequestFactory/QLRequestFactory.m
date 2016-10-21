@@ -37,6 +37,38 @@
 						  parameters:dictionary];
 }
 
+#pragma mark - Мои заявки
+
+- (NSURLRequest *)requestForMyBorrowerOrdersWithPage:(NSUInteger)page
+										  sortMethod:(QLSortMethod)sortMethod
+										   ascending:(BOOL)ascending {
+	NSMutableDictionary *dictionary = [@{ @"pageNumber": @(page) } mutableCopy];
+	NSString *sortMethodDescription = [QLSortMethodParser descriptionFromSortMethod:sortMethod];
+	
+	if (sortMethodDescription != nil) {
+		NSString *sortOrdering = [QLSortMethodParser descriptionFromSortOrdering:ascending];
+		[dictionary setValue:sortOrdering forKey:sortMethodDescription];
+	}
+	
+	return [self getRequestWithPath:@"getMyBorrwersOrders/"
+						 parameters:[dictionary copy]];
+}
+
+- (NSURLRequest *)requestForMyLenderOrdersWithPage:(NSUInteger)page
+										sortMethod:(QLSortMethod)sortMethod
+										 ascending:(BOOL)ascending {
+	NSMutableDictionary *dictionary = [@{ @"pageNumber": @(page) } mutableCopy];
+	NSString *sortMethodDescription = [QLSortMethodParser descriptionFromSortMethod:sortMethod];
+	
+	if (sortMethodDescription != nil) {
+		NSString *sortOrdering = [QLSortMethodParser descriptionFromSortOrdering:ascending];
+		[dictionary setValue:sortOrdering forKey:sortMethodDescription];
+	}
+	
+	return [self getRequestWithPath:@"getMyLendersOrders/"
+						 parameters:[dictionary copy]];
+}
+
 #pragma mark - Заявки Заемщика
 
 - (NSURLRequest *)requestForBorrowerOrdersWithPage:(NSUInteger)page
