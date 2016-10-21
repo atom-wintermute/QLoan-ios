@@ -22,4 +22,8 @@
     return [UIColor colorWithRed:238.0/255.0 green:250.0/255.0 blue:253.0/255.0 alpha:1.0];
 }
 
++ (UIColor *)ql_shadowColor {
+    return [UIColor colorWithRed:3.0/255.0 green:156.0/255.0 blue:194.0/255.0 alpha:0.31];
+}
+
 @end
