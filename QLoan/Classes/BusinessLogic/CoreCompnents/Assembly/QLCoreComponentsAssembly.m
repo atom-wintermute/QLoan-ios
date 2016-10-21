@@ -12,8 +12,6 @@
 #import "QLBankAuthRequestFactoryImplementation.h"
 #import "QLChallengedNetworkClient.h"
 
-#import "QLSerializer.h"
-
 @implementation QLCoreComponentsAssembly
 
 #pragma mark - Маппинг
@@ -24,6 +22,8 @@
 			{
 				[definition injectProperty:@selector(mappingProvider)
 									  with:[self mappingProvider]];
+				[definition injectProperty:@selector(dateFormatter)
+									  with:[self dateFormatter]];
 			}];
 }
 
@@ -87,6 +87,12 @@
 
 - (QLChallengedNetworkClient *)challengedNetworkClient {
 	return [TyphoonDefinition withClass:[QLChallengedNetworkClient class]];
+}
+
+#pragma mark - Форматтер дат
+
+- (QLDateFormatter *)dateFormatter {
+	return [TyphoonDefinition withClass:[QLDateFormatter class]];
 }
 
 #pragma mark - Хранилище данных

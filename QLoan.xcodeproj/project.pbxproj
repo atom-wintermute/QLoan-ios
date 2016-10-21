@@ -11,6 +11,7 @@
 		9ECC12BE1DB977DB00E33288 /* QLChallengedNetworkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECC12BD1DB977DB00E33288 /* QLChallengedNetworkClient.m */; };
 		9ECC12C21DB9897300E33288 /* NSString+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECC12C11DB9897300E33288 /* NSString+Random.m */; };
 		9ECC12C61DB9932900E33288 /* QLSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECC12C51DB9932900E33288 /* QLSerializer.m */; };
+		9ECC12CA1DBA284300E33288 /* QLDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECC12C91DBA284300E33288 /* QLDateFormatter.m */; };
 		9EFF73911DB3B64C004873A6 /* QLAuthorizationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73901DB3B64C004873A6 /* QLAuthorizationService.m */; };
 		9EFF73941DB3B672004873A6 /* QLRegistrationRequestConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73931DB3B672004873A6 /* QLRegistrationRequestConfiguration.m */; };
 		9EFF73971DB3B870004873A6 /* QLAuthorizationRequestConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF73961DB3B870004873A6 /* QLAuthorizationRequestConfiguration.m */; };
@@ -94,6 +95,8 @@
 		9ECC12C11DB9897300E33288 /* NSString+Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Random.m"; path = "Classes/BusinessLogic/Helpers/Categories/NSString+Random/NSString+Random.m"; sourceTree = "<group>"; };
 		9ECC12C41DB9932900E33288 /* QLSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLSerializer.h; path = Classes/BusinessLogic/CoreCompnents/Serializer/QLSerializer.h; sourceTree = "<group>"; };
 		9ECC12C51DB9932900E33288 /* QLSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLSerializer.m; path = Classes/BusinessLogic/CoreCompnents/Serializer/QLSerializer.m; sourceTree = "<group>"; };
+		9ECC12C81DBA284300E33288 /* QLDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLDateFormatter.h; path = Classes/BusinessLogic/CoreCompnents/DateFormatter/QLDateFormatter.h; sourceTree = "<group>"; };
+		9ECC12C91DBA284300E33288 /* QLDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLDateFormatter.m; path = Classes/BusinessLogic/CoreCompnents/DateFormatter/QLDateFormatter.m; sourceTree = "<group>"; };
 		9EFF738F1DB3B64C004873A6 /* QLAuthorizationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLAuthorizationService.h; path = Classes/BusinessLogic/Services/AuthorizationService/QLAuthorizationService.h; sourceTree = "<group>"; };
 		9EFF73901DB3B64C004873A6 /* QLAuthorizationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLAuthorizationService.m; path = Classes/BusinessLogic/Services/AuthorizationService/QLAuthorizationService.m; sourceTree = "<group>"; };
 		9EFF73921DB3B672004873A6 /* QLRegistrationRequestConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLRegistrationRequestConfiguration.h; path = Classes/BusinessLogic/Services/AuthorizationService/QLRegistrationRequestConfiguration.h; sourceTree = "<group>"; };
@@ -267,6 +270,15 @@
 				9ECC12C51DB9932900E33288 /* QLSerializer.m */,
 			);
 			name = Serializer;
+			sourceTree = "<group>";
+		};
+		9ECC12C71DBA281900E33288 /* DateFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				9ECC12C81DBA284300E33288 /* QLDateFormatter.h */,
+				9ECC12C91DBA284300E33288 /* QLDateFormatter.m */,
+			);
+			name = DateFormatter;
 			sourceTree = "<group>";
 		};
 		9EFF738B1DB3B59C004873A6 /* Classes */ = {
@@ -466,6 +478,7 @@
 		9EFF73D91DB3F832004873A6 /* CoreComponents */ = {
 			isa = PBXGroup;
 			children = (
+				9ECC12C71DBA281900E33288 /* DateFormatter */,
 				9ECC12C31DB9930500E33288 /* Serializer */,
 				9EFF73FA1DB42055004873A6 /* Assembly */,
 				9EFF73F91DB41C7B004873A6 /* Mapper */,
@@ -996,6 +1009,7 @@
 				9EFF74061DB42925004873A6 /* QLTestAssembly.m in Sources */,
 				9EFF73E91DB40EC1004873A6 /* QLNetworkClient.m in Sources */,
 				9EFF73DD1DB3F94C004873A6 /* QLRequestFactory.m in Sources */,
+				9ECC12CA1DBA284300E33288 /* QLDateFormatter.m in Sources */,
 				D8F9D7B21DAFD2FC000371CA /* AppDelegate.m in Sources */,
 				D8F9D7B51DAFD2FC000371CA /* FirstViewController.m in Sources */,
 				9EFF73B11DB3C918004873A6 /* QLUserInfo.m in Sources */,

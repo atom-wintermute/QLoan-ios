@@ -7,16 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "QLMappingProvider.h"
 
 @class QLBorrowerOrder;
+@class QLDateFormatter;
+@class QLMappingProvider;
+@class QLPaymentCompletedRequestConfiguration;
 
 @interface QLSerializer : NSObject
 
 @property (nonatomic, strong) QLMappingProvider *mappingProvider;
+@property (nonatomic, strong) QLDateFormatter *dateFormatter;
 
 - (NSDictionary *)dictionaryFromBorrowerOrder:(QLBorrowerOrder *)borrowerOrder;
 
 - (NSDictionary *)dictionaryFromLenderOrder:(QLLenderOrder *)lenderOrder;
+
+- (NSDictionary *)dictionaryFromPaymentCompleted:(QLPaymentCompletedRequestConfiguration *)configuration;
 
 @end

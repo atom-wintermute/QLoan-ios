@@ -19,6 +19,7 @@
 #import "QLNetworkClient.h"
 #import "QLChallengedNetworkClient.h"
 #import "QLSerializer.h"
+#import "QLDateFormatter.h"
 
 @interface QLCoreComponentsAssembly : TyphoonAssembly
 

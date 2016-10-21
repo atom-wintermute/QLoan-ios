@@ -7,7 +7,12 @@
 //
 
 #import "QLSerializer.h"
+#import "QLMappingProvider.h"
+#import "QLDateFormatter.h"
+
 #import <EKObjectMapping.h>
+
+#import "QLPaymentCompletedRequestConfiguration.h"
 
 @implementation QLSerializer
 
@@ -19,6 +24,14 @@
 - (NSDictionary *)dictionaryFromLenderOrder:(QLLenderOrder *)lenderOrder {
 	return [EKSerializer serializeObject:lenderOrder
 							 withMapping:[self.mappingProvider lenderOrderMapping]];
+}
+
+- (NSDictionary *)dictionaryFromPaymentCompleted:(QLPaymentCompletedRequestConfiguration *)configuration {
+	return @{
+			 @"id" : [NSNumber numberWithLong:configuration.orderId],
+			 @"amount" : [NSNumber numberWithFloat:configuration.amount],
+			 @"date" : [self.dateFormatter stringFromDate:configuration.date]
+			};
 }
 
 @end

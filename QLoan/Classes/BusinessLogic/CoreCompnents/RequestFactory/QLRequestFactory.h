@@ -45,4 +45,18 @@
 
 - (NSURLRequest *)requestForAddingLenderOrder:(NSDictionary *)orderParameters;
 
+#pragma mark - Направление запросов
+
+- (NSURLRequest *)requestForLoanProvision:(NSInteger)orderId;
+
+- (NSURLRequest *)requestForLoanReceipt:(NSInteger)orderId;
+
+- (NSURLRequest *)requestForLoanConfirmation:(NSInteger)orderId;
+
+- (NSURLRequest *)provideLoanRequest:(NSInteger)orderId;
+
+- (NSURLRequest *)requestForOrderDeactivation:(NSInteger)orderId;
+
+- (NSURLRequest *)requestForPaymentCompletion:(NSDictionary *)orderParameters;
+
 @end

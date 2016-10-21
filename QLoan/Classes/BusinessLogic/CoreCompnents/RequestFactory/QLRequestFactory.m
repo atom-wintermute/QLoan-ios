@@ -93,6 +93,43 @@
 						  parameters:orderParameters];
 }
 
+#pragma mark - Направление запросов
+
+- (NSURLRequest *)requestForLoanReceipt:(NSInteger)orderId {
+	NSDictionary *dictionary = @{ @"id" : @(orderId) };
+	return [self putRequestWithPath:@"sendLoanReceiveRequest/"
+						 parameters:dictionary];
+}
+
+- (NSURLRequest *)requestForLoanProvision:(NSInteger)orderId {
+	NSDictionary *dictionary = @{ @"id" : @(orderId) };
+	return [self putRequestWithPath:@"sendLoanProvideRequest/"
+						 parameters:dictionary];
+}
+
+- (NSURLRequest *)provideLoanRequest:(NSInteger)orderId {
+	NSDictionary *dictionary = @{ @"id" : @(orderId) };
+	return [self putRequestWithPath:@"provideLoan/"
+						 parameters:dictionary];
+}
+
+- (NSURLRequest *)requestForLoanConfirmation:(NSInteger)orderId {
+	NSDictionary *dictionary = @{ @"id" : @(orderId) };
+	return [self postRequestWithPath:@"confirmLoan/"
+						  parameters:dictionary];
+}
+
+- (NSURLRequest *)requestForOrderDeactivation:(NSInteger)orderId {
+	NSDictionary *dictionary = @{ @"id" : @(orderId) };
+	return [self postRequestWithPath:@"deactivateOrder/"
+						  parameters:dictionary];
+}
+
+- (NSURLRequest *)requestForPaymentCompletion:(NSDictionary *)orderParameters {
+	return [self postRequestWithPath:@"paymentCompleted/"
+						  parameters:orderParameters];
+}
+
 #pragma mark - Вспомогательные методы
 
 - (NSURLRequest *)getRequestWithPath:(NSString *)path

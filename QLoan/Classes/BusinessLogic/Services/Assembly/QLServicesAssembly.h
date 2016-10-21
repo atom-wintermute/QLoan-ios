@@ -14,6 +14,7 @@
 @class QLBorrowerOrderService;
 @class QLAuthorizationService;
 @class QLLenderOrderService;
+@class QLUserInteractionService;
 
 /**
  Фабрика сервисов
@@ -23,6 +24,8 @@
 - (QLBorrowerOrderService *)borrowerOrderService;
 
 - (QLLenderOrderService *)lenderOrderService;
+
+- (QLUserInteractionService *)interactionService;
 
 - (QLAuthorizationService *)authorizationService;
 
