@@ -8,6 +8,13 @@
 
 #import <Typhoon/Typhoon.h>
 
+@class QLServicesAssembly;
+@class QLRegisterPhoneViewContoller;
+
 @interface QLRegisterPhoneAssembly : TyphoonAssembly
+
+@property (nonatomic, strong, readonly) QLServicesAssembly *serviceAssembly;
+
+- (QLRegisterPhoneViewContoller *)registerPhoneViewController;
 
 @end

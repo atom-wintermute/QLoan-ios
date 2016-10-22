@@ -135,6 +135,7 @@
 		D86147AF1DBAA6620018D19C /* MyOrders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D86147AE1DBAA6620018D19C /* MyOrders.storyboard */; };
 		D86147B31DBAA6A30018D19C /* QLMyOrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86147B21DBAA6A30018D19C /* QLMyOrdersViewController.m */; };
 		D86147B71DBAA6D90018D19C /* QLMyOrdersAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = D86147B61DBAA6D90018D19C /* QLMyOrdersAssembly.m */; };
+		D871285C1DBAE6C400A45405 /* QLVerifyPhoneAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = D871285B1DBAE6C400A45405 /* QLVerifyPhoneAssembly.m */; };
 		D881020D1DBA8EBB0066C442 /* img1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D88101F11DBA8EBB0066C442 /* img1@2x.png */; };
 		D881020E1DBA8EBB0066C442 /* img1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D88101F21DBA8EBB0066C442 /* img1@3x.png */; };
 		D881020F1DBA8EBB0066C442 /* img2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D88101F31DBA8EBB0066C442 /* img2@2x.png */; };
@@ -422,6 +423,8 @@
 		D86147B21DBAA6A30018D19C /* QLMyOrdersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLMyOrdersViewController.m; path = Classes/UserInterface/Controllers/MyOrders/QLMyOrdersViewController.m; sourceTree = "<group>"; };
 		D86147B51DBAA6D90018D19C /* QLMyOrdersAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLMyOrdersAssembly.h; path = Classes/UserInterface/Controllers/MyOrders/Assembly/QLMyOrdersAssembly.h; sourceTree = "<group>"; };
 		D86147B61DBAA6D90018D19C /* QLMyOrdersAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLMyOrdersAssembly.m; path = Classes/UserInterface/Controllers/MyOrders/Assembly/QLMyOrdersAssembly.m; sourceTree = "<group>"; };
+		D871285A1DBAE6C400A45405 /* QLVerifyPhoneAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLVerifyPhoneAssembly.h; path = Classes/UserInterface/Controllers/VerifyPhone/Assembly/QLVerifyPhoneAssembly.h; sourceTree = "<group>"; };
+		D871285B1DBAE6C400A45405 /* QLVerifyPhoneAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLVerifyPhoneAssembly.m; path = Classes/UserInterface/Controllers/VerifyPhone/Assembly/QLVerifyPhoneAssembly.m; sourceTree = "<group>"; };
 		D88101F11DBA8EBB0066C442 /* img1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img1@2x.png"; path = "Resources/Photos/Lend/img1@2x.png"; sourceTree = "<group>"; };
 		D88101F21DBA8EBB0066C442 /* img1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img1@3x.png"; path = "Resources/Photos/Lend/img1@3x.png"; sourceTree = "<group>"; };
 		D88101F31DBA8EBB0066C442 /* img2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img2@2x.png"; path = "Resources/Photos/Lend/img2@2x.png"; sourceTree = "<group>"; };
@@ -1344,6 +1347,15 @@
 			name = Assembly;
 			sourceTree = "<group>";
 		};
+		D87128591DBAE69500A45405 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				D871285A1DBAE6C400A45405 /* QLVerifyPhoneAssembly.h */,
+				D871285B1DBAE6C400A45405 /* QLVerifyPhoneAssembly.m */,
+			);
+			name = Assembly;
+			sourceTree = "<group>";
+		};
 		D88101EE1DBA8E6E0066C442 /* Photos */ = {
 			isa = PBXGroup;
 			children = (
@@ -1519,6 +1531,7 @@
 		D8D626C91DBADC75007FFB3F /* VerifyPhone */ = {
 			isa = PBXGroup;
 			children = (
+				D87128591DBAE69500A45405 /* Assembly */,
 				D8D626CA1DBADC9C007FFB3F /* QLVerifyPhoneViewController.h */,
 				D8D626CB1DBADC9C007FFB3F /* QLVerifyPhoneViewController.m */,
 			);
@@ -1905,6 +1918,7 @@
 				D835BD2B1DB98F7000F2FF0F /* UIColor+QLColor.m in Sources */,
 				D8328F401DBA299300438D4A /* QLBankCardMapperImplementation.m in Sources */,
 				9EFF73B11DB3C918004873A6 /* QLUserInfo.m in Sources */,
+				D871285C1DBAE6C400A45405 /* QLVerifyPhoneAssembly.m in Sources */,
 				D86147A51DBAA0B30018D19C /* QLGetCellFactoryImplementation.m in Sources */,
 				D8328F7E1DBA850000438D4A /* QLLendOrderCell.m in Sources */,
 				D835BD111DB97B0700F2FF0F /* QLProfileAssembly.m in Sources */,

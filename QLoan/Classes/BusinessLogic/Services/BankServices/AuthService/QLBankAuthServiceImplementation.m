@@ -22,7 +22,7 @@
 
 - (void)loginWithLogin:(NSString *)login
               password:(NSString *)password
-            completion:(QLBankAuthLoginCompletion)completion {
+            completion:(QLBankAuthCompletion)completion {
     NSURLRequest *URLRequest = [self.requestFactory requestForLoginWithLogin:login
                                                                     password:password];
     [self.networkClient sendRequest:URLRequest
@@ -39,6 +39,51 @@
                                      [self.storage storeObject:sessionId
                                                         forKey:QLBankSessionIdKey];
                                  }
+                                 run_block_on_main(completion, YES, nil);
+                             } else {
+                                 run_block_on_main(completion, NO, nil);
+                             }
+                         }];
+}
+
+- (void)registerWithPhoneNumber:(NSString *)phoneNumber
+                     completion:(QLBankAuthCompletion)completion {
+    NSURLRequest *URLRequest = [self.requestFactory requestForRegisterWithPhoneNumber:phoneNumber];
+    [self.networkClient sendRequest:URLRequest
+                         completion:^(QLServerResponse *response, NSError *error) {
+                             if (!response.data) {
+                                 run_block_on_main(completion, NO, nil);
+                             }
+                             id responseData = [NSJSONSerialization JSONObjectWithData:response.data
+                                                                               options:kNilOptions
+                                                                                 error:nil];
+                             if (![responseData[QLBankErrorCode] integerValue]) {
+                                 NSString *sessionId = responseData[QLBankSessionId];
+                                 if (sessionId.length) {
+                                     [self.storage storeObject:sessionId
+                                                        forKey:QLBankSessionIdKey];
+                                 }
+                                 run_block_on_main(completion, YES, nil);
+                             } else {
+                                 run_block_on_main(completion, NO, nil);
+                             }
+                         }];
+}
+
+- (void)verifyPhoneNumberWithCode:(NSString *)code
+                       completion:(QLBankAuthCompletion)completion {
+    NSString *sessionId = [self.storage loadObjectForKey:QLBankSessionIdKey];
+    NSURLRequest *URLRequest = [self.requestFactory requestForVerifyWithCode:code
+                                                                   sessionId:sessionId];
+    [self.networkClient sendRequest:URLRequest
+                         completion:^(QLServerResponse *response, NSError *error) {
+                             if (!response.data) {
+                                 run_block_on_main(completion, NO, nil);
+                             }
+                             id responseData = [NSJSONSerialization JSONObjectWithData:response.data
+                                                                               options:kNilOptions
+                                                                                 error:nil];
+                             if (![responseData[QLBankErrorCode] integerValue]) {
                                  run_block_on_main(completion, YES, nil);
                              } else {
                                  run_block_on_main(completion, NO, nil);

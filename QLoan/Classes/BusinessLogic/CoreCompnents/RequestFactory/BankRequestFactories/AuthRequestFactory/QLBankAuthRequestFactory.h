@@ -22,6 +22,11 @@
 - (NSURLRequest *)requestForLoginWithLogin:(NSString *)login
                                   password:(NSString *)password;
 
+- (NSURLRequest *)requestForRegisterWithPhoneNumber:(NSString *)phoneNumber;
+
+- (NSURLRequest *)requestForVerifyWithCode:(NSString *)code
+                                 sessionId:(NSString *)sessionId;
+
 /**
  Запрос на получение данных текущего пользователя
  

@@ -15,6 +15,8 @@
 #import "QLLendAssembly.h"
 #import "QLGetAssembly.h"
 #import "QLMyOrdersAssembly.h"
+#import "QLRegisterPhoneAssembly.h"
+#import "QLVerifyPhoneAssembly.h"
 
 #import <RamblerTyphoonUtils/AssemblyCollector.h>
 
@@ -36,7 +38,9 @@
              [QLProfileAssembly class],
              [QLLendAssembly class],
              [QLGetAssembly class],
-             [QLMyOrdersAssembly class]
+             [QLMyOrdersAssembly class],
+             [QLRegisterPhoneAssembly class],
+             [QLVerifyPhoneAssembly class]
 			 ];
 }
 

@@ -8,6 +8,8 @@
 
 #pragma mark - End-point-ы
 
+extern NSString * const QLBankRegister;
+extern NSString * const QLBankCompleteRegistration;
 extern NSString * const QLBankAuthenticate;
 extern NSString * const QLBankGetUser;
 extern NSString * const QLBankGetBindings;

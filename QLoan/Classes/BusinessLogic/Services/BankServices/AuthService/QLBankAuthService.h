@@ -8,7 +8,7 @@
 
 @class QLBankUserInfo;
 
-typedef void(^QLBankAuthLoginCompletion)(BOOL success, NSError *error);
+typedef void(^QLBankAuthCompletion)(BOOL success, NSError *error);
 typedef void(^QLBankAuthUserDataCompletion)(QLBankUserInfo *userInfo, NSError *error);
 
 /**
@@ -25,7 +25,13 @@ typedef void(^QLBankAuthUserDataCompletion)(QLBankUserInfo *userInfo, NSError *e
  */
 - (void)loginWithLogin:(NSString *)login
               password:(NSString *)password
-            completion:(QLBankAuthLoginCompletion)completion;
+            completion:(QLBankAuthCompletion)completion;
+
+- (void)registerWithPhoneNumber:(NSString *)phoneNumber
+                     completion:(QLBankAuthCompletion)completion;
+
+- (void)verifyPhoneNumberWithCode:(NSString *)code
+                       completion:(QLBankAuthCompletion)completion;
 
 /**
  Получение данных текущего пользователя

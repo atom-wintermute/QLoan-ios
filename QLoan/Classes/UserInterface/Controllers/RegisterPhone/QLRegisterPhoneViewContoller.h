@@ -8,10 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol QLBankAuthService;
+
+// Контроллер экрана ввода телефонного номера для регистрации
 @interface QLRegisterPhoneViewContoller : UIViewController
 
 @property (nonatomic, weak) IBOutlet UITextField *phoneTextField;
 @property (nonatomic, weak) IBOutlet UIButton *getCodeButton;
+
+@property (nonatomic, strong) id<QLBankAuthService> bankAuthService;
 
 - (IBAction)getCodeButtonPressed:(id)sender;
 

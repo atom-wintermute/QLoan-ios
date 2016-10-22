@@ -8,6 +8,10 @@
 
 #import "QLRegisterPhoneViewContoller.h"
 
+#import "QLBankAuthService.h"
+
+static NSString * const QLRegisterVerifyPhoneSegue = @"verifyCodeSegue";
+
 @interface QLRegisterPhoneViewContoller ()
 
 @end
@@ -26,8 +30,14 @@
 #pragma mark - IBActions
 
 - (void)getCodeButtonPressed:(id)sender {
-    [self performSegueWithIdentifier:@"verifyCodeSegue"
-                              sender:self];
+    NSString *phoneNumber = self.phoneTextField.text;
+    [self.bankAuthService registerWithPhoneNumber:phoneNumber
+                                       completion:^(BOOL success, NSError *error) {
+                                           if (success) {
+                                               [self performSegueWithIdentifier:QLRegisterVerifyPhoneSegue
+                                                                         sender:self];
+                                           }
+                                       }];
 }
 
 #pragma mark - Приватные методы

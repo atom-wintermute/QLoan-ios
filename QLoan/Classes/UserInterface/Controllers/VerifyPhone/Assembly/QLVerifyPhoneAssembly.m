@@ -1,20 +1,20 @@
 //
-//  QLRegisterPhoneAssembly.m
+//  QLVerifyPhoneAssembly.m
 //  QLoan
 //
-//  Created by Nikulin Maksim on 21/10/16.
+//  Created by Nikulin Maksim on 22/10/16.
 //  Copyright © 2016 Rambler&Co. All rights reserved.
 //
 
-#import "QLRegisterPhoneAssembly.h"
+#import "QLVerifyPhoneAssembly.h"
 
 #import "QLServicesAssembly.h"
-#import "QLRegisterPhoneViewContoller.h"
+#import "QLVerifyPhoneViewController.h"
 
-@implementation QLRegisterPhoneAssembly
+@implementation QLVerifyPhoneAssembly
 
-- (QLRegisterPhoneViewContoller *)registerPhoneViewController {
-    return [TyphoonDefinition withClass:[QLRegisterPhoneViewContoller class]
+- (QLVerifyPhoneViewController *)verifyPhoneViewController {
+    return [TyphoonDefinition withClass:[QLVerifyPhoneViewController class]
                           configuration:^(TyphoonDefinition *definition) {
                               [definition injectProperty:@selector(bankAuthService)
                                                     with:[self.serviceAssembly bankAuthService]];

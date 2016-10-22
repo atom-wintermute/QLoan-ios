@@ -8,6 +8,8 @@
 
 #import "QLVerifyPhoneViewController.h"
 
+#import "QLBankAuthService.h"
+
 @interface QLVerifyPhoneViewController ()
 
 @end
@@ -20,6 +22,18 @@
     [self.codeTextField becomeFirstResponder];
     [self configureAppearance];
 }
+
+#pragma mark - IBActions
+
+- (void)registerButtonWasPressed:(id)sender {
+    NSString *codeString = self.codeTextField.text;
+    [self.bankAuthService verifyPhoneNumberWithCode:codeString
+                                         completion:^(BOOL success, NSError *error) {
+        
+                                         }];
+}
+
+#pragma mark - Приватные методы
 
 - (void)configureAppearance {
     [self.view layoutIfNeeded];
