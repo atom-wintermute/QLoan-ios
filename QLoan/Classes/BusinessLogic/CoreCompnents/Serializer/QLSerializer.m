@@ -9,6 +9,9 @@
 #import "QLSerializer.h"
 #import "QLMappingProvider.h"
 #import "QLDateFormatter.h"
+#import "QLBorrowerOrder.h"
+#import "QLLenderOrder.h"
+#import "QLRepaymentTypeParser.h"
 
 #import <EKObjectMapping.h>
 
@@ -17,13 +20,25 @@
 @implementation QLSerializer
 
 - (NSDictionary *)dictionaryFromBorrowerOrder:(QLBorrowerOrder *)borrowerOrder {
-	return [EKSerializer serializeObject:borrowerOrder
-							 withMapping:[self.mappingProvider borrowerOrderMapping]];
+	return @{
+			 @"loan_maturity_period" : @(borrowerOrder.loanMaturityPeriod),
+			 @"loan_amount" : @(borrowerOrder.loanAmount),
+			 @"perecentage" : @(borrowerOrder.perecentage),
+			 @"penalty" : @(borrowerOrder.penalty),
+			 @"repayment_type" : [QLRepaymentTypeParser descriptionFromRepaymentType:borrowerOrder.repaymentType],
+			 @"status": @"active"
+			 };
 }
 
 - (NSDictionary *)dictionaryFromLenderOrder:(QLLenderOrder *)lenderOrder {
-	return [EKSerializer serializeObject:lenderOrder
-							 withMapping:[self.mappingProvider lenderOrderMapping]];
+	return @{
+			 @"loan_maturity_period" : @(lenderOrder.loanMaturityPeriod),
+			 @"loan_amount" : @(lenderOrder.loanAmount),
+			 @"perecentage" : @(lenderOrder.perecentage),
+			 @"penalty" : @(lenderOrder.penalty),
+			 @"repayment_type" : [QLRepaymentTypeParser descriptionFromRepaymentType:lenderOrder.repaymentType],
+			 @"status": @"active"
+			 };
 }
 
 - (NSDictionary *)dictionaryFromPaymentCompleted:(QLPaymentCompletedRequestConfiguration *)configuration {

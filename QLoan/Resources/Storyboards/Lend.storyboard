@@ -2,17 +2,18 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="SF-UI-Display-Light.otf">
+            <string>SFUIDisplay-Light</string>
+        </array>
         <array key="SF-UI-Display-Medium.otf">
             <string>SFUIDisplay-Medium</string>
         </array>
         <array key="SF-UI-Display-Regular.otf">
             <string>SFUIDisplay-Regular</string>
-        </array>
-        <array key="SF-UI-Display-Semibold.otf">
-            <string>SFUIDisplay-Semibold</string>
         </array>
     </customFonts>
     <scenes>
@@ -50,6 +51,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
                                 <state key="normal" title="Создать заявку"/>
+                                <connections>
+                                    <segue destination="Ied-7X-s2y" kind="show" id="YP4-cm-XKN"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9yD-Of-Fqz">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -75,10 +79,10 @@
             </objects>
             <point key="canvasLocation" x="423" y="115"/>
         </scene>
-        <!--Create Borrower Order View Controller-->
+        <!--Create Lender Order View Controller-->
         <scene sceneID="Xe6-7D-zFT">
             <objects>
-                <viewController autoresizesArchivedViewToFullSize="NO" id="Ied-7X-s2y" customClass="QLCreateBorrowerOrderViewController" sceneMemberID="viewController">
+                <viewController autoresizesArchivedViewToFullSize="NO" hidesBottomBarWhenPushed="YES" id="Ied-7X-s2y" customClass="QLCreateLenderOrderViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tTf-Hf-HTS"/>
                         <viewControllerLayoutGuide type="bottom" id="GfA-XS-cet"/>
@@ -87,8 +91,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Какую сумму Вы желаете получить?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xZ-YB-Rsy">
-                                <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Какую сумму Вы желаете выдать?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xZ-YB-Rsy">
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Light" family="SF UI Display" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -105,7 +109,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Срок займа" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MTP-Xg-BHi" customClass="QLUnderlinedTextfield">
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Неустойка" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="e31-1j-23N" customClass="QLUnderlinedTextfield">
                                 <nil key="textColor"/>
@@ -154,21 +158,43 @@
                                     <constraint firstAttribute="width" constant="312" id="ROj-Qo-Th3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
-                                <state key="normal" title="Запросить займ">
+                                <state key="normal" title="Предложить займ">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="createLoan:" destination="Ied-7X-s2y" eventType="touchUpInside" id="aFX-eU-W71"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Комиссия банка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ha3-Eg-1Ge">
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы заработаете" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m1m-Ca-GrS">
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4j3-T0-6Bl">
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1500  ₽" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tri-O0-2x7">
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="tri-O0-2x7" secondAttribute="trailing" constant="32" id="0rQ-JW-sbH"/>
                             <constraint firstItem="0oZ-qo-RDa" firstAttribute="top" secondItem="7xZ-YB-Rsy" secondAttribute="bottom" constant="32" id="1JN-Ps-qn9"/>
                             <constraint firstItem="MTP-Xg-BHi" firstAttribute="top" secondItem="bLD-GN-25S" secondAttribute="bottom" constant="32" id="2gV-1W-p9v"/>
                             <constraint firstItem="TL3-3w-Prq" firstAttribute="top" secondItem="WhK-dN-EjX" secondAttribute="bottom" constant="16" id="3Gd-Ga-j7b"/>
-                            <constraint firstItem="GfA-XS-cet" firstAttribute="top" secondItem="ed8-5i-dvA" secondAttribute="bottom" constant="18" id="7Vd-iZ-mwa"/>
+                            <constraint firstItem="tri-O0-2x7" firstAttribute="centerY" secondItem="m1m-Ca-GrS" secondAttribute="centerY" id="51U-Sg-mro"/>
                             <constraint firstItem="TL3-3w-Prq" firstAttribute="leading" secondItem="sNo-WE-Vla" secondAttribute="leading" constant="32" id="8ph-Tp-XGW"/>
+                            <constraint firstItem="Ha3-Eg-1Ge" firstAttribute="leading" secondItem="sNo-WE-Vla" secondAttribute="leading" constant="32" id="Afo-Hb-aIg"/>
                             <constraint firstItem="UJK-sj-iXa" firstAttribute="centerY" secondItem="TL3-3w-Prq" secondAttribute="centerY" id="CG4-ej-gMn"/>
                             <constraint firstAttribute="trailing" secondItem="bLD-GN-25S" secondAttribute="trailing" constant="32" id="JDD-GO-Uhd"/>
                             <constraint firstItem="4Tx-Da-TbI" firstAttribute="trailing" secondItem="e31-1j-23N" secondAttribute="trailing" id="Jn2-3W-OvS"/>
@@ -177,19 +203,25 @@
                             <constraint firstItem="WhK-dN-EjX" firstAttribute="leading" secondItem="sNo-WE-Vla" secondAttribute="leading" constant="32" id="LOg-bT-xwb"/>
                             <constraint firstItem="e31-1j-23N" firstAttribute="leading" secondItem="sNo-WE-Vla" secondAttribute="leading" constant="32" id="LcN-02-K7f"/>
                             <constraint firstItem="BLl-e1-X7J" firstAttribute="top" secondItem="TL3-3w-Prq" secondAttribute="bottom" constant="8" id="Mnz-KV-Wwe"/>
+                            <constraint firstItem="4j3-T0-6Bl" firstAttribute="centerY" secondItem="Ha3-Eg-1Ge" secondAttribute="centerY" id="OBm-Dx-zCb"/>
                             <constraint firstItem="UJK-sj-iXa" firstAttribute="trailing" secondItem="e31-1j-23N" secondAttribute="trailing" id="SLW-Jg-b6c"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="ed8-5i-dvA" secondAttribute="bottom" constant="18" id="UFT-Ea-ccs"/>
                             <constraint firstItem="bLD-GN-25S" firstAttribute="leading" secondItem="sNo-WE-Vla" secondAttribute="leading" constant="32" id="UOE-Xf-aLx"/>
                             <constraint firstItem="BLl-e1-X7J" firstAttribute="leading" secondItem="sNo-WE-Vla" secondAttribute="leading" constant="32" id="WMU-dK-D4V"/>
                             <constraint firstItem="ed8-5i-dvA" firstAttribute="centerX" secondItem="sNo-WE-Vla" secondAttribute="centerX" id="Xmz-uS-FEN"/>
                             <constraint firstItem="7xZ-YB-Rsy" firstAttribute="top" secondItem="tTf-Hf-HTS" secondAttribute="bottom" constant="20" id="ZXc-qr-V5c"/>
                             <constraint firstItem="0oZ-qo-RDa" firstAttribute="leading" secondItem="sNo-WE-Vla" secondAttribute="leading" constant="32" id="bhJ-Oq-VE7"/>
+                            <constraint firstItem="m1m-Ca-GrS" firstAttribute="leading" secondItem="sNo-WE-Vla" secondAttribute="leading" constant="32" id="brU-D8-XVl"/>
                             <constraint firstItem="MTP-Xg-BHi" firstAttribute="leading" secondItem="sNo-WE-Vla" secondAttribute="leading" constant="32" id="e6E-Tm-6aY"/>
                             <constraint firstAttribute="trailing" secondItem="7xZ-YB-Rsy" secondAttribute="trailing" constant="32" id="efM-bY-eHI"/>
                             <constraint firstAttribute="trailing" secondItem="e31-1j-23N" secondAttribute="trailing" constant="32" id="fUG-du-89G"/>
+                            <constraint firstAttribute="trailing" secondItem="4j3-T0-6Bl" secondAttribute="trailing" constant="32" id="nT9-6J-IfV"/>
                             <constraint firstItem="e31-1j-23N" firstAttribute="top" secondItem="MTP-Xg-BHi" secondAttribute="bottom" constant="32" id="ndC-pw-Wba"/>
                             <constraint firstAttribute="trailing" secondItem="MTP-Xg-BHi" secondAttribute="trailing" constant="32" id="pAx-br-ihl"/>
                             <constraint firstItem="bLD-GN-25S" firstAttribute="top" secondItem="0oZ-qo-RDa" secondAttribute="bottom" constant="32" id="pJF-jL-u2o"/>
                             <constraint firstItem="4Tx-Da-TbI" firstAttribute="centerY" secondItem="BLl-e1-X7J" secondAttribute="centerY" id="pqu-Fu-qeH"/>
+                            <constraint firstItem="m1m-Ca-GrS" firstAttribute="top" secondItem="Ha3-Eg-1Ge" secondAttribute="bottom" constant="8" id="tMh-Cg-vUL"/>
+                            <constraint firstItem="Ha3-Eg-1Ge" firstAttribute="top" secondItem="BLl-e1-X7J" secondAttribute="bottom" constant="25" id="wDU-Mo-JW4"/>
                             <constraint firstAttribute="trailing" secondItem="0oZ-qo-RDa" secondAttribute="trailing" constant="32" id="zrh-hI-OjH"/>
                         </constraints>
                     </view>

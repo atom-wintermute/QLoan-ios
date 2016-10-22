@@ -5,14 +5,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="SF-UI-Display-Light.otf">
+            <string>SFUIDisplay-Light</string>
+        </array>
         <array key="SF-UI-Display-Medium.otf">
             <string>SFUIDisplay-Medium</string>
         </array>
         <array key="SF-UI-Display-Regular.otf">
             <string>SFUIDisplay-Regular</string>
-        </array>
-        <array key="SF-UI-Display-Semibold.otf">
-            <string>SFUIDisplay-Semibold</string>
         </array>
     </customFonts>
     <scenes>
@@ -81,7 +81,7 @@
         <!--Create Borrower Order View Controller-->
         <scene sceneID="YUG-jp-ZIZ">
             <objects>
-                <viewController autoresizesArchivedViewToFullSize="NO" id="DEy-KW-oYb" customClass="QLCreateBorrowerOrderViewController" sceneMemberID="viewController">
+                <viewController autoresizesArchivedViewToFullSize="NO" hidesBottomBarWhenPushed="YES" id="DEy-KW-oYb" customClass="QLCreateBorrowerOrderViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fcm-R0-dJK"/>
                         <viewControllerLayoutGuide type="bottom" id="eRD-Og-yU0"/>
@@ -91,7 +91,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Какую сумму Вы желаете получить?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIp-1b-kkC">
-                                <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Light" family="SF UI Display" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -178,6 +178,7 @@
                             <constraint firstItem="yHy-6E-KDe" firstAttribute="top" secondItem="gvs-ji-Lz7" secondAttribute="bottom" constant="8" id="LPj-ls-HUa"/>
                             <constraint firstItem="gvs-ji-Lz7" firstAttribute="top" secondItem="be2-ua-5o9" secondAttribute="bottom" constant="16" id="PeN-Az-l0J"/>
                             <constraint firstItem="yjN-Lf-V4C" firstAttribute="top" secondItem="fdF-HY-B9Q" secondAttribute="bottom" constant="32" id="Roh-zn-KdG"/>
+                            <constraint firstAttribute="bottom" secondItem="jE2-3Y-YAR" secondAttribute="bottom" constant="18" id="SEy-Mq-nNh"/>
                             <constraint firstItem="gvs-ji-Lz7" firstAttribute="leading" secondItem="fW7-qr-MDF" secondAttribute="leading" constant="32" id="Wff-tG-pu5"/>
                             <constraint firstItem="fdF-HY-B9Q" firstAttribute="top" secondItem="cIp-1b-kkC" secondAttribute="bottom" constant="32" id="WkQ-yn-J5i"/>
                             <constraint firstItem="mz8-hX-3MJ" firstAttribute="trailing" secondItem="6zD-cQ-TwW" secondAttribute="trailing" id="YGV-n5-1rX"/>
@@ -192,7 +193,6 @@
                             <constraint firstItem="6zD-cQ-TwW" firstAttribute="top" secondItem="ibl-hd-Yul" secondAttribute="bottom" constant="32" id="rWN-vQ-BZv"/>
                             <constraint firstAttribute="trailing" secondItem="cIp-1b-kkC" secondAttribute="trailing" constant="32" id="y1r-ln-rJ2"/>
                             <constraint firstItem="yjN-Lf-V4C" firstAttribute="leading" secondItem="fW7-qr-MDF" secondAttribute="leading" constant="32" id="yPu-07-U13"/>
-                            <constraint firstItem="eRD-Og-yU0" firstAttribute="top" secondItem="jE2-3Y-YAR" secondAttribute="bottom" constant="18" id="z1n-1P-s7w"/>
                             <constraint firstItem="jE2-3Y-YAR" firstAttribute="centerX" secondItem="fW7-qr-MDF" secondAttribute="centerX" id="zJw-ej-bPK"/>
                         </constraints>
                     </view>

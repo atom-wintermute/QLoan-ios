@@ -1,35 +1,34 @@
 //
-//  CreateOrderViewController.m
+//  QLCreateLenderOrderViewController.m
 //  QLoan
 //
-//  Created by m.rakhmanov on 21.10.16.
+//  Created by m.rakhmanov on 22.10.16.
 //  Copyright © 2016 Rambler&Co. All rights reserved.
 //
 
-#import "QLCreateBorrowerOrderViewController.h"
+#import "QLCreateLenderOrderViewController.h"
 #import "QLBorrowerOrderService.h"
 
 #import "QLBorrowerOrder.h"
 
-@interface QLCreateBorrowerOrderViewController ()
+@interface QLCreateLenderOrderViewController ()
 
 @property (nonatomic, assign) BOOL requestIsBeingCreated;
 
 @end
 
-@implementation QLCreateBorrowerOrderViewController
+@implementation QLCreateLenderOrderViewController
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	[self configureTextfieldDelegate];
 	
-	self.title = @"Получить займ";
+	self.title = @"Выдать займ";
 	
 	self.monthlyCheckbox.hidden = NO;
 	self.onceCheckbox.hidden = YES;
 	
 	self.requestIsBeingCreated = NO;
-	[self.view layoutIfNeeded];
 }
 
 - (IBAction)createLoan:(UIButton *)sender {
