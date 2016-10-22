@@ -98,14 +98,16 @@
 		self.requestIsBeingCreated = NO;
 		UIAlertController *controller;
 		if (success) {
-			controller = [UIAlertController successAlertControllerWithTitle:@"Заявка успешно создана"];
+			[self.tabBarController setSelectedIndex:0];
+			
 		} else {
 			controller = [UIAlertController errorAlertControllerWithTitle:@"Не удалось создать заявку"];
+			[self presentViewController:controller
+							   animated:YES
+							 completion:nil];
 		}
 		
-		[self presentViewController:controller
-						   animated:YES
-						 completion:nil];
+		
 	};
 	
 	[self.lenderOrderService addLenderOrder:order
