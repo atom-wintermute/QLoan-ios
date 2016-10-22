@@ -29,7 +29,8 @@
         cellObject.percentString = [NSString stringWithFormat:@"%d.%d%@ в месяц", (int)percent1, (int)percent2, percentSymbol];
         
         NSUInteger sum1 = arc4random_uniform(20);
-        cellObject.sumString = [NSString stringWithFormat:@"%d ₽ /", (int)sum1 * 1000];
+        NSString *formattedString = [QLMoneyFormatter numberStringForMoneyFromValue:@(sum1 * 1000)];
+        cellObject.sumString = [NSString stringWithFormat:@"%@ ₽ /", formattedString];
         
         [cellObjects addObject:cellObject];
     }
@@ -47,7 +48,8 @@
 		
 		cellObject.photoNameString = [NSString stringWithFormat:@"img_%d", (int)orderInfo.order.lenderId % 34];
 		cellObject.ratingString = [NSString stringWithFormat:@"%ld", (long)orderInfo.user.rating];
-		cellObject.sumString = [NSString stringWithFormat:@"%ld ₽", (long)orderInfo.order.loanAmount];
+        NSString *formattedString = [QLMoneyFormatter numberStringForMoneyFromValue:@((long)orderInfo.order.loanAmount)];
+        cellObject.sumString = [NSString stringWithFormat:@"%@ ₽", formattedString];
 		cellObject.percentString = [NSString stringWithFormat:@"%d%% в месяц", (int)orderInfo.order.percentage];
 		
 		NSMutableString *name = [orderInfo.user.lastName mutableCopy];

@@ -29,7 +29,8 @@
         cellObject.percentString = [NSString stringWithFormat:@"%d.%d%@ в месяц", (int)percent1, (int)percent2, percentSymbol];
         
         NSUInteger sum1 = arc4random_uniform(20);
-        cellObject.sumString = [NSString stringWithFormat:@"%d ₽ /", (int)sum1 * 1000];
+        NSString *formattedString = [QLMoneyFormatter numberStringForMoneyFromValue:@(sum1 * 1000)];
+        cellObject.sumString = [NSString stringWithFormat:@"%@ ₽ /", formattedString];
         
         [cellObjects addObject:cellObject];
     }

@@ -26,14 +26,15 @@
         cellObject.percentString = [NSString stringWithFormat:@"%d.%d%@ в месяц", (int)percent1, (int)percent2, percentSymbol];
         
         NSUInteger sum1 = arc4random_uniform(20);
-        cellObject.sumString = [NSString stringWithFormat:@"%d ₽ /", (int)sum1 * 1000];
+        NSString *formattedString = [QLMoneyFormatter numberStringForMoneyFromValue:@(sum1 * 1000)];
+        cellObject.sumString = [NSString stringWithFormat:@"%@ ₽ /", formattedString];
         
         cellObject.nameString = @"Олег Евгеньевич Д.";
         
         NSUInteger type = arc4random_uniform(3);
         switch (type) {
             case 0:
-                cellObject.statusString = @"Открыта";
+                cellObject.statusString = @"Запрос";
                 cellObject.showCheckMark = NO;
                 break;
             case 1:
