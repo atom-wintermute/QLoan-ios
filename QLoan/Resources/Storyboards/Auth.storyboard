@@ -21,7 +21,7 @@
             <objects>
                 <navigationController id="U8e-nV-q2t" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1E2-69-ZUO">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="1E2-69-ZUO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -56,13 +56,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="+ 7 (123) 123 12 12" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dkk-7Y-MaY">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+7" placeholder="+ 7 (123) 123 12 12" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dkk-7Y-MaY">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="136" id="CMD-cw-e4Y"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad"/>
                                 <connections>
                                     <action selector="phoneTextFieldValueChanged:" destination="PdM-yB-nyz" eventType="editingChanged" id="a16-TX-gAI"/>
                                     <outlet property="delegate" destination="PdM-yB-nyz" id="eag-4j-GYP"/>
@@ -93,12 +93,12 @@
                             <constraint firstItem="D4M-UK-juc" firstAttribute="leading" secondItem="B2Q-Du-b8B" secondAttribute="leading" constant="22" id="5YC-8c-BTq"/>
                             <constraint firstItem="Vbl-jv-RxD" firstAttribute="centerX" secondItem="B2Q-Du-b8B" secondAttribute="centerX" id="5q7-VG-rA7"/>
                             <constraint firstItem="4iE-Pz-UHB" firstAttribute="top" secondItem="Dkk-7Y-MaY" secondAttribute="bottom" constant="8" id="6Jh-uF-DmI"/>
+                            <constraint firstItem="AUx-dG-CbR" firstAttribute="top" secondItem="luf-yi-Txu" secondAttribute="bottom" id="7RE-lV-3sh"/>
                             <constraint firstItem="luf-yi-Txu" firstAttribute="leading" secondItem="B2Q-Du-b8B" secondAttribute="leading" id="DQd-Zz-KjD"/>
                             <constraint firstAttribute="trailing" secondItem="D4M-UK-juc" secondAttribute="trailing" constant="22" id="Djj-V1-seP"/>
                             <constraint firstItem="4iE-Pz-UHB" firstAttribute="leading" secondItem="B2Q-Du-b8B" secondAttribute="leading" constant="60" id="Dob-1r-4aX"/>
                             <constraint firstItem="Dkk-7Y-MaY" firstAttribute="top" secondItem="D4M-UK-juc" secondAttribute="bottom" constant="56" id="JXw-g5-8QX"/>
                             <constraint firstItem="Dkk-7Y-MaY" firstAttribute="centerX" secondItem="B2Q-Du-b8B" secondAttribute="centerX" id="LHq-AC-S5x"/>
-                            <constraint firstItem="luf-yi-Txu" firstAttribute="top" secondItem="4iE-Pz-UHB" secondAttribute="bottom" constant="120" id="Tey-rk-hOc"/>
                             <constraint firstAttribute="trailing" secondItem="4iE-Pz-UHB" secondAttribute="trailing" constant="60" id="gsm-WM-9Y2"/>
                             <constraint firstAttribute="trailing" secondItem="luf-yi-Txu" secondAttribute="trailing" id="sCK-jE-zeu"/>
                             <constraint firstItem="D4M-UK-juc" firstAttribute="top" secondItem="Vbl-jv-RxD" secondAttribute="bottom" constant="16" id="wB2-rG-ypn"/>
@@ -108,6 +108,7 @@
                         <barButtonItem key="backBarButtonItem" title="Назад" id="rzR-XY-WKs"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="bottomConstraint" destination="7RE-lV-3sh" id="vgP-Wx-SQl"/>
                         <outlet property="getCodeButton" destination="luf-yi-Txu" id="NWc-vn-10g"/>
                         <outlet property="phoneTextField" destination="Dkk-7Y-MaY" id="cEf-j9-2Q3"/>
                         <segue destination="Xmf-9L-L2d" kind="show" identifier="verifyCodeSegue" id="t0A-ey-ynW"/>
