@@ -56,7 +56,13 @@ static NSString * const QLAuthRegisterSegue = @"registerSegue";
 }
 
 - (void)loginButtonWasPressed:(id)sender {
-    NSString *loginString = self.loginTextField.text;
+	
+	if (self.loginTextField.text.length < 3 || self.passwordTextField.text.length == 0) {
+		return;
+	}
+	
+	NSString *phoneNumberWithoutPrefix = [self.loginTextField.text substringFromIndex:3];
+    NSString *loginString = phoneNumberWithoutPrefix;
     NSString *passwordString = self.passwordTextField.text;
 	
 	QLBooleanCompletion localAuthCompletion = ^(BOOL success, NSError *error) {
@@ -70,7 +76,7 @@ static NSString * const QLAuthRegisterSegue = @"registerSegue";
 	QLBankAuthCompletion bankAuthLoginCompletion = ^(BOOL success, NSError *error) {
 		if (success) {
 			QLAuthorizationRequestConfiguration *configuration = [[QLAuthorizationRequestConfiguration alloc]
-																  initWithLogin:self.loginTextField.text
+																  initWithLogin:phoneNumberWithoutPrefix
 																  password:self.passwordTextField.text];
 			
 			[self.authorizationService authorizeWithConfiguration:configuration
