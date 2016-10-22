@@ -10,10 +10,12 @@
 
 @protocol QLLendCellFactory;
 
+@class QLBorrowerOrderService;
+
 @interface QLLendViewController : UIViewController
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
-
+@property (strong, nonatomic) QLBorrowerOrderService *borrowerOrderService;
 @property (nonatomic, strong) id<QLLendCellFactory> cellFactory;
 
 @end

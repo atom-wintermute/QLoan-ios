@@ -9,7 +9,7 @@
 #import "QLLendAssembly.h"
 
 #import "QLLendViewController.h"
-
+#import "QLServicesAssembly.h"
 #import "QLLendCellFactoryImplementation.h"
 
 @implementation QLLendAssembly
@@ -19,6 +19,8 @@
                           configuration:^(TyphoonDefinition *definition) {
                               [definition injectProperty:@selector(cellFactory)
                                                     with:[self lendCellFactory]];
+							  [definition injectProperty:@selector(borrowerOrderService)
+													with:[self.serviceAssembly borrowerOrderService]];
                           }];
 }
 

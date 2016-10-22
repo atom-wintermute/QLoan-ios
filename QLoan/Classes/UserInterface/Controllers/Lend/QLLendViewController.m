@@ -7,7 +7,7 @@
 //
 
 #import "QLLendViewController.h"
-
+#import "QLBorrowerOrderService.h"
 #import "QLLendCellFactory.h"
 
 #import "QLLendDataDisplayManager.h"
@@ -24,6 +24,11 @@
     [super viewDidLoad];
     
     [self configureView];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+	[super viewDidAppear:animated];
+	[self requestDataFromServer];
 }
 
 - (void)configureView {
@@ -44,6 +49,20 @@
 																			target:nil
 																			action:nil];
     [self.tableView reloadData];
+}
+
+#pragma mark - Получение данных с сервера
+
+- (void)requestDataFromServer {
+	
+	QLBorrowersOrderCompletion completion = ^(NSArray<QLBorrowerOrder *> *orders, NSError *error) {
+		
+	};
+	
+	[self.borrowerOrderService borrowerOrdersWithPage:0
+										   sortMethod:QLSortByRating
+											ascending:YES
+										   completion:completion];
 }
 
 @end

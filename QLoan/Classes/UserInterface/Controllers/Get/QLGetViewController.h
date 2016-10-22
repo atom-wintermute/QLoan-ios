@@ -10,6 +10,8 @@
 
 @protocol QLGetCellFactory;
 
+@class QLBorrowerOrderService;
+
 /**
  Контроллер получения займа
  */

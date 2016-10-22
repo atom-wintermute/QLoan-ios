@@ -15,6 +15,6 @@
 
 @property (nonatomic, strong, readonly) QLServicesAssembly *serviceAssembly;
 
-- (QLGetViewController *)lendViewController;
+- (QLGetViewController *)getViewController;
 
 @end

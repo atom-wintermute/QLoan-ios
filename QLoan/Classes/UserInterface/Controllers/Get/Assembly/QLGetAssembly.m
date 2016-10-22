@@ -9,7 +9,7 @@
 #import "QLGetAssembly.h"
 
 #import "QLGetViewController.h"
-
+#import "QLServicesAssembly.h"
 #import "QLGetCellFactoryImplementation.h"
 
 @implementation QLGetAssembly
