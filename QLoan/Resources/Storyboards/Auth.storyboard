@@ -21,7 +21,7 @@
             <objects>
                 <navigationController id="U8e-nV-q2t" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1E2-69-ZUO">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="1E2-69-ZUO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -111,7 +111,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sB5-jY-bwO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1305" y="-640"/>
+            <point key="canvasLocation" x="1273" y="119"/>
         </scene>
         <!--Verify Phone View Controller-->
         <scene sceneID="rEd-Hn-Na1">
@@ -192,11 +192,12 @@
                     <connections>
                         <outlet property="codeTextField" destination="Ia9-Zg-ABd" id="FW3-Kx-BSi"/>
                         <outlet property="registerButton" destination="BwI-FQ-KTo" id="hBe-co-CSg"/>
+                        <segue destination="E90-cf-Cju" kind="show" identifier="registerSegue" id="jIO-CB-BmD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3q2-nZ-hoX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2081" y="-640"/>
+            <point key="canvasLocation" x="2052" y="119"/>
         </scene>
         <!--Auth View Controller-->
         <scene sceneID="7Fn-9K-gLS">
@@ -375,7 +376,6 @@
                         <outlet property="loginButton" destination="rcf-7i-qZT" id="1oC-FF-r3P"/>
                         <outlet property="loginTextField" destination="g4Q-fr-eK8" id="OJa-KL-07F"/>
                         <outlet property="passwordTextField" destination="Z29-Gw-Ixf" id="lwV-Fk-SDf"/>
-                        <segue destination="E90-cf-Cju" kind="show" identifier="" id="BIH-wM-I05"/>
                         <segue destination="PdM-yB-nyz" kind="show" identifier="registerSegue" id="Yon-2G-gRn"/>
                     </connections>
                 </viewController>
@@ -397,7 +397,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9dc-uF-rv6" userLabel="contentViewContainer">
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Регистрация" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIr-kG-uIj">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Регистрация, шаг 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIr-kG-uIj">
                                         <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -585,7 +585,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gQN-f2-cbm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1304.8" y="119.1904047976012"/>
+            <point key="canvasLocation" x="2866" y="118"/>
         </scene>
     </scenes>
     <resources>

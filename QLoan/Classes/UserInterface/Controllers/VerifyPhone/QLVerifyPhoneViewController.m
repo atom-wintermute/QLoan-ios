@@ -10,6 +10,8 @@
 
 #import "QLBankAuthService.h"
 
+static NSString * const QLVerifyRegisterSegue = @"registerSegue";
+
 @interface QLVerifyPhoneViewController ()
 
 @end
@@ -29,7 +31,10 @@
     NSString *codeString = self.codeTextField.text;
     [self.bankAuthService verifyPhoneNumberWithCode:codeString
                                          completion:^(BOOL success, NSError *error) {
-        
+                                             if (success) {
+                                                 [self performSegueWithIdentifier:QLVerifyRegisterSegue
+                                                                           sender:self];
+                                             }
                                          }];
 }
 
