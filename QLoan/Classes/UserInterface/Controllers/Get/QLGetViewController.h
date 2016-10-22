@@ -10,7 +10,8 @@
 
 @protocol QLGetCellFactory;
 
-@class QLBorrowerOrderService;
+@class QLLenderOrderService;
+@class QLUserInfoService;
 
 /**
  Контроллер получения займа
@@ -20,5 +21,9 @@
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 
 @property (nonatomic, strong) id<QLGetCellFactory> cellFactory;
+
+@property (nonatomic, strong) QLLenderOrderService *lenderOrderService;
+
+@property (nonatomic, strong) QLUserInfoService *userInfoService;
 
 @end

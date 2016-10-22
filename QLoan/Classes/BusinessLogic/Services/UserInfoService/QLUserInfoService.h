@@ -16,6 +16,7 @@
 @class QLSerializer;
 
 typedef void(^QLUserInfoCompletionBlock)(QLUserInfo *info, NSError *error);
+typedef void(^QLUserInfosCompletionBlock)(NSArray<QLUserInfo *> *infos, NSError *error);
 
 @interface QLUserInfoService : NSObject
 
@@ -35,5 +36,8 @@ typedef void(^QLUserInfoCompletionBlock)(QLUserInfo *info, NSError *error);
  */
 - (void)infoForUserWithId:(NSInteger)userId
 			   completion:(QLUserInfoCompletionBlock)completion;
+
+- (void)infoForUserWithIds:(NSArray *)userIds
+				completion:(QLUserInfosCompletionBlock)completion;
 
 @end

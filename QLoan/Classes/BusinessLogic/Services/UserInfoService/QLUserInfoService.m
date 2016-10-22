@@ -55,4 +55,24 @@
 						 completion:networkCompletion];
 }
 
+- (void)infoForUserWithIds:(NSArray *)userIds
+				completion:(QLUserInfosCompletionBlock)completion {
+	NSURLRequest *request = [self.requestFactory requestForUsersWithIds:userIds];
+	__weak typeof (self) weakSelf = self;
+	
+	QLNetworkCompletion networkCompletion = ^(QLServerResponse *response, NSError *error) {
+		__strong typeof (self) strongSelf = weakSelf;
+		if (error == nil) {
+			id responseObject = [strongSelf.jsonSerializer jsonObjectFromResponse:response];
+			NSArray *infos = [strongSelf.mapper mapUserInfosFromResponseObject:responseObject];
+			run_block_on_main(completion, infos, nil);
+		} else {
+			run_block_on_main(completion, nil, error);
+		}
+	};
+	
+	[self.networkClient sendRequest:request
+						 completion:networkCompletion];
+}
+
 @end

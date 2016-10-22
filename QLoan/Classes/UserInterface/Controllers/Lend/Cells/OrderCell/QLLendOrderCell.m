@@ -54,7 +54,8 @@ static CGFloat const QLLendOrderCellHeight = 64.0;
     self.ratingLabel.text = object.ratingString;
     self.sumLabel.text = object.sumString;
     self.percentLabel.text = object.percentString;
-    
+	self.nameLabel.text = object.nameString;
+	
     return YES;
 }
 

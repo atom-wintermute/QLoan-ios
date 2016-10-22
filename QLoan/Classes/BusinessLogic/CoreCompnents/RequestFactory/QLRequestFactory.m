@@ -99,9 +99,25 @@
 }
 
 - (NSURLRequest *)requestForUserWithId:(NSUInteger)userId {
-	NSDictionary *dictionary = @{ @"id": @(userId) };
-	return [self getRequestWithPath:@"get_user_by_id/"
-						 parameters:dictionary];
+	NSString* stringId = [NSString stringWithFormat:@"users/%d", (int)userId];
+	return [self getRequestWithPath:stringId
+						 parameters:nil];
+}
+
+- (NSURLRequest *)requestForUsersWithIds:(NSArray <NSNumber *> *)ids {
+
+	NSMutableString *mutableString = [@"users?" mutableCopy];
+	for (NSUInteger index = 0; index < ids.count; index++) {
+		NSNumber *numberId = ids[index];
+		NSString* stringId = [NSString stringWithFormat:@"users_ids[]=%d", (int)[numberId integerValue]];
+		[mutableString appendString:stringId];
+		if (index != ids.count - 1) {
+			[mutableString appendString:@"&"];
+		}
+	}
+	
+	return [self getRequestWithPath:[mutableString copy]
+						 parameters:nil];
 }
 
 #pragma mark - Заявки Заемщика
