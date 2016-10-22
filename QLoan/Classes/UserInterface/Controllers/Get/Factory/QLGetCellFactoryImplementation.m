@@ -7,7 +7,7 @@
 //
 
 #import "QLGetCellFactoryImplementation.h"
-
+#import "QLOrderInfo.h"
 #import "QLLendOrderCellObject.h"
 
 @implementation QLGetCellFactoryImplementation
@@ -35,6 +35,23 @@
     }
     
     return [cellObjects copy];
+}
+
+- (NSArray *)cellObjectsFromOrderInfos:(NSArray *)orderInfos {
+	NSMutableArray *cellObjects = [NSMutableArray new];
+	NSUInteger index = 0;
+	
+	for (QLOrderInfo *orderInfo in orderInfos) {
+		QLLendOrderCellObject *cellObject = [QLLendOrderCellObject new];
+		cellObject.photoNameString = [NSString stringWithFormat:@"img_%d", (int)index];
+		cellObject.ratingString = [NSString stringWithFormat:@"%ld", (long)orderInfo.user.rating];
+		cellObject.sumString = [NSString stringWithFormat:@"%ld ₽", (long)orderInfo.order.loanAmount];
+		cellObject.percentString = [NSString stringWithFormat:@"%f%@ в месяц", orderInfo.order.percentage];
+		
+		[cellObjects addObject:cellObject];
+	}
+	
+	return [cellObjects copy];
 }
 
 @end

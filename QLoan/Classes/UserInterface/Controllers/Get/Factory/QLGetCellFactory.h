@@ -9,8 +9,12 @@
 /**
  Протокол фабрики ячеек для экрана получения займа
  */
+@class QLOrderInfo;
+
 @protocol QLGetCellFactory <NSObject>
 
 - (NSArray *)cellObjects;
+
+- (NSArray *)cellObjectsFromOrderInfos:(NSArray *)orderInfos;
 
 @end

@@ -12,6 +12,7 @@
 		9E2F66FE1DBB5AB600081C05 /* QLCreateLenderOrderAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E2F66FD1DBB5AB600081C05 /* QLCreateLenderOrderAssembly.m */; };
 		9E2F67021DBB62F100081C05 /* QLRepaymentTypeParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E2F67011DBB62F100081C05 /* QLRepaymentTypeParser.m */; };
 		9E2F67061DBB6DCC00081C05 /* QLOrderStatusParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E2F67051DBB6DCC00081C05 /* QLOrderStatusParser.m */; };
+		9E64B7F91DBB90580033969D /* QLOrderInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E64B7F81DBB90580033969D /* QLOrderInfo.m */; };
 		9ECC12BE1DB977DB00E33288 /* QLChallengedNetworkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECC12BD1DB977DB00E33288 /* QLChallengedNetworkClient.m */; };
 		9ECC12C61DB9932900E33288 /* QLSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECC12C51DB9932900E33288 /* QLSerializer.m */; };
 		9ECC12CA1DBA284300E33288 /* QLDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECC12C91DBA284300E33288 /* QLDateFormatter.m */; };
@@ -227,6 +228,8 @@
 		9E2F67011DBB62F100081C05 /* QLRepaymentTypeParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLRepaymentTypeParser.m; path = Classes/BusinessLogic/Helpers/RepaymentTypeParser/QLRepaymentTypeParser.m; sourceTree = "<group>"; };
 		9E2F67041DBB6DCC00081C05 /* QLOrderStatusParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLOrderStatusParser.h; path = Classes/BusinessLogic/Helpers/OrderStatusParser/QLOrderStatusParser.h; sourceTree = "<group>"; };
 		9E2F67051DBB6DCC00081C05 /* QLOrderStatusParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLOrderStatusParser.m; path = Classes/BusinessLogic/Helpers/OrderStatusParser/QLOrderStatusParser.m; sourceTree = "<group>"; };
+		9E64B7F71DBB90580033969D /* QLOrderInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLOrderInfo.h; path = Classes/BusinessLogic/Entity/OrderInfo/QLOrderInfo.h; sourceTree = "<group>"; };
+		9E64B7F81DBB90580033969D /* QLOrderInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLOrderInfo.m; path = Classes/BusinessLogic/Entity/OrderInfo/QLOrderInfo.m; sourceTree = "<group>"; };
 		9ECC12B21DB95F4100E33288 /* QLSessionCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLSessionCredentials.h; path = Classes/BusinessLogic/Services/AuthorizationService/SessionCredentials/QLSessionCredentials.h; sourceTree = "<group>"; };
 		9ECC12B31DB95F4100E33288 /* QLSessionCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLSessionCredentials.m; path = Classes/BusinessLogic/Services/AuthorizationService/SessionCredentials/QLSessionCredentials.m; sourceTree = "<group>"; };
 		9ECC12B91DB966D500E33288 /* ErrorCodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorCodes.h; path = Classes/BusinessLogic/Services/Constants/ErrorCodes.h; sourceTree = "<group>"; };
@@ -601,6 +604,15 @@
 			name = OrderStatusParser;
 			sourceTree = "<group>";
 		};
+		9E64B7F61DBB90300033969D /* OrderInfo */ = {
+			isa = PBXGroup;
+			children = (
+				9E64B7F71DBB90580033969D /* QLOrderInfo.h */,
+				9E64B7F81DBB90580033969D /* QLOrderInfo.m */,
+			);
+			name = OrderInfo;
+			sourceTree = "<group>";
+		};
 		9ECC12B11DB95F1600E33288 /* SessionCredentials */ = {
 			isa = PBXGroup;
 			children = (
@@ -760,6 +772,7 @@
 		9EFF73A91DB3C85F004873A6 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				9E64B7F61DBB90300033969D /* OrderInfo */,
 				D835BD161DB97D9100F2FF0F /* BankEntities */,
 				9EFF73CE1DB3D948004873A6 /* PaymentSchedule */,
 				9EFF73CA1DB3D816004873A6 /* Payment */,
@@ -2062,6 +2075,7 @@
 				D8328F651DBA78C800438D4A /* QLOffsetCellObject.m in Sources */,
 				9ECC12D81DBA906300E33288 /* QLBlueGradientButton.m in Sources */,
 				D8328F4A1DBA2D4300438D4A /* QLBankCardRequestFactoryImplementation.m in Sources */,
+				9E64B7F91DBB90580033969D /* QLOrderInfo.m in Sources */,
 				9EFF73F11DB416AE004873A6 /* QLJSONSerializer.m in Sources */,
 				9EFF73B51DB3C9C5004873A6 /* ServicesConstants.m in Sources */,
 				D861479D1DBA9FA00018D19C /* QLGetAssembly.m in Sources */,

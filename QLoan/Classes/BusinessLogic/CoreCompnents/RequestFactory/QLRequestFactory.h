@@ -71,6 +71,8 @@
 
 - (NSURLRequest *)requestForUserWithId:(NSUInteger)userId;
 
+- (NSURLRequest *)requestForUsersWithIds:(NSArray <NSNumber *> *)ids;
+
 #pragma mark - Направление запросов
 
 - (NSURLRequest *)requestForLoanProvision:(NSInteger)orderId;

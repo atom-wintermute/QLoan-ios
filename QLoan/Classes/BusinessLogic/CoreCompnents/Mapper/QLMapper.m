@@ -113,6 +113,17 @@
 	return info;
 }
 
+- (NSArray<QLUserInfo *> *)mapUserInfosFromResponseObject:(id)responseObject {
+	if ([responseObject isKindOfClass:[NSArray class]]) {
+		NSArray *responseArray = (NSArray *)responseObject;
+		return [EKMapper arrayOfObjectsFromExternalRepresentation:responseArray
+													  withMapping:[self.mappingProvider userInfoMapping]];
+	}
+
+	return nil;
+}
+
+
 #pragma mark - Данные сессии
 
 - (QLSessionCredentials *)mapSessionCredentialsFromResponseObject:(id)responseObject {

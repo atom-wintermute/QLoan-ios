@@ -19,6 +19,10 @@
                           configuration:^(TyphoonDefinition *definition) {
                               [definition injectProperty:@selector(cellFactory)
                                                     with:[self getCellFactory]];
+							  [definition injectProperty:@selector(lenderOrderService)
+													with:[self.serviceAssembly lenderOrderService]];
+							  [definition injectProperty:@selector(userInfoService)
+													with:[self.serviceAssembly userInfoService]];
                           }];
 }
 

@@ -41,6 +41,8 @@
 
 - (QLUserInfo *)mapUserInfoFromResponseObject:(id)responseObject;
 
+- (NSArray<QLUserInfo *> *)mapUserInfosFromResponseObject:(id)responseObject;
+
 #pragma mark - Данные сессии
 
 - (QLSessionCredentials *)mapSessionCredentialsFromResponseObject:(id)responseObject;

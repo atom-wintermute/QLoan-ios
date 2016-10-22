@@ -104,6 +104,12 @@
 						 parameters:dictionary];
 }
 
+- (NSURLRequest *)requestForUsersWithIds:(NSArray <NSNumber *> *)ids {
+	NSDictionary *dictionary = @{ @"ids" : ids };
+	return [self getRequestWithPath:@"get_user_by_id/"
+						 parameters:dictionary];
+}
+
 #pragma mark - Заявки Заемщика
 
 - (NSURLRequest *)requestForBorrowerOrdersWithPage:(NSUInteger)page
