@@ -10,6 +10,7 @@
 #import "QLLenderOrderService.h"
 #import "EntityConstants.h"
 #import "QLBorrowerOrder.h"
+#import "UIAlertController+Extensions.h"
 
 @interface QLCreateLenderOrderViewController ()
 
@@ -95,6 +96,16 @@
 	
 	QLBooleanCompletion completion = ^(BOOL success, NSError *error) {
 		self.requestIsBeingCreated = NO;
+		UIAlertController *controller;
+		if (success) {
+			controller = [UIAlertController successAlertControllerWithTitle:@"Заявка успешно создана"];
+		} else {
+			controller = [UIAlertController errorAlertControllerWithTitle:@"Не удалось создать заявку"];
+		}
+		
+		[self presentViewController:controller
+						   animated:YES
+						 completion:nil];
 	};
 	
 	[self.lenderOrderService addLenderOrder:order

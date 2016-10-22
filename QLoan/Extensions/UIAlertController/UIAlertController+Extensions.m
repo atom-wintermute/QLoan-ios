@@ -39,4 +39,17 @@
     return alertController;
 }
 
++ (UIAlertController *)successAlertControllerWithTitle:(NSString *)title {
+	UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title
+																			 message:nil
+																	  preferredStyle:UIAlertControllerStyleAlert];
+	UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"OK"
+														   style:UIAlertActionStyleDefault
+														 handler:nil];
+	[alertController addAction:cancelAction];
+	
+	return alertController;
+}
+
+
 @end

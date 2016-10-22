@@ -14,4 +14,6 @@
 
 + (UIAlertController *)errorAlertControllerWithTitle:(NSString *)title;
 
++ (UIAlertController *)successAlertControllerWithTitle:(NSString *)title;
+
 @end
