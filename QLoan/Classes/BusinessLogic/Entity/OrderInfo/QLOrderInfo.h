@@ -14,5 +14,6 @@
 
 @property (nonatomic, strong) QLBorrowerOrder *order;
 @property (nonatomic, strong) QLUserInfo *user;
+@property (nonatomic, strong) NSString *photoInfo;
 
 @end

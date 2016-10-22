@@ -25,6 +25,7 @@
 #import "QLCreateLenderOrderAssembly.h"
 #import "QLAddCardAssembly.h"
 #import "ApplicationAssembly.h"
+#import "QLOrderDetailAssembly.h"
 
 #import <RamblerTyphoonUtils/AssemblyCollector.h>
 
@@ -54,6 +55,7 @@
              [QLGetAssembly class],
 			 [QLCreateBorrowerOrderAssembly class],
 			 [QLCreateLenderOrderAssembly class],
+			 [QLOrderDetailAssembly class],
              [QLMyOrdersAssembly class],
              [QLRegisterPhoneAssembly class],
              [QLVerifyPhoneAssembly class],

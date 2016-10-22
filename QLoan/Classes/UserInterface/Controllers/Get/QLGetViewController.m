@@ -15,6 +15,8 @@
 #import "QLBorrowerOrder.h"
 #import "QLOrderInfo.h"
 #import "QLUserInfoService.h"
+#import "QLLendOrderCellObject.h"
+#import "QLOrderDetailViewController.h"
 
 @interface QLGetViewController () <UITableViewDelegate>
 
@@ -102,6 +104,20 @@
 														   withBaseDelegate:self];
 	
 	[self.tableView reloadData];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	QLLendOrderCellObject *object = [self.dataDisplayManager objectAtIndexPath:indexPath];
+	if (object != nil) {
+		QLOrderInfo *orderInfo = object.orderInfo;
+		UIStoryboard *storyboard = self.storyboard;
+		QLOrderDetailViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"QLOrderDetailViewController"];
+		if (controller != nil) {
+			controller.orderInfo = orderInfo;
+			[self.navigationController pushViewController:controller
+												 animated:YES];
+		}
+	}
 }
 
 @end
