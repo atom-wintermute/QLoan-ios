@@ -19,11 +19,16 @@
 
 #import "QLUserInfoService.h"
 
+static NSInteger const QLAllSelectedSegment = 0;
+static NSInteger const QLBorrowersSelectedSegment = 1;
+static NSInteger const QLLendersSelectedSegment = 2;
+
 @interface QLMyOrdersViewController () <UITableViewDelegate>
 
 @property (nonatomic, strong) QLMyOrdersDataDisplayManager *dataDisplayManager;
 @property (nonatomic, strong) NSArray *myBorrowerOrderInfos;
 @property (nonatomic, strong) NSArray *myLenderOrderInfos;
+@property (nonatomic, assign) NSInteger currentSegmentSelected;
 
 @end
 
@@ -37,6 +42,10 @@
 	
 }
 
+- (IBAction)segmentChanged:(id)sender {
+	[self showData];
+}
+
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
   //  [self showData];
@@ -46,11 +55,23 @@
 #pragma mark - Приватные методы
 
 - (void)showData {
-	NSMutableArray *cellObjects = self.myLenderOrderInfos == nil ?
-	[NSMutableArray new] : [[self.cellFactory cellObjectsFromMyLenderOrders:self.myLenderOrderInfos] mutableCopy];
-	if (self.myBorrowerOrderInfos != nil) [cellObjects addObjectsFromArray:[self.cellFactory cellObjectsFromMyBorrowerOrders:self.myBorrowerOrderInfos]];
-	
-	if (cellObjects.count == 0) return;
+	NSMutableArray *cellObjects = [NSMutableArray new];
+	switch (self.segmentedControl.selectedSegmentIndex) {
+		case QLAllSelectedSegment:
+			
+			cellObjects = self.myLenderOrderInfos == nil ?
+			[NSMutableArray new] : [[self.cellFactory cellObjectsFromMyLenderOrders:self.myLenderOrderInfos] mutableCopy];
+			if (self.myBorrowerOrderInfos != nil) [cellObjects addObjectsFromArray:[self.cellFactory cellObjectsFromMyBorrowerOrders:self.myBorrowerOrderInfos]];
+			
+			break;
+		case QLLendersSelectedSegment:
+			cellObjects = self.myLenderOrderInfos == nil ?
+			[NSMutableArray new] : [[self.cellFactory cellObjectsFromMyLenderOrders:self.myLenderOrderInfos] mutableCopy];
+			break;
+		case QLBorrowersSelectedSegment:
+			if (self.myBorrowerOrderInfos != nil) [cellObjects addObjectsFromArray:[self.cellFactory cellObjectsFromMyBorrowerOrders:self.myBorrowerOrderInfos]];
+			break;
+	}
 	
     self.dataDisplayManager =  [[QLMyOrdersDataDisplayManager alloc] initWithInputData:cellObjects
                                                        andConversionToCellObjectsBlock:^id(id dataObject) {

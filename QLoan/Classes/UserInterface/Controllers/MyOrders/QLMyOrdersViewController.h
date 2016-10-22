@@ -13,6 +13,7 @@
 @class QLUserInfoService;
 
 @interface QLMyOrdersViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 
