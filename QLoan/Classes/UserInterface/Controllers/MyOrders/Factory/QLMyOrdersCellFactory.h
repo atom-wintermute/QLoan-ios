@@ -6,8 +6,14 @@
 //  Copyright © 2016 Rambler&Co. All rights reserved.
 //
 
+@class QLBorrowerOrder;
+
 @protocol QLMyOrdersCellFactory <NSObject>
 
 - (NSArray *)cellObjects;
+
+- (NSArray *)cellObjectsFromMyBorrowerOrders:(NSArray *)orders;
+
+- (NSArray *)cellObjectsFromMyLenderOrders:(NSArray *)orders;
 
 @end

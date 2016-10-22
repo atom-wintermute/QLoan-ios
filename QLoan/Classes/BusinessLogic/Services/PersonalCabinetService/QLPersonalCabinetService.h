@@ -32,7 +32,7 @@
 - (void)myLenderOrdersWithPage:(NSInteger)page
 					sortMethod:(QLSortMethod)sortMethod
 					 ascending:(BOOL)ascending
-					completion:(QLLendersOrderCompletion)completion;
+					completion:(QLBorrowersOrderCompletion)completion;
 
 /**
  Метод getMyBorrowersOrders

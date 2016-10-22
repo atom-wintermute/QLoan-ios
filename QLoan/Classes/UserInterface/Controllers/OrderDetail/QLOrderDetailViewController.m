@@ -10,10 +10,13 @@
 #import "QLGetDataDisplayManager.h"
 #import "QLStorage.h"
 #import "QLOrderInfo.h"
+#import "QLUserInteractionService.h"
+
 
 @interface QLOrderDetailViewController () <UITableViewDelegate>
 
 @property (nonatomic, strong) QLGetDataDisplayManager *dataDisplayManager;
+@property (nonatomic, assign) BOOL requestIsBeingCreated;
 
 @end
 
@@ -28,7 +31,27 @@
 }
 
 - (IBAction)requestLoan:(id)sender {
-
+	if (self.requestIsBeingCreated) {
+		return;
+	}
+	self.requestIsBeingCreated = YES;
+	
+	QLBooleanCompletion completion = ^(BOOL success, NSError *error) {
+		self.requestIsBeingCreated = NO;
+		UIAlertController *controller;
+		if (success) {
+			controller = [UIAlertController successAlertControllerWithTitle:@"Запрос успешно направлен"];
+		} else {
+			controller = [UIAlertController errorAlertControllerWithTitle:@"Не удалось направить запрос"];
+		}
+		
+		[self presentViewController:controller
+						   animated:YES
+						 completion:nil];
+	};
+	
+	[self.interactionService requestLoanReceipt:self.orderInfo.user.userId
+									 completion:completion];
 }
 
 - (IBAction)declineLoan:(id)sender {

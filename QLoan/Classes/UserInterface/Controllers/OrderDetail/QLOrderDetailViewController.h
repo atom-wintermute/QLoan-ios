@@ -13,6 +13,7 @@
 @protocol QLStorage;
 
 @class QLOrderInfo;
+@class QLUserInteractionService;
 
 @interface QLOrderDetailViewController : UIViewController
 
@@ -24,5 +25,6 @@
 @property (nonatomic, strong) id<QLStorage> storage;
 @property (nonatomic, strong) QLOrderInfo *orderInfo;
 @property (nonatomic, strong) QLOrderDetailCellObjectFactory *cellFactory;
+@property (nonatomic, strong) QLUserInteractionService *interactionService;
 
 @end

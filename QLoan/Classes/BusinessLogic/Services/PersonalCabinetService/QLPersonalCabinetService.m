@@ -22,7 +22,7 @@
 - (void)myLenderOrdersWithPage:(NSInteger)page
 					sortMethod:(QLSortMethod)sortMethod
 					 ascending:(BOOL)ascending
-					completion:(QLLendersOrderCompletion)completion {
+					completion:(QLBorrowersOrderCompletion)completion {
 	NSURLRequest *request = [self.requestFactory requestForMyLenderOrdersWithPage:page
 																	   sortMethod:sortMethod
 																		ascending:ascending];
@@ -32,7 +32,7 @@
 		__strong typeof (self) strongSelf = weakSelf;
 		if (error == nil) {
 			id responseObject = [strongSelf.jsonSerializer jsonObjectFromResponse:response];
-			NSArray *orders = [strongSelf.mapper mapLenderOrdersFromResponseObject:responseObject];
+			NSArray *orders = [strongSelf.mapper mapBorrowerOrdersFromResponseObject:responseObject];
 			run_block_on_main(completion, orders, nil);
 		} else {
 			run_block_on_main(completion, nil, error);

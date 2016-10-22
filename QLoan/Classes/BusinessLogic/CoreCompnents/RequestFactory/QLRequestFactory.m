@@ -54,7 +54,7 @@
 		[dictionary setValue:sortOrdering forKey:sortMethodDescription];
 	}
 	
-	return [self getRequestWithPath:@"getMyBorrwersOrders/"
+	return [self getRequestWithPath:@"my_borrower_orders/"
 						 parameters:[dictionary copy]];
 }
 
@@ -69,7 +69,7 @@
 		[dictionary setValue:sortOrdering forKey:sortMethodDescription];
 	}
 	
-	return [self getRequestWithPath:@"getMyLendersOrders/"
+	return [self getRequestWithPath:@"my_lending_orders/"
 						 parameters:[dictionary copy]];
 }
 
@@ -183,8 +183,9 @@
 #pragma mark - Направление запросов
 
 - (NSURLRequest *)requestForLoanReceipt:(NSInteger)orderId {
-	NSDictionary *dictionary = @{ @"id" : @(orderId) };
-	return [self putRequestWithPath:@"sendLoanReceiveRequest/"
+	NSString* stringId = [NSString stringWithFormat:@"lender_orders/%d", (int)orderId];
+	NSDictionary *dictionary = @{ @"status" : @"requested" };
+	return [self putRequestWithPath:stringId
 						 parameters:dictionary];
 }
 

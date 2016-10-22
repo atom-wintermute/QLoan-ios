@@ -21,6 +21,8 @@
 													with:[self.coreAssembly inMemoryStorage]];
 							  [definition injectProperty:@selector(cellFactory)
 													with:[QLOrderDetailCellObjectFactory new]];
+							  [definition injectProperty:@selector(interactionService)
+													with:[self.serviceAssembly interactionService]];
 						  }];
 }
 
