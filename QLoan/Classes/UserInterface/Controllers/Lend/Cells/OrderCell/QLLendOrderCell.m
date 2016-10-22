@@ -16,6 +16,14 @@ static CGFloat const QLLendOrderCellHeight = 64.0;
 
 #pragma mark - Жизненный цикл
 
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    if (selected) {
+        self.contentView.backgroundColor = [UIColor ql_selectedCellColor];
+    } else {
+        self.contentView.backgroundColor = [UIColor whiteColor];
+    }
+}
+
 - (void)setHighlighted:(BOOL)highlighted
               animated:(BOOL)animated {
     if (highlighted) {
