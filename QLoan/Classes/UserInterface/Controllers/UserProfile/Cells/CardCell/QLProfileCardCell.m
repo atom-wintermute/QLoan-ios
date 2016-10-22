@@ -16,6 +16,14 @@ static CGFloat const QLProfileCardHeight = 56.0;
 
 #pragma mark - NICell
 
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    
+    UIView *view = [UIView new];
+    view.backgroundColor = [UIColor ql_selectedCellColor];
+    self.selectedBackgroundView = view;
+}
+
 - (BOOL)shouldUpdateCellWithObject:(QLProfileCardCellObject *)object {
     self.cardNameLabel.text = object.cardNameString;
     self.balanceLabel.text = object.balanceString;

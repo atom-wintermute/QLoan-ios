@@ -15,10 +15,11 @@
 #import "QLLendAssembly.h"
 #import "QLGetAssembly.h"
 #import "QLMyOrdersAssembly.h"
+#import "QLRegisterPhoneAssembly.h"
+#import "QLVerifyPhoneAssembly.h"
+#import "QLRegisterAssembly.h"
 #import "QLCreateBorrowerOrderAssembly.h"
 #import "QLCreateLenderOrderAssembly.h"
-
-#import "UIColor+QLColor.h"
 
 #import <RamblerTyphoonUtils/AssemblyCollector.h>
 
@@ -40,9 +41,12 @@
              [QLProfileAssembly class],
              [QLLendAssembly class],
              [QLGetAssembly class],
-             [QLMyOrdersAssembly class],
 			 [QLCreateBorrowerOrderAssembly class],
-			 [QLCreateLenderOrderAssembly class]
+			 [QLCreateLenderOrderAssembly class],
+             [QLMyOrdersAssembly class],
+             [QLRegisterPhoneAssembly class],
+             [QLVerifyPhoneAssembly class],
+             [QLRegisterAssembly class]
 			 ];
 }
 
@@ -56,6 +60,8 @@
 #pragma mark - Приватные методы
 
 - (void)configureAppearance {
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:ARFontLight size:16.0]}];
+    
     [[UINavigationBar appearance] setBackgroundImage:[UIImage new]
                                        forBarMetrics:UIBarMetricsDefault];
     [[UINavigationBar appearance] setShadowImage:[UIImage new]];

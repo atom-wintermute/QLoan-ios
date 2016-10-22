@@ -12,4 +12,6 @@
 
 - (void)addGradient;
 
+- (void)deleteGradient;
+
 @end

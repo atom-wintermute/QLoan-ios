@@ -8,12 +8,12 @@
 
 #import "QLMyOrdersAssembly.h"
 
-#import "QLMyOrderViewController.h"
+#import "QLMyOrdersViewController.h"
 
 @implementation QLMyOrdersAssembly
 
-- (QLMyOrderViewController *)myOrdersController {
-    return [TyphoonDefinition withClass:[QLMyOrderViewController class]
+- (QLMyOrdersViewController *)myOrdersController {
+    return [TyphoonDefinition withClass:[QLMyOrdersViewController class]
                           configuration:^(TyphoonDefinition *definition) {
                               
                           }];

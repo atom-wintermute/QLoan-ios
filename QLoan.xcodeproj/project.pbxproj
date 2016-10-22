@@ -50,6 +50,8 @@
 		9EFF74061DB42925004873A6 /* QLTestAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF74051DB42925004873A6 /* QLTestAssembly.m */; };
 		9EFF74361DB4C376004873A6 /* borrowerOrderStub.json in Resources */ = {isa = PBXBuildFile; fileRef = 9EFF74351DB4C376004873A6 /* borrowerOrderStub.json */; };
 		B052863E11C552DF193FDF47 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1BE5B8284ED646854EA9B23 /* libPods.a */; };
+		D82077481DBAAECE00253637 /* QLRegisterPhoneViewContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = D82077471DBAAECE00253637 /* QLRegisterPhoneViewContoller.m */; };
+		D820774C1DBAB58100253637 /* QLRegisterPhoneAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = D820774B1DBAB58100253637 /* QLRegisterPhoneAssembly.m */; };
 		D8328F401DBA299300438D4A /* QLBankCardMapperImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = D8328F3F1DBA299300438D4A /* QLBankCardMapperImplementation.m */; };
 		D8328F461DBA2B9300438D4A /* QLBankAuthRequestFactoryImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = D8328F441DBA2B9300438D4A /* QLBankAuthRequestFactoryImplementation.m */; };
 		D8328F4A1DBA2D4300438D4A /* QLBankCardRequestFactoryImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = D8328F491DBA2D4300438D4A /* QLBankCardRequestFactoryImplementation.m */; };
@@ -139,8 +141,13 @@
 		D86147A91DBAA3C00018D19C /* QLGetDataDisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D86147A81DBAA3C00018D19C /* QLGetDataDisplayManager.m */; };
 		D86147AD1DBAA4BB0018D19C /* QLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86147AC1DBAA4BB0018D19C /* QLTabBarController.m */; };
 		D86147AF1DBAA6620018D19C /* MyOrders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D86147AE1DBAA6620018D19C /* MyOrders.storyboard */; };
-		D86147B31DBAA6A30018D19C /* QLMyOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86147B21DBAA6A30018D19C /* QLMyOrderViewController.m */; };
+		D86147B31DBAA6A30018D19C /* QLMyOrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86147B21DBAA6A30018D19C /* QLMyOrdersViewController.m */; };
 		D86147B71DBAA6D90018D19C /* QLMyOrdersAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = D86147B61DBAA6D90018D19C /* QLMyOrdersAssembly.m */; };
+		D871285C1DBAE6C400A45405 /* QLVerifyPhoneAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = D871285B1DBAE6C400A45405 /* QLVerifyPhoneAssembly.m */; };
+		D874A6481DBB5CCC0043B0E6 /* UIButton+Enable.m in Sources */ = {isa = PBXBuildFile; fileRef = D874A6471DBB5CCC0043B0E6 /* UIButton+Enable.m */; };
+		D874A64C1DBB62040043B0E6 /* UIAlertController+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = D874A64B1DBB62040043B0E6 /* UIAlertController+Extensions.m */; };
+		D874A6501DBB67240043B0E6 /* QLRegisterAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = D874A64F1DBB67240043B0E6 /* QLRegisterAssembly.m */; };
+		D874A6541DBB6E360043B0E6 /* QLOfferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D874A6531DBB6E360043B0E6 /* QLOfferViewController.m */; };
 		D881020D1DBA8EBB0066C442 /* img1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D88101F11DBA8EBB0066C442 /* img1@2x.png */; };
 		D881020E1DBA8EBB0066C442 /* img1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D88101F21DBA8EBB0066C442 /* img1@3x.png */; };
 		D881020F1DBA8EBB0066C442 /* img2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D88101F31DBA8EBB0066C442 /* img2@2x.png */; };
@@ -179,6 +186,7 @@
 		D89655541DB8260C00DE4C66 /* SF-UI-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D89655501DB8260C00DE4C66 /* SF-UI-Display-Bold.otf */; };
 		D89655581DB8319900DE4C66 /* QLRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89655571DB8319900DE4C66 /* QLRegisterViewController.m */; };
 		D89655601DB8C39900DE4C66 /* QLAuthAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = D896555F1DB8C39900DE4C66 /* QLAuthAssembly.m */; };
+		D8D626CC1DBADC9C007FFB3F /* QLVerifyPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D626CB1DBADC9C007FFB3F /* QLVerifyPhoneViewController.m */; };
 		D8D98BB41DB9085300F3FB01 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8D98BB31DB9085300F3FB01 /* Profile.storyboard */; };
 		D8F9D7AF1DAFD2FC000371CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F9D7AE1DAFD2FC000371CA /* main.m */; };
 		D8F9D7B21DAFD2FC000371CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F9D7B11DAFD2FC000371CA /* AppDelegate.m */; };
@@ -292,6 +300,10 @@
 		9EFF74051DB42925004873A6 /* QLTestAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLTestAssembly.m; path = Classes/UserInterface/TestAssembly/QLTestAssembly.m; sourceTree = "<group>"; };
 		9EFF74351DB4C376004873A6 /* borrowerOrderStub.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = borrowerOrderStub.json; path = Stubs/borrowerOrderStub.json; sourceTree = "<group>"; };
 		D1BE5B8284ED646854EA9B23 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D82077461DBAAECE00253637 /* QLRegisterPhoneViewContoller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLRegisterPhoneViewContoller.h; path = Classes/UserInterface/Controllers/RegisterPhone/QLRegisterPhoneViewContoller.h; sourceTree = "<group>"; };
+		D82077471DBAAECE00253637 /* QLRegisterPhoneViewContoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLRegisterPhoneViewContoller.m; path = Classes/UserInterface/Controllers/RegisterPhone/QLRegisterPhoneViewContoller.m; sourceTree = "<group>"; };
+		D820774A1DBAB58100253637 /* QLRegisterPhoneAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLRegisterPhoneAssembly.h; path = Classes/UserInterface/Controllers/RegisterPhone/QLRegisterPhoneAssembly.h; sourceTree = "<group>"; };
+		D820774B1DBAB58100253637 /* QLRegisterPhoneAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLRegisterPhoneAssembly.m; path = Classes/UserInterface/Controllers/RegisterPhone/QLRegisterPhoneAssembly.m; sourceTree = "<group>"; };
 		D8328F3E1DBA299300438D4A /* QLBankCardMapperImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLBankCardMapperImplementation.h; path = Classes/BusinessLogic/CoreCompnents/Mapper/BankMappers/CardMapper/QLBankCardMapperImplementation.h; sourceTree = "<group>"; };
 		D8328F3F1DBA299300438D4A /* QLBankCardMapperImplementation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLBankCardMapperImplementation.m; path = Classes/BusinessLogic/CoreCompnents/Mapper/BankMappers/CardMapper/QLBankCardMapperImplementation.m; sourceTree = "<group>"; };
 		D8328F431DBA2B8200438D4A /* QLBankAuthRequestFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLBankAuthRequestFactory.h; path = Classes/BusinessLogic/CoreCompnents/RequestFactory/BankRequestFactories/AuthRequestFactory/QLBankAuthRequestFactory.h; sourceTree = "<group>"; };
@@ -435,10 +447,20 @@
 		D86147AB1DBAA4BB0018D19C /* QLTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLTabBarController.h; path = Classes/UserInterface/Controllers/TabBar/QLTabBarController.h; sourceTree = "<group>"; };
 		D86147AC1DBAA4BB0018D19C /* QLTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLTabBarController.m; path = Classes/UserInterface/Controllers/TabBar/QLTabBarController.m; sourceTree = "<group>"; };
 		D86147AE1DBAA6620018D19C /* MyOrders.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MyOrders.storyboard; path = Resources/Storyboards/MyOrders.storyboard; sourceTree = "<group>"; };
-		D86147B11DBAA6A30018D19C /* QLMyOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLMyOrderViewController.h; path = Classes/UserInterface/Controllers/MyOrders/QLMyOrderViewController.h; sourceTree = "<group>"; };
-		D86147B21DBAA6A30018D19C /* QLMyOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLMyOrderViewController.m; path = Classes/UserInterface/Controllers/MyOrders/QLMyOrderViewController.m; sourceTree = "<group>"; };
+		D86147B11DBAA6A30018D19C /* QLMyOrdersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLMyOrdersViewController.h; path = Classes/UserInterface/Controllers/MyOrders/QLMyOrdersViewController.h; sourceTree = "<group>"; };
+		D86147B21DBAA6A30018D19C /* QLMyOrdersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLMyOrdersViewController.m; path = Classes/UserInterface/Controllers/MyOrders/QLMyOrdersViewController.m; sourceTree = "<group>"; };
 		D86147B51DBAA6D90018D19C /* QLMyOrdersAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLMyOrdersAssembly.h; path = Classes/UserInterface/Controllers/MyOrders/Assembly/QLMyOrdersAssembly.h; sourceTree = "<group>"; };
 		D86147B61DBAA6D90018D19C /* QLMyOrdersAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLMyOrdersAssembly.m; path = Classes/UserInterface/Controllers/MyOrders/Assembly/QLMyOrdersAssembly.m; sourceTree = "<group>"; };
+		D871285A1DBAE6C400A45405 /* QLVerifyPhoneAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLVerifyPhoneAssembly.h; path = Classes/UserInterface/Controllers/VerifyPhone/Assembly/QLVerifyPhoneAssembly.h; sourceTree = "<group>"; };
+		D871285B1DBAE6C400A45405 /* QLVerifyPhoneAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLVerifyPhoneAssembly.m; path = Classes/UserInterface/Controllers/VerifyPhone/Assembly/QLVerifyPhoneAssembly.m; sourceTree = "<group>"; };
+		D874A6461DBB5CCC0043B0E6 /* UIButton+Enable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIButton+Enable.h"; path = "Extensions/UIButton/UIButton+Enable.h"; sourceTree = "<group>"; };
+		D874A6471DBB5CCC0043B0E6 /* UIButton+Enable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+Enable.m"; path = "Extensions/UIButton/UIButton+Enable.m"; sourceTree = "<group>"; };
+		D874A64A1DBB62040043B0E6 /* UIAlertController+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIAlertController+Extensions.h"; path = "Extensions/UIAlertController/UIAlertController+Extensions.h"; sourceTree = "<group>"; };
+		D874A64B1DBB62040043B0E6 /* UIAlertController+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertController+Extensions.m"; path = "Extensions/UIAlertController/UIAlertController+Extensions.m"; sourceTree = "<group>"; };
+		D874A64E1DBB67240043B0E6 /* QLRegisterAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLRegisterAssembly.h; path = Classes/UserInterface/Controllers/Register/Assembly/QLRegisterAssembly.h; sourceTree = "<group>"; };
+		D874A64F1DBB67240043B0E6 /* QLRegisterAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLRegisterAssembly.m; path = Classes/UserInterface/Controllers/Register/Assembly/QLRegisterAssembly.m; sourceTree = "<group>"; };
+		D874A6521DBB6E360043B0E6 /* QLOfferViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLOfferViewController.h; path = Classes/UserInterface/Controllers/Offer/QLOfferViewController.h; sourceTree = "<group>"; };
+		D874A6531DBB6E360043B0E6 /* QLOfferViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLOfferViewController.m; path = Classes/UserInterface/Controllers/Offer/QLOfferViewController.m; sourceTree = "<group>"; };
 		D88101F11DBA8EBB0066C442 /* img1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img1@2x.png"; path = "Resources/Photos/Lend/img1@2x.png"; sourceTree = "<group>"; };
 		D88101F21DBA8EBB0066C442 /* img1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img1@3x.png"; path = "Resources/Photos/Lend/img1@3x.png"; sourceTree = "<group>"; };
 		D88101F31DBA8EBB0066C442 /* img2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img2@2x.png"; path = "Resources/Photos/Lend/img2@2x.png"; sourceTree = "<group>"; };
@@ -481,6 +503,8 @@
 		D89655571DB8319900DE4C66 /* QLRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLRegisterViewController.m; path = Classes/UserInterface/Controllers/Register/QLRegisterViewController.m; sourceTree = "<group>"; };
 		D896555E1DB8C39900DE4C66 /* QLAuthAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLAuthAssembly.h; path = Classes/UserInterface/Controllers/Auth/Assembly/QLAuthAssembly.h; sourceTree = "<group>"; };
 		D896555F1DB8C39900DE4C66 /* QLAuthAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLAuthAssembly.m; path = Classes/UserInterface/Controllers/Auth/Assembly/QLAuthAssembly.m; sourceTree = "<group>"; };
+		D8D626CA1DBADC9C007FFB3F /* QLVerifyPhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLVerifyPhoneViewController.h; path = Classes/UserInterface/Controllers/VerifyPhone/QLVerifyPhoneViewController.h; sourceTree = "<group>"; };
+		D8D626CB1DBADC9C007FFB3F /* QLVerifyPhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLVerifyPhoneViewController.m; path = Classes/UserInterface/Controllers/VerifyPhone/QLVerifyPhoneViewController.m; sourceTree = "<group>"; };
 		D8D98BB31DB9085300F3FB01 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = Resources/Storyboards/Profile.storyboard; sourceTree = "<group>"; };
 		D8F9D7AA1DAFD2FC000371CA /* QLoan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QLoan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8F9D7AE1DAFD2FC000371CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -981,6 +1005,25 @@
 			name = Stubs;
 			sourceTree = "<group>";
 		};
+		D82077451DBAAE8E00253637 /* RegisterPhone */ = {
+			isa = PBXGroup;
+			children = (
+				D82077491DBAB55000253637 /* Assembly */,
+				D82077461DBAAECE00253637 /* QLRegisterPhoneViewContoller.h */,
+				D82077471DBAAECE00253637 /* QLRegisterPhoneViewContoller.m */,
+			);
+			name = RegisterPhone;
+			sourceTree = "<group>";
+		};
+		D82077491DBAB55000253637 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				D820774A1DBAB58100253637 /* QLRegisterPhoneAssembly.h */,
+				D820774B1DBAB58100253637 /* QLRegisterPhoneAssembly.m */,
+			);
+			name = Assembly;
+			sourceTree = "<group>";
+		};
 		D8328F411DBA2B4C00438D4A /* CardRequestFactory */ = {
 			isa = PBXGroup;
 			children = (
@@ -1112,6 +1155,8 @@
 			isa = PBXGroup;
 			children = (
 				D835BCD01DB9746900F2FF0F /* NSArray */,
+				D874A6491DBB61BF0043B0E6 /* UIAlertController */,
+				D874A6451DBB5C8F0043B0E6 /* UIButton */,
 				D835BD281DB98F3F00F2FF0F /* UIColor */,
 				D835BD301DB9938E00F2FF0F /* UIView */,
 			);
@@ -1396,8 +1441,8 @@
 			isa = PBXGroup;
 			children = (
 				D86147B41DBAA6B30018D19C /* Assembly */,
-				D86147B11DBAA6A30018D19C /* QLMyOrderViewController.h */,
-				D86147B21DBAA6A30018D19C /* QLMyOrderViewController.m */,
+				D86147B11DBAA6A30018D19C /* QLMyOrdersViewController.h */,
+				D86147B21DBAA6A30018D19C /* QLMyOrdersViewController.m */,
 			);
 			name = MyOrders;
 			sourceTree = "<group>";
@@ -1409,6 +1454,51 @@
 				D86147B61DBAA6D90018D19C /* QLMyOrdersAssembly.m */,
 			);
 			name = Assembly;
+			sourceTree = "<group>";
+		};
+		D87128591DBAE69500A45405 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				D871285A1DBAE6C400A45405 /* QLVerifyPhoneAssembly.h */,
+				D871285B1DBAE6C400A45405 /* QLVerifyPhoneAssembly.m */,
+			);
+			name = Assembly;
+			sourceTree = "<group>";
+		};
+		D874A6451DBB5C8F0043B0E6 /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				D874A6461DBB5CCC0043B0E6 /* UIButton+Enable.h */,
+				D874A6471DBB5CCC0043B0E6 /* UIButton+Enable.m */,
+			);
+			name = UIButton;
+			sourceTree = "<group>";
+		};
+		D874A6491DBB61BF0043B0E6 /* UIAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				D874A64A1DBB62040043B0E6 /* UIAlertController+Extensions.h */,
+				D874A64B1DBB62040043B0E6 /* UIAlertController+Extensions.m */,
+			);
+			name = UIAlertController;
+			sourceTree = "<group>";
+		};
+		D874A64D1DBB66F80043B0E6 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				D874A64E1DBB67240043B0E6 /* QLRegisterAssembly.h */,
+				D874A64F1DBB67240043B0E6 /* QLRegisterAssembly.m */,
+			);
+			name = Assembly;
+			sourceTree = "<group>";
+		};
+		D874A6511DBB6E190043B0E6 /* Offer */ = {
+			isa = PBXGroup;
+			children = (
+				D874A6521DBB6E360043B0E6 /* QLOfferViewController.h */,
+				D874A6531DBB6E360043B0E6 /* QLOfferViewController.m */,
+			);
+			name = Offer;
 			sourceTree = "<group>";
 		};
 		D88101EE1DBA8E6E0066C442 /* Photos */ = {
@@ -1534,8 +1624,11 @@
 				D86147961DBA9E800018D19C /* Get */,
 				D8328F681DBA7C8A00438D4A /* Lend */,
 				D86147B01DBAA6830018D19C /* MyOrders */,
+				D874A6511DBB6E190043B0E6 /* Offer */,
+				D82077451DBAAE8E00253637 /* RegisterPhone */,
 				D89655551DB8317800DE4C66 /* Register */,
 				D86147AA1DBAA4900018D19C /* TabBar */,
+				D8D626C91DBADC75007FFB3F /* VerifyPhone */,
 				D8D98BB51DB9087900F3FB01 /* UserProfile */,
 			);
 			name = Controllers;
@@ -1567,6 +1660,7 @@
 		D89655551DB8317800DE4C66 /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				D874A64D1DBB66F80043B0E6 /* Assembly */,
 				D89655561DB8319900DE4C66 /* QLRegisterViewController.h */,
 				D89655571DB8319900DE4C66 /* QLRegisterViewController.m */,
 			);
@@ -1580,6 +1674,16 @@
 				D896555F1DB8C39900DE4C66 /* QLAuthAssembly.m */,
 			);
 			name = Assembly;
+			sourceTree = "<group>";
+		};
+		D8D626C91DBADC75007FFB3F /* VerifyPhone */ = {
+			isa = PBXGroup;
+			children = (
+				D87128591DBAE69500A45405 /* Assembly */,
+				D8D626CA1DBADC9C007FFB3F /* QLVerifyPhoneViewController.h */,
+				D8D626CB1DBADC9C007FFB3F /* QLVerifyPhoneViewController.m */,
+			);
+			name = VerifyPhone;
 			sourceTree = "<group>";
 		};
 		D8D98BB51DB9087900F3FB01 /* UserProfile */ = {
@@ -1947,6 +2051,7 @@
 				9EFF73B51DB3C9C5004873A6 /* ServicesConstants.m in Sources */,
 				D861479D1DBA9FA00018D19C /* QLGetAssembly.m in Sources */,
 				9E09BBCE1DBACB4600B1CF0E /* QLCreateBorrowerOrderAssembly.m in Sources */,
+				D8D626CC1DBADC9C007FFB3F /* QLVerifyPhoneViewController.m in Sources */,
 				D835BD1E1DB9830C00F2FF0F /* QLInMemoryStorage.m in Sources */,
 				D835BD101DB97B0700F2FF0F /* QLProfileViewController.m in Sources */,
 				D86147B71DBAA6D90018D19C /* QLMyOrdersAssembly.m in Sources */,
@@ -1963,9 +2068,11 @@
 				D835BD2B1DB98F7000F2FF0F /* UIColor+QLColor.m in Sources */,
 				D8328F401DBA299300438D4A /* QLBankCardMapperImplementation.m in Sources */,
 				9EFF73B11DB3C918004873A6 /* QLUserInfo.m in Sources */,
+				D871285C1DBAE6C400A45405 /* QLVerifyPhoneAssembly.m in Sources */,
 				D86147A51DBAA0B30018D19C /* QLGetCellFactoryImplementation.m in Sources */,
 				D8328F7E1DBA850000438D4A /* QLLendOrderCell.m in Sources */,
 				D835BD111DB97B0700F2FF0F /* QLProfileAssembly.m in Sources */,
+				D82077481DBAAECE00253637 /* QLRegisterPhoneViewContoller.m in Sources */,
 				9EFF73D81DB3DC4E004873A6 /* QLPaymentCompletedRequestConfiguration.m in Sources */,
 				9EFF73ED1DB41503004873A6 /* QLServerResponse.m in Sources */,
 				D835BD3C1DBA26F400F2FF0F /* QLBankCardServiceImplementation.m in Sources */,
@@ -1981,13 +2088,17 @@
 				D8328F5C1DBA773400438D4A /* QLProfileAddCardCellObject.m in Sources */,
 				9E2F66FE1DBB5AB600081C05 /* QLCreateLenderOrderAssembly.m in Sources */,
 				D835BD121DB97B0700F2FF0F /* QLProfileDataDisplayManager.m in Sources */,
+				D874A64C1DBB62040043B0E6 /* UIAlertController+Extensions.m in Sources */,
+				D874A6541DBB6E360043B0E6 /* QLOfferViewController.m in Sources */,
 				D835BD131DB97B0700F2FF0F /* QLProfileDataCell.m in Sources */,
 				D89655601DB8C39900DE4C66 /* QLAuthAssembly.m in Sources */,
 				D89655581DB8319900DE4C66 /* QLRegisterViewController.m in Sources */,
 				9EFF73941DB3B672004873A6 /* QLRegistrationRequestConfiguration.m in Sources */,
 				9EFF73BD1DB3CD83004873A6 /* QLLenderOrder.m in Sources */,
+				D820774C1DBAB58100253637 /* QLRegisterPhoneAssembly.m in Sources */,
 				D8F9D7AF1DAFD2FC000371CA /* main.m in Sources */,
 				D835BCCE1DB9741100F2FF0F /* RDSDataDisplayManager.m in Sources */,
+				D874A6501DBB67240043B0E6 /* QLRegisterAssembly.m in Sources */,
 				D896554A1DB823A100DE4C66 /* QLAuthViewController.m in Sources */,
 				9ECC12BE1DB977DB00E33288 /* QLChallengedNetworkClient.m in Sources */,
 				9EFF74011DB425FB004873A6 /* QLServicesAssembly.m in Sources */,
@@ -2009,6 +2120,7 @@
 				D8328F731DBA7F4F00438D4A /* QLLendDataDisplayManager.m in Sources */,
 				9E2F67061DBB6DCC00081C05 /* QLOrderStatusParser.m in Sources */,
 				D8328F6F1DBA7D1F00438D4A /* QLLendAssembly.m in Sources */,
+				D874A6481DBB5CCC0043B0E6 /* UIButton+Enable.m in Sources */,
 				D84F78461DB8F08400394F1D /* EXTScope.m in Sources */,
 				9EFF73CD1DB3D82B004873A6 /* QLPayment.m in Sources */,
 				D84F78411DB8E0EB00394F1D /* QLBankServiceConstants.m in Sources */,
