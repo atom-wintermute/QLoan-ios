@@ -12,6 +12,8 @@
 #import "QLBankCardService.h"
 #import "QLAuthorizationService.h"
 
+#import "QLTabBarController.h"
+
 static NSString * const QLAuthRegisterSegue = @"registerSegue";
 
 @interface QLAuthViewController () <UITextFieldDelegate>
@@ -115,6 +117,11 @@ replacementString:(NSString *)string {
 - (void)loginCompleted {
     [self.bankAuthService updateCurrentUserDataWithCompletion:nil];
     [self.bankCardService updateBankCardsWithCompletion:nil];
+    
+    UIWindow *mainWindow = [[[UIApplication sharedApplication] delegate] window];
+    QLTabBarController *tabBarController = (QLTabBarController *)[mainWindow rootViewController];
+    [tabBarController selectTabWithIndex:3];
+    
     [self.presentingViewController dismissViewControllerAnimated:YES
                                                       completion:nil];
 }

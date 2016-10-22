@@ -86,7 +86,7 @@
 - (void) onPushAccepted:(PushNotificationManager *)pushManager
        withNotification:(NSDictionary *)pushNotification
                 onStart:(BOOL)onStart {
-    
+    NSLog(@"pushNotification = %@", pushNotification);
 }
 
 #pragma mark - Приватные методы
