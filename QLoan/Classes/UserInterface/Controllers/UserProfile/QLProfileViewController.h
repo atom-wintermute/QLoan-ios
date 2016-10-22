@@ -20,9 +20,12 @@
 @property (nonatomic, weak) IBOutlet UIView *headerView;
 @property (nonatomic, weak) IBOutlet UILabel *usernameLabel;
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
+@property (nonatomic, weak) IBOutlet UIImageView *facebookImageView;
 
 @property (nonatomic, strong) id<QLBankAuthService> bankAuthService;
 @property (nonatomic, strong) id<QLBankCardService> bankCardService;
 @property (nonatomic, strong) id<QLProfileCellFactory> cellFactory;
+
+- (IBAction)facebookButtonWasPressed:(id)sender;
 
 @end

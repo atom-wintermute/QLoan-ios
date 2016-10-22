@@ -57,4 +57,8 @@ typedef void(^QLBankAuthUserDataCompletion)(QLBankUserInfo *userInfo, NSError *e
  */
 - (QLBankUserInfo *)obtainCurrentUserData;
 
+- (void)addFacebookEntire;
+
+- (BOOL)obtainFacebookEntire;
+
 @end
