@@ -31,6 +31,7 @@ PODS:
     - OHHTTPStubs/Core (= 3.1.10)
   - OHHTTPStubs/Core (3.1.10)
   - PureLayout (3.0.0)
+  - Pushwoosh (4.1.7)
   - RamblerTyphoonUtils/AssemblyCollector (1.3.1)
   - SAMKeychain (1.5.2)
   - SDWebImage (3.7.1):
@@ -48,6 +49,7 @@ DEPENDENCIES:
   - Nimbus/Models (from `git@gitlab.rambler.ru:cocoapods/nimbus.git`, tag `1.2.2`)
   - OHHTTPStubs (= 3.1.10)
   - PureLayout (= 3.0.0)
+  - Pushwoosh (= 4.1.7)
   - RamblerTyphoonUtils/AssemblyCollector (= 1.3.1)
   - SAMKeychain (= 1.5.2)
   - SDWebImage (= 3.7.1)
@@ -71,6 +73,7 @@ SPEC CHECKSUMS:
   Nimbus: 355131d4656498bf072fecc142752a9f343eb59b
   OHHTTPStubs: 00152a63400246fcbc4b772a2a547ea34c97cbd6
   PureLayout: 270dfee2236f697ab1d5e2771c2e5c248495fa0d
+  Pushwoosh: 3fe3fac7edfdb75b2f082c6d74ed43eaa6ccd42d
   RamblerTyphoonUtils: 7c4c7a7e6fa569a38512a687f676a834de2bd311
   SAMKeychain: 1865333198217411f35327e8da61b43de79b635b
   SDWebImage: ed3095af2ff88b436426037444979b917f6c5575
