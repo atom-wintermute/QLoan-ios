@@ -37,7 +37,7 @@ static NSUInteger const QLRegisterPhoneLenght = 13;
     [self.bankAuthService registerWithPhoneNumber:phoneNumberWithoutPrefix
                                        completion:^(BOOL success, NSError *error) {
                                            if (success) {
-											   [self.storage storeObject:self.phoneTextField.text
+											   [self.storage storeObject:phoneNumberWithoutPrefix
 																  forKey:@"login"];
                                                [self performSegueWithIdentifier:QLRegisterVerifyPhoneSegue
                                                                          sender:self];

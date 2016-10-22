@@ -17,7 +17,7 @@
 				   parentName:(NSString *)parentName {
 	self = [super init];
 	if (self) {
-		_lastName = lastName;
+		_login = login;
 		_password = password;
 		_firstName = firstName;
 		_lastName = lastName;
