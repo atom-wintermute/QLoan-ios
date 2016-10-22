@@ -23,7 +23,7 @@
         <scene sceneID="ADj-mP-e96">
             <objects>
                 <navigationController navigationBarHidden="YES" id="n5Q-ec-i2S" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="hWP-Ud-HL3">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hWP-Ud-HL3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -335,6 +335,8 @@
                         <outlet property="fakeImageView" destination="xa8-1T-ZJB" id="RTi-vr-8Jd"/>
                         <outlet property="nameLabel" destination="1fw-Lz-gMv" id="Q80-pa-v6T"/>
                         <outlet property="photoImage" destination="vd8-Sy-98h" id="siQ-Gm-mKf"/>
+                        <outlet property="ratingViewContainer" destination="M9x-Se-JmW" id="7Q6-hT-fVz"/>
+                        <outlet property="readyToGiveLoanLabel" destination="dBt-ad-g8t" id="vxP-Vv-JtV"/>
                         <outlet property="tableView" destination="KkF-1f-H6a" id="JL3-Ii-xCB"/>
                     </connections>
                 </viewController>

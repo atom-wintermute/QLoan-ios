@@ -16,6 +16,8 @@
 @class QLUserInteractionService;
 
 @interface QLOrderDetailViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIView *ratingViewContainer;
+@property (weak, nonatomic) IBOutlet UILabel *readyToGiveLoanLabel;
 
 @property (weak, nonatomic) IBOutlet UIImageView *photoImage;
 @property (weak, nonatomic) IBOutlet UIImageView *fakeImageView;

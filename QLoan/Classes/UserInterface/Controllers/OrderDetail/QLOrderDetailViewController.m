@@ -27,7 +27,13 @@
 	[self.view layoutIfNeeded];
 	[self configureView];
 	[self configureTableView];
-	self.nameLabel.text = [NSString stringWithFormat:@"%@ %@", self.orderInfo.user.firstName, self.orderInfo.user.lastName];
+	
+	if (self.orderInfo.user == nil) {
+		self.ratingViewContainer.hidden = YES;
+		self.readyToGiveLoanLabel.hidden = YES;
+	}
+	
+	self.nameLabel.text = self.orderInfo.user != nil ? [NSString stringWithFormat:@"%@ %@", self.orderInfo.user.firstName, self.orderInfo.user.lastName] : @"Нет контрагента";
 }
 
 - (IBAction)requestLoan:(id)sender {
