@@ -22,8 +22,9 @@
 @property (nonatomic, weak) IBOutlet UITextField *emailTextField;
 @property (nonatomic, weak) IBOutlet UITextField *firstNameTextField;
 @property (nonatomic, weak) IBOutlet UITextField *secondNameTextField;
-
 @property (nonatomic, weak) IBOutlet UIButton *continueButton;
+
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint *bottomConstraint;
 
 @property (nonatomic, strong) id<QLBankAuthService> bankAuthService;
 @property (nonatomic, strong) QLAuthorizationService *authorizationService;

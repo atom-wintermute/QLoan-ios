@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol QLMyOrdersCellFactory;
+
 @interface QLMyOrdersViewController : UIViewController
+
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
+
+@property (nonatomic, strong) id<QLMyOrdersCellFactory> cellFactory;
 
 @end

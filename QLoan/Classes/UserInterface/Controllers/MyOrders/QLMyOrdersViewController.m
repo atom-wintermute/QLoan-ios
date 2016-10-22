@@ -8,7 +8,13 @@
 
 #import "QLMyOrdersViewController.h"
 
-@interface QLMyOrdersViewController ()
+#import "QLMyOrdersCellFactory.h"
+
+#import "QLMyOrdersDataDisplayManager.h"
+
+@interface QLMyOrdersViewController () <UITableViewDelegate>
+
+@property (nonatomic, strong) QLMyOrdersDataDisplayManager *dataDisplayManager;
 
 @end
 
@@ -20,5 +26,26 @@
     
     self.navigationItem.title = @"Мои заявки";
 }
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self showData];
+}
+
+#pragma mark - Приватные методы
+
+- (void)showData {
+    NSArray *cellObjects = [self.cellFactory cellObjects];
+    self.dataDisplayManager =  [[QLMyOrdersDataDisplayManager alloc] initWithInputData:cellObjects
+                                                       andConversionToCellObjectsBlock:^id(id dataObject) {
+                                                           return dataObject;
+                                                       }];
+    
+    self.tableView.dataSource = [self.dataDisplayManager dataSourceForTableView:self.tableView];
+    self.tableView.delegate = [self.dataDisplayManager delegateForTableView:self.tableView
+                                                           withBaseDelegate:self];
+    [self.tableView reloadData];
+}
+
 
 @end

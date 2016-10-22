@@ -12,7 +12,7 @@
 
 static NSString * const QLRegisterVerifyPhoneSegue = @"verifyCodeSegue";
 
-static NSUInteger const QLRegisterPhoneLenght = 13;
+static NSUInteger const QLRegisterPhoneLenght = 12;
 
 @interface QLRegisterPhoneViewContoller () <UITextFieldDelegate>
 
@@ -25,15 +25,28 @@ static NSUInteger const QLRegisterPhoneLenght = 13;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillShow:)
+                                                 name:UIKeyboardWillShowNotification
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillHide:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+    
     [self.phoneTextField becomeFirstResponder];
     [self configureAppearance];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - IBActions
 
 - (void)getCodeButtonPressed:(id)sender {
     NSString *phoneNumber = self.phoneTextField.text;
-    NSString *phoneNumberWithoutPrefix = [phoneNumber substringFromIndex:3];
+    NSString *phoneNumberWithoutPrefix = [phoneNumber substringFromIndex:2];
     [self.bankAuthService registerWithPhoneNumber:phoneNumberWithoutPrefix
                                        completion:^(BOOL success, NSError *error) {
                                            if (success) {
@@ -68,15 +81,27 @@ static NSUInteger const QLRegisterPhoneLenght = 13;
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range
 replacementString:(NSString *)string {
-    if (0 == range.location) {
-        NSString *resultString = [NSString stringWithFormat:@"+7 %@", string];
-        textField.text = resultString;
+    NSString *newString = [textField.text stringByReplacingCharactersInRange:range
+                                                                  withString:string];
+    if (newString.length > 12) {
         return NO;
     }
+    
     return YES;
 }
 
 #pragma mark - Приватные методы
+
+- (void)keyboardWillShow:(NSNotification *)notification {
+    self.bottomConstraint.constant = CGRectGetHeight([notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue]);
+    
+    [self.view layoutIfNeeded];
+}
+
+- (void)keyboardWillHide:(NSNotification *)notification {
+    self.bottomConstraint.constant = 0.0;
+    [self.view layoutIfNeeded];
+}
 
 - (void)configureAppearance {
     [self.view layoutIfNeeded];

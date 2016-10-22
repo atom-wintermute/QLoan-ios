@@ -21,7 +21,7 @@
             <objects>
                 <navigationController id="U8e-nV-q2t" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1E2-69-ZUO">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="1E2-69-ZUO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -56,13 +56,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="+ 7 (123) 123 12 12" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dkk-7Y-MaY">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+7" placeholder="+ 7 (123) 123 12 12" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dkk-7Y-MaY">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="136" id="CMD-cw-e4Y"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad"/>
                                 <connections>
                                     <action selector="phoneTextFieldValueChanged:" destination="PdM-yB-nyz" eventType="editingChanged" id="a16-TX-gAI"/>
                                     <outlet property="delegate" destination="PdM-yB-nyz" id="eag-4j-GYP"/>
@@ -93,12 +93,12 @@
                             <constraint firstItem="D4M-UK-juc" firstAttribute="leading" secondItem="B2Q-Du-b8B" secondAttribute="leading" constant="22" id="5YC-8c-BTq"/>
                             <constraint firstItem="Vbl-jv-RxD" firstAttribute="centerX" secondItem="B2Q-Du-b8B" secondAttribute="centerX" id="5q7-VG-rA7"/>
                             <constraint firstItem="4iE-Pz-UHB" firstAttribute="top" secondItem="Dkk-7Y-MaY" secondAttribute="bottom" constant="8" id="6Jh-uF-DmI"/>
+                            <constraint firstItem="AUx-dG-CbR" firstAttribute="top" secondItem="luf-yi-Txu" secondAttribute="bottom" id="7RE-lV-3sh"/>
                             <constraint firstItem="luf-yi-Txu" firstAttribute="leading" secondItem="B2Q-Du-b8B" secondAttribute="leading" id="DQd-Zz-KjD"/>
                             <constraint firstAttribute="trailing" secondItem="D4M-UK-juc" secondAttribute="trailing" constant="22" id="Djj-V1-seP"/>
                             <constraint firstItem="4iE-Pz-UHB" firstAttribute="leading" secondItem="B2Q-Du-b8B" secondAttribute="leading" constant="60" id="Dob-1r-4aX"/>
                             <constraint firstItem="Dkk-7Y-MaY" firstAttribute="top" secondItem="D4M-UK-juc" secondAttribute="bottom" constant="56" id="JXw-g5-8QX"/>
                             <constraint firstItem="Dkk-7Y-MaY" firstAttribute="centerX" secondItem="B2Q-Du-b8B" secondAttribute="centerX" id="LHq-AC-S5x"/>
-                            <constraint firstItem="luf-yi-Txu" firstAttribute="top" secondItem="4iE-Pz-UHB" secondAttribute="bottom" constant="120" id="Tey-rk-hOc"/>
                             <constraint firstAttribute="trailing" secondItem="4iE-Pz-UHB" secondAttribute="trailing" constant="60" id="gsm-WM-9Y2"/>
                             <constraint firstAttribute="trailing" secondItem="luf-yi-Txu" secondAttribute="trailing" id="sCK-jE-zeu"/>
                             <constraint firstItem="D4M-UK-juc" firstAttribute="top" secondItem="Vbl-jv-RxD" secondAttribute="bottom" constant="16" id="wB2-rG-ypn"/>
@@ -108,6 +108,7 @@
                         <barButtonItem key="backBarButtonItem" title="Назад" id="rzR-XY-WKs"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="bottomConstraint" destination="7RE-lV-3sh" id="vgP-Wx-SQl"/>
                         <outlet property="getCodeButton" destination="luf-yi-Txu" id="NWc-vn-10g"/>
                         <outlet property="phoneTextField" destination="Dkk-7Y-MaY" id="cEf-j9-2Q3"/>
                         <segue destination="Xmf-9L-L2d" kind="show" identifier="verifyCodeSegue" id="t0A-ey-ynW"/>
@@ -117,7 +118,7 @@
             </objects>
             <point key="canvasLocation" x="1273" y="119"/>
         </scene>
-        <!--Title-->
+        <!--Verify Phone View Controller-->
         <scene sceneID="rEd-Hn-Na1">
             <objects>
                 <viewController id="Xmf-9L-L2d" customClass="QLVerifyPhoneViewController" sceneMemberID="viewController">
@@ -148,6 +149,7 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
                                 <connections>
                                     <action selector="codeTextFieldValueChanged:" destination="Xmf-9L-L2d" eventType="editingChanged" id="bzE-Pi-0UX"/>
+                                    <outlet property="delegate" destination="Xmf-9L-L2d" id="1mT-b8-8Lj"/>
                                 </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oUU-jd-a0t" userLabel="separator">
@@ -185,9 +187,9 @@
                             <constraint firstItem="Ia9-Zg-ABd" firstAttribute="centerX" secondItem="I1F-Oe-fGi" secondAttribute="centerX" id="ADW-2i-fXW"/>
                             <constraint firstItem="oUU-jd-a0t" firstAttribute="top" secondItem="Ia9-Zg-ABd" secondAttribute="bottom" constant="8" id="Aji-Di-ge3"/>
                             <constraint firstItem="aNn-Pc-dnM" firstAttribute="top" secondItem="iC1-WR-d6z" secondAttribute="bottom" constant="22" id="E25-tN-p27"/>
-                            <constraint firstItem="BwI-FQ-KTo" firstAttribute="top" secondItem="8OW-AB-dQl" secondAttribute="bottom" constant="54.5" id="MQ5-Bf-WVo"/>
                             <constraint firstItem="8OW-AB-dQl" firstAttribute="top" secondItem="oUU-jd-a0t" secondAttribute="bottom" constant="18" id="NKi-Ue-VX8"/>
                             <constraint firstItem="Ia9-Zg-ABd" firstAttribute="top" secondItem="Nxh-VP-pEZ" secondAttribute="bottom" constant="72" id="Qrx-7t-oIC"/>
+                            <constraint firstItem="ah0-dn-Rwn" firstAttribute="top" secondItem="BwI-FQ-KTo" secondAttribute="bottom" id="SIx-HO-cne"/>
                             <constraint firstAttribute="trailing" secondItem="BwI-FQ-KTo" secondAttribute="trailing" id="aoJ-oJ-OfO"/>
                             <constraint firstItem="oUU-jd-a0t" firstAttribute="centerX" secondItem="I1F-Oe-fGi" secondAttribute="centerX" id="e0Y-aj-mNs"/>
                             <constraint firstAttribute="trailing" secondItem="Nxh-VP-pEZ" secondAttribute="trailing" constant="21" id="jFu-QQ-gd8"/>
@@ -196,10 +198,11 @@
                             <constraint firstItem="Nxh-VP-pEZ" firstAttribute="leading" secondItem="I1F-Oe-fGi" secondAttribute="leading" constant="21" id="rWh-6G-txf"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="b4o-Xj-hRD">
+                    <navigationItem key="navigationItem" id="b4o-Xj-hRD">
                         <barButtonItem key="backBarButtonItem" title="Назад" id="ncg-XC-zEE"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="bottomConstraint" destination="SIx-HO-cne" id="Uis-rf-d3h"/>
                         <outlet property="codeTextField" destination="Ia9-Zg-ABd" id="FW3-Kx-BSi"/>
                         <outlet property="registerButton" destination="BwI-FQ-KTo" id="hBe-co-CSg"/>
                         <segue destination="E90-cf-Cju" kind="show" identifier="registerSegue" id="jIO-CB-BmD"/>
@@ -515,6 +518,7 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no"/>
                                                 <connections>
                                                     <action selector="dataWasChanged:" destination="E90-cf-Cju" eventType="editingChanged" id="6eD-L6-K3R"/>
+                                                    <outlet property="delegate" destination="E90-cf-Cju" id="dlB-bx-Rym"/>
                                                 </connections>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZD3-i4-s4L" userLabel="secondNameSeparatorView">
@@ -546,6 +550,7 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no"/>
                                                 <connections>
                                                     <action selector="dataWasChanged:" destination="E90-cf-Cju" eventType="editingChanged" id="r6Q-mL-M1Q"/>
+                                                    <outlet property="delegate" destination="E90-cf-Cju" id="hKd-kB-ke8"/>
                                                 </connections>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kcx-RH-WfN" userLabel="firstNameSeparatorView">
@@ -606,18 +611,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="rP3-vt-Vhk" firstAttribute="top" secondItem="8Ie-fF-twq" secondAttribute="bottom" id="0Vi-ZT-ux2"/>
                             <constraint firstItem="9dc-uF-rv6" firstAttribute="leading" secondItem="xsc-4q-vmu" secondAttribute="leading" constant="60" id="1Zn-5J-s18"/>
                             <constraint firstItem="8Ie-fF-twq" firstAttribute="leading" secondItem="xsc-4q-vmu" secondAttribute="leading" id="B9y-jG-9bQ"/>
                             <constraint firstItem="9dc-uF-rv6" firstAttribute="top" secondItem="M0i-L3-KSd" secondAttribute="bottom" id="Cue-Sc-I4u"/>
                             <constraint firstAttribute="trailing" secondItem="8Ie-fF-twq" secondAttribute="trailing" id="FVp-vN-KRQ"/>
                             <constraint firstAttribute="trailing" secondItem="9dc-uF-rv6" secondAttribute="trailing" constant="60" id="dcv-DA-8xG"/>
-                            <constraint firstItem="8Ie-fF-twq" firstAttribute="top" secondItem="9dc-uF-rv6" secondAttribute="bottom" constant="40" id="mpT-sG-hlk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VUd-jg-MYV">
                         <barButtonItem key="backBarButtonItem" title="Назад" id="G4b-jQ-w3E"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="bottomConstraint" destination="0Vi-ZT-ux2" id="jaY-0T-elp"/>
                         <outlet property="continueButton" destination="8Ie-fF-twq" id="sOr-gp-iLa"/>
                         <outlet property="emailTextField" destination="Vxp-0Y-Zhp" id="dIc-bD-G8Y"/>
                         <outlet property="firstNameTextField" destination="zYE-e7-FhX" id="9Ln-Og-GlJ"/>

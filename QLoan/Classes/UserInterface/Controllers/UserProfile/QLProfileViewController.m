@@ -49,7 +49,6 @@ static NSString * const QLProfileAddCardSegue = @"profileAddCardSegue";
 
 - (void)configureView {
     [self.view layoutIfNeeded];
-    [self.headerView addGradient];
     
     QLBankUserInfo *bankUserInfo = [self.bankAuthService obtainCurrentUserData];
     if (!bankUserInfo) {

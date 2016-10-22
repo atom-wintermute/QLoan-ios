@@ -14,6 +14,10 @@
 
 static NSString * const QLRegisterOfferSegue = @"registerOfferSegue";
 
+@interface QLRegisterViewController () <UITextFieldDelegate>
+
+@end
+
 @implementation QLRegisterViewController
 
 #pragma mark - Жизненный цикл
@@ -21,9 +25,22 @@ static NSString * const QLRegisterOfferSegue = @"registerOfferSegue";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillShow:)
+                                                 name:UIKeyboardWillShowNotification
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillHide:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+    
     [self.view layoutIfNeeded];
     [self.passwordTextField becomeFirstResponder];
     [self configureAppearance];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - IBActions
@@ -61,7 +78,33 @@ static NSString * const QLRegisterOfferSegue = @"registerOfferSegue";
                                      }];
 }
 
+#pragma mark - UITextFieldDelegate
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range
+replacementString:(NSString *)string {
+    if (textField == self.firstNameTextField || textField == self.secondNameTextField) {
+        NSString *newString = [textField.text stringByReplacingCharactersInRange:range
+                                                                      withString:string];
+        if (newString.length > 21) {
+            return NO;
+        }
+    }
+    
+    return YES;
+}
+
 #pragma mark - Приватные методы
+
+- (void)keyboardWillShow:(NSNotification *)notification {
+    self.bottomConstraint.constant = CGRectGetHeight([notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue]);
+    
+    [self.view layoutIfNeeded];
+}
+
+- (void)keyboardWillHide:(NSNotification *)notification {
+    self.bottomConstraint.constant = 0.0;
+    [self.view layoutIfNeeded];
+}
 
 - (void)changePassword {
 	QLBankAuthCompletion bankAuthCompletion = ^(BOOL success, NSError *error) {

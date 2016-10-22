@@ -17,6 +17,8 @@
 @property (nonatomic, weak) IBOutlet UIButton *registerButton;
 
 @property (nonatomic, strong) id<QLStorage> storage;
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint *bottomConstraint;
+
 @property (nonatomic, strong) id<QLBankAuthService> bankAuthService;
 
 - (IBAction)registerButtonWasPressed:(id)sender;

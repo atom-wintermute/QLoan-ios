@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-UI-Display-Light.otf">
+            <string>SFUIDisplay-Light</string>
+        </array>
+        <array key="SF-UI-Display-Regular.otf">
+            <string>SFUIDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="QLMyOrdersOrderCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="63"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hVT-bn-1ei" userLabel="techView">
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="63.5" id="HJL-fQ-dtu"/>
+                            <constraint firstAttribute="width" constant="1" id="U6N-Um-2Ou"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="86a-zi-GNP">
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 000 ₽ /" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIW-Kv-c2J">
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
+                                <color key="textColor" red="0.21960784310000001" green="0.21960784310000001" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2% в месяц " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8nC-iF-53V">
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="14"/>
+                                <color key="textColor" red="0.21960784310000001" green="0.21960784310000001" blue="0.21960784310000001" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Олег Евгеньевич Д." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDp-32-248">
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Light" family="SF UI Display" pointSize="12"/>
+                                <color key="textColor" red="0.21960784310000001" green="0.21960784310000001" blue="0.21960784310000001" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8nC-iF-53V" firstAttribute="centerY" secondItem="zIW-Kv-c2J" secondAttribute="centerY" id="4uA-lS-4ar"/>
+                            <constraint firstItem="8nC-iF-53V" firstAttribute="leading" secondItem="zIW-Kv-c2J" secondAttribute="trailing" constant="4" id="FzJ-4I-umM"/>
+                            <constraint firstItem="zIW-Kv-c2J" firstAttribute="top" secondItem="86a-zi-GNP" secondAttribute="top" id="WR1-vK-05a"/>
+                            <constraint firstItem="zIW-Kv-c2J" firstAttribute="leading" secondItem="86a-zi-GNP" secondAttribute="leading" id="s08-fC-8fF"/>
+                            <constraint firstItem="VDp-32-248" firstAttribute="leading" secondItem="86a-zi-GNP" secondAttribute="leading" id="u8M-X1-Zao"/>
+                            <constraint firstAttribute="bottom" secondItem="VDp-32-248" secondAttribute="bottom" id="uMh-ti-l2V"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Check" translatesAutoresizingMaskIntoConstraints="NO" id="uSV-NI-rcD">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="13" id="QCm-Nt-AqB"/>
+                            <constraint firstAttribute="height" constant="10" id="Z4W-gN-ZHi"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Займ получен" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJs-YY-hdC">
+                        <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="12"/>
+                        <color key="textColor" red="0.21960784310000001" green="0.21960784310000001" blue="0.21960784310000001" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="K5T-v1-Hvr">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="8" id="NBT-Jk-0eG"/>
+                            <constraint firstAttribute="height" constant="14" id="mse-C3-02B"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="separator" translatesAutoresizingMaskIntoConstraints="NO" id="EVc-wq-uqA">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="qOd-SL-idB"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="WJs-YY-hdC" firstAttribute="leading" secondItem="uSV-NI-rcD" secondAttribute="trailing" constant="6" id="0TE-oM-rTj"/>
+                    <constraint firstItem="WJs-YY-hdC" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="1Kt-c2-D0s"/>
+                    <constraint firstAttribute="bottom" secondItem="EVc-wq-uqA" secondAttribute="bottom" id="INZ-mu-6WS"/>
+                    <constraint firstAttribute="bottom" secondItem="86a-zi-GNP" secondAttribute="bottom" constant="13" id="JOu-My-UPA"/>
+                    <constraint firstItem="K5T-v1-Hvr" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="MaV-Dj-88t"/>
+                    <constraint firstAttribute="trailing" secondItem="EVc-wq-uqA" secondAttribute="trailing" id="WOx-EQ-uW6"/>
+                    <constraint firstItem="hVT-bn-1ei" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="X3B-Mi-y1Z"/>
+                    <constraint firstItem="K5T-v1-Hvr" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="X7C-P4-gSa"/>
+                    <constraint firstItem="hVT-bn-1ei" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="YXP-Gc-6RQ"/>
+                    <constraint firstItem="uSV-NI-rcD" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ZeJ-bw-ijs"/>
+                    <constraint firstItem="EVc-wq-uqA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="fZG-Ov-Xcc"/>
+                    <constraint firstItem="86a-zi-GNP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="gML-yr-Ydd"/>
+                    <constraint firstAttribute="trailing" secondItem="86a-zi-GNP" secondAttribute="trailing" constant="140" id="kLs-yA-0yE"/>
+                    <constraint firstAttribute="trailing" secondItem="K5T-v1-Hvr" secondAttribute="trailing" constant="16" id="rHG-40-12c"/>
+                    <constraint firstItem="K5T-v1-Hvr" firstAttribute="leading" secondItem="WJs-YY-hdC" secondAttribute="trailing" constant="16" id="rhC-mP-37i"/>
+                    <constraint firstAttribute="bottom" secondItem="hVT-bn-1ei" secondAttribute="bottom" id="sCc-Kv-dlU"/>
+                    <constraint firstItem="86a-zi-GNP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="tQ3-jd-L2q"/>
+                    <constraint firstItem="WJs-YY-hdC" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="txz-j3-Cm8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="checkMarkImageView" destination="uSV-NI-rcD" id="HLB-oS-94l"/>
+                <outlet property="nameLabel" destination="VDp-32-248" id="Qte-dx-wZL"/>
+                <outlet property="percentLabel" destination="8nC-iF-53V" id="QCK-Rq-TOy"/>
+                <outlet property="statusLabel" destination="WJs-YY-hdC" id="hy3-qt-y4r"/>
+                <outlet property="sumLabel" destination="zIW-Kv-c2J" id="VBM-gB-3ii"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Check" width="13" height="10"/>
+        <image name="arrow" width="8" height="14"/>
+        <image name="separator" width="1" height="1"/>
+    </resources>
+</document>

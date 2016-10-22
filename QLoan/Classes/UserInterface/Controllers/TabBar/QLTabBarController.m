@@ -48,4 +48,8 @@
 
 }
 
+- (void)selectTabWithIndex:(NSUInteger)index {
+    self.selectedViewController = self.viewControllers[index];
+}
+
 @end

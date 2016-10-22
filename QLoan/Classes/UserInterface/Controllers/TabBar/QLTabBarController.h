@@ -12,4 +12,6 @@
 
 - (void)showLoginScreen:(BOOL)animated;
 
+- (void)selectTabWithIndex:(NSUInteger)index;
+
 @end
