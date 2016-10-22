@@ -21,7 +21,7 @@
         <scene sceneID="F7G-JQ-Feg">
             <objects>
                 <navigationController navigationBarHidden="YES" id="TQP-Hx-Vch" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="W5A-xb-VEC">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="W5A-xb-VEC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -96,22 +96,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Сумма займа" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0oZ-qo-RDa" customClass="QLUnderlinedTextfield">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0oZ-qo-RDa" customClass="QLUnderlinedTextfield">
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Процент" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bLD-GN-25S" customClass="QLUnderlinedTextfield">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bLD-GN-25S" customClass="QLUnderlinedTextfield">
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Срок займа" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MTP-Xg-BHi" customClass="QLUnderlinedTextfield">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MTP-Xg-BHi" customClass="QLUnderlinedTextfield">
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Неустойка" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="e31-1j-23N" customClass="QLUnderlinedTextfield">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="e31-1j-23N" customClass="QLUnderlinedTextfield">
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -170,6 +170,21 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="сумма, ₽" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNH-55-HlT">
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAi-c0-1ql">
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="срок, дн." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Zi-Bi-ccc">
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы заработаете" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m1m-Ca-GrS">
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
@@ -185,6 +200,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="неустойка, ₽" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s59-3N-PHn">
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -195,7 +215,11 @@
                             <constraint firstItem="tri-O0-2x7" firstAttribute="centerY" secondItem="m1m-Ca-GrS" secondAttribute="centerY" id="51U-Sg-mro"/>
                             <constraint firstItem="TL3-3w-Prq" firstAttribute="leading" secondItem="sNo-WE-Vla" secondAttribute="leading" constant="32" id="8ph-Tp-XGW"/>
                             <constraint firstItem="Ha3-Eg-1Ge" firstAttribute="leading" secondItem="sNo-WE-Vla" secondAttribute="leading" constant="32" id="Afo-Hb-aIg"/>
+                            <constraint firstItem="s59-3N-PHn" firstAttribute="trailing" secondItem="e31-1j-23N" secondAttribute="trailing" id="BLb-SF-rwd"/>
                             <constraint firstItem="UJK-sj-iXa" firstAttribute="centerY" secondItem="TL3-3w-Prq" secondAttribute="centerY" id="CG4-ej-gMn"/>
+                            <constraint firstItem="xAi-c0-1ql" firstAttribute="centerY" secondItem="bLD-GN-25S" secondAttribute="centerY" id="Cp6-Dk-EFf"/>
+                            <constraint firstItem="cNH-55-HlT" firstAttribute="trailing" secondItem="0oZ-qo-RDa" secondAttribute="trailing" id="HUw-3N-pVV"/>
+                            <constraint firstItem="cNH-55-HlT" firstAttribute="centerY" secondItem="0oZ-qo-RDa" secondAttribute="centerY" id="IGj-GB-VVH"/>
                             <constraint firstAttribute="trailing" secondItem="bLD-GN-25S" secondAttribute="trailing" constant="32" id="JDD-GO-Uhd"/>
                             <constraint firstItem="4Tx-Da-TbI" firstAttribute="trailing" secondItem="e31-1j-23N" secondAttribute="trailing" id="Jn2-3W-OvS"/>
                             <constraint firstItem="7xZ-YB-Rsy" firstAttribute="leading" secondItem="sNo-WE-Vla" secondAttribute="leading" constant="32" id="Jtm-bF-2Dp"/>
@@ -215,13 +239,17 @@
                             <constraint firstItem="MTP-Xg-BHi" firstAttribute="leading" secondItem="sNo-WE-Vla" secondAttribute="leading" constant="32" id="e6E-Tm-6aY"/>
                             <constraint firstAttribute="trailing" secondItem="7xZ-YB-Rsy" secondAttribute="trailing" constant="32" id="efM-bY-eHI"/>
                             <constraint firstAttribute="trailing" secondItem="e31-1j-23N" secondAttribute="trailing" constant="32" id="fUG-du-89G"/>
+                            <constraint firstItem="s59-3N-PHn" firstAttribute="centerY" secondItem="e31-1j-23N" secondAttribute="centerY" id="k7w-oD-zvE"/>
                             <constraint firstAttribute="trailing" secondItem="4j3-T0-6Bl" secondAttribute="trailing" constant="32" id="nT9-6J-IfV"/>
                             <constraint firstItem="e31-1j-23N" firstAttribute="top" secondItem="MTP-Xg-BHi" secondAttribute="bottom" constant="32" id="ndC-pw-Wba"/>
                             <constraint firstAttribute="trailing" secondItem="MTP-Xg-BHi" secondAttribute="trailing" constant="32" id="pAx-br-ihl"/>
                             <constraint firstItem="bLD-GN-25S" firstAttribute="top" secondItem="0oZ-qo-RDa" secondAttribute="bottom" constant="32" id="pJF-jL-u2o"/>
                             <constraint firstItem="4Tx-Da-TbI" firstAttribute="centerY" secondItem="BLl-e1-X7J" secondAttribute="centerY" id="pqu-Fu-qeH"/>
+                            <constraint firstItem="5Zi-Bi-ccc" firstAttribute="trailing" secondItem="MTP-Xg-BHi" secondAttribute="trailing" id="t63-8l-Jc5"/>
                             <constraint firstItem="m1m-Ca-GrS" firstAttribute="top" secondItem="Ha3-Eg-1Ge" secondAttribute="bottom" constant="8" id="tMh-Cg-vUL"/>
+                            <constraint firstItem="xAi-c0-1ql" firstAttribute="trailing" secondItem="bLD-GN-25S" secondAttribute="trailing" id="uLP-PL-CSb"/>
                             <constraint firstItem="Ha3-Eg-1Ge" firstAttribute="top" secondItem="BLl-e1-X7J" secondAttribute="bottom" constant="25" id="wDU-Mo-JW4"/>
+                            <constraint firstItem="5Zi-Bi-ccc" firstAttribute="centerY" secondItem="MTP-Xg-BHi" secondAttribute="centerY" id="wVK-dA-nVX"/>
                             <constraint firstAttribute="trailing" secondItem="0oZ-qo-RDa" secondAttribute="trailing" constant="32" id="zrh-hI-OjH"/>
                         </constraints>
                     </view>
@@ -239,7 +267,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ee-3f-hXp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1318" y="115"/>
+            <point key="canvasLocation" x="1317.5999999999999" y="114.69265367316342"/>
         </scene>
     </scenes>
     <resources>

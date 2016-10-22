@@ -26,7 +26,7 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	[self configureTextfieldDelegate];
-	
+	[self addHideKeyboardRecognizer];
 	self.title = @"Выдать займ";
 	
 	self.monthlyCheckbox.hidden = NO;
@@ -101,6 +101,15 @@
 								 completion:completion];
 }
 
+- (void)addHideKeyboardRecognizer {
+	UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)];
+	[self.view addGestureRecognizer:recognizer];
+}
+
+- (void)hideKeyboard {
+	[self.view endEditing:YES];
+}
+
 #pragma mark - Делегаты для текстфилда
 
 - (void)configureTextfieldDelegate {
@@ -154,6 +163,8 @@
 	
 	return YES;
 }
+
+
 
 - (BOOL)allFieldsCompleted {
 	if (self.loanAmountTextfield.text.length == 0 ||

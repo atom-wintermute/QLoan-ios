@@ -22,7 +22,7 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	[self configureTextfieldDelegate];
-	
+	[self addHideKeyboardRecognizer];
 	self.title = @"Получить займ";
 	
 	self.monthlyCheckbox.hidden = NO;
@@ -51,12 +51,20 @@
 	self.onceCheckbox.hidden = NO;
 }
 
+- (void)addHideKeyboardRecognizer {
+	UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)];
+	[self.view addGestureRecognizer:recognizer];
+}
+
+- (void)hideKeyboard {
+	[self.view endEditing:YES];
+}
+
 #pragma mark - Создание заявки
 
 - (void)createOrder {
 	if (self.loanAmountTextfield.text.length == 0 ||
 		self.loanPeriodTextfield.text.length == 0 ||
-		self.loanPenaltyTextfield.text.length == 0 ||
 		self.percentageTextfield.text.length == 0) {
 		return;
 	}
@@ -64,7 +72,6 @@
 	QLBorrowerOrder *order = [QLBorrowerOrder new];
 	order.loanAmount = [self.loanAmountTextfield.text integerValue];
 	order.percentage = [self.percentageTextfield.text integerValue];
-	order.penalty = [self.loanPenaltyTextfield.text integerValue];
 	order.loanMaturityPeriod = [self.loanPeriodTextfield.text integerValue];
 	if (self.monthlyCheckbox.hidden) {
 		order.repaymentType = QLMonthly;
@@ -85,7 +92,6 @@
 - (void)configureTextfieldDelegate {
 	self.loanAmountTextfield.delegate = self;
 	self.loanPeriodTextfield.delegate = self;
-	self.loanPenaltyTextfield.delegate = self;
 	self.percentageTextfield.delegate = self;
 }
 
@@ -101,11 +107,6 @@
 					  inTextfield:textField];
 	}
 	if (textField == self.percentageTextfield) {
-		return [self validateText:string
-						 maxChars:2
-					  inTextfield:textField];
-	}
-	if (textField == self.loanPenaltyTextfield) {
 		return [self validateText:string
 						 maxChars:2
 					  inTextfield:textField];

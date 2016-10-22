@@ -20,7 +20,6 @@
 @property (weak, nonatomic) IBOutlet QLUnderlinedTextfield *loanAmountTextfield;
 @property (weak, nonatomic) IBOutlet QLUnderlinedTextfield *percentageTextfield;
 @property (weak, nonatomic) IBOutlet QLUnderlinedTextfield *loanPeriodTextfield;
-@property (weak, nonatomic) IBOutlet QLUnderlinedTextfield *loanPenaltyTextfield;
 @property (weak, nonatomic) IBOutlet UIImageView *monthlyCheckbox;
 @property (weak, nonatomic) IBOutlet UIImageView *onceCheckbox;
 

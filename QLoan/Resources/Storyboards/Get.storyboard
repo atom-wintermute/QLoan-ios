@@ -20,7 +20,7 @@
         <scene sceneID="ADj-mP-e96">
             <objects>
                 <navigationController navigationBarHidden="YES" id="n5Q-ec-i2S" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hWP-Ud-HL3">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="hWP-Ud-HL3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -95,24 +95,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Сумма займа" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fdF-HY-B9Q" customClass="QLUnderlinedTextfield">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fdF-HY-B9Q" customClass="QLUnderlinedTextfield">
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Процент" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yjN-Lf-V4C" customClass="QLUnderlinedTextfield">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yjN-Lf-V4C" customClass="QLUnderlinedTextfield">
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Срок займа" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ibl-hd-Yul" customClass="QLUnderlinedTextfield">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ibl-hd-Yul" customClass="QLUnderlinedTextfield">
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Неустойка" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="6zD-cQ-TwW" customClass="QLUnderlinedTextfield">
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Порядок погашения" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="be2-ua-5o9">
@@ -164,34 +159,52 @@
                                     <action selector="createLoan:" destination="DEy-KW-oYb" eventType="touchUpInside" id="FVh-81-Yoy"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="сумма, ₽" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pmr-vd-6ll">
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEg-yl-XuC">
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="срок, дн." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icj-Oy-Zkd">
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="MEg-yl-XuC" firstAttribute="trailing" secondItem="yjN-Lf-V4C" secondAttribute="trailing" id="2Vh-RM-bDG"/>
                             <constraint firstAttribute="trailing" secondItem="yjN-Lf-V4C" secondAttribute="trailing" constant="32" id="2sJ-gi-Cqh"/>
                             <constraint firstItem="cIp-1b-kkC" firstAttribute="top" secondItem="fcm-R0-dJK" secondAttribute="bottom" constant="20" id="4KA-Ly-BZp"/>
                             <constraint firstItem="mz8-hX-3MJ" firstAttribute="centerY" secondItem="gvs-ji-Lz7" secondAttribute="centerY" id="7QJ-7z-5V1"/>
-                            <constraint firstAttribute="trailing" secondItem="6zD-cQ-TwW" secondAttribute="trailing" constant="32" id="AaD-Mp-T7g"/>
-                            <constraint firstItem="tw6-pQ-Gti" firstAttribute="trailing" secondItem="6zD-cQ-TwW" secondAttribute="trailing" id="BC8-2s-p2A"/>
+                            <constraint firstItem="icj-Oy-Zkd" firstAttribute="trailing" secondItem="ibl-hd-Yul" secondAttribute="trailing" id="7r7-OY-9oa"/>
+                            <constraint firstItem="icj-Oy-Zkd" firstAttribute="centerY" secondItem="ibl-hd-Yul" secondAttribute="centerY" id="9Hi-dz-S6K"/>
                             <constraint firstItem="be2-ua-5o9" firstAttribute="leading" secondItem="fW7-qr-MDF" secondAttribute="leading" constant="32" id="BQe-LX-nSu"/>
                             <constraint firstItem="yHy-6E-KDe" firstAttribute="leading" secondItem="fW7-qr-MDF" secondAttribute="leading" constant="32" id="E7i-x0-zxb"/>
                             <constraint firstItem="tw6-pQ-Gti" firstAttribute="centerY" secondItem="yHy-6E-KDe" secondAttribute="centerY" id="G8t-Oo-Xsn"/>
+                            <constraint firstItem="Pmr-vd-6ll" firstAttribute="centerY" secondItem="fdF-HY-B9Q" secondAttribute="centerY" id="Htn-sX-az9"/>
                             <constraint firstItem="yHy-6E-KDe" firstAttribute="top" secondItem="gvs-ji-Lz7" secondAttribute="bottom" constant="8" id="LPj-ls-HUa"/>
                             <constraint firstItem="gvs-ji-Lz7" firstAttribute="top" secondItem="be2-ua-5o9" secondAttribute="bottom" constant="16" id="PeN-Az-l0J"/>
                             <constraint firstItem="yjN-Lf-V4C" firstAttribute="top" secondItem="fdF-HY-B9Q" secondAttribute="bottom" constant="32" id="Roh-zn-KdG"/>
                             <constraint firstAttribute="bottom" secondItem="jE2-3Y-YAR" secondAttribute="bottom" constant="18" id="SEy-Mq-nNh"/>
+                            <constraint firstItem="be2-ua-5o9" firstAttribute="top" secondItem="ibl-hd-Yul" secondAttribute="bottom" constant="46" id="TC2-Ev-jQH"/>
                             <constraint firstItem="gvs-ji-Lz7" firstAttribute="leading" secondItem="fW7-qr-MDF" secondAttribute="leading" constant="32" id="Wff-tG-pu5"/>
                             <constraint firstItem="fdF-HY-B9Q" firstAttribute="top" secondItem="cIp-1b-kkC" secondAttribute="bottom" constant="32" id="WkQ-yn-J5i"/>
-                            <constraint firstItem="mz8-hX-3MJ" firstAttribute="trailing" secondItem="6zD-cQ-TwW" secondAttribute="trailing" id="YGV-n5-1rX"/>
-                            <constraint firstItem="be2-ua-5o9" firstAttribute="top" secondItem="6zD-cQ-TwW" secondAttribute="bottom" constant="46" id="a8i-d6-5Z1"/>
+                            <constraint firstItem="Pmr-vd-6ll" firstAttribute="trailing" secondItem="fdF-HY-B9Q" secondAttribute="trailing" id="XLl-Fa-jhD"/>
                             <constraint firstAttribute="trailing" secondItem="fdF-HY-B9Q" secondAttribute="trailing" constant="32" id="bSG-OJ-6DY"/>
                             <constraint firstItem="fdF-HY-B9Q" firstAttribute="leading" secondItem="fW7-qr-MDF" secondAttribute="leading" constant="32" id="cKo-dE-ldO"/>
                             <constraint firstItem="ibl-hd-Yul" firstAttribute="top" secondItem="yjN-Lf-V4C" secondAttribute="bottom" constant="32" id="fO0-if-D1j"/>
+                            <constraint firstItem="mz8-hX-3MJ" firstAttribute="trailing" secondItem="ibl-hd-Yul" secondAttribute="trailing" id="gBj-Cb-gg6"/>
+                            <constraint firstItem="tw6-pQ-Gti" firstAttribute="trailing" secondItem="mz8-hX-3MJ" secondAttribute="trailing" id="gPq-Db-2Ac"/>
                             <constraint firstAttribute="trailing" secondItem="ibl-hd-Yul" secondAttribute="trailing" constant="32" id="hHB-A0-hZ1"/>
                             <constraint firstItem="ibl-hd-Yul" firstAttribute="leading" secondItem="fW7-qr-MDF" secondAttribute="leading" constant="32" id="jt1-WR-WSx"/>
                             <constraint firstItem="cIp-1b-kkC" firstAttribute="leading" secondItem="fW7-qr-MDF" secondAttribute="leading" constant="32" id="kQO-Gx-LE1"/>
-                            <constraint firstItem="6zD-cQ-TwW" firstAttribute="leading" secondItem="fW7-qr-MDF" secondAttribute="leading" constant="32" id="keB-n2-NLi"/>
-                            <constraint firstItem="6zD-cQ-TwW" firstAttribute="top" secondItem="ibl-hd-Yul" secondAttribute="bottom" constant="32" id="rWN-vQ-BZv"/>
                             <constraint firstAttribute="trailing" secondItem="cIp-1b-kkC" secondAttribute="trailing" constant="32" id="y1r-ln-rJ2"/>
+                            <constraint firstItem="MEg-yl-XuC" firstAttribute="centerY" secondItem="yjN-Lf-V4C" secondAttribute="centerY" id="yNV-Wa-2kM"/>
                             <constraint firstItem="yjN-Lf-V4C" firstAttribute="leading" secondItem="fW7-qr-MDF" secondAttribute="leading" constant="32" id="yPu-07-U13"/>
                             <constraint firstItem="jE2-3Y-YAR" firstAttribute="centerX" secondItem="fW7-qr-MDF" secondAttribute="centerX" id="zJw-ej-bPK"/>
                         </constraints>
@@ -199,7 +212,6 @@
                     <connections>
                         <outlet property="createOrderButton" destination="jE2-3Y-YAR" id="vac-hr-88i"/>
                         <outlet property="loanAmountTextfield" destination="fdF-HY-B9Q" id="VSK-aI-M9V"/>
-                        <outlet property="loanPenaltyTextfield" destination="6zD-cQ-TwW" id="SJB-hi-1oD"/>
                         <outlet property="loanPeriodTextfield" destination="ibl-hd-Yul" id="VVR-wS-ESW"/>
                         <outlet property="monthlyCheckbox" destination="mz8-hX-3MJ" id="hSM-Tx-TZd"/>
                         <outlet property="onceCheckbox" destination="tw6-pQ-Gti" id="Ud1-Ml-7xq"/>
