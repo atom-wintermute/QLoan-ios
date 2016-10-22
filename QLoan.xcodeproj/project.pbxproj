@@ -145,6 +145,11 @@
 		D86147B31DBAA6A30018D19C /* QLMyOrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86147B21DBAA6A30018D19C /* QLMyOrdersViewController.m */; };
 		D86147B71DBAA6D90018D19C /* QLMyOrdersAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = D86147B61DBAA6D90018D19C /* QLMyOrdersAssembly.m */; };
 		D871285C1DBAE6C400A45405 /* QLVerifyPhoneAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = D871285B1DBAE6C400A45405 /* QLVerifyPhoneAssembly.m */; };
+		D8732F8A1DBBBB9500530CC0 /* QLMyOrdersCellFactoryImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = D8732F891DBBBB9500530CC0 /* QLMyOrdersCellFactoryImplementation.m */; };
+		D8732F8F1DBBBD0500530CC0 /* QLMyOrdersDataDisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D8732F8E1DBBBD0500530CC0 /* QLMyOrdersDataDisplayManager.m */; };
+		D8732F951DBBBE3800530CC0 /* QLMyOrdersOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8732F931DBBBE3800530CC0 /* QLMyOrdersOrderCell.m */; };
+		D8732F961DBBBE3800530CC0 /* QLMyOrdersOrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8732F941DBBBE3800530CC0 /* QLMyOrdersOrderCell.xib */; };
+		D8732F991DBBBE8A00530CC0 /* QLMyOrdersOrderCellObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D8732F981DBBBE8A00530CC0 /* QLMyOrdersOrderCellObject.m */; };
 		D874A6481DBB5CCC0043B0E6 /* UIButton+Enable.m in Sources */ = {isa = PBXBuildFile; fileRef = D874A6471DBB5CCC0043B0E6 /* UIButton+Enable.m */; };
 		D874A64C1DBB62040043B0E6 /* UIAlertController+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = D874A64B1DBB62040043B0E6 /* UIAlertController+Extensions.m */; };
 		D874A6501DBB67240043B0E6 /* QLRegisterAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = D874A64F1DBB67240043B0E6 /* QLRegisterAssembly.m */; };
@@ -463,6 +468,16 @@
 		D86147B61DBAA6D90018D19C /* QLMyOrdersAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLMyOrdersAssembly.m; path = Classes/UserInterface/Controllers/MyOrders/Assembly/QLMyOrdersAssembly.m; sourceTree = "<group>"; };
 		D871285A1DBAE6C400A45405 /* QLVerifyPhoneAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLVerifyPhoneAssembly.h; path = Classes/UserInterface/Controllers/VerifyPhone/Assembly/QLVerifyPhoneAssembly.h; sourceTree = "<group>"; };
 		D871285B1DBAE6C400A45405 /* QLVerifyPhoneAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLVerifyPhoneAssembly.m; path = Classes/UserInterface/Controllers/VerifyPhone/Assembly/QLVerifyPhoneAssembly.m; sourceTree = "<group>"; };
+		D8732F881DBBBB9500530CC0 /* QLMyOrdersCellFactoryImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLMyOrdersCellFactoryImplementation.h; path = Classes/UserInterface/Controllers/MyOrders/Factory/QLMyOrdersCellFactoryImplementation.h; sourceTree = "<group>"; };
+		D8732F891DBBBB9500530CC0 /* QLMyOrdersCellFactoryImplementation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLMyOrdersCellFactoryImplementation.m; path = Classes/UserInterface/Controllers/MyOrders/Factory/QLMyOrdersCellFactoryImplementation.m; sourceTree = "<group>"; };
+		D8732F8B1DBBBC6400530CC0 /* QLMyOrdersCellFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = QLMyOrdersCellFactory.h; path = Classes/UserInterface/Controllers/MyOrders/Factory/QLMyOrdersCellFactory.h; sourceTree = "<group>"; };
+		D8732F8D1DBBBD0500530CC0 /* QLMyOrdersDataDisplayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLMyOrdersDataDisplayManager.h; path = Classes/UserInterface/Controllers/MyOrders/DDM/QLMyOrdersDataDisplayManager.h; sourceTree = "<group>"; };
+		D8732F8E1DBBBD0500530CC0 /* QLMyOrdersDataDisplayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLMyOrdersDataDisplayManager.m; path = Classes/UserInterface/Controllers/MyOrders/DDM/QLMyOrdersDataDisplayManager.m; sourceTree = "<group>"; };
+		D8732F921DBBBE3800530CC0 /* QLMyOrdersOrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLMyOrdersOrderCell.h; path = Classes/UserInterface/Controllers/MyOrders/Cells/OrderCell/QLMyOrdersOrderCell.h; sourceTree = "<group>"; };
+		D8732F931DBBBE3800530CC0 /* QLMyOrdersOrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLMyOrdersOrderCell.m; path = Classes/UserInterface/Controllers/MyOrders/Cells/OrderCell/QLMyOrdersOrderCell.m; sourceTree = "<group>"; };
+		D8732F941DBBBE3800530CC0 /* QLMyOrdersOrderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QLMyOrdersOrderCell.xib; path = Classes/UserInterface/Controllers/MyOrders/Cells/OrderCell/QLMyOrdersOrderCell.xib; sourceTree = "<group>"; };
+		D8732F971DBBBE8A00530CC0 /* QLMyOrdersOrderCellObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLMyOrdersOrderCellObject.h; path = Classes/UserInterface/Controllers/MyOrders/Cells/OrderCell/QLMyOrdersOrderCellObject.h; sourceTree = "<group>"; };
+		D8732F981DBBBE8A00530CC0 /* QLMyOrdersOrderCellObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLMyOrdersOrderCellObject.m; path = Classes/UserInterface/Controllers/MyOrders/Cells/OrderCell/QLMyOrdersOrderCellObject.m; sourceTree = "<group>"; };
 		D874A6461DBB5CCC0043B0E6 /* UIButton+Enable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIButton+Enable.h"; path = "Extensions/UIButton/UIButton+Enable.h"; sourceTree = "<group>"; };
 		D874A6471DBB5CCC0043B0E6 /* UIButton+Enable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+Enable.m"; path = "Extensions/UIButton/UIButton+Enable.m"; sourceTree = "<group>"; };
 		D874A64A1DBB62040043B0E6 /* UIAlertController+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIAlertController+Extensions.h"; path = "Extensions/UIAlertController/UIAlertController+Extensions.h"; sourceTree = "<group>"; };
@@ -1479,6 +1494,9 @@
 			isa = PBXGroup;
 			children = (
 				D86147B41DBAA6B30018D19C /* Assembly */,
+				D8732F901DBBBD8100530CC0 /* Cells */,
+				D8732F8C1DBBBCC000530CC0 /* DDM */,
+				D8732F871DBBBB6D00530CC0 /* Factory */,
 				D86147B11DBAA6A30018D19C /* QLMyOrdersViewController.h */,
 				D86147B21DBAA6A30018D19C /* QLMyOrdersViewController.m */,
 			);
@@ -1501,6 +1519,45 @@
 				D871285B1DBAE6C400A45405 /* QLVerifyPhoneAssembly.m */,
 			);
 			name = Assembly;
+			sourceTree = "<group>";
+		};
+		D8732F871DBBBB6D00530CC0 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				D8732F8B1DBBBC6400530CC0 /* QLMyOrdersCellFactory.h */,
+				D8732F881DBBBB9500530CC0 /* QLMyOrdersCellFactoryImplementation.h */,
+				D8732F891DBBBB9500530CC0 /* QLMyOrdersCellFactoryImplementation.m */,
+			);
+			name = Factory;
+			sourceTree = "<group>";
+		};
+		D8732F8C1DBBBCC000530CC0 /* DDM */ = {
+			isa = PBXGroup;
+			children = (
+				D8732F8D1DBBBD0500530CC0 /* QLMyOrdersDataDisplayManager.h */,
+				D8732F8E1DBBBD0500530CC0 /* QLMyOrdersDataDisplayManager.m */,
+			);
+			name = DDM;
+			sourceTree = "<group>";
+		};
+		D8732F901DBBBD8100530CC0 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D8732F911DBBBE0F00530CC0 /* OrderCell */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		D8732F911DBBBE0F00530CC0 /* OrderCell */ = {
+			isa = PBXGroup;
+			children = (
+				D8732F921DBBBE3800530CC0 /* QLMyOrdersOrderCell.h */,
+				D8732F931DBBBE3800530CC0 /* QLMyOrdersOrderCell.m */,
+				D8732F941DBBBE3800530CC0 /* QLMyOrdersOrderCell.xib */,
+				D8732F971DBBBE8A00530CC0 /* QLMyOrdersOrderCellObject.h */,
+				D8732F981DBBBE8A00530CC0 /* QLMyOrdersOrderCellObject.m */,
+			);
+			name = OrderCell;
 			sourceTree = "<group>";
 		};
 		D874A6451DBB5C8F0043B0E6 /* UIButton */ = {
@@ -2035,6 +2092,7 @@
 				D88102211DBA8EBB0066C442 /* img11@2x.png in Resources */,
 				D881021B1DBA8EBB0066C442 /* img8@2x.png in Resources */,
 				D86147871DBA9CD00018D19C /* img_14@3x.png in Resources */,
+				D8732F961DBBBE3800530CC0 /* QLMyOrdersOrderCell.xib in Resources */,
 				D86147851DBA9CD00018D19C /* img_13@3x.png in Resources */,
 				D881020F1DBA8EBB0066C442 /* img2@2x.png in Resources */,
 				D86147821DBA9CD00018D19C /* img_12@2x.png in Resources */,
@@ -2124,6 +2182,7 @@
 				9EFF73911DB3B64C004873A6 /* QLAuthorizationService.m in Sources */,
 				D8328F651DBA78C800438D4A /* QLOffsetCellObject.m in Sources */,
 				9ECC12D81DBA906300E33288 /* QLBlueGradientButton.m in Sources */,
+				D8732F8F1DBBBD0500530CC0 /* QLMyOrdersDataDisplayManager.m in Sources */,
 				D8328F4A1DBA2D4300438D4A /* QLBankCardRequestFactoryImplementation.m in Sources */,
 				9E64B7F91DBB90580033969D /* QLOrderInfo.m in Sources */,
 				9EFF73F11DB416AE004873A6 /* QLJSONSerializer.m in Sources */,
@@ -2139,6 +2198,7 @@
 				9EFF73E91DB40EC1004873A6 /* QLNetworkClient.m in Sources */,
 				D8A9AC1E1DBB9F5C0029545C /* QLAddCardAssembly.m in Sources */,
 				D8328F461DBA2B9300438D4A /* QLBankAuthRequestFactoryImplementation.m in Sources */,
+				D8732F951DBBBE3800530CC0 /* QLMyOrdersOrderCell.m in Sources */,
 				D8A9AC1B1DBB9F4F0029545C /* QLAddCardViewController.m in Sources */,
 				9EFF73DD1DB3F94C004873A6 /* QLRequestFactory.m in Sources */,
 				9ECC12CA1DBA284300E33288 /* QLDateFormatter.m in Sources */,
@@ -2200,6 +2260,8 @@
 				D8328F4F1DBA6D8A00438D4A /* QLProfileCardCell.m in Sources */,
 				D835BD1A1DB97DCA00F2FF0F /* QLBankUserInfo.m in Sources */,
 				D835BCD31DB9747500F2FF0F /* NSMutableArray+RDSNilFilter.m in Sources */,
+				D8732F8A1DBBBB9500530CC0 /* QLMyOrdersCellFactoryImplementation.m in Sources */,
+				D8732F991DBBBE8A00530CC0 /* QLMyOrdersOrderCellObject.m in Sources */,
 				D8328F731DBA7F4F00438D4A /* QLLendDataDisplayManager.m in Sources */,
 				9E2F67061DBB6DCC00081C05 /* QLOrderStatusParser.m in Sources */,
 				D8328F6F1DBA7D1F00438D4A /* QLLendAssembly.m in Sources */,
