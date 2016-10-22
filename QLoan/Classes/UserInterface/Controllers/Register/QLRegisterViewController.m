@@ -7,8 +7,10 @@
 //
 
 #import "QLRegisterViewController.h"
-
+#import "QLRegistrationRequestConfiguration.h"
 #import "QLBankAuthService.h"
+#import "QLAuthorizationService.h"
+#import "QLStorage.h"
 
 static NSString * const QLRegisterOfferSegue = @"registerOfferSegue";
 
@@ -62,24 +64,55 @@ static NSString * const QLRegisterOfferSegue = @"registerOfferSegue";
 #pragma mark - Приватные методы
 
 - (void)changePassword {
+	QLBankAuthCompletion bankAuthCompletion = ^(BOOL success, NSError *error) {
+		if (!success) {
+			[self registrationSuccessful:NO
+								   error:error];
+		} else {
+			
+		}
+	};
+	
     [self.bankAuthService changePasswordWithPassword:self.passwordTextField.text
-                                          completion:^(BOOL success, NSError *error) {
-                                              if (success) {
-                                                  [self.bankAuthService updateCurrentUserDataWithCompletion:nil];
-                                                  [self performSegueWithIdentifier:QLRegisterOfferSegue
-                                                                            sender:self];
-                                              } else {
-                                                  UIAlertController *alerController;
-                                                  if (21 == error.code) {
-                                                      alerController = [UIAlertController errorAlertControllerWithTitle:@"Неверный формат пароля"];
-                                                  } else {
-                                                      alerController = [UIAlertController standartErrorAlertController];
-                                                  }
-                                                  [self presentViewController:alerController
-                                                                     animated:YES
-                                                                   completion:nil];
-                                              }
-                                          }];
+                                          completion:bankAuthCompletion];
+}
+
+- (void)registerWithLocalBackend {
+	NSString *login = (NSString *)[self.storage loadObjectForKey:@"login"];
+	
+	QLRegistrationRequestConfiguration *configuration =
+	[[QLRegistrationRequestConfiguration alloc] initWithLogin:login
+													 password:self.passwordTextField.text
+													firstName:self.firstNameTextField.text
+													 lastName:self.secondNameTextField.text
+												   parentName:self.secondNameTextField.text];
+	
+	QLBooleanCompletion completion = ^(BOOL success, NSError *error) {
+		[self registrationSuccessful:success
+							   error:error];
+	};
+	[self.authorizationService registerWithConfiguration:configuration
+											  completion:completion];
+}
+
+- (void)registrationSuccessful:(BOOL)success
+						 error:(NSError *)error {
+	if (success) {
+		[self.bankAuthService updateCurrentUserDataWithCompletion:nil];
+		[self performSegueWithIdentifier:QLRegisterOfferSegue
+								  sender:self];
+	} else {
+		UIAlertController *alerController;
+		if (21 == error.code) {
+			alerController = [UIAlertController errorAlertControllerWithTitle:@"Неверный формат пароля"];
+		} else {
+			alerController = [UIAlertController standartErrorAlertController];
+		}
+		[self presentViewController:alerController
+						   animated:YES
+						 completion:nil];
+
+	}
 }
 
 - (void)configureAppearance {

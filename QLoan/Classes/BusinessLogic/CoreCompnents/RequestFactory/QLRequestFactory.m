@@ -16,25 +16,29 @@
 @implementation QLRequestFactory
 
 - (NSURLRequest *)requestForRegistrationWithConfiguration:(QLRegistrationRequestConfiguration *)configuration {
-	NSDictionary *dictionary = @{
-								 @"login" : configuration.login,
-								 @"password" : configuration.password,
-								 @"password_confirmation" : configuration.password,
-								 @"first_name" : configuration.firstName,
-								 @"last_name" : configuration.lastName,
-								 @"parent_name" : configuration.parentName
-								 };
+	NSData *token = (NSData *)[self.keychainStorage loadObjectForKey:@"pushToken"];
+	NSMutableDictionary *dictionary = [@{
+										@"login" : configuration.login,
+										@"password" : configuration.password,
+										@"password_confirmation" : configuration.password,
+										@"first_name" : configuration.firstName,
+										@"last_name" : configuration.lastName,
+										@"parent_name" : configuration.parentName
+										} mutableCopy];
+	dictionary[@"push_token"] = token;
 	return [self postRequestWithPath:@"auth/"
-						  parameters:dictionary];
+						  parameters:[dictionary copy]];
 }
 
 - (NSURLRequest *)requestForAuthorizationWithConfiguration:(QLAuthorizationRequestConfiguration *)configuration {
-	NSDictionary *dictionary = @{
-								 @"login" : configuration.login,
-								 @"password" : configuration.password
-								 };
+	NSData *token = (NSData *)[self.keychainStorage loadObjectForKey:@"pushToken"];
+	NSMutableDictionary *dictionary = [@{
+										 @"login" : configuration.login,
+										 @"password" : configuration.password
+										 } mutableCopy];
+	dictionary[@"push_token"] = token;
 	return [self postRequestWithPath:@"auth/sign_in/"
-						  parameters:dictionary];
+						  parameters:[dictionary copy]];
 }
 
 #pragma mark - Мои заявки

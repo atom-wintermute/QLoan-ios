@@ -46,8 +46,8 @@
 						 completion:networkCompletion];
 }
 
-- (void)authorizeWithCompletion:(QLBooleanCompletion)completion {
-	QLAuthorizationRequestConfiguration *configuration = [self.storage authorizationConfigurationForCurrentUser];
+- (void)authorizeWithConfiguration:(QLAuthorizationRequestConfiguration *)configuration
+						completion:(QLBooleanCompletion)completion {
 	NSURLRequest *request = [self.requestFactory requestForAuthorizationWithConfiguration:configuration];
 	__weak typeof (self) weakSelf = self;
 	

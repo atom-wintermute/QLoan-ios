@@ -38,6 +38,7 @@
 /**
  Метод signIn
  */
-- (void)authorizeWithCompletion:(QLBooleanCompletion)completion;
+- (void)authorizeWithConfiguration:(QLAuthorizationRequestConfiguration *)configuration
+						completion:(QLBooleanCompletion)completion;
 
 @end

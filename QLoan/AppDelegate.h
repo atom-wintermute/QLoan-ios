@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol QLStorage;
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) id<QLStorage> storage;
 
 - (NSArray *)initialAssemblies;
 

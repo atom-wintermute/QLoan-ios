@@ -13,4 +13,7 @@
 @property (nonatomic, copy) NSString *login;
 @property (nonatomic, copy) NSString *password;
 
+- (instancetype)initWithLogin:(NSString *)login
+					 password:(NSString *)password;
+
 @end

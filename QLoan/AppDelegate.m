@@ -23,6 +23,7 @@
 #import "QLRegisterAssembly.h"
 #import "QLCreateBorrowerOrderAssembly.h"
 #import "QLCreateLenderOrderAssembly.h"
+#import "ApplicationAssembly.h"
 
 #import <RamblerTyphoonUtils/AssemblyCollector.h>
 
@@ -42,6 +43,7 @@
 
 - (NSArray *)initialAssemblies {
 	return @[
+			 [ApplicationAssembly class],
 			 [QLCoreComponentsAssembly class],
 			 [QLServicesAssembly class],
 			 [QLTestAssembly class],
@@ -114,6 +116,8 @@
     
     // register for push notifications!
     [[PushNotificationManager pushManager] registerForPushNotifications];
+	[self.storage storeObject:[[PushNotificationManager pushManager] getPushToken]
+					   forKey:@"pushToken"];
     NSLog(@"push token = %@", [[PushNotificationManager pushManager] getPushToken]);
 }
 

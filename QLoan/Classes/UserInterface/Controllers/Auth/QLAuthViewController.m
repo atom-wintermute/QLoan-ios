@@ -11,6 +11,8 @@
 #import "QLBankAuthService.h"
 #import "QLBankCardService.h"
 #import "QLAuthorizationService.h"
+#import "QLAuthorizationRequestConfiguration.h"
+#import "QLStorage.h"
 
 static NSString * const QLAuthRegisterSegue = @"registerSegue";
 
@@ -67,7 +69,12 @@ static NSString * const QLAuthRegisterSegue = @"registerSegue";
 	
 	QLBankAuthCompletion bankAuthLoginCompletion = ^(BOOL success, NSError *error) {
 		if (success) {
-			[self.authorizationService authorizeWithCompletion:localAuthCompletion];
+			QLAuthorizationRequestConfiguration *configuration = [[QLAuthorizationRequestConfiguration alloc]
+																  initWithLogin:self.loginTextField.text
+																  password:self.passwordTextField.text];
+			
+			[self.authorizationService authorizeWithConfiguration:configuration
+													   completion:localAuthCompletion];
 		} else {
 			[self showErrorAlert];
 		}
@@ -79,6 +86,8 @@ static NSString * const QLAuthRegisterSegue = @"registerSegue";
 }
 
 - (void)registerButtonWasPressed:(id)sender {
+	[self.storage storeObject:self.loginTextField.text
+					   forKey:@"login"];
     [self performSegueWithIdentifier:QLAuthRegisterSegue
                               sender:self];
 }

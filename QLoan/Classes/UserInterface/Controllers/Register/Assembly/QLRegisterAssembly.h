@@ -10,10 +10,12 @@
 
 @class QLServicesAssembly;
 @class QLRegisterViewController;
+@class QLCoreComponentsAssembly;
 
 @interface QLRegisterAssembly : TyphoonAssembly
 
 @property (nonatomic, strong, readonly) QLServicesAssembly *serviceAssembly;
+@property (nonatomic, strong, readonly) QLCoreComponentsAssembly *coreAssembly;
 
 - (QLRegisterViewController *)registerViewController;
 
