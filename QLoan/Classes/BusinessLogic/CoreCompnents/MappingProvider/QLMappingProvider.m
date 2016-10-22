@@ -18,6 +18,8 @@
 #import "QLPayment.h"
 #import "QLPaymentSchedule.h"
 #import "QLUserInfo.h"
+#import "QLRepaymentTypeParser.h"
+#import "QLOrderStatusParser.h"
 
 @implementation QLMappingProvider
 
@@ -29,11 +31,27 @@
 										   @"lender_id" : @"lenderId",
 										   @"loan_maturity_period" : @"loanMaturityPeriod",
 										   @"loan_amount" : @"loanAmount",
-										   @"perecentage" : @"perecentage",
-										   @"penalty" : @"penalty",
-										   @"repayment_type" : @"repaymentType",
-										   @"status": @"status"
+										   @"percentage" : @"percentage",
+										   @"penalty" : @"penalty"
 										   }];
+		[mapping mapKey:@"repayment_type"
+				toField:@"repaymentType"
+		 withValueBlock:^id(NSString *key, id value) {
+			 if (![value isKindOfClass:[NSString class]]) {
+				 return nil;
+			 }
+			 QLRepaymentType type = [QLRepaymentTypeParser repaymentTypeFromDescription:(NSString *)value];
+			 return @(type);
+		 }];
+		[mapping mapKey:@"status"
+				toField:@"status"
+		 withValueBlock:^id(NSString *key, id value) {
+			 if (![value isKindOfClass:[NSString class]]) {
+				 return nil;
+			 }
+			 QLBorrowerOrderStatus status = [QLOrderStatusParser statusFromDescription:(NSString *)value];
+			 return @(status);
+		 }];
 	}];
 }
 

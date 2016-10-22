@@ -62,7 +62,7 @@
 	
 	QLBorrowerOrder *order = [QLBorrowerOrder new];
 	order.loanAmount = [self.loanAmountTextfield.text integerValue];
-	order.perecentage = [self.percentageTextfield.text integerValue];
+	order.percentage = [self.percentageTextfield.text integerValue];
 	order.penalty = [self.loanPenaltyTextfield.text integerValue];
 	order.loanMaturityPeriod = [self.loanPeriodTextfield.text integerValue];
 	if (self.monthlyCheckbox.hidden) {

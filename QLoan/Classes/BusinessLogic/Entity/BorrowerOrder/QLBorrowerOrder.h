@@ -16,7 +16,7 @@
 @property (nonatomic, assign) NSInteger lenderId;
 @property (nonatomic, assign) NSInteger loanMaturityPeriod;
 @property (nonatomic, assign) float loanAmount;
-@property (nonatomic, assign) float perecentage;
+@property (nonatomic, assign) float percentage;
 @property (nonatomic, assign) float penalty;
 @property (nonatomic, assign) QLRepaymentType repaymentType;
 @property (nonatomic, assign) QLBorrowerOrderStatus status;

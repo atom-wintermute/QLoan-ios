@@ -21,23 +21,10 @@
 }
 
 - (NSArray<QLBorrowerOrder *> *)mapBorrowerOrdersFromResponseObject:(id)responseObject {
-	
-	if ([responseObject isKindOfClass:[NSDictionary class]]) {
-		NSDictionary *responseDictionary = responseObject;
-		
-		if ([responseDictionary[@"orders"] isKindOfClass:[NSArray class]]) {
-			NSArray *objects = responseDictionary[@"orders"];
-			NSMutableArray *mappedArray = [NSMutableArray array];
-		
-			[objects enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
-				QLBorrowerOrder *order = [self mapBorrowerOrderFromResponseObject:object];
-				if (order != nil) {
-					[mappedArray addObject:order];
-				}
-			}];
-			
-			return [mappedArray copy];
-		}
+	if ([responseObject isKindOfClass:[NSArray class]]) {
+		NSArray *responseArray = (NSArray *)responseObject;
+		return [EKMapper arrayOfObjectsFromExternalRepresentation:responseArray
+													  withMapping:[self.mappingProvider borrowerOrderMapping]];
 	}
 	return nil;
 }

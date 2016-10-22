@@ -23,7 +23,7 @@
 	return @{
 			 @"loan_maturity_period" : @(borrowerOrder.loanMaturityPeriod),
 			 @"loan_amount" : @(borrowerOrder.loanAmount),
-			 @"perecentage" : @(borrowerOrder.perecentage),
+			 @"percentage" : @(borrowerOrder.percentage),
 			 @"penalty" : @(borrowerOrder.penalty),
 			 @"repayment_type" : [QLRepaymentTypeParser descriptionFromRepaymentType:borrowerOrder.repaymentType],
 			 @"status": @"active"
@@ -34,7 +34,7 @@
 	return @{
 			 @"loan_maturity_period" : @(lenderOrder.loanMaturityPeriod),
 			 @"loan_amount" : @(lenderOrder.loanAmount),
-			 @"perecentage" : @(lenderOrder.perecentage),
+			 @"percentage" : @(lenderOrder.perecentage),
 			 @"penalty" : @(lenderOrder.penalty),
 			 @"repayment_type" : [QLRepaymentTypeParser descriptionFromRepaymentType:lenderOrder.repaymentType],
 			 @"status": @"active"
