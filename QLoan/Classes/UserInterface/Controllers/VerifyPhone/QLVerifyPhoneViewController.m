@@ -7,7 +7,7 @@
 //
 
 #import "QLVerifyPhoneViewController.h"
-
+#import "QLStorage.h"
 #import "QLBankAuthService.h"
 
 static NSString * const QLVerifyRegisterSegue = @"registerSegue";

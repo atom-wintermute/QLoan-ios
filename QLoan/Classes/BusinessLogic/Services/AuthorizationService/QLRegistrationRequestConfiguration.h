@@ -17,4 +17,10 @@
 @property (nonatomic, copy) NSString *lastName;
 @property (nonatomic, copy) NSString *parentName;
 
+- (instancetype)initWithLogin:(NSString *)login
+					 password:(NSString *)password
+					firstName:(NSString *)firstName
+					 lastName:(NSString *)lastName
+				   parentName:(NSString *)parentName;
+
 @end

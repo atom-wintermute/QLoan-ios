@@ -9,7 +9,7 @@
 #import "QLAuthAssembly.h"
 
 #import "QLServicesAssembly.h"
-
+#import "QLCoreComponentsAssembly.h"
 #import "QLAuthViewController.h"
 
 @implementation QLAuthAssembly
@@ -23,6 +23,8 @@
                                                     with:[self.serviceAssembly bankCardService]];
 							  [definition injectProperty:@selector(authorizationService)
 													with:[self.serviceAssembly authorizationService]];
+							  [definition injectProperty:@selector(storage)
+													with:[self.coreAssembly inMemoryStorage]];
 
                           }];
 }

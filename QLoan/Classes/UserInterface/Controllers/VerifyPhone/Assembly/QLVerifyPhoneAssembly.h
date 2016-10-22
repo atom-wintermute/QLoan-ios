@@ -10,10 +10,12 @@
 
 @class QLServicesAssembly;
 @class QLVerifyPhoneViewController;
+@class QLCoreComponentsAssembly;
 
 @interface QLVerifyPhoneAssembly : TyphoonAssembly
 
 @property (nonatomic, strong, readonly) QLServicesAssembly *serviceAssembly;
+@property (nonatomic, strong, readonly) QLCoreComponentsAssembly *coreAssembly;
 
 - (QLVerifyPhoneViewController *)verifyPhoneViewController;
 

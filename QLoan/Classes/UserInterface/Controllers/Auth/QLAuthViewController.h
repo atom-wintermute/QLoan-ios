@@ -10,6 +10,7 @@
 
 @protocol QLBankAuthService;
 @protocol QLBankCardService;
+@protocol QLStorage;
 
 @class QLAuthorizationService;
 
@@ -26,6 +27,7 @@
 
 @property (nonatomic, strong) id<QLBankAuthService> bankAuthService;
 @property (nonatomic, strong) id<QLBankCardService> bankCardService;
+@property (nonatomic, strong) id<QLStorage> storage;
 
 @property (nonatomic, strong) QLAuthorizationService *authorizationService;
 

@@ -10,4 +10,15 @@
 
 @implementation QLAuthorizationRequestConfiguration
 
+- (instancetype)initWithLogin:(NSString *)login
+					 password:(NSString *)password {
+	self = [super init];
+	if (self) {
+		_login = login;
+		_password = password;
+	}
+	
+	return self;
+}
+
 @end

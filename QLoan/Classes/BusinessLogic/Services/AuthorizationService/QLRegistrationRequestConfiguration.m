@@ -10,4 +10,21 @@
 
 @implementation QLRegistrationRequestConfiguration
 
+- (instancetype)initWithLogin:(NSString *)login
+					 password:(NSString *)password
+					firstName:(NSString *)firstName
+					 lastName:(NSString *)lastName
+				   parentName:(NSString *)parentName {
+	self = [super init];
+	if (self) {
+		_login = login;
+		_password = password;
+		_firstName = firstName;
+		_lastName = lastName;
+		_parentName = parentName;
+	}
+	
+	return self;
+}
+
 @end

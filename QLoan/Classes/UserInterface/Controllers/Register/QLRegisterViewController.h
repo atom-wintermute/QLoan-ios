@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @protocol QLBankAuthService;
+@protocol QLStorage;
+@class QLAuthorizationService;
 
 /**
  Контроллер регистрации - ввода данных нового пользователя
@@ -24,6 +26,8 @@
 @property (nonatomic, weak) IBOutlet UIButton *continueButton;
 
 @property (nonatomic, strong) id<QLBankAuthService> bankAuthService;
+@property (nonatomic, strong) QLAuthorizationService *authorizationService;
+@property (nonatomic, strong) id<QLStorage> storage;
 
 - (IBAction)dataWasChanged:(id)sender;
 

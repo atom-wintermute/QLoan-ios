@@ -7,7 +7,7 @@
 //
 
 #import "QLRegisterPhoneViewContoller.h"
-
+#import "QLStorage.h"
 #import "QLBankAuthService.h"
 
 static NSString * const QLRegisterVerifyPhoneSegue = @"verifyCodeSegue";
@@ -37,6 +37,8 @@ static NSUInteger const QLRegisterPhoneLenght = 13;
     [self.bankAuthService registerWithPhoneNumber:phoneNumberWithoutPrefix
                                        completion:^(BOOL success, NSError *error) {
                                            if (success) {
+											   [self.storage storeObject:phoneNumberWithoutPrefix
+																  forKey:@"login"];
                                                [self performSegueWithIdentifier:QLRegisterVerifyPhoneSegue
                                                                          sender:self];
                                            } else {
