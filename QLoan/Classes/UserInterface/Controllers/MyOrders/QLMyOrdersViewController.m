@@ -15,7 +15,6 @@
 #import "QLBorrowerOrder.h"
 #import "QLOrderInfo.h"
 
-
 #import "QLUserInfoService.h"
 
 @interface QLMyOrdersViewController () <UITableViewDelegate>
@@ -112,8 +111,6 @@
 			} else {
 				userInfoCompletion(nil, nil);
 			}
-			
-			
 		}
 	};
 	

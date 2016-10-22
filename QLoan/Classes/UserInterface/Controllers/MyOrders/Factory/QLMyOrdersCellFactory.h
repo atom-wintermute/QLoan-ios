@@ -12,6 +12,8 @@
 
 - (NSArray *)cellObjects;
 
-- (NSArray *)cellObjectsFromOrders:(NSArray *)orders;
+- (NSArray *)cellObjectsFromMyBorrowerOrders:(NSArray *)orders;
+
+- (NSArray *)cellObjectsFromMyLenderOrders:(NSArray *)orders;
 
 @end

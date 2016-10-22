@@ -11,6 +11,7 @@
 #import "QLMyOrdersCellFactory.h"
 #import "QLBorrowerOrder.h"
 #import "QLMyOrdersOrderCellObject.h"
+#import "QLOrderInfo.h"
 
 @implementation QLMyOrdersCellFactoryImplementation
 
@@ -68,6 +69,38 @@
 		
 	}
 	return nil;
+}
+
+- (NSArray *)cellObjectsFromMyBorrowerOrders:(NSArray *)orders {
+	NSMutableArray *cellObjects = [NSMutableArray new];
+	
+	for (QLOrderInfo *order in orders) {
+		QLMyOrdersOrderCellObject *cellObject = [QLMyOrdersOrderCellObject new];
+		cellObject.percentString = [NSString stringWithFormat:@"%d%% в месяц", (int)order.order.percentage];
+		NSString *formattedString = [QLMoneyFormatter numberStringForMoneyFromValue:@((long)order.order.loanAmount)];
+		cellObject.sumString = [NSString stringWithFormat:@"%@ ₽/", formattedString];
+		cellObject.nameString = order.user == nil ? @"Нет займодавца" : [NSString stringWithFormat:@"%@ %@", order.user.firstName, order.user.lastName];
+		
+		[cellObjects addObject:cellObject];
+	}
+	
+	return [cellObjects copy];
+}
+
+- (NSArray *)cellObjectsFromMyLenderOrders:(NSArray *)orders {
+	NSMutableArray *cellObjects = [NSMutableArray new];
+	
+	for (QLOrderInfo *order in orders) {
+		QLMyOrdersOrderCellObject *cellObject = [QLMyOrdersOrderCellObject new];
+		cellObject.percentString = [NSString stringWithFormat:@"%d%% в месяц", (int)order.order.percentage];
+		NSString *formattedString = [QLMoneyFormatter numberStringForMoneyFromValue:@((long)order.order.loanAmount)];
+		cellObject.sumString = [NSString stringWithFormat:@"%@ ₽/", formattedString];
+		cellObject.nameString = order.user == nil ? @"Нет заемщика" : [NSString stringWithFormat:@"%@ %@", order.user.firstName, order.user.lastName];
+		
+		[cellObjects addObject:cellObject];
+	}
+	
+	return [cellObjects copy];
 }
 
 @end
