@@ -12,6 +12,10 @@
 
 @interface QLAddCardViewController : UIViewController
 
+@property (nonatomic, weak) IBOutlet UIButton *saveButton;
+
 @property (nonatomic, strong) id<QLBankCardService> bankCardService;
+
+- (IBAction)saveButtonWasPressed:(id)sender;
 
 @end

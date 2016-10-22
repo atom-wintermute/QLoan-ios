@@ -16,6 +16,8 @@
 
 @implementation QLAddCardViewController
 
+#pragma mark - Жизненный цикл
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -23,11 +25,19 @@
     [self configureAppearance];
 }
 
+#pragma mark - IBActions
+
+- (void)saveButtonWasPressed:(id)sender {
+    
+}
+
 #pragma mark - Приватные методы
 
 - (void)configureAppearance {
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor blackColor]}];
     self.navigationItem.title = @"Добавить карту";
+    
+    [self.saveButton activate:NO];
 }
 
 @end
