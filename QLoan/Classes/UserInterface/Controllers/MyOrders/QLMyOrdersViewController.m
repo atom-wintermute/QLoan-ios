@@ -11,6 +11,8 @@
 #import "QLMyOrdersCellFactory.h"
 #import "QLPersonalCabinetService.h"
 #import "QLMyOrdersDataDisplayManager.h"
+#import "QLMyOrdersOrderCellObject.h"
+#import "QLOrderDetailViewController.h"
 #import "ServicesConstants.h"
 #import "QLBorrowerOrder.h"
 #import "QLOrderInfo.h"
@@ -145,6 +147,21 @@
 											   sortMethod:QLSortByRating
 												ascending:YES
 											   completion:borrowerCompletion];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	QLMyOrdersOrderCellObject *object = [self.dataDisplayManager objectAtIndexPath:indexPath];
+	if (object != nil) {
+		QLOrderInfo *orderInfo = object.orderInfo;
+		UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Get"
+															 bundle:[NSBundle mainBundle]];
+		QLOrderDetailViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"QLOrderDetailViewController"];
+		if (controller != nil) {
+			controller.orderInfo = orderInfo;
+			[self.navigationController pushViewController:controller
+												 animated:YES];
+		}
+	}
 }
 
 @end

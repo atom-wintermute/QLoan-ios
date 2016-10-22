@@ -108,7 +108,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	QLLendOrderCellObject *object = [self.dataDisplayManager objectAtIndexPath:indexPath];
+	
 	if (object != nil) {
+		
 		QLOrderInfo *orderInfo = object.orderInfo;
 		UIStoryboard *storyboard = self.storyboard;
 		QLOrderDetailViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"QLOrderDetailViewController"];

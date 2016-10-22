@@ -106,8 +106,6 @@
 							   animated:YES
 							 completion:nil];
 		}
-		
-		
 	};
 	
 	[self.lenderOrderService addLenderOrder:order

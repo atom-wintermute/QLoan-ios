@@ -102,6 +102,7 @@
 				break;
 		}
 
+		cellObject.orderInfo = order;
 		
 		[cellObjects addObject:cellObject];
 	}
@@ -139,6 +140,8 @@
 			default:
 				break;
 		}
+		
+		cellObject.orderInfo = order;
 		
 		[cellObjects addObject:cellObject];
 	}

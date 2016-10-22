@@ -10,6 +10,8 @@
 
 #import <Nimbus/NimbusModels.h>
 
+#import "QLOrderInfo.h"
+
 @interface QLMyOrdersOrderCellObject : NSObject <NICellObject, NINibCellObject>
 
 @property (nonatomic, strong) NSString *sumString;
@@ -17,5 +19,6 @@
 @property (nonatomic, strong) NSString *nameString;
 @property (nonatomic, strong) NSString *statusString;
 @property (nonatomic) BOOL  showCheckMark;
+@property (nonatomic, strong) QLOrderInfo *orderInfo;
 
 @end
