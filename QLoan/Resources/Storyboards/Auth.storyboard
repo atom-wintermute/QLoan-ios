@@ -21,7 +21,7 @@
             <objects>
                 <navigationController id="U8e-nV-q2t" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="1E2-69-ZUO">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1E2-69-ZUO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -229,13 +229,6 @@
                                             <constraint firstAttribute="height" constant="96" id="nFL-cM-1oI"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JF0-5M-Au2">
-                                        <string key="text">Получайте деньги
-и зарабатывайте, давая взаймы </string>
-                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="18"/>
-                                        <color key="textColor" red="0.2196078431372549" green="0.2196078431372549" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="siV-mS-BZQ" userLabel="loginContainerView">
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Номер телефона" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g4Q-fr-eK8">
@@ -367,16 +360,13 @@
                                     <constraint firstAttribute="trailing" secondItem="mxg-Wn-TTr" secondAttribute="trailing" constant="7" id="AJf-vn-1Vd"/>
                                     <constraint firstItem="mxg-Wn-TTr" firstAttribute="top" secondItem="siV-mS-BZQ" secondAttribute="bottom" constant="12" id="GgK-xM-oGQ"/>
                                     <constraint firstItem="IhA-fY-97V" firstAttribute="centerX" secondItem="GmZ-8y-ZP4" secondAttribute="centerX" id="Ph9-0w-TLZ"/>
-                                    <constraint firstItem="JF0-5M-Au2" firstAttribute="top" secondItem="BKd-5M-sl4" secondAttribute="bottom" constant="32" id="WsC-N9-IgE"/>
-                                    <constraint firstItem="JF0-5M-Au2" firstAttribute="leading" secondItem="GmZ-8y-ZP4" secondAttribute="leading" id="blg-2g-LZv"/>
                                     <constraint firstItem="BKd-5M-sl4" firstAttribute="top" secondItem="GmZ-8y-ZP4" secondAttribute="top" constant="118" id="h3c-81-WZB"/>
+                                    <constraint firstItem="siV-mS-BZQ" firstAttribute="top" secondItem="BKd-5M-sl4" secondAttribute="bottom" constant="131" id="i2B-9Y-rYC"/>
                                     <constraint firstAttribute="width" constant="270" id="ifr-hd-9Wq"/>
                                     <constraint firstAttribute="trailing" secondItem="rcf-7i-qZT" secondAttribute="trailing" constant="7" id="qho-2b-z1J"/>
                                     <constraint firstItem="IhA-fY-97V" firstAttribute="top" secondItem="rcf-7i-qZT" secondAttribute="bottom" constant="24" id="t3j-ec-que"/>
-                                    <constraint firstAttribute="trailing" secondItem="JF0-5M-Au2" secondAttribute="trailing" id="xqd-RT-IhO"/>
                                     <constraint firstItem="rcf-7i-qZT" firstAttribute="leading" secondItem="GmZ-8y-ZP4" secondAttribute="leading" constant="7" id="yc4-b1-ejD"/>
                                     <constraint firstItem="siV-mS-BZQ" firstAttribute="leading" secondItem="GmZ-8y-ZP4" secondAttribute="leading" constant="8" id="zBO-3i-OXa"/>
-                                    <constraint firstItem="siV-mS-BZQ" firstAttribute="top" secondItem="JF0-5M-Au2" secondAttribute="bottom" constant="56" id="zG3-JS-KJE"/>
                                 </constraints>
                             </view>
                         </subviews>
