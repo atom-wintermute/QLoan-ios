@@ -39,6 +39,7 @@
     [cellObjects addObject:cardOffsetCellObject];
     
     QLProfileAddCardCellObject *addCardCellObject = [QLProfileAddCardCellObject new];
+    addCardCellObject.delegate = delegate;
     [cellObjects addObject:addCardCellObject];
     
     if (cardList.count) {

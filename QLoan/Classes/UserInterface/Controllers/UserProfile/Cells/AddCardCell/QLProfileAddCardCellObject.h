@@ -10,6 +10,10 @@
 
 #import <Nimbus/NimbusModels.h>
 
+@protocol QLProfileViewDelegate;
+
 @interface QLProfileAddCardCellObject : NSObject <NICellObject, NINibCellObject>
+
+@property (nonatomic, weak) id<QLProfileViewDelegate> delegate;
 
 @end

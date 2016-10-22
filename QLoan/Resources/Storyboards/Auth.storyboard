@@ -614,7 +614,9 @@
                             <constraint firstItem="8Ie-fF-twq" firstAttribute="top" secondItem="9dc-uF-rv6" secondAttribute="bottom" constant="40" id="mpT-sG-hlk"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="VUd-jg-MYV"/>
+                    <navigationItem key="navigationItem" id="VUd-jg-MYV">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="G4b-jQ-w3E"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="continueButton" destination="8Ie-fF-twq" id="sOr-gp-iLa"/>
                         <outlet property="emailTextField" destination="Vxp-0Y-Zhp" id="dIc-bD-G8Y"/>

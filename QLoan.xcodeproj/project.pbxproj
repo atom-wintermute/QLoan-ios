@@ -186,6 +186,8 @@
 		D89655541DB8260C00DE4C66 /* SF-UI-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D89655501DB8260C00DE4C66 /* SF-UI-Display-Bold.otf */; };
 		D89655581DB8319900DE4C66 /* QLRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89655571DB8319900DE4C66 /* QLRegisterViewController.m */; };
 		D89655601DB8C39900DE4C66 /* QLAuthAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = D896555F1DB8C39900DE4C66 /* QLAuthAssembly.m */; };
+		D8A9AC1B1DBB9F4F0029545C /* QLAddCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A9AC1A1DBB9F4F0029545C /* QLAddCardViewController.m */; };
+		D8A9AC1E1DBB9F5C0029545C /* QLAddCardAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A9AC1D1DBB9F5C0029545C /* QLAddCardAssembly.m */; };
 		D8B0284C1DBB85C400C9D47D /* QLProfileLogoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B0284A1DBB85C400C9D47D /* QLProfileLogoutCell.m */; };
 		D8B0284D1DBB85C400C9D47D /* QLProfileLogoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8B0284B1DBB85C400C9D47D /* QLProfileLogoutCell.xib */; };
 		D8B028501DBB85DB00C9D47D /* QLProfileLogoutCellObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B0284F1DBB85DB00C9D47D /* QLProfileLogoutCellObject.m */; };
@@ -506,6 +508,10 @@
 		D89655571DB8319900DE4C66 /* QLRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLRegisterViewController.m; path = Classes/UserInterface/Controllers/Register/QLRegisterViewController.m; sourceTree = "<group>"; };
 		D896555E1DB8C39900DE4C66 /* QLAuthAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLAuthAssembly.h; path = Classes/UserInterface/Controllers/Auth/Assembly/QLAuthAssembly.h; sourceTree = "<group>"; };
 		D896555F1DB8C39900DE4C66 /* QLAuthAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLAuthAssembly.m; path = Classes/UserInterface/Controllers/Auth/Assembly/QLAuthAssembly.m; sourceTree = "<group>"; };
+		D8A9AC191DBB9F4F0029545C /* QLAddCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLAddCardViewController.h; path = Classes/UserInterface/Controllers/AddCard/QLAddCardViewController.h; sourceTree = "<group>"; };
+		D8A9AC1A1DBB9F4F0029545C /* QLAddCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLAddCardViewController.m; path = Classes/UserInterface/Controllers/AddCard/QLAddCardViewController.m; sourceTree = "<group>"; };
+		D8A9AC1C1DBB9F5C0029545C /* QLAddCardAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLAddCardAssembly.h; path = Classes/UserInterface/Controllers/AddCard/Assembly/QLAddCardAssembly.h; sourceTree = "<group>"; };
+		D8A9AC1D1DBB9F5C0029545C /* QLAddCardAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLAddCardAssembly.m; path = Classes/UserInterface/Controllers/AddCard/Assembly/QLAddCardAssembly.m; sourceTree = "<group>"; };
 		D8B028491DBB85C400C9D47D /* QLProfileLogoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLProfileLogoutCell.h; path = LogoutCell/QLProfileLogoutCell.h; sourceTree = "<group>"; };
 		D8B0284A1DBB85C400C9D47D /* QLProfileLogoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLProfileLogoutCell.m; path = LogoutCell/QLProfileLogoutCell.m; sourceTree = "<group>"; };
 		D8B0284B1DBB85C400C9D47D /* QLProfileLogoutCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QLProfileLogoutCell.xib; path = LogoutCell/QLProfileLogoutCell.xib; sourceTree = "<group>"; };
@@ -1629,6 +1635,7 @@
 		D89655431DB8234E00DE4C66 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D8A9AC111DBB9C8D0029545C /* AddCard */,
 				9ECC12DD1DBAA08500E33288 /* CreateOrder */,
 				D89655471DB8238300DE4C66 /* Auth */,
 				D86147961DBA9E800018D19C /* Get */,
@@ -1682,6 +1689,25 @@
 			children = (
 				D896555E1DB8C39900DE4C66 /* QLAuthAssembly.h */,
 				D896555F1DB8C39900DE4C66 /* QLAuthAssembly.m */,
+			);
+			name = Assembly;
+			sourceTree = "<group>";
+		};
+		D8A9AC111DBB9C8D0029545C /* AddCard */ = {
+			isa = PBXGroup;
+			children = (
+				D8A9AC151DBB9EDD0029545C /* Assembly */,
+				D8A9AC191DBB9F4F0029545C /* QLAddCardViewController.h */,
+				D8A9AC1A1DBB9F4F0029545C /* QLAddCardViewController.m */,
+			);
+			name = AddCard;
+			sourceTree = "<group>";
+		};
+		D8A9AC151DBB9EDD0029545C /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				D8A9AC1C1DBB9F5C0029545C /* QLAddCardAssembly.h */,
+				D8A9AC1D1DBB9F5C0029545C /* QLAddCardAssembly.m */,
 			);
 			name = Assembly;
 			sourceTree = "<group>";
@@ -2082,7 +2108,9 @@
 				D8328F6B1DBA7CAB00438D4A /* QLLendViewController.m in Sources */,
 				9EFF74061DB42925004873A6 /* QLTestAssembly.m in Sources */,
 				9EFF73E91DB40EC1004873A6 /* QLNetworkClient.m in Sources */,
+				D8A9AC1E1DBB9F5C0029545C /* QLAddCardAssembly.m in Sources */,
 				D8328F461DBA2B9300438D4A /* QLBankAuthRequestFactoryImplementation.m in Sources */,
+				D8A9AC1B1DBB9F4F0029545C /* QLAddCardViewController.m in Sources */,
 				9EFF73DD1DB3F94C004873A6 /* QLRequestFactory.m in Sources */,
 				9ECC12CA1DBA284300E33288 /* QLDateFormatter.m in Sources */,
 				D8F9D7B21DAFD2FC000371CA /* AppDelegate.m in Sources */,

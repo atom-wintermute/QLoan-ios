@@ -19,6 +19,8 @@
 
 #import "QLBankUserInfo.h"
 
+static NSString * const QLProfileAddCardSegue = @"profileAddCardSegue";
+
 @interface QLProfileViewController () <UITableViewDelegate, QLProfileViewDelegate>
 
 @property (nonatomic, strong) QLProfileDataDisplayManager *dataDisplayManager;
@@ -27,12 +29,20 @@
 
 @implementation QLProfileViewController
 
+#pragma mark - Жизненный цикл
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
     self.navigationItem.title = @"Мой профиль";
     [self configureView];
+}
+
+#pragma mark - Внешний вид
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 #pragma mark - Приватные методы
@@ -73,6 +83,11 @@
             [tabBarController showLoginScreen:YES];
         }
     }];
+}
+
+- (void)addCardButtonWasPressed {
+    [self performSegueWithIdentifier:QLProfileAddCardSegue
+                              sender:self];
 }
 
 @end

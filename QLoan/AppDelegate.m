@@ -20,6 +20,7 @@
 #import "QLRegisterAssembly.h"
 #import "QLCreateBorrowerOrderAssembly.h"
 #import "QLCreateLenderOrderAssembly.h"
+#import "QLAddCardAssembly.h"
 
 #import <RamblerTyphoonUtils/AssemblyCollector.h>
 
@@ -46,7 +47,8 @@
              [QLMyOrdersAssembly class],
              [QLRegisterPhoneAssembly class],
              [QLVerifyPhoneAssembly class],
-             [QLRegisterAssembly class]
+             [QLRegisterAssembly class],
+             [QLAddCardAssembly class]
 			 ];
 }
 

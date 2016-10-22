@@ -18,7 +18,7 @@
             <objects>
                 <navigationController navigationBarHidden="YES" id="vFx-7T-Uqk" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KkW-ib-Rqr">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="KkW-ib-Rqr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -192,17 +192,38 @@
                             <constraint firstItem="409-0C-4VI" firstAttribute="centerX" secondItem="ati-P4-HIR" secondAttribute="centerX" id="olG-Pv-2RF"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="aQv-c1-s4T"/>
+                    <navigationItem key="navigationItem" id="aQv-c1-s4T">
+                        <barButtonItem key="backBarButtonItem" title="Отмена" id="Tca-vL-NmD"/>
+                    </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="headerView" destination="v5g-u8-s4w" id="33z-zM-Fvj"/>
                         <outlet property="tableView" destination="Sbm-ds-4zh" id="QbR-Wz-Tcu"/>
                         <outlet property="usernameLabel" destination="h9Z-Yt-Joo" id="w74-Ja-4uo"/>
+                        <segue destination="t3L-6Q-wfC" kind="show" identifier="profileAddCardSegue" id="NVc-T3-p8i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bKX-uf-6aO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="656.79999999999995" y="99.400299850074973"/>
+        </scene>
+        <!--Add Card View Controller-->
+        <scene sceneID="FfN-3O-ODP">
+            <objects>
+                <viewController storyboardIdentifier="QLAddCardViewController" id="t3L-6Q-wfC" customClass="QLAddCardViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WnV-wo-gZJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="toR-Rq-QIy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JFv-eZ-Vvd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EZl-NT-VOM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1574" y="99"/>
         </scene>
     </scenes>
     <resources>

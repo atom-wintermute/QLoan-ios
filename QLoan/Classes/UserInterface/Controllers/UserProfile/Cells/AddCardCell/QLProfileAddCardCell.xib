@@ -32,6 +32,9 @@
                         <state key="normal" title="Добавить">
                             <color key="titleColor" red="0.043137254901960784" green="0.76078431372549016" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
+                        <connections>
+                            <action selector="addCardButtonWasPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Mp3-Ry-qJA"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>

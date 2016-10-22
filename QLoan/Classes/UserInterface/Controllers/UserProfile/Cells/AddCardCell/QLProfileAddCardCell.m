@@ -10,9 +10,13 @@
 
 #import "QLProfileAddCardCellObject.h"
 
+#import "QLProfileViewDelegate.h"
+
 static CGFloat const QLProfileAddCardCellHeight = 44.0;
 
 @implementation QLProfileAddCardCell
+
+#pragma mark - Жизненный цикл
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -22,7 +26,11 @@ static CGFloat const QLProfileAddCardCellHeight = 44.0;
     self.selectedBackgroundView = view;
 }
 
+#pragma mark - NICell
+
 - (BOOL)shouldUpdateCellWithObject:(QLProfileAddCardCellObject *)object {
+    self.delegate = object.delegate;
+    
     return YES;
 }
 
@@ -30,6 +38,12 @@ static CGFloat const QLProfileAddCardCellHeight = 44.0;
                atIndexPath:(NSIndexPath *)indexPath
                  tableView:(UITableView *)tableView {
     return QLProfileAddCardCellHeight;
+}
+
+#pragma mark - Методы интерфейса
+
+- (void)addCardButtonWasPressed:(id)sender {
+    [self.delegate addCardButtonWasPressed];
 }
 
 @end

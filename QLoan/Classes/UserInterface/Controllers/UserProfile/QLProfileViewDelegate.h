@@ -10,4 +10,6 @@
 
 - (void)logoutButtonWasPressed;
 
+- (void)addCardButtonWasPressed;
+
 @end
