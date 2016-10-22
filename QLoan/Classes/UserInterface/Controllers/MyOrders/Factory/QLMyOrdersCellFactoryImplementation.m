@@ -81,6 +81,28 @@
 		cellObject.sumString = [NSString stringWithFormat:@"%@ ₽/", formattedString];
 		cellObject.nameString = order.user == nil ? @"Нет займодавца" : [NSString stringWithFormat:@"%@ %@", order.user.firstName, order.user.lastName];
 		
+		switch (order.order.status) {
+			case QLBorrowerOrderStatusActive:
+				cellObject.statusString = @"Активна";
+				cellObject.showCheckMark = NO;
+				break;
+			case QLBorrowerOrderStatusRequested:
+				cellObject.statusString = @"Запрос";
+				cellObject.showCheckMark = YES;
+				break;
+			case QLBorrowerOrderStatusStarted:
+				cellObject.statusString = @"Займ получен";
+				cellObject.showCheckMark = YES;
+				break;
+			case QLBorrowerOrderStatusFinished:
+				cellObject.statusString = @"Погашен";
+				cellObject.showCheckMark = NO;
+				break;
+			default:
+				break;
+		}
+
+		
 		[cellObjects addObject:cellObject];
 	}
 	
@@ -96,6 +118,27 @@
 		NSString *formattedString = [QLMoneyFormatter numberStringForMoneyFromValue:@((long)order.order.loanAmount)];
 		cellObject.sumString = [NSString stringWithFormat:@"%@ ₽/", formattedString];
 		cellObject.nameString = order.user == nil ? @"Нет заемщика" : [NSString stringWithFormat:@"%@ %@", order.user.firstName, order.user.lastName];
+		
+		switch (order.order.status) {
+			case QLBorrowerOrderStatusActive:
+				cellObject.statusString = @"Активна";
+				cellObject.showCheckMark = NO;
+				break;
+			case QLBorrowerOrderStatusRequested:
+				cellObject.statusString = @"Запрос";
+				cellObject.showCheckMark = YES;
+				break;
+			case QLBorrowerOrderStatusStarted:
+				cellObject.statusString = @"Займ выдан";
+				cellObject.showCheckMark = YES;
+				break;
+			case QLBorrowerOrderStatusFinished:
+				cellObject.statusString = @"Погашен";
+				cellObject.showCheckMark = NO;
+				break;
+			default:
+				break;
+		}
 		
 		[cellObjects addObject:cellObject];
 	}

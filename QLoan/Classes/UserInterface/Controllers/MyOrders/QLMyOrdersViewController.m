@@ -37,14 +37,19 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [self showData];
+  //  [self showData];
 	[self loadData];
 }
 
 #pragma mark - Приватные методы
 
 - (void)showData {
-    NSArray *cellObjects = [self.cellFactory cellObjects];
+	NSMutableArray *cellObjects = self.myLenderOrderInfos == nil ?
+	[NSMutableArray new] : [[self.cellFactory cellObjectsFromMyLenderOrders:self.myLenderOrderInfos] mutableCopy];
+	if (self.myBorrowerOrderInfos != nil) [cellObjects addObjectsFromArray:[self.cellFactory cellObjectsFromMyBorrowerOrders:self.myBorrowerOrderInfos]];
+	
+	if (cellObjects.count == 0) return;
+	
     self.dataDisplayManager =  [[QLMyOrdersDataDisplayManager alloc] initWithInputData:cellObjects
                                                        andConversionToCellObjectsBlock:^id(id dataObject) {
                                                            return dataObject;
@@ -96,7 +101,7 @@
 			for (QLBorrowerOrder *order in orders) {
 				QLOrderInfo *info = [QLOrderInfo new];
 				info.order = order;
-				[infoArray addObject:info];
+				[lendersInfoArray addObject:info];
 				
 				if (order.borrowerId != 0 && ![idsArray containsObject:@(order.borrowerId)]) {
 					[idsArray addObject:@(order.borrowerId)];
