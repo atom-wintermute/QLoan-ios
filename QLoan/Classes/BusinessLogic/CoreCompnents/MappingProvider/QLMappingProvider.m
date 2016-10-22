@@ -145,7 +145,7 @@
 - (EKObjectMapping *)userInfoMapping {
 	return [EKObjectMapping mappingForClass:[QLUserInfo class] withBlock:^(EKObjectMapping *mapping) {
 		[mapping mapFieldsFromDictionary:@{
-										   @"user_id": @"userId",
+										   @"id": @"userId",
 										   @"rating" : @"rating",
 										   @"loans_taken_amount" : @"loansTakenAmount",
 										   @"loans_given_amount" : @"loansGivenAmount",
