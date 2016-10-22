@@ -13,6 +13,10 @@
 @class QLOrderInfo;
 
 @interface QLOrderDetailViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIImageView *photoImage;
+@property (weak, nonatomic) IBOutlet UIImageView *fakeImageView;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (nonatomic, strong) id<QLStorage> storage;
 @property (nonatomic, strong) QLOrderInfo *orderInfo;

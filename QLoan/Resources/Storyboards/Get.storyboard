@@ -228,7 +228,7 @@
         <!--Order Detail View Controller-->
         <scene sceneID="Dg7-LZ-Duh">
             <objects>
-                <viewController storyboardIdentifier="QLOrderDetailViewController" id="SY9-Tc-xZ5" customClass="QLOrderDetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QLOrderDetailViewController" hidesBottomBarWhenPushed="YES" id="SY9-Tc-xZ5" customClass="QLOrderDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7IQ-ss-o3K"/>
                         <viewControllerLayoutGuide type="bottom" id="n9P-N7-ish"/>
@@ -291,9 +291,13 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdb-S9-EkJ" customClass="QLBlueGradientButton">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="312" id="PZy-dQ-1fM"/>
+                                    <constraint firstAttribute="height" constant="48" id="tHn-dM-gFs"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
                                 <state key="normal" title="Запросить займ"/>
+                                <connections>
+                                    <action selector="requestLoan:" destination="SY9-Tc-xZ5" eventType="touchUpInside" id="e77-zl-xxi"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mx7-tT-RZc">
                                 <constraints>
@@ -303,6 +307,9 @@
                                 <state key="normal" title="Отменить">
                                     <color key="titleColor" red="0.0039215686269999999" green="0.0039215686269999999" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="declineLoan:" destination="SY9-Tc-xZ5" eventType="touchUpInside" id="YMG-uI-B2f"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -315,15 +322,21 @@
                             <constraint firstItem="1fw-Lz-gMv" firstAttribute="centerX" secondItem="Q55-tU-oJd" secondAttribute="centerX" id="U5Q-bb-pcI"/>
                             <constraint firstItem="KkF-1f-H6a" firstAttribute="leading" secondItem="Q55-tU-oJd" secondAttribute="leading" id="WNf-6S-Gwd"/>
                             <constraint firstItem="1fw-Lz-gMv" firstAttribute="top" secondItem="vd8-Sy-98h" secondAttribute="bottom" constant="8" id="dyw-HG-ood"/>
-                            <constraint firstItem="wdb-S9-EkJ" firstAttribute="top" secondItem="KkF-1f-H6a" secondAttribute="bottom" constant="47" id="iG1-1M-m7H"/>
                             <constraint firstItem="dBt-ad-g8t" firstAttribute="centerX" secondItem="Q55-tU-oJd" secondAttribute="centerX" id="lar-E9-tHO"/>
                             <constraint firstItem="vd8-Sy-98h" firstAttribute="top" secondItem="7IQ-ss-o3K" secondAttribute="bottom" constant="26" id="mst-lR-dvA"/>
+                            <constraint firstAttribute="bottom" secondItem="Mx7-tT-RZc" secondAttribute="bottom" constant="12" id="oJY-JW-cBT"/>
                             <constraint firstItem="M9x-Se-JmW" firstAttribute="centerY" secondItem="vd8-Sy-98h" secondAttribute="centerY" constant="-25" id="rBq-Ga-yP7"/>
                             <constraint firstItem="Mx7-tT-RZc" firstAttribute="top" secondItem="wdb-S9-EkJ" secondAttribute="bottom" constant="19" id="rhV-nK-nHN"/>
                             <constraint firstItem="KkF-1f-H6a" firstAttribute="top" secondItem="dBt-ad-g8t" secondAttribute="bottom" constant="34" id="wAh-dL-USV"/>
                             <constraint firstItem="M9x-Se-JmW" firstAttribute="centerX" secondItem="vd8-Sy-98h" secondAttribute="centerX" constant="25" id="zVk-hk-g1D"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="fakeImageView" destination="xa8-1T-ZJB" id="RTi-vr-8Jd"/>
+                        <outlet property="nameLabel" destination="1fw-Lz-gMv" id="Q80-pa-v6T"/>
+                        <outlet property="photoImage" destination="vd8-Sy-98h" id="siQ-Gm-mKf"/>
+                        <outlet property="tableView" destination="KkF-1f-H6a" id="JL3-Ii-xCB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eq3-yQ-aLV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

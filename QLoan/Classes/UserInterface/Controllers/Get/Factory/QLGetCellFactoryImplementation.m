@@ -51,6 +51,8 @@
 		cellObject.percentString = [NSString stringWithFormat:@"%d%% в месяц", (int)orderInfo.order.percentage];
 		cellObject.orderInfo = orderInfo;
 		
+		cellObject.orderInfo.photoInfo = cellObject.photoNameString;
+		
 		NSMutableString *name = [orderInfo.user.lastName mutableCopy];
 		NSString *lastNames = [NSString stringWithFormat:@" %@. %@.", [orderInfo.user.firstName substringToIndex:1], [orderInfo.user.lastName substringToIndex:1]];
 		[name appendString:lastNames];
