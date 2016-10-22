@@ -23,6 +23,27 @@
                                                error:NULL];
 }
 
+- (NSURLRequest *)requestForAddBankCardWithSessionId:(NSString *)sessionId
+                                                 pan:(NSString *)pan
+                                                 cvc:(NSString *)cvc
+                                          expiryDate:(NSString *)expiryDate
+                                        mnemonicName:(NSString *)mnemonicName {
+    NSString *path = QLBankCreateVerifyPayment;
+    NSDictionary *parameters = @{
+                                 @"sessionId": sessionId,
+                                 @"isMobile": @YES,
+                                 @"pan": pan,
+                                 @"cvc": cvc,
+                                 @"expiry": expiryDate,
+                                 @"mnemonic": mnemonicName
+                                 };
+    
+    return [self.requestSerializer requestWithMethod:QLPostRequestMethodKey
+                                           URLString:[self urlStringWithPath:path]
+                                          parameters:parameters
+                                               error:NULL];
+}
+
 #pragma mark - Приватные методы
 
 - (NSString *)urlStringWithPath:(NSString *)path {

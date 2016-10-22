@@ -253,6 +253,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
+                                        <connections>
+                                            <action selector="dataChanged:" destination="t3L-6Q-wfC" eventType="editingChanged" id="MzY-cT-UyR"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="__/__" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jdT-CU-pOf">
                                         <constraints>
@@ -261,6 +264,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
+                                        <connections>
+                                            <action selector="dataChanged:" destination="t3L-6Q-wfC" eventType="editingChanged" id="KNs-so-QIl"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="***" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WBc-v5-ApX">
                                         <constraints>
@@ -269,6 +275,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
+                                        <connections>
+                                            <action selector="dataChanged:" destination="t3L-6Q-wfC" eventType="editingChanged" id="2gH-xQ-7eQ"/>
+                                        </connections>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MpC-zi-5MX" userLabel="numberSeparator">
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
@@ -300,6 +309,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                        <connections>
+                                            <action selector="dataChanged:" destination="t3L-6Q-wfC" eventType="editingChanged" id="CrN-Rj-Owa"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -362,6 +374,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cvcTextField" destination="WBc-v5-ApX" id="kL8-xW-X7X"/>
+                        <outlet property="expiryTextField" destination="jdT-CU-pOf" id="xfO-Xl-eZ5"/>
+                        <outlet property="nameTextField" destination="Lku-WH-kIJ" id="RtQ-0b-5pz"/>
+                        <outlet property="panTextField" destination="iwx-7h-uwt" id="Tn7-kr-eIV"/>
                         <outlet property="saveButton" destination="YLm-jb-T6L" id="zhB-X7-kv7"/>
                     </connections>
                 </viewController>

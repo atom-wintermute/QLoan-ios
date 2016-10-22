@@ -8,6 +8,7 @@
 
 @class QLBankCard;
 
+typedef void(^QLBankCardSuccessCompletion)(BOOL success, NSError *error);
 typedef void(^QLBankCardCompletion)(NSArray <QLBankCard *> *cards, NSError *error);
 
 /**
@@ -28,5 +29,11 @@ typedef void(^QLBankCardCompletion)(NSArray <QLBankCard *> *cards, NSError *erro
  @return массив привязанных банковских карт
  */
 - (NSArray <QLBankCard *> *)obtainBankCards;
+
+- (void)addCardWithPan:(NSString *)pan
+                   cvc:(NSString *)cvc
+            expiryDate:(NSString *)expoiryDate
+          mnemonicName:(NSString *)mnemonicName
+            completion:(QLBankCardSuccessCompletion)completion;
 
 @end
