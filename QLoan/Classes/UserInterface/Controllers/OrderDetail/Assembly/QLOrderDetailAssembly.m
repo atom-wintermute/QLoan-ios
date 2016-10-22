@@ -10,6 +10,7 @@
 #import "QLOrderDetailViewController.h"
 #import "QLServicesAssembly.h"
 #import "QLCoreComponentsAssembly.h"
+#import "QLOrderDetailCellObjectFactory.h"
 
 @implementation QLOrderDetailAssembly
 
@@ -18,6 +19,8 @@
 						  configuration:^(TyphoonDefinition *definition) {
 							  [definition injectProperty:@selector(storage)
 													with:[self.coreAssembly inMemoryStorage]];
+							  [definition injectProperty:@selector(cellFactory)
+													with:[QLOrderDetailCellObjectFactory new]];
 						  }];
 }
 

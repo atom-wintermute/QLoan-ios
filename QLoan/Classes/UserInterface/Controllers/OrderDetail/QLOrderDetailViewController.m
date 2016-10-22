@@ -11,12 +11,19 @@
 #import "QLStorage.h"
 #import "QLOrderInfo.h"
 
+@interface QLOrderDetailViewController () <UITableViewDelegate>
+
+@property (nonatomic, strong) QLGetDataDisplayManager *dataDisplayManager;
+
+@end
+
 @implementation QLOrderDetailViewController
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	[self.view layoutIfNeeded];
 	[self configureView];
+	[self configureTableView];
 }
 
 - (IBAction)requestLoan:(id)sender {
@@ -28,7 +35,7 @@
 }
 
 - (void)configureTableView {
-	NSArray *cellObjects = [self.cellFactory cellObjectsFromOrderInfos:orderInfos];
+	NSArray *cellObjects = [self.cellFactory detailCellObjectsFromOrderInfo:self.orderInfo];
 	
 	self.dataDisplayManager = [[QLGetDataDisplayManager alloc] initWithInputData:cellObjects
 												 andConversionToCellObjectsBlock:^id(id dataObject) {

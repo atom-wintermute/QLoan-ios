@@ -30,14 +30,14 @@
 	NSString *repaymentType;
 	switch (orderInfo.order.repaymentType) {
 		case QLOnce:
-			repaymentType = @"По окончании срока займа";
+			repaymentType = @"В конце срока";
 		case QLMonthly:
-			repaymentType = @"Ежемесячно в равных долях";
+			repaymentType = @"Ежемесячно";
 	}
 	QLProfileDataCellObject *repaymentObject = [self cellObjectWithTitle:@"Порядок погашения"
 																value:repaymentType];
 	NSString *total = [NSString stringWithFormat:@"%ld ₽", (long)[self calculateEarnings:orderInfo.order]];
-	QLProfileDataCellObject *totalObject = [self cellObjectWithTitle:@"Сумма займа"
+	QLProfileDataCellObject *totalObject = [self cellObjectWithTitle:@"К возврату"
 																value:total];
 	
 	return @[percentageObject,
@@ -62,7 +62,7 @@
 	CGFloat amount = order.loanAmount;
 	CGFloat maturityPeriod = order.loanMaturityPeriod;
 	
-	return (percentage * maturityPeriod / 365) * amount;
+	return (percentage * maturityPeriod / 365) * amount + amount;
 }
 
 @end

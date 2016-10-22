@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import "QLOrderDetailCellObjectFactory.h"
+
 @protocol QLStorage;
 
 @class QLOrderInfo;
@@ -21,5 +23,6 @@
 
 @property (nonatomic, strong) id<QLStorage> storage;
 @property (nonatomic, strong) QLOrderInfo *orderInfo;
+@property (nonatomic, strong) QLOrderDetailCellObjectFactory *cellFactory;
 
 @end
