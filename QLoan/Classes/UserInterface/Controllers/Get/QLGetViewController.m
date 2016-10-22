@@ -41,17 +41,11 @@
 }
 
 - (void)loadOrders {
-	
-	[self.userInfoService infoForUserWithId:4
-								 completion:^(QLUserInfo *info, NSError *error) {
-									 
-								 }];
-	
-	return;
+
 	__block NSMutableArray *infoArray = [NSMutableArray new];
 	__block NSMutableArray *idsArray = [NSMutableArray new];
 	QLUserInfosCompletionBlock userInfoCompletion = ^(NSArray *infos, NSError *error) {
-		if (error) {
+		if (error || infos.count == 0) {
 			return;
 		}
 		
@@ -69,7 +63,7 @@
 	
 	QLBorrowersOrderCompletion completion = ^(NSArray *orders, NSError *error) {
 		
-		if (error) {
+		if (error || orders.count == 0) {
 			return;
 		}
 		
@@ -77,7 +71,10 @@
 			QLOrderInfo *info = [QLOrderInfo new];
 			info.order = order;
 			[infoArray addObject:info];
-			[idsArray addObject:@(order.lenderId)];
+			
+			if (![idsArray containsObject:@(order.lenderId)]) {
+				[idsArray addObject:@(order.lenderId)];
+			}
 		}
 		[self.userInfoService infoForUserWithIds:[idsArray copy]
 									  completion:userInfoCompletion];

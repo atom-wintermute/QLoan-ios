@@ -21,7 +21,6 @@
 
 - (void)lenderOrderWithId:(NSInteger)orderId
 			   completion:(QLBorrowerOrderCompletion)completion {
-	[self createServiceStubs];
 	NSURLRequest *request = [self.requestFactory requestForLenderOrderWithId:orderId];
 	__weak typeof (self) weakSelf = self;
 	
@@ -44,7 +43,6 @@
 				  sortMethod:(QLSortMethod)sortMethod
 				   ascending:(BOOL)ascending
 				  completion:(QLBorrowersOrderCompletion)completion {
-	[self createServiceStubs];
 	NSURLRequest *request = [self.requestFactory requestForLenderOrdersWithPage:page
 																	 sortMethod:sortMethod
 																	  ascending:ascending];

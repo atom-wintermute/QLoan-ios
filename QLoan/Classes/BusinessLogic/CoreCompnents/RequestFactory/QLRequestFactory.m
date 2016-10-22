@@ -107,7 +107,7 @@
 - (NSURLRequest *)requestForUsersWithIds:(NSArray <NSNumber *> *)ids {
 
 	NSMutableString *mutableString = [@"users?" mutableCopy];
-	for (NSUInteger index; index < ids.count; index++) {
+	for (NSUInteger index = 0; index < ids.count; index++) {
 		NSNumber *numberId = ids[index];
 		NSString* stringId = [NSString stringWithFormat:@"users_ids[]=%d", (int)[numberId integerValue]];
 		[mutableString appendString:stringId];
