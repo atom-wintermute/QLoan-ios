@@ -46,7 +46,7 @@ static NSUInteger const QLRegisterPhoneLenght = 12;
 
 - (void)getCodeButtonPressed:(id)sender {
     NSString *phoneNumber = self.phoneTextField.text;
-    NSString *phoneNumberWithoutPrefix = [phoneNumber substringFromIndex:3];
+    NSString *phoneNumberWithoutPrefix = [phoneNumber substringFromIndex:2];
     [self.bankAuthService registerWithPhoneNumber:phoneNumberWithoutPrefix
                                        completion:^(BOOL success, NSError *error) {
                                            if (success) {

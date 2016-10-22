@@ -118,7 +118,7 @@
             </objects>
             <point key="canvasLocation" x="1273" y="119"/>
         </scene>
-        <!--Title-->
+        <!--Verify Phone View Controller-->
         <scene sceneID="rEd-Hn-Na1">
             <objects>
                 <viewController id="Xmf-9L-L2d" customClass="QLVerifyPhoneViewController" sceneMemberID="viewController">
@@ -149,6 +149,7 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
                                 <connections>
                                     <action selector="codeTextFieldValueChanged:" destination="Xmf-9L-L2d" eventType="editingChanged" id="bzE-Pi-0UX"/>
+                                    <outlet property="delegate" destination="Xmf-9L-L2d" id="1mT-b8-8Lj"/>
                                 </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oUU-jd-a0t" userLabel="separator">
@@ -186,9 +187,9 @@
                             <constraint firstItem="Ia9-Zg-ABd" firstAttribute="centerX" secondItem="I1F-Oe-fGi" secondAttribute="centerX" id="ADW-2i-fXW"/>
                             <constraint firstItem="oUU-jd-a0t" firstAttribute="top" secondItem="Ia9-Zg-ABd" secondAttribute="bottom" constant="8" id="Aji-Di-ge3"/>
                             <constraint firstItem="aNn-Pc-dnM" firstAttribute="top" secondItem="iC1-WR-d6z" secondAttribute="bottom" constant="22" id="E25-tN-p27"/>
-                            <constraint firstItem="BwI-FQ-KTo" firstAttribute="top" secondItem="8OW-AB-dQl" secondAttribute="bottom" constant="54.5" id="MQ5-Bf-WVo"/>
                             <constraint firstItem="8OW-AB-dQl" firstAttribute="top" secondItem="oUU-jd-a0t" secondAttribute="bottom" constant="18" id="NKi-Ue-VX8"/>
                             <constraint firstItem="Ia9-Zg-ABd" firstAttribute="top" secondItem="Nxh-VP-pEZ" secondAttribute="bottom" constant="72" id="Qrx-7t-oIC"/>
+                            <constraint firstItem="ah0-dn-Rwn" firstAttribute="top" secondItem="BwI-FQ-KTo" secondAttribute="bottom" id="SIx-HO-cne"/>
                             <constraint firstAttribute="trailing" secondItem="BwI-FQ-KTo" secondAttribute="trailing" id="aoJ-oJ-OfO"/>
                             <constraint firstItem="oUU-jd-a0t" firstAttribute="centerX" secondItem="I1F-Oe-fGi" secondAttribute="centerX" id="e0Y-aj-mNs"/>
                             <constraint firstAttribute="trailing" secondItem="Nxh-VP-pEZ" secondAttribute="trailing" constant="21" id="jFu-QQ-gd8"/>
@@ -197,10 +198,11 @@
                             <constraint firstItem="Nxh-VP-pEZ" firstAttribute="leading" secondItem="I1F-Oe-fGi" secondAttribute="leading" constant="21" id="rWh-6G-txf"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="b4o-Xj-hRD">
+                    <navigationItem key="navigationItem" id="b4o-Xj-hRD">
                         <barButtonItem key="backBarButtonItem" title="Назад" id="ncg-XC-zEE"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="bottomConstraint" destination="SIx-HO-cne" id="Uis-rf-d3h"/>
                         <outlet property="codeTextField" destination="Ia9-Zg-ABd" id="FW3-Kx-BSi"/>
                         <outlet property="registerButton" destination="BwI-FQ-KTo" id="hBe-co-CSg"/>
                         <segue destination="E90-cf-Cju" kind="show" identifier="registerSegue" id="jIO-CB-BmD"/>
@@ -516,6 +518,7 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no"/>
                                                 <connections>
                                                     <action selector="dataWasChanged:" destination="E90-cf-Cju" eventType="editingChanged" id="6eD-L6-K3R"/>
+                                                    <outlet property="delegate" destination="E90-cf-Cju" id="dlB-bx-Rym"/>
                                                 </connections>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZD3-i4-s4L" userLabel="secondNameSeparatorView">
@@ -547,6 +550,7 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no"/>
                                                 <connections>
                                                     <action selector="dataWasChanged:" destination="E90-cf-Cju" eventType="editingChanged" id="r6Q-mL-M1Q"/>
+                                                    <outlet property="delegate" destination="E90-cf-Cju" id="hKd-kB-ke8"/>
                                                 </connections>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kcx-RH-WfN" userLabel="firstNameSeparatorView">
@@ -607,18 +611,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="rP3-vt-Vhk" firstAttribute="top" secondItem="8Ie-fF-twq" secondAttribute="bottom" id="0Vi-ZT-ux2"/>
                             <constraint firstItem="9dc-uF-rv6" firstAttribute="leading" secondItem="xsc-4q-vmu" secondAttribute="leading" constant="60" id="1Zn-5J-s18"/>
                             <constraint firstItem="8Ie-fF-twq" firstAttribute="leading" secondItem="xsc-4q-vmu" secondAttribute="leading" id="B9y-jG-9bQ"/>
                             <constraint firstItem="9dc-uF-rv6" firstAttribute="top" secondItem="M0i-L3-KSd" secondAttribute="bottom" id="Cue-Sc-I4u"/>
                             <constraint firstAttribute="trailing" secondItem="8Ie-fF-twq" secondAttribute="trailing" id="FVp-vN-KRQ"/>
                             <constraint firstAttribute="trailing" secondItem="9dc-uF-rv6" secondAttribute="trailing" constant="60" id="dcv-DA-8xG"/>
-                            <constraint firstItem="8Ie-fF-twq" firstAttribute="top" secondItem="9dc-uF-rv6" secondAttribute="bottom" constant="40" id="mpT-sG-hlk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VUd-jg-MYV">
                         <barButtonItem key="backBarButtonItem" title="Назад" id="G4b-jQ-w3E"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="bottomConstraint" destination="0Vi-ZT-ux2" id="jaY-0T-elp"/>
                         <outlet property="continueButton" destination="8Ie-fF-twq" id="sOr-gp-iLa"/>
                         <outlet property="emailTextField" destination="Vxp-0Y-Zhp" id="dIc-bD-G8Y"/>
                         <outlet property="firstNameTextField" destination="zYE-e7-FhX" id="9Ln-Og-GlJ"/>

@@ -15,6 +15,8 @@
 @property (nonatomic, weak) IBOutlet UITextField *codeTextField;
 @property (nonatomic, weak) IBOutlet UIButton *registerButton;
 
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint *bottomConstraint;
+
 @property (nonatomic, strong) id<QLBankAuthService> bankAuthService;
 
 - (IBAction)registerButtonWasPressed:(id)sender;
