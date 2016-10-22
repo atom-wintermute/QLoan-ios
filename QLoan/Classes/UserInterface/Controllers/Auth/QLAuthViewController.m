@@ -13,6 +13,7 @@
 #import "QLAuthorizationService.h"
 #import "QLAuthorizationRequestConfiguration.h"
 #import "QLStorage.h"
+#import "QLFullScreenAnimations.h"
 
 #import "QLTabBarController.h"
 
@@ -71,7 +72,7 @@ static NSString * const QLAuthRegisterSegue = @"registerSegue";
 		if (success) {
 			[self loginCompleted];
 		} else {
-			[self showErrorAlert];
+			[self showErrorAlertWithError:error];
 		}
 	};
 	
@@ -84,10 +85,11 @@ static NSString * const QLAuthRegisterSegue = @"registerSegue";
 			[self.authorizationService authorizeWithConfiguration:configuration
 													   completion:localAuthCompletion];
 		} else {
-			[self showErrorAlert];
+            [self showErrorAlertWithError:(NSError *)error];
 		}
 	};
 	
+    [self.animator startAnimation];
     [self.bankAuthService loginWithLogin:loginString
                                 password:passwordString
                               completion:bankAuthLoginCompletion];
@@ -135,6 +137,7 @@ replacementString:(NSString *)string {
     QLTabBarController *tabBarController = (QLTabBarController *)[mainWindow rootViewController];
     [tabBarController selectTabWithIndex:3];
     
+    [self.animator stopAnimation];
     [self.presentingViewController dismissViewControllerAnimated:YES
                                                       completion:nil];
 }
@@ -151,9 +154,11 @@ replacementString:(NSString *)string {
     [self.view layoutIfNeeded];
 }
 
-- (void)showErrorAlert {
+- (void)showErrorAlertWithError:(NSError *)error {
+    NSInteger errorCode = error.code;
+    NSString *messageString = [NSString stringWithFormat:@"%@ - %d", @"Неверная пара логин/пароль", (int)errorCode];
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Не удалось авторизоваться"
-                                                                             message:@"Неверная пара логин/пароль"
+                                                                             message:messageString
                                                                       preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"OK"
                                                            style:UIAlertActionStyleDefault

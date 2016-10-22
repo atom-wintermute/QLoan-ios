@@ -8,8 +8,6 @@
 
 #import "AppDelegate.h"
 
-#import <Pushwoosh/PushNotificationManager.h>
-
 #import "QLCoreComponentsAssembly.h"
 #import "QLServicesAssembly.h"
 #import "QLTestAssembly.h"
@@ -30,7 +28,7 @@
 
 #import <RamblerTyphoonUtils/AssemblyCollector.h>
 
-@interface AppDelegate () <PushNotificationDelegate>
+@interface AppDelegate ()
 
 @end
 
@@ -38,7 +36,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self configureAppearance];
-    [self configurePushWooshWithOptions:launchOptions];
 //    [self activateAssemblies];
     
     return YES;
@@ -76,23 +73,15 @@
 #pragma maik - Push Notifications
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-    [[PushNotificationManager pushManager] handlePushRegistration:deviceToken];
+    NSLog(@"device token = %@", deviceToken);
 }
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
-    [[PushNotificationManager pushManager] handlePushRegistrationFailure:error];
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
-    [[PushNotificationManager pushManager] handlePushReceived:userInfo];
-}
-
-#pragma mark - PushNotificationDelegate
-
-- (void) onPushAccepted:(PushNotificationManager *)pushManager
-       withNotification:(NSDictionary *)pushNotification
-                onStart:(BOOL)onStart {
-    NSLog(@"pushNotification = %@", pushNotification);
+    NSLog(@"userInfo = %@", userInfo);
+//    [self.router showScreenWithUserInfo:userInfo];
 }
 
 #pragma mark - Приватные методы
@@ -108,23 +97,6 @@
     [[UINavigationBar appearance] setTranslucent:YES];
     [[UINavigationBar appearance] setBackIndicatorImage:[UIImage new]];
     [[UINavigationBar appearance] setBackIndicatorTransitionMaskImage:[UIImage new]];
-}
-
-- (void)configurePushWooshWithOptions:(NSDictionary *)launchOptions {
-    PushNotificationManager * pushManager = [PushNotificationManager pushManager];
-    pushManager.delegate = self;
-    
-    // handling push on app start
-    [[PushNotificationManager pushManager] handlePushReceived:launchOptions];
-    
-    // make sure we count app open in Pushwoosh stats
-    [[PushNotificationManager pushManager] sendAppOpen];
-    
-    // register for push notifications!
-    [[PushNotificationManager pushManager] registerForPushNotifications];
-	[self.storage storeObject:[[PushNotificationManager pushManager] getPushToken]
-					   forKey:@"pushToken"];
-    NSLog(@"push token = %@", [[PushNotificationManager pushManager] getPushToken]);
 }
 
 - (void)activateAssemblies {
