@@ -21,7 +21,7 @@
         <scene sceneID="F7G-JQ-Feg">
             <objects>
                 <navigationController navigationBarHidden="YES" id="TQP-Hx-Vch" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="W5A-xb-VEC">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="W5A-xb-VEC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -99,22 +99,22 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Сумма займа" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0oZ-qo-RDa" customClass="QLUnderlinedTextfield">
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Процент" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bLD-GN-25S" customClass="QLUnderlinedTextfield">
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Срок займа" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MTP-Xg-BHi" customClass="QLUnderlinedTextfield">
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Неустойка" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="e31-1j-23N" customClass="QLUnderlinedTextfield">
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Порядок погашения" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhK-dN-EjX">
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="12"/>
@@ -226,6 +226,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bankComissionLabel" destination="4j3-T0-6Bl" id="0d3-v3-hd6"/>
                         <outlet property="createOrderButton" destination="ed8-5i-dvA" id="C7U-W9-bGv"/>
                         <outlet property="loanAmountTextfield" destination="0oZ-qo-RDa" id="rMl-bI-MXh"/>
                         <outlet property="loanPenaltyTextfield" destination="e31-1j-23N" id="jlE-rG-49T"/>
@@ -233,6 +234,7 @@
                         <outlet property="monthlyCheckbox" destination="UJK-sj-iXa" id="yxD-pB-Z8A"/>
                         <outlet property="onceCheckbox" destination="4Tx-Da-TbI" id="Nqd-0S-ZzK"/>
                         <outlet property="percentageTextfield" destination="bLD-GN-25S" id="7un-Yo-TeQ"/>
+                        <outlet property="yourEarningsLabel" destination="tri-O0-2x7" id="btR-E8-pCQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ee-3f-hXp" userLabel="First Responder" sceneMemberID="firstResponder"/>

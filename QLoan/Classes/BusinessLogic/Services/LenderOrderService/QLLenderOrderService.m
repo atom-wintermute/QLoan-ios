@@ -20,7 +20,7 @@
 @implementation QLLenderOrderService
 
 - (void)lenderOrderWithId:(NSInteger)orderId
-			   completion:(QLLenderOrderCompletion)completion {
+			   completion:(QLBorrowerOrderCompletion)completion {
 	[self createServiceStubs];
 	NSURLRequest *request = [self.requestFactory requestForLenderOrderWithId:orderId];
 	__weak typeof (self) weakSelf = self;
@@ -29,7 +29,7 @@
 		__strong typeof (self) strongSelf = weakSelf;
 		if (error == nil) {
 			id responseObject = [strongSelf.jsonSerializer jsonObjectFromResponse:response];
-			QLLenderOrder *order = [strongSelf.mapper mapLenderOrderFromResponseObject:responseObject];
+			QLBorrowerOrder *order = [strongSelf.mapper mapBorrowerOrderFromResponseObject:responseObject];
 			run_block_on_main(completion, order, nil);
 		} else {
 			run_block_on_main(completion, nil, error);
@@ -43,7 +43,7 @@
 - (void)lenderOrdersWithPage:(NSInteger)page
 				  sortMethod:(QLSortMethod)sortMethod
 				   ascending:(BOOL)ascending
-				  completion:(QLLendersOrderCompletion)completion {
+				  completion:(QLBorrowersOrderCompletion)completion {
 	[self createServiceStubs];
 	NSURLRequest *request = [self.requestFactory requestForLenderOrdersWithPage:page
 																	 sortMethod:sortMethod
@@ -54,7 +54,7 @@
 		__strong typeof (self) strongSelf = weakSelf;
 		if (error == nil) {
 			id responseObject = [strongSelf.jsonSerializer jsonObjectFromResponse:response];
-			NSArray *orders = [strongSelf.mapper mapLenderOrdersFromResponseObject:responseObject];
+			NSArray *orders = [strongSelf.mapper mapBorrowerOrdersFromResponseObject:responseObject];
 			run_block_on_main(completion, orders, nil);
 		} else {
 			run_block_on_main(completion, nil, error);
@@ -65,9 +65,9 @@
 						 completion:networkCompletion];
 }
 
-- (void)addLenderOrder:(QLLenderOrder *)order
+- (void)addLenderOrder:(QLBorrowerOrder *)order
 			completion:(QLBooleanCompletion)completion {
-	NSDictionary *parameters = [self.serializer dictionaryFromLenderOrder:order];
+	NSDictionary *parameters = [self.serializer dictionaryFromBorrowerOrder:order];
 	NSURLRequest *request = [self.requestFactory requestForAddingLenderOrder:parameters];
 	
 	QLNetworkCompletion networkCompletion = ^(QLServerResponse *response, NSError *error) {

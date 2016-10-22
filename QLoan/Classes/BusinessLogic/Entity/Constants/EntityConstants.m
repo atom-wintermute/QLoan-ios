@@ -7,3 +7,5 @@
 //
 
 #import "EntityConstants.h"
+
+CGFloat QLBankComission = 2.0;

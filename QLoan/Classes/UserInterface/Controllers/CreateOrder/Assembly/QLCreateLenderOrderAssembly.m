@@ -15,8 +15,8 @@
 - (QLCreateLenderOrderViewController *)createLenderOrderViewController {
 	return [TyphoonDefinition withClass:[QLCreateLenderOrderViewController class]
 						  configuration:^(TyphoonDefinition *definition) {
-							  [definition injectProperty:@selector(borrowerOrderService)
-													with:[self.serviceAssembly borrowerOrderService]];
+							  [definition injectProperty:@selector(lenderOrderService)
+													with:[self.serviceAssembly lenderOrderService]];
 						  }];
 }
 

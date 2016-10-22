@@ -15,6 +15,9 @@
 
 @interface QLCreateLenderOrderViewController : UIViewController<UITextFieldDelegate>
 
+@property (weak, nonatomic) IBOutlet UILabel *bankComissionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *yourEarningsLabel;
+
 @property (weak, nonatomic) IBOutlet QLUnderlinedTextfield *loanAmountTextfield;
 @property (weak, nonatomic) IBOutlet QLUnderlinedTextfield *percentageTextfield;
 @property (weak, nonatomic) IBOutlet QLUnderlinedTextfield *loanPeriodTextfield;
@@ -23,7 +26,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *onceCheckbox;
 
 @property (weak, nonatomic) IBOutlet UIButton *createOrderButton;
-@property (strong, nonatomic) QLBorrowerOrderService *borrowerOrderService;
+@property (strong, nonatomic) QLLenderOrderService *lenderOrderService;
 
 
 @end

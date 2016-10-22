@@ -7,8 +7,8 @@
 //
 
 #import "QLCreateLenderOrderViewController.h"
-#import "QLBorrowerOrderService.h"
-
+#import "QLLenderOrderService.h"
+#import "EntityConstants.h"
 #import "QLBorrowerOrder.h"
 
 @interface QLCreateLenderOrderViewController ()
@@ -19,6 +19,10 @@
 
 @implementation QLCreateLenderOrderViewController
 
+- (void)dealloc {
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	[self configureTextfieldDelegate];
@@ -27,8 +31,29 @@
 	
 	self.monthlyCheckbox.hidden = NO;
 	self.onceCheckbox.hidden = YES;
-	
+	self.yourEarningsLabel.text = @"";
 	self.requestIsBeingCreated = NO;
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(textFieldChanged:)
+												 name:UITextFieldTextDidChangeNotification
+											   object:self.loanAmountTextfield];
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(textFieldChanged:)
+												 name:UITextFieldTextDidChangeNotification
+											   object:self.loanPeriodTextfield];
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(textFieldChanged:)
+												 name:UITextFieldTextDidChangeNotification
+											   object:self.percentageTextfield];
+}
+
+- (void)textFieldChanged:(NSNotification *)notification {
+	if ([self allFieldsCompleted]) {
+		self.yourEarningsLabel.text = [NSString stringWithFormat:@"%li ₽", (long)[self calculateEarnings]];
+	} else {
+		self.yourEarningsLabel.text = @"";
+	}
 }
 
 - (IBAction)createLoan:(UIButton *)sender {
@@ -53,10 +78,7 @@
 #pragma mark - Создание заявки
 
 - (void)createOrder {
-	if (self.loanAmountTextfield.text.length == 0 ||
-		self.loanPeriodTextfield.text.length == 0 ||
-		self.loanPenaltyTextfield.text.length == 0 ||
-		self.percentageTextfield.text.length == 0) {
+	if (![self allFieldsCompleted]) {
 		return;
 	}
 	
@@ -75,8 +97,8 @@
 		self.requestIsBeingCreated = NO;
 	};
 	
-	[self.borrowerOrderService addBorrowerOrder:order
-									 completion:completion];
+	[self.lenderOrderService addLenderOrder:order
+								 completion:completion];
 }
 
 #pragma mark - Делегаты для текстфилда
@@ -89,28 +111,30 @@
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+	BOOL valid = NO;
+	
 	if (textField == self.loanAmountTextfield) {
-		return [self validateText:string
+		valid = [self validateText:string
 						 maxChars:8
 					  inTextfield:textField];
 	}
 	if (textField == self.loanPeriodTextfield) {
-		return [self validateText:string
+		valid = [self validateText:string
 						 maxChars:4
 					  inTextfield:textField];
 	}
 	if (textField == self.percentageTextfield) {
-		return [self validateText:string
+		valid = [self validateText:string
 						 maxChars:2
 					  inTextfield:textField];
 	}
 	if (textField == self.loanPenaltyTextfield) {
-		return [self validateText:string
+		valid = [self validateText:string
 						 maxChars:2
 					  inTextfield:textField];
 	}
 	
-	return YES;
+	return valid;
 }
 
 - (BOOL)validateText:(NSString *)text
@@ -129,6 +153,27 @@
 	}
 	
 	return YES;
+}
+
+- (BOOL)allFieldsCompleted {
+	if (self.loanAmountTextfield.text.length == 0 ||
+		self.loanPeriodTextfield.text.length == 0 ||
+		self.percentageTextfield.text.length == 0) {
+		return NO;
+	}
+	
+	return YES;
+}
+
+- (NSInteger)calculateEarnings {
+	if (![self allFieldsCompleted]) {
+		return 0;
+	}
+	CGFloat percentage = ([self.percentageTextfield.text integerValue] - QLBankComission) / 100;
+	CGFloat amount = [self.loanAmountTextfield.text integerValue];
+	CGFloat maturityPeriod = [self.loanPeriodTextfield.text integerValue];
+	
+	return (percentage * maturityPeriod / 365) * amount;
 }
 
 @end

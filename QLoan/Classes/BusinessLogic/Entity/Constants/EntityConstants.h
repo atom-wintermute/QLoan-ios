@@ -43,3 +43,4 @@ typedef NS_ENUM(NSUInteger, QLPaymentStatus) {
 	QLPaymentStatusCompleted
 };
 
+extern CGFloat QLBankComission;

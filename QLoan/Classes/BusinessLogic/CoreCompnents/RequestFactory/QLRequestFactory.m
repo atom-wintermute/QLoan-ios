@@ -145,18 +145,18 @@
 		[dictionary setValue:sortOrdering forKey:sortMethodDescription];
 	}
 	
-	return [self getRequestWithPath:@"getLendersOrders/"
+	return [self getRequestWithPath:@"lender_orders"
 						 parameters:[dictionary copy]];
 }
 
 - (NSURLRequest *)requestForLenderOrderWithId:(NSInteger)orderId {
 	NSDictionary *dictionary = @{ @"id" : @(orderId) };
-	return [self getRequestWithPath:@"getBorrowersOrder/"
+	return [self getRequestWithPath:@"lender_orders"
 						 parameters:dictionary];
 }
 
 - (NSURLRequest *)requestForAddingLenderOrder:(NSDictionary *)orderParameters {
-	return [self postRequestWithPath:@"addLendersOrder/"
+	return [self postRequestWithPath:@"lender_orders"
 						  parameters:orderParameters];
 }
 

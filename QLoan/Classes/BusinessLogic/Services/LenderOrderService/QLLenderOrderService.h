@@ -12,6 +12,7 @@
 #import "QLLenderOrderService.h"
 
 @class QLLenderOrder;
+@class QLBorrowerOrder;
 @class QLRequestFactory;
 @class QLNetworkClient;
 @class QLJSONSerializer;
@@ -32,18 +33,18 @@
 - (void)lenderOrdersWithPage:(NSInteger)page
 				  sortMethod:(QLSortMethod)sortMethod
 				   ascending:(BOOL)ascending
-				  completion:(QLLendersOrderCompletion)completion;
+				  completion:(QLBorrowersOrderCompletion)completion;
 
 /**
  Метод getLenderOrder
  */
 - (void)lenderOrderWithId:(NSInteger)orderId
-			   completion:(QLLenderOrderCompletion)completion;
+			   completion:(QLBorrowerOrderCompletion)completion;
 
 /**
  Метод addLenderOrder
  */
-- (void)addLenderOrder:(QLLenderOrder *)order
+- (void)addLenderOrder:(QLBorrowerOrder *)order
 			completion:(QLBooleanCompletion)completion;
 
 @end
