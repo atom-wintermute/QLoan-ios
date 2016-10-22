@@ -7,6 +7,7 @@
 //
 
 #import "QLOrderDetailViewController.h"
+#import "QLGetDataDisplayManager.h"
 #import "QLStorage.h"
 #import "QLOrderInfo.h"
 
@@ -26,8 +27,22 @@
 
 }
 
-- (void)configureView {
+- (void)configureTableView {
+	NSArray *cellObjects = [self.cellFactory cellObjectsFromOrderInfos:orderInfos];
 	
+	self.dataDisplayManager = [[QLGetDataDisplayManager alloc] initWithInputData:cellObjects
+												 andConversionToCellObjectsBlock:^id(id dataObject) {
+													 return dataObject;
+												 }];
+	
+	self.tableView.dataSource = [self.dataDisplayManager dataSourceForTableView:self.tableView];
+	self.tableView.delegate = [self.dataDisplayManager delegateForTableView:self.tableView
+														   withBaseDelegate:self];
+	
+	[self.tableView reloadData];
+}
+
+- (void)configureView {
 	self.photoImage.image = [UIImage imageNamed:self.orderInfo.photoInfo];
 	self.photoImage.layer.cornerRadius = CGRectGetWidth(self.photoImage.frame) / 2;
 	self.photoImage.layer.masksToBounds = YES;

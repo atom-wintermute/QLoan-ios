@@ -13,6 +13,7 @@
 @class QLOrderInfo;
 
 @interface QLOrderDetailViewController : UIViewController
+
 @property (weak, nonatomic) IBOutlet UIImageView *photoImage;
 @property (weak, nonatomic) IBOutlet UIImageView *fakeImageView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
