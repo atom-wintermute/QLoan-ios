@@ -49,16 +49,15 @@
 - (void)authorizeWithConfiguration:(QLAuthorizationRequestConfiguration *)configuration
 						completion:(QLBooleanCompletion)completion {
 	NSURLRequest *request = [self.requestFactory requestForAuthorizationWithConfiguration:configuration];
-	__weak typeof (self) weakSelf = self;
-	
+
+    @weakify(self);
 	QLNetworkCompletion networkCompletion = ^(QLServerResponse *response, NSError *error) {
-		__strong typeof (self) strongSelf = weakSelf;
-		if (error == nil) {
-			
+		@strongify(self);
+		if (!error) {
 			if ([response.response respondsToSelector:@selector(allHeaderFields)]) {
 				NSDictionary *dictionary = [response.response allHeaderFields];
 				
-				QLSessionCredentials *credentials = [strongSelf.mapper mapSessionCredentialsFromResponseObject:dictionary];
+				QLSessionCredentials *credentials = [self.mapper mapSessionCredentialsFromResponseObject:dictionary];
 				[self.storage setCredentialsForCurrentUser:credentials];
 				
 				run_block_on_main(completion, YES, nil);

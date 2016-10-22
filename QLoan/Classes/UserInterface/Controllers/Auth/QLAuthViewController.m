@@ -48,7 +48,7 @@ static NSString * const QLAuthRegisterSegue = @"registerSegue";
 #pragma mark - IBActions
 
 - (void)fastLoginButtonWasPressed:(id)sender {
-    self.loginTextField.text = @"9139381557";
+    self.loginTextField.text = @"+71234567891";
     self.passwordTextField.text = @"29111990m";
 	[self loginButtonWasPressed:nil];
 }
@@ -63,7 +63,7 @@ static NSString * const QLAuthRegisterSegue = @"registerSegue";
 		return;
 	}
 	
-	NSString *phoneNumberWithoutPrefix = [self.loginTextField.text substringFromIndex:3];
+	NSString *phoneNumberWithoutPrefix = [self.loginTextField.text substringFromIndex:2];
     NSString *loginString = phoneNumberWithoutPrefix;
     NSString *passwordString = self.passwordTextField.text;
 	

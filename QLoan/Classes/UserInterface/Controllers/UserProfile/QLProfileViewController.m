@@ -39,6 +39,12 @@ static NSString * const QLProfileAddCardSegue = @"profileAddCardSegue";
     [self configureView];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [self configureView];
+}
+
 #pragma mark - Внешний вид
 
 - (UIStatusBarStyle)preferredStatusBarStyle {

@@ -33,7 +33,8 @@
                              id responseData = [NSJSONSerialization JSONObjectWithData:response.data
                                                                                options:kNilOptions
                                                                                  error:nil];
-                             if (![responseData[QLBankErrorCode] integerValue]) {
+                             NSInteger errorCode = [responseData[QLBankErrorCode] integerValue];
+                             if (!errorCode) {
                                  NSString *sessionId = responseData[QLBankSessionId];
                                  if (sessionId.length) {
                                      [self.storage storeObject:sessionId
