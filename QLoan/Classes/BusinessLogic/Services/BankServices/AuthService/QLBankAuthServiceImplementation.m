@@ -48,6 +48,7 @@
 
 - (void)registerWithPhoneNumber:(NSString *)phoneNumber
                      completion:(QLBankAuthCompletion)completion {
+    NSLog(@"will register with phone number = %@", phoneNumber);
     NSURLRequest *URLRequest = [self.requestFactory requestForRegisterWithPhoneNumber:phoneNumber];
     [self.networkClient sendRequest:URLRequest
                          completion:^(QLServerResponse *response, NSError *error) {

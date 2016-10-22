@@ -12,7 +12,7 @@
 
 static NSString * const QLRegisterVerifyPhoneSegue = @"verifyCodeSegue";
 
-@interface QLRegisterPhoneViewContoller ()
+@interface QLRegisterPhoneViewContoller () <UITextFieldDelegate>
 
 @end
 
@@ -31,7 +31,8 @@ static NSString * const QLRegisterVerifyPhoneSegue = @"verifyCodeSegue";
 
 - (void)getCodeButtonPressed:(id)sender {
     NSString *phoneNumber = self.phoneTextField.text;
-    [self.bankAuthService registerWithPhoneNumber:phoneNumber
+    NSString *phoneNumberWithoutPrefix = [phoneNumber substringFromIndex:3];
+    [self.bankAuthService registerWithPhoneNumber:phoneNumberWithoutPrefix
                                        completion:^(BOOL success, NSError *error) {
                                            if (success) {
                                                [self performSegueWithIdentifier:QLRegisterVerifyPhoneSegue
@@ -40,11 +41,32 @@ static NSString * const QLRegisterVerifyPhoneSegue = @"verifyCodeSegue";
                                        }];
 }
 
+- (void)phoneTextFieldValueChanged:(id)sender {
+    NSUInteger phoneLength = self.phoneTextField.text.length;
+    if (phoneLength >= 13) {
+        [self.getCodeButton activate:YES];
+    } else {
+        [self.getCodeButton activate:NO];
+    }
+}
+
+#pragma mark - UITextFieldDelegate
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range
+replacementString:(NSString *)string {
+    if (0 == range.location) {
+        NSString *resultString = [NSString stringWithFormat:@"+7 %@", string];
+        textField.text = resultString;
+        return NO;
+    }
+    return YES;
+}
+
 #pragma mark - Приватные методы
 
 - (void)configureAppearance {
     [self.view layoutIfNeeded];
-    [self.getCodeButton addGradient];
+    [self.getCodeButton activate:NO];
 }
 
 @end

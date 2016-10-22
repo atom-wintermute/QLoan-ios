@@ -20,4 +20,11 @@
                        atIndex:0];
 }
 
+- (void)deleteGradient {
+    CALayer *layer = self.layer.sublayers[0];
+    if ([layer isKindOfClass:[CAGradientLayer class]]) {
+        [layer removeFromSuperlayer];
+    }
+}
+
 @end

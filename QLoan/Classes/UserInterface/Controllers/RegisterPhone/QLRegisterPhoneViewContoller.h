@@ -20,4 +20,6 @@
 
 - (IBAction)getCodeButtonPressed:(id)sender;
 
+- (IBAction)phoneTextFieldValueChanged:(id)sender;
+
 @end
