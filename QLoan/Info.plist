@@ -66,5 +66,7 @@
 		<string>SF-UI-Display-Semibold.otf</string>
 		<string>SF-UI-Display-Bold.otf</string>
 	</array>
+	<key>Pushwoosh_APPID</key>
+	<string>78BB9-BE45A</string>
 </dict>
 </plist>

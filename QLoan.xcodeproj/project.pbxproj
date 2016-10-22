@@ -186,6 +186,8 @@
 		D89655541DB8260C00DE4C66 /* SF-UI-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D89655501DB8260C00DE4C66 /* SF-UI-Display-Bold.otf */; };
 		D89655581DB8319900DE4C66 /* QLRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89655571DB8319900DE4C66 /* QLRegisterViewController.m */; };
 		D89655601DB8C39900DE4C66 /* QLAuthAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = D896555F1DB8C39900DE4C66 /* QLAuthAssembly.m */; };
+		D8A9AC0E1DBB8D170029545C /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A9AC0D1DBB8D170029545C /* libz.tbd */; };
+		D8A9AC101DBB8D1E0029545C /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A9AC0F1DBB8D1E0029545C /* libstdc++.tbd */; };
 		D8D626CC1DBADC9C007FFB3F /* QLVerifyPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D626CB1DBADC9C007FFB3F /* QLVerifyPhoneViewController.m */; };
 		D8D98BB41DB9085300F3FB01 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8D98BB31DB9085300F3FB01 /* Profile.storyboard */; };
 		D8F9D7AF1DAFD2FC000371CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F9D7AE1DAFD2FC000371CA /* main.m */; };
@@ -503,6 +505,9 @@
 		D89655571DB8319900DE4C66 /* QLRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLRegisterViewController.m; path = Classes/UserInterface/Controllers/Register/QLRegisterViewController.m; sourceTree = "<group>"; };
 		D896555E1DB8C39900DE4C66 /* QLAuthAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLAuthAssembly.h; path = Classes/UserInterface/Controllers/Auth/Assembly/QLAuthAssembly.h; sourceTree = "<group>"; };
 		D896555F1DB8C39900DE4C66 /* QLAuthAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLAuthAssembly.m; path = Classes/UserInterface/Controllers/Auth/Assembly/QLAuthAssembly.m; sourceTree = "<group>"; };
+		D8A9AC0C1DBB8CD20029545C /* QLoan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QLoan.entitlements; sourceTree = "<group>"; };
+		D8A9AC0D1DBB8D170029545C /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		D8A9AC0F1DBB8D1E0029545C /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		D8D626CA1DBADC9C007FFB3F /* QLVerifyPhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLVerifyPhoneViewController.h; path = Classes/UserInterface/Controllers/VerifyPhone/QLVerifyPhoneViewController.h; sourceTree = "<group>"; };
 		D8D626CB1DBADC9C007FFB3F /* QLVerifyPhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLVerifyPhoneViewController.m; path = Classes/UserInterface/Controllers/VerifyPhone/QLVerifyPhoneViewController.m; sourceTree = "<group>"; };
 		D8D98BB31DB9085300F3FB01 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = Resources/Storyboards/Profile.storyboard; sourceTree = "<group>"; };
@@ -525,6 +530,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8A9AC101DBB8D1E0029545C /* libstdc++.tbd in Frameworks */,
+				D8A9AC0E1DBB8D170029545C /* libz.tbd in Frameworks */,
 				B052863E11C552DF193FDF47 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -549,6 +556,8 @@
 		2840B12511CD4986F74AAE39 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D8A9AC0F1DBB8D1E0029545C /* libstdc++.tbd */,
+				D8A9AC0D1DBB8D170029545C /* libz.tbd */,
 				D1BE5B8284ED646854EA9B23 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -1724,6 +1733,7 @@
 		D8F9D7AC1DAFD2FC000371CA /* QLoan */ = {
 			isa = PBXGroup;
 			children = (
+				D8A9AC0C1DBB8CD20029545C /* QLoan.entitlements */,
 				9EFF738B1DB3B59C004873A6 /* Classes */,
 				D835BCCF1DB9743400F2FF0F /* Extensions */,
 				D896553B1DB8203200DE4C66 /* Resources */,
@@ -1837,6 +1847,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 7SMPM83ZV6;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					D8F9D7C51DAFD2FC000371CA = {
 						CreatedOnToolsVersion = 8.0;
@@ -2080,7 +2095,7 @@
 				9EFF73E11DB40363004873A6 /* QLKeychainStorage.m in Sources */,
 				D8328F531DBA6DA200438D4A /* QLProfileCardCellObject.m in Sources */,
 				9EFF73AE1DB3C90F004873A6 /* QLBorrowerOrder.m in Sources */,
-				D86147B31DBAA6A30018D19C /* QLMyOrderViewController.m in Sources */,
+				D86147B31DBAA6A30018D19C /* QLMyOrdersViewController.m in Sources */,
 				9E2F66FB1DBB59CD00081C05 /* QLCreateLenderOrderViewController.m in Sources */,
 				9EFF73C11DB3CE42004873A6 /* QLLenderOrderService.m in Sources */,
 				9EFF73D51DB3DB26004873A6 /* QLUserInteractionService.m in Sources */,
@@ -2262,6 +2277,7 @@
 			baseConfigurationReference = 231F0EC6722C13ED096D9EB6 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = QLoan/QLoan.entitlements;
 				DEVELOPMENT_TEAM = 7SMPM83ZV6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QLoan/Supporting Files/QLoan-Prefix.pch";
@@ -2279,6 +2295,7 @@
 			baseConfigurationReference = 41A2D4330A792AAE9B65A346 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = QLoan/QLoan.entitlements;
 				DEVELOPMENT_TEAM = 7SMPM83ZV6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QLoan/Supporting Files/QLoan-Prefix.pch";
