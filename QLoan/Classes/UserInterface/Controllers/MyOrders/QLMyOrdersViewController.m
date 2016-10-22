@@ -62,7 +62,6 @@
 }
 
 - (void)loadData {
-	__block NSMutableArray *infoArray = [NSMutableArray new];
 	__block NSMutableArray *idsArray = [NSMutableArray new];
 	
 	QLUserInfosCompletionBlock userInfoCompletion = ^(NSArray *infos, NSError *error) {

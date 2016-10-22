@@ -183,8 +183,9 @@
 #pragma mark - Направление запросов
 
 - (NSURLRequest *)requestForLoanReceipt:(NSInteger)orderId {
-	NSDictionary *dictionary = @{ @"id" : @(orderId) };
-	return [self putRequestWithPath:@"sendLoanReceiveRequest/"
+	NSString* stringId = [NSString stringWithFormat:@"lender_orders/%d", (int)orderId];
+	NSDictionary *dictionary = @{ @"status" : @"requested" };
+	return [self putRequestWithPath:stringId
 						 parameters:dictionary];
 }
 
