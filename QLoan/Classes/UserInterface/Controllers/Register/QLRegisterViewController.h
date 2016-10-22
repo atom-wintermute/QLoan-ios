@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol QLBankAuthService;
+
 /**
  Контроллер регистрации - ввода данных нового пользователя
  */
@@ -20,5 +22,11 @@
 @property (nonatomic, weak) IBOutlet UITextField *secondNameTextField;
 
 @property (nonatomic, weak) IBOutlet UIButton *continueButton;
+
+@property (nonatomic, strong) id<QLBankAuthService> bankAuthService;
+
+- (IBAction)dataWasChanged:(id)sender;
+
+- (IBAction)continueButtonWasPressed:(id)sender;
 
 @end

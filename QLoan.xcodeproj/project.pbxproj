@@ -138,6 +138,8 @@
 		D871285C1DBAE6C400A45405 /* QLVerifyPhoneAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = D871285B1DBAE6C400A45405 /* QLVerifyPhoneAssembly.m */; };
 		D874A6481DBB5CCC0043B0E6 /* UIButton+Enable.m in Sources */ = {isa = PBXBuildFile; fileRef = D874A6471DBB5CCC0043B0E6 /* UIButton+Enable.m */; };
 		D874A64C1DBB62040043B0E6 /* UIAlertController+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = D874A64B1DBB62040043B0E6 /* UIAlertController+Extensions.m */; };
+		D874A6501DBB67240043B0E6 /* QLRegisterAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = D874A64F1DBB67240043B0E6 /* QLRegisterAssembly.m */; };
+		D874A6541DBB6E360043B0E6 /* QLOfferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D874A6531DBB6E360043B0E6 /* QLOfferViewController.m */; };
 		D881020D1DBA8EBB0066C442 /* img1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D88101F11DBA8EBB0066C442 /* img1@2x.png */; };
 		D881020E1DBA8EBB0066C442 /* img1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D88101F21DBA8EBB0066C442 /* img1@3x.png */; };
 		D881020F1DBA8EBB0066C442 /* img2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D88101F31DBA8EBB0066C442 /* img2@2x.png */; };
@@ -431,6 +433,10 @@
 		D874A6471DBB5CCC0043B0E6 /* UIButton+Enable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+Enable.m"; path = "Extensions/UIButton/UIButton+Enable.m"; sourceTree = "<group>"; };
 		D874A64A1DBB62040043B0E6 /* UIAlertController+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIAlertController+Extensions.h"; path = "Extensions/UIAlertController/UIAlertController+Extensions.h"; sourceTree = "<group>"; };
 		D874A64B1DBB62040043B0E6 /* UIAlertController+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertController+Extensions.m"; path = "Extensions/UIAlertController/UIAlertController+Extensions.m"; sourceTree = "<group>"; };
+		D874A64E1DBB67240043B0E6 /* QLRegisterAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLRegisterAssembly.h; path = Classes/UserInterface/Controllers/Register/Assembly/QLRegisterAssembly.h; sourceTree = "<group>"; };
+		D874A64F1DBB67240043B0E6 /* QLRegisterAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLRegisterAssembly.m; path = Classes/UserInterface/Controllers/Register/Assembly/QLRegisterAssembly.m; sourceTree = "<group>"; };
+		D874A6521DBB6E360043B0E6 /* QLOfferViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLOfferViewController.h; path = Classes/UserInterface/Controllers/Offer/QLOfferViewController.h; sourceTree = "<group>"; };
+		D874A6531DBB6E360043B0E6 /* QLOfferViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLOfferViewController.m; path = Classes/UserInterface/Controllers/Offer/QLOfferViewController.m; sourceTree = "<group>"; };
 		D88101F11DBA8EBB0066C442 /* img1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img1@2x.png"; path = "Resources/Photos/Lend/img1@2x.png"; sourceTree = "<group>"; };
 		D88101F21DBA8EBB0066C442 /* img1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img1@3x.png"; path = "Resources/Photos/Lend/img1@3x.png"; sourceTree = "<group>"; };
 		D88101F31DBA8EBB0066C442 /* img2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img2@2x.png"; path = "Resources/Photos/Lend/img2@2x.png"; sourceTree = "<group>"; };
@@ -1382,6 +1388,24 @@
 			name = UIAlertController;
 			sourceTree = "<group>";
 		};
+		D874A64D1DBB66F80043B0E6 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				D874A64E1DBB67240043B0E6 /* QLRegisterAssembly.h */,
+				D874A64F1DBB67240043B0E6 /* QLRegisterAssembly.m */,
+			);
+			name = Assembly;
+			sourceTree = "<group>";
+		};
+		D874A6511DBB6E190043B0E6 /* Offer */ = {
+			isa = PBXGroup;
+			children = (
+				D874A6521DBB6E360043B0E6 /* QLOfferViewController.h */,
+				D874A6531DBB6E360043B0E6 /* QLOfferViewController.m */,
+			);
+			name = Offer;
+			sourceTree = "<group>";
+		};
 		D88101EE1DBA8E6E0066C442 /* Photos */ = {
 			isa = PBXGroup;
 			children = (
@@ -1504,6 +1528,7 @@
 				D86147961DBA9E800018D19C /* Get */,
 				D8328F681DBA7C8A00438D4A /* Lend */,
 				D86147B01DBAA6830018D19C /* MyOrders */,
+				D874A6511DBB6E190043B0E6 /* Offer */,
 				D82077451DBAAE8E00253637 /* RegisterPhone */,
 				D89655551DB8317800DE4C66 /* Register */,
 				D86147AA1DBAA4900018D19C /* TabBar */,
@@ -1539,6 +1564,7 @@
 		D89655551DB8317800DE4C66 /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				D874A64D1DBB66F80043B0E6 /* Assembly */,
 				D89655561DB8319900DE4C66 /* QLRegisterViewController.h */,
 				D89655571DB8319900DE4C66 /* QLRegisterViewController.m */,
 			);
@@ -1963,6 +1989,7 @@
 				D8328F5C1DBA773400438D4A /* QLProfileAddCardCellObject.m in Sources */,
 				D835BD121DB97B0700F2FF0F /* QLProfileDataDisplayManager.m in Sources */,
 				D874A64C1DBB62040043B0E6 /* UIAlertController+Extensions.m in Sources */,
+				D874A6541DBB6E360043B0E6 /* QLOfferViewController.m in Sources */,
 				D835BD131DB97B0700F2FF0F /* QLProfileDataCell.m in Sources */,
 				D89655601DB8C39900DE4C66 /* QLAuthAssembly.m in Sources */,
 				D89655581DB8319900DE4C66 /* QLRegisterViewController.m in Sources */,
@@ -1971,6 +1998,7 @@
 				D820774C1DBAB58100253637 /* QLRegisterPhoneAssembly.m in Sources */,
 				D8F9D7AF1DAFD2FC000371CA /* main.m in Sources */,
 				D835BCCE1DB9741100F2FF0F /* RDSDataDisplayManager.m in Sources */,
+				D874A6501DBB67240043B0E6 /* QLRegisterAssembly.m in Sources */,
 				D896554A1DB823A100DE4C66 /* QLAuthViewController.m in Sources */,
 				9ECC12BE1DB977DB00E33288 /* QLChallengedNetworkClient.m in Sources */,
 				9EFF74011DB425FB004873A6 /* QLServicesAssembly.m in Sources */,

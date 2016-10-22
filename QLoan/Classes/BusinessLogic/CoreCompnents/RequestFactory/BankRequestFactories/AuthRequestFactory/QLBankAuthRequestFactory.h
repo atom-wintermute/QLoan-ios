@@ -27,6 +27,14 @@
 - (NSURLRequest *)requestForVerifyWithCode:(NSString *)code
                                  sessionId:(NSString *)sessionId;
 
+- (NSURLRequest *)requestForEditUserWithEmail:(NSString *)email
+                                    firstName:(NSString *)firstName
+                                   secondName:(NSString *)secondName
+                                    sessionId:(NSString *)sessionId;
+
+- (NSURLRequest *)requestForChangePasswordWithPassword:(NSString *)password
+                                             sessionId:(NSString *)sessionId;
+
 /**
  Запрос на получение данных текущего пользователя
  
