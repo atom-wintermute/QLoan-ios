@@ -210,6 +210,8 @@
 		D8F15F4E1DBC10C8008BDB3D /* QLFacebookLoginAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F15F4D1DBC10C8008BDB3D /* QLFacebookLoginAssembly.m */; };
 		D8F15F521DBC2070008BDB3D /* AppRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F15F511DBC2070008BDB3D /* AppRouter.m */; };
 		D8F15F591DBC2218008BDB3D /* QLFullScreenAnimationImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F15F581DBC2218008BDB3D /* QLFullScreenAnimationImplementation.m */; };
+		D8F15F611DBC2994008BDB3D /* QLMyOrdersEmptyDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8F15F601DBC2994008BDB3D /* QLMyOrdersEmptyDataView.xib */; };
+		D8F15F641DBC29BC008BDB3D /* QLMyOrdersEmptyDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F15F631DBC29BC008BDB3D /* QLMyOrdersEmptyDataView.m */; };
 		D8F9D7AF1DAFD2FC000371CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F9D7AE1DAFD2FC000371CA /* main.m */; };
 		D8F9D7B21DAFD2FC000371CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F9D7B11DAFD2FC000371CA /* AppDelegate.m */; };
 		D8F9D7BD1DAFD2FC000371CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8F9D7BC1DAFD2FC000371CA /* Assets.xcassets */; };
@@ -572,6 +574,9 @@
 		D8F15F561DBC219A008BDB3D /* QLFullScreenAnimations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QLFullScreenAnimations.h; sourceTree = "<group>"; };
 		D8F15F571DBC2218008BDB3D /* QLFullScreenAnimationImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLFullScreenAnimationImplementation.h; path = Classes/UserInterface/Animators/FullScreenAnimators/QLFullScreenAnimationImplementation.h; sourceTree = "<group>"; };
 		D8F15F581DBC2218008BDB3D /* QLFullScreenAnimationImplementation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLFullScreenAnimationImplementation.m; path = Classes/UserInterface/Animators/FullScreenAnimators/QLFullScreenAnimationImplementation.m; sourceTree = "<group>"; };
+		D8F15F601DBC2994008BDB3D /* QLMyOrdersEmptyDataView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QLMyOrdersEmptyDataView.xib; path = Classes/UserInterface/Controllers/MyOrders/Views/EmptyDataView/QLMyOrdersEmptyDataView.xib; sourceTree = "<group>"; };
+		D8F15F621DBC29BC008BDB3D /* QLMyOrdersEmptyDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLMyOrdersEmptyDataView.h; path = Classes/UserInterface/Controllers/MyOrders/Views/EmptyDataView/QLMyOrdersEmptyDataView.h; sourceTree = "<group>"; };
+		D8F15F631DBC29BC008BDB3D /* QLMyOrdersEmptyDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLMyOrdersEmptyDataView.m; path = Classes/UserInterface/Controllers/MyOrders/Views/EmptyDataView/QLMyOrdersEmptyDataView.m; sourceTree = "<group>"; };
 		D8F9D7AA1DAFD2FC000371CA /* QLoan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QLoan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8F9D7AE1DAFD2FC000371CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D8F9D7B01DAFD2FC000371CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1576,6 +1581,7 @@
 				D8732F901DBBBD8100530CC0 /* Cells */,
 				D8732F8C1DBBBCC000530CC0 /* DDM */,
 				D8732F871DBBBB6D00530CC0 /* Factory */,
+				D8F15F5B1DBC2906008BDB3D /* Views */,
 				D86147B11DBAA6A30018D19C /* QLMyOrdersViewController.h */,
 				D86147B21DBAA6A30018D19C /* QLMyOrdersViewController.m */,
 			);
@@ -1805,7 +1811,6 @@
 				D82077451DBAAE8E00253637 /* RegisterPhone */,
 				D89655551DB8317800DE4C66 /* Register */,
 				D86147AA1DBAA4900018D19C /* TabBar */,
-				D8D626C91DBADC75007FFB3F /* VerifyPhone */,
 				D8D98BB51DB9087900F3FB01 /* UserProfile */,
 			);
 			name = Controllers;
@@ -1837,6 +1842,7 @@
 		D89655551DB8317800DE4C66 /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				D8D626C91DBADC75007FFB3F /* VerifyPhone */,
 				D874A64D1DBB66F80043B0E6 /* Assembly */,
 				D89655561DB8319900DE4C66 /* QLRegisterViewController.h */,
 				D89655571DB8319900DE4C66 /* QLRegisterViewController.m */,
@@ -1968,6 +1974,24 @@
 			children = (
 			);
 			name = Router;
+			sourceTree = "<group>";
+		};
+		D8F15F5B1DBC2906008BDB3D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D8F15F5C1DBC2923008BDB3D /* EmptyDataView */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		D8F15F5C1DBC2923008BDB3D /* EmptyDataView */ = {
+			isa = PBXGroup;
+			children = (
+				D8F15F621DBC29BC008BDB3D /* QLMyOrdersEmptyDataView.h */,
+				D8F15F631DBC29BC008BDB3D /* QLMyOrdersEmptyDataView.m */,
+				D8F15F601DBC2994008BDB3D /* QLMyOrdersEmptyDataView.xib */,
+			);
+			name = EmptyDataView;
 			sourceTree = "<group>";
 		};
 		D8F9D7A11DAFD2FC000371CA = {
@@ -2214,6 +2238,7 @@
 				D86147831DBA9CD00018D19C /* img_12@3x.png in Resources */,
 				D86147951DBA9E5D0018D19C /* Get.storyboard in Resources */,
 				D86147861DBA9CD00018D19C /* img_14@2x.png in Resources */,
+				D8F15F611DBC2994008BDB3D /* QLMyOrdersEmptyDataView.xib in Resources */,
 				D88102221DBA8EBB0066C442 /* img11@3x.png in Resources */,
 				D881021E1DBA8EBB0066C442 /* img9@3x.png in Resources */,
 				D88102171DBA8EBB0066C442 /* img6@2x.png in Resources */,
@@ -2313,6 +2338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8F15F641DBC29BC008BDB3D /* QLMyOrdersEmptyDataView.m in Sources */,
 				D835BCD71DB974C100F2FF0F /* RDSAutoHeightCellFactory.m in Sources */,
 				D835BD0F1DB97B0700F2FF0F /* QLProfileCellFactoryImplementation.m in Sources */,
 				9EFF73971DB3B870004873A6 /* QLAuthorizationRequestConfiguration.m in Sources */,

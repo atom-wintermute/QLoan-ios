@@ -21,7 +21,7 @@
             <objects>
                 <navigationController navigationBarHidden="YES" id="vFx-7T-Uqk" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KkW-ib-Rqr">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="KkW-ib-Rqr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

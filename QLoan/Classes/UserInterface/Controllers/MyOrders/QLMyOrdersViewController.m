@@ -11,6 +11,7 @@
 #import "QLMyOrdersCellFactory.h"
 
 #import "QLMyOrdersDataDisplayManager.h"
+#import "QLMyOrdersEmptyDataView.h"
 
 @interface QLMyOrdersViewController () <UITableViewDelegate>
 
@@ -36,14 +37,21 @@
 
 - (void)showData {
     NSArray *cellObjects = [self.cellFactory cellObjects];
-    self.dataDisplayManager =  [[QLMyOrdersDataDisplayManager alloc] initWithInputData:cellObjects
-                                                       andConversionToCellObjectsBlock:^id(id dataObject) {
-                                                           return dataObject;
-                                                       }];
+    cellObjects = @[];
+    if (cellObjects.count) {
+        self.dataDisplayManager =  [[QLMyOrdersDataDisplayManager alloc] initWithInputData:cellObjects
+                                                           andConversionToCellObjectsBlock:^id(id dataObject) {
+                                                               return dataObject;
+                                                           }];
     
-    self.tableView.dataSource = [self.dataDisplayManager dataSourceForTableView:self.tableView];
-    self.tableView.delegate = [self.dataDisplayManager delegateForTableView:self.tableView
-                                                           withBaseDelegate:self];
+        self.tableView.dataSource = [self.dataDisplayManager dataSourceForTableView:self.tableView];
+        self.tableView.delegate = [self.dataDisplayManager delegateForTableView:self.tableView
+                                                               withBaseDelegate:self];
+    } else {
+        QLMyOrdersEmptyDataView *emptyView = [QLMyOrdersEmptyDataView new];
+        self.emptyView = emptyView;
+        [self.view addSubview:emptyView];
+    }
     [self.tableView reloadData];
 }
 
