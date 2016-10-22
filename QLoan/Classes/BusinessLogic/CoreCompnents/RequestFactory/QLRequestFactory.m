@@ -25,7 +25,7 @@
 										@"last_name" : configuration.lastName,
 										@"parent_name" : configuration.parentName
 										} mutableCopy];
-	dictionary[@"push_token"] = token;
+	if (token != nil) dictionary[@"push_token"] = token;
 	return [self postRequestWithPath:@"auth/"
 						  parameters:[dictionary copy]];
 }
@@ -36,7 +36,7 @@
 										 @"login" : configuration.login,
 										 @"password" : configuration.password
 										 } mutableCopy];
-	dictionary[@"push_token"] = token;
+	if (token != nil) dictionary[@"push_token"] = token;
 	return [self postRequestWithPath:@"auth/sign_in/"
 						  parameters:[dictionary copy]];
 }

@@ -8,13 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol QLBankAuthService;;
+@protocol QLBankAuthService;
+@protocol QLStorage;
 
 @interface QLVerifyPhoneViewController : UIViewController
 
 @property (nonatomic, weak) IBOutlet UITextField *codeTextField;
 @property (nonatomic, weak) IBOutlet UIButton *registerButton;
 
+@property (nonatomic, strong) id<QLStorage> storage;
 @property (nonatomic, strong) id<QLBankAuthService> bankAuthService;
 
 - (IBAction)registerButtonWasPressed:(id)sender;

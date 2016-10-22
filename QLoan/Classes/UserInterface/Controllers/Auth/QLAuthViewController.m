@@ -86,8 +86,6 @@ static NSString * const QLAuthRegisterSegue = @"registerSegue";
 }
 
 - (void)registerButtonWasPressed:(id)sender {
-	[self.storage storeObject:self.loginTextField.text
-					   forKey:@"login"];
     [self performSegueWithIdentifier:QLAuthRegisterSegue
                               sender:self];
 }

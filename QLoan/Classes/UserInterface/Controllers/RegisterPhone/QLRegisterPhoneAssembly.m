@@ -10,6 +10,7 @@
 
 #import "QLServicesAssembly.h"
 #import "QLRegisterPhoneViewContoller.h"
+#import "QLCoreComponentsAssembly.h"
 
 @implementation QLRegisterPhoneAssembly
 
@@ -18,6 +19,8 @@
                           configuration:^(TyphoonDefinition *definition) {
                               [definition injectProperty:@selector(bankAuthService)
                                                     with:[self.serviceAssembly bankAuthService]];
+							  [definition injectProperty:@selector(storage)
+													with:[self.coreAssembly inMemoryStorage]];
                           }];
 }
 

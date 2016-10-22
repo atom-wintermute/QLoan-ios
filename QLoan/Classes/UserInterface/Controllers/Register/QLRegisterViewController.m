@@ -69,7 +69,7 @@ static NSString * const QLRegisterOfferSegue = @"registerOfferSegue";
 			[self registrationSuccessful:NO
 								   error:error];
 		} else {
-			
+			[self registerWithLocalBackend];
 		}
 	};
 	
