@@ -31,13 +31,17 @@
     [self configureView];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+	[super viewDidAppear:animated];
+	[self loadOrders];
+}
+
 - (void)configureView {
     [self.view layoutIfNeeded];
 	self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Назад"
 																			 style:self.navigationItem.backBarButtonItem.style
 																			target:nil
 																			action:nil];
-	[self loadOrders];
 }
 
 - (void)loadOrders {
