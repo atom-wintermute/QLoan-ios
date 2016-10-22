@@ -41,6 +41,13 @@
 }
 
 - (void)loadOrders {
+	
+	[self.userInfoService infoForUserWithId:4
+								 completion:^(QLUserInfo *info, NSError *error) {
+									 
+								 }];
+	
+	return;
 	__block NSMutableArray *infoArray = [NSMutableArray new];
 	__block NSMutableArray *idsArray = [NSMutableArray new];
 	QLUserInfosCompletionBlock userInfoCompletion = ^(NSArray *infos, NSError *error) {

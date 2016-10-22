@@ -99,14 +99,14 @@
 }
 
 - (NSURLRequest *)requestForUserWithId:(NSUInteger)userId {
-	NSDictionary *dictionary = @{ @"id": @(userId) };
-	return [self getRequestWithPath:@"get_user_by_id/"
-						 parameters:dictionary];
+	NSString* stringId = [NSString stringWithFormat:@"users/%d", (int)userId];
+	return [self getRequestWithPath:stringId
+						 parameters:nil];
 }
 
 - (NSURLRequest *)requestForUsersWithIds:(NSArray <NSNumber *> *)ids {
 	NSDictionary *dictionary = @{ @"ids" : ids };
-	return [self getRequestWithPath:@"get_user_by_id/"
+	return [self getRequestWithPath:@"users"
 						 parameters:dictionary];
 }
 
