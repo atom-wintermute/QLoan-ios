@@ -89,10 +89,14 @@
                              id responseData = [NSJSONSerialization JSONObjectWithData:response.data
                                                                                options:kNilOptions
                                                                                  error:nil];
-                             if (![responseData[QLBankErrorCode] integerValue]) {
+                             NSInteger errorCode = [responseData[QLBankErrorCode] integerValue];
+                             if (!errorCode) {
                                  run_block_on_main(completion, YES, nil);
                              } else {
-                                 run_block_on_main(completion, NO, nil);
+                                 NSError *error = [NSError errorWithDomain:NSURLErrorDomain
+                                                                      code:errorCode
+                                                                  userInfo:nil];
+                                 run_block_on_main(completion, NO, error);
                              }
                          }];
 }

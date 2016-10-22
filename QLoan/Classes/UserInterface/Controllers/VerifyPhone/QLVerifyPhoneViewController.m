@@ -37,7 +37,12 @@ static NSUInteger const QLVerifyCodeLenght = 6;
                                                  [self performSegueWithIdentifier:QLVerifyRegisterSegue
                                                                            sender:self];
                                              } else {
-                                                 UIAlertController *alertController = [UIAlertController standartErrorAlertController];
+                                                 UIAlertController *alertController;
+                                                 if (106 == error.code) {
+                                                     alertController = [UIAlertController errorAlertControllerWithTitle:@"Неверно указан код активации"];
+                                                 } else {
+                                                     alertController = [UIAlertController standartErrorAlertController];
+                                                 }
                                                  [self presentViewController:alertController
                                                                     animated:YES
                                                                   completion:nil];
