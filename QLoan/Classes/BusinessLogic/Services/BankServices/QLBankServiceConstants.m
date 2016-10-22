@@ -15,8 +15,11 @@ NSString * const QLBankCompleteRegistration = @"completeRegistration.do";
 NSString * const QLBankChangeUser = @"changeUser.do";
 NSString * const QLBankChangePassword = @"changePassword.do";
 NSString * const QLBankAuthenticate = @"authenticate.do";
+NSString * const QLBankLogout = @"logout.do";
 NSString * const QLBankGetUser = @"getUser.do";
+
 NSString * const QLBankGetBindings = @"getBindings.do";
+NSString * const QLBankCreateVerifyPayment = @"createVerifyPayment.do";
 
 #pragma mark - Параметры запросов
 

@@ -11,12 +11,17 @@
 #import "QLBankAuthService.h"
 #import "QLBankCardService.h"
 #import "QLProfileCellFactory.h"
+#import "QLProfileViewDelegate.h"
 
 #import "QLProfileDataDisplayManager.h"
+#import "QLTabBarController.h"
+#import "AppDelegate.h"
 
 #import "QLBankUserInfo.h"
 
-@interface QLProfileViewController () <UITableViewDelegate>
+static NSString * const QLProfileAddCardSegue = @"profileAddCardSegue";
+
+@interface QLProfileViewController () <UITableViewDelegate, QLProfileViewDelegate>
 
 @property (nonatomic, strong) QLProfileDataDisplayManager *dataDisplayManager;
 
@@ -24,12 +29,20 @@
 
 @implementation QLProfileViewController
 
+#pragma mark - Жизненный цикл
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
     self.navigationItem.title = @"Мой профиль";
     [self configureView];
+}
+
+#pragma mark - Внешний вид
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 #pragma mark - Приватные методы
@@ -47,7 +60,8 @@
     
     NSArray <QLBankCard *> *cardList = [self.bankCardService obtainBankCards];
     NSArray *cellObjects = [self.cellFactory cellObjectsFrom:bankUserInfo
-                                                    cardList:cardList];
+                                                    cardList:cardList
+                                                    delegate:self];
     self.dataDisplayManager =  [[QLProfileDataDisplayManager alloc] initWithInputData:cellObjects
                                                       andConversionToCellObjectsBlock:^id(id dataObject) {
                                                           return dataObject;
@@ -57,6 +71,23 @@
     self.tableView.delegate = [self.dataDisplayManager delegateForTableView:self.tableView
                                                            withBaseDelegate:self];
     [self.tableView reloadData];
+}
+
+#pragma mark - QLProfileViewDelegate
+
+- (void)logoutButtonWasPressed {
+    [self.bankAuthService logoutCurrentUser:^(BOOL success, NSError *error) {
+        if (success) {
+            UIWindow *mainWindow = [[[UIApplication sharedApplication] delegate] window];
+            QLTabBarController *tabBarController = (QLTabBarController *)[mainWindow rootViewController];
+            [tabBarController showLoginScreen:YES];
+        }
+    }];
+}
+
+- (void)addCardButtonWasPressed {
+    [self performSegueWithIdentifier:QLProfileAddCardSegue
+                              sender:self];
 }
 
 @end

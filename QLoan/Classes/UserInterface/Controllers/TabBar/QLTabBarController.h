@@ -10,4 +10,6 @@
 
 @interface QLTabBarController : UITabBarController
 
+- (void)showLoginScreen:(BOOL)animated;
+
 @end

@@ -22,6 +22,8 @@
 - (NSURLRequest *)requestForLoginWithLogin:(NSString *)login
                                   password:(NSString *)password;
 
+- (NSURLRequest *)requestForLogoutWithSessionId:(NSString *)sessionId;
+
 - (NSURLRequest *)requestForRegisterWithPhoneNumber:(NSString *)phoneNumber;
 
 - (NSURLRequest *)requestForVerifyWithCode:(NSString *)code

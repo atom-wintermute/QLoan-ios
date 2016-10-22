@@ -64,8 +64,4 @@
 
 - (QLChallengedNetworkClient *)challengedNetworkClient;
 
-#pragma mark - Хранилище данных
-
-- (id<QLStorage>)keychainStorage;
-
 @end

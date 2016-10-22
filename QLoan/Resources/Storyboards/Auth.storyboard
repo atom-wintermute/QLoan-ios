@@ -614,7 +614,9 @@
                             <constraint firstItem="8Ie-fF-twq" firstAttribute="top" secondItem="9dc-uF-rv6" secondAttribute="bottom" constant="40" id="mpT-sG-hlk"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="VUd-jg-MYV"/>
+                    <navigationItem key="navigationItem" id="VUd-jg-MYV">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="G4b-jQ-w3E"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="continueButton" destination="8Ie-fF-twq" id="sOr-gp-iLa"/>
                         <outlet property="emailTextField" destination="Vxp-0Y-Zhp" id="dIc-bD-G8Y"/>
@@ -693,10 +695,10 @@
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UKM-48-CIc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UKM-48-CIc">
                                 <string key="text">Нажимая «Продолжить» Вы соглашаетесь
 с условиями публичной оферты</string>
-                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -706,7 +708,7 @@
                                     <constraint firstAttribute="height" constant="52" id="g2k-K6-Cm8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
-                                <state key="normal" title="Продолжить">
+                                <state key="normal" title="Принимаю условия">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>

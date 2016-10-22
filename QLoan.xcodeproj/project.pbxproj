@@ -189,6 +189,11 @@
 		D89655601DB8C39900DE4C66 /* QLAuthAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = D896555F1DB8C39900DE4C66 /* QLAuthAssembly.m */; };
 		D8A9AC0E1DBB8D170029545C /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A9AC0D1DBB8D170029545C /* libz.tbd */; };
 		D8A9AC101DBB8D1E0029545C /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A9AC0F1DBB8D1E0029545C /* libstdc++.tbd */; };
+		D8A9AC1B1DBB9F4F0029545C /* QLAddCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A9AC1A1DBB9F4F0029545C /* QLAddCardViewController.m */; };
+		D8A9AC1E1DBB9F5C0029545C /* QLAddCardAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A9AC1D1DBB9F5C0029545C /* QLAddCardAssembly.m */; };
+		D8B0284C1DBB85C400C9D47D /* QLProfileLogoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B0284A1DBB85C400C9D47D /* QLProfileLogoutCell.m */; };
+		D8B0284D1DBB85C400C9D47D /* QLProfileLogoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8B0284B1DBB85C400C9D47D /* QLProfileLogoutCell.xib */; };
+		D8B028501DBB85DB00C9D47D /* QLProfileLogoutCellObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B0284F1DBB85DB00C9D47D /* QLProfileLogoutCellObject.m */; };
 		D8D626CC1DBADC9C007FFB3F /* QLVerifyPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D626CB1DBADC9C007FFB3F /* QLVerifyPhoneViewController.m */; };
 		D8D98BB41DB9085300F3FB01 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8D98BB31DB9085300F3FB01 /* Profile.storyboard */; };
 		D8F9D7AF1DAFD2FC000371CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F9D7AE1DAFD2FC000371CA /* main.m */; };
@@ -511,6 +516,16 @@
 		D8A9AC0C1DBB8CD20029545C /* QLoan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QLoan.entitlements; sourceTree = "<group>"; };
 		D8A9AC0D1DBB8D170029545C /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		D8A9AC0F1DBB8D1E0029545C /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		D8A9AC191DBB9F4F0029545C /* QLAddCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLAddCardViewController.h; path = Classes/UserInterface/Controllers/AddCard/QLAddCardViewController.h; sourceTree = "<group>"; };
+		D8A9AC1A1DBB9F4F0029545C /* QLAddCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLAddCardViewController.m; path = Classes/UserInterface/Controllers/AddCard/QLAddCardViewController.m; sourceTree = "<group>"; };
+		D8A9AC1C1DBB9F5C0029545C /* QLAddCardAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLAddCardAssembly.h; path = Classes/UserInterface/Controllers/AddCard/Assembly/QLAddCardAssembly.h; sourceTree = "<group>"; };
+		D8A9AC1D1DBB9F5C0029545C /* QLAddCardAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLAddCardAssembly.m; path = Classes/UserInterface/Controllers/AddCard/Assembly/QLAddCardAssembly.m; sourceTree = "<group>"; };
+		D8B028491DBB85C400C9D47D /* QLProfileLogoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLProfileLogoutCell.h; path = LogoutCell/QLProfileLogoutCell.h; sourceTree = "<group>"; };
+		D8B0284A1DBB85C400C9D47D /* QLProfileLogoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLProfileLogoutCell.m; path = LogoutCell/QLProfileLogoutCell.m; sourceTree = "<group>"; };
+		D8B0284B1DBB85C400C9D47D /* QLProfileLogoutCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QLProfileLogoutCell.xib; path = LogoutCell/QLProfileLogoutCell.xib; sourceTree = "<group>"; };
+		D8B0284E1DBB85DB00C9D47D /* QLProfileLogoutCellObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLProfileLogoutCellObject.h; path = LogoutCell/QLProfileLogoutCellObject.h; sourceTree = "<group>"; };
+		D8B0284F1DBB85DB00C9D47D /* QLProfileLogoutCellObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLProfileLogoutCellObject.m; path = LogoutCell/QLProfileLogoutCellObject.m; sourceTree = "<group>"; };
+		D8B028511DBB868500C9D47D /* QLProfileViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = QLProfileViewDelegate.h; path = Classes/UserInterface/Controllers/UserProfile/QLProfileViewDelegate.h; sourceTree = "<group>"; };
 		D8D626CA1DBADC9C007FFB3F /* QLVerifyPhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLVerifyPhoneViewController.h; path = Classes/UserInterface/Controllers/VerifyPhone/QLVerifyPhoneViewController.h; sourceTree = "<group>"; };
 		D8D626CB1DBADC9C007FFB3F /* QLVerifyPhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLVerifyPhoneViewController.m; path = Classes/UserInterface/Controllers/VerifyPhone/QLVerifyPhoneViewController.m; sourceTree = "<group>"; };
 		D8D98BB31DB9085300F3FB01 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = Resources/Storyboards/Profile.storyboard; sourceTree = "<group>"; };
@@ -1241,6 +1256,7 @@
 				D8328F4B1DBA6D6700438D4A /* CardCell */,
 				D835BD091DB97B0700F2FF0F /* DataCell */,
 				D8328F5D1DBA788900438D4A /* OffsetCell */,
+				D8BD05821DBB84C600F8253B /* LogoutCell */,
 			);
 			name = Cells;
 			path = Classes/UserInterface/Controllers/UserProfile/Cells;
@@ -1641,6 +1657,7 @@
 		D89655431DB8234E00DE4C66 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D8A9AC111DBB9C8D0029545C /* AddCard */,
 				9ECC12DD1DBAA08500E33288 /* CreateOrder */,
 				D89655471DB8238300DE4C66 /* Auth */,
 				D86147961DBA9E800018D19C /* Get */,
@@ -1698,6 +1715,37 @@
 			name = Assembly;
 			sourceTree = "<group>";
 		};
+		D8A9AC111DBB9C8D0029545C /* AddCard */ = {
+			isa = PBXGroup;
+			children = (
+				D8A9AC151DBB9EDD0029545C /* Assembly */,
+				D8A9AC191DBB9F4F0029545C /* QLAddCardViewController.h */,
+				D8A9AC1A1DBB9F4F0029545C /* QLAddCardViewController.m */,
+			);
+			name = AddCard;
+			sourceTree = "<group>";
+		};
+		D8A9AC151DBB9EDD0029545C /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				D8A9AC1C1DBB9F5C0029545C /* QLAddCardAssembly.h */,
+				D8A9AC1D1DBB9F5C0029545C /* QLAddCardAssembly.m */,
+			);
+			name = Assembly;
+			sourceTree = "<group>";
+		};
+		D8BD05821DBB84C600F8253B /* LogoutCell */ = {
+			isa = PBXGroup;
+			children = (
+				D8B028491DBB85C400C9D47D /* QLProfileLogoutCell.h */,
+				D8B0284A1DBB85C400C9D47D /* QLProfileLogoutCell.m */,
+				D8B0284B1DBB85C400C9D47D /* QLProfileLogoutCell.xib */,
+				D8B0284E1DBB85DB00C9D47D /* QLProfileLogoutCellObject.h */,
+				D8B0284F1DBB85DB00C9D47D /* QLProfileLogoutCellObject.m */,
+			);
+			name = LogoutCell;
+			sourceTree = "<group>";
+		};
 		D8D626C91DBADC75007FFB3F /* VerifyPhone */ = {
 			isa = PBXGroup;
 			children = (
@@ -1715,6 +1763,7 @@
 				D835BD081DB97B0700F2FF0F /* Cells */,
 				D835BD051DB97B0700F2FF0F /* DDM */,
 				D835BCFC1DB97B0700F2FF0F /* Factory */,
+				D8B028511DBB868500C9D47D /* QLProfileViewDelegate.h */,
 				D835BD041DB97B0700F2FF0F /* QLProfileViewController.h */,
 				D835BD001DB97B0700F2FF0F /* QLProfileViewController.m */,
 			);
@@ -1919,6 +1968,7 @@
 				D881021C1DBA8EBB0066C442 /* img8@3x.png in Resources */,
 				D8D98BB41DB9085300F3FB01 /* Profile.storyboard in Resources */,
 				D881021F1DBA8EBB0066C442 /* img10@2x.png in Resources */,
+				D8B0284D1DBB85C400C9D47D /* QLProfileLogoutCell.xib in Resources */,
 				D86147711DBA9CCF0018D19C /* img_3@3x.png in Resources */,
 				D89655401DB8227400DE4C66 /* LaunchScreen.storyboard in Resources */,
 				D861477D1DBA9CD00018D19C /* img_9@3x.png in Resources */,
@@ -2087,12 +2137,15 @@
 				D8328F6B1DBA7CAB00438D4A /* QLLendViewController.m in Sources */,
 				9EFF74061DB42925004873A6 /* QLTestAssembly.m in Sources */,
 				9EFF73E91DB40EC1004873A6 /* QLNetworkClient.m in Sources */,
+				D8A9AC1E1DBB9F5C0029545C /* QLAddCardAssembly.m in Sources */,
 				D8328F461DBA2B9300438D4A /* QLBankAuthRequestFactoryImplementation.m in Sources */,
+				D8A9AC1B1DBB9F4F0029545C /* QLAddCardViewController.m in Sources */,
 				9EFF73DD1DB3F94C004873A6 /* QLRequestFactory.m in Sources */,
 				9ECC12CA1DBA284300E33288 /* QLDateFormatter.m in Sources */,
 				D8F9D7B21DAFD2FC000371CA /* AppDelegate.m in Sources */,
 				D835BD331DB993B400F2FF0F /* UIView+Gradient.m in Sources */,
 				D835BD151DB97B0700F2FF0F /* QLProfileDataCellObject.m in Sources */,
+				D8B028501DBB85DB00C9D47D /* QLProfileLogoutCellObject.m in Sources */,
 				D86147A91DBAA3C00018D19C /* QLGetDataDisplayManager.m in Sources */,
 				D835BD2B1DB98F7000F2FF0F /* UIColor+QLColor.m in Sources */,
 				D8328F401DBA299300438D4A /* QLBankCardMapperImplementation.m in Sources */,
@@ -2119,6 +2172,7 @@
 				D835BD121DB97B0700F2FF0F /* QLProfileDataDisplayManager.m in Sources */,
 				D874A64C1DBB62040043B0E6 /* UIAlertController+Extensions.m in Sources */,
 				D874A6541DBB6E360043B0E6 /* QLOfferViewController.m in Sources */,
+				D8B0284C1DBB85C400C9D47D /* QLProfileLogoutCell.m in Sources */,
 				D835BD131DB97B0700F2FF0F /* QLProfileDataCell.m in Sources */,
 				D89655601DB8C39900DE4C66 /* QLAuthAssembly.m in Sources */,
 				D89655581DB8319900DE4C66 /* QLRegisterViewController.m in Sources */,

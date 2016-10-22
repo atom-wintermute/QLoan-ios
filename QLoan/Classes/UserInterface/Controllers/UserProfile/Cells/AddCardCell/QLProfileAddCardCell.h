@@ -10,9 +10,15 @@
 
 #import <Nimbus/NimbusModels.h>
 
+@protocol QLProfileViewDelegate;;
+
 /**
  Ячейка добавления карточки
  */
 @interface QLProfileAddCardCell : UITableViewCell <NICell>
+
+@property (nonatomic, weak) id<QLProfileViewDelegate> delegate;
+
+- (IBAction)addCardButtonWasPressed:(id)sender;
 
 @end

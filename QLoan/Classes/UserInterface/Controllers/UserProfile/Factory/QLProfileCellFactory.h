@@ -6,6 +6,8 @@
 //  Copyright © 2016 Rambler&Co. All rights reserved.
 //
 
+@protocol QLProfileViewDelegate;;
+
 @class QLBankUserInfo;
 @class QLBankCard;
 
@@ -15,6 +17,7 @@
 @protocol QLProfileCellFactory <NSObject>
 
 - (NSArray *)cellObjectsFrom:(QLBankUserInfo *)bankUserInfo
-                    cardList:(NSArray <QLBankCard *> *)cardList;
+                    cardList:(NSArray <QLBankCard *> *)cardList
+                    delegate:(id<QLProfileViewDelegate>)delegate;
 
 @end

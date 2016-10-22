@@ -30,6 +30,19 @@
                                                error:NULL];
 }
 
+- (NSURLRequest *)requestForLogoutWithSessionId:(NSString *)sessionId {
+    NSString *path = QLBankLogout;
+    NSDictionary *parameters = @{
+                                 @"sessionId": sessionId
+                                 };
+    
+    return [self.requestSerializer requestWithMethod:QLPostRequestMethodKey
+                                           URLString:[self urlStringWithPath:path]
+                                          parameters:parameters
+                                               error:NULL];
+
+}
+
 - (NSURLRequest *)requestForRegisterWithPhoneNumber:(NSString *)phoneNumber {
     NSString *path = QLBankRegister;
     NSDictionary *parameters = @{

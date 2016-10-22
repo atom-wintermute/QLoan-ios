@@ -20,4 +20,10 @@
  */
 - (NSURLRequest *)requestForUpdateBankCardListWithSessionId:(NSString *)sessionId;
 
+- (NSURLRequest *)requestForAddBankCardWithSessionId:(NSString *)sessionId
+                                                 pan:(NSString *)pan
+                                                 cvc:(NSString *)cvc
+                                          expiryDate:(NSString *)expiryDate
+                                        mnemonicName:(NSString *)mnemonicName;
+
 @end
