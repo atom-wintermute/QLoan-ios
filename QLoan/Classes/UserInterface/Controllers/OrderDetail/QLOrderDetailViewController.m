@@ -24,6 +24,7 @@
 	[self.view layoutIfNeeded];
 	[self configureView];
 	[self configureTableView];
+	self.nameLabel.text = [NSString stringWithFormat:@"%@ %@", self.orderInfo.user.firstName, self.orderInfo.user.lastName];
 }
 
 - (IBAction)requestLoan:(id)sender {

@@ -652,6 +652,7 @@
 		9EC485F21DBBCC1A00E8FF66 /* OrderDetail */ = {
 			isa = PBXGroup;
 			children = (
+				9EC485FE1DBBDF7B00E8FF66 /* Cell */,
 				9EC485FA1DBBD81100E8FF66 /* Factory */,
 				9EC485F61DBBCC6400E8FF66 /* Assembly */,
 				9EC485F31DBBCC5800E8FF66 /* QLOrderDetailViewController.h */,
@@ -676,6 +677,13 @@
 				9EC485FC1DBBD83B00E8FF66 /* QLOrderDetailCellObjectFactory.m */,
 			);
 			name = Factory;
+			sourceTree = "<group>";
+		};
+		9EC485FE1DBBDF7B00E8FF66 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 		9ECC12B11DB95F1600E33288 /* SessionCredentials */ = {
