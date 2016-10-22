@@ -196,6 +196,7 @@
 		D8A9AC101DBB8D1E0029545C /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A9AC0F1DBB8D1E0029545C /* libstdc++.tbd */; };
 		D8A9AC1B1DBB9F4F0029545C /* QLAddCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A9AC1A1DBB9F4F0029545C /* QLAddCardViewController.m */; };
 		D8A9AC1E1DBB9F5C0029545C /* QLAddCardAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A9AC1D1DBB9F5C0029545C /* QLAddCardAssembly.m */; };
+		D8AD01391DBBCE9200547F8C /* QLMoneyFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AD01381DBBCE9200547F8C /* QLMoneyFormatter.m */; };
 		D8B0284C1DBB85C400C9D47D /* QLProfileLogoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B0284A1DBB85C400C9D47D /* QLProfileLogoutCell.m */; };
 		D8B0284D1DBB85C400C9D47D /* QLProfileLogoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8B0284B1DBB85C400C9D47D /* QLProfileLogoutCell.xib */; };
 		D8B028501DBB85DB00C9D47D /* QLProfileLogoutCellObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B0284F1DBB85DB00C9D47D /* QLProfileLogoutCellObject.m */; };
@@ -535,6 +536,8 @@
 		D8A9AC1A1DBB9F4F0029545C /* QLAddCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLAddCardViewController.m; path = Classes/UserInterface/Controllers/AddCard/QLAddCardViewController.m; sourceTree = "<group>"; };
 		D8A9AC1C1DBB9F5C0029545C /* QLAddCardAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLAddCardAssembly.h; path = Classes/UserInterface/Controllers/AddCard/Assembly/QLAddCardAssembly.h; sourceTree = "<group>"; };
 		D8A9AC1D1DBB9F5C0029545C /* QLAddCardAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLAddCardAssembly.m; path = Classes/UserInterface/Controllers/AddCard/Assembly/QLAddCardAssembly.m; sourceTree = "<group>"; };
+		D8AD01371DBBCE9200547F8C /* QLMoneyFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLMoneyFormatter.h; path = Classes/Helpers/MoneyFormatter/QLMoneyFormatter.h; sourceTree = "<group>"; };
+		D8AD01381DBBCE9200547F8C /* QLMoneyFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLMoneyFormatter.m; path = Classes/Helpers/MoneyFormatter/QLMoneyFormatter.m; sourceTree = "<group>"; };
 		D8B028491DBB85C400C9D47D /* QLProfileLogoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLProfileLogoutCell.h; path = LogoutCell/QLProfileLogoutCell.h; sourceTree = "<group>"; };
 		D8B0284A1DBB85C400C9D47D /* QLProfileLogoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLProfileLogoutCell.m; path = LogoutCell/QLProfileLogoutCell.m; sourceTree = "<group>"; };
 		D8B0284B1DBB85C400C9D47D /* QLProfileLogoutCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QLProfileLogoutCell.xib; path = LogoutCell/QLProfileLogoutCell.xib; sourceTree = "<group>"; };
@@ -1434,6 +1437,7 @@
 		D84F78471DB8F8B100394F1D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				D8AD01361DBBCE6600547F8C /* MoneyFormatter */,
 				D835BCCA1DB973DE00F2FF0F /* DataDisplayManager */,
 				D835BCD41DB9749000F2FF0F /* Nimbus */,
 				D84F78481DB8F8E400394F1D /* QLBlocksHelper.h */,
@@ -1789,6 +1793,15 @@
 				D8A9AC1D1DBB9F5C0029545C /* QLAddCardAssembly.m */,
 			);
 			name = Assembly;
+			sourceTree = "<group>";
+		};
+		D8AD01361DBBCE6600547F8C /* MoneyFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				D8AD01371DBBCE9200547F8C /* QLMoneyFormatter.h */,
+				D8AD01381DBBCE9200547F8C /* QLMoneyFormatter.m */,
+			);
+			name = MoneyFormatter;
 			sourceTree = "<group>";
 		};
 		D8BD05821DBB84C600F8253B /* LogoutCell */ = {
@@ -2187,6 +2200,7 @@
 				9E64B7F91DBB90580033969D /* QLOrderInfo.m in Sources */,
 				9EFF73F11DB416AE004873A6 /* QLJSONSerializer.m in Sources */,
 				9EFF73B51DB3C9C5004873A6 /* ServicesConstants.m in Sources */,
+				D8AD01391DBBCE9200547F8C /* QLMoneyFormatter.m in Sources */,
 				D861479D1DBA9FA00018D19C /* QLGetAssembly.m in Sources */,
 				9E09BBCE1DBACB4600B1CF0E /* QLCreateBorrowerOrderAssembly.m in Sources */,
 				D8D626CC1DBADC9C007FFB3F /* QLVerifyPhoneViewController.m in Sources */,
