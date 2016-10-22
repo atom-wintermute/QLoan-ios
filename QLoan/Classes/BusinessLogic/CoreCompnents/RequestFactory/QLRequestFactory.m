@@ -54,7 +54,7 @@
 		[dictionary setValue:sortOrdering forKey:sortMethodDescription];
 	}
 	
-	return [self getRequestWithPath:@"getMyBorrwersOrders/"
+	return [self getRequestWithPath:@"my_borrower_orders/"
 						 parameters:[dictionary copy]];
 }
 
@@ -69,7 +69,7 @@
 		[dictionary setValue:sortOrdering forKey:sortMethodDescription];
 	}
 	
-	return [self getRequestWithPath:@"getMyLendersOrders/"
+	return [self getRequestWithPath:@"my_lending_orders/"
 						 parameters:[dictionary copy]];
 }
 

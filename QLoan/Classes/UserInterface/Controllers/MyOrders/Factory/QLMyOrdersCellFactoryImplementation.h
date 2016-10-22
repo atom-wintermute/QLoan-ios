@@ -12,4 +12,6 @@
 
 @interface QLMyOrdersCellFactoryImplementation : NSObject <QLMyOrdersCellFactory>
 
+
+
 @end

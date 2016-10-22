@@ -9,11 +9,15 @@
 #import <UIKit/UIKit.h>
 
 @protocol QLMyOrdersCellFactory;
+@class QLPersonalCabinetService;
+@class QLUserInfoService;
 
 @interface QLMyOrdersViewController : UIViewController
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 
 @property (nonatomic, strong) id<QLMyOrdersCellFactory> cellFactory;
+@property (nonatomic, strong) QLPersonalCabinetService *personalCabinetService;
+@property (nonatomic, strong) QLUserInfoService *userInfoService;
 
 @end

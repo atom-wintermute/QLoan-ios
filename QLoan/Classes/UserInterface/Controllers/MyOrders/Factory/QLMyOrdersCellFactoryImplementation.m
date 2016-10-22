@@ -9,7 +9,7 @@
 #import "QLMyOrdersCellFactoryImplementation.h"
 
 #import "QLMyOrdersCellFactory.h"
-
+#import "QLBorrowerOrder.h"
 #import "QLMyOrdersOrderCellObject.h"
 
 @implementation QLMyOrdersCellFactoryImplementation
@@ -57,6 +57,17 @@
     }
     
     return [cellObjects copy];
+}
+
+- (NSArray *)cellObjectsFromOrders:(NSArray *)orders {
+	for (QLBorrowerOrder *order in orders) {
+		QLMyOrdersOrderCellObject *cellObject = [QLMyOrdersOrderCellObject new];
+		cellObject.percentString = [NSString stringWithFormat:@"%d%% в месяц", (int)order.percentage];
+		NSString *formattedString = [QLMoneyFormatter numberStringForMoneyFromValue:@((long)order.loanAmount)];
+		cellObject.sumString = [NSString stringWithFormat:@"%@ ₽/", formattedString];
+		
+	}
+	return nil;
 }
 
 @end

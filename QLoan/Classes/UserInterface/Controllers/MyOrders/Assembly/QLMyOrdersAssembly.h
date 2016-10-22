@@ -9,8 +9,13 @@
 #import <Typhoon/Typhoon.h>
 
 @class QLMyOrdersViewController;
+@class QLServicesAssembly;
+@class QLCoreComponentsAssembly;
 
 @interface QLMyOrdersAssembly : TyphoonAssembly
+
+@property (nonatomic, strong, readonly) QLServicesAssembly *servicesAssembly;
+@property (nonatomic, strong, readonly) QLCoreComponentsAssembly *coreAssembly;
 
 - (QLMyOrdersViewController *)myOrdersController;
 

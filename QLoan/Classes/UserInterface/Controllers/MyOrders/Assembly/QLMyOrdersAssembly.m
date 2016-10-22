@@ -9,7 +9,7 @@
 #import "QLMyOrdersAssembly.h"
 
 #import "QLMyOrdersViewController.h"
-
+#import "QLServicesAssembly.h"
 #import "QLMyOrdersCellFactoryImplementation.h"
 
 @implementation QLMyOrdersAssembly
@@ -19,6 +19,10 @@
                           configuration:^(TyphoonDefinition *definition) {
                               [definition injectProperty:@selector(cellFactory)
                                                     with:[self myOrdersCellFactory]];
+							  [definition injectProperty:@selector(personalCabinetService)
+													with:[self.servicesAssembly personalCabinetService]];
+							  [definition injectProperty:@selector(userInfoService)
+													with:[self.servicesAssembly userInfoService]];
                           }];
 }
 
