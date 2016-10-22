@@ -18,6 +18,6 @@
 @property (nonatomic, strong) NSString *sumString;
 @property (nonatomic, strong) NSString *percentString;
 @property (nonatomic, strong) NSString *nameString;
-@property (nonatomic, copy) QLOrderInfo *orderInfo;
+@property (nonatomic, strong) QLOrderInfo *orderInfo;
 
 @end

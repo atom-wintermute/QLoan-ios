@@ -10,8 +10,11 @@
 
 @protocol QLStorage;
 
+@class QLOrderInfo;
+
 @interface QLOrderDetailViewController : UIViewController
 
 @property (nonatomic, strong) id<QLStorage> storage;
+@property (nonatomic, strong) QLOrderInfo *orderInfo;
 
 @end

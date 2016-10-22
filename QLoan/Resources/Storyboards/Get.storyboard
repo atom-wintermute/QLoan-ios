@@ -23,7 +23,7 @@
         <scene sceneID="ADj-mP-e96">
             <objects>
                 <navigationController navigationBarHidden="YES" id="n5Q-ec-i2S" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="hWP-Ud-HL3">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hWP-Ud-HL3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -225,10 +225,10 @@
             </objects>
             <point key="canvasLocation" x="1102" y="-562"/>
         </scene>
-        <!--View Controller-->
+        <!--Order Detail View Controller-->
         <scene sceneID="Dg7-LZ-Duh">
             <objects>
-                <viewController id="SY9-Tc-xZ5" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QLOrderDetailViewController" id="SY9-Tc-xZ5" customClass="QLOrderDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7IQ-ss-o3K"/>
                         <viewControllerLayoutGuide type="bottom" id="n9P-N7-ish"/>

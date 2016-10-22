@@ -16,6 +16,7 @@
 #import "QLOrderInfo.h"
 #import "QLUserInfoService.h"
 #import "QLLendOrderCellObject.h"
+#import "QLOrderDetailViewController.h"
 
 @interface QLGetViewController () <UITableViewDelegate>
 
@@ -109,6 +110,13 @@
 	QLLendOrderCellObject *object = [self.dataDisplayManager objectAtIndexPath:indexPath];
 	if (object != nil) {
 		QLOrderInfo *orderInfo = object.orderInfo;
+		UIStoryboard *storyboard = self.storyboard;
+		QLOrderDetailViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"QLOrderDetailViewController"];
+		if (controller != nil) {
+			controller.orderInfo = orderInfo;
+			[self.navigationController pushViewController:controller
+												 animated:YES];
+		}
 	}
 }
 
