@@ -16,11 +16,14 @@
 @property (nonatomic, weak) IBOutlet UITextField *expiryTextField;
 @property (nonatomic, weak) IBOutlet UITextField *cvcTextField;
 @property (nonatomic, weak) IBOutlet UITextField *nameTextField;
+@property (nonatomic, weak) IBOutlet UIButton *scanCardButton;
 @property (nonatomic, weak) IBOutlet UIButton *saveButton;
 
 @property (nonatomic, strong) id<QLBankCardService> bankCardService;
 
 - (IBAction)dataChanged:(id)sender;
+
+- (IBAction)scanCardButtonWasPressed:(id)sender;
 
 - (IBAction)saveButtonWasPressed:(id)sender;
 

@@ -10,7 +10,9 @@
 
 #import "QLBankCardService.h"
 
-@interface QLAddCardViewController ()
+#import "CardIO.h"
+
+@interface QLAddCardViewController () <CardIOPaymentViewControllerDelegate>
 
 @end
 
@@ -25,9 +27,16 @@
     [self configureAppearance];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [CardIOUtilities preloadCardIO];
+}
+
 #pragma mark - IBActions
 
 - (void)dataChanged:(id)sender {
+    self.scanCardButton.hidden = !!self.panTextField.text.length;
+    
     if (self.panTextField.text.length &&
         self.cvcTextField.text.length &&
         self.expiryTextField.text.length) {
@@ -35,6 +44,13 @@
     } else{
         [self.saveButton activate:NO];
     }
+}
+
+- (void)scanCardButtonWasPressed:(id)sender {
+    CardIOPaymentViewController *scanViewController = [[CardIOPaymentViewController alloc] initWithPaymentDelegate:self];
+    [self presentViewController:scanViewController
+                       animated:YES
+                     completion:nil];
 }
 
 - (void)saveButtonWasPressed:(id)sender {
@@ -54,6 +70,34 @@
                                       [self updateCardInfo];
                                   }
                               }];
+}
+
+#pragma mark - CardIOPaymentViewControllerDelegate
+
+- (void)userDidCancelPaymentViewController:(CardIOPaymentViewController *)scanViewController {
+    [scanViewController dismissViewControllerAnimated:YES
+                                           completion:nil];
+}
+
+- (void)userDidProvideCreditCardInfo:(CardIOCreditCardInfo *)info
+             inPaymentViewController:(CardIOPaymentViewController *)scanViewController {
+    NSString *pan1 = [info.cardNumber substringWithRange:NSMakeRange(0, 4)];
+    NSString *pan2 = [info.cardNumber substringWithRange:NSMakeRange(4, 4)];
+    NSString *pan3 = [info.cardNumber substringWithRange:NSMakeRange(8, 4)];
+    NSString *pan4 = [info.cardNumber substringWithRange:NSMakeRange(12, 4)];
+    
+    self.panTextField.text = [NSString stringWithFormat:@"%@-%@-%@-%@", pan1, pan2, pan3, pan4];
+    self.expiryTextField.text = [NSString stringWithFormat:@"%d/%d", (int)info.expiryYear, (int)info.expiryMonth];
+    self.cvcTextField.text = info.cvv;
+    if (info.cardholderName && info.cardholderName.length) {
+        self.nameTextField.text = info.cardholderName;
+    } else {
+        self.nameTextField.text = @" ";
+    }
+    self.scanCardButton.hidden = YES;
+    [self.saveButton activate:YES];
+    
+    [scanViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - Приватные методы

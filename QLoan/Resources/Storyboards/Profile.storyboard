@@ -313,11 +313,24 @@
                                             <action selector="dataChanged:" destination="t3L-6Q-wfC" eventType="editingChanged" id="CrN-Rj-Owa"/>
                                         </connections>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDc-p1-D5D">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="130" id="LHk-bf-hrb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
+                                        <state key="normal" title="Сканировать карту">
+                                            <color key="titleColor" red="0.043137254901960784" green="0.76078431372549016" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="scanCardButtonWasPressed:" destination="t3L-6Q-wfC" eventType="touchUpInside" id="lgH-L7-4mE"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="WBc-v5-ApX" firstAttribute="top" secondItem="jqA-Wr-2cA" secondAttribute="bottom" constant="7.5" id="3gl-5H-xyp"/>
                                     <constraint firstItem="Lku-WH-kIJ" firstAttribute="top" secondItem="cpF-hz-fNZ" secondAttribute="bottom" constant="8" id="4am-Lg-lBd"/>
+                                    <constraint firstAttribute="trailing" secondItem="cDc-p1-D5D" secondAttribute="trailing" id="5O1-ya-dEj"/>
                                     <constraint firstItem="cpF-hz-fNZ" firstAttribute="leading" secondItem="Em1-PH-8rf" secondAttribute="leading" id="5hx-DH-Ae3"/>
                                     <constraint firstItem="WBc-v5-ApX" firstAttribute="leading" secondItem="jdT-CU-pOf" secondAttribute="trailing" constant="47" id="5yK-Zh-A24"/>
                                     <constraint firstAttribute="trailing" secondItem="iwx-7h-uwt" secondAttribute="trailing" id="6LB-UZ-rj7"/>
@@ -339,6 +352,7 @@
                                     <constraint firstItem="AWR-LX-494" firstAttribute="top" secondItem="WBc-v5-ApX" secondAttribute="bottom" constant="8" id="Y84-6y-Tm9"/>
                                     <constraint firstItem="iwx-7h-uwt" firstAttribute="leading" secondItem="Em1-PH-8rf" secondAttribute="leading" id="edl-d1-aKx"/>
                                     <constraint firstItem="Lku-WH-kIJ" firstAttribute="leading" secondItem="Em1-PH-8rf" secondAttribute="leading" id="i31-JW-E5F"/>
+                                    <constraint firstItem="cDc-p1-D5D" firstAttribute="centerY" secondItem="iwx-7h-uwt" secondAttribute="centerY" id="npJ-E7-JEN"/>
                                     <constraint firstItem="cdZ-zd-hEG" firstAttribute="top" secondItem="jdT-CU-pOf" secondAttribute="bottom" constant="8" id="pZr-bP-qyZ"/>
                                     <constraint firstItem="jdT-CU-pOf" firstAttribute="top" secondItem="La1-pP-Wa3" secondAttribute="bottom" constant="8" id="t8s-RX-LOf"/>
                                     <constraint firstItem="MpC-zi-5MX" firstAttribute="top" secondItem="iwx-7h-uwt" secondAttribute="bottom" constant="9" id="tVL-Yf-YUJ"/>
@@ -379,6 +393,7 @@
                         <outlet property="nameTextField" destination="Lku-WH-kIJ" id="RtQ-0b-5pz"/>
                         <outlet property="panTextField" destination="iwx-7h-uwt" id="Tn7-kr-eIV"/>
                         <outlet property="saveButton" destination="YLm-jb-T6L" id="zhB-X7-kv7"/>
+                        <outlet property="scanCardButton" destination="cDc-p1-D5D" id="YoK-qG-Zu1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EZl-NT-VOM" userLabel="First Responder" sceneMemberID="firstResponder"/>
