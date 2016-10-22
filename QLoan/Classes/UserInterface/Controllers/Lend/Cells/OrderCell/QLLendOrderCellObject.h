@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "QLOrderInfo.h"
 
 #import <Nimbus/NimbusModels.h>
 
@@ -17,5 +18,6 @@
 @property (nonatomic, strong) NSString *sumString;
 @property (nonatomic, strong) NSString *percentString;
 @property (nonatomic, strong) NSString *nameString;
+@property (nonatomic, copy) QLOrderInfo *orderInfo;
 
 @end

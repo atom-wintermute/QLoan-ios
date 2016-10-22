@@ -49,6 +49,7 @@
 		cellObject.ratingString = [NSString stringWithFormat:@"%ld", (long)orderInfo.user.rating];
 		cellObject.sumString = [NSString stringWithFormat:@"%ld ₽", (long)orderInfo.order.loanAmount];
 		cellObject.percentString = [NSString stringWithFormat:@"%d%% в месяц", (int)orderInfo.order.percentage];
+		cellObject.orderInfo = orderInfo;
 		
 		NSMutableString *name = [orderInfo.user.lastName mutableCopy];
 		NSString *lastNames = [NSString stringWithFormat:@" %@. %@.", [orderInfo.user.firstName substringToIndex:1], [orderInfo.user.lastName substringToIndex:1]];
