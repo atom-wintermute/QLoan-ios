@@ -19,4 +19,6 @@
 
 - (IBAction)registerButtonWasPressed:(id)sender;
 
+- (IBAction)codeTextFieldValueChanged:(id)sender;
+
 @end

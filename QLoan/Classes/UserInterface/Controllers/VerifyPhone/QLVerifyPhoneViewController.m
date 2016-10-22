@@ -12,6 +12,8 @@
 
 static NSString * const QLVerifyRegisterSegue = @"registerSegue";
 
+static NSUInteger const QLVerifyCodeLenght = 6;
+
 @interface QLVerifyPhoneViewController ()
 
 @end
@@ -34,15 +36,29 @@ static NSString * const QLVerifyRegisterSegue = @"registerSegue";
                                              if (success) {
                                                  [self performSegueWithIdentifier:QLVerifyRegisterSegue
                                                                            sender:self];
+                                             } else {
+                                                 UIAlertController *alertController = [UIAlertController standartErrorAlertController];
+                                                 [self presentViewController:alertController
+                                                                    animated:YES
+                                                                  completion:nil];
                                              }
                                          }];
+}
+
+- (void)codeTextFieldValueChanged:(id)sender {
+    NSUInteger phoneLength = self.codeTextField.text.length;
+    if (phoneLength >= QLVerifyCodeLenght) {
+        [self.registerButton activate:YES];
+    } else {
+        [self.registerButton activate:NO];
+    }
 }
 
 #pragma mark - Приватные методы
 
 - (void)configureAppearance {
     [self.view layoutIfNeeded];
-    [self.registerButton addGradient];
+    [self.registerButton activate:NO];
 }
 
 @end

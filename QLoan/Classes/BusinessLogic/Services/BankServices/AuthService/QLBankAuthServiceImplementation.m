@@ -58,7 +58,8 @@
                              id responseData = [NSJSONSerialization JSONObjectWithData:response.data
                                                                                options:kNilOptions
                                                                                  error:nil];
-                             if (![responseData[QLBankErrorCode] integerValue]) {
+                             NSInteger errorCode = [responseData[QLBankErrorCode] integerValue];
+                             if (!errorCode) {
                                  NSString *sessionId = responseData[QLBankSessionId];
                                  if (sessionId.length) {
                                      [self.storage storeObject:sessionId
@@ -66,13 +67,17 @@
                                  }
                                  run_block_on_main(completion, YES, nil);
                              } else {
-                                 run_block_on_main(completion, NO, nil);
+                                 NSError *error = [NSError errorWithDomain:NSURLErrorDomain
+                                                                      code:errorCode
+                                                                  userInfo:nil];
+                                 run_block_on_main(completion, NO, error);
                              }
                          }];
 }
 
 - (void)verifyPhoneNumberWithCode:(NSString *)code
                        completion:(QLBankAuthCompletion)completion {
+    NSLog(@"will verify with code = %@", code);
     NSString *sessionId = [self.storage loadObjectForKey:QLBankSessionIdKey];
     NSURLRequest *URLRequest = [self.requestFactory requestForVerifyWithCode:code
                                                                    sessionId:sessionId];

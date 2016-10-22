@@ -137,6 +137,7 @@
 		D86147B71DBAA6D90018D19C /* QLMyOrdersAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = D86147B61DBAA6D90018D19C /* QLMyOrdersAssembly.m */; };
 		D871285C1DBAE6C400A45405 /* QLVerifyPhoneAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = D871285B1DBAE6C400A45405 /* QLVerifyPhoneAssembly.m */; };
 		D874A6481DBB5CCC0043B0E6 /* UIButton+Enable.m in Sources */ = {isa = PBXBuildFile; fileRef = D874A6471DBB5CCC0043B0E6 /* UIButton+Enable.m */; };
+		D874A64C1DBB62040043B0E6 /* UIAlertController+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = D874A64B1DBB62040043B0E6 /* UIAlertController+Extensions.m */; };
 		D881020D1DBA8EBB0066C442 /* img1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D88101F11DBA8EBB0066C442 /* img1@2x.png */; };
 		D881020E1DBA8EBB0066C442 /* img1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D88101F21DBA8EBB0066C442 /* img1@3x.png */; };
 		D881020F1DBA8EBB0066C442 /* img2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D88101F31DBA8EBB0066C442 /* img2@2x.png */; };
@@ -428,6 +429,8 @@
 		D871285B1DBAE6C400A45405 /* QLVerifyPhoneAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLVerifyPhoneAssembly.m; path = Classes/UserInterface/Controllers/VerifyPhone/Assembly/QLVerifyPhoneAssembly.m; sourceTree = "<group>"; };
 		D874A6461DBB5CCC0043B0E6 /* UIButton+Enable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIButton+Enable.h"; path = "Extensions/UIButton/UIButton+Enable.h"; sourceTree = "<group>"; };
 		D874A6471DBB5CCC0043B0E6 /* UIButton+Enable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+Enable.m"; path = "Extensions/UIButton/UIButton+Enable.m"; sourceTree = "<group>"; };
+		D874A64A1DBB62040043B0E6 /* UIAlertController+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIAlertController+Extensions.h"; path = "Extensions/UIAlertController/UIAlertController+Extensions.h"; sourceTree = "<group>"; };
+		D874A64B1DBB62040043B0E6 /* UIAlertController+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertController+Extensions.m"; path = "Extensions/UIAlertController/UIAlertController+Extensions.m"; sourceTree = "<group>"; };
 		D88101F11DBA8EBB0066C442 /* img1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img1@2x.png"; path = "Resources/Photos/Lend/img1@2x.png"; sourceTree = "<group>"; };
 		D88101F21DBA8EBB0066C442 /* img1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img1@3x.png"; path = "Resources/Photos/Lend/img1@3x.png"; sourceTree = "<group>"; };
 		D88101F31DBA8EBB0066C442 /* img2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img2@2x.png"; path = "Resources/Photos/Lend/img2@2x.png"; sourceTree = "<group>"; };
@@ -1051,6 +1054,7 @@
 			isa = PBXGroup;
 			children = (
 				D835BCD01DB9746900F2FF0F /* NSArray */,
+				D874A6491DBB61BF0043B0E6 /* UIAlertController */,
 				D874A6451DBB5C8F0043B0E6 /* UIButton */,
 				D835BD281DB98F3F00F2FF0F /* UIColor */,
 				D835BD301DB9938E00F2FF0F /* UIView */,
@@ -1367,6 +1371,15 @@
 				D874A6471DBB5CCC0043B0E6 /* UIButton+Enable.m */,
 			);
 			name = UIButton;
+			sourceTree = "<group>";
+		};
+		D874A6491DBB61BF0043B0E6 /* UIAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				D874A64A1DBB62040043B0E6 /* UIAlertController+Extensions.h */,
+				D874A64B1DBB62040043B0E6 /* UIAlertController+Extensions.m */,
+			);
+			name = UIAlertController;
 			sourceTree = "<group>";
 		};
 		D88101EE1DBA8E6E0066C442 /* Photos */ = {
@@ -1949,6 +1962,7 @@
 				D86147A01DBA9FC30018D19C /* QLGetViewController.m in Sources */,
 				D8328F5C1DBA773400438D4A /* QLProfileAddCardCellObject.m in Sources */,
 				D835BD121DB97B0700F2FF0F /* QLProfileDataDisplayManager.m in Sources */,
+				D874A64C1DBB62040043B0E6 /* UIAlertController+Extensions.m in Sources */,
 				D835BD131DB97B0700F2FF0F /* QLProfileDataCell.m in Sources */,
 				D89655601DB8C39900DE4C66 /* QLAuthAssembly.m in Sources */,
 				D89655581DB8319900DE4C66 /* QLRegisterViewController.m in Sources */,

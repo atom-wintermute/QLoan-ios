@@ -12,6 +12,8 @@
 
 static NSString * const QLRegisterVerifyPhoneSegue = @"verifyCodeSegue";
 
+static NSUInteger const QLRegisterPhoneLenght = 13;
+
 @interface QLRegisterPhoneViewContoller () <UITextFieldDelegate>
 
 @end
@@ -37,13 +39,23 @@ static NSString * const QLRegisterVerifyPhoneSegue = @"verifyCodeSegue";
                                            if (success) {
                                                [self performSegueWithIdentifier:QLRegisterVerifyPhoneSegue
                                                                          sender:self];
+                                           } else {
+                                               UIAlertController *alertController;
+                                               if (8 == error.code) {
+                                                    alertController = [UIAlertController errorAlertControllerWithTitle:@"Указанный номер телефона уже зарегистрирован в системе"];
+                                               } else {
+                                                   alertController = [UIAlertController standartErrorAlertController];
+                                               }
+                                               [self presentViewController:alertController
+                                                                  animated:YES
+                                                                completion:nil];
                                            }
                                        }];
 }
 
 - (void)phoneTextFieldValueChanged:(id)sender {
     NSUInteger phoneLength = self.phoneTextField.text.length;
-    if (phoneLength >= 13) {
+    if (phoneLength >= QLRegisterPhoneLenght) {
         [self.getCodeButton activate:YES];
     } else {
         [self.getCodeButton activate:NO];
