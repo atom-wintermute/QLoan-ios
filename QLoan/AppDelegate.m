@@ -26,6 +26,7 @@
 #import "QLAddCardAssembly.h"
 #import "ApplicationAssembly.h"
 #import "QLOrderDetailAssembly.h"
+#import "QLFacebookLoginAssembly.h"
 
 #import <RamblerTyphoonUtils/AssemblyCollector.h>
 
@@ -60,7 +61,8 @@
              [QLRegisterPhoneAssembly class],
              [QLVerifyPhoneAssembly class],
              [QLRegisterAssembly class],
-             [QLAddCardAssembly class]
+             [QLAddCardAssembly class],
+             [QLFacebookLoginAssembly class]
 			 ];
 }
 

@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol QLBankAuthService;
+
 @interface QLFacebookLoginViewController : UIViewController
+
+@property (nonatomic, weak) IBOutlet UIImageView *photoImageView;
+@property (nonatomic, weak) IBOutlet UIButton *continueButton;
+
+@property (nonatomic, strong) id<QLBankAuthService> bankAuthService;
+
+- (IBAction)continueWithCurrentUser:(id)sender;
+
+- (IBAction)cancelButtonWasPressed:(id)sender;
 
 @end

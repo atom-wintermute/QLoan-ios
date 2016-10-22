@@ -207,6 +207,7 @@
 		D8D626CC1DBADC9C007FFB3F /* QLVerifyPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D626CB1DBADC9C007FFB3F /* QLVerifyPhoneViewController.m */; };
 		D8D98BB41DB9085300F3FB01 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8D98BB31DB9085300F3FB01 /* Profile.storyboard */; };
 		D8F15F4A1DBC023D008BDB3D /* QLFacebookLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F15F491DBC023D008BDB3D /* QLFacebookLoginViewController.m */; };
+		D8F15F4E1DBC10C8008BDB3D /* QLFacebookLoginAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F15F4D1DBC10C8008BDB3D /* QLFacebookLoginAssembly.m */; };
 		D8F9D7AF1DAFD2FC000371CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F9D7AE1DAFD2FC000371CA /* main.m */; };
 		D8F9D7B21DAFD2FC000371CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F9D7B11DAFD2FC000371CA /* AppDelegate.m */; };
 		D8F9D7BD1DAFD2FC000371CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8F9D7BC1DAFD2FC000371CA /* Assets.xcassets */; };
@@ -562,6 +563,8 @@
 		D8D98BB31DB9085300F3FB01 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = Resources/Storyboards/Profile.storyboard; sourceTree = "<group>"; };
 		D8F15F481DBC023D008BDB3D /* QLFacebookLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLFacebookLoginViewController.h; path = Classes/UserInterface/Controllers/FacebookLogin/QLFacebookLoginViewController.h; sourceTree = "<group>"; };
 		D8F15F491DBC023D008BDB3D /* QLFacebookLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLFacebookLoginViewController.m; path = Classes/UserInterface/Controllers/FacebookLogin/QLFacebookLoginViewController.m; sourceTree = "<group>"; };
+		D8F15F4C1DBC10C8008BDB3D /* QLFacebookLoginAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLFacebookLoginAssembly.h; path = Classes/UserInterface/Controllers/FacebookLogin/Assembly/QLFacebookLoginAssembly.h; sourceTree = "<group>"; };
+		D8F15F4D1DBC10C8008BDB3D /* QLFacebookLoginAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLFacebookLoginAssembly.m; path = Classes/UserInterface/Controllers/FacebookLogin/Assembly/QLFacebookLoginAssembly.m; sourceTree = "<group>"; };
 		D8F9D7AA1DAFD2FC000371CA /* QLoan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QLoan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8F9D7AE1DAFD2FC000371CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D8F9D7B01DAFD2FC000371CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1907,10 +1910,20 @@
 		D8F15F471DBC020E008BDB3D /* FacebookLogin */ = {
 			isa = PBXGroup;
 			children = (
+				D8F15F4B1DBC1096008BDB3D /* Assembly */,
 				D8F15F481DBC023D008BDB3D /* QLFacebookLoginViewController.h */,
 				D8F15F491DBC023D008BDB3D /* QLFacebookLoginViewController.m */,
 			);
 			name = FacebookLogin;
+			sourceTree = "<group>";
+		};
+		D8F15F4B1DBC1096008BDB3D /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				D8F15F4C1DBC10C8008BDB3D /* QLFacebookLoginAssembly.h */,
+				D8F15F4D1DBC10C8008BDB3D /* QLFacebookLoginAssembly.m */,
+			);
+			name = Assembly;
 			sourceTree = "<group>";
 		};
 		D8F9D7A11DAFD2FC000371CA = {
@@ -2328,6 +2341,7 @@
 				D89655581DB8319900DE4C66 /* QLRegisterViewController.m in Sources */,
 				9EFF73941DB3B672004873A6 /* QLRegistrationRequestConfiguration.m in Sources */,
 				9EFF73BD1DB3CD83004873A6 /* QLLenderOrder.m in Sources */,
+				D8F15F4E1DBC10C8008BDB3D /* QLFacebookLoginAssembly.m in Sources */,
 				D820774C1DBAB58100253637 /* QLRegisterPhoneAssembly.m in Sources */,
 				D8F9D7AF1DAFD2FC000371CA /* main.m in Sources */,
 				D835BCCE1DB9741100F2FF0F /* RDSDataDisplayManager.m in Sources */,

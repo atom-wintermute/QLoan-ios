@@ -33,4 +33,5 @@ extern NSString * const QLBankUserId;
 
 extern NSString * const QLBankSessionIdKey;
 extern NSString * const QLBankUserInfoKey;
+extern NSString * const QLBanFacebookKey;
 extern NSString * const QLBankCardsKey;

@@ -207,4 +207,18 @@
     return [self.storage loadObjectForKey:QLBankUserInfoKey];
 }
 
+- (void)addFacebookEntire {
+    [self.storage storeObject:@YES
+                       forKey:QLBanFacebookKey];
+}
+
+- (BOOL)obtainFacebookEntire {
+    id object = [self.storage loadObjectForKey:QLBanFacebookKey];
+    if (!object) {
+        return NO;
+    } else {
+        return [object boolValue];
+    }
+}
+
 @end

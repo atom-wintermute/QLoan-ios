@@ -35,4 +35,5 @@ NSString * const QLBankUserId = @"userId";
 
 NSString * const QLBankSessionIdKey = @"bankSessionIdKey";
 NSString * const QLBankUserInfoKey = @"bankUserInfoKey";
+NSString * const QLBanFacebookKey = @"bankFacebookKey";
 NSString * const QLBankCardsKey = @"bankCardsKey";

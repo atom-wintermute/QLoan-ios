@@ -52,6 +52,13 @@ static NSString * const QLProfileFacebookSegue = @"facebookSegue";
     return UIStatusBarStyleLightContent;
 }
 
+#pragma mark - IBActions
+
+- (void)facebookButtonWasPressed:(id)sender {
+    [self performSegueWithIdentifier:QLProfileFacebookSegue
+                              sender:self];
+}
+
 #pragma mark - Приватные методы
 
 - (void)configureView {
@@ -77,6 +84,13 @@ static NSString * const QLProfileFacebookSegue = @"facebookSegue";
     self.tableView.delegate = [self.dataDisplayManager delegateForTableView:self.tableView
                                                            withBaseDelegate:self];
     [self.tableView reloadData];
+    
+    BOOL facebookActive = [self.bankAuthService obtainFacebookEntire];
+    if (facebookActive) {
+        self.facebookImageView.image = [UIImage imageNamed:@"fbActive"];
+    } else {
+        self.facebookImageView.image = [UIImage imageNamed:@"fbNonActive"];
+    }
 }
 
 #pragma mark - QLProfileViewDelegate

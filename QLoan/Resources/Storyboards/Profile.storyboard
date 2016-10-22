@@ -21,7 +21,7 @@
             <objects>
                 <navigationController navigationBarHidden="YES" id="vFx-7T-Uqk" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="KkW-ib-Rqr">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KkW-ib-Rqr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -48,7 +48,68 @@
                     <view key="view" contentMode="scaleToFill" id="yRN-nb-YVj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="facebook" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GnB-Lr-3Sf">
+                                <color key="backgroundColor" red="0.22745098039215686" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="0E6-zy-uYP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QQ8-1t-uGH">
+                                <color key="backgroundColor" red="0.16063994540000001" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="94" id="4UG-AF-5xx"/>
+                                    <constraint firstAttribute="width" constant="94" id="eth-G5-UIr"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Xz-DM-aC2">
+                                <string key="text">Приложение «QLoan» получит:
+общедоступный профиль и адрес эл. почты. </string>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Light" family="SF UI Display" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVS-1p-E1b">
+                                <color key="backgroundColor" red="0.25098039215686274" green="0.50196078431372548" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="Fgg-4C-Uri"/>
+                                    <constraint firstAttribute="height" constant="37" id="kih-Vj-woy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                <state key="normal" title="Продолжить как Виктор">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="continueWithCurrentUser:" destination="cDv-qd-73I" eventType="touchUpInside" id="wku-Ud-Tfh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPW-9f-t2b">
+                                <state key="normal" title="Отмена">
+                                    <color key="titleColor" red="0.25098039215686274" green="0.50196078431372548" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButtonWasPressed:" destination="cDv-qd-73I" eventType="touchUpInside" id="3Hd-Na-c5b"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9Xz-DM-aC2" firstAttribute="top" secondItem="QQ8-1t-uGH" secondAttribute="bottom" constant="16" id="6BO-aJ-xbB"/>
+                            <constraint firstItem="QQ8-1t-uGH" firstAttribute="top" secondItem="GnB-Lr-3Sf" secondAttribute="bottom" constant="127" id="6ut-0d-3Xt"/>
+                            <constraint firstItem="QQ8-1t-uGH" firstAttribute="centerX" secondItem="yRN-nb-YVj" secondAttribute="centerX" id="7Qz-ta-qqU"/>
+                            <constraint firstAttribute="trailing" secondItem="9Xz-DM-aC2" secondAttribute="trailing" constant="68" id="E9h-At-inF"/>
+                            <constraint firstItem="fVS-1p-E1b" firstAttribute="top" secondItem="9Xz-DM-aC2" secondAttribute="bottom" constant="32" id="KJm-DO-hs5"/>
+                            <constraint firstItem="VPW-9f-t2b" firstAttribute="centerX" secondItem="yRN-nb-YVj" secondAttribute="centerX" id="QTa-da-ldO"/>
+                            <constraint firstItem="VPW-9f-t2b" firstAttribute="top" secondItem="fVS-1p-E1b" secondAttribute="bottom" constant="25" id="btM-I3-izd"/>
+                            <constraint firstItem="9Xz-DM-aC2" firstAttribute="leading" secondItem="yRN-nb-YVj" secondAttribute="leading" constant="68" id="dPa-kd-yUm"/>
+                            <constraint firstItem="GnB-Lr-3Sf" firstAttribute="leading" secondItem="yRN-nb-YVj" secondAttribute="leading" id="gbp-54-nlx"/>
+                            <constraint firstItem="GnB-Lr-3Sf" firstAttribute="top" secondItem="j7R-JL-i33" secondAttribute="bottom" id="l8y-Rr-snU"/>
+                            <constraint firstItem="fVS-1p-E1b" firstAttribute="centerX" secondItem="yRN-nb-YVj" secondAttribute="centerX" id="p6P-n2-S3I"/>
+                            <constraint firstAttribute="trailing" secondItem="GnB-Lr-3Sf" secondAttribute="trailing" id="zZj-wc-A2o"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LWf-Fk-oFC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -118,10 +179,20 @@
                                             <constraint firstAttribute="height" constant="30" id="xeM-yP-H3R"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dME-dH-nPq" userLabel="fbButton">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="8WO-sW-sAo"/>
+                                            <constraint firstAttribute="height" constant="30" id="caX-yy-XwJ"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="facebookButtonWasPressed:" destination="7Pn-eS-PCb" eventType="touchUpInside" id="z52-o3-pBt"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="gtr-7T-6p1" firstAttribute="leading" secondItem="ffT-dC-Gkp" secondAttribute="trailing" constant="20" id="5ez-GC-Qht"/>
+                                    <constraint firstItem="dME-dH-nPq" firstAttribute="leading" secondItem="s6n-HQ-Lwk" secondAttribute="trailing" constant="20" id="AEr-Uh-ksy"/>
                                     <constraint firstAttribute="bottom" secondItem="s6n-HQ-Lwk" secondAttribute="bottom" id="Ckg-7c-2Vh"/>
                                     <constraint firstItem="ffT-dC-Gkp" firstAttribute="leading" secondItem="zQg-He-b8m" secondAttribute="trailing" constant="20" id="IUJ-YQ-wjK"/>
                                     <constraint firstItem="zQg-He-b8m" firstAttribute="top" secondItem="409-0C-4VI" secondAttribute="top" id="Ihy-2B-k0q"/>
@@ -129,6 +200,7 @@
                                     <constraint firstItem="LEq-Zn-kdo" firstAttribute="leading" secondItem="409-0C-4VI" secondAttribute="leading" id="Pqu-AM-xcY"/>
                                     <constraint firstItem="1Mg-dJ-Tlj" firstAttribute="top" secondItem="409-0C-4VI" secondAttribute="top" id="QRT-N5-idg"/>
                                     <constraint firstItem="s6n-HQ-Lwk" firstAttribute="top" secondItem="409-0C-4VI" secondAttribute="top" id="UhN-Fs-BAh"/>
+                                    <constraint firstItem="dME-dH-nPq" firstAttribute="top" secondItem="409-0C-4VI" secondAttribute="top" id="V2g-3V-k7c"/>
                                     <constraint firstItem="ffT-dC-Gkp" firstAttribute="top" secondItem="409-0C-4VI" secondAttribute="top" id="XYZ-hW-Dhc"/>
                                     <constraint firstItem="LEq-Zn-kdo" firstAttribute="top" secondItem="409-0C-4VI" secondAttribute="top" id="ZEY-gt-l6T"/>
                                     <constraint firstAttribute="bottom" secondItem="ffT-dC-Gkp" secondAttribute="bottom" id="crx-OK-ciF"/>
@@ -217,6 +289,7 @@
                     </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
+                        <outlet property="facebookImageView" destination="1Mg-dJ-Tlj" id="PqW-WS-Olh"/>
                         <outlet property="tableView" destination="Sbm-ds-4zh" id="QbR-Wz-Tcu"/>
                         <outlet property="usernameLabel" destination="h9Z-Yt-Joo" id="w74-Ja-4uo"/>
                         <segue destination="t3L-6Q-wfC" kind="show" identifier="profileAddCardSegue" id="NVc-T3-p8i"/>
