@@ -114,6 +114,7 @@
     
     // register for push notifications!
     [[PushNotificationManager pushManager] registerForPushNotifications];
+    NSLog(@"push token = %@", [[PushNotificationManager pushManager] getPushToken]);
 }
 
 - (void)activateAssemblies {
