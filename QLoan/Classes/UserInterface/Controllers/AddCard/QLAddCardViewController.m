@@ -35,7 +35,11 @@
 #pragma mark - IBActions
 
 - (void)dataChanged:(id)sender {
-    self.scanCardButton.hidden = !!self.panTextField.text.length;
+    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"10.0")) {
+        self.scanCardButton.hidden = !!self.panTextField.text.length;
+    } else {
+        self.scanCardButton.hidden = YES;
+    }
     
     if (self.panTextField.text.length &&
         self.cvcTextField.text.length &&
@@ -111,6 +115,10 @@
 - (void)configureAppearance {
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor blackColor]}];
     self.navigationItem.title = @"Добавить карту";
+    
+    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"10.0")) {
+        self.scanCardButton.hidden = YES;
+    }
     
     [self.saveButton activate:NO];
 }

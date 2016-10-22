@@ -20,6 +20,7 @@
 #import "QLBankUserInfo.h"
 
 static NSString * const QLProfileAddCardSegue = @"profileAddCardSegue";
+static NSString * const QLProfileFacebookSegue = @"facebookSegue";
 
 @interface QLProfileViewController () <UITableViewDelegate, QLProfileViewDelegate>
 

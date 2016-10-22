@@ -37,6 +37,24 @@
             </objects>
             <point key="canvasLocation" x="-326" y="101"/>
         </scene>
+        <!--Facebook Login View Controller-->
+        <scene sceneID="cXU-Xk-dhA">
+            <objects>
+                <viewController storyboardIdentifier="QLFacebookLoginViewController" id="cDv-qd-73I" customClass="QLFacebookLoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="j7R-JL-i33"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tl4-aB-gu7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yRN-nb-YVj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LWf-Fk-oFC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1574" y="-616"/>
+        </scene>
         <!--Мой профиль-->
         <scene sceneID="5Ya-a7-Xq0">
             <objects>
@@ -202,6 +220,7 @@
                         <outlet property="tableView" destination="Sbm-ds-4zh" id="QbR-Wz-Tcu"/>
                         <outlet property="usernameLabel" destination="h9Z-Yt-Joo" id="w74-Ja-4uo"/>
                         <segue destination="t3L-6Q-wfC" kind="show" identifier="profileAddCardSegue" id="NVc-T3-p8i"/>
+                        <segue destination="cDv-qd-73I" kind="show" identifier="facebookSegue" id="4eh-21-x1y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bKX-uf-6aO" userLabel="First Responder" sceneMemberID="firstResponder"/>
