@@ -12,6 +12,7 @@
 #import "QLProfileCardCellObject.h"
 #import "QLProfileAddCardCellObject.h"
 #import "QLOffsetCellObject.h"
+#import "QLProfileLogoutCellObject.h"
 
 #import "QLBankUserInfo.h"
 #import "QLBankCard.h"
@@ -19,7 +20,8 @@
 @implementation QLProfileCellFactoryImplementation
 
 - (NSArray *)cellObjectsFrom:(QLBankUserInfo *)bankUserInfo
-                    cardList:(NSArray<QLBankCard *> *)cardList {
+                    cardList:(NSArray<QLBankCard *> *)cardList
+                    delegate:(id<QLProfileViewDelegate>)delegate {
     NSMutableArray *cellObjects = [NSMutableArray new];
     
     QLProfileDataCellObject *phoneCellObject = [QLProfileDataCellObject new];
@@ -69,6 +71,9 @@
     loanLendedCellObject.nameString = @"Взято займов";
     loanLendedCellObject.valueString = @"1";
     [cellObjects addObject:loanLendedCellObject];
+    
+    QLProfileLogoutCellObject *logoutCellObject = [QLProfileLogoutCellObject new];
+    [cellObjects addObject:logoutCellObject];
     
     return [cellObjects copy];
 }

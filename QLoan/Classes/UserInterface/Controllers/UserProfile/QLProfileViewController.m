@@ -11,12 +11,13 @@
 #import "QLBankAuthService.h"
 #import "QLBankCardService.h"
 #import "QLProfileCellFactory.h"
+#import "QLProfileViewDelegate.h"
 
 #import "QLProfileDataDisplayManager.h"
 
 #import "QLBankUserInfo.h"
 
-@interface QLProfileViewController () <UITableViewDelegate>
+@interface QLProfileViewController () <UITableViewDelegate, QLProfileViewDelegate>
 
 @property (nonatomic, strong) QLProfileDataDisplayManager *dataDisplayManager;
 
@@ -47,7 +48,8 @@
     
     NSArray <QLBankCard *> *cardList = [self.bankCardService obtainBankCards];
     NSArray *cellObjects = [self.cellFactory cellObjectsFrom:bankUserInfo
-                                                    cardList:cardList];
+                                                    cardList:cardList
+                                                    delegate:self];
     self.dataDisplayManager =  [[QLProfileDataDisplayManager alloc] initWithInputData:cellObjects
                                                       andConversionToCellObjectsBlock:^id(id dataObject) {
                                                           return dataObject;
@@ -57,6 +59,12 @@
     self.tableView.delegate = [self.dataDisplayManager delegateForTableView:self.tableView
                                                            withBaseDelegate:self];
     [self.tableView reloadData];
+}
+
+#pragma mark - QLProfileViewDelegate
+
+- (void)logoutButtonWasPressed {
+    
 }
 
 @end
