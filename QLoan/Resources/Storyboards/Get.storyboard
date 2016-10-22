@@ -14,6 +14,9 @@
         <array key="SF-UI-Display-Regular.otf">
             <string>SFUIDisplay-Regular</string>
         </array>
+        <array key="SF-UI-Display-Semibold.otf">
+            <string>SFUIDisplay-Semibold</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Navigation Controller-->
@@ -220,7 +223,111 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y23-EI-bUp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1175" y="140"/>
+            <point key="canvasLocation" x="1102" y="-562"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Dg7-LZ-Duh">
+            <objects>
+                <viewController id="SY9-Tc-xZ5" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7IQ-ss-o3K"/>
+                        <viewControllerLayoutGuide type="bottom" id="n9P-N7-ish"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Q55-tU-oJd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vd8-Sy-98h">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="BX3-fA-hIu"/>
+                                    <constraint firstAttribute="width" constant="68" id="K0h-2J-Yjj"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M9x-Se-JmW" userLabel="ratingViewContainer">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xa8-1T-ZJB" userLabel="fakeImageView">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="17"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9.5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fya-aN-Per" userLabel="ratingLabel">
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="15"/>
+                                        <color key="textColor" red="0.0" green="0.70196078429999997" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="xa8-1T-ZJB" firstAttribute="top" secondItem="M9x-Se-JmW" secondAttribute="top" id="0vK-2G-AJc"/>
+                                    <constraint firstAttribute="height" constant="34" id="2ps-m9-3Fy"/>
+                                    <constraint firstAttribute="width" constant="34" id="73d-B2-SLe"/>
+                                    <constraint firstItem="xa8-1T-ZJB" firstAttribute="leading" secondItem="M9x-Se-JmW" secondAttribute="leading" id="8Oj-cu-XNi"/>
+                                    <constraint firstAttribute="trailing" secondItem="Fya-aN-Per" secondAttribute="trailing" id="Hk8-sy-8Rz"/>
+                                    <constraint firstItem="Fya-aN-Per" firstAttribute="centerY" secondItem="M9x-Se-JmW" secondAttribute="centerY" id="LkA-6V-m27"/>
+                                    <constraint firstItem="Fya-aN-Per" firstAttribute="leading" secondItem="M9x-Se-JmW" secondAttribute="leading" id="Mpm-2W-btX"/>
+                                    <constraint firstAttribute="trailing" secondItem="xa8-1T-ZJB" secondAttribute="trailing" id="eVU-Fv-azE"/>
+                                    <constraint firstAttribute="bottom" secondItem="xa8-1T-ZJB" secondAttribute="bottom" id="vt4-aF-DJ8"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Виктор" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fw-Lz-gMv">
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Готов выдать займ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBt-ad-g8t">
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KkF-1f-H6a">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="284" id="kXl-Zc-425"/>
+                                </constraints>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdb-S9-EkJ" customClass="QLBlueGradientButton">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="312" id="PZy-dQ-1fM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                <state key="normal" title="Запросить займ"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mx7-tT-RZc">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="82" id="Ekn-wK-Gbn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                <state key="normal" title="Отменить">
+                                    <color key="titleColor" red="0.0039215686269999999" green="0.0039215686269999999" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="KkF-1f-H6a" secondAttribute="trailing" id="3Bd-1l-fdf"/>
+                            <constraint firstItem="wdb-S9-EkJ" firstAttribute="centerX" secondItem="Q55-tU-oJd" secondAttribute="centerX" id="BnI-1R-Tz7"/>
+                            <constraint firstItem="Mx7-tT-RZc" firstAttribute="centerX" secondItem="Q55-tU-oJd" secondAttribute="centerX" id="Cwb-5t-kg5"/>
+                            <constraint firstItem="dBt-ad-g8t" firstAttribute="top" secondItem="1fw-Lz-gMv" secondAttribute="bottom" constant="8" id="I0s-dY-oik"/>
+                            <constraint firstItem="vd8-Sy-98h" firstAttribute="centerX" secondItem="Q55-tU-oJd" secondAttribute="centerX" id="NwO-Tc-sU2"/>
+                            <constraint firstItem="1fw-Lz-gMv" firstAttribute="centerX" secondItem="Q55-tU-oJd" secondAttribute="centerX" id="U5Q-bb-pcI"/>
+                            <constraint firstItem="KkF-1f-H6a" firstAttribute="leading" secondItem="Q55-tU-oJd" secondAttribute="leading" id="WNf-6S-Gwd"/>
+                            <constraint firstItem="1fw-Lz-gMv" firstAttribute="top" secondItem="vd8-Sy-98h" secondAttribute="bottom" constant="8" id="dyw-HG-ood"/>
+                            <constraint firstItem="wdb-S9-EkJ" firstAttribute="top" secondItem="KkF-1f-H6a" secondAttribute="bottom" constant="47" id="iG1-1M-m7H"/>
+                            <constraint firstItem="dBt-ad-g8t" firstAttribute="centerX" secondItem="Q55-tU-oJd" secondAttribute="centerX" id="lar-E9-tHO"/>
+                            <constraint firstItem="vd8-Sy-98h" firstAttribute="top" secondItem="7IQ-ss-o3K" secondAttribute="bottom" constant="26" id="mst-lR-dvA"/>
+                            <constraint firstItem="M9x-Se-JmW" firstAttribute="centerY" secondItem="vd8-Sy-98h" secondAttribute="centerY" constant="-25" id="rBq-Ga-yP7"/>
+                            <constraint firstItem="Mx7-tT-RZc" firstAttribute="top" secondItem="wdb-S9-EkJ" secondAttribute="bottom" constant="19" id="rhV-nK-nHN"/>
+                            <constraint firstItem="KkF-1f-H6a" firstAttribute="top" secondItem="dBt-ad-g8t" secondAttribute="bottom" constant="34" id="wAh-dL-USV"/>
+                            <constraint firstItem="M9x-Se-JmW" firstAttribute="centerX" secondItem="vd8-Sy-98h" secondAttribute="centerX" constant="25" id="zVk-hk-g1D"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eq3-yQ-aLV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1101.5999999999999" y="151.57421289355324"/>
         </scene>
     </scenes>
     <resources>

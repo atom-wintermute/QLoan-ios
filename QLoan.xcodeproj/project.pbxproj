@@ -14,6 +14,8 @@
 		9E2F67061DBB6DCC00081C05 /* QLOrderStatusParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E2F67051DBB6DCC00081C05 /* QLOrderStatusParser.m */; };
 		9E64B7F91DBB90580033969D /* QLOrderInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E64B7F81DBB90580033969D /* QLOrderInfo.m */; };
 		9EC485F11DBBB44B00E8FF66 /* ApplicationAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC485F01DBBB44B00E8FF66 /* ApplicationAssembly.m */; };
+		9EC485F51DBBCC5800E8FF66 /* QLOrderDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC485F41DBBCC5800E8FF66 /* QLOrderDetailViewController.m */; };
+		9EC485F91DBBCC9F00E8FF66 /* QLOrderDetailAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC485F81DBBCC9F00E8FF66 /* QLOrderDetailAssembly.m */; };
 		9ECC12BE1DB977DB00E33288 /* QLChallengedNetworkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECC12BD1DB977DB00E33288 /* QLChallengedNetworkClient.m */; };
 		9ECC12C61DB9932900E33288 /* QLSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECC12C51DB9932900E33288 /* QLSerializer.m */; };
 		9ECC12CA1DBA284300E33288 /* QLDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECC12C91DBA284300E33288 /* QLDateFormatter.m */; };
@@ -238,6 +240,10 @@
 		9E64B7F81DBB90580033969D /* QLOrderInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLOrderInfo.m; path = Classes/BusinessLogic/Entity/OrderInfo/QLOrderInfo.m; sourceTree = "<group>"; };
 		9EC485EF1DBBB44B00E8FF66 /* ApplicationAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ApplicationAssembly.h; path = Classes/ApplicationAssembly/ApplicationAssembly.h; sourceTree = "<group>"; };
 		9EC485F01DBBB44B00E8FF66 /* ApplicationAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ApplicationAssembly.m; path = Classes/ApplicationAssembly/ApplicationAssembly.m; sourceTree = "<group>"; };
+		9EC485F31DBBCC5800E8FF66 /* QLOrderDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLOrderDetailViewController.h; path = Classes/UserInterface/Controllers/OrderDetail/QLOrderDetailViewController.h; sourceTree = "<group>"; };
+		9EC485F41DBBCC5800E8FF66 /* QLOrderDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLOrderDetailViewController.m; path = Classes/UserInterface/Controllers/OrderDetail/QLOrderDetailViewController.m; sourceTree = "<group>"; };
+		9EC485F71DBBCC9F00E8FF66 /* QLOrderDetailAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLOrderDetailAssembly.h; path = Classes/UserInterface/Controllers/OrderDetail/Assembly/QLOrderDetailAssembly.h; sourceTree = "<group>"; };
+		9EC485F81DBBCC9F00E8FF66 /* QLOrderDetailAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLOrderDetailAssembly.m; path = Classes/UserInterface/Controllers/OrderDetail/Assembly/QLOrderDetailAssembly.m; sourceTree = "<group>"; };
 		9ECC12B21DB95F4100E33288 /* QLSessionCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLSessionCredentials.h; path = Classes/BusinessLogic/Services/AuthorizationService/SessionCredentials/QLSessionCredentials.h; sourceTree = "<group>"; };
 		9ECC12B31DB95F4100E33288 /* QLSessionCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLSessionCredentials.m; path = Classes/BusinessLogic/Services/AuthorizationService/SessionCredentials/QLSessionCredentials.m; sourceTree = "<group>"; };
 		9ECC12B91DB966D500E33288 /* ErrorCodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorCodes.h; path = Classes/BusinessLogic/Services/Constants/ErrorCodes.h; sourceTree = "<group>"; };
@@ -638,6 +644,25 @@
 				9EC485F01DBBB44B00E8FF66 /* ApplicationAssembly.m */,
 			);
 			name = ApplicationAssembly;
+			sourceTree = "<group>";
+		};
+		9EC485F21DBBCC1A00E8FF66 /* OrderDetail */ = {
+			isa = PBXGroup;
+			children = (
+				9EC485F61DBBCC6400E8FF66 /* Assembly */,
+				9EC485F31DBBCC5800E8FF66 /* QLOrderDetailViewController.h */,
+				9EC485F41DBBCC5800E8FF66 /* QLOrderDetailViewController.m */,
+			);
+			name = OrderDetail;
+			sourceTree = "<group>";
+		};
+		9EC485F61DBBCC6400E8FF66 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				9EC485F71DBBCC9F00E8FF66 /* QLOrderDetailAssembly.h */,
+				9EC485F81DBBCC9F00E8FF66 /* QLOrderDetailAssembly.m */,
+			);
+			name = Assembly;
 			sourceTree = "<group>";
 		};
 		9ECC12B11DB95F1600E33288 /* SessionCredentials */ = {
@@ -1670,6 +1695,7 @@
 		D89655431DB8234E00DE4C66 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9EC485F21DBBCC1A00E8FF66 /* OrderDetail */,
 				D8A9AC111DBB9C8D0029545C /* AddCard */,
 				9ECC12DD1DBAA08500E33288 /* CreateOrder */,
 				D89655471DB8238300DE4C66 /* Auth */,
@@ -2153,6 +2179,7 @@
 				D8A9AC1E1DBB9F5C0029545C /* QLAddCardAssembly.m in Sources */,
 				D8328F461DBA2B9300438D4A /* QLBankAuthRequestFactoryImplementation.m in Sources */,
 				D8A9AC1B1DBB9F4F0029545C /* QLAddCardViewController.m in Sources */,
+				9EC485F91DBBCC9F00E8FF66 /* QLOrderDetailAssembly.m in Sources */,
 				9EFF73DD1DB3F94C004873A6 /* QLRequestFactory.m in Sources */,
 				9ECC12CA1DBA284300E33288 /* QLDateFormatter.m in Sources */,
 				D8F9D7B21DAFD2FC000371CA /* AppDelegate.m in Sources */,
@@ -2200,6 +2227,7 @@
 				9ECC12BE1DB977DB00E33288 /* QLChallengedNetworkClient.m in Sources */,
 				9EFF74011DB425FB004873A6 /* QLServicesAssembly.m in Sources */,
 				9ECC12C61DB9932900E33288 /* QLSerializer.m in Sources */,
+				9EC485F51DBBCC5800E8FF66 /* QLOrderDetailViewController.m in Sources */,
 				9EFF739B1DB3BDF8004873A6 /* QLUserInfoService.m in Sources */,
 				9E2F67021DBB62F100081C05 /* QLRepaymentTypeParser.m in Sources */,
 				9EFF73F51DB41A47004873A6 /* QLMappingProvider.m in Sources */,
