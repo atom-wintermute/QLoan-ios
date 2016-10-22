@@ -1,16 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-UI-Display-Medium.otf">
+            <string>SFUIDisplay-Medium</string>
+        </array>
+        <array key="SF-UI-Display-Regular.otf">
+            <string>SFUIDisplay-Regular</string>
+        </array>
+        <array key="SF-UI-Display-Semibold.otf">
+            <string>SFUIDisplay-Semibold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="ADj-mP-e96">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bEk-jO-Hxi" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController navigationBarHidden="YES" id="n5Q-ec-i2S" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hWP-Ud-HL3">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="hWP-Ud-HL3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -18,6 +28,7 @@
                         <segue destination="bs7-O4-oR0" kind="relationship" relationship="rootViewController" id="JOB-To-tbZ"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bEk-jO-Hxi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-607" y="140"/>
         </scene>
@@ -33,16 +44,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jAw-EG-snj" customClass="QLBlueGradientButton">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="6Ri-Ie-3lK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                <state key="normal" title="Создать заявку"/>
+                                <connections>
+                                    <segue destination="DEy-KW-oYb" kind="show" id="GMS-RM-0iR"/>
+                                </connections>
+                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="X6g-VS-Dck">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="jAw-EG-snj" firstAttribute="top" secondItem="X6g-VS-Dck" secondAttribute="bottom" id="2zf-if-XMt"/>
                             <constraint firstAttribute="trailing" secondItem="X6g-VS-Dck" secondAttribute="trailing" id="D9U-Tv-oQR"/>
+                            <constraint firstItem="jAw-EG-snj" firstAttribute="leading" secondItem="Pce-a7-JbR" secondAttribute="leading" id="QoH-2R-8pk"/>
+                            <constraint firstAttribute="trailing" secondItem="jAw-EG-snj" secondAttribute="trailing" id="WR8-BB-vzN"/>
                             <constraint firstItem="X6g-VS-Dck" firstAttribute="top" secondItem="vHx-8j-GXc" secondAttribute="bottom" id="Ybz-U4-T00"/>
-                            <constraint firstItem="QN0-VA-zGg" firstAttribute="top" secondItem="X6g-VS-Dck" secondAttribute="bottom" id="lce-0Z-R7Y"/>
                             <constraint firstItem="X6g-VS-Dck" firstAttribute="leading" secondItem="Pce-a7-JbR" secondAttribute="leading" id="oVM-xs-18w"/>
+                            <constraint firstItem="QN0-VA-zGg" firstAttribute="top" secondItem="jAw-EG-snj" secondAttribute="bottom" id="shz-Wn-vcB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XqT-8o-tN3"/>
@@ -52,7 +76,142 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HdP-bZ-WK1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="286" y="137"/>
+            <point key="canvasLocation" x="285.60000000000002" y="136.28185907046478"/>
+        </scene>
+        <!--Create Borrower Order View Controller-->
+        <scene sceneID="YUG-jp-ZIZ">
+            <objects>
+                <viewController autoresizesArchivedViewToFullSize="NO" id="DEy-KW-oYb" customClass="QLCreateBorrowerOrderViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fcm-R0-dJK"/>
+                        <viewControllerLayoutGuide type="bottom" id="eRD-Og-yU0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fW7-qr-MDF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Какую сумму Вы желаете получить?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIp-1b-kkC">
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Сумма займа" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fdF-HY-B9Q" customClass="QLUnderlinedTextfield">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Процент" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yjN-Lf-V4C" customClass="QLUnderlinedTextfield">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Срок займа" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ibl-hd-Yul" customClass="QLUnderlinedTextfield">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Неустойка" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="6zD-cQ-TwW" customClass="QLUnderlinedTextfield">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Порядок погашения" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="be2-ua-5o9">
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvs-ji-Lz7">
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
+                                <state key="normal" title="Ежемесячно в равных долях">
+                                    <color key="titleColor" red="0.0039215686269999999" green="0.0039215686269999999" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="monthlyTapped:" destination="DEy-KW-oYb" eventType="touchUpInside" id="XZo-cq-Ebg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHy-6E-KDe">
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
+                                <state key="normal" title="По окончании срока займа">
+                                    <color key="titleColor" red="0.0039215686269999999" green="0.0039215686269999999" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onceTapped:" destination="DEy-KW-oYb" eventType="touchUpInside" id="1Mg-Pi-jgr"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Check" translatesAutoresizingMaskIntoConstraints="NO" id="tw6-pQ-Gti">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="13" id="BSB-Be-Qgd"/>
+                                    <constraint firstAttribute="height" constant="10" id="Wig-6o-o5L"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Check" translatesAutoresizingMaskIntoConstraints="NO" id="mz8-hX-3MJ">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="nDl-mz-fHF"/>
+                                    <constraint firstAttribute="width" constant="13" id="vxc-AY-y4H"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jE2-3Y-YAR" customClass="QLBlueGradientButton">
+                                <color key="backgroundColor" red="0.0" green="0.70196078429999997" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="312" id="0yr-Sp-OCc"/>
+                                    <constraint firstAttribute="height" constant="48" id="2Fy-wc-Car"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                <state key="normal" title="Запросить займ">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="createLoan:" destination="DEy-KW-oYb" eventType="touchUpInside" id="FVh-81-Yoy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="yjN-Lf-V4C" secondAttribute="trailing" constant="32" id="2sJ-gi-Cqh"/>
+                            <constraint firstItem="cIp-1b-kkC" firstAttribute="top" secondItem="fcm-R0-dJK" secondAttribute="bottom" constant="20" id="4KA-Ly-BZp"/>
+                            <constraint firstItem="mz8-hX-3MJ" firstAttribute="centerY" secondItem="gvs-ji-Lz7" secondAttribute="centerY" id="7QJ-7z-5V1"/>
+                            <constraint firstAttribute="trailing" secondItem="6zD-cQ-TwW" secondAttribute="trailing" constant="32" id="AaD-Mp-T7g"/>
+                            <constraint firstItem="tw6-pQ-Gti" firstAttribute="trailing" secondItem="6zD-cQ-TwW" secondAttribute="trailing" id="BC8-2s-p2A"/>
+                            <constraint firstItem="be2-ua-5o9" firstAttribute="leading" secondItem="fW7-qr-MDF" secondAttribute="leading" constant="32" id="BQe-LX-nSu"/>
+                            <constraint firstItem="yHy-6E-KDe" firstAttribute="leading" secondItem="fW7-qr-MDF" secondAttribute="leading" constant="32" id="E7i-x0-zxb"/>
+                            <constraint firstItem="tw6-pQ-Gti" firstAttribute="centerY" secondItem="yHy-6E-KDe" secondAttribute="centerY" id="G8t-Oo-Xsn"/>
+                            <constraint firstItem="yHy-6E-KDe" firstAttribute="top" secondItem="gvs-ji-Lz7" secondAttribute="bottom" constant="8" id="LPj-ls-HUa"/>
+                            <constraint firstItem="gvs-ji-Lz7" firstAttribute="top" secondItem="be2-ua-5o9" secondAttribute="bottom" constant="16" id="PeN-Az-l0J"/>
+                            <constraint firstItem="yjN-Lf-V4C" firstAttribute="top" secondItem="fdF-HY-B9Q" secondAttribute="bottom" constant="32" id="Roh-zn-KdG"/>
+                            <constraint firstItem="gvs-ji-Lz7" firstAttribute="leading" secondItem="fW7-qr-MDF" secondAttribute="leading" constant="32" id="Wff-tG-pu5"/>
+                            <constraint firstItem="fdF-HY-B9Q" firstAttribute="top" secondItem="cIp-1b-kkC" secondAttribute="bottom" constant="32" id="WkQ-yn-J5i"/>
+                            <constraint firstItem="mz8-hX-3MJ" firstAttribute="trailing" secondItem="6zD-cQ-TwW" secondAttribute="trailing" id="YGV-n5-1rX"/>
+                            <constraint firstItem="be2-ua-5o9" firstAttribute="top" secondItem="6zD-cQ-TwW" secondAttribute="bottom" constant="46" id="a8i-d6-5Z1"/>
+                            <constraint firstAttribute="trailing" secondItem="fdF-HY-B9Q" secondAttribute="trailing" constant="32" id="bSG-OJ-6DY"/>
+                            <constraint firstItem="fdF-HY-B9Q" firstAttribute="leading" secondItem="fW7-qr-MDF" secondAttribute="leading" constant="32" id="cKo-dE-ldO"/>
+                            <constraint firstItem="ibl-hd-Yul" firstAttribute="top" secondItem="yjN-Lf-V4C" secondAttribute="bottom" constant="32" id="fO0-if-D1j"/>
+                            <constraint firstAttribute="trailing" secondItem="ibl-hd-Yul" secondAttribute="trailing" constant="32" id="hHB-A0-hZ1"/>
+                            <constraint firstItem="ibl-hd-Yul" firstAttribute="leading" secondItem="fW7-qr-MDF" secondAttribute="leading" constant="32" id="jt1-WR-WSx"/>
+                            <constraint firstItem="cIp-1b-kkC" firstAttribute="leading" secondItem="fW7-qr-MDF" secondAttribute="leading" constant="32" id="kQO-Gx-LE1"/>
+                            <constraint firstItem="6zD-cQ-TwW" firstAttribute="leading" secondItem="fW7-qr-MDF" secondAttribute="leading" constant="32" id="keB-n2-NLi"/>
+                            <constraint firstItem="6zD-cQ-TwW" firstAttribute="top" secondItem="ibl-hd-Yul" secondAttribute="bottom" constant="32" id="rWN-vQ-BZv"/>
+                            <constraint firstAttribute="trailing" secondItem="cIp-1b-kkC" secondAttribute="trailing" constant="32" id="y1r-ln-rJ2"/>
+                            <constraint firstItem="yjN-Lf-V4C" firstAttribute="leading" secondItem="fW7-qr-MDF" secondAttribute="leading" constant="32" id="yPu-07-U13"/>
+                            <constraint firstItem="eRD-Og-yU0" firstAttribute="top" secondItem="jE2-3Y-YAR" secondAttribute="bottom" constant="18" id="z1n-1P-s7w"/>
+                            <constraint firstItem="jE2-3Y-YAR" firstAttribute="centerX" secondItem="fW7-qr-MDF" secondAttribute="centerX" id="zJw-ej-bPK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="createOrderButton" destination="jE2-3Y-YAR" id="vac-hr-88i"/>
+                        <outlet property="loanAmountTextfield" destination="fdF-HY-B9Q" id="VSK-aI-M9V"/>
+                        <outlet property="loanPenaltyTextfield" destination="6zD-cQ-TwW" id="SJB-hi-1oD"/>
+                        <outlet property="loanPeriodTextfield" destination="ibl-hd-Yul" id="VVR-wS-ESW"/>
+                        <outlet property="monthlyCheckbox" destination="mz8-hX-3MJ" id="hSM-Tx-TZd"/>
+                        <outlet property="onceCheckbox" destination="tw6-pQ-Gti" id="Ud1-Ml-7xq"/>
+                        <outlet property="percentageTextfield" destination="yjN-Lf-V4C" id="ofa-Vk-5q9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y23-EI-bUp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1175" y="140"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Check" width="13" height="10"/>
+    </resources>
 </document>
