@@ -20,6 +20,8 @@
 @property (nonatomic, weak) IBOutlet UITextField *passwordTextField;
 @property (nonatomic, weak) IBOutlet UIButton *loginButton;
 
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint *topConstraint;
+
 @property (nonatomic, strong) id<QLBankAuthService> bankAuthService;
 @property (nonatomic, strong) id<QLBankCardService> bankCardService;
 
@@ -30,5 +32,7 @@
 - (IBAction)loginButtonWasPressed:(id)sender;
 
 - (IBAction)registerButtonWasPressed:(id)sender;
+
+- (IBAction)dataWasChanged:(id)sender;
 
 @end

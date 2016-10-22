@@ -13,11 +13,31 @@
 
 static NSString * const QLAuthRegisterSegue = @"registerSegue";
 
+@interface QLAuthViewController () <UITextFieldDelegate>
+
+@end
+
 @implementation QLAuthViewController
+
+#pragma mark - Жизненный цикл
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillShow:)
+                                                 name:UIKeyboardWillShowNotification
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillHide:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+    
     [self configureAppearance];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - IBActions
@@ -56,7 +76,44 @@ static NSString * const QLAuthRegisterSegue = @"registerSegue";
                               sender:self];
 }
 
+- (void)dataWasChanged:(id)sender {
+    if (self.loginTextField.text.length &&
+        self.passwordTextField.text.length) {
+        [self.loginButton activate:YES];
+    } else {
+        [self.loginButton activate:NO];
+    }
+}
+
+#pragma mark - UITextFieldDelegate
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range
+replacementString:(NSString *)string {
+    if ([string isEqualToString:@"\n"]) {
+        [textField resignFirstResponder];
+        return NO;
+    }
+    if (textField == self.loginTextField) {
+        if (0 == range.location) {
+            NSString *resultString = [NSString stringWithFormat:@"+7 %@", string];
+            textField.text = resultString;
+            return NO;
+        }
+    }
+    return YES;
+}
+
 #pragma mark - Приватные методы
+
+- (void)keyboardWillShow:(NSNotification *)notification {
+    self.topConstraint.constant = -122.0;
+    [self.view layoutIfNeeded];
+}
+
+- (void)keyboardWillHide:(NSNotification *)notification {
+    self.topConstraint.constant = 0.0;
+    [self.view layoutIfNeeded];
+}
 
 - (void)showErrorAlert {
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Не удалось авторизоваться"
@@ -73,8 +130,7 @@ static NSString * const QLAuthRegisterSegue = @"registerSegue";
 
 - (void)configureAppearance {
     [self.view layoutIfNeeded];
-    
-    [self.loginButton addGradient];
+    [self.loginButton activate:NO];
 }
 
 @end

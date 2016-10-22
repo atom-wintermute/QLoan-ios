@@ -245,7 +245,11 @@
                                                 </constraints>
                                                 <color key="textColor" red="0.2196078431372549" green="0.2196078431372549" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation"/>
+                                                <connections>
+                                                    <action selector="dataWasChanged:" destination="jdl-Es-imy" eventType="editingChanged" id="6eg-NI-H0w"/>
+                                                    <outlet property="delegate" destination="jdl-Es-imy" id="1R5-8U-H03"/>
+                                                </connections>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fingerprint" translatesAutoresizingMaskIntoConstraints="NO" id="miA-Mw-H2r">
                                                 <constraints>
@@ -281,7 +285,11 @@
                                                 </constraints>
                                                 <color key="textColor" red="0.2196078431372549" green="0.2196078431372549" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                                                <connections>
+                                                    <action selector="dataWasChanged:" destination="jdl-Es-imy" eventType="editingChanged" id="rtf-Md-AZ9"/>
+                                                    <outlet property="delegate" destination="jdl-Es-imy" id="JrT-Ij-lwT"/>
+                                                </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJl-mX-C6r" userLabel="forgetPasswordButton">
                                                 <constraints>
@@ -386,6 +394,7 @@
                         <outlet property="loginButton" destination="rcf-7i-qZT" id="1oC-FF-r3P"/>
                         <outlet property="loginTextField" destination="g4Q-fr-eK8" id="OJa-KL-07F"/>
                         <outlet property="passwordTextField" destination="Z29-Gw-Ixf" id="lwV-Fk-SDf"/>
+                        <outlet property="topConstraint" destination="Jid-OW-wcA" id="otz-r9-JG0"/>
                         <segue destination="PdM-yB-nyz" kind="show" identifier="registerSegue" id="Yon-2G-gRn"/>
                     </connections>
                 </viewController>
