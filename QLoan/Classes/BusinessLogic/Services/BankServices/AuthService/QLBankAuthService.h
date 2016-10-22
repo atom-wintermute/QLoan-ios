@@ -27,6 +27,8 @@ typedef void(^QLBankAuthUserDataCompletion)(QLBankUserInfo *userInfo, NSError *e
               password:(NSString *)password
             completion:(QLBankAuthCompletion)completion;
 
+- (void)logoutCurrentUser:(QLBankAuthCompletion)completion;
+
 - (void)registerWithPhoneNumber:(NSString *)phoneNumber
                      completion:(QLBankAuthCompletion)completion;
 

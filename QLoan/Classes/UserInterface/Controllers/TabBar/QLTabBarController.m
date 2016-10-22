@@ -29,16 +29,23 @@
     [super viewDidAppear:animated];
     
     if (!self.isUserAuthorized) {
-        UIStoryboard *authStoryboard = [UIStoryboard storyboardWithName:@"Auth"
-                                                                 bundle:[NSBundle mainBundle]];
-        UIViewController *authViewController = [authStoryboard instantiateViewControllerWithIdentifier:NSStringFromClass([QLAuthViewController class])];
-        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:authViewController];
-        [self presentViewController:navigationController
-                           animated:NO
-                         completion:^{
-                             self.isUserAuthorized = YES;
-                         }];
+        [self showLoginScreen:NO];
     }
+}
+
+#pragma mark - Методы интерфейса
+
+- (void)showLoginScreen:(BOOL)animated {
+    UIStoryboard *authStoryboard = [UIStoryboard storyboardWithName:@"Auth"
+                                                             bundle:[NSBundle mainBundle]];
+    UIViewController *authViewController = [authStoryboard instantiateViewControllerWithIdentifier:NSStringFromClass([QLAuthViewController class])];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:authViewController];
+    [self presentViewController:navigationController
+                       animated:animated
+                     completion:^{
+                         self.isUserAuthorized = YES;
+                     }];
+
 }
 
 @end

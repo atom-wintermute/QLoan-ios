@@ -19,6 +19,8 @@ static CGFloat QLProfileLogoutCellHeight = 44.0;
 #pragma mark - NICell
 
 - (BOOL)shouldUpdateCellWithObject:(QLProfileLogoutCellObject *)object {
+    self.delegate = object.delegate;
+    
     return YES;
 }
 

@@ -14,6 +14,8 @@
 #import "QLProfileViewDelegate.h"
 
 #import "QLProfileDataDisplayManager.h"
+#import "QLTabBarController.h"
+#import "AppDelegate.h"
 
 #import "QLBankUserInfo.h"
 
@@ -64,7 +66,13 @@
 #pragma mark - QLProfileViewDelegate
 
 - (void)logoutButtonWasPressed {
-    
+    [self.bankAuthService logoutCurrentUser:^(BOOL success, NSError *error) {
+        if (success) {
+            UIWindow *mainWindow = [[[UIApplication sharedApplication] delegate] window];
+            QLTabBarController *tabBarController = (QLTabBarController *)[mainWindow rootViewController];
+            [tabBarController showLoginScreen:YES];
+        }
+    }];
 }
 
 @end

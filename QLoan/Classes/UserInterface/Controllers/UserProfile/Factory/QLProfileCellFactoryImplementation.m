@@ -73,6 +73,7 @@
     [cellObjects addObject:loanLendedCellObject];
     
     QLProfileLogoutCellObject *logoutCellObject = [QLProfileLogoutCellObject new];
+    logoutCellObject.delegate = delegate;
     [cellObjects addObject:logoutCellObject];
     
     return [cellObjects copy];

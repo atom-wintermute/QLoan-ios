@@ -13,6 +13,7 @@ extern NSString * const QLBankCompleteRegistration;
 extern NSString * const QLBankChangeUser;
 extern NSString * const QLBankChangePassword;
 extern NSString * const QLBankAuthenticate;
+extern NSString * const QLBankLogout;
 extern NSString * const QLBankGetUser;
 extern NSString * const QLBankGetBindings;
 
