@@ -119,7 +119,7 @@ replacementString:(NSString *)string {
     }
     if (textField == self.loginTextField) {
         if (0 == range.location) {
-            NSString *resultString = [NSString stringWithFormat:@"+7 %@", string];
+            NSString *resultString = [NSString stringWithFormat:@"+7%@", string];
             textField.text = resultString;
             return NO;
         }
