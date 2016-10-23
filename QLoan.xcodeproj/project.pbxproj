@@ -217,6 +217,8 @@
 		D8F9D7BD1DAFD2FC000371CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8F9D7BC1DAFD2FC000371CA /* Assets.xcassets */; };
 		D8F9D7CB1DAFD2FC000371CA /* QLoanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F9D7CA1DAFD2FC000371CA /* QLoanTests.m */; };
 		D8F9D7D61DAFD2FC000371CA /* QLoanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F9D7D51DAFD2FC000371CA /* QLoanUITests.m */; };
+		D8FCFD7F1DBC86D2005365F6 /* QLRatingModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FCFD7D1DBC86D2005365F6 /* QLRatingModalViewController.m */; };
+		D8FCFD801DBC86D2005365F6 /* QLRatingModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8FCFD7E1DBC86D2005365F6 /* QLRatingModalViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -590,6 +592,9 @@
 		D8F9D7D11DAFD2FC000371CA /* QLoanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QLoanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8F9D7D51DAFD2FC000371CA /* QLoanUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QLoanUITests.m; sourceTree = "<group>"; };
 		D8F9D7D71DAFD2FC000371CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8FCFD7C1DBC86D2005365F6 /* QLRatingModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLRatingModalViewController.h; path = Classes/UserInterface/Controllers/RatingModal/QLRatingModalViewController.h; sourceTree = "<group>"; };
+		D8FCFD7D1DBC86D2005365F6 /* QLRatingModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLRatingModalViewController.m; path = Classes/UserInterface/Controllers/RatingModal/QLRatingModalViewController.m; sourceTree = "<group>"; };
+		D8FCFD7E1DBC86D2005365F6 /* QLRatingModalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QLRatingModalViewController.xib; path = Classes/UserInterface/Controllers/RatingModal/QLRatingModalViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1809,6 +1814,7 @@
 				D8328F681DBA7C8A00438D4A /* Lend */,
 				D86147B01DBAA6830018D19C /* MyOrders */,
 				D874A6511DBB6E190043B0E6 /* Offer */,
+				D8FCFD7B1DBC867A005365F6 /* RatingModal */,
 				D82077451DBAAE8E00253637 /* RegisterPhone */,
 				D89655551DB8317800DE4C66 /* Register */,
 				D86147AA1DBAA4900018D19C /* TabBar */,
@@ -2063,6 +2069,16 @@
 			path = QLoanUITests;
 			sourceTree = "<group>";
 		};
+		D8FCFD7B1DBC867A005365F6 /* RatingModal */ = {
+			isa = PBXGroup;
+			children = (
+				D8FCFD7C1DBC86D2005365F6 /* QLRatingModalViewController.h */,
+				D8FCFD7D1DBC86D2005365F6 /* QLRatingModalViewController.m */,
+				D8FCFD7E1DBC86D2005365F6 /* QLRatingModalViewController.xib */,
+			);
+			name = RatingModal;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2229,6 +2245,7 @@
 				D8328F501DBA6D8A00438D4A /* QLProfileCardCell.xib in Resources */,
 				D88102131DBA8EBB0066C442 /* img4@2x.png in Resources */,
 				D861477E1DBA9CD00018D19C /* img_10@2x.png in Resources */,
+				D8FCFD801DBC86D2005365F6 /* QLRatingModalViewController.xib in Resources */,
 				D88102111DBA8EBB0066C442 /* img3@2x.png in Resources */,
 				D86147761DBA9CCF0018D19C /* img_6@2x.png in Resources */,
 				D86147841DBA9CD00018D19C /* img_13@2x.png in Resources */,
@@ -2449,6 +2466,7 @@
 				D84F78461DB8F08400394F1D /* EXTScope.m in Sources */,
 				9EFF73CD1DB3D82B004873A6 /* QLPayment.m in Sources */,
 				D84F78411DB8E0EB00394F1D /* QLBankServiceConstants.m in Sources */,
+				D8FCFD7F1DBC86D2005365F6 /* QLRatingModalViewController.m in Sources */,
 				9ECC12CB1DBA871000E33288 /* QLSessionCredentials.m in Sources */,
 				9EFF73B91DB3CA09004873A6 /* EntityConstants.m in Sources */,
 				9EFF73A21DB3C1D3004873A6 /* QLBorrowerOrderService.m in Sources */,
