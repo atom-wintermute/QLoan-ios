@@ -21,7 +21,7 @@
             <objects>
                 <navigationController navigationBarHidden="YES" id="vFx-7T-Uqk" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KkW-ib-Rqr">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="KkW-ib-Rqr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -49,7 +49,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="facebook" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GnB-Lr-3Sf">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GnB-Lr-3Sf">
                                 <color key="backgroundColor" red="0.22745098039215686" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="0E6-zy-uYP"/>
@@ -94,9 +94,16 @@
                                     <action selector="cancelButtonWasPressed:" destination="cDv-qd-73I" eventType="touchUpInside" id="3Hd-Na-c5b"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebookLogo" translatesAutoresizingMaskIntoConstraints="NO" id="2b8-8V-Jeq">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="14I-tt-PwV"/>
+                                    <constraint firstAttribute="width" constant="87" id="W14-4O-wjZ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="2b8-8V-Jeq" firstAttribute="top" secondItem="j7R-JL-i33" secondAttribute="bottom" constant="24" id="5dV-2N-p1R"/>
                             <constraint firstItem="9Xz-DM-aC2" firstAttribute="top" secondItem="QQ8-1t-uGH" secondAttribute="bottom" constant="16" id="6BO-aJ-xbB"/>
                             <constraint firstItem="QQ8-1t-uGH" firstAttribute="top" secondItem="GnB-Lr-3Sf" secondAttribute="bottom" constant="127" id="6ut-0d-3Xt"/>
                             <constraint firstItem="QQ8-1t-uGH" firstAttribute="centerX" secondItem="yRN-nb-YVj" secondAttribute="centerX" id="7Qz-ta-qqU"/>
@@ -104,6 +111,7 @@
                             <constraint firstItem="fVS-1p-E1b" firstAttribute="top" secondItem="9Xz-DM-aC2" secondAttribute="bottom" constant="32" id="KJm-DO-hs5"/>
                             <constraint firstItem="VPW-9f-t2b" firstAttribute="centerX" secondItem="yRN-nb-YVj" secondAttribute="centerX" id="QTa-da-ldO"/>
                             <constraint firstItem="VPW-9f-t2b" firstAttribute="top" secondItem="fVS-1p-E1b" secondAttribute="bottom" constant="25" id="btM-I3-izd"/>
+                            <constraint firstItem="2b8-8V-Jeq" firstAttribute="centerX" secondItem="yRN-nb-YVj" secondAttribute="centerX" id="cXK-wS-OFe"/>
                             <constraint firstItem="9Xz-DM-aC2" firstAttribute="leading" secondItem="yRN-nb-YVj" secondAttribute="leading" constant="68" id="dPa-kd-yUm"/>
                             <constraint firstItem="GnB-Lr-3Sf" firstAttribute="leading" secondItem="yRN-nb-YVj" secondAttribute="leading" id="gbp-54-nlx"/>
                             <constraint firstItem="GnB-Lr-3Sf" firstAttribute="top" secondItem="j7R-JL-i33" secondAttribute="bottom" id="l8y-Rr-snU"/>
@@ -111,6 +119,9 @@
                             <constraint firstAttribute="trailing" secondItem="GnB-Lr-3Sf" secondAttribute="trailing" id="zZj-wc-A2o"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="continueButton" destination="fVS-1p-E1b" id="phy-Ji-yFt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LWf-Fk-oFC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -492,6 +503,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="facebookLogo" width="87" height="17"/>
         <image name="fbNonActive" width="30" height="30"/>
         <image name="gradient" width="1" height="140"/>
         <image name="inNonActive" width="30" height="30"/>
