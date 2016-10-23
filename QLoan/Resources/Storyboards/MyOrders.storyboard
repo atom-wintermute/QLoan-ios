@@ -9,7 +9,7 @@
         <scene sceneID="cSE-4B-3PK">
             <objects>
                 <navigationController title="Мои заявки" id="kmM-aL-gHR" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="7au-MT-Fo6">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7au-MT-Fo6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

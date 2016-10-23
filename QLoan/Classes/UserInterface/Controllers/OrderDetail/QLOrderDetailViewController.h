@@ -28,6 +28,7 @@ typedef NS_ENUM(NSUInteger, QLOrderAction) {
 
 @property (weak, nonatomic) IBOutlet UIView *ratingViewContainer;
 @property (weak, nonatomic) IBOutlet UILabel *readyToGiveLoanLabel;
+@property (weak, nonatomic) IBOutlet UIButton *crossButton;
 
 @property (weak, nonatomic) IBOutlet UIImageView *photoImage;
 @property (weak, nonatomic) IBOutlet UIImageView *fakeImageView;

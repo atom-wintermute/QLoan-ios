@@ -308,9 +308,19 @@
                                     <action selector="declineLoan:" destination="SY9-Tc-xZ5" eventType="touchUpInside" id="YMG-uI-B2f"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sg4-55-2BU">
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Закрыть">
+                                    <color key="titleColor" red="0.0" green="0.70196078429999997" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeWindow:" destination="SY9-Tc-xZ5" eventType="touchUpInside" id="K6z-ll-Voz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="sg4-55-2BU" firstAttribute="top" secondItem="7IQ-ss-o3K" secondAttribute="bottom" id="0DI-uN-bHy"/>
                             <constraint firstAttribute="trailing" secondItem="KkF-1f-H6a" secondAttribute="trailing" id="3Bd-1l-fdf"/>
                             <constraint firstItem="wdb-S9-EkJ" firstAttribute="centerX" secondItem="Q55-tU-oJd" secondAttribute="centerX" id="BnI-1R-Tz7"/>
                             <constraint firstItem="Mx7-tT-RZc" firstAttribute="centerX" secondItem="Q55-tU-oJd" secondAttribute="centerX" id="Cwb-5t-kg5"/>
@@ -318,6 +328,7 @@
                             <constraint firstItem="vd8-Sy-98h" firstAttribute="centerX" secondItem="Q55-tU-oJd" secondAttribute="centerX" id="NwO-Tc-sU2"/>
                             <constraint firstItem="1fw-Lz-gMv" firstAttribute="centerX" secondItem="Q55-tU-oJd" secondAttribute="centerX" id="U5Q-bb-pcI"/>
                             <constraint firstItem="KkF-1f-H6a" firstAttribute="leading" secondItem="Q55-tU-oJd" secondAttribute="leading" id="WNf-6S-Gwd"/>
+                            <constraint firstItem="sg4-55-2BU" firstAttribute="leading" secondItem="Q55-tU-oJd" secondAttribute="leading" constant="20" id="XVx-i3-uy9"/>
                             <constraint firstItem="1fw-Lz-gMv" firstAttribute="top" secondItem="vd8-Sy-98h" secondAttribute="bottom" constant="8" id="dyw-HG-ood"/>
                             <constraint firstItem="dBt-ad-g8t" firstAttribute="centerX" secondItem="Q55-tU-oJd" secondAttribute="centerX" id="lar-E9-tHO"/>
                             <constraint firstItem="vd8-Sy-98h" firstAttribute="top" secondItem="7IQ-ss-o3K" secondAttribute="bottom" constant="26" id="mst-lR-dvA"/>
@@ -329,6 +340,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="crossButton" destination="sg4-55-2BU" id="UsB-81-Cby"/>
                         <outlet property="declineButton" destination="Mx7-tT-RZc" id="7qm-TQ-qyg"/>
                         <outlet property="fakeImageView" destination="xa8-1T-ZJB" id="RTi-vr-8Jd"/>
                         <outlet property="nameLabel" destination="1fw-Lz-gMv" id="Q80-pa-v6T"/>

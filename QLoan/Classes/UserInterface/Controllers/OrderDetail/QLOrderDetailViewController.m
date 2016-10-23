@@ -30,6 +30,10 @@
 	[self configureView];
 	[self configureTableView];
 	
+	if (self.navigationController != nil) {
+		self.crossButton.hidden = YES;
+	}
+	
 	self.userId = [self.storage credentialsForCurrentUser].userId;
 	self.notificationId = @"5";
 	
@@ -104,6 +108,10 @@
 
 - (IBAction)declineLoan:(id)sender {
 
+}
+- (IBAction)closeWindow:(id)sender {
+	[self dismissViewControllerAnimated:YES
+							 completion:nil];
 }
 
 - (void)configureTableView {
