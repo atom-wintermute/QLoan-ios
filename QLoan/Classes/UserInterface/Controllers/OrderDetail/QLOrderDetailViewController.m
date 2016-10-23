@@ -56,7 +56,7 @@
 						 completion:nil];
 	};
 	
-	[self.interactionService requestLoanReceipt:self.orderInfo.user.userId
+	[self.interactionService requestLoanReceipt:self.orderInfo.order.orderId
 									 completion:completion];
 }
 

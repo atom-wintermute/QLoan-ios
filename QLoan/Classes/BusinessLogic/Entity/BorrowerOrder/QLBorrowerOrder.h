@@ -12,6 +12,7 @@
 
 @interface QLBorrowerOrder : NSObject
 
+@property (nonatomic, assign) NSInteger orderId;
 @property (nonatomic, assign) NSInteger borrowerId;
 @property (nonatomic, assign) NSInteger lenderId;
 @property (nonatomic, assign) NSInteger loanMaturityPeriod;
