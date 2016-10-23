@@ -72,7 +72,7 @@
     
 }
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    
+    application.applicationIconBadgeNumber = 0;
 }
 
 #pragma maik - Push Notifications
