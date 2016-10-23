@@ -81,7 +81,11 @@
 
 - (NSURLRequest *)requestForLoanConfirmation:(NSInteger)orderId;
 
-- (NSURLRequest *)provideLoanRequest:(NSInteger)orderId;
+- (NSURLRequest *)provideLoanRequest:(NSInteger)orderId
+						  borrowerId:(NSInteger)borrowerId;
+
+- (NSURLRequest *)finishLoanRequest:(NSInteger)orderId
+						 borrowerId:(NSInteger)borrowerId;
 
 - (NSURLRequest *)requestForOrderDeactivation:(NSInteger)orderId;
 

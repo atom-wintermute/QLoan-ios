@@ -19,6 +19,8 @@
 @property (nonatomic, assign) BOOL requestIsBeingCreated;
 @property (nonatomic, assign) NSInteger userId;
 @property (nonatomic, strong) NSString *notificationId;
+@property (nonatomic, assign) QLOrderAction orderAction;
+
 
 @end
 
@@ -35,7 +37,6 @@
 	}
 	
 	self.userId = [self.storage credentialsForCurrentUser].userId;
-	self.notificationId = @"5";
 	
 	if (self.orderInfo.user == nil) {
 		self.ratingViewContainer.hidden = YES;
@@ -89,21 +90,73 @@
 	
 	QLBooleanCompletion completion = ^(BOOL success, NSError *error) {
 		self.requestIsBeingCreated = NO;
-		UIAlertController *controller;
-		if (success) {
-			controller = [UIAlertController successAlertControllerWithTitle:@"Запрос успешно направлен"];
-		} else {
-			controller = [UIAlertController errorAlertControllerWithTitle:@"Не удалось направить запрос"];
-		}
 		
-		[self presentViewController:controller
-						   animated:YES
-						 completion:nil];
+		switch (self.orderAction) {
+			case QLDoNothing:
+				break;
+			case QLSendPaymentToBorrower: {
+				UIAlertController *controller;
+				if (success) {
+					controller = [UIAlertController successAlertControllerWithTitle:@"Платеж успешно переведен"
+																		 completion:^{
+																			 if (self.navigationController)
+																			 [self.navigationController popViewControllerAnimated:YES];
+																			 else {
+																				 [self dismissViewControllerAnimated:YES completion:nil];
+																			 }
+																		 }];
+					
+				} else {
+					controller = [UIAlertController errorAlertControllerWithTitle:@"Не удалось перевести платеж"];
+				}
+				
+				[self presentViewController:controller
+								   animated:YES
+								 completion:nil];
+				return;
+			}
+			case QLSendRepaymentToLender:{
+				// TODO: Rating increase
+				return;
+			}
+			case QLSendRequestToLender:{
+				UIAlertController *controller;
+				if (success) {
+					controller = [UIAlertController successAlertControllerWithTitle:@"Запрос успешно направлен"
+																		 completion:^{
+																			 [self.navigationController popViewControllerAnimated:YES];
+																		 }];
+				} else {
+					controller = [UIAlertController errorAlertControllerWithTitle:@"Не удалось направить платеж"];
+				}
+				
+				[self presentViewController:controller
+								   animated:YES
+								 completion:nil];
+				return;
+			}
+		}
 	};
 	
-	
-	[self.interactionService requestLoanReceipt:self.orderInfo.order.orderId
+	switch (self.orderAction) {
+		case QLDoNothing:
+			break;
+		case QLSendPaymentToBorrower:
+			[self.interactionService provideLoan:self.orderInfo.order.orderId
+									  borrowerId:self.orderInfo.user.userId
+									  completion:completion];
+			
+			break;
+		case QLSendRepaymentToLender:
+			[self.interactionService returnLoan:self.orderInfo.order.orderId
+									 borrowerId:self.userId
 									 completion:completion];
+			break;
+		case QLSendRequestToLender:
+			[self.interactionService requestLoanReceipt:self.orderInfo.order.orderId
+											 completion:completion];
+			break;
+	}
 }
 
 - (IBAction)declineLoan:(id)sender {
@@ -152,7 +205,7 @@
 			break;
 		case QLSendPaymentToBorrower:
 			[self.requestButton setTitle:@"Выдать займ" forState:UIControlStateNormal];
-			[self.declineButton setTitle:@"Отклонить заявку" forState:UIControlStateNormal];
+			[self.declineButton setTitle:@"Отклонить" forState:UIControlStateNormal];
 			break;
 		case QLSendRepaymentToLender:
 			[self.requestButton setTitle:@"Вернуть займ" forState:UIControlStateNormal];
@@ -163,7 +216,7 @@
 			self.declineButton.hidden = YES;
 			break;
 	}
-	
+	self.orderAction = action;
 //	if (self.notificationId != nil) {
 //		QLNotificationCompletion completion = ^(QLNotification *notification, NSError *error) {
 //			

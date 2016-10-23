@@ -49,7 +49,12 @@
  Метод provideLoan
  */
 - (void)provideLoan:(NSInteger)orderId
+		 borrowerId:(NSInteger)borrowerId
 		 completion:(QLBooleanCompletion)completion;
+
+- (void)returnLoan:(NSInteger)orderId
+		borrowerId:(NSInteger)borrowerId
+		completion:(QLBooleanCompletion)completion;
 
 /**
  Метод paymentCompleted

@@ -79,7 +79,7 @@
 		cellObject.percentString = [NSString stringWithFormat:@"%d%% в месяц", (int)order.order.percentage];
 		NSString *formattedString = [QLMoneyFormatter numberStringForMoneyFromValue:@((long)order.order.loanAmount)];
 		cellObject.sumString = [NSString stringWithFormat:@"%@ ₽/", formattedString];
-		cellObject.nameString = order.user == nil ? @"Нет займодавца" : [NSString stringWithFormat:@"%@ %@", order.user.firstName, order.user.lastName];
+		cellObject.nameString = order.user == nil ? @"" : [NSString stringWithFormat:@"%@ %@", order.user.firstName, order.user.lastName];
 		
 		switch (order.order.status) {
 			case QLBorrowerOrderStatusActive:
@@ -118,7 +118,7 @@
 		cellObject.percentString = [NSString stringWithFormat:@"%d%% в месяц", (int)order.order.percentage];
 		NSString *formattedString = [QLMoneyFormatter numberStringForMoneyFromValue:@((long)order.order.loanAmount)];
 		cellObject.sumString = [NSString stringWithFormat:@"%@ ₽/", formattedString];
-		cellObject.nameString = order.user == nil ? @"Нет заемщика" : [NSString stringWithFormat:@"%@ %@", order.user.firstName, order.user.lastName];
+		cellObject.nameString = order.user == nil ? @"" : [NSString stringWithFormat:@"%@ %@", order.user.firstName, order.user.lastName];
 		
 		switch (order.order.status) {
 			case QLBorrowerOrderStatusActive:

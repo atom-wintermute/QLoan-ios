@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^VoidCompletion)();
+
 @interface UIAlertController (Extensions)
 
 + (UIAlertController *)standartErrorAlertController;
@@ -15,5 +17,8 @@
 + (UIAlertController *)errorAlertControllerWithTitle:(NSString *)title;
 
 + (UIAlertController *)successAlertControllerWithTitle:(NSString *)title;
+
++ (UIAlertController *)successAlertControllerWithTitle:(NSString *)title
+											completion:(VoidCompletion)completion;
 
 @end

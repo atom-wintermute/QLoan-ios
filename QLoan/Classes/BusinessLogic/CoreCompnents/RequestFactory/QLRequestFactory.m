@@ -195,9 +195,19 @@
 						 parameters:dictionary];
 }
 
-- (NSURLRequest *)provideLoanRequest:(NSInteger)orderId {
-	NSDictionary *dictionary = @{ @"id" : @(orderId) };
-	return [self putRequestWithPath:@"provideLoan/"
+- (NSURLRequest *)provideLoanRequest:(NSInteger)orderId
+						  borrowerId:(NSInteger)borrowerId {
+	NSString* stringId = [NSString stringWithFormat:@"lender_orders/%d", (int)orderId];
+	NSDictionary *dictionary = @{ @"status" : @"finished", @"borrower_id" : @(borrowerId) };
+	return [self putRequestWithPath:stringId
+						 parameters:dictionary];
+}
+
+- (NSURLRequest *)finishLoanRequest:(NSInteger)orderId
+						 borrowerId:(NSInteger)borrowerId {
+	NSString* stringId = [NSString stringWithFormat:@"lender_orders/%d", (int)orderId];
+	NSDictionary *dictionary = @{ @"status" : @"finished", @"borrower_id" : @(borrowerId) };
+	return [self putRequestWithPath:stringId
 						 parameters:dictionary];
 }
 

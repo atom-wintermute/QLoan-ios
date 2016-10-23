@@ -66,8 +66,28 @@
 }
 
 - (void)provideLoan:(NSInteger)orderId
+		 borrowerId:(NSInteger)borrowerId
 		 completion:(QLBooleanCompletion)completion {
-	NSURLRequest *request = [self.requestFactory provideLoanRequest:orderId];
+	NSURLRequest *request = [self.requestFactory provideLoanRequest:orderId
+							 borrowerId:borrowerId];
+	
+	QLNetworkCompletion networkCompletion = ^(QLServerResponse *response, NSError *error) {
+		if (error == nil) {
+			run_block_on_main(completion, YES, nil);
+		} else {
+			run_block_on_main(completion, NO, error);
+		}
+	};
+	
+	[self.networkClient sendRequest:request
+						 completion:networkCompletion];
+}
+
+- (void)returnLoan:(NSInteger)orderId
+		borrowerId:(NSInteger)borrowerId
+		completion:(QLBooleanCompletion)completion {
+	NSURLRequest *request = [self.requestFactory finishLoanRequest:orderId
+							 borrowerId:borrowerId];
 	
 	QLNetworkCompletion networkCompletion = ^(QLServerResponse *response, NSError *error) {
 		if (error == nil) {

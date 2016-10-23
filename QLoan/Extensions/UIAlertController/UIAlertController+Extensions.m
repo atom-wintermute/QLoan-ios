@@ -8,6 +8,7 @@
 
 #import "UIAlertController+Extensions.h"
 
+
 @implementation UIAlertController (Extensions)
 
 + (UIAlertController *)standartErrorAlertController {
@@ -51,5 +52,19 @@
 	return alertController;
 }
 
++ (UIAlertController *)successAlertControllerWithTitle:(NSString *)title
+											completion:(VoidCompletion)completion {
+	UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title
+																			 message:nil
+																	  preferredStyle:UIAlertControllerStyleAlert];
+	UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"OK"
+														   style:UIAlertActionStyleDefault
+														 handler:^(UIAlertAction *action){
+															 completion();
+														 }];
+	[alertController addAction:cancelAction];
+	
+	return alertController;
+}
 
 @end
