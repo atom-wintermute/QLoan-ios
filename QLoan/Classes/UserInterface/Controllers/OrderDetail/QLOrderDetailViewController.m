@@ -12,6 +12,7 @@
 #import "QLOrderInfo.h"
 #import "QLUserInteractionService.h"
 
+#import "QLRatingModalViewController.h"
 
 @interface QLOrderDetailViewController () <UITableViewDelegate>
 
@@ -101,7 +102,7 @@
 }
 
 - (IBAction)declineLoan:(id)sender {
-
+    
 }
 
 - (void)configureTableView {
@@ -153,6 +154,17 @@
 			self.declineButton.hidden = YES;
 			break;
 	}
+}
+
+- (void)showIncreaseRatingScreen {
+    
+    QLRatingModalViewController *modal = [QLRatingModalViewController new];
+    self.modalPresentationStyle = UIModalPresentationCurrentContext;
+    modal.modalPresentationStyle = UIModalPresentationCurrentContext;
+    
+    [self presentViewController:modal
+                       animated:YES
+                     completion:nil];
 }
 
 @end
