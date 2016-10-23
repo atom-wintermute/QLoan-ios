@@ -202,7 +202,7 @@
 - (void)determineConfiguration:(QLOrderAction)action {
 	switch (action) {
 		case QLDoNothing:
-			self.requestButton.hidden = YES;
+			[self.requestButton setTitle:@"Запросить займ" forState:UIControlStateNormal];
 			self.declineButton.hidden = YES;
 			break;
 		case QLSendPaymentToBorrower:
