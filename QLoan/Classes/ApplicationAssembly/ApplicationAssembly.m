@@ -9,7 +9,7 @@
 #import "ApplicationAssembly.h"
 
 #import "QLCoreComponentsAssembly.h"
-
+#import "QLServicesAssembly.h"
 #import "QLAppRouterImplementation.h"
 
 @implementation ApplicationAssembly
@@ -31,6 +31,12 @@
                           configuration:^(TyphoonDefinition *definition) {
                               [definition injectProperty:@selector(mainWindow)
                                                     with:[self mainWindow]];
+							  [definition injectProperty:@selector(personalCabinetService)
+													with:[self.servicesAssembly personalCabinetService]];
+							  [definition injectProperty:@selector(userInfoService)
+													with:[self.servicesAssembly userInfoService]];
+							  [definition injectProperty:@selector(borrowerOrderService)
+													with:[self.servicesAssembly borrowerOrderService]];
                           }];
 }
 

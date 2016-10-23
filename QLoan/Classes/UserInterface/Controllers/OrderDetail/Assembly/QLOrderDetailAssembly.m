@@ -23,6 +23,8 @@
 													with:[QLOrderDetailCellObjectFactory new]];
 							  [definition injectProperty:@selector(interactionService)
 													with:[self.serviceAssembly interactionService]];
+							  [definition injectProperty:@selector(personalCabinetService)
+													with:[self.serviceAssembly personalCabinetService]];
 						  }];
 }
 

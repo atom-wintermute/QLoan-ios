@@ -87,22 +87,19 @@
 - (EKObjectMapping *)notificationMapping {
 	return [EKObjectMapping mappingForClass:[QLNotification class] withBlock:^(EKObjectMapping *mapping) {
 		[mapping mapFieldsFromDictionary:@{
-										   @"notification_id": @"notificationId",
-										   @"order_id" : @"orderId",
 										   @"borrower_id" : @"borrowerId",
 										   @"lender_id" : @"lenderId",
-										   @"type" : @"type",
-										   @"content" : @"content"
+										   @"borrower_order_id" : @"orderId"
 										   }];
-		[mapping mapKey:@"date"
-				toField:@"date"
-		 withValueBlock:^id(NSString *key, id value) {
-			 if (![value isKindOfClass:[NSString class]]) {
-				 return nil;
-			 }
-			 NSDate *date = [self.formatter dateFromString:(NSString *)value];
-			 return date;
-		 }];
+//		[mapping mapKey:@"date"
+//				toField:@"date"
+//		 withValueBlock:^id(NSString *key, id value) {
+//			 if (![value isKindOfClass:[NSString class]]) {
+//				 return nil;
+//			 }
+//			 NSDate *date = [self.formatter dateFromString:(NSString *)value];
+//			 return date;
+//		 }];
 	}];
 }
 

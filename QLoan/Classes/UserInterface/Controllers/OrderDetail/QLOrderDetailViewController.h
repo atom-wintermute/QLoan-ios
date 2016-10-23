@@ -15,6 +15,7 @@
 
 @class QLOrderInfo;
 @class QLUserInteractionService;
+@class QLPersonalCabinetService;
 
 typedef NS_ENUM(NSUInteger, QLOrderAction) {
 	QLSendRequestToLender = 0,
@@ -24,6 +25,7 @@ typedef NS_ENUM(NSUInteger, QLOrderAction) {
 };
 
 @interface QLOrderDetailViewController : UIViewController
+
 @property (weak, nonatomic) IBOutlet UIView *ratingViewContainer;
 @property (weak, nonatomic) IBOutlet UILabel *readyToGiveLoanLabel;
 
@@ -38,5 +40,6 @@ typedef NS_ENUM(NSUInteger, QLOrderAction) {
 @property (nonatomic, strong) QLOrderInfo *orderInfo;
 @property (nonatomic, strong) QLOrderDetailCellObjectFactory *cellFactory;
 @property (nonatomic, strong) QLUserInteractionService *interactionService;
+@property (nonatomic, strong) QLPersonalCabinetService *personalCabinetService;
 
 @end

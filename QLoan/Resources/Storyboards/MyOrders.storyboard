@@ -50,19 +50,12 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3QF-i6-wYT">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5d1-6F-brt">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="3QF-i6-wYT" firstAttribute="leading" secondItem="4CI-IG-C7V" secondAttribute="leading" id="5nC-u6-DUX"/>
                             <constraint firstAttribute="trailing" secondItem="3QF-i6-wYT" secondAttribute="trailing" id="6hX-ft-2Il"/>
-                            <constraint firstItem="5d1-6F-brt" firstAttribute="leading" secondItem="4CI-IG-C7V" secondAttribute="leading" id="9SN-UK-pjX"/>
                             <constraint firstItem="QDc-gD-g3i" firstAttribute="top" secondItem="Duh-sE-QAH" secondAttribute="bottom" constant="5" id="9sN-ar-odm"/>
-                            <constraint firstItem="eVM-y0-KVS" firstAttribute="top" secondItem="5d1-6F-brt" secondAttribute="bottom" id="G2s-0j-swc"/>
-                            <constraint firstItem="5d1-6F-brt" firstAttribute="top" secondItem="QDc-gD-g3i" secondAttribute="bottom" constant="8" id="OMM-lI-bOv"/>
-                            <constraint firstAttribute="trailing" secondItem="5d1-6F-brt" secondAttribute="trailing" id="dIE-jy-H8O"/>
                             <constraint firstItem="3QF-i6-wYT" firstAttribute="top" secondItem="QDc-gD-g3i" secondAttribute="bottom" constant="8" id="h1E-jW-Dl0"/>
                             <constraint firstItem="eVM-y0-KVS" firstAttribute="top" secondItem="3QF-i6-wYT" secondAttribute="bottom" id="sbm-pG-B23"/>
                             <constraint firstItem="QDc-gD-g3i" firstAttribute="centerX" secondItem="4CI-IG-C7V" secondAttribute="centerX" id="tvw-s9-lhp"/>
@@ -71,7 +64,7 @@
                     <navigationItem key="navigationItem" id="iqK-9o-Unn"/>
                     <connections>
                         <outlet property="segmentedControl" destination="QDc-gD-g3i" id="mMT-y8-Njb"/>
-                        <outlet property="tableView" destination="3QF-i6-wYT" id="T0t-UH-2Sz"/>
+                        <outlet property="tableView" destination="3QF-i6-wYT" id="9UE-iX-afO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="htB-6T-M0G" userLabel="First Responder" sceneMemberID="firstResponder"/>

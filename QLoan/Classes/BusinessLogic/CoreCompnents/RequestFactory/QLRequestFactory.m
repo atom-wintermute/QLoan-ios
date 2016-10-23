@@ -82,9 +82,9 @@
 }
 
 - (NSURLRequest *)requestForMyNotificationWithId:(NSUInteger)notificationId {
-	NSDictionary *dictionary = @{ @"id": @(notificationId) };
-	return [self getRequestWithPath:@"get_my_notification/"
-						 parameters:dictionary];
+	NSString* stringId = [NSString stringWithFormat:@"notes/%d", (int)notificationId];
+	return [self getRequestWithPath:stringId
+						 parameters:nil];
 }
 
 #pragma mark - Платежи

@@ -12,6 +12,7 @@
 #import "AppDelegate.h"
 
 @class QLCoreComponentsAssembly;
+@class QLServicesAssembly;
 
 /**
  Фабрика для сборки экрана авторизации
@@ -19,6 +20,7 @@
 @interface ApplicationAssembly : TyphoonAssembly
 
 @property (nonatomic, strong, readonly) QLCoreComponentsAssembly *coreAssembly;
+@property (nonatomic, strong, readonly) QLServicesAssembly *servicesAssembly;
 
 - (AppDelegate *)appDelegate;
 

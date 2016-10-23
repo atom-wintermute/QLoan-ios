@@ -11,13 +11,14 @@
 #import "QLStorage.h"
 #import "QLOrderInfo.h"
 #import "QLUserInteractionService.h"
-
+#import "QLPersonalCabinetService.h"
 
 @interface QLOrderDetailViewController () <UITableViewDelegate>
 
 @property (nonatomic, strong) QLGetDataDisplayManager *dataDisplayManager;
 @property (nonatomic, assign) BOOL requestIsBeingCreated;
 @property (nonatomic, assign) NSInteger userId;
+@property (nonatomic, strong) NSString *notificationId;
 
 @end
 
@@ -30,6 +31,7 @@
 	[self configureTableView];
 	
 	self.userId = [self.storage credentialsForCurrentUser].userId;
+	self.notificationId = @"5";
 	
 	if (self.orderInfo.user == nil) {
 		self.ratingViewContainer.hidden = YES;
@@ -38,7 +40,7 @@
 	
 	self.nameLabel.text = self.orderInfo.user != nil ? [NSString stringWithFormat:@"%@ %@", self.orderInfo.user.firstName, self.orderInfo.user.lastName] : @"Нет контрагента";
 	
-	QLOrderAction action;
+	QLOrderAction action = QLDoNothing;
 	if (self.userId == self.orderInfo.order.borrowerId) {
 		switch (self.orderInfo.order.status) {
 			case QLBorrowerOrderStatusActive:
@@ -152,6 +154,15 @@
 			[self.requestButton setTitle:@"Запросить займ" forState:UIControlStateNormal];
 			self.declineButton.hidden = YES;
 			break;
+	}
+	
+	if (self.notificationId != nil) {
+		QLNotificationCompletion completion = ^(QLNotification *notification, NSError *error) {
+			
+		};
+		
+		[self.personalCabinetService myNotificationWithId:[self.notificationId integerValue]
+											   completion:completion];
 	}
 }
 
