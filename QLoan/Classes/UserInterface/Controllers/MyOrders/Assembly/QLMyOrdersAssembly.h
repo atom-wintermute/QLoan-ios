@@ -11,11 +11,13 @@
 @class QLMyOrdersViewController;
 @class QLServicesAssembly;
 @class QLCoreComponentsAssembly;
+@class ApplicationAssembly;
 
 @interface QLMyOrdersAssembly : TyphoonAssembly
 
 @property (nonatomic, strong, readonly) QLServicesAssembly *servicesAssembly;
 @property (nonatomic, strong, readonly) QLCoreComponentsAssembly *coreAssembly;
+@property (nonatomic, strong, readonly) ApplicationAssembly *applicationAssembly;
 
 - (QLMyOrdersViewController *)myOrdersController;
 

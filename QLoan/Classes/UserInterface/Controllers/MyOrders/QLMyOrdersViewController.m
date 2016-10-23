@@ -18,6 +18,7 @@
 #import "QLOrderInfo.h"
 #import "QLMyOrdersEmptyDataView.h"
 #import "ALView+PureLayout.h"
+#import "QLAppRouterImplementation.h"
 
 #import "QLUserInfoService.h"
 
@@ -51,7 +52,9 @@ static NSInteger const QLLendersSelectedSegment = 2;
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
   //  [self showData];
-	[self loadData];
+	//[self loadData];
+	
+	[self.router openViewControllerWithNotification:@{ @"note_id" : @"5", @"type" : @"loan_receipt_requested" }];
 }
 
 #pragma mark - Приватные методы

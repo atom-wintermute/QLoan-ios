@@ -142,9 +142,9 @@
 }
 
 - (NSURLRequest *)requestForBorrowerOrderWithId:(NSInteger)orderId {
-	NSDictionary *dictionary = @{ @"id" : @(orderId) };
-	return [self getRequestWithPath:@"borrower_orders"
-						 parameters:dictionary];
+	NSString* stringId = [NSString stringWithFormat:@"borrower_orders/%d", (int)orderId];
+	return [self getRequestWithPath:stringId
+						 parameters:nil];
 }
 
 - (NSURLRequest *)requestForAddingBorrowerOrder:(NSDictionary *)orderParameters {

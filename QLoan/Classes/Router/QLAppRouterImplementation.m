@@ -50,8 +50,9 @@ static NSString * const QLNotificationPaymentReceived = @"payment_received";
 		QLOrderDetailViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"QLOrderDetailViewController"];
 		if (controller != nil) {
 			controller.orderInfo = orderInfo;
-			[rootViewController.navigationController pushViewController:controller
-															   animated:YES];
+			[rootViewController presentViewController:controller
+											 animated:YES
+										   completion:nil];
 		}
 	};
 	

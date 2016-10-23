@@ -23,5 +23,6 @@
 @property (nonatomic, strong, readonly) QLServicesAssembly *servicesAssembly;
 
 - (AppDelegate *)appDelegate;
+- (id<QLAppRouter>)appRouter;
 
 @end

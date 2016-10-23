@@ -11,6 +11,7 @@
 #import "QLMyOrdersViewController.h"
 #import "QLServicesAssembly.h"
 #import "QLMyOrdersCellFactoryImplementation.h"
+#import "ApplicationAssembly.h"
 
 @implementation QLMyOrdersAssembly
 
@@ -23,6 +24,9 @@
 													with:[self.servicesAssembly personalCabinetService]];
 							  [definition injectProperty:@selector(userInfoService)
 													with:[self.servicesAssembly userInfoService]];
+							  [definition injectProperty:@selector(router)
+													with:[self.applicationAssembly appRouter]];
+
                           }];
 }
 

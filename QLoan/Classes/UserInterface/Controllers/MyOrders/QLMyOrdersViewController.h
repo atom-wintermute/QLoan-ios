@@ -11,6 +11,7 @@
 @protocol QLMyOrdersCellFactory;
 @class QLPersonalCabinetService;
 @class QLUserInfoService;
+@class QLAppRouterImplementation;
 
 @interface QLMyOrdersViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
@@ -21,5 +22,6 @@
 @property (nonatomic, strong) id<QLMyOrdersCellFactory> cellFactory;
 @property (nonatomic, strong) QLPersonalCabinetService *personalCabinetService;
 @property (nonatomic, strong) QLUserInfoService *userInfoService;
+@property (nonatomic, strong) QLAppRouterImplementation *router;
 
 @end
