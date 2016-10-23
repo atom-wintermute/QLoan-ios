@@ -16,6 +16,8 @@
 #import "ServicesConstants.h"
 #import "QLBorrowerOrder.h"
 #import "QLOrderInfo.h"
+#import "QLMyOrdersEmptyDataView.h"
+#import "ALView+PureLayout.h"
 
 #import "QLUserInfoService.h"
 
@@ -38,6 +40,7 @@ static NSInteger const QLLendersSelectedSegment = 2;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [self.view layoutIfNeeded];
     self.navigationItem.title = @"Мои заявки";
 	
 }
@@ -78,9 +81,17 @@ static NSInteger const QLLendersSelectedSegment = 2;
                                                            return dataObject;
                                                        }];
     
-    self.tableView.dataSource = [self.dataDisplayManager dataSourceForTableView:self.tableView];
-    self.tableView.delegate = [self.dataDisplayManager delegateForTableView:self.tableView
-                                                           withBaseDelegate:self];
+        self.tableView.dataSource = [self.dataDisplayManager dataSourceForTableView:self.tableView];
+        self.tableView.delegate = [self.dataDisplayManager delegateForTableView:self.tableView
+                                                               withBaseDelegate:self];
+    } else {
+        /*
+        QLMyOrdersEmptyDataView *emptyView = [QLMyOrdersEmptyDataView new];
+        emptyView.backgroundColor = [UIColor redColor];
+        [self.tableView addSubview:emptyView];
+        [emptyView autoPinEdgesToSuperviewEdges];
+         */
+    }
     [self.tableView reloadData];
 }
 

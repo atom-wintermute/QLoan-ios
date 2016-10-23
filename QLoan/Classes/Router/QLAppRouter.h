@@ -6,8 +6,8 @@
 //  Copyright © 2016 Rambler&Co. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@protocol QLAppRouter <NSObject>
 
-@interface AppRouter : NSObject
+- (void)openViewControllerWithNotification:(NSDictionary *)notification;
 
 @end

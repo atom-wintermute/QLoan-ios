@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
+@property (nonatomic, weak) IBOutlet UIView *emptyView;
 
 @property (nonatomic, strong) id<QLMyOrdersCellFactory> cellFactory;
 @property (nonatomic, strong) QLPersonalCabinetService *personalCabinetService;
