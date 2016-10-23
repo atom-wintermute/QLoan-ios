@@ -217,6 +217,13 @@
 		D8F9D7BD1DAFD2FC000371CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8F9D7BC1DAFD2FC000371CA /* Assets.xcassets */; };
 		D8F9D7CB1DAFD2FC000371CA /* QLoanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F9D7CA1DAFD2FC000371CA /* QLoanTests.m */; };
 		D8F9D7D61DAFD2FC000371CA /* QLoanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F9D7D51DAFD2FC000371CA /* QLoanUITests.m */; };
+		D8FBF2951DBCA04700588AF4 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8FBF2941DBCA04700588AF4 /* Photos.framework */; };
+		D8FBF2971DBCA0D900588AF4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8FBF2961DBCA0D900588AF4 /* CoreGraphics.framework */; };
+		D8FBF2991DBCA0E300588AF4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8FBF2981DBCA0E300588AF4 /* Foundation.framework */; };
+		D8FBF29B1DBCA10900588AF4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8FBF29A1DBCA10900588AF4 /* UIKit.framework */; };
+		D8FBF29D1DBCA12E00588AF4 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8FBF29C1DBCA12E00588AF4 /* AssetsLibrary.framework */; };
+		D8FBF2A11DBCA66B00588AF4 /* sasha.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8FBF29F1DBCA66B00588AF4 /* sasha.jpg */; };
+		D8FBF2A21DBCA66B00588AF4 /* tema.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8FBF2A01DBCA66B00588AF4 /* tema.jpg */; };
 		D8FCFD7F1DBC86D2005365F6 /* QLRatingModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FCFD7D1DBC86D2005365F6 /* QLRatingModalViewController.m */; };
 		D8FCFD801DBC86D2005365F6 /* QLRatingModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8FCFD7E1DBC86D2005365F6 /* QLRatingModalViewController.xib */; };
 /* End PBXBuildFile section */
@@ -592,6 +599,13 @@
 		D8F9D7D11DAFD2FC000371CA /* QLoanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QLoanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8F9D7D51DAFD2FC000371CA /* QLoanUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QLoanUITests.m; sourceTree = "<group>"; };
 		D8F9D7D71DAFD2FC000371CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8FBF2941DBCA04700588AF4 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		D8FBF2961DBCA0D900588AF4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D8FBF2981DBCA0E300588AF4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D8FBF29A1DBCA10900588AF4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D8FBF29C1DBCA12E00588AF4 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		D8FBF29F1DBCA66B00588AF4 /* sasha.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sasha.jpg; path = Resources/Photos/Users/sasha.jpg; sourceTree = "<group>"; };
+		D8FBF2A01DBCA66B00588AF4 /* tema.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tema.jpg; path = Resources/Photos/Users/tema.jpg; sourceTree = "<group>"; };
 		D8FCFD7C1DBC86D2005365F6 /* QLRatingModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLRatingModalViewController.h; path = Classes/UserInterface/Controllers/RatingModal/QLRatingModalViewController.h; sourceTree = "<group>"; };
 		D8FCFD7D1DBC86D2005365F6 /* QLRatingModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLRatingModalViewController.m; path = Classes/UserInterface/Controllers/RatingModal/QLRatingModalViewController.m; sourceTree = "<group>"; };
 		D8FCFD7E1DBC86D2005365F6 /* QLRatingModalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QLRatingModalViewController.xib; path = Classes/UserInterface/Controllers/RatingModal/QLRatingModalViewController.xib; sourceTree = "<group>"; };
@@ -602,6 +616,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8FBF29D1DBCA12E00588AF4 /* AssetsLibrary.framework in Frameworks */,
+				D8FBF29B1DBCA10900588AF4 /* UIKit.framework in Frameworks */,
+				D8FBF2991DBCA0E300588AF4 /* Foundation.framework in Frameworks */,
+				D8FBF2971DBCA0D900588AF4 /* CoreGraphics.framework in Frameworks */,
+				D8FBF2951DBCA04700588AF4 /* Photos.framework in Frameworks */,
 				D8A9AC101DBB8D1E0029545C /* libstdc++.tbd in Frameworks */,
 				D8A9AC0E1DBB8D170029545C /* libz.tbd in Frameworks */,
 				B052863E11C552DF193FDF47 /* libPods.a in Frameworks */,
@@ -628,6 +647,11 @@
 		2840B12511CD4986F74AAE39 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D8FBF29C1DBCA12E00588AF4 /* AssetsLibrary.framework */,
+				D8FBF29A1DBCA10900588AF4 /* UIKit.framework */,
+				D8FBF2981DBCA0E300588AF4 /* Foundation.framework */,
+				D8FBF2961DBCA0D900588AF4 /* CoreGraphics.framework */,
+				D8FBF2941DBCA04700588AF4 /* Photos.framework */,
 				D8A9AC0F1DBB8D1E0029545C /* libstdc++.tbd */,
 				D8A9AC0D1DBB8D170029545C /* libz.tbd */,
 				D1BE5B8284ED646854EA9B23 /* libPods.a */,
@@ -1690,6 +1714,7 @@
 		D88101EE1DBA8E6E0066C442 /* Photos */ = {
 			isa = PBXGroup;
 			children = (
+				D8FBF29E1DBCA63400588AF4 /* Users */,
 				D88101F01DBA8E880066C442 /* Get */,
 				D88101EF1DBA8E810066C442 /* Lend */,
 			);
@@ -2069,6 +2094,15 @@
 			path = QLoanUITests;
 			sourceTree = "<group>";
 		};
+		D8FBF29E1DBCA63400588AF4 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				D8FBF29F1DBCA66B00588AF4 /* sasha.jpg */,
+				D8FBF2A01DBCA66B00588AF4 /* tema.jpg */,
+			);
+			name = Users;
+			sourceTree = "<group>";
+		};
 		D8FCFD7B1DBC867A005365F6 /* RatingModal */ = {
 			isa = PBXGroup;
 			children = (
@@ -2222,6 +2256,7 @@
 				D89655511DB8260C00DE4C66 /* SF-UI-Display-Semibold.otf in Resources */,
 				D86147931DBA9CD00018D19C /* img_20@3x.png in Resources */,
 				D86147781DBA9CCF0018D19C /* img_7@2x.png in Resources */,
+				D8FBF2A11DBCA66B00588AF4 /* sasha.jpg in Resources */,
 				D86147771DBA9CCF0018D19C /* img_6@3x.png in Resources */,
 				D88102191DBA8EBB0066C442 /* img7@2x.png in Resources */,
 				D861478A1DBA9CD00018D19C /* img_16@2x.png in Resources */,
@@ -2269,6 +2304,7 @@
 				D88102161DBA8EBB0066C442 /* img5@3x.png in Resources */,
 				D881021D1DBA8EBB0066C442 /* img9@2x.png in Resources */,
 				D861478B1DBA9CD00018D19C /* img_16@3x.png in Resources */,
+				D8FBF2A21DBCA66B00588AF4 /* tema.jpg in Resources */,
 				D86147AF1DBAA6620018D19C /* MyOrders.storyboard in Resources */,
 				D8328F591DBA771C00438D4A /* QLProfileAddCardCell.xib in Resources */,
 				D86147751DBA9CCF0018D19C /* img_5@3x.png in Resources */,

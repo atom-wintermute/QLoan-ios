@@ -18,6 +18,7 @@
 #import "AppDelegate.h"
 
 #import "QLBankUserInfo.h"
+#import "AssetsLibrary/AssetsLibrary.h"
 
 static NSString * const QLProfileAddCardSegue = @"profileAddCardSegue";
 static NSString * const QLProfileFacebookSegue = @"facebookSegue";
@@ -64,14 +65,6 @@ static NSString * const QLProfileFacebookSegue = @"facebookSegue";
     picker.delegate = self;
     picker.allowsEditing = YES;
     picker.sourceType = UIImagePickerControllerSourceTypeCamera;
-    
-//    [self presentViewController:picker animated:YES completion:nil];
-    
-//    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
-//    imagePicker.delegate = self;
-//    imagePicker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
-//    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
-//    imagePicker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
     [self presentViewController:picker
                        animated:YES
                      completion:nil];
@@ -82,6 +75,7 @@ static NSString * const QLProfileFacebookSegue = @"facebookSegue";
 - (void)imagePickerController:(UIImagePickerController *)picker
         didFinishPickingImage:(UIImage *)image
                   editingInfo:(nullable NSDictionary<NSString *,id> *)editingInfo {
+
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker
@@ -90,10 +84,16 @@ didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     
     if (info[UIImagePickerControllerEditedImage]) {
         UIImage *image = info[UIImagePickerControllerEditedImage];
-        self.avatarImageView.image = image;
         
-        NSURL *imageURL = info[UIImagePickerControllerReferenceURL];
-        NSData *data = UIImagePNGRepresentation(image);
+        ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+        
+        [library writeImageToSavedPhotosAlbum:[image CGImage]
+                                  orientation:(ALAssetOrientation)[image imageOrientation]
+                              completionBlock:^(NSURL *assetURL, NSError *error){
+                                  self.avatarImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:assetURL]];
+                              }];
+        NSData *data = UIImageJPEGRepresentation(image, 1.0);
+        
         
         QLBankUserInfo *bankUserInfo = [self.bankAuthService obtainCurrentUserData];
         [self.bankAuthService editUserDataWithEmail:bankUserInfo.email
@@ -103,6 +103,7 @@ didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
                                          completion:^(BOOL success, NSError *error) {
             
                                          }];
+        
     }
 }
 
@@ -120,9 +121,11 @@ didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
         return;
     }
     
-    if (!bankUserInfo.avatar) {
+    //self.avatarImageView.image = [UIImage imageNamed:@"tema.jpg"];
+    self.avatarImageView.image = [UIImage imageNamed:@"sasha.jpg"];
+    if (!bankUserInfo.avatar || YES) {
         self.addPhotoButton.hidden = YES;
-        self.avatarImageView.image = [UIImage imageWithData:bankUserInfo.avatar];
+//        self.avatarImageView.image = [UIImage imageWithData:bankUserInfo.avatar];
     }
     
     self.usernameLabel.text = [NSString stringWithFormat:@"%@ %@", bankUserInfo.firstName, bankUserInfo.lastName];
