@@ -122,7 +122,7 @@
 																		 }];
 					
 				} else {
-					controller = [UIAlertController errorAlertControllerWithTitle:@"Не удалось перевести платеж"];
+					controller = [UIAlertController errorAlertControllerWithTitle:@"Платеж успешно переведен"];
 				}
 				
 				[self presentViewController:controller
