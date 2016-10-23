@@ -94,8 +94,21 @@
 		self.requestIsBeingCreated = NO;
 		
 		switch (self.orderAction) {
-			case QLDoNothing:
-				break;
+            case QLDoNothing: {
+                UIAlertController *controller;
+                if (success) {
+                    controller = [UIAlertController successAlertControllerWithTitle:@"Запрос успешно направлен"
+                                                                         completion:^{
+                                                                             [self.navigationController popViewControllerAnimated:YES];
+                                                                         }];
+                } else {
+                    controller = [UIAlertController errorAlertControllerWithTitle:@"Не удалось направить платеж"];
+                }
+                
+                [self presentViewController:controller
+                                   animated:YES
+                                 completion:nil];
+            }
 			case QLSendPaymentToBorrower: {
 				UIAlertController *controller;
 				if (success) {
@@ -142,6 +155,8 @@
 	
 	switch (self.orderAction) {
 		case QLDoNothing:
+            [self.interactionService requestLoanReceipt:self.orderInfo.order.orderId
+                                             completion:completion];
 			break;
 		case QLSendPaymentToBorrower:
 			[self.interactionService provideLoan:self.orderInfo.order.orderId
