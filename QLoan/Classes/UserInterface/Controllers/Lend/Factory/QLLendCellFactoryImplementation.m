@@ -13,7 +13,9 @@
 @implementation QLLendCellFactoryImplementation
 
 - (NSArray *)cellObjects {
-    NSMutableArray *cellObjects = [NSMutableArray new];
+	NSArray *firstNames = @[@"Александра", @"Вера", @"Анна", @"Любовь", @"Ананстасия", @"Мария", @"Варвара", @"Власта", @"Елена", @"Ольга"];
+	NSArray *lastNames = @[@"Гаврилина Г.", @"Долинина Д.", @"Петровна Н.", @"Демьяновна Т.", @"Васильевна К.", @"Марковна П.", @"Романовна Т.", @"Викторовна М.", @"Олеговна П.", @"Артемовна Р."];
+	NSMutableArray *cellObjects = [NSMutableArray new];
     
     for (NSUInteger i = 1; i < 14; ++i) {
         QLLendOrderCellObject *cellObject = [QLLendOrderCellObject new];
@@ -31,7 +33,8 @@
         NSUInteger sum1 = arc4random_uniform(20);
         NSString *formattedString = [QLMoneyFormatter numberStringForMoneyFromValue:@(sum1 * 1000)];
         cellObject.sumString = [NSString stringWithFormat:@"%@ ₽ /", formattedString];
-        
+		cellObject.nameString = [NSString stringWithFormat:@"%@ %@", firstNames[percent1], lastNames[percent2]];
+	
         [cellObjects addObject:cellObject];
     }
     

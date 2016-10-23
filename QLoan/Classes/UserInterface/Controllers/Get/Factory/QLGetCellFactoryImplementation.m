@@ -55,11 +55,11 @@
 		
 		cellObject.orderInfo.photoInfo = cellObject.photoNameString;
 		
-		NSMutableString *name = [orderInfo.user.lastName mutableCopy];
-		NSString *lastNames = [NSString stringWithFormat:@" %@. %@.", [orderInfo.user.firstName substringToIndex:1], [orderInfo.user.lastName substringToIndex:1]];
-		[name appendString:lastNames];
+		//NSMutableString *name = [orderInfo.user.lastName mutableCopy];
+		NSString *lastNames = [NSString stringWithFormat:@"%@ %@", orderInfo.user.firstName, orderInfo.user.lastName];
+		//[name appendString:lastNames];
 		
-		cellObject.nameString = [name copy];
+		cellObject.nameString = lastNames;
 		
 		[cellObjects addObject:cellObject];
 		index++;
