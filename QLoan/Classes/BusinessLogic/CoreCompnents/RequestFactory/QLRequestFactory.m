@@ -198,7 +198,7 @@
 - (NSURLRequest *)provideLoanRequest:(NSInteger)orderId
 						  borrowerId:(NSInteger)borrowerId {
 	NSString* stringId = [NSString stringWithFormat:@"lender_orders/%d", (int)orderId];
-	NSDictionary *dictionary = @{ @"status" : @"finished", @"borrower_id" : @(borrowerId) };
+	NSDictionary *dictionary = @{ @"status" : @"started", @"borrower_id" : @(borrowerId) };
 	return [self putRequestWithPath:stringId
 						 parameters:dictionary];
 }

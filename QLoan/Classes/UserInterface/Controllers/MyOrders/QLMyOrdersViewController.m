@@ -117,7 +117,7 @@ static NSInteger const QLLendersSelectedSegment = 2;
 				}
 			}
 		}
-	
+		[self showData];
 	};
 	
 	QLBorrowersOrderCompletion lenderCompletion = ^(NSArray *orders, NSError *error) {
