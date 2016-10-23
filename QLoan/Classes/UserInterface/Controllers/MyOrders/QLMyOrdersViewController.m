@@ -52,9 +52,9 @@ static NSInteger const QLLendersSelectedSegment = 2;
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
   //  [self showData];
-	//[self loadData];
+	[self loadData];
 	
-	[self.router openViewControllerWithNotification:@{ @"note_id" : @"5", @"type" : @"loan_receipt_requested" }];
+//	[self.router openViewControllerWithNotification:@{ @"note_id" : @"5", @"type" : @"loan_receipt_requested" }];
 }
 
 #pragma mark - Приватные методы
