@@ -107,8 +107,6 @@
 		D86147711DBA9CCF0018D19C /* img_3@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D86147491DBA9CCF0018D19C /* img_3@3x.png */; };
 		D86147721DBA9CCF0018D19C /* img_4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D861474A1DBA9CCF0018D19C /* img_4@2x.png */; };
 		D86147731DBA9CCF0018D19C /* img_4@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D861474B1DBA9CCF0018D19C /* img_4@3x.png */; };
-		D86147741DBA9CCF0018D19C /* img_5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D861474C1DBA9CCF0018D19C /* img_5@2x.png */; };
-		D86147751DBA9CCF0018D19C /* img_5@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D861474D1DBA9CCF0018D19C /* img_5@3x.png */; };
 		D86147761DBA9CCF0018D19C /* img_6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D861474E1DBA9CCF0018D19C /* img_6@2x.png */; };
 		D86147771DBA9CCF0018D19C /* img_6@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D861474F1DBA9CCF0018D19C /* img_6@3x.png */; };
 		D86147781DBA9CCF0018D19C /* img_7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D86147501DBA9CCF0018D19C /* img_7@2x.png */; };
@@ -196,6 +194,7 @@
 		D89655541DB8260C00DE4C66 /* SF-UI-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D89655501DB8260C00DE4C66 /* SF-UI-Display-Bold.otf */; };
 		D89655581DB8319900DE4C66 /* QLRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89655571DB8319900DE4C66 /* QLRegisterViewController.m */; };
 		D89655601DB8C39900DE4C66 /* QLAuthAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = D896555F1DB8C39900DE4C66 /* QLAuthAssembly.m */; };
+		D8A1D9951DBCD60E00948D32 /* img_5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8A1D9941DBCD60E00948D32 /* img_5@2x.png */; };
 		D8A9AC0E1DBB8D170029545C /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A9AC0D1DBB8D170029545C /* libz.tbd */; };
 		D8A9AC101DBB8D1E0029545C /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A9AC0F1DBB8D1E0029545C /* libstdc++.tbd */; };
 		D8A9AC1B1DBB9F4F0029545C /* QLAddCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A9AC1A1DBB9F4F0029545C /* QLAddCardViewController.m */; };
@@ -445,8 +444,6 @@
 		D86147491DBA9CCF0018D19C /* img_3@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img_3@3x.png"; path = "Resources/Photos/Get/img_3@3x.png"; sourceTree = "<group>"; };
 		D861474A1DBA9CCF0018D19C /* img_4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img_4@2x.png"; path = "Resources/Photos/Get/img_4@2x.png"; sourceTree = "<group>"; };
 		D861474B1DBA9CCF0018D19C /* img_4@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img_4@3x.png"; path = "Resources/Photos/Get/img_4@3x.png"; sourceTree = "<group>"; };
-		D861474C1DBA9CCF0018D19C /* img_5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img_5@2x.png"; path = "Resources/Photos/Get/img_5@2x.png"; sourceTree = "<group>"; };
-		D861474D1DBA9CCF0018D19C /* img_5@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img_5@3x.png"; path = "Resources/Photos/Get/img_5@3x.png"; sourceTree = "<group>"; };
 		D861474E1DBA9CCF0018D19C /* img_6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img_6@2x.png"; path = "Resources/Photos/Get/img_6@2x.png"; sourceTree = "<group>"; };
 		D861474F1DBA9CCF0018D19C /* img_6@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img_6@3x.png"; path = "Resources/Photos/Get/img_6@3x.png"; sourceTree = "<group>"; };
 		D86147501DBA9CCF0018D19C /* img_7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img_7@2x.png"; path = "Resources/Photos/Get/img_7@2x.png"; sourceTree = "<group>"; };
@@ -556,6 +553,7 @@
 		D89655571DB8319900DE4C66 /* QLRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLRegisterViewController.m; path = Classes/UserInterface/Controllers/Register/QLRegisterViewController.m; sourceTree = "<group>"; };
 		D896555E1DB8C39900DE4C66 /* QLAuthAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLAuthAssembly.h; path = Classes/UserInterface/Controllers/Auth/Assembly/QLAuthAssembly.h; sourceTree = "<group>"; };
 		D896555F1DB8C39900DE4C66 /* QLAuthAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLAuthAssembly.m; path = Classes/UserInterface/Controllers/Auth/Assembly/QLAuthAssembly.m; sourceTree = "<group>"; };
+		D8A1D9941DBCD60E00948D32 /* img_5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img_5@2x.png"; path = "Resources/Photos/Get/img_5@2x.png"; sourceTree = "<group>"; };
 		D8A9AC0C1DBB8CD20029545C /* QLoan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QLoan.entitlements; sourceTree = "<group>"; };
 		D8A9AC0D1DBB8D170029545C /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		D8A9AC0F1DBB8D1E0029545C /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
@@ -1767,8 +1765,7 @@
 				D86147491DBA9CCF0018D19C /* img_3@3x.png */,
 				D861474A1DBA9CCF0018D19C /* img_4@2x.png */,
 				D861474B1DBA9CCF0018D19C /* img_4@3x.png */,
-				D861474C1DBA9CCF0018D19C /* img_5@2x.png */,
-				D861474D1DBA9CCF0018D19C /* img_5@3x.png */,
+				D8A1D9941DBCD60E00948D32 /* img_5@2x.png */,
 				D861474E1DBA9CCF0018D19C /* img_6@2x.png */,
 				D861474F1DBA9CCF0018D19C /* img_6@3x.png */,
 				D86147501DBA9CCF0018D19C /* img_7@2x.png */,
@@ -2235,7 +2232,6 @@
 				D86147891DBA9CD00018D19C /* img_15@3x.png in Resources */,
 				D86147721DBA9CCF0018D19C /* img_4@2x.png in Resources */,
 				D86147881DBA9CD00018D19C /* img_15@2x.png in Resources */,
-				D86147741DBA9CCF0018D19C /* img_5@2x.png in Resources */,
 				D881020D1DBA8EBB0066C442 /* img1@2x.png in Resources */,
 				D89655521DB8260C00DE4C66 /* SF-UI-Display-Regular.otf in Resources */,
 				D861478D1DBA9CD00018D19C /* img_17@3x.png in Resources */,
@@ -2275,6 +2271,7 @@
 				D88102151DBA8EBB0066C442 /* img5@2x.png in Resources */,
 				D88102121DBA8EBB0066C442 /* img3@3x.png in Resources */,
 				D861477F1DBA9CD00018D19C /* img_10@3x.png in Resources */,
+				D8A1D9951DBCD60E00948D32 /* img_5@2x.png in Resources */,
 				D8328F621DBA78B400438D4A /* QLOffsetCell.xib in Resources */,
 				D88102141DBA8EBB0066C442 /* img4@3x.png in Resources */,
 				D8328F501DBA6D8A00438D4A /* QLProfileCardCell.xib in Resources */,
@@ -2307,7 +2304,6 @@
 				D8FBF2A21DBCA66B00588AF4 /* tema.jpg in Resources */,
 				D86147AF1DBAA6620018D19C /* MyOrders.storyboard in Resources */,
 				D8328F591DBA771C00438D4A /* QLProfileAddCardCell.xib in Resources */,
-				D86147751DBA9CCF0018D19C /* img_5@3x.png in Resources */,
 				D835BD141DB97B0700F2FF0F /* QLProfileDataCell.xib in Resources */,
 				D861476F1DBA9CCF0018D19C /* img_2@3x.png in Resources */,
 				D86147911DBA9CD00018D19C /* img_19@3x.png in Resources */,

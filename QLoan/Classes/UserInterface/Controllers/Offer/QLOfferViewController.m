@@ -8,6 +8,8 @@
 
 #import "QLOfferViewController.h"
 
+#import "QLTabBarController.h"
+
 @interface QLOfferViewController ()
 
 @end
@@ -26,6 +28,10 @@
 - (void)continueButtonWasPressed:(id)sender {
     [self.presentingViewController dismissViewControllerAnimated:YES
                                                       completion:nil];
+    
+    UIWindow *mainWindow = [[[UIApplication sharedApplication] delegate] window];
+    QLTabBarController *tabBarController = (QLTabBarController *)[mainWindow rootViewController];
+    [tabBarController selectTabWithIndex:3];
 }
 
 #pragma mark - Приватные методы

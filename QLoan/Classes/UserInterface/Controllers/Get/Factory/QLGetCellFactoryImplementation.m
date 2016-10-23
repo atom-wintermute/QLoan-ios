@@ -46,7 +46,7 @@
 		
 		QLLendOrderCellObject *cellObject = [QLLendOrderCellObject new];
 		
-		cellObject.photoNameString = [NSString stringWithFormat:@"img_%d", (int)orderInfo.order.lenderId % 34];
+		cellObject.photoNameString = [NSString stringWithFormat:@"img_%d", (int)index];
 		cellObject.ratingString = [NSString stringWithFormat:@"%ld", (long)orderInfo.user.rating];
         NSString *formattedString = [QLMoneyFormatter numberStringForMoneyFromValue:@((long)orderInfo.order.loanAmount)];
         cellObject.sumString = [NSString stringWithFormat:@"%@ ₽", formattedString];
