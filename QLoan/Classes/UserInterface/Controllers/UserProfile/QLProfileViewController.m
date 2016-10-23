@@ -59,7 +59,7 @@ static NSString * const QLProfileFacebookSegue = @"facebookSegue";
                               sender:self];
 }
 
-- (void)addPhotoButtonWasPressed:(id)sender 
+- (void)addPhotoButtonWasPressed:(id)sender {
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
     picker.allowsEditing = YES;

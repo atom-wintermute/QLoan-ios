@@ -58,9 +58,19 @@ install_resource()
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "AQPhotoPicker/AQPhotoPickerView.xib"
+  install_resource "AQPhotoPicker/camera.png"
+  install_resource "AQPhotoPicker/camera@2x.png"
+  install_resource "AQPhotoPicker/images.png"
+  install_resource "AQPhotoPicker/images@2x.png"
   install_resource "SAMKeychain/Support/SAMKeychain.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "AQPhotoPicker/AQPhotoPickerView.xib"
+  install_resource "AQPhotoPicker/camera.png"
+  install_resource "AQPhotoPicker/camera@2x.png"
+  install_resource "AQPhotoPicker/images.png"
+  install_resource "AQPhotoPicker/images@2x.png"
   install_resource "SAMKeychain/Support/SAMKeychain.bundle"
 fi
 

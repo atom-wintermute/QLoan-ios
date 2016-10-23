@@ -14,6 +14,7 @@ pod 'SDWebImage', '3.7.1'
 # UI
 pod 'PureLayout', '3.0.0'
 pod 'CardIO', '5.4.1'
+pod 'AQPhotoPicker', '0.9'
 
 # Helpers
 pod 'RamblerTyphoonUtils/AssemblyCollector', '1.3.1'
