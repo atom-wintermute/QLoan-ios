@@ -49,6 +49,7 @@ static NSString *const QLSessionString = @"session";
 	credentials.accessToken = [self loadObjectForKey:QLLocalAuthorizationAccessTokenKey];
 	credentials.uid = [self loadObjectForKey:QLLocalAuthorizationUidKey];
 	credentials.client = [self loadObjectForKey:QLLocalAuthorizationClientKey];
+	credentials.userId = [(NSNumber *)[self loadObjectForKey:@"userId"] integerValue];
 	
 	return credentials;
 }
@@ -60,6 +61,9 @@ static NSString *const QLSessionString = @"session";
 			   forKey:QLLocalAuthorizationUidKey];
 	[self storeObject:credentials.client
 			   forKey:QLLocalAuthorizationClientKey];
+	[self storeObject:@(credentials.userId)
+			   forKey:@"userId"];
+
 }
 
 - (void)storeObject:(id)object forKey:(NSString *)key {

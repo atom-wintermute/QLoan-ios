@@ -13,5 +13,6 @@
 @property (nonatomic, copy) NSString *client;
 @property (nonatomic, copy) NSString *accessToken;
 @property (nonatomic, copy) NSString *uid;
+@property (nonatomic, assign) NSInteger userId;
 
 @end

@@ -17,6 +17,7 @@
 
 @property (nonatomic, strong) QLGetDataDisplayManager *dataDisplayManager;
 @property (nonatomic, assign) BOOL requestIsBeingCreated;
+@property (nonatomic, assign) NSInteger userId;
 
 @end
 
@@ -28,12 +29,50 @@
 	[self configureView];
 	[self configureTableView];
 	
+	self.userId = [self.storage credentialsForCurrentUser].userId;
+	
 	if (self.orderInfo.user == nil) {
 		self.ratingViewContainer.hidden = YES;
 		self.readyToGiveLoanLabel.hidden = YES;
 	}
 	
 	self.nameLabel.text = self.orderInfo.user != nil ? [NSString stringWithFormat:@"%@ %@", self.orderInfo.user.firstName, self.orderInfo.user.lastName] : @"Нет контрагента";
+	
+	QLOrderAction action;
+	if (self.userId == self.orderInfo.order.borrowerId) {
+		switch (self.orderInfo.order.status) {
+			case QLBorrowerOrderStatusActive:
+				action = QLDoNothing;
+				break;
+			case QLBorrowerOrderStatusRequested:
+				action = QLDoNothing;
+				break;
+			case QLBorrowerOrderStatusStarted:
+				action = QLSendRepaymentToLender;
+				break;
+			case QLBorrowerOrderStatusFinished:
+				action = QLDoNothing;
+				break;
+		}
+	} else if (self.userId == self.orderInfo.order.lenderId) {
+		switch (self.orderInfo.order.status) {
+			case QLBorrowerOrderStatusActive:
+				action = QLDoNothing;
+				break;
+			case QLBorrowerOrderStatusRequested:
+				action = QLSendPaymentToBorrower;
+				break;
+			case QLBorrowerOrderStatusStarted:
+				action = QLDoNothing;
+				break;
+			case QLBorrowerOrderStatusFinished:
+				action = QLDoNothing;
+				break;
+		}
+	} else {
+		action = QLSendRequestToLender;
+	}
+	[self determineConfiguration:action];
 }
 
 - (IBAction)requestLoan:(id)sender {
@@ -55,6 +94,7 @@
 						   animated:YES
 						 completion:nil];
 	};
+	
 	
 	[self.interactionService requestLoanReceipt:self.orderInfo.order.orderId
 									 completion:completion];
@@ -92,6 +132,27 @@
 	ratingLayer.shadowRadius = 6.0;
 	ratingLayer.shadowOpacity = 0.96;
 	ratingLayer.shadowPath = [UIBezierPath bezierPathWithRect:self.fakeImageView.bounds].CGPath;
+}
+
+- (void)determineConfiguration:(QLOrderAction)action {
+	switch (action) {
+		case QLDoNothing:
+			self.requestButton.hidden = YES;
+			self.declineButton.hidden = YES;
+			break;
+		case QLSendPaymentToBorrower:
+			[self.requestButton setTitle:@"Выдать займ" forState:UIControlStateNormal];
+			[self.declineButton setTitle:@"Отклонить заявку" forState:UIControlStateNormal];
+			break;
+		case QLSendRepaymentToLender:
+			[self.requestButton setTitle:@"Вернуть займ" forState:UIControlStateNormal];
+			self.declineButton.hidden = YES;
+			break;
+		case QLSendRequestToLender:
+			[self.requestButton setTitle:@"Запросить займ" forState:UIControlStateNormal];
+			self.declineButton.hidden = YES;
+			break;
+	}
 }
 
 @end

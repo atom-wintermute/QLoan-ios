@@ -56,8 +56,13 @@
 		if (!error) {
 			if ([response.response respondsToSelector:@selector(allHeaderFields)]) {
 				NSDictionary *dictionary = [response.response allHeaderFields];
-				
+				NSDictionary *body = [self.serializer jsonObjectFromResponse:response];
 				QLSessionCredentials *credentials = [self.mapper mapSessionCredentialsFromResponseObject:dictionary];
+				
+				if ([body[@"id"] isKindOfClass:[NSNumber class]]) {
+					NSNumber *userId = (NSNumber *)body[@"id"];
+					credentials.userId = [userId integerValue];
+				}
 				[self.storage setCredentialsForCurrentUser:credentials];
 				
 				run_block_on_main(completion, YES, nil);

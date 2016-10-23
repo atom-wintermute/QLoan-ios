@@ -29,6 +29,7 @@
                          completion:^(QLServerResponse *response, NSError *error) {
                              if (!response.data) {
                                  run_block_on_main(completion, NO, nil);
+								 return;
                              }
                              id responseData = [NSJSONSerialization JSONObjectWithData:response.data
                                                                                options:kNilOptions
