@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "QLAppRouter.h"
+
 #import "QLCoreComponentsAssembly.h"
 #import "QLServicesAssembly.h"
 #import "QLTestAssembly.h"
@@ -80,8 +82,7 @@
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
-    NSLog(@"userInfo = %@", userInfo);
-//    [self.router showScreenWithUserInfo:userInfo];
+    [self.appRouter openViewControllerWithNotification:userInfo];
 }
 
 #pragma mark - Приватные методы

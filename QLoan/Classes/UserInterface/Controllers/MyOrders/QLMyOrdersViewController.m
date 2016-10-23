@@ -12,6 +12,7 @@
 
 #import "QLMyOrdersDataDisplayManager.h"
 #import "QLMyOrdersEmptyDataView.h"
+#import "ALView+PureLayout.h"
 
 @interface QLMyOrdersViewController () <UITableViewDelegate>
 
@@ -25,6 +26,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [self.view layoutIfNeeded];
     self.navigationItem.title = @"Мои заявки";
 }
 
@@ -48,9 +50,12 @@
         self.tableView.delegate = [self.dataDisplayManager delegateForTableView:self.tableView
                                                                withBaseDelegate:self];
     } else {
+        /*
         QLMyOrdersEmptyDataView *emptyView = [QLMyOrdersEmptyDataView new];
-        self.emptyView = emptyView;
-        [self.view addSubview:emptyView];
+        emptyView.backgroundColor = [UIColor redColor];
+        [self.tableView addSubview:emptyView];
+        [emptyView autoPinEdgesToSuperviewEdges];
+         */
     }
     [self.tableView reloadData];
 }

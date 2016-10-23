@@ -7,7 +7,10 @@
 //
 
 #import "ApplicationAssembly.h"
+
 #import "QLCoreComponentsAssembly.h"
+
+#import "QLAppRouterImplementation.h"
 
 @implementation ApplicationAssembly
 
@@ -16,7 +19,30 @@
 									   configuration:^(TyphoonDefinition *definition) {
 										   [definition injectProperty:@selector(storage)
 																 with:[self.coreAssembly inMemoryStorage]];
+                                           [definition injectProperty:@selector(appRouter)
+                                                                 with:[self appRouter]];
 									   }];
+}
+
+#pragma mark - Вспомогательные методы
+
+- (id<QLAppRouter>)appRouter {
+    return [TyphoonDefinition withClass:[QLAppRouterImplementation class]
+                          configuration:^(TyphoonDefinition *definition) {
+                              [definition injectProperty:@selector(mainWindow)
+                                                    with:[self mainWindow]];
+                          }];
+}
+
+- (UIWindow *)mainWindow {
+    return [TyphoonDefinition withClass:[UIWindow class]
+                          configuration:^(TyphoonDefinition *definition) {
+                              [definition useInitializer:@selector(initWithFrame:)
+                                              parameters:^(TyphoonMethod *initializer) {
+                                                  [initializer injectParameterWith:[NSValue valueWithCGRect:[[UIScreen mainScreen] bounds]]];
+                                              }];
+                              definition.scope = TyphoonScopeSingleton;
+                          }];
 }
 
 @end

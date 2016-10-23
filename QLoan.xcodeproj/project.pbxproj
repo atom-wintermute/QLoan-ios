@@ -208,10 +208,10 @@
 		D8D98BB41DB9085300F3FB01 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8D98BB31DB9085300F3FB01 /* Profile.storyboard */; };
 		D8F15F4A1DBC023D008BDB3D /* QLFacebookLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F15F491DBC023D008BDB3D /* QLFacebookLoginViewController.m */; };
 		D8F15F4E1DBC10C8008BDB3D /* QLFacebookLoginAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F15F4D1DBC10C8008BDB3D /* QLFacebookLoginAssembly.m */; };
-		D8F15F521DBC2070008BDB3D /* AppRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F15F511DBC2070008BDB3D /* AppRouter.m */; };
 		D8F15F591DBC2218008BDB3D /* QLFullScreenAnimationImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F15F581DBC2218008BDB3D /* QLFullScreenAnimationImplementation.m */; };
 		D8F15F611DBC2994008BDB3D /* QLMyOrdersEmptyDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8F15F601DBC2994008BDB3D /* QLMyOrdersEmptyDataView.xib */; };
 		D8F15F641DBC29BC008BDB3D /* QLMyOrdersEmptyDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F15F631DBC29BC008BDB3D /* QLMyOrdersEmptyDataView.m */; };
+		D8F15F671DBC39E2008BDB3D /* QLAppRouterImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F15F661DBC39E2008BDB3D /* QLAppRouterImplementation.m */; };
 		D8F9D7AF1DAFD2FC000371CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F9D7AE1DAFD2FC000371CA /* main.m */; };
 		D8F9D7B21DAFD2FC000371CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F9D7B11DAFD2FC000371CA /* AppDelegate.m */; };
 		D8F9D7BD1DAFD2FC000371CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8F9D7BC1DAFD2FC000371CA /* Assets.xcassets */; };
@@ -569,14 +569,15 @@
 		D8F15F491DBC023D008BDB3D /* QLFacebookLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLFacebookLoginViewController.m; path = Classes/UserInterface/Controllers/FacebookLogin/QLFacebookLoginViewController.m; sourceTree = "<group>"; };
 		D8F15F4C1DBC10C8008BDB3D /* QLFacebookLoginAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLFacebookLoginAssembly.h; path = Classes/UserInterface/Controllers/FacebookLogin/Assembly/QLFacebookLoginAssembly.h; sourceTree = "<group>"; };
 		D8F15F4D1DBC10C8008BDB3D /* QLFacebookLoginAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLFacebookLoginAssembly.m; path = Classes/UserInterface/Controllers/FacebookLogin/Assembly/QLFacebookLoginAssembly.m; sourceTree = "<group>"; };
-		D8F15F501DBC2070008BDB3D /* AppRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppRouter.h; path = Classes/Router/AppRouter.h; sourceTree = "<group>"; };
-		D8F15F511DBC2070008BDB3D /* AppRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppRouter.m; path = Classes/Router/AppRouter.m; sourceTree = "<group>"; };
+		D8F15F501DBC2070008BDB3D /* QLAppRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLAppRouter.h; path = Classes/Router/QLAppRouter.h; sourceTree = "<group>"; };
 		D8F15F561DBC219A008BDB3D /* QLFullScreenAnimations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QLFullScreenAnimations.h; sourceTree = "<group>"; };
 		D8F15F571DBC2218008BDB3D /* QLFullScreenAnimationImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLFullScreenAnimationImplementation.h; path = Classes/UserInterface/Animators/FullScreenAnimators/QLFullScreenAnimationImplementation.h; sourceTree = "<group>"; };
 		D8F15F581DBC2218008BDB3D /* QLFullScreenAnimationImplementation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLFullScreenAnimationImplementation.m; path = Classes/UserInterface/Animators/FullScreenAnimators/QLFullScreenAnimationImplementation.m; sourceTree = "<group>"; };
 		D8F15F601DBC2994008BDB3D /* QLMyOrdersEmptyDataView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QLMyOrdersEmptyDataView.xib; path = Classes/UserInterface/Controllers/MyOrders/Views/EmptyDataView/QLMyOrdersEmptyDataView.xib; sourceTree = "<group>"; };
 		D8F15F621DBC29BC008BDB3D /* QLMyOrdersEmptyDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLMyOrdersEmptyDataView.h; path = Classes/UserInterface/Controllers/MyOrders/Views/EmptyDataView/QLMyOrdersEmptyDataView.h; sourceTree = "<group>"; };
 		D8F15F631DBC29BC008BDB3D /* QLMyOrdersEmptyDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLMyOrdersEmptyDataView.m; path = Classes/UserInterface/Controllers/MyOrders/Views/EmptyDataView/QLMyOrdersEmptyDataView.m; sourceTree = "<group>"; };
+		D8F15F651DBC39E2008BDB3D /* QLAppRouterImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLAppRouterImplementation.h; path = Classes/Router/QLAppRouterImplementation.h; sourceTree = "<group>"; };
+		D8F15F661DBC39E2008BDB3D /* QLAppRouterImplementation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLAppRouterImplementation.m; path = Classes/Router/QLAppRouterImplementation.m; sourceTree = "<group>"; };
 		D8F9D7AA1DAFD2FC000371CA /* QLoan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QLoan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8F9D7AE1DAFD2FC000371CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D8F9D7B01DAFD2FC000371CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1945,8 +1946,9 @@
 		D8F15F4F1DBC1CEE008BDB3D /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				D8F15F501DBC2070008BDB3D /* AppRouter.h */,
-				D8F15F511DBC2070008BDB3D /* AppRouter.m */,
+				D8F15F501DBC2070008BDB3D /* QLAppRouter.h */,
+				D8F15F651DBC39E2008BDB3D /* QLAppRouterImplementation.h */,
+				D8F15F661DBC39E2008BDB3D /* QLAppRouterImplementation.m */,
 			);
 			name = Router;
 			sourceTree = "<group>";
@@ -2412,7 +2414,6 @@
 				D89655581DB8319900DE4C66 /* QLRegisterViewController.m in Sources */,
 				9EFF73941DB3B672004873A6 /* QLRegistrationRequestConfiguration.m in Sources */,
 				9EFF73BD1DB3CD83004873A6 /* QLLenderOrder.m in Sources */,
-				D8F15F521DBC2070008BDB3D /* AppRouter.m in Sources */,
 				D8F15F4E1DBC10C8008BDB3D /* QLFacebookLoginAssembly.m in Sources */,
 				D820774C1DBAB58100253637 /* QLRegisterPhoneAssembly.m in Sources */,
 				D8F9D7AF1DAFD2FC000371CA /* main.m in Sources */,
@@ -2436,6 +2437,7 @@
 				9ECC12DC1DBA9DDF00E33288 /* QLUnderlinedTextfield.m in Sources */,
 				9EFF73C91DB3D1C4004873A6 /* QLNotification.m in Sources */,
 				D8328F4F1DBA6D8A00438D4A /* QLProfileCardCell.m in Sources */,
+				D8F15F671DBC39E2008BDB3D /* QLAppRouterImplementation.m in Sources */,
 				D835BD1A1DB97DCA00F2FF0F /* QLBankUserInfo.m in Sources */,
 				D835BCD31DB9747500F2FF0F /* NSMutableArray+RDSNilFilter.m in Sources */,
 				D8732F8A1DBBBB9500530CC0 /* QLMyOrdersCellFactoryImplementation.m in Sources */,
