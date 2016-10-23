@@ -13,6 +13,8 @@
 #import "QLUserInteractionService.h"
 #import "QLPersonalCabinetService.h"
 
+#import "QLRatingModalViewController.h"
+
 @interface QLOrderDetailViewController () <UITableViewDelegate>
 
 @property (nonatomic, strong) QLGetDataDisplayManager *dataDisplayManager;
@@ -160,7 +162,7 @@
 }
 
 - (IBAction)declineLoan:(id)sender {
-
+    
 }
 - (IBAction)closeWindow:(id)sender {
 	[self dismissViewControllerAnimated:YES
@@ -225,6 +227,17 @@
 //		[self.personalCabinetService myNotificationWithId:[self.notificationId integerValue]
 //											   completion:completion];
 //	}
+}
+
+- (void)showIncreaseRatingScreen {
+    
+    QLRatingModalViewController *modal = [QLRatingModalViewController new];
+    self.modalPresentationStyle = UIModalPresentationCurrentContext;
+    modal.modalPresentationStyle = UIModalPresentationCurrentContext;
+    
+    [self presentViewController:modal
+                       animated:YES
+                     completion:nil];
 }
 
 @end

@@ -86,14 +86,6 @@ static NSInteger const QLLendersSelectedSegment = 2;
         self.tableView.dataSource = [self.dataDisplayManager dataSourceForTableView:self.tableView];
         self.tableView.delegate = [self.dataDisplayManager delegateForTableView:self.tableView
                                                                withBaseDelegate:self];
-//    } else {
-//        /*
-//        QLMyOrdersEmptyDataView *emptyView = [QLMyOrdersEmptyDataView new];
-//        emptyView.backgroundColor = [UIColor redColor];
-//        [self.tableView addSubview:emptyView];
-//        [emptyView autoPinEdgesToSuperviewEdges];
-//         */
-//    }
     [self.tableView reloadData];
 }
 

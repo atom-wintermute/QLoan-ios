@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>AQPhotoPicker.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>EasyMapping.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -67,22 +72,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>05C08F084C8D074EF8DC924768A11FBF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>0A4AD807C9A8481FA265F747FBB8CF12</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3104FF5EE998CD6EDC83247008827AC0</key>
+		<key>0DD2BDC2868CB7C8DA640C7A4B9DDB55</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>401D136B30D9FD7A55E0A7EA3ABCAD56</key>
+		<key>4F2CAE9E60D2EC456DE646C32BAA5C23</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,32 +92,42 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6C19D5A28C88BB580B68DA148BB22654</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6D56081BB3A2715DA16AFE6D3BE0BB27</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>736292BCE551136F4E2D36C7C88C1868</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>861A287C4757BD40D4CF4D91FBA7C40A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>A5EF75916CC9F113C055540545F36D90</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>A7DF0F757E371283802A81161D0BC00B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BD31ECD6AD4B09098F16362572EFB341</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D722F0DC98ACEB6AC94B08F159E7642D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DCE2DB7C0FE11A424144EB91662B5506</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E3197DDA7FC06338B47D4A11A4A06B3F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>EC0D1D30F031352A2DB09856D4D19BD0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F2CF7DDB0FA0FBEE8FDF2C6CECD529C3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

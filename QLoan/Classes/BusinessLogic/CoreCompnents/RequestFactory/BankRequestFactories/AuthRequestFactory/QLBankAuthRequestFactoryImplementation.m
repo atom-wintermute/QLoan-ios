@@ -99,6 +99,26 @@
                                                error:NULL];
 }
 
+- (NSURLRequest *)requestForEditUserWithEmail:(NSString *)email
+                                    firstName:(NSString *)firstName
+                                   secondName:(NSString *)secondName
+                                       avatar:(NSString *)avatar
+                                    sessionId:(NSString *)sessionId {
+    NSString *path = QLBankChangeUser;
+    NSDictionary *parameters = @{
+                                 @"sessionId": sessionId,
+                                 @"email": email,
+                                 @"firstName": firstName,
+                                 @"lastName": secondName,
+                                 @"avatar": avatar
+                                 };
+    
+    return [self.requestSerializer requestWithMethod:QLPostRequestMethodKey
+                                           URLString:[self urlStringWithPath:path]
+                                          parameters:parameters
+                                               error:NULL];
+}
+
 - (NSURLRequest *)requestForChangePasswordWithPassword:(NSString *)password
                                              sessionId:(NSString *)sessionId {
     NSString *path = QLBankChangePassword;

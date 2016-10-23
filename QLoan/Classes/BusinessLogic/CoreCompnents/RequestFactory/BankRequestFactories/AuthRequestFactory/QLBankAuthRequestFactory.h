@@ -34,6 +34,12 @@
                                    secondName:(NSString *)secondName
                                     sessionId:(NSString *)sessionId;
 
+- (NSURLRequest *)requestForEditUserWithEmail:(NSString *)email
+                                    firstName:(NSString *)firstName
+                                   secondName:(NSString *)secondName
+                                       avatar:(NSString *)avatar
+                                    sessionId:(NSString *)sessionId;
+
 - (NSURLRequest *)requestForChangePasswordWithPassword:(NSString *)password
                                              sessionId:(NSString *)sessionId;
 

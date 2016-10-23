@@ -18,11 +18,12 @@
 #import "AppDelegate.h"
 
 #import "QLBankUserInfo.h"
+#import "AssetsLibrary/AssetsLibrary.h"
 
 static NSString * const QLProfileAddCardSegue = @"profileAddCardSegue";
 static NSString * const QLProfileFacebookSegue = @"facebookSegue";
 
-@interface QLProfileViewController () <UITableViewDelegate, QLProfileViewDelegate>
+@interface QLProfileViewController () <UITableViewDelegate, QLProfileViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (nonatomic, strong) QLProfileDataDisplayManager *dataDisplayManager;
 
@@ -59,6 +60,57 @@ static NSString * const QLProfileFacebookSegue = @"facebookSegue";
                               sender:self];
 }
 
+- (void)addPhotoButtonWasPressed:(id)sender {
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    [self presentViewController:picker
+                       animated:YES
+                     completion:nil];
+}
+
+#pragma mark - UIImagePickerControllerDelegate
+
+- (void)imagePickerController:(UIImagePickerController *)picker
+        didFinishPickingImage:(UIImage *)image
+                  editingInfo:(nullable NSDictionary<NSString *,id> *)editingInfo {
+
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker
+didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    
+    if (info[UIImagePickerControllerEditedImage]) {
+        UIImage *image = info[UIImagePickerControllerEditedImage];
+        
+        ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+        
+        [library writeImageToSavedPhotosAlbum:[image CGImage]
+                                  orientation:(ALAssetOrientation)[image imageOrientation]
+                              completionBlock:^(NSURL *assetURL, NSError *error){
+                                  self.avatarImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:assetURL]];
+                              }];
+        NSData *data = UIImageJPEGRepresentation(image, 1.0);
+        
+        
+        QLBankUserInfo *bankUserInfo = [self.bankAuthService obtainCurrentUserData];
+        [self.bankAuthService editUserDataWithEmail:bankUserInfo.email
+                                          firstName:bankUserInfo.firstName
+                                           lastName:bankUserInfo.lastName
+                                             avatar:data
+                                         completion:^(BOOL success, NSError *error) {
+            
+                                         }];
+        
+    }
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    
+}
+
 #pragma mark - Приватные методы
 
 - (void)configureView {
@@ -67,6 +119,13 @@ static NSString * const QLProfileFacebookSegue = @"facebookSegue";
     QLBankUserInfo *bankUserInfo = [self.bankAuthService obtainCurrentUserData];
     if (!bankUserInfo) {
         return;
+    }
+    
+    //self.avatarImageView.image = [UIImage imageNamed:@"tema.jpg"];
+    self.avatarImageView.image = [UIImage imageNamed:@"sasha.jpg"];
+    if (!bankUserInfo.avatar || YES) {
+        self.addPhotoButton.hidden = YES;
+//        self.avatarImageView.image = [UIImage imageWithData:bankUserInfo.avatar];
     }
     
     self.usernameLabel.text = [NSString stringWithFormat:@"%@ %@", bankUserInfo.firstName, bankUserInfo.lastName];

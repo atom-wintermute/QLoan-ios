@@ -50,6 +50,8 @@
             } else {
                 cardCellObject.cardNameString = [NSString stringWithFormat:@"%@", card.mnemonicName];
             }
+            cardCellObject.cardNameString = @"5412 **** **** 6743";
+            //cardCellObject.cardNameString = @"5412 **** **** 1092";
             if (card.balance > 0.0) {
                 cardCellObject.balanceString = [NSString stringWithFormat:@"%f ₽", card.balance];
             } else {
