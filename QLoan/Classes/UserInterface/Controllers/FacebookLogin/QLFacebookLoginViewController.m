@@ -49,7 +49,6 @@
     if (userInfo.avatar) {
         self.photoImageView.image = [UIImage imageWithData:userInfo.avatar];
     }
-    
 }
 
 @end

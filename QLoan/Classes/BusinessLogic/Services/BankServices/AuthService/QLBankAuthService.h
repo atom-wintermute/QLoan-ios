@@ -40,6 +40,12 @@ typedef void(^QLBankAuthUserDataCompletion)(QLBankUserInfo *userInfo, NSError *e
                      lastName:(NSString *)lastName
                    completion:(QLBankAuthCompletion)completion;
 
+- (void)editUserDataWithEmail:(NSString *)email
+                    firstName:(NSString *)firstName
+                     lastName:(NSString *)lastName
+                       avatar:(NSData *)avatar
+                   completion:(QLBankAuthCompletion)completion;
+
 - (void)changePasswordWithPassword:(NSString *)password
                         completion:(QLBankAuthCompletion)completion;
 
