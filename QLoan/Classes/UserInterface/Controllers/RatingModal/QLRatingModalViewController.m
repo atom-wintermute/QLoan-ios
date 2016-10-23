@@ -22,6 +22,11 @@
     [self configureAppearance];
 }
 
+- (void)closeButtonWasPressed:(id)sender {
+    [self.presentingViewController dismissViewControllerAnimated:YES
+                                                      completion:nil];
+}
+
 #pragma mark - Приватные методы
 
 - (void)configureAppearance {

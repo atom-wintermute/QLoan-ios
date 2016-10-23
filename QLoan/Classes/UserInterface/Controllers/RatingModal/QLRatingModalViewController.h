@@ -12,4 +12,6 @@
 
 @property (nonatomic, weak) IBOutlet UIButton *doneButton;
 
+- (IBAction)closeButtonWasPressed:(id)sender;
+
 @end

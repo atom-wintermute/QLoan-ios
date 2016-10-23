@@ -90,6 +90,15 @@
                                 <constraint firstAttribute="height" constant="34" id="eTL-p2-niK"/>
                             </constraints>
                         </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yXB-rh-j1n">
+                            <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
+                            <state key="normal" title="Закрыть">
+                                <color key="titleColor" red="0.0" green="0.70196078429999997" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="closeButtonWasPressed:" destination="-2" eventType="touchUpInside" id="wiS-H3-MdP"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -104,10 +113,12 @@
                         <constraint firstAttribute="trailing" secondItem="cb8-MX-uxZ" secondAttribute="trailing" id="ZCR-Ye-G5m"/>
                         <constraint firstItem="cKu-D3-Ofs" firstAttribute="top" secondItem="sRz-qu-PKm" secondAttribute="top" constant="31" id="ZPP-3t-mci"/>
                         <constraint firstItem="JAg-J4-1m8" firstAttribute="leading" secondItem="sRz-qu-PKm" secondAttribute="leading" constant="20" id="ble-3P-QXU"/>
+                        <constraint firstItem="yXB-rh-j1n" firstAttribute="top" secondItem="sRz-qu-PKm" secondAttribute="top" constant="20" id="c9T-bi-Luc"/>
                         <constraint firstAttribute="trailing" secondItem="JAg-J4-1m8" secondAttribute="trailing" constant="20" id="cTy-F7-A8k"/>
                         <constraint firstItem="cb8-MX-uxZ" firstAttribute="top" secondItem="cKu-D3-Ofs" secondAttribute="bottom" constant="18" id="nSF-Id-vvk"/>
                         <constraint firstAttribute="bottom" secondItem="ofC-Sk-Ukg" secondAttribute="bottom" id="vGq-5l-Cq4"/>
                         <constraint firstItem="PPY-br-UMh" firstAttribute="top" secondItem="cKu-D3-Ofs" secondAttribute="top" constant="-8" id="vKv-V4-Qk9"/>
+                        <constraint firstItem="yXB-rh-j1n" firstAttribute="leading" secondItem="sRz-qu-PKm" secondAttribute="leading" constant="20" id="zzI-1R-LmB"/>
                     </constraints>
                 </view>
             </subviews>
