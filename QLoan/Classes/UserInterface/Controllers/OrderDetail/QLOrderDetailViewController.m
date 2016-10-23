@@ -156,14 +156,14 @@
 			break;
 	}
 	
-	if (self.notificationId != nil) {
-		QLNotificationCompletion completion = ^(QLNotification *notification, NSError *error) {
-			
-		};
-		
-		[self.personalCabinetService myNotificationWithId:[self.notificationId integerValue]
-											   completion:completion];
-	}
+//	if (self.notificationId != nil) {
+//		QLNotificationCompletion completion = ^(QLNotification *notification, NSError *error) {
+//			
+//		};
+//		
+//		[self.personalCabinetService myNotificationWithId:[self.notificationId integerValue]
+//											   completion:completion];
+//	}
 }
 
 @end
