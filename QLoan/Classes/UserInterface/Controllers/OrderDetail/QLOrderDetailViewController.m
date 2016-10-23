@@ -118,7 +118,7 @@
 				return;
 			}
 			case QLSendRepaymentToLender:{
-				// TODO: Rating increase
+				[self showIncreaseRatingScreen];
 				return;
 			}
 			case QLSendRequestToLender:{
@@ -185,7 +185,7 @@
 }
 
 - (void)configureView {
-	self.photoImage.image = [UIImage imageNamed:self.orderInfo.photoInfo];
+	self.photoImage.image = self.userId == self.orderInfo.order.lenderId ? [UIImage imageNamed:@"sasha.jpg"] : [UIImage imageNamed:@"tema.jpg"];
 	self.photoImage.layer.cornerRadius = CGRectGetWidth(self.photoImage.frame) / 2;
 	self.photoImage.layer.masksToBounds = YES;
 	
