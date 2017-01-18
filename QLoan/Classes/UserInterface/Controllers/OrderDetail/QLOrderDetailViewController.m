@@ -200,7 +200,7 @@
 }
 
 - (void)configureView {
-	self.photoImage.image = self.userId == self.orderInfo.order.lenderId ? [UIImage imageNamed:@"sasha.jpg"] : [UIImage imageNamed:@"sasha.jpg"];
+	self.photoImage.image = self.userId == self.orderInfo.order.lenderId ? [UIImage imageNamed:@"sasha.jpg"] : [UIImage imageNamed:@"tema.jpg"];
 	self.photoImage.layer.cornerRadius = CGRectGetWidth(self.photoImage.frame) / 2;
 	self.photoImage.layer.masksToBounds = YES;
 	
