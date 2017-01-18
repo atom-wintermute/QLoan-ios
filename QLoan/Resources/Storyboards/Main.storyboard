@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Профиль-->
+        <scene sceneID="nlJ-XL-37g">
+            <objects>
+                <navigationController id="zPk-ke-Nes" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Профиль" image="profileActive" id="pOS-GF-el9"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="wN7-4t-p8r">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ajC-Vr-dEA" kind="relationship" relationship="rootViewController" id="I1f-Sk-vDp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FSC-4c-9Fi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="788" y="1127"/>
+        </scene>
+        <!--Выдать займ-->
+        <scene sceneID="iec-aM-8wg">
+            <objects>
+                <navigationController id="Ad9-3W-72I" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Выдать займ" image="lendLoanActive" id="8Bf-Lb-8vB"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="1fH-b6-jEE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="I42-L3-vkq" kind="relationship" relationship="rootViewController" id="n6q-wA-Oql"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RPJ-Xo-YDj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="788" y="448"/>
+        </scene>
+        <!--Получить займ-->
+        <scene sceneID="n6v-Vi-cen">
+            <objects>
+                <navigationController id="qeQ-Z4-fgp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Получить займ" image="getLoanActive" id="O7p-3h-FTU"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="rdM-vF-jJE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="idC-ln-Zc2" kind="relationship" relationship="rootViewController" id="ZtK-H6-xbT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WxI-oL-HV0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="788" y="-220"/>
+        </scene>
+        <!--Мои заявки-->
+        <scene sceneID="90i-nZ-Dxa">
+            <objects>
+                <navigationController title="Мои заявки" id="3Z2-jg-ViC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Мои заявки" image="myOrderActive" selectedImage="myOrderActive" id="dff-LO-wEH"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="1pI-6T-eQg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9LG-OP-cWB" kind="relationship" relationship="rootViewController" id="huo-gO-TH3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YUg-TI-7Wi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="782" y="-922"/>
+        </scene>
+        <!--QLMyOrdersViewController-->
+        <scene sceneID="zjw-3B-9W7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MyOrders" referencedIdentifier="QLMyOrdersViewController" id="9LG-OP-cWB" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Jba-bo-oNL"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZB5-24-waz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1540" y="-923"/>
+        </scene>
+        <!--QLGetViewController-->
+        <scene sceneID="oI4-f0-zgO">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Get" referencedIdentifier="QLGetViewController" id="idC-ln-Zc2" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Dr3-4A-X62"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ai4-F8-Jzq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1625" y="-220"/>
+        </scene>
+        <!--QLLendViewController-->
+        <scene sceneID="jTs-qf-jUK">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Lend" referencedIdentifier="QLLendViewController" id="I42-L3-vkq" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="qAl-2v-bUv"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SGd-59-kOx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1537" y="447"/>
+        </scene>
+        <!--QLProfileViewController-->
+        <scene sceneID="xYv-RT-Ws8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" referencedIdentifier="QLProfileViewController" id="ajC-Vr-dEA" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="l8m-Tm-2gg"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4HK-dk-hqL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1691" y="1126"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" customClass="QLTabBarController" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.0039215686274509803" green="0.80000000000000004" blue="0.87058823529411766" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="0.0039215686269999999" green="0.80000000000000004" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="3Z2-jg-ViC" kind="relationship" relationship="viewControllers" id="eNH-Ek-NDj"/>
+                        <segue destination="qeQ-Z4-fgp" kind="relationship" relationship="viewControllers" id="TwK-zx-hUA"/>
+                        <segue destination="Ad9-3W-72I" kind="relationship" relationship="viewControllers" id="Z2j-mc-zRd"/>
+                        <segue destination="zPk-ke-Nes" kind="relationship" relationship="viewControllers" id="oh0-KN-DOZ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="getLoanActive" width="20" height="15"/>
+        <image name="lendLoanActive" width="21" height="15"/>
+        <image name="myOrderActive" width="16" height="20"/>
+        <image name="profileActive" width="18" height="18"/>
+    </resources>
+</document>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-UI-Display-Regular.otf">
+            <string>SFUIDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="QLProfileCardCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="55"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card" translatesAutoresizingMaskIntoConstraints="NO" id="Gte-d5-bkS" userLabel="iconCardImageView"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXz-cy-bpN">
+                        <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndl-Mi-utC">
+                        <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="y62-Aw-vzb">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="8" id="42k-OX-Aaw"/>
+                            <constraint firstAttribute="height" constant="14" id="Qj7-by-HPK"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="separator" translatesAutoresizingMaskIntoConstraints="NO" id="PQ8-og-07m" userLabel="bottomSeparator">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="OK6-bV-jyA"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="xXz-cy-bpN" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="3wE-Tx-lDj"/>
+                    <constraint firstAttribute="trailing" secondItem="y62-Aw-vzb" secondAttribute="trailing" constant="16" id="6Dn-Mj-5rg"/>
+                    <constraint firstItem="y62-Aw-vzb" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="9Nk-kT-U2r"/>
+                    <constraint firstItem="Gte-d5-bkS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="EKH-eP-q7n"/>
+                    <constraint firstAttribute="bottom" secondItem="PQ8-og-07m" secondAttribute="bottom" id="GVu-eY-Zlo"/>
+                    <constraint firstItem="Gte-d5-bkS" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="HrY-fL-Bae"/>
+                    <constraint firstItem="PQ8-og-07m" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="P7Q-zc-4pW"/>
+                    <constraint firstItem="y62-Aw-vzb" firstAttribute="leading" secondItem="ndl-Mi-utC" secondAttribute="trailing" constant="16" id="Peq-wj-w1I"/>
+                    <constraint firstItem="ndl-Mi-utC" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="T1d-l8-v3q"/>
+                    <constraint firstItem="xXz-cy-bpN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="81" id="Ylf-G6-yKl"/>
+                    <constraint firstAttribute="trailing" secondItem="PQ8-og-07m" secondAttribute="trailing" id="prf-pd-L0Y"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="balanceLabel" destination="ndl-Mi-utC" id="Pfz-AA-LLw"/>
+                <outlet property="cardNameLabel" destination="xXz-cy-bpN" id="Crq-7n-sdc"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="arrow" width="8" height="14"/>
+        <image name="card" width="49" height="34"/>
+        <image name="separator" width="1" height="1"/>
+    </resources>
+</document>

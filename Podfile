@@ -1,0 +1,27 @@
+platform :ios, '8.0'
+
+source 'https://gitlab.rambler.ru/cocoapods/cocoapods.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
+# Model & Network
+pod 'EasyMapping', '0.6.3'
+pod 'OHHTTPStubs', '3.1.10'
+pod 'AFNetworking', '2.5.1'
+pod 'AFNetworkActivityLogger', '2.0.4'
+pod 'Nimbus/Models', :git => 'git@gitlab.rambler.ru:cocoapods/nimbus.git', :tag => '1.2.2'
+pod 'SDWebImage', '3.7.1'
+
+# UI
+pod 'PureLayout', '3.0.0'
+pod 'CardIO', '5.4.1'
+pod 'AQPhotoPicker', '0.9'
+
+# Helpers
+pod 'RamblerTyphoonUtils/AssemblyCollector', '1.3.1'
+pod 'ViperMcFlurry', '1.5.1'
+pod 'Typhoon', '3.3.4'
+pod 'SAMKeychain', '1.5.2'
+
+# Push Notifications
+
+pod 'Pushwoosh', '4.1.7'

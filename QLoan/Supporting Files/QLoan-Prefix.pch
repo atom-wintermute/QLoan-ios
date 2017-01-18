@@ -1,0 +1,36 @@
+//
+//  QLoan-Prefix.pch
+//  QLoan
+//
+//  Created by Nikulin Maksim on 20/10/16.
+//  Copyright © 2016 Rambler&Co. All rights reserved.
+//
+
+#ifndef QLoan_Prefix_pch
+#define QLoan_Prefix_pch
+
+#ifdef __OBJC__
+
+#define SYSTEM_VERSION_EQUAL_TO(v)                  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
+#define SYSTEM_VERSION_GREATER_THAN(v)              ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
+
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+
+    #import "EXTScope.h"
+    #import "QLBlocksHelper.h"
+    #import "QLFonts.h"
+    #import "QLMoneyFormatter.h"
+    #import "UIAlertController+Extensions.h"
+    #import "UIColor+QLColor.h"
+    #import "UIView+Gradient.h"
+    #import "UIButton+Enable.h"
+    #import "ServicesConstants.h"
+    #import "QLBankServiceConstants.h"
+
+#endif
+
+#endif /* QLoan_Prefix_pch */
